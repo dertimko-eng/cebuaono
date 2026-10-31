@@ -1,0 +1,5258 @@
+{
+ "entries": [
+  {
+   "ceb": "Maayong buntag",
+   "de": "Guten Morgen",
+   "pos": "phrase",
+   "lesson": "u01_l01",
+   "note": "wörtlich: guter Morgen"
+  },
+  {
+   "ceb": "Maayong udto",
+   "de": "Guten Mittag",
+   "pos": "phrase",
+   "lesson": "u01_l01",
+   "note": "Gruß um die Mittagszeit"
+  },
+  {
+   "ceb": "Maayong hapon",
+   "de": "Guten Nachmittag",
+   "pos": "phrase",
+   "lesson": "u01_l01"
+  },
+  {
+   "ceb": "Maayong gabii",
+   "de": "Guten Abend",
+   "pos": "phrase",
+   "lesson": "u01_l01",
+   "note": "auch als Gute Nacht gebraucht"
+  },
+  {
+   "ceb": "Kumusta",
+   "de": "Wie geht es",
+   "pos": "phrase",
+   "lesson": "u01_l01",
+   "note": "Kumusta ka? = Wie geht es dir?"
+  },
+  {
+   "ceb": "maayo",
+   "de": "gut",
+   "pos": "adj",
+   "lesson": "u01_l01",
+  "forms": ["maayong"]
+  },
+  {
+   "ceb": "Maayo ra",
+   "de": "Es geht gut",
+   "pos": "phrase",
+   "lesson": "u01_l01",
+   "note": "wörtlich: nur gut – die Standardantwort auf Kumusta"
+  },
+  {
+   "ceb": "salamat",
+   "de": "danke",
+   "pos": "phrase",
+   "lesson": "u01_l01"
+  },
+  {
+   "ceb": "Daghang salamat",
+   "de": "Vielen Dank",
+   "pos": "phrase",
+   "lesson": "u01_l01",
+   "note": "daghan = viel"
+  },
+  {
+   "ceb": "Babay",
+   "de": "Tschüss",
+   "pos": "phrase",
+   "lesson": "u01_l01",
+   "note": "vom englischen bye-bye"
+  },
+  {
+   "ceb": "oo",
+   "de": "ja",
+   "pos": "particle",
+   "lesson": "u01_l02"
+  },
+  {
+   "ceb": "dili",
+   "de": "nein; nicht",
+   "pos": "particle",
+   "lesson": "u01_l02",
+   "note": "verneint Eigenschaften und Zukunft: Dili ko maestro. Dili ko mokaon.",
+  "forms": ["di"]
+  },
+  {
+   "ceb": "wala",
+   "de": "nicht (vorhanden); nein (bei Vergangenheit); links",
+   "pos": "particle",
+   "lesson": "u01_l02",
+   "note": "Wala ko ug kwarta = Ich habe kein Geld. Wala ko nikaon = Ich habe nicht gegessen. Als Richtung: links (Unit 10).",
+  "forms": ["walay", "wa"]
+  },
+  {
+   "ceb": "palihug",
+   "de": "bitte (bei einer Bitte)",
+   "pos": "particle",
+   "lesson": "u01_l02"
+  },
+  {
+   "ceb": "Walay sapayan",
+   "de": "Gern geschehen",
+   "pos": "phrase",
+   "lesson": "u01_l02",
+   "note": "Antwort auf Salamat"
+  },
+  {
+   "ceb": "sige",
+   "de": "okay; los",
+   "pos": "particle",
+   "lesson": "u01_l02",
+   "note": "auch als Verabschiedung: Sige! = Also dann!"
+  },
+  {
+   "ceb": "Pasayloa ko",
+   "de": "Entschuldigung",
+   "pos": "phrase",
+   "lesson": "u01_l02",
+   "note": "wörtlich: verzeih mir"
+  },
+  {
+   "ceb": "Ayo-ayo",
+   "de": "Mach's gut",
+   "pos": "phrase",
+   "lesson": "u01_l02",
+   "note": "Abschiedsgruß, wörtlich: gut-gut"
+  },
+  {
+   "ceb": "ug",
+   "de": "und; (Objektmarker) ein/eine",
+   "pos": "conj",
+   "lesson": "u01_l02",
+   "note": "Gusto ko ug kape = Ich möchte (einen) Kaffee. Nie og schreiben."
+  },
+  {
+   "ceb": "pud",
+   "de": "auch",
+   "pos": "adv",
+   "lesson": "u01_l02",
+   "note": "steht nach dem ersten Satzglied: Maestro pud ko."
+  },
+  {
+   "ceb": "ako",
+   "de": "ich (Langform)",
+   "pos": "pron",
+   "lesson": "u01_l03",
+   "note": "betont oder am Satzanfang: Ako si Tim.",
+  "forms": ["akoa", "akoy"]
+  },
+  {
+   "ceb": "ko",
+   "de": "ich (Kurzform)",
+   "pos": "pron",
+   "lesson": "u01_l03",
+   "note": "nach dem ersten Satzglied: Maestro ko.",
+  "forms": ["koy", "kog"]
+  },
+  {
+   "ceb": "si",
+   "de": "(Namensmarker vor Personennamen)",
+   "pos": "particle",
+   "lesson": "u01_l03",
+   "note": "Ako si Tim. Kini si Mama."
+  },
+  {
+   "ceb": "ngalan",
+   "de": "Name",
+   "pos": "noun",
+   "lesson": "u01_l03"
+  },
+  {
+   "ceb": "unsa",
+   "de": "was",
+   "pos": "question",
+   "lesson": "u01_l03",
+   "note": "Unsa imong ngalan? = Wie heißt du? (wörtlich: Was ist dein Name?)",
+  "forms": ["unsay", "unsang"]
+  },
+  {
+   "ceb": "maestro",
+   "de": "Lehrer",
+   "pos": "noun",
+   "lesson": "u01_l03",
+   "note": "Lehrerin: maestra. Cebuano-Wort: magtutudlo (Unit 7)",
+  "forms": ["maestra"]
+  },
+  {
+   "ceb": "asawa",
+   "de": "Ehefrau",
+   "pos": "noun",
+   "lesson": "u01_l03"
+  },
+  {
+   "ceb": "bana",
+   "de": "Ehemann",
+   "pos": "noun",
+   "lesson": "u01_l03"
+  },
+  {
+   "ceb": "taga-",
+   "de": "aus (Herkunft)",
+   "pos": "prep",
+   "lesson": "u01_l03",
+   "note": "Taga-Sauerland ko. Taga-asa ka? = Woher kommst du?",
+  "forms": ["taga"]
+  },
+  {
+   "ceb": "Aleman",
+   "de": "Deutscher; deutsch",
+   "pos": "noun",
+   "lesson": "u01_l03",
+   "note": "Aleman ko = Ich bin Deutscher"
+  },
+  {
+   "ceb": "ikaw",
+   "de": "du (Langform)",
+   "pos": "pron",
+   "lesson": "u01_l04",
+  "forms": ["imo", "imoha"]
+  },
+  {
+   "ceb": "ka",
+   "de": "du (Kurzform)",
+   "pos": "pron",
+   "lesson": "u01_l04",
+   "note": "Maestro ka? Auch Linker nach Zahlen: usa ka tuig (Unit 2).",
+  "forms": ["kag"]
+  },
+  {
+   "ceb": "siya",
+   "de": "er; sie",
+   "pos": "pron",
+   "lesson": "u01_l04",
+   "note": "Cebuano unterscheidet nicht zwischen er und sie",
+  "forms": ["iya", "iyaha", "siyay"]
+  },
+  {
+   "ceb": "kita",
+   "de": "wir (du und ich); (als Verb) sehen, treffen",
+   "pos": "pron",
+   "lesson": "u01_l04",
+   "note": "schließt den Angesprochenen ein. Kita ta ugma = Wir sehen uns morgen (Unit 8).",
+  "forms": ["nakita", "makita", "nakit-an", "makit-an", "kit-a", "magkita", "nagkita", "kitaa"]
+  },
+  {
+   "ceb": "ta",
+   "de": "wir (Kurzform, du und ich)",
+   "pos": "pron",
+   "lesson": "u01_l04",
+   "note": "Kaon ta! = Lass uns essen!",
+  "forms": ["tay"]
+  },
+  {
+   "ceb": "kami",
+   "de": "wir (ohne dich)",
+   "pos": "pron",
+   "lesson": "u01_l04",
+   "note": "z. B. meine Frau und ich, wenn ich mit jemand anderem spreche",
+  "forms": ["amoa", "amo"]
+  },
+  {
+   "ceb": "mi",
+   "de": "wir (Kurzform, ohne dich)",
+   "pos": "pron",
+   "lesson": "u01_l04",
+  "forms": ["miy", "mig"]
+  },
+  {
+   "ceb": "kamo",
+   "de": "ihr",
+   "pos": "pron",
+   "lesson": "u01_l04",
+  "forms": ["inyo", "inyoha"]
+  },
+  {
+   "ceb": "mo",
+   "de": "ihr (Kurzform)",
+   "pos": "pron",
+   "lesson": "u01_l04",
+  "forms": ["moy", "mog"]
+  },
+  {
+   "ceb": "sila",
+   "de": "sie (Mehrzahl)",
+   "pos": "pron",
+   "lesson": "u01_l04",
+  "forms": ["ila", "ilaha", "silay"]
+  },
+  {
+   "ceb": "akong",
+   "de": "mein",
+   "pos": "pron",
+   "lesson": "u01_l05",
+   "note": "akong asawa = meine Frau"
+  },
+  {
+   "ceb": "imong",
+   "de": "dein",
+   "pos": "pron",
+   "lesson": "u01_l05"
+  },
+  {
+   "ceb": "iyang",
+   "de": "sein; ihr (Einzahl)",
+   "pos": "pron",
+   "lesson": "u01_l05"
+  },
+  {
+   "ceb": "atong",
+   "de": "unser (deins und meins)",
+   "pos": "pron",
+   "lesson": "u01_l05",
+   "note": "atong anak = unsere Tochter (zur Ehefrau gesagt)"
+  },
+  {
+   "ceb": "among",
+   "de": "unser (ohne dich)",
+   "pos": "pron",
+   "lesson": "u01_l05"
+  },
+  {
+   "ceb": "inyong",
+   "de": "euer",
+   "pos": "pron",
+   "lesson": "u01_l05"
+  },
+  {
+   "ceb": "ilang",
+   "de": "ihr (Mehrzahl)",
+   "pos": "pron",
+   "lesson": "u01_l05"
+  },
+  {
+   "ceb": "anak",
+   "de": "Kind (Sohn oder Tochter)",
+   "pos": "noun",
+   "lesson": "u01_l05",
+   "note": "anak nga babaye = Tochter, anak nga lalaki = Sohn (Unit 2)"
+  },
+  {
+   "ceb": "amigo",
+   "de": "Freund",
+   "pos": "noun",
+   "lesson": "u01_l05"
+  },
+  {
+   "ceb": "amiga",
+   "de": "Freundin",
+   "pos": "noun",
+   "lesson": "u01_l05"
+  },
+  {
+   "ceb": "kinsa",
+   "de": "wer",
+   "pos": "question",
+   "lesson": "u01_l06",
+  "forms": ["kinsay", "kinsang"]
+  },
+  {
+   "ceb": "nimo",
+   "de": "dich; dir; von dir",
+   "pos": "pron",
+   "lesson": "u01_l06",
+   "note": "Objektform von ikaw: Gimingaw ko nimo."
+  },
+  {
+   "ceb": "nako",
+   "de": "mich; mir; von mir",
+   "pos": "pron",
+   "lesson": "u01_l06",
+   "note": "Objektform von ako"
+  },
+  {
+   "ceb": "niya",
+   "de": "ihn; ihr; von ihm/ihr",
+   "pos": "pron",
+   "lesson": "u01_l06"
+  },
+  {
+   "ceb": "kaayo",
+   "de": "sehr",
+   "pos": "adv",
+   "lesson": "u01_l06",
+   "note": "steht nach dem Adjektiv: Maayo kaayo!",
+  "forms": ["kaayong"]
+  },
+  {
+   "ceb": "ra",
+   "de": "nur; bloß",
+   "pos": "particle",
+   "lesson": "u01_l06",
+   "note": "Maayo ra = nur gut / es geht"
+  },
+  {
+   "ceb": "Nalipay ko",
+   "de": "Ich freue mich",
+   "pos": "phrase",
+   "lesson": "u01_l06",
+   "note": "Nalipay ko nga nakaila ko nimo = Freut mich, dich kennenzulernen"
+  },
+  {
+   "ceb": "problema",
+   "de": "Problem",
+   "pos": "noun",
+   "lesson": "u01_l06",
+   "note": "Walay problema = Kein Problem"
+  },
+  {
+   "ceb": "buotan",
+   "de": "lieb; nett",
+   "pos": "adj",
+   "lesson": "u01_l06",
+   "note": "von buot = Wille/Gemüt: gutherzig"
+  },
+  {
+   "ceb": "gwapa",
+   "de": "hübsch (Frau)",
+   "pos": "adj",
+   "lesson": "u01_l06",
+   "note": "Mann: gwapo (Unit 2)"
+  },
+  {
+   "ceb": "pamilya",
+   "de": "Familie",
+   "pos": "noun",
+   "lesson": "u02_l01"
+  },
+  {
+   "ceb": "mama",
+   "de": "Mama",
+   "pos": "noun",
+   "lesson": "u02_l01",
+   "note": "so nennt man auch die Ehefrau als Mutter des Kindes"
+  },
+  {
+   "ceb": "papa",
+   "de": "Papa",
+   "pos": "noun",
+   "lesson": "u02_l01"
+  },
+  {
+   "ceb": "inahan",
+   "de": "Mutter",
+   "pos": "noun",
+   "lesson": "u02_l01"
+  },
+  {
+   "ceb": "amahan",
+   "de": "Vater",
+   "pos": "noun",
+   "lesson": "u02_l01"
+  },
+  {
+   "ceb": "igsoon",
+   "de": "Geschwister (Bruder/Schwester)",
+   "pos": "noun",
+   "lesson": "u02_l01",
+   "note": "igsoong babaye = Schwester, igsoong lalaki = Bruder",
+  "forms": ["igsoong"]
+  },
+  {
+   "ceb": "babaye",
+   "de": "Frau; weiblich",
+   "pos": "noun",
+   "lesson": "u02_l01"
+  },
+  {
+   "ceb": "lalaki",
+   "de": "Mann; männlich",
+   "pos": "noun",
+   "lesson": "u02_l01"
+  },
+  {
+   "ceb": "mga",
+   "de": "(Pluralmarker)",
+   "pos": "particle",
+   "lesson": "u02_l01",
+   "note": "mga anak = Kinder, mga bata = Kinder. Ausgesprochen manga."
+  },
+  {
+   "ceb": "nga",
+   "de": "(Linker zwischen Wörtern); dass",
+   "pos": "particle",
+   "lesson": "u02_l01",
+   "note": "anak nga babaye = Tochter; gwapa nga babaye = hübsche Frau. Nach Vokal oft -ng: gwapang babaye."
+  },
+  {
+   "ceb": "lola",
+   "de": "Oma",
+   "pos": "noun",
+   "lesson": "u02_l02"
+  },
+  {
+   "ceb": "lolo",
+   "de": "Opa",
+   "pos": "noun",
+   "lesson": "u02_l02"
+  },
+  {
+   "ceb": "apo",
+   "de": "Enkelkind",
+   "pos": "noun",
+   "lesson": "u02_l02"
+  },
+  {
+   "ceb": "tiya",
+   "de": "Tante",
+   "pos": "noun",
+   "lesson": "u02_l02"
+  },
+  {
+   "ceb": "tiyo",
+   "de": "Onkel",
+   "pos": "noun",
+   "lesson": "u02_l02"
+  },
+  {
+   "ceb": "ugangan",
+   "de": "Schwiegermutter; Schwiegervater",
+   "pos": "noun",
+   "lesson": "u02_l02",
+   "note": "ugangan nga babaye / nga lalaki"
+  },
+  {
+   "ceb": "bayaw",
+   "de": "Schwager; Schwägerin",
+   "pos": "noun",
+   "lesson": "u02_l02"
+  },
+  {
+   "ceb": "manghod",
+   "de": "jüngeres Geschwister",
+   "pos": "noun",
+   "lesson": "u02_l02"
+  },
+  {
+   "ceb": "ginikanan",
+   "de": "Eltern",
+   "pos": "noun",
+   "lesson": "u02_l02"
+  },
+  {
+   "ceb": "bata",
+   "de": "Kind (kleines)",
+   "pos": "noun",
+   "lesson": "u02_l02",
+   "note": "bata = Kind allgemein, anak = Kind von jemandem"
+  },
+  {
+   "ceb": "usa",
+   "de": "eins",
+   "pos": "number",
+   "lesson": "u02_l03",
+   "note": "usa ka anak = ein Kind",
+  "forms": ["usá"]
+  },
+  {
+   "ceb": "duha",
+   "de": "zwei",
+   "pos": "number",
+   "lesson": "u02_l03"
+  },
+  {
+   "ceb": "tulo",
+   "de": "drei",
+   "pos": "number",
+   "lesson": "u02_l03"
+  },
+  {
+   "ceb": "upat",
+   "de": "vier",
+   "pos": "number",
+   "lesson": "u02_l03"
+  },
+  {
+   "ceb": "lima",
+   "de": "fünf",
+   "pos": "number",
+   "lesson": "u02_l03"
+  },
+  {
+   "ceb": "unom",
+   "de": "sechs",
+   "pos": "number",
+   "lesson": "u02_l03"
+  },
+  {
+   "ceb": "pito",
+   "de": "sieben",
+   "pos": "number",
+   "lesson": "u02_l03"
+  },
+  {
+   "ceb": "walo",
+   "de": "acht",
+   "pos": "number",
+   "lesson": "u02_l03"
+  },
+  {
+   "ceb": "siyam",
+   "de": "neun",
+   "pos": "number",
+   "lesson": "u02_l03"
+  },
+  {
+   "ceb": "napulo",
+   "de": "zehn",
+   "pos": "number",
+   "lesson": "u02_l03"
+  },
+  {
+   "ceb": "napulog",
+   "de": "zehn-und- (11–19)",
+   "pos": "number",
+   "lesson": "u02_l04",
+   "note": "napulog usa = elf, napulog duha = zwölf … (aus napulo ug)"
+  },
+  {
+   "ceb": "kawhaan",
+   "de": "zwanzig",
+   "pos": "number",
+   "lesson": "u02_l04",
+   "note": "kawhaan ug usa = 21"
+  },
+  {
+   "ceb": "katloan",
+   "de": "dreißig",
+   "pos": "number",
+   "lesson": "u02_l04"
+  },
+  {
+   "ceb": "kap-atan",
+   "de": "vierzig",
+   "pos": "number",
+   "lesson": "u02_l04"
+  },
+  {
+   "ceb": "kalim-an",
+   "de": "fünfzig",
+   "pos": "number",
+   "lesson": "u02_l04"
+  },
+  {
+   "ceb": "kan-uman",
+   "de": "sechzig",
+   "pos": "number",
+   "lesson": "u02_l04"
+  },
+  {
+   "ceb": "kapitoan",
+   "de": "siebzig",
+   "pos": "number",
+   "lesson": "u02_l04"
+  },
+  {
+   "ceb": "kawaloan",
+   "de": "achtzig",
+   "pos": "number",
+   "lesson": "u02_l04"
+  },
+  {
+   "ceb": "kasiyaman",
+   "de": "neunzig",
+   "pos": "number",
+   "lesson": "u02_l04"
+  },
+  {
+   "ceb": "gatos",
+   "de": "hundert",
+   "pos": "number",
+   "lesson": "u02_l04",
+   "note": "usa ka gatos = 100, duha ka gatos = 200"
+  },
+  {
+   "ceb": "pila",
+   "de": "wie viel; wie viele",
+   "pos": "question",
+   "lesson": "u02_l05",
+   "note": "Pila ka tuig ka na? = Wie alt bist du?",
+  "forms": ["pilay"]
+  },
+  {
+   "ceb": "tuig",
+   "de": "Jahr",
+   "pos": "noun",
+   "lesson": "u02_l05",
+  "forms": ["tuiga"]
+  },
+  {
+   "ceb": "edad",
+   "de": "Alter",
+   "pos": "noun",
+   "lesson": "u02_l05"
+  },
+  {
+   "ceb": "na",
+   "de": "schon; jetzt",
+   "pos": "particle",
+   "lesson": "u02_l05",
+   "note": "Katloan ko na = Ich bin schon 30. Gegenteil pa = noch (Unit 9/11)."
+  },
+  {
+   "ceb": "kini",
+   "de": "dies; das hier",
+   "pos": "pron",
+   "lesson": "u02_l05",
+   "note": "Kurzform ni: Kini si Mama. / Mao ni akong asawa.",
+  "forms": ["ni", "kining", "niini", "ani"]
+  },
+  {
+   "ceb": "kana",
+   "de": "das (bei dir)",
+   "pos": "pron",
+   "lesson": "u02_l05",
+   "note": "Kurzform na (Vorsicht: na heißt auch schon)",
+  "forms": ["kanang", "niana", "ana"]
+  },
+  {
+   "ceb": "kadto",
+   "de": "jenes (dort drüben)",
+   "pos": "pron",
+   "lesson": "u02_l05",
+   "note": "Kurzform to",
+  "forms": ["to", "kadtong", "niadto", "adto"]
+  },
+  {
+   "ceb": "mao",
+   "de": "das ist (es); genau",
+   "pos": "particle",
+   "lesson": "u02_l05",
+   "note": "Mao ni akong anak = Das ist mein Kind. Mao na! = Genau! / Das war's.",
+  "forms": ["maoy", "maong"]
+  },
+  {
+   "ceb": "ang",
+   "de": "der; die; das (Marker)",
+   "pos": "particle",
+   "lesson": "u02_l05",
+   "note": "markiert das Satzthema: Kini ang akong balay."
+  },
+  {
+   "ceb": "gamay",
+   "de": "klein; wenig",
+   "pos": "adj",
+   "lesson": "u02_l05",
+   "note": "Mehrzahl: gagmay",
+  "forms": ["gagmay", "gamayng"]
+  },
+  {
+   "ceb": "dako",
+   "de": "groß",
+   "pos": "adj",
+   "lesson": "u02_l06",
+   "note": "Mehrzahl: dagko",
+  "forms": ["dagko", "dakong"]
+  },
+  {
+   "ceb": "bag-o",
+   "de": "neu",
+   "pos": "adj",
+   "lesson": "u02_l06",
+  "forms": ["bag-ong"]
+  },
+  {
+   "ceb": "ni",
+   "de": "von (vor Namen)",
+   "pos": "particle",
+   "lesson": "u02_l06",
+   "note": "balay ni Mama = Mamas Haus. Auch Kurzform von kini."
+  },
+  {
+   "ceb": "tigulang",
+   "de": "alt (Person)",
+   "pos": "adj",
+   "lesson": "u02_l06",
+   "note": "alte Sachen: daan"
+  },
+  {
+   "ceb": "batan-on",
+   "de": "jung",
+   "pos": "adj",
+   "lesson": "u02_l06"
+  },
+  {
+   "ceb": "gwapo",
+   "de": "hübsch (Mann)",
+   "pos": "adj",
+   "lesson": "u02_l06"
+  },
+  {
+   "ceb": "minyo",
+   "de": "verheiratet",
+   "pos": "adj",
+   "lesson": "u02_l06",
+   "note": "Minyo na ko = Ich bin verheiratet",
+  "forms": ["naminyo", "magminyo", "minyoon"]
+  },
+  {
+   "ceb": "kauban",
+   "de": "zusammen mit; Begleiter",
+   "pos": "noun",
+   "lesson": "u02_l06",
+   "note": "Kauban nako akong asawa = Meine Frau ist bei mir",
+  "forms": ["kaubana", "kaubanan"]
+  },
+  {
+   "ceb": "puyo",
+   "de": "wohnen",
+   "pos": "verb",
+   "lesson": "u02_l06",
+   "note": "Nagpuyo mi sa Sauerland = Wir wohnen im Sauerland",
+  "forms": ["nagpuyo", "magpuyo", "mopuyo", "puy-anan", "gipuy-an", "puy-an"]
+  },
+  {
+   "ceb": "sa",
+   "de": "in; an; auf; zu; nach (Orts- und Zeitmarker)",
+   "pos": "prep",
+   "lesson": "u02_l06",
+   "note": "sa balay = zu Hause, sa Lunes = am Montag"
+  },
+  {
+   "ceb": "pagkaon",
+   "de": "Essen (Speise)",
+   "pos": "noun",
+   "lesson": "u03_l01"
+  },
+  {
+   "ceb": "kaon",
+   "de": "essen",
+   "pos": "verb",
+   "lesson": "u03_l01",
+   "note": "Kaon ta! = Lass uns essen! Mokaon ko = Ich werde essen.",
+  "forms": ["kaona", "kan-a", "nakakaon", "makakaon", "kan-on", "gikaon", "kaonon", "nangaon", "mangaon"]
+  },
+  {
+   "ceb": "tubig",
+   "de": "Wasser",
+   "pos": "noun",
+   "lesson": "u03_l01"
+  },
+  {
+   "ceb": "kan-on",
+   "de": "Reis (gekocht)",
+   "pos": "noun",
+   "lesson": "u03_l01",
+   "note": "roher Reis: bugas"
+  },
+  {
+   "ceb": "isda",
+   "de": "Fisch",
+   "pos": "noun",
+   "lesson": "u03_l01"
+  },
+  {
+   "ceb": "karne",
+   "de": "Fleisch",
+   "pos": "noun",
+   "lesson": "u03_l01"
+  },
+  {
+   "ceb": "manok",
+   "de": "Huhn; Hähnchen",
+   "pos": "noun",
+   "lesson": "u03_l01"
+  },
+  {
+   "ceb": "baboy",
+   "de": "Schwein; Schweinefleisch",
+   "pos": "noun",
+   "lesson": "u03_l01"
+  },
+  {
+   "ceb": "itlog",
+   "de": "Ei",
+   "pos": "noun",
+   "lesson": "u03_l01"
+  },
+  {
+   "ceb": "lami",
+   "de": "lecker",
+   "pos": "adj",
+   "lesson": "u03_l01",
+   "note": "Lami kaayo! = Sehr lecker!",
+  "forms": ["lamian", "nalamian"]
+  },
+  {
+   "ceb": "inom",
+   "de": "trinken",
+   "pos": "verb",
+   "lesson": "u03_l02",
+   "note": "Moinom ko ug tubig.",
+  "forms": ["inoma", "imna", "ilimnon", "giinom", "nakainom", "makainom", "moinom", "nag-inom", "mag-inom", "nanginom", "manginom"]
+  },
+  {
+   "ceb": "kape",
+   "de": "Kaffee",
+   "pos": "noun",
+   "lesson": "u03_l02"
+  },
+  {
+   "ceb": "gatas",
+   "de": "Milch",
+   "pos": "noun",
+   "lesson": "u03_l02"
+  },
+  {
+   "ceb": "tsa",
+   "de": "Tee",
+   "pos": "noun",
+   "lesson": "u03_l02",
+   "note": "vom spanischen/chinesischen cha; oft auch tsaa"
+  },
+  {
+   "ceb": "pamahaw",
+   "de": "Frühstück",
+   "pos": "noun",
+   "lesson": "u03_l02",
+   "note": "auch als Verb: mamahaw = frühstücken",
+  "forms": ["mamahaw", "namahaw"]
+  },
+  {
+   "ceb": "paniudto",
+   "de": "Mittagessen",
+   "pos": "noun",
+   "lesson": "u03_l02",
+  "forms": ["maniudto", "naniudto"]
+  },
+  {
+   "ceb": "panihapon",
+   "de": "Abendessen",
+   "pos": "noun",
+   "lesson": "u03_l02",
+  "forms": ["manihapon", "nanihapon"]
+  },
+  {
+   "ceb": "gutom",
+   "de": "hungrig",
+   "pos": "adj",
+   "lesson": "u03_l02",
+   "note": "Gutom ko = Ich habe Hunger",
+  "forms": ["gigutom", "gutmon"]
+  },
+  {
+   "ceb": "uhaw",
+   "de": "durstig",
+   "pos": "adj",
+   "lesson": "u03_l02",
+  "forms": ["giuhaw", "uhawon"]
+  },
+  {
+   "ceb": "busog",
+   "de": "satt",
+   "pos": "adj",
+   "lesson": "u03_l02",
+   "note": "Busog na ko = Ich bin satt"
+  },
+  {
+   "ceb": "gusto",
+   "de": "mögen; wollen",
+   "pos": "verb",
+   "lesson": "u03_l03",
+   "note": "Gusto ko ug kape = Ich möchte Kaffee. Gusto ko mokaon = Ich will essen.",
+  "forms": ["gustong", "ganahan"]
+  },
+  {
+   "ceb": "tam-is",
+   "de": "süß",
+   "pos": "adj",
+   "lesson": "u03_l03"
+  },
+  {
+   "ceb": "parat",
+   "de": "salzig",
+   "pos": "adj",
+   "lesson": "u03_l03"
+  },
+  {
+   "ceb": "halang",
+   "de": "scharf (Essen)",
+   "pos": "adj",
+   "lesson": "u03_l03"
+  },
+  {
+   "ceb": "aslom",
+   "de": "sauer",
+   "pos": "adj",
+   "lesson": "u03_l03"
+  },
+  {
+   "ceb": "init",
+   "de": "heiß; warm",
+   "pos": "adj",
+   "lesson": "u03_l03",
+   "note": "Init ang kape. Init karon = Es ist heiß heute.",
+  "forms": ["initon", "giinit"]
+  },
+  {
+   "ceb": "bugnaw",
+   "de": "kalt (Sache)",
+   "pos": "adj",
+   "lesson": "u03_l03",
+   "note": "kalt als Gefühl/Wetter: tugnaw (Unit 6)"
+  },
+  {
+   "ceb": "asukar",
+   "de": "Zucker",
+   "pos": "noun",
+   "lesson": "u03_l03"
+  },
+  {
+   "ceb": "asin",
+   "de": "Salz",
+   "pos": "noun",
+   "lesson": "u03_l03"
+  },
+  {
+   "ceb": "o",
+   "de": "oder",
+   "pos": "conj",
+   "lesson": "u03_l03",
+   "note": "Kape o tsa? = Kaffee oder Tee?"
+  },
+  {
+   "ceb": "gulay",
+   "de": "Gemüse",
+   "pos": "noun",
+   "lesson": "u03_l04"
+  },
+  {
+   "ceb": "prutas",
+   "de": "Obst",
+   "pos": "noun",
+   "lesson": "u03_l04"
+  },
+  {
+   "ceb": "saging",
+   "de": "Banane",
+   "pos": "noun",
+   "lesson": "u03_l04"
+  },
+  {
+   "ceb": "mangga",
+   "de": "Mango",
+   "pos": "noun",
+   "lesson": "u03_l04"
+  },
+  {
+   "ceb": "pan",
+   "de": "Brot",
+   "pos": "noun",
+   "lesson": "u03_l04"
+  },
+  {
+   "ceb": "keso",
+   "de": "Käse",
+   "pos": "noun",
+   "lesson": "u03_l04"
+  },
+  {
+   "ceb": "kamatis",
+   "de": "Tomate",
+   "pos": "noun",
+   "lesson": "u03_l04"
+  },
+  {
+   "ceb": "sibuyas",
+   "de": "Zwiebel",
+   "pos": "noun",
+   "lesson": "u03_l04"
+  },
+  {
+   "ceb": "bir",
+   "de": "Bier",
+   "pos": "noun",
+   "lesson": "u03_l04",
+   "note": "vom englischen beer; auch serbesa"
+  },
+  {
+   "ceb": "lechon",
+   "de": "Spanferkel (Festessen)",
+   "pos": "noun",
+   "lesson": "u03_l04",
+   "note": "das Festessen schlechthin auf Cebu"
+  },
+  {
+   "ceb": "palit",
+   "de": "kaufen",
+   "pos": "verb",
+   "lesson": "u03_l05",
+   "note": "Mopalit ko ug isda = Ich kaufe Fisch",
+  "forms": ["palita", "paliton", "gipalit", "mopalit", "nipalit", "mipalit", "nagpalit", "magpalit", "ipalit", "nakapalit", "makapalit", "pagpalit", "mamalit", "namalit"]
+  },
+  {
+   "ceb": "tindahan",
+   "de": "Laden",
+   "pos": "noun",
+   "lesson": "u03_l05",
+   "note": "kleiner Laden an der Straße: sari-sari store"
+  },
+  {
+   "ceb": "merkado",
+   "de": "Markt",
+   "pos": "noun",
+   "lesson": "u03_l05"
+  },
+  {
+   "ceb": "presyo",
+   "de": "Preis",
+   "pos": "noun",
+   "lesson": "u03_l05"
+  },
+  {
+   "ceb": "mahal",
+   "de": "teuer",
+   "pos": "adj",
+   "lesson": "u03_l05",
+   "note": "Auf Tagalog heißt mahal auch Liebe – auf Cebuano sagt man dafür gugma/palangga (Unit 11)"
+  },
+  {
+   "ceb": "barato",
+   "de": "billig",
+   "pos": "adj",
+   "lesson": "u03_l05"
+  },
+  {
+   "ceb": "kwarta",
+   "de": "Geld",
+   "pos": "noun",
+   "lesson": "u03_l05"
+  },
+  {
+   "ceb": "piso",
+   "de": "Peso",
+   "pos": "noun",
+   "lesson": "u03_l05",
+   "note": "Mehrzahl im Alltag: pesos",
+  "forms": ["pesos"]
+  },
+  {
+   "ceb": "bayad",
+   "de": "bezahlen; Bezahlung",
+   "pos": "verb",
+   "lesson": "u03_l05",
+  "forms": ["mobayad", "nibayad", "mibayad", "magbayad", "nagbayad", "bayran", "gibayran", "bayri", "ibayad"]
+  },
+  {
+   "ceb": "tagpila",
+   "de": "wie viel kostet",
+   "pos": "question",
+   "lesson": "u03_l05",
+   "note": "Tagpila kini? = Wie viel kostet das (pro Stück)?",
+  "forms": ["tag-pila"]
+  },
+  {
+   "ceb": "luto",
+   "de": "kochen",
+   "pos": "verb",
+   "lesson": "u03_l06",
+   "note": "Magluto ko ug adobo = Ich koche Adobo",
+  "forms": ["lutoa", "lutoon", "giluto", "magluto", "nagluto", "moluto", "iluto", "nakaluto", "makaluto", "pagluto", "linuto"]
+  },
+  {
+   "ceb": "sukli",
+   "de": "Wechselgeld",
+   "pos": "noun",
+   "lesson": "u03_l06"
+  },
+  {
+   "ceb": "uno",
+   "de": "eins (spanisch, für Preise/Uhrzeit)",
+   "pos": "number",
+   "lesson": "u03_l06",
+   "note": "Preise und Uhrzeiten werden mit spanischen Zahlen gesagt"
+  },
+  {
+   "ceb": "dos",
+   "de": "zwei (spanisch)",
+   "pos": "number",
+   "lesson": "u03_l06"
+  },
+  {
+   "ceb": "tres",
+   "de": "drei (spanisch)",
+   "pos": "number",
+   "lesson": "u03_l06"
+  },
+  {
+   "ceb": "kwatro",
+   "de": "vier (spanisch)",
+   "pos": "number",
+   "lesson": "u03_l06"
+  },
+  {
+   "ceb": "singko",
+   "de": "fünf (spanisch)",
+   "pos": "number",
+   "lesson": "u03_l06"
+  },
+  {
+   "ceb": "baynte",
+   "de": "zwanzig (spanisch)",
+   "pos": "number",
+   "lesson": "u03_l06",
+   "note": "baynte pesos = 20 Peso",
+  "forms": ["bente"]
+  },
+  {
+   "ceb": "singkwenta",
+   "de": "fünfzig (spanisch)",
+   "pos": "number",
+   "lesson": "u03_l06"
+  },
+  {
+   "ceb": "syento",
+   "de": "hundert (spanisch)",
+   "pos": "number",
+   "lesson": "u03_l06",
+   "note": "syento pesos = 100 Peso; dos syentos = 200",
+  "forms": ["syentos"]
+  },
+  {
+   "ceb": "buntag",
+   "de": "Morgen (Tageszeit)",
+   "pos": "noun",
+   "lesson": "u04_l01",
+   "note": "sa buntag = morgens"
+  },
+  {
+   "ceb": "udto",
+   "de": "Mittag",
+   "pos": "noun",
+   "lesson": "u04_l01"
+  },
+  {
+   "ceb": "hapon",
+   "de": "Nachmittag",
+   "pos": "noun",
+   "lesson": "u04_l01"
+  },
+  {
+   "ceb": "gabii",
+   "de": "Abend; Nacht",
+   "pos": "noun",
+   "lesson": "u04_l01",
+  "forms": ["gabhiona", "gabiiha"]
+  },
+  {
+   "ceb": "adlaw",
+   "de": "Tag; Sonne",
+   "pos": "noun",
+   "lesson": "u04_l01",
+   "note": "adlaw-adlaw = täglich (Unit 8)",
+  "forms": ["adlawa", "adlawng"]
+  },
+  {
+   "ceb": "karon",
+   "de": "jetzt; heute",
+   "pos": "adv",
+   "lesson": "u04_l01",
+   "note": "karong adlawa = heute, karong gabii = heute Abend",
+  "forms": ["karong", "ron"]
+  },
+  {
+   "ceb": "ugma",
+   "de": "morgen",
+   "pos": "adv",
+   "lesson": "u04_l01",
+  "forms": ["ugmang"]
+  },
+  {
+   "ceb": "gahapon",
+   "de": "gestern",
+   "pos": "adv",
+   "lesson": "u04_l01",
+  "forms": ["kagahapon"]
+  },
+  {
+   "ceb": "semana",
+   "de": "Woche",
+   "pos": "noun",
+   "lesson": "u04_l01"
+  },
+  {
+   "ceb": "bulan",
+   "de": "Monat; Mond",
+   "pos": "noun",
+   "lesson": "u04_l01"
+  },
+  {
+   "ceb": "Lunes",
+   "de": "Montag",
+   "pos": "noun",
+   "lesson": "u04_l02"
+  },
+  {
+   "ceb": "Martes",
+   "de": "Dienstag",
+   "pos": "noun",
+   "lesson": "u04_l02"
+  },
+  {
+   "ceb": "Miyerkules",
+   "de": "Mittwoch",
+   "pos": "noun",
+   "lesson": "u04_l02"
+  },
+  {
+   "ceb": "Huwebes",
+   "de": "Donnerstag",
+   "pos": "noun",
+   "lesson": "u04_l02"
+  },
+  {
+   "ceb": "Biyernes",
+   "de": "Freitag",
+   "pos": "noun",
+   "lesson": "u04_l02"
+  },
+  {
+   "ceb": "Sabado",
+   "de": "Samstag",
+   "pos": "noun",
+   "lesson": "u04_l02"
+  },
+  {
+   "ceb": "Dominggo",
+   "de": "Sonntag",
+   "pos": "noun",
+   "lesson": "u04_l02"
+  },
+  {
+   "ceb": "matag",
+   "de": "jeder; jede; jedes",
+   "pos": "adj",
+   "lesson": "u04_l02",
+   "note": "matag adlaw = jeden Tag"
+  },
+  {
+   "ceb": "kanunay",
+   "de": "immer",
+   "pos": "adv",
+   "lesson": "u04_l02"
+  },
+  {
+   "ceb": "usahay",
+   "de": "manchmal",
+   "pos": "adv",
+   "lesson": "u04_l02"
+  },
+  {
+   "ceb": "oras",
+   "de": "Uhrzeit; Stunde; Zeit",
+   "pos": "noun",
+   "lesson": "u04_l03",
+   "note": "Unsang orasa na? = Wie spät ist es? duha ka oras = zwei Stunden",
+  "forms": ["orasa"]
+  },
+  {
+   "ceb": "alas",
+   "de": "… Uhr (vor der Stundenzahl)",
+   "pos": "particle",
+   "lesson": "u04_l03",
+   "note": "alas dos = 2 Uhr, alas otso = 8 Uhr"
+  },
+  {
+   "ceb": "ala una",
+   "de": "ein Uhr",
+   "pos": "phrase",
+   "lesson": "u04_l03",
+   "note": "einzige Ausnahme: ala statt alas"
+  },
+  {
+   "ceb": "y media",
+   "de": "halb (… Uhr dreißig)",
+   "pos": "phrase",
+   "lesson": "u04_l03",
+   "note": "alas dos y media = halb drei (2:30)"
+  },
+  {
+   "ceb": "sais",
+   "de": "sechs (spanisch)",
+   "pos": "number",
+   "lesson": "u04_l03",
+  "forms": ["says", "sayis"]
+  },
+  {
+   "ceb": "siyete",
+   "de": "sieben (spanisch)",
+   "pos": "number",
+   "lesson": "u04_l03"
+  },
+  {
+   "ceb": "otso",
+   "de": "acht (spanisch)",
+   "pos": "number",
+   "lesson": "u04_l03"
+  },
+  {
+   "ceb": "nuwebe",
+   "de": "neun (spanisch)",
+   "pos": "number",
+   "lesson": "u04_l03"
+  },
+  {
+   "ceb": "dyes",
+   "de": "zehn (spanisch)",
+   "pos": "number",
+   "lesson": "u04_l03"
+  },
+  {
+   "ceb": "dose",
+   "de": "zwölf (spanisch)",
+   "pos": "number",
+   "lesson": "u04_l03",
+   "note": "elf: onse"
+  },
+  {
+   "ceb": "mata",
+   "de": "aufwachen; Auge",
+   "pos": "verb",
+   "lesson": "u04_l04",
+   "note": "Momata ko alas sais = Ich wache um 6 auf",
+  "forms": ["momata", "nimata", "mimata", "magmata", "nagmata", "nakamata", "makamata", "pagmata"]
+  },
+  {
+   "ceb": "bangon",
+   "de": "aufstehen",
+   "pos": "verb",
+   "lesson": "u04_l04",
+  "forms": ["mobangon", "nibangon", "mibangon", "magbangon", "nagbangon", "bangona", "pagbangon"]
+  },
+  {
+   "ceb": "ligo",
+   "de": "duschen; baden",
+   "pos": "verb",
+   "lesson": "u04_l04",
+   "note": "Maligo ko = Ich dusche (gleich)",
+  "forms": ["maligo", "naligo", "magligo", "nagligo", "moligo", "niligo", "miligo", "pagligo", "kaligo"]
+  },
+  {
+   "ceb": "trabaho",
+   "de": "Arbeit; arbeiten",
+   "pos": "verb",
+   "lesson": "u04_l04",
+  "forms": ["motrabaho", "nitrabaho", "mitrabaho", "magtrabaho", "nagtrabaho", "trabahoa", "trabahoon", "gitrabaho", "pagtrabaho", "trabahoan"]
+  },
+  {
+   "ceb": "eskwela",
+   "de": "zur Schule gehen; Schule",
+   "pos": "verb",
+   "lesson": "u04_l04",
+   "note": "Schulgebäude: eskwelahan (Unit 7)",
+  "forms": ["mag-eskwela", "nag-eskwela", "mo-eskwela", "pag-eskwela", "nakaeskwela", "eskwelahan"]
+  },
+  {
+   "ceb": "tulog",
+   "de": "schlafen",
+   "pos": "verb",
+   "lesson": "u04_l04",
+   "note": "Matulog na ko = Ich gehe jetzt schlafen",
+  "forms": ["matulog", "natulog", "katulgon", "tulga", "nakatulog", "makatulog", "pagtulog", "tulgi", "tulogon", "natulgan"]
+  },
+  {
+   "ceb": "uli",
+   "de": "nach Hause gehen",
+   "pos": "verb",
+   "lesson": "u04_l04",
+   "note": "Mouli ko alas singko = Ich gehe um 5 heim. iuli = zurückgeben (Unit 8)",
+  "forms": ["mouli", "niuli", "miuli", "mag-uli", "nag-uli", "nakauli", "makauli", "pag-uli", "iuli", "giuli", "ulia"]
+  },
+  {
+   "ceb": "adto",
+   "de": "hingehen",
+   "pos": "verb",
+   "lesson": "u04_l04",
+   "note": "Moadto ko sa eskwelahan = Ich gehe zur Schule",
+  "forms": ["moadto", "niadto", "miadto", "mag-adto", "nag-adto", "nakaadto", "makaadto", "adtoa", "pag-adto", "mangadto", "nangadto", "adtoan"]
+  },
+  {
+   "ceb": "sayo",
+   "de": "früh",
+   "pos": "adj",
+   "lesson": "u04_l04",
+  "forms": ["sayong"]
+  },
+  {
+   "ceb": "ulahi",
+   "de": "spät; verspätet",
+   "pos": "adj",
+   "lesson": "u04_l04",
+   "note": "Naulahi ko = Ich war zu spät",
+  "forms": ["naulahi", "maulahi", "ulahing"]
+  },
+  {
+   "ceb": "limpyo",
+   "de": "sauber; putzen",
+   "pos": "adj",
+   "lesson": "u04_l05",
+   "note": "Manglimpyo ko sa balay = Ich putze das Haus",
+  "forms": ["manglimpyo", "nanglimpyo", "maglimpyo", "naglimpyo", "limpyohi", "limpyohan", "gilimpyohan", "limpyoha"]
+  },
+  {
+   "ceb": "laba",
+   "de": "Wäsche waschen",
+   "pos": "verb",
+   "lesson": "u04_l05",
+  "forms": ["manglaba", "nanglaba", "maglaba", "naglaba", "labhan", "gilabhan", "labhi", "labahan"]
+  },
+  {
+   "ceb": "hugas",
+   "de": "abwaschen; waschen",
+   "pos": "verb",
+   "lesson": "u04_l05",
+   "note": "manghugas ug plato = Geschirr spülen",
+  "forms": ["manghugas", "nanghugas", "maghugas", "naghugas", "hugasi", "hugasan", "gihugasan", "hugasa"]
+  },
+  {
+   "ceb": "dula",
+   "de": "spielen; Spiel",
+   "pos": "verb",
+   "lesson": "u04_l05",
+  "forms": ["magdula", "nagdula", "modula", "nidula", "midula", "dulaa", "dulaon", "gidula", "pagdula", "dulai", "magdulaay", "dulaan"]
+  },
+  {
+   "ceb": "tan-aw",
+   "de": "schauen; anschauen",
+   "pos": "verb",
+   "lesson": "u04_l05",
+   "note": "motan-aw ug TV = fernsehen",
+  "forms": ["motan-aw", "nitan-aw", "mitan-aw", "magtan-aw", "nagtan-aw", "tan-awa", "tan-awon", "gitan-aw", "nakatan-aw", "makatan-aw", "pagtan-aw", "tan-awan", "tan-awi"]
+  },
+  {
+   "ceb": "basa",
+   "de": "lesen",
+   "pos": "verb",
+   "lesson": "u04_l05",
+   "note": "Betonung vorne; basá (hinten betont) = nass",
+  "forms": ["magbasa", "nagbasa", "mobasa", "nibasa", "mibasa", "basaha", "basahon", "gibasa", "nakabasa", "makabasa", "pagbasa", "basahan", "basahi"]
+  },
+  {
+   "ceb": "sulat",
+   "de": "schreiben; Brief",
+   "pos": "verb",
+   "lesson": "u04_l05",
+  "forms": ["magsulat", "nagsulat", "mosulat", "nisulat", "misulat", "sulata", "sulaton", "gisulat", "sinulat", "nakasulat", "makasulat", "pagsulat", "isulat", "sulatan", "sulati"]
+  },
+  {
+   "ceb": "bisikleta",
+   "de": "Fahrrad",
+   "pos": "noun",
+   "lesson": "u04_l05",
+   "note": "E-Bike: e-bike (so gesagt)"
+  },
+  {
+   "ceb": "sakay",
+   "de": "fahren mit; einsteigen",
+   "pos": "verb",
+   "lesson": "u04_l05",
+   "note": "Mosakay ko ug bisikleta = Ich fahre Fahrrad",
+  "forms": ["mosakay", "nisakay", "misakay", "magsakay", "nagsakay", "sakyi", "sakyan", "gisakyan", "sakya", "nakasakay", "makasakay", "pagsakay", "sakyanan"]
+  },
+  {
+   "ceb": "lakaw",
+   "de": "gehen (zu Fuß); losgehen",
+   "pos": "verb",
+   "lesson": "u04_l05",
+  "forms": ["molakaw", "nilakaw", "milakaw", "maglakaw", "naglakaw", "lakawa", "nakalakaw", "makalakaw", "paglakaw", "lakaw-lakaw", "manglakaw", "nanglakaw"]
+  },
+  {
+   "ceb": "human",
+   "de": "fertig; nach (dem)",
+   "pos": "adj",
+   "lesson": "u04_l06",
+   "note": "Human na ko = Ich bin fertig. Human sa trabaho = nach der Arbeit",
+  "forms": ["nahuman", "mahuman", "humana", "humanon", "gihuman", "pagkahuman", "nahumana"]
+  },
+  {
+   "ceb": "dayon",
+   "de": "dann; danach; herein!",
+   "pos": "adv",
+   "lesson": "u04_l06",
+   "note": "Dayon! = Komm rein! (Einladung ins Haus)"
+  },
+  {
+   "ceb": "unya",
+   "de": "später; nachher",
+   "pos": "adv",
+   "lesson": "u04_l06",
+   "note": "unyang gabii = heute Abend (später)",
+  "forms": ["unyang"]
+  },
+  {
+   "ceb": "daghan",
+   "de": "viel; viele",
+   "pos": "adj",
+   "lesson": "u04_l06",
+   "note": "Daghan ko ug trabaho = Ich habe viel Arbeit",
+  "forms": ["daghang", "daghana", "nadaghan"]
+  },
+  {
+   "ceb": "pahulay",
+   "de": "sich ausruhen; Pause",
+   "pos": "verb",
+   "lesson": "u04_l06",
+  "forms": ["magpahulay", "nagpahulay", "mopahulay", "nipahulay", "mipahulay", "pagpahulay", "pahulayi", "makapahulay", "nakapahulay"]
+  },
+  {
+   "ceb": "kanta",
+   "de": "singen; Lied",
+   "pos": "verb",
+   "lesson": "u04_l06",
+  "forms": ["magkanta", "nagkanta", "mokanta", "nikanta", "mikanta", "kantaha", "kantahon", "gikanta", "pagkanta", "nakakanta", "makakanta", "kantahan"]
+  },
+  {
+   "ceb": "bisita",
+   "de": "besuchen; Besuch",
+   "pos": "verb",
+   "lesson": "u04_l06",
+  "forms": ["mobisita", "nibisita", "mibisita", "magbisita", "nagbisita", "bisitaha", "bisitahon", "gibisita", "pagbisita", "nakabisita", "makabisita", "bisitahan"]
+  },
+  {
+   "ceb": "abot",
+   "de": "ankommen",
+   "pos": "verb",
+   "lesson": "u04_l06",
+   "note": "Moabot siya ugma = Sie kommt morgen an",
+  "forms": ["moabot", "niabot", "miabot", "mag-abot", "nag-abot", "nakaabot", "makaabot", "pag-abot", "abtan", "giabtan"]
+  },
+  {
+   "ceb": "gikan",
+   "de": "von; aus (woher)",
+   "pos": "prep",
+   "lesson": "u04_l06",
+   "note": "Gikan ko sa trabaho = Ich komme von der Arbeit",
+  "forms": ["gigikanan"]
+  },
+  {
+   "ceb": "padulong",
+   "de": "unterwegs nach; in Richtung",
+   "pos": "prep",
+   "lesson": "u04_l06",
+   "note": "Padulong ko sa balay = Ich bin auf dem Weg nach Hause",
+  "forms": ["mopadulong", "nagpadulong", "paingon"]
+  },
+  {
+   "ceb": "balay",
+   "de": "Haus",
+   "pos": "noun",
+   "lesson": "u05_l01",
+   "note": "sa balay = zu Hause",
+  "forms": ["balaya"]
+  },
+  {
+   "ceb": "kwarto",
+   "de": "Zimmer; Schlafzimmer",
+   "pos": "noun",
+   "lesson": "u05_l01"
+  },
+  {
+   "ceb": "kusina",
+   "de": "Küche",
+   "pos": "noun",
+   "lesson": "u05_l01"
+  },
+  {
+   "ceb": "banyo",
+   "de": "Bad (Badezimmer)",
+   "pos": "noun",
+   "lesson": "u05_l01"
+  },
+  {
+   "ceb": "kasilyas",
+   "de": "Toilette",
+   "pos": "noun",
+   "lesson": "u05_l01",
+   "note": "auch CR (comfort room) genannt"
+  },
+  {
+   "ceb": "sala",
+   "de": "Wohnzimmer",
+   "pos": "noun",
+   "lesson": "u05_l01"
+  },
+  {
+   "ceb": "pultahan",
+   "de": "Tür",
+   "pos": "noun",
+   "lesson": "u05_l01"
+  },
+  {
+   "ceb": "bintana",
+   "de": "Fenster",
+   "pos": "noun",
+   "lesson": "u05_l01"
+  },
+  {
+   "ceb": "hagdan",
+   "de": "Treppe",
+   "pos": "noun",
+   "lesson": "u05_l01",
+  "forms": ["hagdanan"]
+  },
+  {
+   "ceb": "naa",
+   "de": "da sein; es gibt; haben",
+   "pos": "verb",
+   "lesson": "u05_l01",
+   "note": "Naa si Mama sa kusina. Naa koy anak = Ich habe ein Kind. Gegenteil: wala",
+  "forms": ["naay", "anaa", "naa'y", "tua", "nia"]
+  },
+  {
+   "ceb": "lamesa",
+   "de": "Tisch",
+   "pos": "noun",
+   "lesson": "u05_l02"
+  },
+  {
+   "ceb": "lingkoranan",
+   "de": "Stuhl",
+   "pos": "noun",
+   "lesson": "u05_l02",
+   "note": "von lingkod = sitzen (Unit 7); auch silya"
+  },
+  {
+   "ceb": "higdaanan",
+   "de": "Bett",
+   "pos": "noun",
+   "lesson": "u05_l02",
+   "note": "von higda = sich hinlegen; auch katre"
+  },
+  {
+   "ceb": "aparador",
+   "de": "Schrank",
+   "pos": "noun",
+   "lesson": "u05_l02"
+  },
+  {
+   "ceb": "suga",
+   "de": "Lampe; Licht",
+   "pos": "noun",
+   "lesson": "u05_l02",
+   "note": "Ablihi ang suga = Mach das Licht an"
+  },
+  {
+   "ceb": "libro",
+   "de": "Buch",
+   "pos": "noun",
+   "lesson": "u05_l02"
+  },
+  {
+   "ceb": "selpon",
+   "de": "Handy",
+   "pos": "noun",
+   "lesson": "u05_l02",
+   "note": "vom englischen cellphone"
+  },
+  {
+   "ceb": "plato",
+   "de": "Teller",
+   "pos": "noun",
+   "lesson": "u05_l02"
+  },
+  {
+   "ceb": "baso",
+   "de": "Glas (Trinkglas)",
+   "pos": "noun",
+   "lesson": "u05_l02"
+  },
+  {
+   "ceb": "kutsara",
+   "de": "Löffel",
+   "pos": "noun",
+   "lesson": "u05_l02",
+   "note": "Gabel: tinidor"
+  },
+  {
+   "ceb": "dinhi",
+   "de": "hier",
+   "pos": "adv",
+   "lesson": "u05_l03"
+  },
+  {
+   "ceb": "dinha",
+   "de": "da (bei dir)",
+   "pos": "adv",
+   "lesson": "u05_l03"
+  },
+  {
+   "ceb": "didto",
+   "de": "dort",
+   "pos": "adv",
+   "lesson": "u05_l03"
+  },
+  {
+   "ceb": "asa",
+   "de": "wo; wohin",
+   "pos": "question",
+   "lesson": "u05_l03",
+   "note": "Asa ang banyo? = Wo ist das Bad? Asa ka? = Wo bist du/wohin gehst du?",
+  "forms": ["asay"]
+  },
+  {
+   "ceb": "sulod",
+   "de": "innen; drinnen; hineingehen",
+   "pos": "adv",
+   "lesson": "u05_l03",
+   "note": "sa sulod sa balay = im Haus",
+  "forms": ["mosulod", "nisulod", "misulod", "magsulod", "nagsulod", "isulod", "gisulod", "suloda", "pagsulod", "sulda"]
+  },
+  {
+   "ceb": "gawas",
+   "de": "draußen; hinausgehen",
+   "pos": "adv",
+   "lesson": "u05_l03",
+  "forms": ["mogawas", "nigawas", "migawas", "maggawas", "naggawas", "igawas", "gigawas", "paggawas", "gawasa"]
+  },
+  {
+   "ceb": "ibabaw",
+   "de": "oben; auf",
+   "pos": "adv",
+   "lesson": "u05_l03",
+   "note": "sa ibabaw sa lamesa = auf dem Tisch"
+  },
+  {
+   "ceb": "ilalom",
+   "de": "unten; unter",
+   "pos": "adv",
+   "lesson": "u05_l03"
+  },
+  {
+   "ceb": "tupad",
+   "de": "neben",
+   "pos": "adv",
+   "lesson": "u05_l03",
+   "note": "sa tupad nako = neben mir"
+  },
+  {
+   "ceb": "atubangan",
+   "de": "vor (räumlich)",
+   "pos": "adv",
+   "lesson": "u05_l03",
+   "note": "sa atubangan sa balay = vor dem Haus"
+  },
+  {
+   "ceb": "luyo",
+   "de": "hinter",
+   "pos": "adv",
+   "lesson": "u05_l04",
+   "note": "sa luyo sa balay = hinter dem Haus"
+  },
+  {
+   "ceb": "kahoy",
+   "de": "Holz; Baum",
+   "pos": "noun",
+   "lesson": "u05_l04"
+  },
+  {
+   "ceb": "martilyo",
+   "de": "Hammer",
+   "pos": "noun",
+   "lesson": "u05_l04"
+  },
+  {
+   "ceb": "lagari",
+   "de": "Säge",
+   "pos": "noun",
+   "lesson": "u05_l04"
+  },
+  {
+   "ceb": "lansang",
+   "de": "Nagel",
+   "pos": "noun",
+   "lesson": "u05_l04"
+  },
+  {
+   "ceb": "muwebles",
+   "de": "Möbel",
+   "pos": "noun",
+   "lesson": "u05_l04"
+  },
+  {
+   "ceb": "himo",
+   "de": "herstellen; bauen (eine Sache)",
+   "pos": "verb",
+   "lesson": "u05_l04",
+   "note": "Naghimo ko ug lamesa = Ich baue einen Tisch",
+  "forms": ["maghimo", "naghimo", "mohimo", "nihimo", "mihimo", "himoa", "himoon", "gihimo", "nakahimo", "makahimo", "paghimo", "hinimo", "himoan"]
+  },
+  {
+   "ceb": "buhat",
+   "de": "tun; machen",
+   "pos": "verb",
+   "lesson": "u05_l04",
+   "note": "Unsa imong gibuhat? = Was machst du?",
+  "forms": ["magbuhat", "nagbuhat", "mobuhat", "nibuhat", "mibuhat", "buhata", "buhaton", "gibuhat", "nakabuhat", "makabuhat", "pagbuhat", "buluhaton", "binuhat"]
+  },
+  {
+   "ceb": "gamit",
+   "de": "benutzen; Werkzeug",
+   "pos": "verb",
+   "lesson": "u05_l04",
+  "forms": ["mogamit", "nigamit", "migamit", "maggamit", "naggamit", "gamita", "gamiton", "gigamit", "nakagamit", "makagamit", "paggamit", "gamitan"]
+  },
+  {
+   "ceb": "talyer",
+   "de": "Werkstatt",
+   "pos": "noun",
+   "lesson": "u05_l04",
+   "note": "vom spanischen taller"
+  },
+  {
+   "ceb": "kang",
+   "de": "(Marker vor Namen) für; an; von",
+   "pos": "particle",
+   "lesson": "u05_l05",
+   "note": "para kang Mama = für Mama; kang kinsa? = wem gehört?"
+  },
+  {
+   "ceb": "para",
+   "de": "für",
+   "pos": "prep",
+   "lesson": "u05_l05",
+   "note": "para nimo = für dich; para nako = für mich / meiner Meinung nach"
+  },
+  {
+   "ceb": "hardin",
+   "de": "Garten",
+   "pos": "noun",
+   "lesson": "u05_l05"
+  },
+  {
+   "ceb": "tanom",
+   "de": "Pflanze; pflanzen",
+   "pos": "noun",
+   "lesson": "u05_l05",
+  "forms": ["magtanom", "nagtanom", "motanom", "itanom", "gitanom", "tanoma", "tanomon", "pagtanom", "tanaman"]
+  },
+  {
+   "ceb": "bulak",
+   "de": "Blume",
+   "pos": "noun",
+   "lesson": "u05_l05"
+  },
+  {
+   "ceb": "iro",
+   "de": "Hund",
+   "pos": "noun",
+   "lesson": "u05_l05"
+  },
+  {
+   "ceb": "iring",
+   "de": "Katze",
+   "pos": "noun",
+   "lesson": "u05_l05"
+  },
+  {
+   "ceb": "hugaw",
+   "de": "schmutzig",
+   "pos": "adj",
+   "lesson": "u05_l05",
+  "forms": ["hugawan", "nahugawan", "hugawon"]
+  },
+  {
+   "ceb": "butang",
+   "de": "Sache; Ding; hinlegen; stellen",
+   "pos": "noun",
+   "lesson": "u05_l05",
+   "note": "Ibutang sa lamesa = Stell es auf den Tisch",
+  "forms": ["ibutang", "gibutang", "magbutang", "nagbutang", "mobutang", "butangi", "butangan", "gibutangan", "pagbutang"]
+  },
+  {
+   "ceb": "kuha",
+   "de": "holen; nehmen",
+   "pos": "verb",
+   "lesson": "u05_l05",
+  "forms": ["mokuha", "nikuha", "mikuha", "magkuha", "nagkuha", "kuhaa", "kuhaon", "gikuha", "nakakuha", "makakuha", "pagkuha", "kuhai", "kuhaan", "manguha", "nanguha"]
+  },
+  {
+   "ceb": "dulaan",
+   "de": "Spielzeug",
+   "pos": "noun",
+   "lesson": "u05_l06",
+   "note": "von dula = spielen"
+  },
+  {
+   "ceb": "hilom",
+   "de": "leise; still",
+   "pos": "adj",
+   "lesson": "u05_l06",
+   "note": "Hilom! = Pst! / Ruhe!",
+  "forms": ["paghilom", "mohilom", "hiloma"]
+  },
+  {
+   "ceb": "saba",
+   "de": "laut; Lärm",
+   "pos": "adj",
+   "lesson": "u05_l06",
+  "forms": ["sabaan", "magsaba", "nagsaba", "sabaa"]
+  },
+  {
+   "ceb": "gakos",
+   "de": "umarmen; Umarmung",
+   "pos": "verb",
+   "lesson": "u05_l06",
+  "forms": ["mogakos", "nigakos", "migakos", "maggakos", "naggakos", "gakosa", "gakson", "gigakos", "gigakson", "paggakos", "gakosi"]
+  },
+  {
+   "ceb": "halok",
+   "de": "küssen; Kuss",
+   "pos": "verb",
+   "lesson": "u05_l06",
+  "forms": ["mohalok", "nihalok", "mihalok", "maghalok", "naghalok", "haloki", "hagkan", "gihagkan", "halokan", "paghalok", "gihalokan"]
+  },
+  {
+   "ceb": "katawa",
+   "de": "lachen",
+   "pos": "verb",
+   "lesson": "u05_l06",
+  "forms": ["mokatawa", "nikatawa", "mikatawa", "magkatawa", "nagkatawa", "pagkatawa", "katawhan", "nakakatawa", "makakatawa"]
+  },
+  {
+   "ceb": "hilak",
+   "de": "weinen",
+   "pos": "verb",
+   "lesson": "u05_l06",
+  "forms": ["mohilak", "nihilak", "mihilak", "maghilak", "naghilak", "paghilak", "hilakon", "hilaki", "nakahilak", "makahilak"]
+  },
+  {
+   "ceb": "bantay",
+   "de": "aufpassen auf; bewachen",
+   "pos": "verb",
+   "lesson": "u05_l06",
+   "note": "Bantayi ang bata = Pass auf das Kind auf",
+  "forms": ["magbantay", "nagbantay", "mobantay", "bantayi", "bantayan", "gibantayan", "pagbantay", "bantaya"]
+  },
+  {
+   "ceb": "higda",
+   "de": "sich hinlegen",
+   "pos": "verb",
+   "lesson": "u05_l06",
+   "note": "Higda na = Leg dich hin",
+  "forms": ["mohigda", "nihigda", "mihigda", "maghigda", "naghigda", "higdaa", "paghigda", "nakahigda", "makahigda", "naghigda-higda"]
+  },
+  {
+   "ceb": "Inday",
+   "de": "Mädchen (liebevolle Anrede)",
+   "pos": "noun",
+   "lesson": "u05_l06",
+   "note": "so ruft man Tochter oder kleine Mädchen; Junge: Dodong",
+  "forms": ["dodong", "Dodong"]
+  },
+  {
+   "ceb": "kapoy",
+   "de": "müde; anstrengend",
+   "pos": "adj",
+   "lesson": "u06_l01",
+   "note": "Kapoy kaayo ko = Ich bin sehr müde",
+  "forms": ["gikapoy", "kapoyan", "nakapoy", "makapoy", "kapoya", "kakapoy"]
+  },
+  {
+   "ceb": "sakit",
+   "de": "krank; Schmerz; weh",
+   "pos": "adj",
+   "lesson": "u06_l01",
+   "note": "Sakit akong ulo = Mein Kopf tut weh. Masakiton = kränklich",
+  "forms": ["masakit", "nasakit", "masakiton", "gisakit", "sakita", "nagsakit", "magsakit", "nagkasakit", "sakiti"]
+  },
+  {
+   "ceb": "lipay",
+   "de": "froh; glücklich",
+   "pos": "adj",
+   "lesson": "u06_l01",
+   "note": "malipayon = glücklich (Adjektiv); nalipay ko = ich freue mich",
+  "forms": ["malipayon", "nalipay", "malipay", "kalipay", "lipaya", "naglipay", "maglipay", "magkalipay"]
+  },
+  {
+   "ceb": "guol",
+   "de": "traurig; bedrückt",
+   "pos": "adj",
+   "lesson": "u06_l01",
+  "forms": ["naguol", "maguol", "kaguol", "nagguol", "magguol"]
+  },
+  {
+   "ceb": "kulba",
+   "de": "nervös; aufgeregt",
+   "pos": "adj",
+   "lesson": "u06_l01",
+   "note": "Kulbaan ko = Ich bin nervös",
+  "forms": ["kulbaan", "gikulbaan", "nakulbaan", "makulbaan", "kakulba"]
+  },
+  {
+   "ceb": "lagot",
+   "de": "verärgert; genervt",
+   "pos": "adj",
+   "lesson": "u06_l01",
+  "forms": ["nalagot", "malagot", "kalagot", "gilagot", "lagota"]
+  },
+  {
+   "ceb": "hadlok",
+   "de": "Angst; sich fürchten",
+   "pos": "noun",
+   "lesson": "u06_l01",
+   "note": "Nahadlok ko = Ich habe Angst",
+  "forms": ["nahadlok", "mahadlok", "kahadlok", "hadlokon", "gihadlok", "nahadlokan", "mahadlokan", "makahadlok", "nakahadlok"]
+  },
+  {
+   "ceb": "ulo",
+   "de": "Kopf",
+   "pos": "noun",
+   "lesson": "u06_l01"
+  },
+  {
+   "ceb": "tiyan",
+   "de": "Bauch",
+   "pos": "noun",
+   "lesson": "u06_l01"
+  },
+  {
+   "ceb": "lawas",
+   "de": "Körper",
+   "pos": "noun",
+   "lesson": "u06_l01"
+  },
+  {
+   "ceb": "nindot",
+   "de": "schön; toll",
+   "pos": "adj",
+   "lesson": "u06_l02",
+   "note": "Kanindot! = Wie schön!",
+  "forms": ["kanindot", "nindota", "nindotan", "nanindot", "manindot", "nindotang"]
+  },
+  {
+   "ceb": "bati",
+   "de": "schlecht; hässlich",
+   "pos": "adj",
+   "lesson": "u06_l02",
+   "note": "Bati akong pamati = Ich fühle mich schlecht",
+  "forms": ["kabati", "batia", "mabati", "nabati", "batian", "nabatian"]
+  },
+  {
+   "ceb": "lisod",
+   "de": "schwer; schwierig",
+   "pos": "adj",
+   "lesson": "u06_l02",
+  "forms": ["kalisod", "lisoda", "naglisod", "maglisod", "lisdan", "nalisdan", "malisdan"]
+  },
+  {
+   "ceb": "sayon",
+   "de": "leicht; einfach",
+   "pos": "adj",
+   "lesson": "u06_l02",
+  "forms": ["kasayon", "sayona", "sayonan"]
+  },
+  {
+   "ceb": "kusog",
+   "de": "stark; laut; schnell",
+   "pos": "adj",
+   "lesson": "u06_l02",
+   "note": "kusog ang ulan = es regnet stark; kusog kaayo = sehr laut/stark",
+  "forms": ["kakusog", "kusoga", "kusgan", "kusgi", "pakusga", "kusogan"]
+  },
+  {
+   "ceb": "hinay",
+   "de": "langsam; leise",
+   "pos": "adj",
+   "lesson": "u06_l02",
+   "note": "Hinay-hinay lang = Langsam, immer mit der Ruhe",
+  "forms": ["kahinay", "hinaya", "hinay-hinay", "pahinaya", "hinayan", "hinayi"]
+  },
+  {
+   "ceb": "kay",
+   "de": "weil",
+   "pos": "conj",
+   "lesson": "u06_l02",
+   "note": "Kapoy ko kay daghan ko ug trabaho = Ich bin müde, weil ich viel Arbeit habe"
+  },
+  {
+   "ceb": "taas",
+   "de": "hoch; lang; groß (Person)",
+   "pos": "adj",
+   "lesson": "u06_l02",
+  "forms": ["kataas", "taasa", "tag-as", "taason", "taasan"]
+  },
+  {
+   "ceb": "mubo",
+   "de": "kurz; klein (Person)",
+   "pos": "adj",
+   "lesson": "u06_l02",
+  "forms": ["kamubo", "muboa", "mugbo", "muboon"]
+  },
+  {
+   "ceb": "pero",
+   "de": "aber",
+   "pos": "conj",
+   "lesson": "u06_l02",
+   "note": "formell: apan",
+  "forms": ["apan"]
+  },
+  {
+   "ceb": "ulan",
+   "de": "Regen; regnen",
+   "pos": "noun",
+   "lesson": "u06_l03",
+   "note": "Nag-ulan = Es regnet. Mag-ulan ugma = Morgen regnet es",
+  "forms": ["nag-ulan", "mag-ulan", "mo-ulan", "ulanon", "giulanan", "naulanan", "maulanan", "pag-ulan", "ulana", "tingulan", "nagaulan"]
+  },
+  {
+   "ceb": "panahon",
+   "de": "Wetter; Zeit (Zeitraum)",
+   "pos": "noun",
+   "lesson": "u06_l03",
+   "note": "Nindot ang panahon = Das Wetter ist schön"
+  },
+  {
+   "ceb": "tugnaw",
+   "de": "kalt (Gefühl, Wetter)",
+   "pos": "adj",
+   "lesson": "u06_l03",
+   "note": "Tugnaw karon = Es ist kalt heute. Gitugnaw ko = Mir ist kalt",
+  "forms": ["gitugnaw", "katugnaw", "tugnawon", "natugnaw", "matugnaw", "tugnawa"]
+  },
+  {
+   "ceb": "hangin",
+   "de": "Wind; Luft",
+   "pos": "noun",
+   "lesson": "u06_l03",
+  "forms": ["hanginon", "kahangin", "hangina", "nahanginan"]
+  },
+  {
+   "ceb": "panganod",
+   "de": "Wolke",
+   "pos": "noun",
+   "lesson": "u06_l03"
+  },
+  {
+   "ceb": "bagyo",
+   "de": "Taifun; Sturm",
+   "pos": "noun",
+   "lesson": "u06_l03",
+  "forms": ["bagyohon", "gibagyo", "nabagyo", "bagyoha"]
+  },
+  {
+   "ceb": "niyebe",
+   "de": "Schnee",
+   "pos": "noun",
+   "lesson": "u06_l03",
+   "note": "vom spanischen nieve; viele sagen einfach snow"
+  },
+  {
+   "ceb": "langit",
+   "de": "Himmel",
+   "pos": "noun",
+   "lesson": "u06_l03"
+  },
+  {
+   "ceb": "yuta",
+   "de": "Erde; Boden; Land (Grundstück)",
+   "pos": "noun",
+   "lesson": "u06_l03"
+  },
+  {
+   "ceb": "dagat",
+   "de": "Meer",
+   "pos": "noun",
+   "lesson": "u06_l03"
+  },
+  {
+   "ceb": "mingaw",
+   "de": "vermissen; einsam; still",
+   "pos": "verb",
+   "lesson": "u06_l04",
+   "note": "Gimingaw ko nimo = Ich vermisse dich. Mingaw dinhi = Es ist einsam/ruhig hier",
+  "forms": ["gimingaw", "mingawon", "kamingaw", "namingaw", "mamingaw", "mingawa", "gimingawan"]
+  },
+  {
+   "ceb": "tabang",
+   "de": "helfen; Hilfe",
+   "pos": "verb",
+   "lesson": "u06_l04",
+   "note": "Tabang! = Hilfe! Tabangi ko = Hilf mir",
+  "forms": ["motabang", "nitabang", "mitabang", "magtabang", "nagtabang", "tabangi", "tabangan", "gitabangan", "pagtabang", "nakatabang", "makatabang", "tabanga", "tinabangay", "magtinabangay"]
+  },
+  {
+   "ceb": "kalma",
+   "de": "ruhig; gelassen",
+   "pos": "adj",
+   "lesson": "u06_l04",
+   "note": "Kalma lang = Bleib ruhig",
+  "forms": ["magkalma", "nagkalma", "kalmaha", "pagkalma", "kalmado"]
+  },
+  {
+   "ceb": "kuyaw",
+   "de": "gefährlich; krass",
+   "pos": "adj",
+   "lesson": "u06_l04",
+   "note": "Kuyaw! = Krass! (auch bewundernd)",
+  "forms": ["kakuyaw", "kuyawa", "kuyawan"]
+  },
+  {
+   "ceb": "lingaw",
+   "de": "Spaß; unterhaltsam",
+   "pos": "adj",
+   "lesson": "u06_l04",
+   "note": "Lingaw kaayo! = Hat Spaß gemacht! Nalingaw ko = Ich hatte Spaß",
+  "forms": ["nalingaw", "malingaw", "kalingaw", "lingawa", "kalingawan", "maglingaw", "naglingaw", "lingawon", "makalingaw", "nakalingaw", "lingaw-lingaw"]
+  },
+  {
+   "ceb": "laay",
+   "de": "langweilig; gelangweilt",
+   "pos": "adj",
+   "lesson": "u06_l04",
+   "note": "Laay ko = Mir ist langweilig",
+  "forms": ["gilaay", "kalaay", "laayan", "nalaay", "malaay", "laaya", "makalaay", "nakalaay"]
+  },
+  {
+   "ceb": "sayop",
+   "de": "falsch; Fehler",
+   "pos": "adj",
+   "lesson": "u06_l04",
+   "note": "Sayop ko = Ich habe mich geirrt / mein Fehler",
+  "forms": ["nasayop", "masayop", "kasayop", "sayopa", "sayopan", "nagsayop", "magsayop"]
+  },
+  {
+   "ceb": "sakto",
+   "de": "richtig; genau; passend",
+   "pos": "adj",
+   "lesson": "u06_l04",
+   "note": "Sakto! = Richtig! Sakto ra = genau richtig / reicht",
+  "forms": ["kasakto", "saktoa", "saktong", "masakto", "nasakto", "saktoan"]
+  },
+  {
+   "ceb": "siguro",
+   "de": "wahrscheinlich; vielleicht",
+   "pos": "adv",
+   "lesson": "u06_l04"
+  },
+  {
+   "ceb": "tinuod",
+   "de": "wahr; wirklich",
+   "pos": "adj",
+   "lesson": "u06_l04",
+   "note": "Tinuod ba? = Echt? Sa tinuod lang = ehrlich gesagt",
+  "forms": ["tinuoray", "matinud-anon", "katinuod", "tinuoda", "matuod"]
+  },
+  {
+   "ceb": "pamati",
+   "de": "Gefühl; Befinden",
+   "pos": "noun",
+   "lesson": "u06_l05",
+   "note": "Kumusta imong pamati? = Wie fühlst du dich?",
+  "forms": ["gibati", "mobati", "nabati", "bation", "pagbati", "mibati"]
+  },
+  {
+   "ceb": "hitabo",
+   "de": "passieren; Ereignis",
+   "pos": "verb",
+   "lesson": "u06_l05",
+   "note": "Unsay nahitabo? = Was ist passiert?",
+  "forms": ["nahitabo", "mahitabo", "panghitabo", "hitaboa", "mahitabong", "nanghitabo", "manghitabo"]
+  },
+  {
+   "ceb": "tambal",
+   "de": "Medizin; Medikament",
+   "pos": "noun",
+   "lesson": "u06_l05",
+   "note": "tambalan = heilen/behandeln",
+  "forms": ["tambalan", "gitambalan", "magtambal", "nagtambal", "tambali", "tinambal", "tambalon"]
+  },
+  {
+   "ceb": "doktor",
+   "de": "Arzt; Ärztin",
+   "pos": "noun",
+   "lesson": "u06_l05",
+  "forms": ["doktora"]
+  },
+  {
+   "ceb": "ospital",
+   "de": "Krankenhaus",
+   "pos": "noun",
+   "lesson": "u06_l05",
+  "forms": ["naospital", "maospital", "gi-ospital", "ospitala"]
+  },
+  {
+   "ceb": "ubo",
+   "de": "Husten; husten",
+   "pos": "noun",
+   "lesson": "u06_l05",
+  "forms": ["giubo", "nag-ubo", "mag-ubo", "ubohon", "mo-ubo", "naubo"]
+  },
+  {
+   "ceb": "hilanat",
+   "de": "Fieber",
+   "pos": "noun",
+   "lesson": "u06_l05",
+   "note": "Gihilantan ko = Ich habe Fieber",
+  "forms": ["gihilantan", "hilanaton", "nahilantan", "mahilantan", "hilantan"]
+  },
+  {
+   "ceb": "ayo",
+   "de": "gesund werden; heilen",
+   "pos": "verb",
+   "lesson": "u06_l05",
+   "note": "Naayo na ko = Mir geht es wieder gut. Wurzel von maayo = gut",
+  "forms": ["naayo", "maayo", "nag-ayo", "mag-ayo", "ayoha", "ayohon", "giayo", "pag-ayo", "kaayo", "ayoa", "maayong", "nagkaayo", "magkaayo", "nag-ayoay"]
+  },
+  {
+   "ceb": "sip-on",
+   "de": "Schnupfen; Erkältung",
+   "pos": "noun",
+   "lesson": "u06_l05",
+  "forms": ["gisip-on", "sip-onon", "nasip-on", "masip-on"]
+  },
+  {
+   "ceb": "labad",
+   "de": "Kopfschmerzen; schwindelig",
+   "pos": "adj",
+   "lesson": "u06_l05",
+   "note": "Labad akong ulo = Ich habe Kopfschmerzen",
+  "forms": ["gilabad", "labdan", "nalabdan", "malabdan", "kalabad", "labada"]
+  },
+  {
+   "ceb": "grabe",
+   "de": "heftig; extrem; krass",
+   "pos": "adj",
+   "lesson": "u06_l06",
+   "note": "Grabe ang ulan = Es regnet heftig. Grabe! = Wahnsinn!",
+  "forms": ["grabeha", "kagrabe", "nagrabe", "magrabe", "grabehan"]
+  },
+  {
+   "ceb": "swerte",
+   "de": "Glück (haben)",
+   "pos": "noun",
+   "lesson": "u06_l06",
+   "note": "Swerte ko nimo = Ich habe Glück mit dir",
+  "forms": ["naswerte", "maswerte", "swertehan", "naswertehan", "kaswerte", "swerteha", "maswerti"]
+  },
+  {
+   "ceb": "malas",
+   "de": "Pech",
+   "pos": "noun",
+   "lesson": "u06_l06",
+  "forms": ["namalas", "mamalas", "malasa", "kamalas", "namalasan", "malason"]
+  },
+  {
+   "ceb": "balik",
+   "de": "zurückkommen; wieder",
+   "pos": "verb",
+   "lesson": "u06_l06",
+   "note": "Mobalik ko = Ich komme zurück. Balik-balik = immer wieder",
+  "forms": ["mobalik", "nibalik", "mibalik", "magbalik", "nagbalik", "balika", "balikon", "gibalik", "ibalik", "pagbalik", "nakabalik", "makabalik", "balik-balik", "balikan", "gibalikan", "pabalik", "magbalik-balik"]
+  },
+  {
+   "ceb": "hapit",
+   "de": "fast; beinahe",
+   "pos": "adv",
+   "lesson": "u06_l06",
+   "note": "Hapit na ko mahuman = Ich bin fast fertig",
+  "forms": ["hapita", "nahapit", "mahapit", "haping", "hapiton"]
+  },
+  {
+   "ceb": "hubog",
+   "de": "betrunken",
+   "pos": "adj",
+   "lesson": "u06_l06",
+  "forms": ["nahubog", "mahubog", "hubogon", "hubga", "kahubog", "nagpahubog", "magpahubog", "hubgan"]
+  },
+  {
+   "ceb": "dugay",
+   "de": "lange (Zeit); dauern",
+   "pos": "adj",
+   "lesson": "u06_l06",
+   "note": "Dugay na ko dinhi = Ich bin schon lange hier",
+  "forms": ["kadugay", "dugaya", "nadugay", "madugay", "dugayan", "nagdugay", "magdugay", "dugay-dugay", "dugayng"]
+  },
+  {
+   "ceb": "dali",
+   "de": "schnell mal; komm her",
+   "pos": "adv",
+   "lesson": "u06_l06",
+   "note": "Dali! = Komm her! / Schnell! Dali ra = nur kurz",
+  "forms": ["dalia", "dalian", "kadali", "nagdali", "magdali", "dali-dali", "pagdali", "gidali", "daliona", "dalion"]
+  },
+  {
+   "ceb": "samok",
+   "de": "nervig; stressig; Unruhe",
+   "pos": "adj",
+   "lesson": "u06_l06",
+   "note": "Samok kaayo = Voll nervig/chaotisch",
+  "forms": ["kasamok", "samoka", "nasamok", "masamok", "samokon", "gisamok", "samokan", "nagsamok", "magsamok", "samoki"]
+  },
+  {
+   "ceb": "relaks",
+   "de": "entspannen; entspannt",
+   "pos": "verb",
+   "lesson": "u06_l06",
+   "note": "Relaks lang = Entspann dich",
+  "forms": ["magrelaks", "nagrelaks", "morelaks", "relaksa", "pagrelaks"]
+  },
+  {
+   "ceb": "eskwelahan",
+   "de": "Schule (Gebäude)",
+   "pos": "noun",
+   "lesson": "u07_l01"
+  },
+  {
+   "ceb": "estudyante",
+   "de": "Schüler; Schülerin; Student",
+   "pos": "noun",
+   "lesson": "u07_l01"
+  },
+  {
+   "ceb": "klase",
+   "de": "Klasse; Unterricht",
+   "pos": "noun",
+   "lesson": "u07_l01",
+   "note": "Naa koy klase = Ich habe Unterricht"
+  },
+  {
+   "ceb": "tudlo",
+   "de": "lehren; unterrichten; zeigen",
+   "pos": "verb",
+   "lesson": "u07_l01",
+   "note": "Magtudlo ko ug biyolohiya = Ich unterrichte Biologie",
+  "forms": ["magtudlo", "nagtudlo", "motudlo", "nitudlo", "mitudlo", "tudloa", "tudloan", "gitudloan", "gitudlo", "itudlo", "pagtudlo", "tudloi", "nakatudlo", "makatudlo", "tinudlo", "tudloon", "nagatudlo"]
+  },
+  {
+   "ceb": "tuon",
+   "de": "lernen (für die Schule); studieren",
+   "pos": "verb",
+   "lesson": "u07_l01",
+   "note": "Magtuon ko ug Binisaya = Ich lerne Cebuano",
+  "forms": ["magtuon", "nagtuon", "motuon", "tun-i", "tun-an", "gitun-an", "pagtuon", "tuona", "nakatuon", "makatuon", "tinun-an", "tinon-an", "nagatuon"]
+  },
+  {
+   "ceb": "magtutudlo",
+   "de": "Lehrer; Lehrerin (Cebuano-Wort)",
+   "pos": "noun",
+   "lesson": "u07_l01",
+   "note": "gleichbedeutend mit maestro/maestra"
+  },
+  {
+   "ceb": "leksyon",
+   "de": "Lektion; Unterrichtsstunde",
+   "pos": "noun",
+   "lesson": "u07_l01"
+  },
+  {
+   "ceb": "eksam",
+   "de": "Prüfung; Klassenarbeit",
+   "pos": "noun",
+   "lesson": "u07_l01",
+  "forms": ["eksamen"]
+  },
+  {
+   "ceb": "grado",
+   "de": "Note; Klassenstufe",
+   "pos": "noun",
+   "lesson": "u07_l01"
+  },
+  {
+   "ceb": "kwaderno",
+   "de": "Heft",
+   "pos": "noun",
+   "lesson": "u07_l01"
+  },
+  {
+   "ceb": "biyolohiya",
+   "de": "Biologie",
+   "pos": "noun",
+   "lesson": "u07_l02"
+  },
+  {
+   "ceb": "kimika",
+   "de": "Chemie",
+   "pos": "noun",
+   "lesson": "u07_l02",
+   "note": "in der Schule meist einfach Chemistry"
+  },
+  {
+   "ceb": "siyensya",
+   "de": "Naturwissenschaft",
+   "pos": "noun",
+   "lesson": "u07_l02"
+  },
+  {
+   "ceb": "matematika",
+   "de": "Mathe",
+   "pos": "noun",
+   "lesson": "u07_l02"
+  },
+  {
+   "ceb": "eksperimento",
+   "de": "Experiment",
+   "pos": "noun",
+   "lesson": "u07_l02",
+  "forms": ["mag-eksperimento", "nag-eksperimento"]
+  },
+  {
+   "ceb": "laboratoryo",
+   "de": "Labor",
+   "pos": "noun",
+   "lesson": "u07_l02"
+  },
+  {
+   "ceb": "hayop",
+   "de": "Tier",
+   "pos": "noun",
+   "lesson": "u07_l02",
+  "forms": ["kahayopan"]
+  },
+  {
+   "ceb": "tubo",
+   "de": "wachsen",
+   "pos": "verb",
+   "lesson": "u07_l02",
+   "note": "Motubo ang tanom = Die Pflanze wächst",
+  "forms": ["motubo", "nitubo", "mitubo", "magtubo", "nagtubo", "pagtubo", "tinubo", "nagatubo", "tuboan"]
+  },
+  {
+   "ceb": "kinabuhi",
+   "de": "Leben",
+   "pos": "noun",
+   "lesson": "u07_l02",
+   "note": "von buhi = lebendig"
+  },
+  {
+   "ceb": "buhi",
+   "de": "lebendig; leben",
+   "pos": "adj",
+   "lesson": "u07_l02",
+  "forms": ["mabuhi", "nabuhi", "buhion", "gibuhi", "magbuhi", "nagbuhi", "mabuhing", "pagbuhi", "kabuhi", "buhia"]
+  },
+  {
+   "ceb": "sabot",
+   "de": "verstehen",
+   "pos": "verb",
+   "lesson": "u07_l03",
+   "note": "Nakasabot ka? = Verstehst du? Wala ko kasabot = Ich verstehe nicht",
+  "forms": ["nakasabot", "makasabot", "kasabot", "sabta", "sabton", "gisabot", "nasabtan", "masabtan", "pagsabot", "magsinabtanay", "nagsinabtanay", "sinabtanay", "sabti", "nagkasabot", "magkasabot", "kasabtan"]
+  },
+  {
+   "ceb": "kahibalo",
+   "de": "wissen; können",
+   "pos": "verb",
+   "lesson": "u07_l03",
+   "note": "Kahibalo ko = Ich weiß. Wala ko kahibalo = Ich weiß nicht. Kahibalo ka moluto? = Kannst du kochen?",
+  "forms": ["kabalo", "nahibalo", "mahibalo", "hibalo", "nahibaloan", "mahibaloan", "nakahibalo", "makahibalo", "kahibaw", "hibaloi", "pahibalo", "nagpahibalo", "magpahibalo", "kahibalong"]
+  },
+  {
+   "ceb": "hinumdom",
+   "de": "sich erinnern",
+   "pos": "verb",
+   "lesson": "u07_l03",
+   "note": "Nahinumdom ka? = Erinnerst du dich?",
+  "forms": ["nahinumdom", "mahinumdom", "hinumdomi", "hinumdoman", "nahinumdoman", "mahinumdoman", "paghinumdom", "hinumdoma", "nakahinumdom", "makahinumdom", "handom", "handomanan", "hinumduman", "nahinumduman", "mahinumduman", "hinumdumi"]
+  },
+  {
+   "ceb": "kalimot",
+   "de": "vergessen",
+   "pos": "verb",
+   "lesson": "u07_l03",
+   "note": "Nakalimot ko = Ich habe es vergessen",
+  "forms": ["nakalimot", "makalimot", "nakalimtan", "makalimtan", "kalimti", "kalimtan", "pagkalimot", "limot", "nalimtan", "malimtan", "limti", "gikalimtan", "kalimta"]
+  },
+  {
+   "ceb": "pangutana",
+   "de": "Frage; fragen",
+   "pos": "noun",
+   "lesson": "u07_l03",
+   "note": "Naa koy pangutana = Ich habe eine Frage",
+  "forms": ["mangutana", "nangutana", "pangutan-a", "pangutan-on", "gipangutana", "pagpangutana", "pangutanaha", "pangutanhon", "mangotana", "nangotana"]
+  },
+  {
+   "ceb": "tubag",
+   "de": "Antwort; antworten",
+   "pos": "noun",
+   "lesson": "u07_l03",
+  "forms": ["motubag", "nitubag", "mitubag", "magtubag", "nagtubag", "tubaga", "tubagon", "gitubag", "itubag", "pagtubag", "tubagi", "nakatubag", "makatubag", "tubagan", "gitubagan"]
+  },
+  {
+   "ceb": "kat-on",
+   "de": "erlernen; lernen (können)",
+   "pos": "verb",
+   "lesson": "u07_l03",
+   "note": "Makakat-on ko = Ich kann es lernen",
+  "forms": ["makakat-on", "nakakat-on", "magkat-on", "nagkat-on", "kat-oni", "kat-onan", "pagkat-on", "nakat-onan", "makat-onan", "nagakat-on"]
+  },
+  {
+   "ceb": "pasabot",
+   "de": "Bedeutung",
+   "pos": "noun",
+   "lesson": "u07_l03",
+   "note": "Unsay pasabot sa …? = Was bedeutet …?",
+  "forms": ["pasabta", "ipasabot", "gipasabot", "magpasabot", "nagpasabot", "pasabton"]
+  },
+  {
+   "ceb": "ingon",
+   "de": "sagen (etwas); so (wie)",
+   "pos": "verb",
+   "lesson": "u07_l03",
+   "note": "Unsaon pag-ingon ug Danke sa Binisaya? = Wie sagt man Danke auf Cebuano? Ingon ani = so (wie das hier)",
+  "forms": ["moingon", "niingon", "miingon", "mag-ingon", "nag-ingon", "ingna", "ingnon", "giingon", "giingnan", "ingnan", "pag-ingon", "ingon-ingon", "nakaingon", "makaingon", "ingon-ana", "ingon-ani"]
+  },
+  {
+   "ceb": "sulti",
+   "de": "sprechen; reden",
+   "pos": "verb",
+   "lesson": "u07_l03",
+   "note": "Mosulti ko ug Binisaya = Ich spreche Cebuano. Isulti = sag es",
+  "forms": ["mosulti", "nisulti", "misulti", "magsulti", "nagsulti", "isulti", "gisulti", "sultihi", "sultihan", "gisultihan", "pagsulti", "sultia", "nakasulti", "makasulti", "sulti-sulti", "magsultianay", "nagsultianay", "nakigsulti", "makigsulti", "sultian"]
+  },
+  {
+   "ceb": "opisina",
+   "de": "Büro",
+   "pos": "noun",
+   "lesson": "u07_l04"
+  },
+  {
+   "ceb": "botika",
+   "de": "Apotheke",
+   "pos": "noun",
+   "lesson": "u07_l04"
+  },
+  {
+   "ceb": "nars",
+   "de": "Krankenpfleger; Krankenschwester",
+   "pos": "noun",
+   "lesson": "u07_l04"
+  },
+  {
+   "ceb": "sweldo",
+   "de": "Gehalt; Lohn",
+   "pos": "noun",
+   "lesson": "u07_l04",
+  "forms": ["sweldohan", "gisweldohan", "magsweldo", "nagsweldo", "sweldoan"]
+  },
+  {
+   "ceb": "trabahante",
+   "de": "Arbeiter; Angestellter",
+   "pos": "noun",
+   "lesson": "u07_l04",
+  "forms": ["trabahador"]
+  },
+  {
+   "ceb": "sugod",
+   "de": "anfangen; beginnen",
+   "pos": "verb",
+   "lesson": "u07_l04",
+   "note": "Magsugod ang klase alas otso = Der Unterricht beginnt um 8",
+  "forms": ["magsugod", "nagsugod", "mosugod", "nisugod", "misugod", "sugdi", "sugdan", "gisugdan", "sinugdanan", "pagsugod", "sugod-sugod", "sugda", "sugdon", "nakasugod", "makasugod", "sinugdan", "nagasugod"]
+  },
+  {
+   "ceb": "undang",
+   "de": "aufhören",
+   "pos": "verb",
+   "lesson": "u07_l04",
+   "note": "Undang na! = Hör auf!",
+  "forms": ["moundang", "niundang", "miundang", "mag-undang", "nag-undang", "undangi", "undangon", "giundang", "pag-undang", "undanga", "nakaundang", "makaundang", "undangan", "giundangan", "mohunong"]
+  },
+  {
+   "ceb": "miting",
+   "de": "Besprechung; Konferenz",
+   "pos": "noun",
+   "lesson": "u07_l04",
+  "forms": ["magmiting", "nagmiting"]
+  },
+  {
+   "ceb": "kugihan",
+   "de": "fleißig",
+   "pos": "adj",
+   "lesson": "u07_l04",
+   "note": "von kugi = Fleiß",
+  "forms": ["kugi", "kakugi", "magkugi", "nagkugi", "kugihi"]
+  },
+  {
+   "ceb": "tapulan",
+   "de": "faul",
+   "pos": "adj",
+   "lesson": "u07_l04",
+   "note": "von tapol = Faulheit",
+  "forms": ["tapol", "katapol", "gitapol", "tapolan", "nagtinapolan", "tapulon"]
+  },
+  {
+   "ceb": "papel",
+   "de": "Papier",
+   "pos": "noun",
+   "lesson": "u07_l05"
+  },
+  {
+   "ceb": "lapis",
+   "de": "Bleistift",
+   "pos": "noun",
+   "lesson": "u07_l05"
+  },
+  {
+   "ceb": "bolpen",
+   "de": "Kugelschreiber",
+   "pos": "noun",
+   "lesson": "u07_l05"
+  },
+  {
+   "ceb": "pisara",
+   "de": "Tafel",
+   "pos": "noun",
+   "lesson": "u07_l05"
+  },
+  {
+   "ceb": "lingkod",
+   "de": "sitzen; sich setzen",
+   "pos": "verb",
+   "lesson": "u07_l05",
+   "note": "Lingkod! = Setz dich!",
+  "forms": ["molingkod", "nilingkod", "milingkod", "maglingkod", "naglingkod", "lingkora", "lingkoran", "gilingkoran", "paglingkod", "lingkoranan", "nakalingkod", "makalingkod", "lingkori", "lingkod-lingkod"]
+  },
+  {
+   "ceb": "tindog",
+   "de": "stehen; aufstehen",
+   "pos": "verb",
+   "lesson": "u07_l05",
+   "note": "Tindog! = Steh auf!",
+  "forms": ["motindog", "nitindog", "mitindog", "magtindog", "nagtindog", "tindoga", "pagtindog", "nakatindog", "makatindog", "tindogan", "patindog", "tindogi"]
+  },
+  {
+   "ceb": "paminaw",
+   "de": "zuhören; hören",
+   "pos": "verb",
+   "lesson": "u07_l05",
+   "note": "Paminaw! = Hör zu!",
+  "forms": ["maminaw", "naminaw", "paminawa", "paminawon", "gipaminaw", "pagpaminaw", "paminawi", "nakapaminaw", "makapaminaw", "paminawan", "gipaminawan", "maminawon"]
+  },
+  {
+   "ceb": "pwede",
+   "de": "kann; darf; möglich",
+   "pos": "verb",
+   "lesson": "u07_l05",
+   "note": "Pwede ba? = Darf ich? Pwede ko moadto sa banyo? = Darf ich zur Toilette?",
+  "forms": ["puwede", "pwedeng", "mahimo"]
+  },
+  {
+   "ceb": "kinahanglan",
+   "de": "müssen; brauchen",
+   "pos": "verb",
+   "lesson": "u07_l05",
+   "note": "Kinahanglan ko ug tubig = Ich brauche Wasser. Kinahanglan ko motrabaho = Ich muss arbeiten",
+  "forms": ["kinahanglanon", "gikinahanglan", "magkinahanglan", "nagkinahanglan", "kinahanglang", "panginahanglan", "kinahanglana"]
+  },
+  {
+   "ceb": "ba",
+   "de": "(Fragepartikel)",
+   "pos": "particle",
+   "lesson": "u07_l05",
+   "note": "macht aus einer Aussage eine Ja/Nein-Frage: Maestro ka ba? = Bist du Lehrer?"
+  },
+  {
+   "ceb": "kaniadto",
+   "de": "früher; damals",
+   "pos": "adv",
+   "lesson": "u07_l06",
+   "note": "Kaniadto nagtrabaho ko sa botika = Früher habe ich in einer Apotheke gearbeitet",
+  "forms": ["kaniadtong"]
+  },
+  {
+   "ceb": "una",
+   "de": "zuerst; erste; erster",
+   "pos": "adj",
+   "lesson": "u07_l06",
+   "note": "sa una = früher/zuerst; unang adlaw = erster Tag",
+  "forms": ["sauna", "unang", "unahan", "unaha", "unahon", "mouna", "niuna", "miuna", "mag-una", "nag-una", "pag-una", "una-una", "nauna", "mauna", "giuna", "iuna", "unahi"]
+  },
+  {
+   "ceb": "sunod",
+   "de": "nächste; nächster; folgen",
+   "pos": "adj",
+   "lesson": "u07_l06",
+   "note": "sunod semana = nächste Woche; Sunda ko = Folge mir",
+  "forms": ["sunda", "sundon", "gisunod", "mosunod", "nisunod", "misunod", "magsunod", "nagsunod", "pagsunod", "sunod-sunod", "sunoda", "nakasunod", "makasunod", "isunod", "sumunod", "sunodon", "nagasunod", "sunding"]
+  },
+  {
+   "ceb": "lain",
+   "de": "andere; anders",
+   "pos": "adj",
+   "lesson": "u07_l06",
+   "note": "lain nga adlaw = ein anderer Tag; lain ang pamati = fühlt sich komisch an",
+  "forms": ["laing", "lain-lain", "nalain", "malain", "kalain", "laina", "nagkalain-lain", "lainon"]
+  },
+  {
+   "ceb": "pareho",
+   "de": "gleich; genauso",
+   "pos": "adj",
+   "lesson": "u07_l06",
+   "note": "Pareho ta = Wir sind gleich / geht mir genauso",
+  "forms": ["parehong", "kapareho", "magpareho", "nagpareho", "parehoa", "parehason"]
+  },
+  {
+   "ceb": "tanan",
+   "de": "alle; alles",
+   "pos": "pron",
+   "lesson": "u07_l06",
+   "note": "Salamat sa tanan = Danke für alles",
+  "forms": ["tanang", "tanan-tanan", "katanan", "tanana"]
+  },
+  {
+   "ceb": "bisan",
+   "de": "sogar; obwohl; egal",
+   "pos": "conj",
+   "lesson": "u07_l06",
+   "note": "bisan unsa = egal was; bisan kanus-a = jederzeit; bisan asa = überall",
+  "forms": ["bisag"]
+  },
+  {
+   "ceb": "importante",
+   "de": "wichtig",
+   "pos": "adj",
+   "lesson": "u07_l06",
+  "forms": ["importanteng", "kaimportante", "importantehon", "importanteha"]
+  },
+  {
+   "ceb": "pasar",
+   "de": "bestehen (Prüfung)",
+   "pos": "verb",
+   "lesson": "u07_l06",
+   "note": "Nakapasar ko sa eksam = Ich habe die Prüfung bestanden",
+  "forms": ["nakapasar", "makapasar", "mopasar", "nipasar", "mipasar", "magpasar", "nagpasar", "pasara", "gipasar", "pagpasar", "pasado"]
+  },
+  {
+   "ceb": "hagbong",
+   "de": "durchfallen (Prüfung)",
+   "pos": "verb",
+   "lesson": "u07_l06",
+  "forms": ["nahagbong", "mahagbong", "hagbongon", "nahagbongan", "gihagbong", "paghagbong", "hagbonga"]
+  },
+  {
+   "ceb": "hatag",
+   "de": "geben",
+   "pos": "verb",
+   "lesson": "u08_l01",
+   "note": "Mohatag ko ug regalo = Ich gebe ein Geschenk. Tagai ko = Gib mir. Gihatag nako = Ich habe es gegeben",
+  "forms": ["mohatag", "nihatag", "mihatag", "maghatag", "naghatag", "gihatag", "ihatag", "hatagi", "hatagan", "gihatagan", "tagai", "tagaan", "gitagaan", "taga", "paghatag", "nakahatag", "makahatag", "hatagon", "hinatag", "hatag-hatag", "hatagay", "gitagan"]
+  },
+  {
+   "ceb": "dala",
+   "de": "bringen; mitnehmen",
+   "pos": "verb",
+   "lesson": "u08_l01",
+   "note": "Magdala ko ug pagkaon = Ich bringe Essen mit. Dad-a = Nimm es mit",
+  "forms": ["magdala", "nagdala", "modala", "nidala", "midala", "gidala", "idala", "dad-a", "dad-on", "dala-dala", "pagdala", "nakadala", "makadala", "dalhon", "dalha", "gidad-an", "dad-an", "dalhan", "dinala", "nagdala-dala"]
+  },
+  {
+   "ceb": "tawag",
+   "de": "anrufen; rufen",
+   "pos": "verb",
+   "lesson": "u08_l01",
+   "note": "Tawagi ko = Ruf mich an. Gitawag ko ni Mama = Mama hat mich angerufen",
+  "forms": ["motawag", "nitawag", "mitawag", "magtawag", "nagtawag", "gitawag", "tawaga", "tawagon", "tawagi", "tawagan", "gitawagan", "itawag", "pagtawag", "nakatawag", "makatawag", "tawganan", "tawgon", "tawga", "gitawgan", "tawgi", "tinawag"]
+  },
+  {
+   "ceb": "hulat",
+   "de": "warten",
+   "pos": "verb",
+   "lesson": "u08_l01",
+   "note": "Hulat lang = Warte kurz. Maghulat ko nimo = Ich warte auf dich",
+  "forms": ["maghulat", "naghulat", "mohulat", "nihulat", "mihulat", "hulata", "hulaton", "gihulat", "hulati", "hulatan", "gihulatan", "paghulat", "nakahulat", "makahulat", "hinulat", "huwat", "maghuwat", "naghuwat", "huwata"]
+  },
+  {
+   "ceb": "abli",
+   "de": "öffnen; offen",
+   "pos": "verb",
+   "lesson": "u08_l01",
+   "note": "Ablihi ang pultahan = Mach die Tür auf. Abli ang tindahan = Der Laden ist offen",
+  "forms": ["moabli", "niabli", "miabli", "mag-abli", "nag-abli", "ablihi", "ablihan", "giablihan", "giabli", "pag-abli", "abliha", "ablihon", "nakaabli", "makaabli", "naabli", "maabli", "abre", "abrihi", "abrihan"]
+  },
+  {
+   "ceb": "sira",
+   "de": "schließen; geschlossen; kaputt",
+   "pos": "verb",
+   "lesson": "u08_l01",
+   "note": "Sirhi ang bintana = Mach das Fenster zu. Sira ang tindahan = Der Laden ist zu. Sira ang selpon = Das Handy ist kaputt",
+  "forms": ["mosira", "nisira", "misira", "magsira", "nagsira", "sirhi", "sirhan", "gisirhan", "gisira", "pagsira", "siraha", "sirhon", "nasira", "masira", "nakasira", "makasira", "siraan", "gisiraan", "sira-sira", "sirado"]
+  },
+  {
+   "ceb": "miaging",
+   "de": "vergangene; letzte (Zeit)",
+   "pos": "adj",
+   "lesson": "u08_l01",
+   "note": "miaging semana = letzte Woche; miaging tuig = letztes Jahr",
+  "forms": ["niaging", "miagi", "niagi", "agi", "moagi", "nag-agi", "mag-agi", "pag-agi", "agi-agi", "agian", "giagian", "naagian", "maagian", "nangagi"]
+  },
+  {
+   "ceb": "padala",
+   "de": "schicken; senden",
+   "pos": "verb",
+   "lesson": "u08_l01",
+   "note": "Ipadala nako ang litrato = Ich schicke das Foto. Gipadala ni Mama = Mama hat es geschickt",
+  "forms": ["magpadala", "nagpadala", "mopadala", "nipadala", "mipadala", "ipadala", "gipadala", "padad-a", "padad-on", "pagpadala", "padalhan", "gipadalhan", "nakapadala", "makapadala", "padad-an", "gipadad-an", "padalhi"]
+  },
+  {
+   "ceb": "dawat",
+   "de": "empfangen; annehmen; bekommen",
+   "pos": "verb",
+   "lesson": "u08_l01",
+   "note": "Nakadawat ko ug sulat = Ich habe einen Brief bekommen",
+  "forms": ["modawat", "nidawat", "midawat", "magdawat", "nagdawat", "dawata", "dawaton", "gidawat", "dawati", "pagdawat", "nakadawat", "makadawat", "dawatan", "gidawatan", "madawat", "nadawat", "dinawat"]
+  },
+  {
+   "ceb": "sugat",
+   "de": "abholen; empfangen (am Treffpunkt)",
+   "pos": "verb",
+   "lesson": "u08_l01",
+   "note": "Sugaton tika sa airport = Ich hole dich am Flughafen ab",
+  "forms": ["mosugat", "nisugat", "misugat", "magsugat", "nagsugat", "sugata", "sugaton", "gisugat", "pagsugat", "nakasugat", "makasugat", "sugati", "nagkasugat", "magkasugat", "sugatan", "gisugatan", "nasugat", "masugat", "nagsugat-sugat"]
+  },
+  {
+   "ceb": "samtang",
+   "de": "während",
+   "pos": "conj",
+   "lesson": "u08_l02",
+   "note": "Nagluto ko samtang natulog ang bata = Ich koche, während das Kind schläft"
+  },
+  {
+   "ceb": "gihapon",
+   "de": "immer noch; trotzdem",
+   "pos": "adv",
+   "lesson": "u08_l02",
+   "note": "Natulog pa gihapon siya = Sie schläft immer noch. Sa gihapon = wie immer",
+  "forms": ["gihapong"]
+  },
+  {
+   "ceb": "sayaw",
+   "de": "tanzen; Tanz",
+   "pos": "verb",
+   "lesson": "u08_l02",
+  "forms": ["mosayaw", "nisayaw", "misayaw", "magsayaw", "nagsayaw", "sayawa", "sayawon", "gisayaw", "pagsayaw", "isayaw", "nakasayaw", "makasayaw", "sayawi", "sayawan", "gisayawan", "sinayaw", "magsayaw-sayaw"]
+  },
+  {
+   "ceb": "dagan",
+   "de": "rennen; laufen (schnell); fahren",
+   "pos": "verb",
+   "lesson": "u08_l02",
+   "note": "Nagdagan ang bata = Das Kind rennt. Paspas modagan ang bus = Der Bus fährt schnell",
+  "forms": ["modagan", "nidagan", "midagan", "magdagan", "nagdagan", "dagana", "daganon", "pagdagan", "nakadagan", "makadagan", "dagan-dagan", "dagani", "daganan", "gidaganan", "padagan", "gipadagan", "nagpadagan", "magpadagan", "dinagan", "nagadagan", "dinaganan"]
+  },
+  {
+   "ceb": "langoy",
+   "de": "schwimmen",
+   "pos": "verb",
+   "lesson": "u08_l02",
+   "note": "Malangoy ta sa dagat = Lass uns im Meer schwimmen",
+  "forms": ["molangoy", "nilangoy", "milangoy", "maglangoy", "naglangoy", "malangoy", "nalangoy", "langoya", "langoyon", "paglangoy", "nakalangoy", "makalangoy", "langoyan", "gilangoyan", "langoy-langoy", "maglangoy-langoy", "langoyi"]
+  },
+  {
+   "ceb": "biya",
+   "de": "verlassen; weggehen; zurücklassen",
+   "pos": "verb",
+   "lesson": "u08_l02",
+   "note": "Mobiya ko alas sais = Ich gehe um 6 weg. Ayaw ko biyai = Verlass mich nicht",
+  "forms": ["mobiya", "nibiya", "mibiya", "magbiya", "nagbiya", "biyai", "biyaan", "gibiyaan", "ibiya", "gibiya", "pagbiya", "nakabiya", "makabiya", "biyaa", "biyaon", "nagbiya-biya", "nabiyaan", "mabiyaan"]
+  },
+  {
+   "ceb": "istorya",
+   "de": "Geschichte; erzählen; sich unterhalten",
+   "pos": "noun",
+   "lesson": "u08_l02",
+   "note": "Mag-istorya ta = Lass uns reden. Istoryahi ko = Erzähl mir",
+  "forms": ["mag-istorya", "nag-istorya", "mo-istorya", "istoryahi", "istoryahan", "gi-istoryahan", "istoryaha", "istoryahon", "gi-istorya", "pag-istorya", "i-istorya", "nakaistorya", "makaistorya", "istorya-istorya", "mag-istoryahanay", "nag-istoryahanay", "estorya", "mag-estorya", "nag-estorya", "estoryahi", "estoryahan", "gi-estoryahan", "nakig-istorya", "makig-istorya", "nag-istoryahay", "nagestorya", "istoryahay"]
+  },
+  {
+   "ceb": "pangita",
+   "de": "suchen",
+   "pos": "verb",
+   "lesson": "u08_l02",
+   "note": "Nangita ko ug trabaho = Ich suche Arbeit. Pangitaa = Such es",
+  "forms": ["mangita", "nangita", "magpangita", "nagpangita", "pangitaa", "pangitaon", "gipangita", "pagpangita", "nakapangita", "makapangita", "pangiti", "pangitaan", "gipangitaan", "nakita", "mangitaon", "nangitaon", "nagpangita-pangita"]
+  },
+  {
+   "ceb": "baktas",
+   "de": "zu Fuß gehen; wandern",
+   "pos": "verb",
+   "lesson": "u08_l02",
+   "note": "Magbaktas ta sa bukid = Lass uns in den Bergen wandern",
+  "forms": ["mobaktas", "nibaktas", "mibaktas", "magbaktas", "nagbaktas", "baktasa", "baktason", "gibaktas", "pagbaktas", "nakabaktas", "makabaktas", "baktasan", "gibaktasan", "baktas-baktas", "magbaktas-baktas", "baktasi"]
+  },
+  {
+   "ceb": "tabok",
+   "de": "überqueren; gegenüber",
+   "pos": "verb",
+   "lesson": "u08_l02",
+   "note": "Motabok ta sa dalan = Lass uns die Straße überqueren. Sa tabok = gegenüber",
+  "forms": ["motabok", "nitabok", "mitabok", "magtabok", "nagtabok", "taboka", "tabokon", "gitabok", "pagtabok", "nakatabok", "makatabok", "tabokan", "gitabokan", "taboki", "atbang", "tabok-tabok"]
+  },
+  {
+   "ceb": "nato",
+   "de": "uns; von uns (du und ich)",
+   "pos": "pron",
+   "lesson": "u08_l03",
+   "note": "Objektform von kita: Giluto nato = Wir (du und ich) haben es gekocht",
+  "forms": ["natong"]
+  },
+  {
+   "ceb": "namo",
+   "de": "uns; von uns (ohne dich)",
+   "pos": "pron",
+   "lesson": "u08_l03",
+   "note": "Objektform von kami",
+  "forms": ["namong"]
+  },
+  {
+   "ceb": "ninyo",
+   "de": "euch; von euch",
+   "pos": "pron",
+   "lesson": "u08_l03",
+   "note": "Objektform von kamo",
+  "forms": ["ninyong"]
+  },
+  {
+   "ceb": "nila",
+   "de": "ihnen; von ihnen",
+   "pos": "pron",
+   "lesson": "u08_l03",
+   "note": "Objektform von sila",
+  "forms": ["nilang"]
+  },
+  {
+   "ceb": "putol",
+   "de": "schneiden; abschneiden; durchtrennen",
+   "pos": "verb",
+   "lesson": "u08_l03",
+   "note": "Giputol nako ang kahoy = Ich habe das Holz geschnitten",
+  "forms": ["moputol", "niputol", "miputol", "magputol", "nagputol", "putla", "putlon", "giputol", "pagputol", "nakaputol", "makaputol", "putli", "putlan", "giputlan", "naputol", "maputol", "putol-putol", "pinutol", "giputla", "putlang"]
+  },
+  {
+   "ceb": "hiwa",
+   "de": "schneiden (in Scheiben); in Stücke schneiden",
+   "pos": "verb",
+   "lesson": "u08_l03",
+   "note": "Hiwaa ang sibuyas = Schneide die Zwiebel",
+  "forms": ["mohiwa", "nihiwa", "mihiwa", "maghiwa", "naghiwa", "hiwaa", "hiwaon", "gihiwa", "paghiwa", "nakahiwa", "makahiwa", "hiwai", "hiwaan", "gihiwaan", "nahiwa", "mahiwa", "hiwa-hiwa", "hinaw", "hinawa", "hiniwa"]
+  },
+  {
+   "ceb": "sugba",
+   "de": "grillen",
+   "pos": "verb",
+   "lesson": "u08_l03",
+   "note": "Magsugba ta ug isda = Lass uns Fisch grillen. Sinugba = Gegrilltes",
+  "forms": ["mosugba", "nisugba", "misugba", "magsugba", "nagsugba", "sugbaha", "sugbahon", "gisugba", "pagsugba", "nakasugba", "makasugba", "sinugba", "sugbahi", "sugbahan", "gisugbahan", "sugbaan"]
+  },
+  {
+   "ceb": "prito",
+   "de": "braten; frittieren",
+   "pos": "verb",
+   "lesson": "u08_l03",
+   "note": "Giprito nako ang itlog = Ich habe das Ei gebraten. Pinirito = gebraten",
+  "forms": ["moprito", "niprito", "miprito", "magprito", "nagprito", "pritoha", "pritohon", "giprito", "pagprito", "nakaprito", "makaprito", "pinirito", "pritohi", "pritohan", "gipritohan", "pritoa", "pritos"]
+  },
+  {
+   "ceb": "lung-ag",
+   "de": "Reis kochen",
+   "pos": "verb",
+   "lesson": "u08_l03",
+   "note": "Maglung-ag ko = Ich koche Reis. Linung-ag = gekochter Reis (auch kan-on)",
+  "forms": ["molung-ag", "nilung-ag", "milung-ag", "maglung-ag", "naglung-ag", "lung-aga", "lung-agon", "gilung-ag", "paglung-ag", "nakalung-ag", "makalung-ag", "linung-ag", "lung-agi", "lung-agan", "gilung-agan"]
+  },
+  {
+   "ceb": "sagol",
+   "de": "mischen; vermischen",
+   "pos": "verb",
+   "lesson": "u08_l03",
+   "note": "Isagol ang asukar = Rühr den Zucker rein",
+  "forms": ["mosagol", "nisagol", "misagol", "magsagol", "nagsagol", "sagola", "sagolon", "gisagol", "isagol", "pagsagol", "nakasagol", "makasagol", "sagoli", "sagolan", "gisagolan", "sinagol", "sagol-sagol", "nagsagol-sagol"]
+  },
+  {
+   "ceb": "hulam",
+   "de": "leihen; ausleihen",
+   "pos": "verb",
+   "lesson": "u08_l04",
+   "note": "Pwede ko manghulam sa imong selpon? = Darf ich dein Handy leihen? Ihulam = verleihen",
+  "forms": ["manghulam", "nanghulam", "maghulam", "naghulam", "mohulam", "nihulam", "mihulam", "hulama", "hulamon", "gihulam", "ihulam", "pagpanghulam", "paghulam", "nakahulam", "makahulam", "hulami", "hulaman", "gihulaman", "hinulam", "hulam-hulam", "hinulaman", "pahulam", "gipahulam", "nagpahulam", "magpahulam", "pahulama"]
+  },
+  {
+   "ceb": "bilin",
+   "de": "zurücklassen; übrig bleiben; bleiben",
+   "pos": "verb",
+   "lesson": "u08_l04",
+   "note": "Ibilin sa balay = Lass es zu Hause. Magpabilin ko dinhi = Ich bleibe hier",
+  "forms": ["mobilin", "nibilin", "mibilin", "magbilin", "nagbilin", "ibilin", "gibilin", "bilina", "bilinon", "pagbilin", "nakabilin", "makabilin", "nabilin", "mabilin", "magpabilin", "nagpabilin", "mopabilin", "pabilin", "bilinan", "gibilinan", "bilini", "nahabilin", "mahabilin", "nabiling", "bilin-bilin"]
+  },
+  {
+   "ceb": "tago",
+   "de": "verstecken; aufbewahren",
+   "pos": "verb",
+   "lesson": "u08_l04",
+   "note": "Itago ang regalo = Versteck das Geschenk. Nagtago ang bata = Das Kind versteckt sich",
+  "forms": ["motago", "nitago", "mitago", "magtago", "nagtago", "itago", "gitago", "tagoa", "tagoon", "pagtago", "nakatago", "makatago", "tagoi", "tagoan", "gitagoan", "tinago", "tago-tago", "nagtago-tago", "magtago-tago", "tagoanan", "tinagoan"]
+  },
+  {
+   "ceb": "andam",
+   "de": "vorbereiten; bereit",
+   "pos": "verb",
+   "lesson": "u08_l04",
+   "note": "Andam na ko = Ich bin bereit. Mag-andam ko ug pagkaon = Ich bereite Essen vor",
+  "forms": ["mag-andam", "nag-andam", "mo-andam", "ni-andam", "mi-andam", "andama", "andamon", "giandam", "iandam", "pag-andam", "nakaandam", "makaandam", "andami", "andaman", "giandaman", "naandam", "maandam", "andam-andam", "inandam", "kaandam", "nagpaandam", "magpaandam"]
+  },
+  {
+   "ceb": "hipos",
+   "de": "aufräumen",
+   "pos": "verb",
+   "lesson": "u08_l04",
+   "note": "Hiposa ang mga dulaan = Räum die Spielsachen auf",
+  "forms": ["manghipos", "nanghipos", "maghipos", "naghipos", "mohipos", "nihipos", "mihipos", "hiposa", "hiposon", "gihipos", "paghipos", "pagpanghipos", "nakahipos", "makahipos", "hiposi", "hiposan", "gihiposan", "nahipos", "mahipos", "hinipos", "hipos-hipos", "naghipos-hipos"]
+  },
+  {
+   "ceb": "tapok",
+   "de": "sammeln; versammeln; Treffen",
+   "pos": "verb",
+   "lesson": "u08_l04",
+   "note": "Magtapok ang pamilya sa Pasko = Die Familie versammelt sich an Weihnachten",
+  "forms": ["magtapok", "nagtapok", "motapok", "nitapok", "mitapok", "tapoka", "tapokon", "gitapok", "itapok", "pagtapok", "nakatapok", "makatapok", "tapoki", "tapokan", "gitapokan", "tinapok", "tapok-tapok", "nagtapok-tapok", "magtapok-tapok", "tigom"]
+  },
+  {
+   "ceb": "ihap",
+   "de": "zählen",
+   "pos": "verb",
+   "lesson": "u08_l04",
+   "note": "Ihapa ang mga itlog = Zähl die Eier. Makaihap na siya hangtod napulo = Sie kann schon bis zehn zählen",
+  "forms": ["mo-ihap", "ni-ihap", "mi-ihap", "mag-ihap", "nag-ihap", "ihapa", "ihapon", "giihap", "pag-ihap", "nakaihap", "makaihap", "ihapi", "ihapan", "giihapan", "inihap", "ihap-ihap", "nag-ihap-ihap", "mag-ihap-ihap", "moihap", "niihap", "miihap", "nagihap", "magihap"]
+  },
+  {
+   "ceb": "sukod",
+   "de": "messen; Maß",
+   "pos": "verb",
+   "lesson": "u08_l04",
+   "note": "Sukda ang kahoy = Miss das Holz",
+  "forms": ["mosukod", "nisukod", "misukod", "magsukod", "nagsukod", "sukda", "sukdon", "gisukod", "isukod", "pagsukod", "nakasukod", "makasukod", "sukdi", "sukdan", "gisukdan", "sinukod", "sukod-sukod", "sukdanan", "nagsukod-sukod", "panukod"]
+  },
+  {
+   "ceb": "pintal",
+   "de": "streichen; anmalen (Farbe)",
+   "pos": "verb",
+   "lesson": "u08_l04",
+   "note": "Gipintalan nako ang lamesa = Ich habe den Tisch gestrichen",
+  "forms": ["mopintal", "nipintal", "mipintal", "magpintal", "nagpintal", "pintali", "pintalan", "gipintalan", "ipintal", "gipintal", "pagpintal", "nakapintal", "makapintal", "pintala", "pintalon", "pinintal", "pintal-pintal", "nagpintal-pintal", "pintura"]
+  },
+  {
+   "ceb": "ayos",
+   "de": "reparieren; in Ordnung bringen; in Ordnung",
+   "pos": "verb",
+   "lesson": "u08_l04",
+   "note": "Giayos nako ang lingkoranan = Ich habe den Stuhl repariert. Ayos ra = Alles in Ordnung",
+  "forms": ["mo-ayos", "ni-ayos", "mi-ayos", "mag-ayos", "nag-ayos", "ayosa", "ayoson", "giayos", "iayos", "pag-ayos", "nakaayos", "makaayos", "ayosi", "ayosan", "giayosan", "naayos", "maayos", "inayos", "ayos-ayos", "nag-ayos-ayos", "mag-ayos-ayos", "moayos", "niayos", "miayos", "nagayos", "magayos"]
+  },
+  {
+   "ceb": "kaya",
+   "de": "schaffen; können (Kraft haben)",
+   "pos": "verb",
+   "lesson": "u08_l05",
+   "note": "Kaya nako = Das schaffe ich. Kaya ra = Das geht schon",
+  "forms": ["makaya", "nakaya", "kayahon", "kayaha", "gikaya", "kayang", "pagkaya", "kayahan", "kaya-kaya", "nagkaya", "magkaya"]
+  },
+  {
+   "ceb": "sulay",
+   "de": "versuchen; probieren",
+   "pos": "verb",
+   "lesson": "u08_l05",
+   "note": "Sulayi = Probier es. Mosulay ko = Ich versuche es",
+  "forms": ["mosulay", "nisulay", "misulay", "magsulay", "nagsulay", "sulayi", "sulayan", "gisulayan", "sulaya", "sulayon", "gisulay", "isulay", "pagsulay", "nakasulay", "makasulay", "sinulay", "sulay-sulay", "nagsulay-sulay", "magsulay-sulay", "pagsulay-sulay"]
+  },
+  {
+   "ceb": "hunong",
+   "de": "anhalten; aufhören; stoppen",
+   "pos": "verb",
+   "lesson": "u08_l05",
+   "note": "Hunong! = Halt! Mohunong ang bus dinhi = Der Bus hält hier",
+  "forms": ["mohunong", "nihunong", "mihunong", "maghunong", "naghunong", "hunonga", "hunongon", "gihunong", "ihunong", "paghunong", "nakahunong", "makahunong", "hunongi", "hunongan", "gihunongan", "hunong-hunong", "nahunong", "mahunong", "pahunong", "gipahunong", "nagpahunong", "magpahunong", "pahunonga"]
+  },
+  {
+   "ceb": "padayon",
+   "de": "weitermachen; fortfahren",
+   "pos": "verb",
+   "lesson": "u08_l05",
+   "note": "Padayon lang = Mach einfach weiter",
+  "forms": ["mopadayon", "nipadayon", "mipadayon", "magpadayon", "nagpadayon", "padayona", "padayonon", "gipadayon", "ipadayon", "pagpadayon", "nakapadayon", "makapadayon", "padayoni", "padayonan", "gipadayonan"]
+  },
+  {
+   "ceb": "ambi",
+   "de": "gib her",
+   "pos": "verb",
+   "lesson": "u08_l05",
+   "note": "Ambi ang selpon = Gib mir das Handy (nur als Aufforderung)",
+  "forms": ["ambiha", "ambihon"]
+  },
+  {
+   "ceb": "ayaw",
+   "de": "nicht! (Verbot); lass das",
+   "pos": "particle",
+   "lesson": "u08_l05",
+   "note": "Ayaw ug hilak = Wein nicht. Ayaw lang = Lass es lieber",
+  "forms": ["ayawg"]
+  },
+  {
+   "ceb": "pasagdi",
+   "de": "lass es; lass (mich/ihn) in Ruhe",
+   "pos": "verb",
+   "lesson": "u08_l05",
+   "note": "Pasagdi lang = Lass es einfach / egal. Pasagdi ko = Lass mich in Ruhe. Wurzel: pasagad",
+  "forms": ["pasagad", "pasagdan", "gipasagdan", "magpasagad", "nagpasagad", "pasagdahi", "gipasagad", "pasagdaan"]
+  },
+  {
+   "ceb": "kuyog",
+   "de": "mitkommen; begleiten; zusammen gehen",
+   "pos": "verb",
+   "lesson": "u08_l05",
+   "note": "Kuyog ko nimo = Ich komme mit dir. Kuyogi ko = Begleite mich",
+  "forms": ["mokuyog", "nikuyog", "mikuyog", "kuyogi", "kuyogan", "gikuyogan", "kuyoga", "kuyogon", "gikuyog", "ikuyog", "pagkuyog", "nakakuyog", "makakuyog", "kuyog-kuyog", "nagkuyog-kuyog", "magkuyog-kuyog", "kinuyog", "nagkuyogay", "magkuyogay"]
+  },
+  {
+   "ceb": "bawal",
+   "de": "verboten",
+   "pos": "adj",
+   "lesson": "u08_l05",
+   "note": "Bawal manigarilyo = Rauchen verboten",
+  "forms": ["gibawal", "bawalan", "gibawalan", "magbawal", "nagbawal", "bawala", "bawalon", "pagbawal"]
+  },
+  {
+   "ceb": "amping",
+   "de": "vorsichtig sein; aufpassen (auf sich)",
+   "pos": "verb",
+   "lesson": "u08_l05",
+   "note": "Pag-amping! = Pass auf dich auf! Amping sa dalan = Fahr vorsichtig",
+  "forms": ["pag-amping", "mag-amping", "nag-amping", "mo-amping", "ampingi", "ampingan", "giampingan", "ampinga", "ampingon", "giamping", "maampingon", "mapinangga", "nakaamping", "makaamping", "nag-ampingay", "kaamping", "magamping", "nagamping", "moamping"]
+  },
+  {
+   "ceb": "adlaw-adlaw",
+   "de": "täglich; jeden Tag",
+   "pos": "adv",
+   "lesson": "u08_l06",
+   "note": "Verdopplung von adlaw"
+  },
+  {
+   "ceb": "tibuok",
+   "de": "ganz; das ganze",
+   "pos": "adj",
+   "lesson": "u08_l06",
+   "note": "tibuok adlaw = den ganzen Tag; tibuok kinabuhi = das ganze Leben",
+  "forms": ["katibuok", "tibuoka", "tibuokon", "gitibuok", "tibuok-tibuok"]
+  },
+  {
+   "ceb": "tunga",
+   "de": "Hälfte; Mitte; halb",
+   "pos": "noun",
+   "lesson": "u08_l06",
+   "note": "sa tunga sa gabii = mitten in der Nacht; tunga sa oras = halbe Stunde",
+  "forms": ["tunga-tunga", "katunga", "tungaa", "tungaon", "gitunga", "itunga", "pagtunga", "tungaan", "gitungaan", "tungang", "tungaha", "tungahon", "tinunga", "kinatung-an", "tunga-tungaan"]
+  },
+  {
+   "ceb": "ganina",
+   "de": "vorhin; heute (früher am Tag)",
+   "pos": "adv",
+   "lesson": "u08_l06",
+   "note": "ganinang buntag = heute Morgen",
+  "forms": ["kaganina", "ganinang", "kaganinang", "ganiha", "kaganiha", "ganihang", "kaganihang"]
+  },
+  {
+   "ceb": "taudtaod",
+   "de": "eine Weile; nach einer Weile",
+   "pos": "adv",
+   "lesson": "u08_l06",
+   "note": "Taudtaod, niabot si Mama = Nach einer Weile kam Mama an",
+  "forms": ["taud-taod", "taudtaud", "taud-taud", "taodtaod", "taod-taod", "dugay-dugay", "katag-taod"]
+  },
+  {
+   "ceb": "hangtod",
+   "de": "bis",
+   "pos": "prep",
+   "lesson": "u08_l06",
+   "note": "hangtod karon = bis jetzt; hangtod sa hangtod = für immer",
+  "forms": ["hangtud"]
+  },
+  {
+   "ceb": "sukad",
+   "de": "seit",
+   "pos": "prep",
+   "lesson": "u08_l06",
+   "note": "sukad kaniadto = seit damals; sukad sa miaging tuig = seit letztem Jahr"
+  },
+  {
+   "ceb": "kalit",
+   "de": "plötzlich",
+   "pos": "adv",
+   "lesson": "u08_l06",
+   "note": "Kalit nag-ulan = Plötzlich hat es geregnet",
+  "forms": ["kalit-kalit", "nagkalit", "magkalit", "kalitan", "gikalit", "kalita", "kaliton", "pagkalit", "nakalit", "makalit"]
+  },
+  {
+   "ceb": "basta",
+   "de": "solange; Hauptsache; egal wie",
+   "pos": "conj",
+   "lesson": "u08_l06",
+   "note": "Basta kauban ta = Hauptsache, wir sind zusammen"
+  },
+  {
+   "ceb": "kuan",
+   "de": "Dings; äh (Füllwort)",
+   "pos": "noun",
+   "lesson": "u08_l06",
+   "note": "Das wichtigste Füllwort: Kuan … unsa na gani? = Dings … wie heißt das nochmal?",
+  "forms": ["kuana", "kuanon", "gikuan", "ikuan", "magkuan", "nagkuan", "mokuan", "nikuan", "mikuan", "kuani", "kuanan", "gikuanan", "pagkuan"]
+  },
+  {
+   "ceb": "diin",
+   "de": "wo (Vergangenheit); woher",
+   "pos": "question",
+   "lesson": "u09_l01",
+   "note": "Diin ka gikan? = Wo warst du / Woher kommst du gerade? Für Zukunft und Gegenwart: asa",
+  "forms": ["hain"]
+  },
+  {
+   "ceb": "man",
+   "de": "denn; (weicher Fragepartikel)",
+   "pos": "particle",
+   "lesson": "u09_l01",
+   "note": "Unsa man? = Was ist denn? Asa man ka? = Wo bist du denn? Macht Fragen freundlicher",
+  "forms": ["mo"]
+  },
+  {
+   "ceb": "unsaon",
+   "de": "wie (macht man); wie (Zukunft)",
+   "pos": "question",
+   "lesson": "u09_l01",
+   "note": "Unsaon pagluto ug adobo? = Wie kocht man Adobo? Unsaon nako? = Wie soll ich das machen?"
+  },
+  {
+   "ceb": "giunsa",
+   "de": "wie (Vergangenheit); wie ist es passiert",
+   "pos": "question",
+   "lesson": "u09_l01",
+   "note": "Giunsa nimo pagluto? = Wie hast du es gekocht? Giunsa man? = Wie ist das passiert?",
+  "forms": ["naunsa"]
+  },
+  {
+   "ceb": "ngano",
+   "de": "warum",
+   "pos": "question",
+   "lesson": "u09_l01",
+   "note": "Ngano man? = Warum denn? Nganong …? = Warum …? (vor Verb/Satz)",
+  "forms": ["nganong"]
+  },
+  {
+   "ceb": "kanus-a",
+   "de": "wann",
+   "pos": "question",
+   "lesson": "u09_l01",
+   "note": "Kanus-a ka moabot? = Wann kommst du an? Kanus-a ka niabot? = Wann bist du angekommen?"
+  },
+  {
+   "ceb": "hain",
+   "de": "welche; welcher; wo ist (von mehreren)",
+   "pos": "question",
+   "lesson": "u09_l01",
+   "note": "Hain ang akong selpon? = Wo ist mein Handy? Hain ang imong gusto? = Welches willst du?"
+  },
+  {
+   "ceb": "tungod",
+   "de": "wegen",
+   "pos": "prep",
+   "lesson": "u09_l01",
+   "note": "tungod sa ulan = wegen des Regens; tungod kay = weil (betont)",
+  "forms": ["hinungdan"]
+  },
+  {
+   "ceb": "dapit",
+   "de": "Gegend; Richtung; ungefähr wo",
+   "pos": "noun",
+   "lesson": "u09_l01",
+   "note": "Asa dapit? = Wo ungefähr? Sa among dapit = bei uns in der Gegend",
+  "forms": ["kadapit", "dapita", "dapiton", "gidapit", "padapit", "dapit-dapit", "ngadto", "nganhi", "ngari"]
+  },
+  {
+   "ceb": "paagi",
+   "de": "Art und Weise; Methode",
+   "pos": "noun",
+   "lesson": "u09_l01",
+   "note": "Unsa nga paagi? = Auf welche Weise? Paagi sa selpon = per Handy",
+  "forms": ["pamaagi", "agi", "pinaagi"]
+  },
+  {
+   "ceb": "sigurado",
+   "de": "sicher (überzeugt)",
+   "pos": "adj",
+   "lesson": "u09_l02",
+   "note": "Sigurado ka? = Bist du sicher? Sigurado ko = Ich bin sicher",
+  "forms": ["masiguro", "nasiguro", "siguroa", "siguroon", "gisiguro", "pagsiguro", "siguroha", "sigurohon", "gisiguroha", "kasiguro", "kasigurohan", "siguradoha", "siguradohon", "gisigurado", "pagsigurado", "siguradong", "siguro"]
+  },
+  {
+   "ceb": "tingali",
+   "de": "vielleicht",
+   "pos": "adv",
+   "lesson": "u09_l02",
+   "note": "Tingali ugma = Vielleicht morgen. Basin = könnte sein"
+  },
+  {
+   "ceb": "ambot",
+   "de": "keine Ahnung; weiß nicht",
+   "pos": "phrase",
+   "lesson": "u09_l02",
+   "note": "Ambot lang = Keine Ahnung. Ambot nimo! = Ich weiß auch nicht, was mit dir ist (liebevoll genervt)"
+  },
+  {
+   "ceb": "pananglitan",
+   "de": "zum Beispiel",
+   "pos": "adv",
+   "lesson": "u09_l02",
+   "note": "Pananglitan, ang mangga = Zum Beispiel die Mango",
+  "forms": ["sama"]
+  },
+  {
+   "ceb": "klaro",
+   "de": "klar; deutlich",
+   "pos": "adj",
+   "lesson": "u09_l02",
+   "note": "Klaro na? = Alles klar? Klaro kaayo = ganz klar",
+  "forms": ["klaroha", "klarohon", "giklaro", "iklaro", "pagklaro", "klarohi", "klarohan", "giklarohan", "naklaro", "maklaro", "kaklaro", "klaro-klaro", "klaruha", "klaruhon", "giklaru", "iklaru", "pagklaru", "klaruhi", "klaruhan", "giklaruhan", "naklaru", "maklaru", "kaklaru", "klaru", "tin-aw", "katin-aw", "tin-awa", "tin-awon", "gitin-aw", "itin-aw", "pagtin-aw", "tin-awi", "tin-awan", "gitin-awan", "natin-aw", "matin-aw", "tin-aw-tin-aw"]
+  },
+  {
+   "ceb": "usab",
+   "de": "nochmal; wiederholen",
+   "pos": "verb",
+   "lesson": "u09_l02",
+   "note": "Usba palihug = Sag es bitte nochmal. Balik-balik = immer wieder",
+  "forms": ["usba", "usbon", "giusab", "iusab", "pag-usab", "usbi", "usban", "giusban", "nausab", "mausab", "kausab", "usab-usab", "nag-usab", "mag-usab", "mo-usab", "ni-usab", "mi-usab", "utro", "utroha", "utrohon", "giutro", "iutro", "pag-utro", "utrohi", "utrohan", "giutrohan", "nautro", "mautro", "kautro", "utro-utro", "nag-utro", "mag-utro", "mo-utro", "ni-utro", "mi-utro", "balik-balik", "balika", "balik-balika", "balik-balikon", "gibalik-balik", "ibalik-balik", "pagbalik-balik", "balik-baliki", "balik-balikan", "gibalik-balikan", "nabalik-balik", "mabalik-balik", "kabalik-balik", "balik-balik-balik", "nagbalik-balik", "magbalik-balik", "mobalik-balik", "nibalik-balik", "mibalik-balik"]
+  },
+  {
+   "ceb": "igo",
+   "de": "genug",
+   "pos": "adj",
+   "lesson": "u09_l02",
+   "note": "Igo na = Das reicht. Igo ra = gerade genug",
+  "forms": ["igo-igo", "igoa", "igoon", "giigo", "iigo", "pag-igo", "igoi", "igoan", "giigoan", "naigo", "maigo", "kaigo", "paigo", "paigoa", "paigoon", "gipaigo", "ipaigo", "pagpaigo", "paigoi", "paigoan", "gipaigoan", "napaigo", "mapaigo", "kapaigo"]
+  },
+  {
+   "ceb": "kulang",
+   "de": "zu wenig; fehlt; nicht genug",
+   "pos": "adj",
+   "lesson": "u09_l02",
+   "note": "Kulang ang kwarta = Das Geld reicht nicht. Kulang pa = Es fehlt noch",
+  "forms": ["kulang-kulang", "kulanga", "kulangon", "gikulang", "ikulang", "pagkulang", "kulangi", "kulangan", "gikulangan", "nakulang", "makulang", "kakulang", "kakulangan", "nakulangan", "makulangan"]
+  },
+  {
+   "ceb": "sobra",
+   "de": "zu viel; übrig; mehr als genug",
+   "pos": "adj",
+   "lesson": "u09_l02",
+   "note": "Sobra na = Das ist zu viel. Sobra ang pagkaon = Es ist Essen übrig",
+  "forms": ["sobra-sobra", "sobraha", "sobrahan", "gisobrahan", "sobrahon", "gisobra", "isobra", "pagsobra", "sobrahi", "nasobra", "masobra", "kasobra", "kasobrahan", "nasobrahan", "masobrahan"]
+  },
+  {
+   "ceb": "dugang",
+   "de": "mehr; zusätzlich; hinzufügen",
+   "pos": "adv",
+   "lesson": "u09_l02",
+   "note": "Dugang pa = noch mehr. Dugangi = Gib mehr dazu",
+  "forms": ["dugangi", "dugangan", "gidugangan", "dugangon", "gidugang", "idugang", "pagdugang", "dugang-dugang", "nadugang", "madugang", "kadugang", "kadugangan", "nadugangan", "madugangan", "modugang", "nidugang", "midugang", "magdugang", "nagdugang", "dagdag", "dagdagi", "dagdagan", "gidagdagan", "dagdagon", "gidagdag", "idagdag", "pagdagdag"]
+  },
+  {
+   "ceb": "tawo",
+   "de": "Mensch; Person",
+   "pos": "noun",
+   "lesson": "u09_l03",
+   "note": "mga tawo = Leute; daghang tawo = viele Leute. Natawo = geboren (Unit 11)",
+  "forms": ["tawhana", "tawhanon", "katawhan", "pagkatawo", "natawo", "matawo", "natawhan", "tawo-tawo", "tawhan", "tinawo", "tawong"]
+  },
+  {
+   "ceb": "lugar",
+   "de": "Ort; Platz",
+   "pos": "noun",
+   "lesson": "u09_l03",
+   "note": "Lugar lang! = Anhalten bitte! (im Jeepney, wörtlich: nur bis hier)",
+  "forms": ["lugara", "lugaron", "gilugar", "ilugar", "paglugar", "lugari", "lugaran", "gilugaran", "nalugar", "malugar", "kalugar", "lugar-lugar", "dapit"]
+  },
+  {
+   "ceb": "hitsura",
+   "de": "Aussehen",
+   "pos": "noun",
+   "lesson": "u09_l03",
+   "note": "Unsa iyang hitsura? = Wie sieht sie aus?",
+  "forms": ["hitsuraha", "hitsurahon", "gihitsura", "ihitsura", "paghitsura", "hitsurahi", "hitsurahan", "gihitsurahan", "nahitsura", "mahitsura", "kahitsura", "hitsura-hitsura", "hitsurang", "dagwaya", "dagwayon", "gidagway", "idagway", "pagdagway", "dagwayi", "dagwayan", "gidagwayan", "nadagway", "madagway", "kadagway", "dagway-dagway", "dagwayng", "itsuraha", "itsurahon", "gi-itsura", "i-itsura", "pag-itsura", "itsurahi", "itsurahan", "gi-itsurahan", "naitsura", "maitsura", "kaitsura", "itsura-itsura", "itsurang", "pormaha", "pormahon", "giporma", "iporma", "pagporma", "pormahi", "pormahan", "gipormahan", "naporma", "maporma", "kaporma", "porma-porma", "pormang", "panagwaya", "panagwayon", "gipanagway", "ipanagway", "pagpanagway", "panagwayi", "panagwayan", "gipanagwayan", "napanagway", "mapanagway", "kapanagway", "panagway-panagway", "panagwayng"]
+  },
+  {
+   "ceb": "kolor",
+   "de": "Farbe",
+   "pos": "noun",
+   "lesson": "u09_l03",
+   "note": "Unsa nga kolor? = Welche Farbe?",
+  "forms": ["kolora", "koloran", "gikoloran", "kolorhan", "gikolorhan", "koloron", "gikolor", "ikolor", "pagkolor", "kolori", "nakolor", "makolor", "kakolor", "kolor-kolor", "kolorng", "colora", "coloran", "gicoloran", "colorhan", "gicolorhan", "coloron", "gicolor", "icolor", "pagcolor", "colori", "nacolor", "macolor", "kacolor", "color-color", "colorng"]
+  },
+  {
+   "ceb": "pula",
+   "de": "rot",
+   "pos": "adj",
+   "lesson": "u09_l03",
+  "forms": ["pulang", "pulaha", "pulahon", "gipula", "ipula", "pagpula", "pulahi", "pulahan", "gipulahan", "napula", "mapula", "kapula", "pula-pula", "mapulahon", "mapula-pula"]
+  },
+  {
+   "ceb": "puti",
+   "de": "weiß",
+   "pos": "adj",
+   "lesson": "u09_l03",
+  "forms": ["puting", "putia", "putihon", "giputi", "iputi", "pagputi", "putihi", "putihan", "giputihan", "naputi", "maputi", "kaputi", "puti-puti", "maputihon", "maputi-puti"]
+  },
+  {
+   "ceb": "itom",
+   "de": "schwarz",
+   "pos": "adj",
+   "lesson": "u09_l03",
+  "forms": ["itomng", "itoma", "itomon", "giitom", "iitom", "pagitom", "itomi", "itoman", "giitoman", "naitom", "maitom", "kaitom", "itom-itom", "maitomon", "maitom-itom", "itumng"]
+  },
+  {
+   "ceb": "berde",
+   "de": "grün",
+   "pos": "adj",
+   "lesson": "u09_l03",
+  "forms": ["berdeng", "berdeha", "berdehon", "giberde", "iberde", "pagberde", "berdehi", "berdehan", "giberdehan", "naberde", "maberde", "kaberde", "berde-berde", "maberdehon", "maberde-berde", "lunhawng"]
+  },
+  {
+   "ceb": "asul",
+   "de": "blau",
+   "pos": "adj",
+   "lesson": "u09_l03",
+  "forms": ["asulng", "asula", "asulon", "giasul", "iasul", "pag-asul", "asuli", "asulan", "giasulan", "naasul", "maasul", "kaasul", "asul-asul", "maasulon", "maasul-asul", "bughawng"]
+  },
+  {
+   "ceb": "dalag",
+   "de": "gelb",
+   "pos": "adj",
+   "lesson": "u09_l03",
+  "forms": ["dalagng", "dalaga", "dalagon", "gidalag", "idalag", "pagdalag", "dalagi", "dalagan", "gidalagan", "nadalag", "madalag", "kadalag", "dalag-dalag", "madalagon", "madalag-dalag", "dilawng"]
+  },
+  {
+   "ceb": "buok",
+   "de": "Stück (Zähleinheit)",
+   "pos": "noun",
+   "lesson": "u09_l04",
+   "note": "Pila ka buok? = Wie viele Stück? Tulo ka buok = drei Stück",
+  "forms": ["buok-buok", "piraso"]
+  },
+  {
+   "ceb": "pa",
+   "de": "noch",
+   "pos": "particle",
+   "lesson": "u09_l04",
+   "note": "Wala pa = noch nicht. Gamay pa siya = Sie ist noch klein. Gegenteil: na = schon"
+  },
+  {
+   "ceb": "lang",
+   "de": "nur; bloß; einfach",
+   "pos": "particle",
+   "lesson": "u09_l04",
+   "note": "Kadali lang = Nur einen Moment. Sige lang = Schon gut. Weicher als ra",
+  "forms": ["lamang"]
+  },
+  {
+   "ceb": "kadali",
+   "de": "einen Moment; kurz",
+   "pos": "adv",
+   "lesson": "u09_l04",
+   "note": "Kadali lang! = Moment mal!",
+  "forms": ["kadiyot"]
+  },
+  {
+   "ceb": "pipila",
+   "de": "einige; ein paar",
+   "pos": "adj",
+   "lesson": "u09_l04",
+   "note": "pipila ka adlaw = ein paar Tage"
+  },
+  {
+   "ceb": "petsa",
+   "de": "Datum",
+   "pos": "noun",
+   "lesson": "u09_l04",
+   "note": "Unsa nga petsa karon? = Welches Datum ist heute?"
+  },
+  {
+   "ceb": "kausa",
+   "de": "einmal",
+   "pos": "adv",
+   "lesson": "u09_l04",
+   "note": "kausa sa usa ka semana = einmal pro Woche; kaduha = zweimal",
+  "forms": ["kaduha", "katulo", "makausa", "makaduha", "makatulo"]
+  },
+  {
+   "ceb": "makadaghan",
+   "de": "oft; viele Male",
+   "pos": "adv",
+   "lesson": "u09_l04",
+   "note": "Makadaghan na ko nakaadto didto = Ich war schon oft dort"
+  },
+  {
+   "ceb": "sa dili pa",
+   "de": "bevor",
+   "pos": "conj",
+   "lesson": "u09_l04",
+   "note": "Sa dili pa ko matulog = Bevor ich schlafe. Für Vergangenes: sa wala pa (Unit 11)"
+  },
+  {
+   "ceb": "mahimo",
+   "de": "möglich sein; geht; kann",
+   "pos": "verb",
+   "lesson": "u09_l04",
+   "note": "Mahimo ba? = Geht das? Mahimo ra = Das geht schon. Mahimong maestro = Lehrer werden (Unit 12)",
+  "forms": ["mahimong", "nahimo", "nahimong", "himoon"]
+  },
+  {
+   "ceb": "hangyo",
+   "de": "Bitte (Anliegen); bitten; handeln (Preis)",
+   "pos": "noun",
+   "lesson": "u09_l05",
+   "note": "Naa koy hangyo = Ich habe eine Bitte. Pwede hangyo? = Kann man handeln?",
+  "forms": ["manghangyo", "nanghangyo", "hangyoa", "hangyoon", "gihangyo", "ihangyo", "paghangyo", "hangyoi", "hangyoan", "gihangyoan", "maghangyo", "naghangyo", "mohangyo"]
+  },
+  {
+   "ceb": "pabor",
+   "de": "Gefallen",
+   "pos": "noun",
+   "lesson": "u09_l05",
+   "note": "Pwede mangayo ug pabor? = Kann ich dich um einen Gefallen bitten?",
+  "forms": ["pabora", "paboran", "gipaboran"]
+  },
+  {
+   "ceb": "pangayo",
+   "de": "um etwas bitten; verlangen",
+   "pos": "verb",
+   "lesson": "u09_l05",
+   "note": "Mangayo ko ug tubig = Ich bitte um Wasser. Wurzel: ayo",
+  "forms": ["mangayo", "nangayo", "pangayoa", "pangayoon", "gipangayo", "pagpangayo", "pangayoi", "pangayoan", "gipangayoan", "mangayoon"]
+  },
+  {
+   "ceb": "tugot",
+   "de": "erlauben",
+   "pos": "verb",
+   "lesson": "u09_l05",
+   "note": "Gitugotan ko ni Mama = Mama hat es mir erlaubt",
+  "forms": ["motugot", "nitugot", "mitugot", "magtugot", "nagtugot", "tugoti", "tugotan", "gitugotan", "itugot", "gitugot", "pagtugot", "tugota", "nakatugot", "makatugot", "tugtan", "gitugtan"]
+  },
+  {
+   "ceb": "balibad",
+   "de": "ablehnen; absagen",
+   "pos": "verb",
+   "lesson": "u09_l05",
+  "forms": ["mobalibad", "nibalibad", "mibalibad", "magbalibad", "nagbalibad", "balibari", "balibaran", "gibalibaran", "ibalibad", "gibalibad", "pagbalibad", "balibada", "balibaron"]
+  },
+  {
+   "ceb": "uyon",
+   "de": "zustimmen; einverstanden",
+   "pos": "verb",
+   "lesson": "u09_l05",
+   "note": "Uyon ko = Ich bin einverstanden. Mouyon ka? = Stimmst du zu?",
+  "forms": ["mouyon", "niuyon", "miuyon", "mag-uyon", "nag-uyon", "uyoni", "uyonan", "giuyonan", "iuyon", "giuyon", "pag-uyon", "uyona", "uyonon", "nagkauyon", "magkauyon", "nakauyon", "makauyon", "kauyon"]
+  },
+  {
+   "ceb": "angay",
+   "de": "sollte; angemessen; passend",
+   "pos": "verb",
+   "lesson": "u09_l05",
+   "note": "Angay ka mopahulay = Du solltest dich ausruhen. Angay nimo = steht dir / passt zu dir",
+  "forms": ["angayan", "angayng", "kaangay", "angaya", "angayon", "giangay", "pag-angay", "nag-angay", "mag-angay", "angay-angay", "maangay", "naangay"]
+  },
+  {
+   "ceb": "pasaylo",
+   "de": "verzeihen; Verzeihung",
+   "pos": "verb",
+   "lesson": "u09_l05",
+   "note": "Pasayloa ko = Verzeih mir. Gipasaylo ko niya = Sie hat mir verziehen",
+  "forms": ["pasayloa", "pasayloon", "gipasaylo", "ipasaylo", "pagpasaylo", "mopasaylo", "nipasaylo", "mipasaylo", "magpasaylo", "nagpasaylo", "pasayloi", "pasayloan", "gipasayloan", "kapasayloan", "mapasaylo", "napasaylo", "makapasaylo", "nakapasaylo", "mapinasayloon"]
+  },
+  {
+   "ceb": "luoy",
+   "de": "bemitleidenswert; Mitleid haben",
+   "pos": "adj",
+   "lesson": "u09_l05",
+   "note": "Kaluoy nako = Ich Armer. Maluoy ka nako = Hab Mitleid mit mir. Luoy siya = Sie tut mir leid",
+  "forms": ["maluoy", "naluoy", "luoya", "luoyon", "giluoy", "pagluoy", "nagluoy", "magluoy", "luoyan", "naluoyan", "maluoyan", "makaluoy", "nakaluoy", "kaluy-an", "gikaluy-an", "maluluy-on"]
+  },
+  {
+   "ceb": "sugot",
+   "de": "einwilligen; ja sagen (auch zum Heiratsantrag)",
+   "pos": "verb",
+   "lesson": "u09_l05",
+   "note": "Misugot siya = Sie hat ja gesagt. Mosugot ka? = Willigst du ein?",
+  "forms": ["mosugot", "nisugot", "misugot", "magsugot", "nagsugot", "sugta", "sugton", "gisugot", "isugot", "pagsugot", "sugoti", "sugotan", "gisugotan", "nakasugot", "makasugot", "nagkasugot", "magkasugot", "kasugot"]
+  },
+  {
+   "ceb": "plano",
+   "de": "Plan; planen",
+   "pos": "noun",
+   "lesson": "u09_l06",
+   "note": "Unsay plano nimo ugma? = Was hast du morgen vor?",
+  "forms": ["magplano", "nagplano", "moplano", "planoha", "planohon", "giplano", "iplano", "pagplano", "planohi", "planohan", "giplanohan", "naplano", "maplano"]
+  },
+  {
+   "ceb": "libre",
+   "de": "frei (Zeit); kostenlos",
+   "pos": "adj",
+   "lesson": "u09_l06",
+   "note": "Libre ka ugma? = Hast du morgen frei/Zeit? Libre ang pagkaon = Das Essen ist gratis",
+  "forms": ["libreha", "librehon", "gilibre", "ilibre", "paglibre", "librehi", "librehan", "gilibrehan", "nalibre", "malibre", "kalibre"]
+  },
+  {
+   "ceb": "uyab",
+   "de": "fester Freund; feste Freundin (Partner)",
+   "pos": "noun",
+   "lesson": "u09_l06",
+   "note": "Uyab ko siya kaniadto = Sie war früher meine Freundin",
+  "forms": ["mag-uyab", "nag-uyab", "uyaba", "uyabon", "giuyab", "pag-uyab", "uyabi", "uyaban", "giuyaban", "nag-uyab-uyab", "maguyab", "naguyab", "uyab-uyab", "nagkauyab", "magkauyab", "kauyab", "manguyab", "nanguyab"]
+  },
+  {
+   "ceb": "balita",
+   "de": "Nachricht; Neuigkeit",
+   "pos": "noun",
+   "lesson": "u09_l06",
+   "note": "Unsay balita? = Was gibt's Neues?",
+  "forms": ["magbalita", "nagbalita", "mobalita", "balitaa", "balitaon", "gibalita", "ibalita", "pagbalita", "balitai", "balitaan", "gibalitaan", "nabalita", "mabalita", "kabalita", "balita-balita", "balitang"]
+  },
+  {
+   "ceb": "kalingawan",
+   "de": "Hobby; Unterhaltung",
+   "pos": "noun",
+   "lesson": "u09_l06",
+   "note": "Unsay imong kalingawan? = Was ist dein Hobby? Von lingaw = Spaß"
+  },
+  {
+   "ceb": "musika",
+   "de": "Musik",
+   "pos": "noun",
+   "lesson": "u09_l06"
+  },
+  {
+   "ceb": "sine",
+   "de": "Kino; Film",
+   "pos": "noun",
+   "lesson": "u09_l06",
+   "note": "Motan-aw ta ug sine = Lass uns einen Film schauen",
+  "forms": ["sinehan", "magsine", "nagsine", "mosine", "pagsine"]
+  },
+  {
+   "ceb": "bola",
+   "de": "Ball; Basketball",
+   "pos": "noun",
+   "lesson": "u09_l06",
+   "note": "Magdula ta ug bola = Lass uns Ball spielen",
+  "forms": ["magbola", "nagbola", "mobola", "bolaha", "bolahon", "gibola", "pagbola", "bolahan"]
+  },
+  {
+   "ceb": "suroy",
+   "de": "herumgehen; bummeln; spazieren",
+   "pos": "verb",
+   "lesson": "u09_l06",
+   "note": "Magsuroy-suroy ta = Lass uns ein bisschen rumlaufen",
+  "forms": ["magsuroy", "nagsuroy", "mosuroy", "nisuroy", "misuroy", "suroya", "suroyon", "gisuroy", "pagsuroy", "suroyi", "suroyan", "gisuroyan", "suroy-suroy", "magsuroy-suroy", "nagsuroy-suroy", "mosuroy-suroy", "nakasuroy", "makasuroy", "manuroy", "nanuroy", "pagsuroy-suroy"]
+  },
+  {
+   "ceb": "paborito",
+   "de": "Lieblings-",
+   "pos": "adj",
+   "lesson": "u09_l06",
+   "note": "akong paborito nga pagkaon = mein Lieblingsessen",
+  "forms": ["paboritong", "paboritoha", "paboritohon", "gipaborito", "pagpaborito"]
+  },
+  {
+   "ceb": "dyip",
+   "de": "Jeepney",
+   "pos": "noun",
+   "lesson": "u10_l01",
+   "note": "das typische philippinische Sammeltaxi",
+  "forms": ["dyipni"]
+  },
+  {
+   "ceb": "traysikol",
+   "de": "Tricycle (Motorrad-Taxi)",
+   "pos": "noun",
+   "lesson": "u10_l01",
+  "forms": ["traysikel"]
+  },
+  {
+   "ceb": "bus",
+   "de": "Bus",
+   "pos": "noun",
+   "lesson": "u10_l01"
+  },
+  {
+   "ceb": "taksi",
+   "de": "Taxi",
+   "pos": "noun",
+   "lesson": "u10_l01"
+  },
+  {
+   "ceb": "eroplano",
+   "de": "Flugzeug",
+   "pos": "noun",
+   "lesson": "u10_l01"
+  },
+  {
+   "ceb": "barko",
+   "de": "Schiff",
+   "pos": "noun",
+   "lesson": "u10_l01"
+  },
+  {
+   "ceb": "motor",
+   "de": "Motorrad",
+   "pos": "noun",
+   "lesson": "u10_l01",
+  "forms": ["motorsiklo"]
+  },
+  {
+   "ceb": "awto",
+   "de": "Auto",
+   "pos": "noun",
+   "lesson": "u10_l01",
+  "forms": ["kotse"]
+  },
+  {
+   "ceb": "sakyanan",
+   "de": "Fahrzeug",
+   "pos": "noun",
+   "lesson": "u10_l01",
+   "note": "von sakay = fahren mit"
+  },
+  {
+   "ceb": "pliti",
+   "de": "Fahrpreis",
+   "pos": "noun",
+   "lesson": "u10_l01",
+   "note": "Pila ang pliti? = Was kostet die Fahrt?",
+  "forms": ["plitihan", "plitihi", "gipliti"]
+  },
+  {
+   "ceb": "tuo",
+   "de": "rechts",
+   "pos": "adv",
+   "lesson": "u10_l02",
+   "note": "sa tuo = nach rechts. Links: wala. Auch Wurzel von motuo = glauben (Unit 12)",
+  "forms": ["motuo", "nagtuo", "mituo", "nituo", "tuohan", "gituohan", "pagtuo", "magtuo", "tuohi", "tuoha", "nagatuo", "katuohan"]
+  },
+  {
+   "ceb": "diretso",
+   "de": "geradeaus; direkt",
+   "pos": "adv",
+   "lesson": "u10_l02",
+   "note": "Diretso lang = Immer geradeaus",
+  "forms": ["diretsoha", "diretsohon", "gidiretso", "idiretso", "pagdiretso", "modiretso", "nidiretso", "midiretso", "magdiretso", "nagdiretso", "deretso", "diritso"]
+  },
+  {
+   "ceb": "liko",
+   "de": "abbiegen",
+   "pos": "verb",
+   "lesson": "u10_l02",
+   "note": "Liko sa tuo = Bieg rechts ab",
+  "forms": ["moliko", "niliko", "miliko", "magliko", "nagliko", "likoa", "likoon", "giliko", "iliko", "pagliko", "likoi", "likoan", "likoanan", "likoang"]
+  },
+  {
+   "ceb": "duol",
+   "de": "nah; in der Nähe",
+   "pos": "adj",
+   "lesson": "u10_l02",
+   "note": "Duol ra = Ist nicht weit. Duol sa merkado = in der Nähe des Markts",
+  "forms": ["moduol", "niduol", "miduol", "magduol", "nagduol", "duola", "duolon", "giduol", "iduol", "pagduol", "duoli", "duolan", "giduolan", "kaduol", "naduol", "maduol", "duol-duol", "paduol", "gipaduol", "nagpaduol", "magpaduol"]
+  },
+  {
+   "ceb": "layo",
+   "de": "weit; fern",
+   "pos": "adj",
+   "lesson": "u10_l02",
+   "note": "Layo ra ba? = Ist es weit? Layo kaayo = sehr weit",
+  "forms": ["layoa", "layoon", "gilayo", "ilayo", "paglayo", "layoi", "layoan", "gilayoan", "kalayo", "nalayo", "malayo", "layo-layo", "palayo", "gipalayo", "nagpalayo", "magpalayo", "molayo", "nilayo", "milayo", "maglayo", "naglayo", "layong"]
+  },
+  {
+   "ceb": "kanto",
+   "de": "Ecke; Straßenecke",
+   "pos": "noun",
+   "lesson": "u10_l02",
+   "note": "sa kanto = an der Ecke",
+  "forms": ["kantoha", "kantohan"]
+  },
+  {
+   "ceb": "dalan",
+   "de": "Straße; Weg",
+   "pos": "noun",
+   "lesson": "u10_l02",
+   "note": "Amping sa dalan = Pass auf dem Weg auf",
+  "forms": ["dalana", "dalanon", "gidalan", "idalan", "pagdalan", "dalani", "dalanan", "gidalanan", "kadalan", "karsada", "kalsada"]
+  },
+  {
+   "ceb": "unahan",
+   "de": "weiter vorne; voraus",
+   "pos": "adv",
+   "lesson": "u10_l02",
+   "note": "sa unahan = da vorne; von una = erste",
+  "forms": ["unahana", "unahanon", "giunahan", "iunahan", "pag-unahan", "unahang"]
+  },
+  {
+   "ceb": "paspas",
+   "de": "schnell (Tempo)",
+   "pos": "adj",
+   "lesson": "u10_l02",
+   "note": "Paspas kaayo modagan ang bus = Der Bus fährt sehr schnell",
+  "forms": ["paspasa", "paspason", "gipaspas", "ipaspas", "pagpaspas", "paspasi", "paspasan", "gipaspasan", "kapaspas", "napaspas", "mapaspas", "paspas-paspas", "papaspasa", "gipapaspas", "nagpapaspas", "magpapaspas", "mopaspas", "nipaspas", "mipaspas", "magpaspas", "nagpaspas", "paspasng"]
+  },
+  {
+   "ceb": "Lugar lang",
+   "de": "Anhalten bitte! (im Jeepney)",
+   "pos": "phrase",
+   "lesson": "u10_l02",
+   "note": "wörtlich: nur (bis zu diesem) Ort – so steigt man aus dem Jeepney aus",
+  "forms": ["lugar", "lugara", "lugaron", "gilugar", "ilugar", "paglugar", "lugari", "lugaran", "gilugaran", "nalugar", "malugar", "kalugar", "lugar-lugar", "lugarng"]
+  },
+  {
+   "ceb": "naog",
+   "de": "aussteigen; hinuntergehen",
+   "pos": "verb",
+   "lesson": "u10_l03",
+   "note": "Manaog ko dinhi = Ich steige hier aus",
+  "forms": ["manaog", "nanaog", "monaog", "ninaog", "minaog", "magnaog", "nagnaog", "naoga", "naogon", "ginaog", "inaog", "pagnaog", "naogi", "naogan", "ginaogan", "kanaog", "nakanaog", "makanaog", "kanaogan", "pagkanaog", "mokanaog", "nikanaog", "mikanaog", "nagkanaog", "magkanaog", "kanaoga", "kanaogon", "gikanaog", "ikanaog", "kanaogi", "gikanaogan"]
+  },
+  {
+   "ceb": "biyahe",
+   "de": "Reise; reisen; Fahrt",
+   "pos": "noun",
+   "lesson": "u10_l03",
+   "note": "Maayong biyahe! = Gute Reise! Mobiyahe mi sa Pilipinas = Wir reisen auf die Philippinen",
+  "forms": ["mobiyahe", "nibiyahe", "mibiyahe", "magbiyahe", "nagbiyahe", "biyaheha", "biyahehon", "gibiyahe", "ibiyahe", "pagbiyahe", "biyahehi", "biyahehan", "gibiyahehan", "kabiyahe", "nabiyahe", "mabiyahe", "biyahe-biyahe", "biyaheng", "nakabiyahe", "makabiyahe", "byahe", "mobyahe", "nibyahe", "mibyahe", "magbyahe", "nagbyahe"]
+  },
+  {
+   "ceb": "bakasyon",
+   "de": "Urlaub; Ferien",
+   "pos": "noun",
+   "lesson": "u10_l03",
+   "note": "Magbakasyon mi sa Cebu = Wir machen Urlaub in Cebu",
+  "forms": ["magbakasyon", "nagbakasyon", "mobakasyon", "nibakasyon", "mibakasyon", "bakasyona", "bakasyonon", "gibakasyon", "ibakasyon", "pagbakasyon", "bakasyoni", "bakasyonan", "gibakasyonan", "kabakasyon", "nabakasyon", "mabakasyon", "bakasyon-bakasyon", "bakasyong", "nakabakasyon", "makabakasyon"]
+  },
+  {
+   "ceb": "maleta",
+   "de": "Koffer",
+   "pos": "noun",
+   "lesson": "u10_l03",
+  "forms": ["maletaha", "maletahon", "gimaleta", "imaleta", "pagmaleta", "maletahi", "maletahan", "gimaletahan"]
+  },
+  {
+   "ceb": "pasaporte",
+   "de": "Reisepass",
+   "pos": "noun",
+   "lesson": "u10_l03"
+  },
+  {
+   "ceb": "tiket",
+   "de": "Ticket; Fahrkarte; Flugticket",
+   "pos": "noun",
+   "lesson": "u10_l03",
+  "forms": ["tiketa", "tiketon", "gitiket", "itiket", "pagtiket", "tiketi", "tiketan", "gitiketan"]
+  },
+  {
+   "ceb": "lupad",
+   "de": "fliegen",
+   "pos": "verb",
+   "lesson": "u10_l03",
+   "note": "Molupad mi alas otso = Wir fliegen um 8",
+  "forms": ["molupad", "nilupad", "milupad", "maglupad", "naglupad", "lupada", "lupadon", "gilupad", "ilupad", "paglupad", "lupadi", "lupadan", "gilupadan", "kalupad", "nalupad", "malupad", "lupad-lupad", "lupadng", "nakalupad", "makalupad", "naglupad-lupad", "maglupad-lupad", "palupad", "gipalupad", "nagpalupad", "magpalupad", "mopalupad", "nipalupad", "mipalupad", "tugpa", "motugpa", "nitugpa", "mitugpa", "magtugpa", "nagtugpa", "tugpahanan", "nakatugpa", "makatugpa", "pagtugpa"]
+  },
+  {
+   "ceb": "larga",
+   "de": "abfahren; losfahren; abreisen",
+   "pos": "verb",
+   "lesson": "u10_l03",
+   "note": "Molarga na ta = Wir fahren jetzt los. Kanus-a ka molarga? = Wann reist du ab?",
+  "forms": ["molarga", "nilarga", "milarga", "maglarga", "naglarga", "largaha", "largahon", "gilarga", "ilarga", "paglarga", "largahi", "largahan", "gilargahan", "kalarga", "nalarga", "malarga", "larga-larga", "largang", "nakalarga", "makalarga"]
+  },
+  {
+   "ceb": "sinina",
+   "de": "Kleidung; Kleid; Oberteil",
+   "pos": "noun",
+   "lesson": "u10_l03",
+   "note": "mga sinina = Kleider/Klamotten",
+  "forms": ["sininaha", "sininahon", "gisinina", "isinina", "pagsinina", "sininahi", "sininahan", "gisininahan", "magsinina", "nagsinina", "sininang", "sanina"]
+  },
+  {
+   "ceb": "sapatos",
+   "de": "Schuhe",
+   "pos": "noun",
+   "lesson": "u10_l03",
+  "forms": ["sapatosa", "sapatoson", "gisapatos", "isapatos", "pagsapatos", "sapatosi", "sapatosan", "gisapatosan", "magsapatos", "nagsapatos", "sapatosng"]
+  },
+  {
+   "ceb": "baligya",
+   "de": "verkaufen; Ware",
+   "pos": "verb",
+   "lesson": "u10_l04",
+   "note": "Nagbaligya siya ug isda = Sie verkauft Fisch. Baligya ba ni? = Ist das zu verkaufen?",
+  "forms": ["mobaligya", "nibaligya", "mibaligya", "magbaligya", "nagbaligya", "baligyaa", "baligyaon", "gibaligya", "ibaligya", "pagbaligya", "baligyai", "baligyaan", "gibaligyaan", "kabaligya", "nabaligya", "mabaligya", "baligya-baligya", "baligyang", "nakabaligya", "makabaligya", "namaligya", "mamaligya", "baligyaanan", "tinda", "magtinda", "nagtinda", "motinda", "tindaha", "tindahon", "gitinda", "itinda", "pagtinda", "tindahi", "tindahan", "gitindahan", "nakatinda", "makatinda", "nanginda", "manginda"]
+  },
+  {
+   "ceb": "tindera",
+   "de": "Verkäuferin",
+   "pos": "noun",
+   "lesson": "u10_l04",
+   "note": "Verkäufer: tindero",
+  "forms": ["tindero", "tinderaha", "tinderahon", "gitindera", "itindera", "pagtindera", "tinderahi", "tinderahan", "gitinderahan"]
+  },
+  {
+   "ceb": "kilo",
+   "de": "Kilo",
+   "pos": "noun",
+   "lesson": "u10_l04",
+   "note": "Pila ang usa ka kilo? = Was kostet ein Kilo?",
+  "forms": ["kiloha", "kilohon", "gikilo", "ikilo", "pagkilo", "kilohi", "kilohan", "gikilohan", "kilos", "kilong", "kilo-kilo", "tagkilo", "tag-kilo"]
+  },
+  {
+   "ceb": "lab-as",
+   "de": "frisch",
+   "pos": "adj",
+   "lesson": "u10_l04",
+   "note": "lab-as nga isda = frischer Fisch",
+  "forms": ["lab-asa", "lab-ason", "gilab-as", "ilab-as", "paglab-as", "lab-asi", "lab-asan", "gilab-asan", "kalab-as", "nalab-as", "malab-as", "lab-as-lab-as", "lab-asng", "labasa", "labason", "preskoha", "preskohon"]
+  },
+  {
+   "ceb": "hinog",
+   "de": "reif",
+   "pos": "adj",
+   "lesson": "u10_l04",
+   "note": "hinog nga mangga = reife Mango",
+  "forms": ["hinoga", "hinogon", "gihinog", "ihinog", "paghinog", "hinogi", "hinogan", "gihinogan", "kahinog", "nahinog", "mahinog", "hinog-hinog", "hinogng", "nagkahinog", "magkahinog", "mohinog", "nihinog", "mihinog", "maghinog", "naghinog", "hinuga", "hinugon", "nahinug", "mahinug"]
+  },
+  {
+   "ceb": "hilaw",
+   "de": "unreif; roh",
+   "pos": "adj",
+   "lesson": "u10_l04",
+   "note": "hilaw nga mangga = unreife (grüne) Mango – mit Salz ein Snack; hilaw nga karne = rohes Fleisch",
+  "forms": ["hilawa", "hilawon", "gihilaw", "ihilaw", "paghilaw", "hilawi", "hilawan", "gihilawan", "kahilaw", "nahilaw", "mahilaw", "hilaw-hilaw", "hilawng"]
+  },
+  {
+   "ceb": "plastik",
+   "de": "Plastiktüte; Plastik",
+   "pos": "noun",
+   "lesson": "u10_l04",
+   "note": "Pwede ko mangayo ug plastik? = Kann ich eine Tüte haben?",
+  "forms": ["plastika", "plastikon", "giplastik", "iplastik", "pagplastik", "plastiki", "plastikan", "giplastikan", "supota", "supoton", "gisupot", "isupot", "pagsupot", "supoti", "supotan", "gisupotan"]
+  },
+  {
+   "ceb": "timbang",
+   "de": "wiegen; Gewicht",
+   "pos": "verb",
+   "lesson": "u10_l04",
+   "note": "Timbanga ang mangga = Wieg die Mangos. Pila imong timbang? = Wie viel wiegst du?",
+  "forms": ["motimbang", "nitimbang", "mitimbang", "magtimbang", "nagtimbang", "timbanga", "timbangon", "gitimbang", "itimbang", "pagtimbang", "timbangi", "timbangan", "gitimbangan", "katimbang", "natimbang", "matimbang", "timbang-timbang", "timbangng", "nakatimbang", "makatimbang", "gibug-aton", "bug-ata", "bug-aton", "kabug-at", "nabug-at", "mabug-at", "gaana", "gaanon", "kagaan", "nagaan", "magaan"]
+  },
+  {
+   "ceb": "kamote",
+   "de": "Süßkartoffel",
+   "pos": "noun",
+   "lesson": "u10_l04",
+   "note": "beliebter Snack: gebratene Kamote",
+  "forms": ["kamotiha", "kamotihon", "gikamote", "ikamote", "pagkamote", "kamotihi", "kamotihan", "gikamotihan", "kamoteng", "camote"]
+  },
+  {
+   "ceb": "lubi",
+   "de": "Kokosnuss",
+   "pos": "noun",
+   "lesson": "u10_l04",
+   "note": "junge Kokosnuss zum Trinken: buko (Tagalog) / butong (Cebuano)",
+  "forms": ["lubiha", "lubihon", "gilubi", "ilubi", "paglubi", "lubihi", "lubihan", "gilubihan", "lubing", "kalubihan"]
+  },
+  {
+   "ceb": "Pilipinas",
+   "de": "Philippinen",
+   "pos": "name",
+   "lesson": "u10_l05",
+   "note": "sa Pilipinas = auf den Philippinen",
+  "forms": ["Philippines", "Pinas", "Filipinas", "Pilipino", "Pilipina", "Filipina", "Pilipinhon", "Pilipinong", "Pilipinang"]
+  },
+  {
+   "ceb": "isla",
+   "de": "Insel",
+   "pos": "noun",
+   "lesson": "u10_l05",
+   "note": "Daghan kaayo ug isla ang Pilipinas = Die Philippinen haben sehr viele Inseln",
+  "forms": ["islaha", "islahon", "giisla", "iisla", "pag-isla", "islahi", "islahan", "giislahan", "pulo", "kapupud-an", "kapuloan"]
+  },
+  {
+   "ceb": "baybayon",
+   "de": "Strand",
+   "pos": "noun",
+   "lesson": "u10_l05",
+   "note": "von baybay = Küste",
+  "forms": ["baybay", "baybaya", "gibaybay", "ibaybay", "pagbaybay", "baybayi", "baybayan", "gibaybayan", "baybayong", "kabaybayonan"]
+  },
+  {
+   "ceb": "bukid",
+   "de": "Berg",
+   "pos": "noun",
+   "lesson": "u10_l05",
+   "note": "sa bukid = in den Bergen / auf dem Land",
+  "forms": ["bukida", "bukidon", "gibukid", "ibukid", "pagbukid", "bukidi", "bukidan", "gibukidan", "kabukiran", "bukidnon", "bukidng"]
+  },
+  {
+   "ceb": "syudad",
+   "de": "Stadt",
+   "pos": "noun",
+   "lesson": "u10_l05",
+   "note": "Cebu City: Dakbayan sa Sugbo",
+  "forms": ["syudada", "syudadon", "gisyudad", "isyudad", "pagsyudad", "syudadi", "syudadan", "gisyudadan", "siyudad", "dakbayan", "syudadng", "lungsod"]
+  },
+  {
+   "ceb": "baryo",
+   "de": "Dorf; Stadtteil",
+   "pos": "noun",
+   "lesson": "u10_l05",
+   "note": "offiziell: barangay",
+  "forms": ["baryoha", "baryohon", "gibaryo", "ibaryo", "pagbaryo", "baryohi", "baryohan", "gibaryohan", "barangay", "baryong", "kabaryohan"]
+  },
+  {
+   "ceb": "probinsya",
+   "de": "Provinz; Land (ländliche Gegend)",
+   "pos": "noun",
+   "lesson": "u10_l05",
+   "note": "sa probinsya = auf dem Land / in der Heimatprovinz",
+  "forms": ["probinsyaha", "probinsyahon", "giprobinsya", "iprobinsya", "pagprobinsya", "probinsyahi", "probinsyahan", "giprobinsyahan", "probinsyang", "lalawigan", "probinsyano", "probinsyana"]
+  },
+  {
+   "ceb": "sapa",
+   "de": "Fluss; Bach",
+   "pos": "noun",
+   "lesson": "u10_l05",
+  "forms": ["sapaha", "sapahon", "gisapa", "isapa", "pagsapa", "sapahi", "sapahan", "gisapahan", "suba", "sapang", "kasapaan", "subaan"]
+  },
+  {
+   "ceb": "lasang",
+   "de": "Wald",
+   "pos": "noun",
+   "lesson": "u10_l05",
+   "note": "Daghan ug lasang sa Sauerland = Im Sauerland gibt es viel Wald",
+  "forms": ["lasanga", "lasangon", "gilasang", "ilasang", "paglasang", "lasangi", "lasangan", "gilasangan", "kalasangan", "lasangng", "kakahoyan", "gubat"]
+  },
+  {
+   "ceb": "nasod",
+   "de": "Land (Staat)",
+   "pos": "noun",
+   "lesson": "u10_l05",
+   "note": "Unsa nga nasod? = Welches Land?",
+  "forms": ["nasoda", "nasodon", "ginasod", "inasod", "pagnasod", "nasodi", "nasodan", "ginasodan", "nasud", "nasodng", "kanasoran", "nasudnon", "pungsod"]
+  },
+  {
+   "ceb": "regalo",
+   "de": "Geschenk",
+   "pos": "noun",
+   "lesson": "u10_l06",
+   "note": "Naa koy regalo para nimo = Ich habe ein Geschenk für dich",
+  "forms": ["regaloha", "regalohon", "giregalo", "iregalo", "pagregalo", "regalohi", "regalohan", "giregalohan", "magregalo", "nagregalo", "moregalo", "niregalo", "miregalo", "regalong", "gasa", "gasaha", "gasahon", "gigasa", "igasa", "paggasa", "gasahi", "gasahan", "gigasahan"]
+  },
+  {
+   "ceb": "pasalubong",
+   "de": "Mitbringsel (von der Reise)",
+   "pos": "noun",
+   "lesson": "u10_l06",
+   "note": "Pflicht bei jedem Besuch: etwas mitbringen",
+  "forms": ["pasalubonga", "pasalubongon", "gipasalubong", "ipasalubong", "pagpasalubong", "pasalubongi", "pasalubongan", "gipasalubongan", "magpasalubong", "nagpasalubong", "mopasalubong", "nipasalubong", "mipasalubong", "pasalubongng"]
+  },
+  {
+   "ceb": "pista",
+   "de": "Fest; Fiesta (Dorffest)",
+   "pos": "noun",
+   "lesson": "u10_l06",
+   "note": "jedes Dorf hat seine Fiesta mit viel Essen",
+  "forms": ["pistaha", "pistahon", "gipista", "ipista", "pagpista", "pistahi", "pistahan", "gipistahan", "magpista", "nagpista", "mopista", "nipista", "mipista", "pistang", "fiesta", "pyesta", "kapistahan"]
+  },
+  {
+   "ceb": "tuba",
+   "de": "Palmwein",
+   "pos": "noun",
+   "lesson": "u10_l06",
+   "note": "das traditionelle Getränk aus Kokospalmensaft",
+  "forms": ["tubaha", "tubahon", "gituba", "ituba", "pagtuba", "tubahi", "tubahan", "gitubahan", "magtuba", "nagtuba", "motuba", "nituba", "mituba", "tubang", "manguba", "nanguba", "mananggiti"]
+  },
+  {
+   "ceb": "tagay",
+   "de": "anstoßen; Trinkrunde",
+   "pos": "verb",
+   "lesson": "u10_l06",
+   "note": "Tagay! = Prost! / Deine Runde! Magtagay ta = Lass uns einen trinken",
+  "forms": ["motagay", "nitagay", "mitagay", "magtagay", "nagtagay", "tagaya", "tagayon", "gitagay", "itagay", "pagtagay", "tagayi", "tagayan", "gitagayan", "katagay", "natagay", "matagay", "tagay-tagay", "tagayng", "nakatagay", "makatagay", "magtagay-tagay", "nagtagay-tagay", "tagayay", "magtagayay", "nagtagayay", "inom-inom", "mag-inom-inom", "nag-inom-inom"]
+  },
+  {
+   "ceb": "lamok",
+   "de": "Mücke",
+   "pos": "noun",
+   "lesson": "u10_l06",
+   "note": "Daghang lamok = Es gibt viele Mücken",
+  "forms": ["lamoka", "lamokon", "gilamok", "ilamok", "paglamok", "lamoki", "lamokan", "gilamokan", "lamokng", "nalamok", "malamok", "kalamok", "lamukon"]
+  },
+  {
+   "ceb": "salo-salo",
+   "de": "gemeinsames Essen; Feier",
+   "pos": "noun",
+   "lesson": "u10_l06",
+   "note": "von salo = teilen (Essen)",
+  "forms": ["salo", "magsalo", "nagsalo", "mosalo", "nisalo", "misalo", "saloha", "salohon", "gisalo", "isalo", "pagsalo", "salohi", "salohan", "gisalohan", "kasalo", "nasalo", "masalo", "salo-saloha", "salo-salohon", "gisalo-salo", "isalo-salo", "pagsalo-salo", "magsalo-salo", "nagsalo-salo", "mosalo-salo", "salo-salong", "salosalo", "magsalosalo", "nagsalosalo", "kumbira", "kombira"]
+  },
+  {
+   "ceb": "manong",
+   "de": "Anrede für älteren Mann (auch Fremde)",
+   "pos": "noun",
+   "lesson": "u10_l06",
+   "note": "Manong, lugar lang! = Chef, anhalten bitte! Auch: älterer Bruder",
+  "forms": ["manoy", "manonga", "manongon", "gimanong", "imanong", "pagmanong", "manongi", "manongan", "gimanongan", "Manoy"]
+  },
+  {
+   "ceb": "manang",
+   "de": "Anrede für ältere Frau (auch Fremde)",
+   "pos": "noun",
+   "lesson": "u10_l06",
+   "note": "Manang, tagpila ni? = Frau, was kostet das? Auch: ältere Schwester",
+  "forms": ["manay", "mananga", "manangon", "gimanang", "imanang", "pagmanang", "manangi", "manangan", "gimanangan", "Manay"]
+  },
+  {
+   "ceb": "pulong",
+   "de": "Wort; Sprache",
+   "pos": "noun",
+   "lesson": "u10_l06",
+   "note": "Binisaya nga pulong = ein Cebuano-Wort. Pinulongan = Sprache (Unit 12)",
+  "forms": ["pulonga", "pulongon", "gipulong", "ipulong", "pagpulong", "pulongi", "pulongan", "gipulongan", "pulongng", "pinulongan", "kapulongan", "mapulong", "napulong"]
+  },
+  {
+   "ceb": "katapusan",
+   "de": "Ende; letzte; letzter",
+   "pos": "noun",
+   "lesson": "u11_l01",
+   "note": "sa katapusan = am Ende; katapusang adlaw = letzter Tag",
+  "forms": ["katapusang", "kataposan", "kataposang", "matapos", "natapos"]
+  },
+  {
+   "ceb": "natawo",
+   "de": "geboren (sein)",
+   "pos": "verb",
+   "lesson": "u11_l01",
+   "note": "Natawo ko sa Germany = Ich bin in Deutschland geboren. Von tawo = Mensch",
+  "forms": ["natawhan", "matawo", "pagkatawo", "gipanganak"]
+  },
+  {
+   "ceb": "nagdako",
+   "de": "aufgewachsen (sein)",
+   "pos": "verb",
+   "lesson": "u11_l01",
+   "note": "Nagdako siya sa Cebu = Sie ist in Cebu aufgewachsen. Von dako = groß",
+  "forms": ["magdako", "modako", "nidako", "midako", "pagdako", "nagdako-dako"]
+  },
+  {
+   "ceb": "kasal",
+   "de": "Hochzeit; heiraten",
+   "pos": "noun",
+   "lesson": "u11_l01",
+   "note": "Nagpakasal mi sa 2020 = Wir haben 2020 geheiratet. Kasal ni Lola = Lolas Hochzeit",
+  "forms": ["nagpakasal", "magpakasal", "mopakasal", "gikasal", "ikasal", "pagkasal", "kasalon", "kaslonon", "kasala", "nagkasal", "magkasal", "nakasal", "makasal", "pagpakasal", "kinasal"]
+  },
+  {
+   "ceb": "nanganak",
+   "de": "ein Kind bekommen (haben)",
+   "pos": "verb",
+   "lesson": "u11_l01",
+   "note": "Nanganak akong asawa sa 2024 = Meine Frau hat 2024 ein Kind bekommen. Von anak",
+  "forms": ["manganak", "panganak", "gipanganak", "nagkaanak", "magkaanak", "nakaanak", "makaanak"]
+  },
+  {
+   "ceb": "matay",
+   "de": "sterben",
+   "pos": "verb",
+   "lesson": "u11_l01",
+   "note": "Namatay si Lolo = Opa ist gestorben. Patay = tot",
+  "forms": ["namatay", "mamatay", "patay", "kamatayon", "gipatay", "patyon", "mopatay", "nagpatay", "magpatay", "mamatyan", "namatyan", "ikamatay", "makamatay", "nakamatay"]
+  },
+  {
+   "ceb": "bulag",
+   "de": "trennen; getrennt",
+   "pos": "verb",
+   "lesson": "u11_l01",
+   "note": "Nagbulag sila = Sie haben sich getrennt. Bulag mi sa trabaho = Bei der Arbeit sind wir getrennt",
+  "forms": ["nagbulag", "magbulag", "mobulag", "nibulag", "mibulag", "bulaga", "bulagon", "gibulag", "ibulag", "pagbulag", "bulagi", "bulagan", "gibulagan", "nabulag", "mabulag", "kabulag", "nagkabulag", "magkabulag", "bulag-bulag", "binulag", "nagbulag-bulag"]
+  },
+  {
+   "ceb": "balhin",
+   "de": "umziehen; wechseln; verlegen",
+   "pos": "verb",
+   "lesson": "u11_l01",
+   "note": "Mibalhin mi sa Sauerland = Wir sind ins Sauerland gezogen. Balhini = Stell es woandershin",
+  "forms": ["mobalhin", "nibalhin", "mibalhin", "magbalhin", "nagbalhin", "balhina", "balhinon", "gibalhin", "ibalhin", "pagbalhin", "balhini", "balhinan", "gibalhinan", "nabalhin", "mabalhin", "kabalhin", "nakabalhin", "makabalhin", "balhin-balhin", "nagbalhin-balhin", "binalhin"]
+  },
+  {
+   "ceb": "graduwar",
+   "de": "Abschluss machen; graduieren",
+   "pos": "verb",
+   "lesson": "u11_l01",
+   "note": "Nigraduwar ko sa 2015 = Ich habe 2015 meinen Abschluss gemacht",
+  "forms": ["nigraduwar", "migraduwar", "mograduwar", "maggraduwar", "naggraduwar", "graduwara", "graduwaron", "gigraduwar", "igraduwar", "paggraduwar", "graduwari", "graduwaran", "gigraduwaran", "nagraduwar", "magraduwar", "nakagraduwar", "makagraduwar", "nigraduate", "migraduate", "mograduate", "nakagraduate", "makagraduate", "gradwar", "nigradwar", "migradwar", "mogradwar", "nakagradwar", "makagradwar"]
+  },
+  {
+   "ceb": "ila",
+   "de": "kennen",
+   "pos": "verb",
+   "lesson": "u11_l01",
+   "note": "Nakaila ka niya? = Kennst du sie? Nagkaila mi sa 2018 = Wir haben uns 2018 kennengelernt. Nicht verwechseln mit ila = ihr (Besitz)",
+  "forms": ["nakaila", "makaila", "nagkaila", "magkaila", "kaila", "ilaha", "ilhon", "giila", "iila", "pag-ila", "ilhi", "ilhan", "giilhan", "nailhan", "mailhan", "kailhan", "ilado", "mailhanon", "nakaila-ila", "makaila-ila", "pagkaila", "nagkaila-ila", "magkaila-ila", "pagpakaila", "nagpakaila", "magpakaila", "mopakaila", "nipakaila", "mipakaila", "pakaila", "ipakaila", "gipakaila"]
+  },
+  {
+   "ceb": "gyud",
+   "de": "wirklich; unbedingt; auf jeden Fall",
+   "pos": "particle",
+   "lesson": "u11_l02",
+   "note": "Lami gyud! = Wirklich lecker! Moadto gyud ko = Ich gehe auf jeden Fall. Nie jud schreiben",
+  "forms": ["gayud", "gayod", "gyod"]
+  },
+  {
+   "ceb": "diay",
+   "de": "ach so; übrigens; wie sich herausstellt",
+   "pos": "particle",
+   "lesson": "u11_l02",
+   "note": "Ikaw diay! = Ach, du bist das! Diay, kumusta imong mama? = Übrigens, wie geht's deiner Mama?"
+  },
+  {
+   "ceb": "kaha",
+   "de": "wohl; vielleicht (in Fragen)",
+   "pos": "particle",
+   "lesson": "u11_l02",
+   "note": "Unsa kaha? = Was wohl? Kinsa kaha siya? = Wer mag das wohl sein?"
+  },
+  {
+   "ceb": "bitaw",
+   "de": "stimmt; genau; ja wirklich",
+   "pos": "particle",
+   "lesson": "u11_l02",
+   "note": "Bitaw! = Stimmt genau! Bitaw no? = Nicht wahr?",
+  "forms": ["no"]
+  },
+  {
+   "ceb": "uy",
+   "de": "hey (Ausruf, Anrede)",
+   "pos": "particle",
+   "lesson": "u11_l02",
+   "note": "Uy, Mama! = Hey, Mama! Ayaw uy = Nicht doch!",
+  "forms": ["oy"]
+  },
+  {
+   "ceb": "sus",
+   "de": "ach du meine Güte (Ausruf)",
+   "pos": "particle",
+   "lesson": "u11_l02",
+   "note": "von Hesus; Sus, grabe! = Meine Güte, krass!",
+  "forms": ["susmaryosep", "hesus"]
+  },
+  {
+   "ceb": "lagi",
+   "de": "ja doch; sicher doch",
+   "pos": "particle",
+   "lesson": "u11_l02",
+   "note": "Oo lagi = Ja klar! Sige lagi = Ja, mach ich"
+  },
+  {
+   "ceb": "hala",
+   "de": "oh!; los!; na dann",
+   "pos": "particle",
+   "lesson": "u11_l02",
+   "note": "Hala, sige! = Na dann, los! Hala, nakalimot ko! = Oh nein, ich hab's vergessen!"
+  },
+  {
+   "ceb": "gani",
+   "de": "sogar; doch (Betonung)",
+   "pos": "particle",
+   "lesson": "u11_l02",
+   "note": "Wala gani ko nikaon = Ich habe nicht einmal gegessen. Mao gani = Eben, genau deshalb"
+  },
+  {
+   "ceb": "intawon",
+   "de": "ach, der/die Arme; leider",
+   "pos": "particle",
+   "lesson": "u11_l02",
+   "note": "Kapoy intawon = Ach, so müde (bemitleidend). Wala intawon = Leider nicht",
+  "forms": ["tawon"]
+  },
+  {
+   "ceb": "suko",
+   "de": "wütend; sich ärgern",
+   "pos": "adj",
+   "lesson": "u11_l03",
+   "note": "Nasuko si Mama = Mama war wütend. Ayaw kasuko = Sei nicht sauer",
+  "forms": ["nasuko", "masuko", "kasuko", "sukoa", "sukoon", "gisuko", "pagsuko", "sukoi", "sukoan", "gisukoan", "nagsuko", "magsuko", "mosuko", "nisuko", "misuko", "nagkasuko", "magkasuko", "masuk-anon", "masukanon", "gikasuko", "kasuk-an", "kasukoan"]
+  },
+  {
+   "ceb": "hulog",
+   "de": "fallen; hinfallen; herunterfallen",
+   "pos": "verb",
+   "lesson": "u11_l03",
+   "note": "Nahulog ang bata = Das Kind ist hingefallen. Nahulog akong selpon = Mein Handy ist runtergefallen",
+  "forms": ["nahulog", "mahulog", "hulogon", "gihulog", "ihulog", "paghulog", "hulogi", "hulogan", "gihulogan", "kahulog", "nagkahulog", "magkahulog", "nahulogan", "mahulogan", "nagpahulog", "magpahulog", "pahulog", "gipahulog", "nakahulog", "makahulog", "mahulog-hulog", "nahulog-hulog", "hulog-hulog", "hinulog"]
+  },
+  {
+   "ceb": "nawala",
+   "de": "verloren (gegangen); verschwunden",
+   "pos": "verb",
+   "lesson": "u11_l03",
+   "note": "Nawala akong kwarta = Ich habe mein Geld verloren. Nawala ang sakit = Der Schmerz ist weg. Von wala",
+  "forms": ["mawala", "nawagtang", "mawagtang", "wagtang", "gipawala", "napawala", "mapawala", "nawala-wala", "nawad-an", "mawad-an", "kawala", "pagkawala", "nawalaan", "mawalaan"]
+  },
+  {
+   "ceb": "buang",
+   "de": "verrückt",
+   "pos": "adj",
+   "lesson": "u11_l03",
+   "note": "Buang ka! = Du bist verrückt! (oft liebevoll). Nabuang ko sa kalipay = Ich bin verrückt vor Freude",
+  "forms": ["nabuang", "mabuang", "kabuang", "buanga", "buangon", "gibuang", "pagbuang", "buangi", "buangan", "gibuangan", "buang-buang", "nagbuang-buang", "magbuang-buang", "buangng", "mabuangon", "nagpabuang", "magpabuang", "pabuang", "gipabuang", "nakabuang", "makabuang", "buangit", "buangita", "binuang", "binuangan", "nagbinuang", "magbinuang"]
+  },
+  {
+   "ceb": "daog",
+   "de": "gewinnen; siegen",
+   "pos": "verb",
+   "lesson": "u11_l03",
+   "note": "Nakadaog mi = Wir haben gewonnen. Daog ko! = Ich hab gewonnen!",
+  "forms": ["nakadaog", "makadaog", "modaog", "nidaog", "midaog", "magdaog", "nagdaog", "daoga", "daogon", "gidaog", "idaog", "pagdaog", "daogi", "daogan", "gidaogan", "kadaog", "nadaog", "madaog", "kadaogan", "daog-daog", "nagdaog-daog", "magdaog-daog", "daogng", "mananaog", "panaog", "magpadaog", "nagpadaog", "padaog", "gipadaog", "nanaog"]
+  },
+  {
+   "ceb": "pildi",
+   "de": "verlieren (Spiel); besiegt",
+   "pos": "verb",
+   "lesson": "u11_l03",
+   "note": "Napildi mi = Wir haben verloren. Pildi ka! = Du hast verloren!",
+  "forms": ["napildi", "mapildi", "mopildi", "nipildi", "mipildi", "magpildi", "nagpildi", "pildiha", "pildihon", "gipildi", "ipildi", "pagpildi", "pildihi", "pildihan", "gipildihan", "kapildi", "kapildihan", "pildi-pildi", "nagpildi-pildi", "magpildi-pildi", "pildihng", "nakapildi", "makapildi", "pildero", "pildera", "nagpapildi", "magpapildi", "papildi", "gipapildi"]
+  },
+  {
+   "ceb": "aksidente",
+   "de": "Unfall",
+   "pos": "noun",
+   "lesson": "u11_l03",
+   "note": "Naaksidente siya = Sie hatte einen Unfall",
+  "forms": ["naaksidente", "maaksidente", "aksidentiha", "aksidentihon", "giaksidente", "iaksidente", "pag-aksidente", "aksidentihi", "aksidentihan", "giaksidentihan", "aksidenteng", "nakaaksidente", "makaaksidente", "nadisgrasya", "madisgrasya"]
+  },
+  {
+   "ceb": "samad",
+   "de": "Wunde; Verletzung; verletzt",
+   "pos": "noun",
+   "lesson": "u11_l03",
+   "note": "Nasamad ko sa talyer = Ich habe mich in der Werkstatt verletzt",
+  "forms": ["nasamad", "masamad", "samara", "samaron", "gisamad", "isamad", "pagsamad", "samari", "samaran", "gisamaran", "kasamad", "samadng", "nakasamad", "makasamad", "samad-samad", "nagsamad-samad", "magsamad-samad", "samdan", "gisamdan", "nasamdan", "masamdan", "nagkasamad", "magkasamad"]
+  },
+  {
+   "ceb": "dugo",
+   "de": "Blut",
+   "pos": "noun",
+   "lesson": "u11_l03",
+   "note": "Naa kay dugo = Du blutest (wörtlich: du hast Blut)",
+  "forms": ["dugoa", "dugoon", "gidugo", "idugo", "pagdugo", "dugoi", "dugoan", "gidugoan", "kadugo", "nadugo", "madugo", "dugong", "nagdugo", "magdugo", "modugo", "nidugo", "midugo", "nagdugo-dugo", "nadugoan", "madugoan", "dugo-dugo"]
+  },
+  {
+   "ceb": "pulis",
+   "de": "Polizei; Polizist",
+   "pos": "noun",
+   "lesson": "u11_l03",
+   "note": "Tawaga ang pulis = Ruf die Polizei",
+  "forms": ["pulisa", "pulison", "gipulis", "ipulis", "pagpulis", "pulisi", "pulisan", "gipulisan", "kapulis", "pulisng", "kapulisan"]
+  },
+  {
+   "ceb": "niadtong",
+   "de": "damals am/im (vor Zeitangabe)",
+   "pos": "adv",
+   "lesson": "u11_l04",
+   "note": "niadtong Lunes = am (vergangenen) Montag; niadtong 2020 = im Jahr 2020; niadtong bata pa ko = als ich noch klein war",
+  "forms": ["niadto", "kaniadtong"]
+  },
+  {
+   "ceb": "sa wala pa",
+   "de": "bevor (Vergangenheit)",
+   "pos": "conj",
+   "lesson": "u11_l04",
+   "note": "Sa wala pa mi nagkasal = Bevor wir geheiratet haben. Für Zukunft: sa dili pa"
+  },
+  {
+   "ceb": "labay",
+   "de": "vorbeigehen; vergehen (Zeit)",
+   "pos": "verb",
+   "lesson": "u11_l04",
+   "note": "Milabay ang usa ka tuig = Ein Jahr ist vergangen. Milabay nga tuig = letztes Jahr",
+  "forms": ["molabay", "nilabay", "milabay", "maglabay", "naglabay", "labaya", "labayon", "gilabay", "ilabay", "paglabay", "labayi", "labayan", "gilabayan", "kalabay", "nalabay", "malabay", "nakalabay", "makalabay", "labay-labay", "naglabay-labay", "maglabay-labay", "labayng", "nilabayng", "milabayng", "nanglabay", "manglabay", "panglabay"]
+  },
+  {
+   "ceb": "ika-",
+   "de": "(Ordnungszahl-Vorsilbe) der/die/das …te",
+   "pos": "particle",
+   "lesson": "u11_l04",
+   "note": "ikaduha = zweite, ikatulo = dritte, ikaupat = vierte; die erste: una",
+  "forms": ["ikaduha", "ikatulo", "ikaupat", "ikalima", "ikaunom", "ikapito", "ikawalo", "ikasiyam", "ikanapulo", "ikaduhang", "ikatulong", "ikalimang", "ikapitong", "ikawalong", "ikanapulong", "ika-20", "ika-30", "ika-40", "ika-50", "ika-100", "ika-2", "ika-3", "ika-4", "ika-5", "ika-6", "ika-7", "ika-8", "ika-9", "ika-10", "ika-11", "ika-12", "ika-13", "ika-14", "ika-15", "ika-16", "ika-17", "ika-18", "ika-19", "ika-21", "ika-25", "ika-31"]
+  },
+  {
+   "ceb": "kagabii",
+   "de": "gestern Abend; letzte Nacht",
+   "pos": "adv",
+   "lesson": "u11_l04",
+   "note": "Kagabii nag-ulan = Letzte Nacht hat es geregnet. Von ka- + gabii",
+  "forms": ["kagabhion", "kagabiing", "gabiing"]
+  },
+  {
+   "ceb": "Pasko",
+   "de": "Weihnachten",
+   "pos": "noun",
+   "lesson": "u11_l04",
+   "note": "Malipayong Pasko! = Frohe Weihnachten! Auf den Philippinen beginnt die Weihnachtszeit im September",
+  "forms": ["paskoha", "paskohon", "gipasko", "ipasko", "pagpasko", "paskohi", "paskohan", "gipaskohan", "kapasko", "Paskong", "parol", "belen"]
+  },
+  {
+   "ceb": "adlawng natawhan",
+   "de": "Geburtstag",
+   "pos": "phrase",
+   "lesson": "u11_l04",
+   "note": "wörtlich: Tag, an dem man geboren wurde. Malipayong adlawng natawhan! = Alles Gute zum Geburtstag! Viele sagen einfach birthday",
+  "forms": ["kaadlawon", "kaadlawan", "natawhan", "natawhang", "adlawng"]
+  },
+  {
+   "ceb": "anibersaryo",
+   "de": "Jahrestag; Hochzeitstag",
+   "pos": "noun",
+   "lesson": "u11_l04",
+   "note": "Malipayong anibersaryo! = Alles Gute zum Hochzeitstag!",
+  "forms": ["anibersaryoha", "anibersaryohon", "gianibersaryo", "ianibersaryo", "pag-anibersaryo", "anibersaryohi", "anibersaryohan", "gianibersaryohan", "anibersaryong"]
+  },
+  {
+   "ceb": "saulog",
+   "de": "feiern",
+   "pos": "verb",
+   "lesson": "u11_l04",
+   "note": "Magsaulog mi sa iyang adlawng natawhan = Wir feiern ihren Geburtstag. Gisaulog namo ang Pasko = Wir haben Weihnachten gefeiert",
+  "forms": ["magsaulog", "nagsaulog", "mosaulog", "nisaulog", "misaulog", "sauloga", "saulogon", "gisaulog", "isaulog", "pagsaulog", "saulogi", "saulogan", "gisaulogan", "kasaulog", "nasaulog", "masaulog", "nakasaulog", "makasaulog", "saulog-saulog", "nagsaulog-saulog", "magsaulog-saulog", "saulogng", "selebrar", "magselebrar", "nagselebrar", "moselebrar", "niselebrar", "miselebrar", "selebraha", "selebrahon", "giselebrar", "iselebrar", "pagselebrar", "selebrahi", "selebrahan", "giselebrahan", "nakaselebrar", "makaselebrar", "selebrasyon"]
+  },
+  {
+   "ceb": "gugma",
+   "de": "Liebe",
+   "pos": "noun",
+   "lesson": "u11_l05",
+   "note": "akong gugma = meine Liebe; gugma sa pamilya = Liebe zur Familie",
+  "forms": ["gugmaha", "gugmahon", "gigugma", "igugma", "paggugma", "gugmahi", "gugmahan", "gigugmahan", "kagugma", "gugmang", "mahigugmaon", "mahigugmaong", "hinigugma", "hinigugmang", "minahal", "pinalangga", "pinalanggang", "paghigugma"]
+  },
+  {
+   "ceb": "higugma",
+   "de": "lieben",
+   "pos": "verb",
+   "lesson": "u11_l05",
+   "note": "Gihigugma tika = Ich liebe dich. Gihigugma ko ikaw = Ich liebe dich (betont). Nahigugma ko nimo = Ich habe mich in dich verliebt",
+  "forms": ["gihigugma", "nahigugma", "mahigugma", "higugmaa", "higugmaon", "ihigugma", "paghigugma", "higugmai", "higugmaan", "gihigugmaan", "hinigugma", "mahigugmaon", "maghigugma", "naghigugma", "mohigugma", "nihigugma", "mihigugma", "nakahigugma", "makahigugma", "naghigugmaay", "maghigugmaay", "higugmaay", "nagkahigugmaay", "magkahigugmaay"]
+  },
+  {
+   "ceb": "tika",
+   "de": "ich … dich (Kurzform von ko ikaw)",
+   "pos": "pron",
+   "lesson": "u11_l05",
+   "note": "Gihigugma tika = Ich liebe dich. Gimingaw tika? Nein: Gimingaw ko nimo. Tika nur bei Objektfokus-Verben",
+  "forms": ["tikaw"]
+  },
+  {
+   "ceb": "palangga",
+   "de": "Liebling; lieb haben",
+   "pos": "noun",
+   "lesson": "u11_l05",
+   "note": "Palangga tika = Ich hab dich lieb. Langga = Schatz (Anrede). Pinangga = geliebt",
+  "forms": ["langga", "Langga", "pinangga", "gipalangga", "palanggaa", "palanggaon", "ipalangga", "pagpalangga", "palanggai", "palanggaan", "gipalanggaan", "mapinanggaon", "mapinangga", "napalangga", "mapalangga", "palanggang", "pinalangga", "pinalanggang"]
+  },
+  {
+   "ceb": "dungan",
+   "de": "gleichzeitig; zusammen (zur gleichen Zeit)",
+   "pos": "adv",
+   "lesson": "u11_l05",
+   "note": "Dungan ta mokaon = Lass uns zusammen essen. Nagdungan mi ug abot = Wir sind gleichzeitig angekommen",
+  "forms": ["magdungan", "nagdungan", "modungan", "nidungan", "midungan", "dungana", "dunganon", "gidungan", "idungan", "pagdungan", "dungani", "dunganan", "gidunganan", "kadungan", "nadungan", "madungan", "nakadungan", "makadungan", "dungan-dungan", "nagdungan-dungan", "magdungan-dungan", "dunganng", "sabaya", "sabayon", "gisabay", "isabay", "pagsabay", "sabayi", "sabayan", "gisabayan", "kasabay", "nasabay", "masabay", "sabay-sabay", "nagsabay-sabay", "magsabay-sabay", "sabayng", "ubana", "ubanon", "giuban", "iuban", "pag-uban", "ubani", "ubanan", "giubanan", "nauban", "mauban", "uban-uban", "nag-uban-uban", "mag-uban-uban", "ubanng"]
+  },
+  {
+   "ceb": "singsing",
+   "de": "Ring",
+   "pos": "noun",
+   "lesson": "u11_l05",
+   "note": "singsing sa kasal = Ehering",
+  "forms": ["singsinga", "singsingon", "gisingsing", "isingsing", "pagsingsing", "singsingi", "singsingan", "gisingsingan", "kasingsing", "singsingng", "nagsingsing", "magsingsing", "mosingsing", "nisingsing", "misingsing", "sul-ob", "sul-oba", "sul-obon", "gisul-ob", "isul-ob", "pagsul-ob", "sul-obi", "sul-oban", "gisul-oban", "nagsul-ob", "magsul-ob", "mosul-ob", "nisul-ob", "misul-ob", "nakasul-ob", "makasul-ob", "sinul-ob", "sul-obng"]
+  },
+  {
+   "ceb": "litrato",
+   "de": "Foto; Bild",
+   "pos": "noun",
+   "lesson": "u11_l05",
+   "note": "Magpalitrato ta = Lass uns ein Foto machen. Ipadala ang litrato = Schick das Foto",
+  "forms": ["magpalitrato", "nagpalitrato", "mopalitrato", "nipalitrato", "mipalitrato", "litratoha", "litratohon", "gilitrato", "ilitrato", "paglitrato", "litratohi", "litratohan", "gilitratohan", "kalitrato", "nalitrato", "malitrato", "nakalitrato", "makalitrato", "litratong", "magselfie", "nagselfie", "moselfie", "selfie-selfie", "magpicture", "nagpicture", "mopicture", "picture-picture", "magpapicture", "nagpapicture", "mopapicture", "papicture", "gipapicture", "magpaphoto", "nagpaphoto", "mopaphoto", "paphoto", "gipaphoto", "hulagwaya", "hulagwayon", "gihulagway", "ihulagway", "paghulagway", "hulagwayi", "hulagwayan", "gihulagwayan", "kahulagway", "nahulagway", "mahulagway", "nakahulagway", "makahulagway", "hulagwayng", "magpakodak", "nagpakodak", "mopakodak", "pakodak", "gipakodak", "kodaka", "kodakon", "gikodak", "ikodak", "pagkodak", "kodaki", "kodakan", "gikodakan", "kodakng", "retratoha", "retratohon", "giretrato", "iretrato", "pagretrato", "retratohi", "retratohan", "giretratohan", "magparetrato", "nagparetrato", "moparetrato", "paretrato", "giparetrato"]
+  },
+  {
+   "ceb": "kasingkasing",
+   "de": "Herz",
+   "pos": "noun",
+   "lesson": "u11_l05",
+   "note": "Ikaw ang akong kasingkasing = Du bist mein Herz. Sa tibuok kong kasingkasing = von ganzem Herzen",
+  "forms": ["kasingkasinga", "kasingkasingon", "gikasingkasing", "ikasingkasing", "pagkasingkasing", "kasingkasingi", "kasingkasingan", "gikasingkasingan", "kasingkasingng", "kalaga", "kalagon", "gikalag", "ikalag", "pagkalag", "kalagi", "kalagan", "gikalagan", "kalagng", "dughana", "dughanon", "gidughan", "idughan", "pagdughan", "dughani", "dughanan", "gidughanan", "dughanng"]
+  },
+  {
+   "ceb": "saad",
+   "de": "Versprechen; versprechen",
+   "pos": "noun",
+   "lesson": "u11_l05",
+   "note": "Saad ko = Ich verspreche es. Gisaad niya = Sie hat es versprochen. Panaad = Versprechen (Nomen)",
+  "forms": ["mosaad", "nisaad", "misaad", "magsaad", "nagsaad", "saara", "saaron", "gisaad", "isaad", "pagsaad", "saari", "saaran", "gisaaran", "kasaad", "nasaad", "masaad", "nakasaad", "makasaad", "panaad", "panaada", "panaaron", "gipanaad", "ipanaad", "pagpanaad", "panaari", "panaaran", "gipanaaran", "saad-saad", "nagsaad-saad", "magsaad-saad", "saadng", "nagpromise", "magpromise", "mopromise", "promisa", "promison", "gipromise", "ipromise", "pagpromise", "promisi", "promisan", "gipromisan"]
+  },
+  {
+   "ceb": "tuyo",
+   "de": "Absicht; Zweck; Grund (des Kommens)",
+   "pos": "noun",
+   "lesson": "u11_l06",
+   "note": "Unsay imong tuyo? = Was ist dein Anliegen? Tinuyo = absichtlich; wala tuyoa = nicht mit Absicht",
+  "forms": ["tinuyo", "tuyoa", "tuyoon", "gituyo", "ituyo", "pagtuyo", "tuyoi", "tuyoan", "gituyoan", "katuyoan", "katuyo", "natuyo", "matuyo", "nakatuyo", "makatuyo", "magtuyo", "nagtuyo", "motuyo", "nituyo", "mituyo", "tuyo-tuyo", "nagtuyo-tuyo", "magtuyo-tuyo", "tuyong", "tinuyoan"]
+  },
+  {
+   "ceb": "mahitungod",
+   "de": "über; bezüglich; was … angeht",
+   "pos": "prep",
+   "lesson": "u11_l06",
+   "note": "Mahitungod sa trabaho … = Was die Arbeit angeht … Istorya mahitungod sa Pilipinas = eine Geschichte über die Philippinen",
+  "forms": ["kabahin"]
+  },
+  {
+   "ceb": "kasagaran",
+   "de": "meistens; normalerweise; die meisten",
+   "pos": "adv",
+   "lesson": "u11_l06",
+   "note": "Kasagaran mokaon mi alas sais = Normalerweise essen wir um 6. Kasagaran sa mga tawo = die meisten Leute",
+  "forms": ["kasagarang", "kasagaranon"]
+  },
+  {
+   "ceb": "talagsa",
+   "de": "selten",
+   "pos": "adv",
+   "lesson": "u11_l06",
+   "note": "Talagsa ra ko moinom ug bir = Ich trinke nur selten Bier. Talagsaon = besonders/selten (Adjektiv)",
+  "forms": ["talagsaon", "talagsaong"]
+  },
+  {
+   "ceb": "ingon ani",
+   "de": "so (wie dies hier); auf diese Weise",
+   "pos": "phrase",
+   "lesson": "u11_l06",
+   "note": "Ingon ani ang pagluto = So wird gekocht. Ingon ana = so (wie das da bei dir). Von ingon + ani (niini)",
+  "forms": ["ingon-ani", "ingani"]
+  },
+  {
+   "ceb": "ingon ana",
+   "de": "so (wie das da); auf die Art",
+   "pos": "phrase",
+   "lesson": "u11_l06",
+   "note": "Ayaw ingon ana = Mach das nicht so / sei nicht so. Ingon ana gyud = So ist das eben. Von ingon + ana (niana)",
+  "forms": ["ingon-ana", "ingana", "ingadto"]
+  },
+  {
+   "ceb": "mao nga",
+   "de": "deshalb; darum",
+   "pos": "conj",
+   "lesson": "u11_l06",
+   "note": "Kapoy ko, mao nga matulog na ko = Ich bin müde, deshalb gehe ich jetzt schlafen. Formell: busa",
+  "forms": ["maong"]
+  },
+  {
+   "ceb": "bahin",
+   "de": "Teil; Abschnitt; Anteil",
+   "pos": "noun",
+   "lesson": "u11_l06",
+   "note": "usa ka bahin sa kinabuhi = ein Teil des Lebens; bahin sa = über/bezüglich (kurz für mahitungod sa)",
+  "forms": ["bahina", "bahinon", "gibahin", "ibahin", "pagbahin", "bahini", "bahinan", "gibahinan", "kabahin", "nabahin", "mabahin", "nakabahin", "makabahin", "bahin-bahin", "nagbahin-bahin", "magbahin-bahin", "bahinng", "parte", "partiha", "partihon", "giparte", "iparte", "pagparte", "partihi", "partihan", "gipartihan", "kaparte", "naparte", "maparte", "parte-parte", "nagparte-parte", "magparte-parte", "parteng", "seksyon", "piraso", "pirasoha", "pirasohon", "gipiraso", "ipiraso", "pagpiraso", "pirasohi", "pirasohan", "gipirasohan", "kapiraso", "napiraso", "mapiraso", "piraso-piraso", "nagpiraso-piraso", "magpiraso-piraso", "pirasong"]
+  },
+  {
+   "ceb": "tingog",
+   "de": "Stimme; Laut; Geräusch",
+   "pos": "noun",
+   "lesson": "u11_l06",
+   "note": "Nindot imong tingog = Du hast eine schöne Stimme. Unsa nga tingog kadto? = Was war das für ein Geräusch?",
+  "forms": ["tingoga", "tingogon", "gitingog", "itingog", "pagtingog", "tingogi", "tingogan", "gitingogan", "katingog", "natingog", "matingog", "nakatingog", "makatingog", "tingog-tingog", "nagtingog-tingog", "magtingog-tingog", "tingogng", "nagtingog", "magtingog", "motingog", "nitingog", "mitingog", "kasaba", "saba", "sabaa", "sabaon", "gisaba", "isaba", "pagsaba", "sabai", "sabaan", "gisabaan", "nasaba", "masaba", "nakasaba", "makasaba", "saba-saba", "nagsaba-saba", "magsaba-saba", "sabang"]
+  },
+  {
+   "ceb": "nawong",
+   "de": "Gesicht",
+   "pos": "noun",
+   "lesson": "u11_l06",
+   "note": "Nindot imong nawong = Du hast ein schönes Gesicht. Hugasi imong nawong = Wasch dein Gesicht",
+  "forms": ["nawonga", "nawongon", "ginawong", "inawong", "pagnawong", "nawongi", "nawongan", "ginawongan", "kanawong", "nanawong", "manawong", "nakanawong", "makanawong", "nawong-nawong", "nagnawong-nawong", "magnawong-nawong", "nawongng"]
+  },
+  {
+   "ceb": "hunahuna",
+   "de": "Gedanke; denken; Meinung",
+   "pos": "noun",
+   "lesson": "u12_l01",
+   "note": "Sa akong hunahuna … = Meiner Meinung nach … Maghunahuna ko = Ich überlege",
+  "forms": ["maghunahuna", "naghunahuna", "hunahunaa", "hunahunaon", "gihunahuna", "nakahunahuna", "makahunahuna"]
+  },
+  {
+   "ceb": "para nako",
+   "de": "für mich; meiner Meinung nach",
+   "pos": "phrase",
+   "lesson": "u12_l01",
+   "note": "Para nako, lami ang adobo = Für mich ist Adobo lecker. para nimo = für dich / deiner Meinung nach"
+  },
+  {
+   "ceb": "mas",
+   "de": "mehr (Vergleich)",
+   "pos": "adv",
+   "lesson": "u12_l01",
+   "note": "mas maayo = besser; mas dako = größer; mas gusto ko = ich mag lieber"
+  },
+  {
+   "ceb": "labaw",
+   "de": "über alles; am meisten; vor allem",
+   "pos": "adv",
+   "lesson": "u12_l01",
+   "note": "labaw sa tanan = vor allem / mehr als alles. Labaw ka sa tanan = Du bist mir wichtiger als alles",
+  "forms": ["labawng", "molabaw", "nilabaw", "milabaw", "labawan"]
+  },
+  {
+   "ceb": "kaysa",
+   "de": "als (Vergleich)",
+   "pos": "conj",
+   "lesson": "u12_l01",
+   "note": "Mas maayo ang mangga kaysa saging = Mango ist besser als Banane"
+  },
+  {
+   "ceb": "pinaka-",
+   "de": "am …sten (Superlativ-Vorsilbe)",
+   "pos": "particle",
+   "lesson": "u12_l01",
+   "note": "pinakanindot = am schönsten; pinakamaayo = am besten; pinakagwapa = die Hübscheste",
+  "forms": ["pinaka"]
+  },
+  {
+   "ceb": "matod",
+   "de": "laut (jemandes Aussage); sagt",
+   "pos": "particle",
+   "lesson": "u12_l01",
+   "note": "Matod pa ni Mama … = Wie Mama sagt … Matod niya = laut ihr"
+  },
+  {
+   "ceb": "opinyon",
+   "de": "Meinung (Fachwort)",
+   "pos": "noun",
+   "lesson": "u12_l01",
+   "note": "Unsay imong opinyon? = Was ist deine Meinung? Alltäglicher: sa imong hunahuna"
+  },
+  {
+   "ceb": "sugyot",
+   "de": "Vorschlag; vorschlagen",
+   "pos": "noun",
+   "lesson": "u12_l01",
+   "note": "Naa koy sugyot = Ich habe einen Vorschlag. Mosugyot ko nga … = Ich schlage vor, dass …",
+  "forms": ["mosugyot", "nisugyot", "misugyot", "gisugyot", "isugyot", "sugyota", "sugyoton", "pagsugyot"]
+  },
+  {
+   "ceb": "ideya",
+   "de": "Idee",
+   "pos": "noun",
+   "lesson": "u12_l01",
+   "note": "Maayong ideya! = Gute Idee!"
+  },
+  {
+   "ceb": "unta",
+   "de": "hoffentlich; gern (Wunschpartikel)",
+   "pos": "particle",
+   "lesson": "u12_l02",
+   "note": "Gusto unta ko moadto = Ich würde gern hingehen. Maayo unta = Das wäre schön. Steht nach dem ersten Wort"
+  },
+  {
+   "ceb": "pangandoy",
+   "de": "Wunsch; Lebenstraum; sich wünschen",
+   "pos": "noun",
+   "lesson": "u12_l02",
+   "note": "Akong pangandoy nga … = Mein Wunsch ist, dass … Nangandoy ko = Ich wünsche mir",
+  "forms": ["nangandoy", "mangandoy", "pangandoyon", "gipangandoy", "pangandoya"]
+  },
+  {
+   "ceb": "damgo",
+   "de": "Traum; träumen",
+   "pos": "noun",
+   "lesson": "u12_l02",
+   "note": "Nagdamgo ko nimo = Ich habe von dir geträumt. Damgo nako = mein Traum",
+  "forms": ["magdamgo", "nagdamgo", "nadamgo", "damgoha", "damgohon", "gidamgo", "nagdamgo-damgo"]
+  },
+  {
+   "ceb": "laum",
+   "de": "hoffen; Hoffnung",
+   "pos": "verb",
+   "lesson": "u12_l02",
+   "note": "Naglaum ko nga … = Ich hoffe, dass … Paglaum = Hoffnung (Nomen)",
+  "forms": ["naglaum", "maglaum", "molaum", "paglaum", "lauman", "gilauman", "nalauman", "malauman", "laoman", "gilaoman", "naglaom", "maglaom", "paglaom"]
+  },
+  {
+   "ceb": "hinaut",
+   "de": "hoffentlich; ich hoffe",
+   "pos": "particle",
+   "lesson": "u12_l02",
+   "note": "Hinaut nga maayo ra ka = Ich hoffe, dir geht es gut. Hinaut unta = hoffentlich (betont)",
+  "forms": ["hinaot"]
+  },
+  {
+   "ceb": "ampo",
+   "de": "beten; Gebet",
+   "pos": "verb",
+   "lesson": "u12_l02",
+   "note": "Mag-ampo ko para nimo = Ich bete für dich. Pag-ampo = Gebet",
+  "forms": ["mag-ampo", "nag-ampo", "mo-ampo", "pag-ampo", "ampoa", "ampoon", "giampo", "iampo", "nangamuyo", "mangamuyo", "ampoi"]
+  },
+  {
+   "ceb": "puhon",
+   "de": "hoffentlich bald; so Gott will (bei Zukunftsplänen)",
+   "pos": "particle",
+   "lesson": "u12_l02",
+   "note": "Moadto mi sa Pilipinas, puhon = Wir fahren auf die Philippinen, so Gott will. Steht am Satzende"
+  },
+  {
+   "ceb": "tuman",
+   "de": "erfüllen; einhalten; in Erfüllung gehen",
+   "pos": "verb",
+   "lesson": "u12_l02",
+   "note": "Natuman ang akong damgo = Mein Traum ist in Erfüllung gegangen. Tumanon nako ang saad = Ich halte das Versprechen",
+  "forms": ["natuman", "matuman", "tumanon", "gituman", "ituman", "tumana", "pagtuman", "motuman", "nituman", "mituman", "nagtuman", "magtuman", "katumanan"]
+  },
+  {
+   "ceb": "pasalamat",
+   "de": "dankbar sein; Dankbarkeit",
+   "pos": "verb",
+   "lesson": "u12_l02",
+   "note": "Nagpasalamat ko nga naa ka = Ich bin dankbar, dass es dich gibt. Mapasalamaton = dankbar (Adjektiv)",
+  "forms": ["nagpasalamat", "magpasalamat", "mopasalamat", "pagpasalamat", "pasalamati", "pasalamatan", "gipasalamatan", "mapasalamaton"]
+  },
+  {
+   "ceb": "panalangin",
+   "de": "Segen; segnen",
+   "pos": "noun",
+   "lesson": "u12_l02",
+   "note": "Ikaw ang panalangin sa akong kinabuhi = Du bist der Segen meines Lebens. Panalanginan ka = Gott segne dich",
+  "forms": ["panalanginan", "gipanalanginan", "mopanalangin", "nagpanalangin", "magpanalangin"]
+  },
+  {
+   "ceb": "umaabot",
+   "de": "kommend; bevorstehend",
+   "pos": "adj",
+   "lesson": "u12_l03",
+   "note": "sa umaabot = demnächst / in Zukunft; sa umaabot nga tuig = im kommenden Jahr"
+  },
+  {
+   "ceb": "kaugmaon",
+   "de": "Zukunft",
+   "pos": "noun",
+   "lesson": "u12_l03",
+   "note": "para sa atong kaugmaon = für unsere Zukunft. Von ugma = morgen",
+  "forms": ["kaugmaong"]
+  },
+  {
+   "ceb": "tukod",
+   "de": "bauen (Gebäude); errichten; gründen",
+   "pos": "verb",
+   "lesson": "u12_l03",
+   "note": "Magtukod mi ug balay sa Cebu = Wir bauen ein Haus in Cebu. Für Möbel: himo",
+  "forms": ["magtukod", "nagtukod", "motukod", "nitukod", "mitukod", "tukoron", "gitukod", "itukod", "tukora", "pagtukod", "natukod", "matukod", "tinukod", "nakatukod", "makatukod"]
+  },
+  {
+   "ceb": "tigom",
+   "de": "sparen; sammeln; ansammeln",
+   "pos": "verb",
+   "lesson": "u12_l03",
+   "note": "Magtigom mi ug kwarta para sa biyahe = Wir sparen Geld für die Reise. Tinigom = Ersparnisse",
+  "forms": ["magtigom", "nagtigom", "motigom", "nitigom", "mitigom", "tigoma", "tigomon", "gitigom", "itigom", "pagtigom", "tinigom", "natigom", "matigom", "nakatigom", "makatigom", "tigomi", "tigoman", "gitigoman"]
+  },
+  {
+   "ceb": "negosyo",
+   "de": "Geschäft (Unternehmen); Business",
+   "pos": "noun",
+   "lesson": "u12_l03",
+   "note": "Gusto ko magnegosyo sa Pilipinas = Ich möchte auf den Philippinen ein Geschäft aufmachen",
+  "forms": ["magnegosyo", "nagnegosyo", "monegosyo", "negosyante", "negosyoha", "negosyohon", "ginegosyo", "pagnegosyo"]
+  },
+  {
+   "ceb": "retiro",
+   "de": "Ruhestand; in Rente gehen",
+   "pos": "noun",
+   "lesson": "u12_l03",
+   "note": "Magretiro ko sa Pilipinas = Ich gehe auf den Philippinen in Rente. Retirado = Rentner",
+  "forms": ["magretiro", "nagretiro", "moretiro", "niretiro", "miretiro", "retirado", "retiroha", "retirohon", "giretiro", "pagretiro"]
+  },
+  {
+   "ceb": "kung",
+   "de": "wenn; falls",
+   "pos": "conj",
+   "lesson": "u12_l03",
+   "note": "Kung naa koy kwarta, mopalit ko ug yuta = Wenn ich Geld habe, kaufe ich Land. Auch kon geschrieben",
+  "forms": ["kon"]
+  },
+  {
+   "ceb": "kalibutan",
+   "de": "Welt",
+   "pos": "noun",
+   "lesson": "u12_l03",
+   "note": "tibuok kalibutan = die ganze Welt. Ikaw ang akong kalibutan = Du bist meine Welt",
+  "forms": ["kalibutang", "kalibotan"]
+  },
+  {
+   "ceb": "tinguha",
+   "de": "Ziel; Bestreben; anstreben",
+   "pos": "noun",
+   "lesson": "u12_l03",
+   "note": "Akong tinguha nga makasulti ug Binisaya = Mein Ziel ist, Cebuano zu sprechen",
+  "forms": ["maningkamot", "nagtinguha", "magtinguha", "tinguhaa", "tinguhaon", "gitinguha", "pagtinguha", "tinguhang"]
+  },
+  {
+   "ceb": "paningkamot",
+   "de": "sich bemühen; Anstrengung",
+   "pos": "verb",
+   "lesson": "u12_l03",
+   "note": "Maningkamot ko = Ich gebe mir Mühe. Paningkamoti = Streng dich an. Wurzel: kamot (Hand)",
+  "forms": ["maningkamot", "naningkamot", "paningkamoti", "paningkamotan", "gipaningkamotan", "pagpaningkamot", "mapaningkamoton", "kamot", "kamota", "kamoton"]
+  },
+  {
+   "ceb": "hangtod sa hangtod",
+   "de": "für immer; bis in alle Ewigkeit",
+   "pos": "phrase",
+   "lesson": "u12_l04",
+   "note": "Gihigugma tika hangtod sa hangtod = Ich liebe dich für immer",
+  "forms": ["kahangtoran"]
+  },
+  {
+   "ceb": "salig",
+   "de": "vertrauen; Vertrauen; sich verlassen auf",
+   "pos": "verb",
+   "lesson": "u12_l04",
+   "note": "Mosalig ko nimo = Ich vertraue dir. Salig lang = Vertrau einfach. Pagsalig = Vertrauen",
+  "forms": ["mosalig", "nisalig", "misalig", "nagsalig", "magsalig", "saligi", "saligan", "gisaligan", "pagsalig", "kasaligan", "saliga", "saligon", "gisalig", "masaligan", "masalig", "nasalig", "nakasalig", "makasalig", "kasalig"]
+  },
+  {
+   "ceb": "matinud-anon",
+   "de": "ehrlich; aufrichtig; treu",
+   "pos": "adj",
+   "lesson": "u12_l04",
+   "note": "Matinud-anon ko nimo = Ich bin dir treu / ehrlich zu dir. Von tinuod = wahr",
+  "forms": ["matinud-anong", "matinuoron", "matinuorong"]
+  },
+  {
+   "ceb": "selos",
+   "de": "Eifersucht; eifersüchtig",
+   "pos": "noun",
+   "lesson": "u12_l04",
+   "note": "Nagselos ka? = Bist du eifersüchtig? Ayaw ug selos = Sei nicht eifersüchtig",
+  "forms": ["nagselos", "magselos", "moselos", "selosa", "seloson", "giselos", "pagselos", "seloso", "selosang", "nagselos-selos", "maselos", "naselos", "kaselos", "selosi", "selosan", "giselosan"]
+  },
+  {
+   "ceb": "away",
+   "de": "Streit; streiten",
+   "pos": "noun",
+   "lesson": "u12_l04",
+   "note": "Nag-away mi gahapon = Wir haben uns gestern gestritten. Ayaw ta mag-away = Lass uns nicht streiten",
+  "forms": ["nag-away", "mag-away", "mo-away", "awaya", "awayon", "giaway", "iaway", "pag-away", "awayi", "awayan", "giawayan", "nagkaaway", "magkaaway", "kaaway", "nakig-away", "makig-away", "nag-away-away", "mag-away-away", "away-away", "nagaway", "magaway", "moaway"]
+  },
+  {
+   "ceb": "atiman",
+   "de": "sich kümmern um; pflegen; versorgen",
+   "pos": "verb",
+   "lesson": "u12_l04",
+   "note": "Atimanon tika = Ich werde mich um dich kümmern. Nag-atiman si Mama sa bata = Mama kümmert sich um das Kind",
+  "forms": ["nag-atiman", "mag-atiman", "mo-atiman", "atimana", "atimanon", "giatiman", "iatiman", "pag-atiman", "atimani", "atimanan", "giatimanan", "naatiman", "maatiman", "nakaatiman", "makaatiman", "maatimanon", "inatiman", "nagatiman", "magatiman", "moatiman", "tig-atiman", "tagaatiman", "tag-atiman"]
+  },
+  {
+   "ceb": "suporta",
+   "de": "Unterstützung; unterstützen",
+   "pos": "noun",
+   "lesson": "u12_l04",
+   "note": "Salamat sa imong suporta = Danke für deine Unterstützung. Mosuporta ko nimo = Ich unterstütze dich",
+  "forms": ["mosuporta", "nisuporta", "misuporta", "nagsuporta", "magsuporta", "suportahi", "suportahan", "gisuportahan", "isuporta", "gisuporta", "suportaha", "suportahon", "pagsuporta", "masuportahan", "nasuportahan", "nakasuporta", "makasuporta", "suportado", "suportang"]
+  },
+  {
+   "ceb": "respeto",
+   "de": "Respekt; respektieren",
+   "pos": "noun",
+   "lesson": "u12_l04",
+   "note": "Respetoha ang mga tigulang = Respektiere die Älteren. Naa koy respeto nimo = Ich habe Respekt vor dir",
+  "forms": ["morespeto", "nirespeto", "mirespeto", "nagrespeto", "magrespeto", "respetoha", "respetohon", "girespeto", "irespeto", "pagrespeto", "respetohi", "respetohan", "girespetohan", "motahod", "nitahod", "mitahod", "nagtahod", "magtahod", "tahora", "tahoron", "gitahod", "itahod", "pagtahod", "tahori", "tahoran", "gitahoran", "respetado", "respetong"]
+  },
+  {
+   "ceb": "bulawan",
+   "de": "Gold; golden",
+   "pos": "noun",
+   "lesson": "u12_l04",
+   "note": "bulawan nga kasingkasing = ein goldenes Herz. Bulawanon = goldig/wertvoll",
+  "forms": ["bulawanon", "bulawang", "bulawanong"]
+  },
+  {
+   "ceb": "yawyaw",
+   "de": "nörgeln; meckern; schimpfen (vor sich hin)",
+   "pos": "verb",
+   "lesson": "u12_l04",
+   "note": "Ayaw na ug yawyaw = Hör auf zu meckern. Nagyawyaw na pud si Mama = Mama schimpft schon wieder (liebevoll)",
+  "forms": ["nagyawyaw", "magyawyaw", "moyawyaw", "yawyawa", "yawyawon", "giyawyaw", "iyawyaw", "pagyawyaw", "yawyawi", "yawyawan", "giyawyawan", "nagyawyaw-yawyaw", "yawyawng", "yawyawero", "yawyawera", "nagbagulbol", "magbagulbol", "mobagulbol", "bagulbola", "bagulbolon", "gibagulbol", "ibagulbol", "pagbagulbol", "bagulboli", "bagulbolan", "gibagulbolan", "nagreklamo", "magreklamo", "moreklamo", "reklamoha", "reklamohon", "gireklamo", "ireklamo", "pagreklamo", "reklamohi", "reklamohan", "gireklamohan", "reklamong", "reklamador", "reklamadora"]
+  },
+  {
+   "ceb": "mahimong",
+   "de": "werden (zu etwas)",
+   "pos": "verb",
+   "lesson": "u12_l05",
+   "note": "Mahimong doktor siya = Sie wird Ärztin. Gusto ko mahimong maayong papa = Ich möchte ein guter Papa werden. Von mahimo + ng",
+  "forms": ["nahimong"]
+  },
+  {
+   "ceb": "pinulongan",
+   "de": "Sprache",
+   "pos": "noun",
+   "lesson": "u12_l05",
+   "note": "duha ka pinulongan = zwei Sprachen. Von pulong = Wort",
+  "forms": ["pinulongang"]
+  },
+  {
+   "ceb": "Binisaya",
+   "de": "Cebuano; Bisaya (die Sprache)",
+   "pos": "name",
+   "lesson": "u12_l05",
+   "note": "Makasulti ko ug Binisaya = Ich kann Cebuano sprechen. Sa Binisaya = auf Cebuano. Auch: Bisaya, Sinugboanon",
+  "forms": ["Bisaya", "Sinugboanon", "Cebuano", "Sebwano", "Binisayang", "Bisayang", "Bisdak"]
+  },
+  {
+   "ceb": "Iningles",
+   "de": "Englisch (Sprache)",
+   "pos": "name",
+   "lesson": "u12_l05",
+   "note": "Sa Iningles = auf Englisch. Viele sagen einfach English",
+  "forms": ["Ininglis", "Inglis", "Ingles", "Inaleman", "Tinagalog", "Kinatsila", "Espanyol", "Initsik", "Intsik", "Hinapon", "Hapon", "Kinoreano", "Koreano", "Pranses", "Pinranses", "Italyano", "Initalyano"]
+  },
+  {
+   "ceb": "lambo",
+   "de": "sich entwickeln; Fortschritte machen; gedeihen",
+   "pos": "verb",
+   "lesson": "u12_l05",
+   "note": "Molambo ang atong anak = Unser Kind wird sich gut entwickeln. Paglambo = Fortschritt",
+  "forms": ["molambo", "nilambo", "milambo", "naglambo", "maglambo", "paglambo", "kalamboan", "palamboon", "gipalambo", "mapalambo", "napalambo", "nagpalambo", "magpalambo", "mopalambo", "palamboa", "palambo", "lamboon", "gilambo", "ilambo", "lamboa", "nalambo", "malambo", "nakalambo", "makalambo", "mouswag", "niuswag", "miuswag", "nag-uswag", "mag-uswag", "pag-uswag", "kauswagan", "uswaga", "uswagon", "giuswag", "iuswag", "nauswag", "mauswag", "nakauswag", "makauswag"]
+  },
+  {
+   "ceb": "edukasyon",
+   "de": "Bildung; Ausbildung; Erziehung",
+   "pos": "noun",
+   "lesson": "u12_l05",
+   "note": "Importante ang edukasyon = Bildung ist wichtig. Maayong edukasyon = gute Ausbildung",
+  "forms": ["edukasyong", "edukado", "edukada", "pagtuon", "pag-eskwela", "pagkat-on", "pagtudlo"]
+  },
+  {
+   "ceb": "garbo",
+   "de": "Stolz",
+   "pos": "noun",
+   "lesson": "u12_l05",
+   "note": "Garbo nako akong anak = Mein Kind ist mein Stolz. Im Alltag sagt man oft: Proud ko nimo = Ich bin stolz auf dich",
+  "forms": ["garboha", "garbohon", "gigarbo", "igarbo", "paggarbo", "garbohi", "garbohan", "gigarbohan", "magarbo", "nagarbo", "kagarbo", "garbo-garbo", "naggarbo-garbo", "maggarbo-garbo", "garbong", "mapagarbuhon", "mapagarbohon", "mapagarbuhong", "mapagarbohong", "mapahitas-on", "mapahitas-ong", "hambogero", "hambogera", "maghambog", "naghambog", "mohambog", "hamboga", "hambogon", "gihambog", "ihambog", "paghambog", "hambogi", "hambogan", "gihambogan", "mahambog", "nahambog", "kahambog", "hambog-hambog", "naghambog-hambog", "maghambog-hambog", "hambogng"]
+  },
+  {
+   "ceb": "kinaiya",
+   "de": "Charakter; Wesen; Art (eines Menschen)",
+   "pos": "noun",
+   "lesson": "u12_l05",
+   "note": "Maayo ang iyang kinaiya = Sie hat einen guten Charakter. Nindot ug kinaiya = hat eine schöne Art",
+  "forms": ["kinaiyaha", "kinaiyahon", "gikinaiya", "ikinaiya", "pagkinaiya", "kinaiyahi", "kinaiyahan", "gikinaiyahan", "kinaiyang", "kinaiyanhon", "kinaiyanhong", "ugalia", "ugalion", "giugali", "iugali", "pag-ugali", "ugalihi", "ugalihan", "giugalihan", "ugaling"]
+  },
+  {
+   "ceb": "batasan",
+   "de": "Benehmen; Gewohnheit; Sitte",
+   "pos": "noun",
+   "lesson": "u12_l05",
+   "note": "Maayo ug batasan ang bata = Das Kind benimmt sich gut. Batasan sa mga Pilipino = die Sitten der Filipinos",
+  "forms": ["batasana", "batasanon", "gibatasan", "ibatasan", "pagbatasan", "batasani", "batasanan", "gibatasanan", "batasang", "nabatasan", "mabatasan", "kabatasan", "nakabatasan", "makabatasan", "batasan-batasan", "nagbatasan-batasan", "magbatasan-batasan", "tradisyona", "tradisyonon", "gitradisyon", "itradisyon", "pagtradisyon", "tradisyoni", "tradisyonan", "gitradisyonan", "tradisyong", "kulturaha", "kulturahon", "gikultura", "ikultura", "pagkultura", "kulturahi", "kulturahan", "gikulturahan", "kulturang"]
+  },
+  {
+   "ceb": "maalamon",
+   "de": "klug; weise",
+   "pos": "adj",
+   "lesson": "u12_l05",
+   "note": "Maalamon kaayo ang among anak = Unser Kind ist sehr klug. Auch: utokan (von utok = Gehirn)",
+  "forms": ["maalamong", "utokan", "utokang", "utoka", "utokon", "giutok", "iutok", "pag-utok", "utoki", "giutokan", "matalinong", "maabtikong", "abtika", "abtikon", "giabtik", "iabtik", "pag-abtik", "abtiki", "abtikan", "giabtikan", "kaabtik", "naabtik", "abtik-abtik", "nag-abtik-abtik", "mag-abtik-abtik", "abtikng"]
+  },
+  {
+   "ceb": "mapasalamaton",
+   "de": "dankbar",
+   "pos": "adj",
+   "lesson": "u12_l06",
+   "note": "Mapasalamaton ko nimo = Ich bin dir dankbar. Von salamat",
+  "forms": ["mapasalamatong"]
+  },
+  {
+   "ceb": "bulahan",
+   "de": "gesegnet; glücklich (durch Segen)",
+   "pos": "adj",
+   "lesson": "u12_l06",
+   "note": "Bulahan ko nga naa ka = Ich bin gesegnet, dass es dich gibt",
+  "forms": ["bulahang", "kabulahan", "gibulahan"]
+  },
+  {
+   "ceb": "bililhon",
+   "de": "wertvoll; kostbar",
+   "pos": "adj",
+   "lesson": "u12_l06",
+   "note": "Bililhon ka para nako = Du bist wertvoll für mich. Von bili = Wert",
+  "forms": ["bililhong", "kabililhon"]
+  },
+  {
+   "ceb": "hinungdan",
+   "de": "Grund; Ursache",
+   "pos": "noun",
+   "lesson": "u12_l06",
+   "note": "Ikaw ang hinungdan sa akong kalipay = Du bist der Grund meiner Freude. Unsay hinungdan? = Was ist der Grund?",
+  "forms": ["hinungdang"]
+  },
+  {
+   "ceb": "kalinaw",
+   "de": "Frieden; innere Ruhe",
+   "pos": "noun",
+   "lesson": "u12_l06",
+   "note": "Naa koy kalinaw kung kauban tika = Ich habe Frieden, wenn ich bei dir bin. Von linaw = ruhig (Wasser)",
+  "forms": ["malinaw", "malinawon", "malinawong", "kalinawng", "nalinaw", "maglinaw", "naglinaw"]
+  },
+  {
+   "ceb": "lantaw",
+   "de": "schauen (in die Ferne); Ausblick; vorausschauen",
+   "pos": "verb",
+   "lesson": "u12_l06",
+   "note": "Molantaw ta sa umaabot = Lass uns nach vorn schauen. Lantawa ang dagat = Schau aufs Meer",
+  "forms": ["molantaw", "nilantaw", "milantaw", "maglantaw", "naglantaw", "lantawa", "lantawon", "gilantaw", "ilantaw", "paglantaw", "lantawi", "lantawan", "gilantawan", "nakalantaw", "makalantaw", "nalantaw", "malantaw", "lantaw-lantaw", "panglantaw", "lantawng"]
+  },
+  {
+   "ceb": "kapitulo",
+   "de": "Kapitel",
+   "pos": "noun",
+   "lesson": "u12_l06",
+   "note": "bag-ong kapitulo sa atong kinabuhi = ein neues Kapitel in unserem Leben",
+  "forms": ["kapitulong"]
+  },
+  {
+   "ceb": "mahigugmaon",
+   "de": "liebevoll",
+   "pos": "adj",
+   "lesson": "u12_l06",
+   "note": "Mahigugmaon ka nga mama = Du bist eine liebevolle Mama. Von higugma = lieben",
+  "forms": ["mahigugmaong"]
+  },
+  {
+   "ceb": "lampos",
+   "de": "gelingen; Erfolg haben; es schaffen",
+   "pos": "verb",
+   "lesson": "u12_l06",
+   "note": "Molampos ta = Wir werden es schaffen. Kalampusan = Erfolg",
+  "forms": ["molampos", "nilampos", "milampos", "maglampos", "naglampos", "kalampusan", "kalamposan", "nakalampos", "makalampos", "malampuson", "malamposon", "malampusong", "lamposa", "lamposon", "gilampos", "paglampos", "nalampos", "malampos", "lamposng", "kalampusang"]
+  },
+  {
+   "ceb": "dungog",
+   "de": "Ehre; Ruf; Ansehen",
+   "pos": "noun",
+   "lesson": "u12_l06",
+   "note": "Dungog nako nga ikaw akong asawa = Es ist mir eine Ehre, dass du meine Frau bist. Dungganon = ehrenwert",
+  "forms": ["dungganon", "dungganong", "dunggan", "dungogng", "gidungog", "padungog", "gipadungog"]
+  }
+ ]
+}
