@@ -1,0 +1,312 @@
+{
+  "unit": 1,
+  "title": "Hallo & Vorstellen",
+  "level": "A0",
+  "lessons": [
+    {
+      "id": "u01_l01",
+      "title": "Begrüßung",
+      "vocab": [
+        {"ceb": "Maayong buntag", "de": "Guten Morgen", "note": "wörtlich: guter Morgen"},
+        {"ceb": "Maayong udto", "de": "Guten Mittag", "note": "Gruß um die Mittagszeit"},
+        {"ceb": "Maayong hapon", "de": "Guten Nachmittag"},
+        {"ceb": "Maayong gabii", "de": "Guten Abend", "note": "auch als Gute Nacht gebraucht"},
+        {"ceb": "Kumusta", "de": "Wie geht es", "note": "Kumusta ka? = Wie geht es dir?"},
+        {"ceb": "maayo", "de": "gut"},
+        {"ceb": "Maayo ra", "de": "Es geht gut", "note": "wörtlich: nur gut – die Standardantwort auf Kumusta"},
+        {"ceb": "salamat", "de": "danke"},
+        {"ceb": "Daghang salamat", "de": "Vielen Dank", "note": "daghan = viel"},
+        {"ceb": "Babay", "de": "Tschüss", "note": "vom englischen bye-bye"}
+      ],
+      "grammar": {
+        "title": "Maayong + Tageszeit",
+        "text": "Maayong heißt „gut“ mit dem Linker -ng, dahinter kommt die Tageszeit: buntag (Morgen), udto (Mittag), hapon (Nachmittag), gabii (Abend/Nacht). Maayong gabii sagt man abends zur Begrüßung und auch zum Abschied. Auf Kumusta? antwortet man meistens Maayo ra – wörtlich „nur gut“, also „es geht gut“. Salamat passt immer, Daghang salamat ist das herzliche „Vielen Dank“."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Maayong buntag", "direction": "ceb_de", "options": ["Guten Morgen", "Guten Abend", "Danke", "Tschüss"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Salamat", "direction": "ceb_de", "options": ["Danke", "Guten Mittag", "Wie geht es", "Gut"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "Maayong buntag", "de": "Guten Morgen"},
+          {"ceb": "Maayong gabii", "de": "Guten Abend"},
+          {"ceb": "Salamat", "de": "Danke"},
+          {"ceb": "Babay", "de": "Tschüss"},
+          {"ceb": "Maayo", "de": "gut"}
+        ]},
+        {"type": "multiple_choice", "prompt": "Guten Nachmittag", "direction": "de_ceb", "options": ["Maayong hapon", "Maayong buntag", "Maayong gabii", "Maayong udto"], "answer": 0},
+        {"type": "fill_blank", "prompt": "Maayong ___, Mama!", "translation": "Guten Morgen, Mama!", "options": ["buntag", "gabii", "salamat"], "answer": 0},
+        {"type": "true_false", "statement": "Maayong gabii", "translation": "Guten Morgen", "answer": false, "correction": "Guten Abend"},
+        {"type": "word_bank", "prompt": "Wie geht's, Mama?", "tokens": ["Kumusta", "Mama", "Salamat", "Babay"], "answer": ["Kumusta", "Mama"]},
+        {"type": "type_answer", "prompt": "Danke", "answer": "Salamat", "accepted": ["Daghang salamat"]},
+        {"type": "grammar_note", "title": "Kumusta? – Maayo ra!", "text": "Kumusta kommt vom spanischen „¿Cómo está?“. Die Antwort Maayo ra bedeutet wörtlich „nur gut“ – so wie wir „ganz gut“ sagen. Danach sagt man oft Salamat."},
+        {"type": "type_answer", "prompt": "Guten Morgen", "answer": "Maayong buntag"},
+        {"type": "multiple_choice", "prompt": "Maayo ra", "direction": "ceb_de", "options": ["Es geht gut", "Guten Mittag", "Vielen Dank", "Tschüss"], "answer": 0},
+        {"type": "word_bank", "prompt": "Vielen Dank, Papa!", "tokens": ["Daghang", "salamat", "Papa", "Maayong", "buntag"], "answer": ["Daghang", "salamat", "Papa"]},
+        {"type": "fill_blank", "prompt": "Kumusta, Mama? – ___ ra.", "translation": "Wie geht's, Mama? – Es geht gut.", "options": ["Maayo", "Salamat", "Babay"], "answer": 0},
+        {"type": "true_false", "statement": "Daghang salamat", "translation": "Vielen Dank", "answer": true},
+        {"type": "multiple_choice", "prompt": "Tschüss", "direction": "de_ceb", "options": ["Babay", "Salamat", "Kumusta", "Maayo"], "answer": 0},
+        {"type": "type_answer", "prompt": "Guten Abend", "answer": "Maayong gabii"},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "Maayong udto", "de": "Guten Mittag"},
+          {"ceb": "Maayong hapon", "de": "Guten Nachmittag"},
+          {"ceb": "Kumusta", "de": "Wie geht es"},
+          {"ceb": "Maayo ra", "de": "Es geht gut"},
+          {"ceb": "Daghang salamat", "de": "Vielen Dank"}
+        ]}
+      ],
+      "surprise": {"ceb": "Maayong gabii, Langga.", "de": "Gute Nacht, Schatz.", "when": "Abends, bevor ihr schlafen geht – Langga ist die Koseform von Palangga (Liebling)."}
+    },
+    {
+      "id": "u01_l02",
+      "title": "Ja, nein, bitte",
+      "vocab": [
+        {"ceb": "oo", "de": "ja"},
+        {"ceb": "dili", "de": "nein; nicht", "note": "verneint Eigenschaften und Zukunft: Dili ko maestro. Dili ko mokaon."},
+        {"ceb": "wala", "de": "nicht (vorhanden); nein (bei Vergangenheit); links", "note": "Wala ko ug kwarta = Ich habe kein Geld. Wala ko nikaon = Ich habe nicht gegessen. Als Richtung: links (Unit 10)."},
+        {"ceb": "palihug", "de": "bitte (bei einer Bitte)"},
+        {"ceb": "Walay sapayan", "de": "Gern geschehen", "note": "Antwort auf Salamat"},
+        {"ceb": "sige", "de": "okay; los", "note": "auch als Verabschiedung: Sige! = Also dann!"},
+        {"ceb": "Pasayloa ko", "de": "Entschuldigung", "note": "wörtlich: verzeih mir"},
+        {"ceb": "Ayo-ayo", "de": "Mach's gut", "note": "Abschiedsgruß, wörtlich: gut-gut"},
+        {"ceb": "ug", "de": "und; (Objektmarker) ein/eine", "note": "Gusto ko ug kape = Ich möchte (einen) Kaffee. Nie og schreiben."},
+        {"ceb": "pud", "de": "auch", "note": "steht nach dem ersten Satzglied: Maestro pud ko."}
+      ],
+      "grammar": {
+        "title": "Dili oder wala?",
+        "text": "Cebuano hat zwei Neins: dili verneint, was jemand ist oder tun wird (Dili ko maestro = Ich bin kein Lehrer). Wala verneint, was es nicht gibt oder was nicht passiert ist (Wala ko ug kwarta = Ich habe kein Geld). Auf Salamat antwortet man Walay sapayan – wörtlich „kein Schaden“. Pud heißt „auch“ und steht immer nach dem ersten Wort: Salamat pud!"
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Oo", "direction": "ceb_de", "options": ["ja", "nein", "bitte", "okay"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Dili", "direction": "ceb_de", "options": ["nein", "ja", "danke", "tschüss"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "Oo", "de": "ja"},
+          {"ceb": "Dili", "de": "nein"},
+          {"ceb": "Palihug", "de": "bitte"},
+          {"ceb": "Sige", "de": "okay"},
+          {"ceb": "Salamat", "de": "danke"}
+        ]},
+        {"type": "fill_blank", "prompt": "Daghang salamat! – ___ sapayan.", "translation": "Vielen Dank! – Gern geschehen.", "options": ["Walay", "Maayong", "Daghang"], "answer": 0},
+        {"type": "true_false", "statement": "Pasayloa ko", "translation": "Entschuldigung", "answer": true},
+        {"type": "word_bank", "prompt": "Bitte, Mama.", "tokens": ["Palihug", "Mama", "Oo", "Sige"], "answer": ["Palihug", "Mama"]},
+        {"type": "type_answer", "prompt": "ja", "answer": "Oo"},
+        {"type": "type_answer", "prompt": "Gern geschehen", "answer": "Walay sapayan"},
+        {"type": "multiple_choice", "prompt": "Okay, los!", "direction": "de_ceb", "options": ["Sige", "Oo", "Dili", "Ayo-ayo"], "answer": 0},
+        {"type": "word_bank", "prompt": "Mach's gut, Papa!", "tokens": ["Ayo-ayo", "Papa", "Babay", "Salamat"], "answer": ["Ayo-ayo", "Papa"], "accepted": ["Babay Papa"]},
+        {"type": "fill_blank", "prompt": "Salamat ___ Ayo-ayo!", "translation": "Danke und mach's gut!", "options": ["ug", "oo", "dili"], "answer": 0},
+        {"type": "true_false", "statement": "Dili", "translation": "ja", "answer": false, "correction": "nein; nicht"},
+        {"type": "true_false", "statement": "Kumusta", "translation": "Wie geht es", "answer": true},
+        {"type": "multiple_choice", "prompt": "Ayo-ayo", "direction": "ceb_de", "options": ["Mach's gut", "Gern geschehen", "Entschuldigung", "Bitte"], "answer": 0},
+        {"type": "type_answer", "prompt": "Entschuldigung", "answer": "Pasayloa ko", "accepted": ["Pasayloa", "Sorry"]},
+        {"type": "word_bank", "prompt": "Danke auch, Mama.", "tokens": ["Salamat", "pud", "Mama", "Oo", "Dili"], "answer": ["Salamat", "pud", "Mama"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "Wala", "de": "nicht vorhanden"},
+          {"ceb": "Ug", "de": "und"},
+          {"ceb": "Pud", "de": "auch"},
+          {"ceb": "Maayo ra", "de": "Es geht gut"},
+          {"ceb": "Maayong gabii", "de": "Guten Abend"}
+        ]}
+      ],
+      "surprise": {"ceb": "Salamat, Langga. Ayo-ayo!", "de": "Danke, Schatz. Mach's gut!", "when": "Wenn sie morgens zur Arbeit oder zum Einkaufen aufbricht."}
+    },
+    {
+      "id": "u01_l03",
+      "title": "Ich bin …",
+      "vocab": [
+        {"ceb": "ako", "de": "ich (Langform)", "note": "betont oder am Satzanfang: Ako si Tim."},
+        {"ceb": "ko", "de": "ich (Kurzform)", "note": "nach dem ersten Satzglied: Maestro ko."},
+        {"ceb": "si", "de": "(Namensmarker vor Personennamen)", "note": "Ako si Tim. Kini si Mama."},
+        {"ceb": "ngalan", "de": "Name"},
+        {"ceb": "unsa", "de": "was", "note": "Unsa imong ngalan? = Wie heißt du? (wörtlich: Was ist dein Name?)"},
+        {"ceb": "maestro", "de": "Lehrer", "note": "Lehrerin: maestra. Cebuano-Wort: magtutudlo (Unit 7)"},
+        {"ceb": "asawa", "de": "Ehefrau"},
+        {"ceb": "bana", "de": "Ehemann"},
+        {"ceb": "taga-", "de": "aus (Herkunft)", "note": "Taga-Sauerland ko. Taga-asa ka? = Woher kommst du?"},
+        {"ceb": "Aleman", "de": "Deutscher; deutsch", "note": "Aleman ko = Ich bin Deutscher"}
+      ],
+      "grammar": {
+        "title": "Kein „sein“: Maestro ko",
+        "text": "Cebuano hat kein Wort für „bin/bist/ist“. Man sagt einfach „Lehrer ich“: Maestro ko = Ich bin Lehrer. Vor Personennamen steht si: Ako si Tim = Ich bin Tim. Die Kurzform ko klebt am ersten Satzglied, die Langform ako steht betont am Anfang. Herkunft sagt man mit taga- und dem Ort: Taga-Sauerland ko."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Ako si Tim.", "direction": "ceb_de", "options": ["Ich bin Tim.", "Ich heiße Mama.", "Du bist Tim.", "Danke, Tim."], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich bin Lehrer.", "tokens": ["Maestro", "ko", "Oo", "Salamat"], "answer": ["Maestro", "ko"]},
+        {"type": "multiple_choice", "prompt": "Ehefrau", "direction": "de_ceb", "options": ["asawa", "bana", "ngalan", "maestro"], "answer": 0},
+        {"type": "fill_blank", "prompt": "Ako ___ Tim.", "translation": "Ich bin Tim.", "options": ["si", "ko", "ug"], "answer": 0},
+        {"type": "type_answer", "prompt": "Lehrer", "answer": "Maestro"},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "ako", "de": "ich"},
+          {"ceb": "ngalan", "de": "Name"},
+          {"ceb": "asawa", "de": "Ehefrau"},
+          {"ceb": "bana", "de": "Ehemann"},
+          {"ceb": "maestro", "de": "Lehrer"}
+        ]},
+        {"type": "true_false", "statement": "Taga-Sauerland ko.", "translation": "Ich komme aus dem Sauerland.", "answer": true},
+        {"type": "word_bank", "prompt": "Ich bin Deutscher.", "tokens": ["Aleman", "ko", "si", "Maayo"], "answer": ["Aleman", "ko"]},
+        {"type": "multiple_choice", "prompt": "Unsa?", "direction": "ceb_de", "options": ["Was?", "Wer?", "Wo?", "Wann?"], "answer": 0},
+        {"type": "grammar_note", "title": "ko oder ako?", "text": "Beide heißen „ich“. Ko ist die Kurzform und steht nach dem ersten Satzglied: Maestro ko, Taga-Sauerland ko. Ako ist die Langform für den Satzanfang oder zur Betonung: Ako si Tim."},
+        {"type": "type_answer", "prompt": "Ich bin Tim.", "answer": "Ako si Tim"},
+        {"type": "fill_blank", "prompt": "Maestro ___.", "translation": "Ich bin Lehrer.", "options": ["ko", "si", "ug"], "answer": 0},
+        {"type": "true_false", "statement": "Asawa", "translation": "Ehemann", "answer": false, "correction": "Ehefrau"},
+        {"type": "word_bank", "prompt": "Mama ist aus Cebu.", "tokens": ["Taga-Cebu", "si", "Mama", "ko", "Aleman"], "answer": ["Taga-Cebu", "si", "Mama"]},
+        {"type": "multiple_choice", "prompt": "Vielen Dank, Mama.", "direction": "de_ceb", "options": ["Daghang salamat, Mama.", "Salamat pud, Mama.", "Maayo ra, Mama.", "Kumusta, Mama?"], "answer": 0},
+        {"type": "type_answer", "prompt": "Ehemann", "answer": "Bana"},
+        {"type": "word_bank", "prompt": "Ja, ich bin Lehrer.", "tokens": ["Oo", "maestro", "ko", "dili", "salamat"], "answer": ["Oo", "maestro", "ko"]},
+        {"type": "word_bank", "prompt": "Ich bin aus Deutschland.", "tokens": ["Taga-Germany", "ko", "Aleman", "si"], "answer": ["Taga-Germany", "ko"]}
+      ],
+      "surprise": {"ceb": "Ako si Tim, ang imong bana.", "de": "Ich bin Tim, dein Ehemann.", "when": "Mit ernstem Gesicht beim Abendessen – als wäre es eine Vorstellungsrunde."}
+    },
+    {
+      "id": "u01_l04",
+      "title": "Du, er, sie, wir",
+      "vocab": [
+        {"ceb": "ikaw", "de": "du (Langform)"},
+        {"ceb": "ka", "de": "du (Kurzform)", "note": "Maestro ka? Auch Linker nach Zahlen: usa ka tuig (Unit 2)."},
+        {"ceb": "siya", "de": "er; sie", "note": "Cebuano unterscheidet nicht zwischen er und sie"},
+        {"ceb": "kita", "de": "wir (du und ich); (als Verb) sehen, treffen", "note": "schließt den Angesprochenen ein. Kita ta ugma = Wir sehen uns morgen (Unit 8)."},
+        {"ceb": "ta", "de": "wir (Kurzform, du und ich)", "note": "Kaon ta! = Lass uns essen!"},
+        {"ceb": "kami", "de": "wir (ohne dich)", "note": "z. B. meine Frau und ich, wenn ich mit jemand anderem spreche"},
+        {"ceb": "mi", "de": "wir (Kurzform, ohne dich)"},
+        {"ceb": "kamo", "de": "ihr"},
+        {"ceb": "mo", "de": "ihr (Kurzform)"},
+        {"ceb": "sila", "de": "sie (Mehrzahl)"}
+      ],
+      "grammar": {
+        "title": "Zwei Arten von „wir“",
+        "text": "Jedes Pronomen hat eine Langform (ikaw, siya, kita, kami, kamo, sila) und eine Kurzform (ka, siya, ta, mi, mo, sila), die nach dem ersten Satzglied steht: Maestro ka? = Bist du Lehrer? Siya heißt er und sie – Cebuano unterscheidet das nicht. Besonders: kita/ta ist „wir“ inklusive dir (Maayo ta = Uns geht es gut, dir und mir), kami/mi ist „wir“ ohne dich (Taga-Germany mi = Wir kommen aus Deutschland, aber du nicht)."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Maestro ka?", "direction": "ceb_de", "options": ["Bist du Lehrer?", "Bin ich Lehrer?", "Ist sie Lehrerin?", "Seid ihr Lehrer?"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "siya", "direction": "ceb_de", "options": ["er / sie", "du", "wir", "ihr"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "ikaw", "de": "du"},
+          {"ceb": "siya", "de": "er / sie"},
+          {"ceb": "kami", "de": "wir (ohne dich)"},
+          {"ceb": "kamo", "de": "ihr"},
+          {"ceb": "sila", "de": "sie (Mehrzahl)"}
+        ]},
+        {"type": "word_bank", "prompt": "Sie ist aus Cebu.", "tokens": ["Taga-Cebu", "siya", "ko", "ka"], "answer": ["Taga-Cebu", "siya"]},
+        {"type": "fill_blank", "prompt": "Maestro ___?", "translation": "Bist du Lehrer?", "options": ["ka", "ko", "siya"], "answer": 0},
+        {"type": "true_false", "statement": "Taga-Germany mi.", "translation": "Wir (ohne dich) kommen aus Deutschland.", "answer": true},
+        {"type": "type_answer", "prompt": "er / sie", "answer": "siya"},
+        {"type": "grammar_note", "title": "ta oder mi?", "text": "Beides heißt „wir“. Ta schließt die Person ein, mit der du sprichst: Maayo ta = Uns beiden geht es gut. Mi schließt sie aus: Aleman mi = Wir sind Deutsche (du aber nicht). Zu deiner Frau sagst du also meistens ta."},
+        {"type": "multiple_choice", "prompt": "wir (du und ich)", "direction": "de_ceb", "options": ["kita", "kami", "kamo", "sila"], "answer": 0},
+        {"type": "word_bank", "prompt": "Wir (ohne dich) sind Lehrer.", "tokens": ["Maestro", "mi", "ta", "siya"], "answer": ["Maestro", "mi"]},
+        {"type": "fill_blank", "prompt": "Kumusta ___?", "translation": "Wie geht es dir?", "options": ["ka", "ko", "mo"], "answer": 0},
+        {"type": "true_false", "statement": "Aleman sila.", "translation": "Ihr seid Deutsche.", "answer": false, "correction": "Sie (Mehrzahl) sind Deutsche."},
+        {"type": "type_answer", "prompt": "Bist du Lehrer?", "answer": "Maestro ka?"},
+        {"type": "multiple_choice", "prompt": "Maayo ra mi.", "direction": "ceb_de", "options": ["Uns (ohne dich) geht es gut.", "Dir geht es gut.", "Ihnen geht es gut.", "Euch geht es gut."], "answer": 0},
+        {"type": "word_bank", "prompt": "Wie geht es euch?", "tokens": ["Kumusta", "mo", "ka", "sila"], "answer": ["Kumusta", "mo"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "ka", "de": "du (Kurzform)"},
+          {"ceb": "ta", "de": "wir (Kurzform, du und ich)"},
+          {"ceb": "mi", "de": "wir (Kurzform, ohne dich)"},
+          {"ceb": "mo", "de": "ihr (Kurzform)"},
+          {"ceb": "ko", "de": "ich (Kurzform)"}
+        ]}
+      ],
+      "surprise": {"ceb": "Kumusta ka, Langga? Maayo ra ko kay kauban tika.", "de": "Wie geht es dir, Schatz? Mir geht es gut, weil ich bei dir bin.", "when": "Wenn ihr abends nebeneinander auf dem Sofa sitzt."}
+    },
+    {
+      "id": "u01_l05",
+      "title": "Mein, dein, unser",
+      "vocab": [
+        {"ceb": "akong", "de": "mein", "note": "akong asawa = meine Frau"},
+        {"ceb": "imong", "de": "dein"},
+        {"ceb": "iyang", "de": "sein; ihr (Einzahl)"},
+        {"ceb": "atong", "de": "unser (deins und meins)", "note": "atong anak = unsere Tochter (zur Ehefrau gesagt)"},
+        {"ceb": "among", "de": "unser (ohne dich)"},
+        {"ceb": "inyong", "de": "euer"},
+        {"ceb": "ilang", "de": "ihr (Mehrzahl)"},
+        {"ceb": "anak", "de": "Kind (Sohn oder Tochter)", "note": "anak nga babaye = Tochter, anak nga lalaki = Sohn (Unit 2)"},
+        {"ceb": "amigo", "de": "Freund"},
+        {"ceb": "amiga", "de": "Freundin"}
+      ],
+      "grammar": {
+        "title": "Besitz: akong, imong, iyang",
+        "text": "Die Besitzwörter stehen vor dem Nomen: akong asawa = meine Frau, imong anak = dein Kind, iyang ngalan = sein/ihr Name. Auch hier gibt es zwei „unser“: atong (deins und meins – zu deiner Frau: atong anak) und among (ohne dich). Mit dem Fragewort unsa fragst du nach dem Namen: Unsa imong ngalan? = Was ist dein Name?"
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "akong asawa", "direction": "ceb_de", "options": ["meine Frau", "deine Frau", "seine Frau", "unsere Frau"], "answer": 0},
+        {"type": "word_bank", "prompt": "Was ist dein Name?", "tokens": ["Unsa", "imong", "ngalan", "akong", "siya"], "answer": ["Unsa", "imong", "ngalan"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "akong", "de": "mein"},
+          {"ceb": "imong", "de": "dein"},
+          {"ceb": "iyang", "de": "sein / ihr"},
+          {"ceb": "atong", "de": "unser (deins und meins)"},
+          {"ceb": "ilang", "de": "ihr (Mehrzahl)"}
+        ]},
+        {"type": "fill_blank", "prompt": "Mama, ___ anak!", "translation": "Mama, unser Kind!", "options": ["atong", "among", "inyong"], "answer": 0},
+        {"type": "true_false", "statement": "iyang bana", "translation": "ihr Ehemann", "answer": true},
+        {"type": "type_answer", "prompt": "meine Frau", "answer": "akong asawa"},
+        {"type": "multiple_choice", "prompt": "unser Freund (ohne dich)", "direction": "de_ceb", "options": ["among amigo", "atong amigo", "inyong amigo", "ilang amigo"], "answer": 0},
+        {"type": "word_bank", "prompt": "Mein Name ist Tim.", "tokens": ["Tim", "akong", "ngalan", "imong", "siya"], "answer": ["Tim", "akong", "ngalan"], "accepted": ["Akong ngalan Tim"]},
+        {"type": "fill_blank", "prompt": "Unsa ___ ngalan?", "translation": "Was ist dein Name?", "options": ["imong", "akong", "iyang"], "answer": 0},
+        {"type": "true_false", "statement": "inyong anak", "translation": "unser Kind", "answer": false, "correction": "euer Kind"},
+        {"type": "type_answer", "prompt": "deine Freundin", "answer": "imong amiga"},
+        {"type": "multiple_choice", "prompt": "Siya akong amiga.", "direction": "ceb_de", "options": ["Sie ist meine Freundin.", "Du bist meine Freundin.", "Sie ist deine Freundin.", "Ich bin ihre Freundin."], "answer": 0},
+        {"type": "word_bank", "prompt": "Ihr (Mehrzahl) Kind ist Lehrer.", "tokens": ["Maestro", "ilang", "anak", "iyang", "ka"], "answer": ["Maestro", "ilang", "anak"]},
+        {"type": "type_answer", "prompt": "unser Kind (deins und meins)", "answer": "atong anak"},
+        {"type": "true_false", "statement": "Taga-Cebu akong asawa.", "translation": "Meine Frau ist aus Cebu.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "anak", "de": "Kind"},
+          {"ceb": "amigo", "de": "Freund"},
+          {"ceb": "amiga", "de": "Freundin"},
+          {"ceb": "among", "de": "unser (ohne dich)"},
+          {"ceb": "inyong", "de": "euer"}
+        ]}
+      ],
+      "surprise": {"ceb": "Ikaw ang akong gugma.", "de": "Du bist meine Liebe.", "when": "Einfach so, zwischendurch – gugma heißt Liebe."}
+    },
+    {
+      "id": "u01_l06",
+      "title": "Wer bist du?",
+      "vocab": [
+        {"ceb": "kinsa", "de": "wer"},
+        {"ceb": "nimo", "de": "dich; dir; von dir", "note": "Objektform von ikaw: Gimingaw ko nimo."},
+        {"ceb": "nako", "de": "mich; mir; von mir", "note": "Objektform von ako"},
+        {"ceb": "niya", "de": "ihn; ihr; von ihm/ihr"},
+        {"ceb": "kaayo", "de": "sehr", "note": "steht nach dem Adjektiv: Maayo kaayo!"},
+        {"ceb": "ra", "de": "nur; bloß", "note": "Maayo ra = nur gut / es geht"},
+        {"ceb": "Nalipay ko", "de": "Ich freue mich", "note": "Nalipay ko nga nakaila ko nimo = Freut mich, dich kennenzulernen"},
+        {"ceb": "problema", "de": "Problem", "note": "Walay problema = Kein Problem"},
+        {"ceb": "buotan", "de": "lieb; nett", "note": "von buot = Wille/Gemüt: gutherzig"},
+        {"ceb": "gwapa", "de": "hübsch (Frau)", "note": "Mann: gwapo (Unit 2)"}
+      ],
+      "grammar": {
+        "title": "Kaayo = sehr, ra = nur",
+        "text": "Kaayo steht hinter dem Wort, das es verstärkt: Gwapa kaayo ka = Du bist sehr hübsch. Buotan kaayo siya = Sie ist sehr nett. Ra heißt „nur/bloß“ und macht Sätze weicher: Maayo ra = ganz gut. Mit kinsa fragst du nach Personen (Kinsa siya? = Wer ist sie?), und Walay problema ist dein neues Lieblingswort: Kein Problem!"
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Kinsa siya?", "direction": "ceb_de", "options": ["Wer ist sie?", "Was ist das?", "Wie geht es ihr?", "Wo ist sie?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Du bist sehr hübsch.", "tokens": ["Gwapa", "kaayo", "ka", "ra", "siya"], "answer": ["Gwapa", "kaayo", "ka"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "kinsa", "de": "wer"},
+          {"ceb": "kaayo", "de": "sehr"},
+          {"ceb": "buotan", "de": "lieb; nett"},
+          {"ceb": "gwapa", "de": "hübsch (Frau)"},
+          {"ceb": "problema", "de": "Problem"}
+        ]},
+        {"type": "fill_blank", "prompt": "Walay ___!", "translation": "Kein Problem!", "options": ["problema", "ngalan", "amiga"], "answer": 0},
+        {"type": "true_false", "statement": "Buotan kaayo si Mama.", "translation": "Mama ist sehr nett.", "answer": true},
+        {"type": "type_answer", "prompt": "sehr", "answer": "kaayo"},
+        {"type": "multiple_choice", "prompt": "Ich freue mich.", "direction": "de_ceb", "options": ["Nalipay ko.", "Maayo ra ko.", "Buotan ko.", "Aleman ko."], "answer": 0},
+        {"type": "grammar_note", "title": "nako, nimo, niya", "text": "Das sind die Objektformen von ich, du, er/sie. Sie stehen hinter dem Verb oder Nomen: Salamat nimo = Danke dir. Amigo nako siya = Er ist mein Freund (wörtlich: Freund von mir). Du wirst sie bald in Gimingaw ko nimo = Ich vermisse dich brauchen."},
+        {"type": "word_bank", "prompt": "Danke dir, Mama.", "tokens": ["Salamat", "nimo", "Mama", "nako", "niya"], "answer": ["Salamat", "nimo", "Mama"]},
+        {"type": "fill_blank", "prompt": "Maayo ___ ko, salamat.", "translation": "Mir geht's ganz gut, danke.", "options": ["ra", "kaayo", "ka"], "answer": 0},
+        {"type": "true_false", "statement": "Gwapa kaayo siya.", "translation": "Er ist sehr nett.", "answer": false, "correction": "Sie ist sehr hübsch."},
+        {"type": "type_answer", "prompt": "Wer ist sie?", "answer": "Kinsa siya?"},
+        {"type": "multiple_choice", "prompt": "Amiga nako siya.", "direction": "ceb_de", "options": ["Sie ist meine Freundin.", "Sie ist deine Freundin.", "Ich bin ihre Freundin.", "Sie ist sehr nett."], "answer": 0},
+        {"type": "word_bank", "prompt": "Wer ist dein Freund?", "tokens": ["Kinsa", "imong", "amigo", "akong", "unsa"], "answer": ["Kinsa", "imong", "amigo"]},
+        {"type": "type_answer", "prompt": "Kein Problem", "answer": "Walay problema"},
+        {"type": "true_false", "statement": "Nalipay ko kaayo.", "translation": "Ich freue mich sehr.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "nimo", "de": "dir / dich"},
+          {"ceb": "nako", "de": "mir / mich"},
+          {"ceb": "niya", "de": "ihm / ihr"},
+          {"ceb": "ra", "de": "nur"},
+          {"ceb": "Nalipay ko", "de": "Ich freue mich"}
+        ]}
+      ],
+      "surprise": {"ceb": "Gwapa kaayo ka karon, Langga.", "de": "Du siehst heute sehr hübsch aus, Schatz.", "when": "Wenn sie sich fürs Ausgehen fertig gemacht hat – karon heißt heute/jetzt."}
+    }
+  ]
+}

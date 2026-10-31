@@ -1,0 +1,288 @@
+// Lektions-Player: Übungen der Reihe nach, Fehler kommen ans Ende, Fortschritt wird gespeichert.
+import { h, esc, shuffle, toast, confirmSheet, replace } from "./ui.js";
+import { isAnswerAcceptable, normalizeAnswer } from "./answer.js";
+import { weightFor, isDue } from "./srs.js";
+import { db } from "./db.js";
+import { store } from "./store.js";
+
+const TYPE_LABEL = {
+  multiple_choice: "Wähle die richtige Übersetzung",
+  word_bank: "Baue den Satz aus den Kacheln",
+  fill_blank: "Fülle die Lücke",
+  type_answer: "Tippe die Übersetzung auf Cebuano",
+  match_pairs: "Verbinde die Paare",
+  true_false: "Stimmt die Übersetzung?",
+};
+
+export async function mountLesson(main, lessonId, { content, onExit }) {
+  const lesson = content.lesson(lessonId);
+  if (!lesson) { replace(main, h("p", {}, "Lektion nicht gefunden.")); return; }
+  document.body.classList.add("lesson-mode");
+  main.classList.add("nobounce");
+
+  // ---- Zustand (ggf. fortsetzen) ----
+  let st = await db.kvGet("lesson.inprogress");
+  if (!st || st.lessonId !== lessonId) {
+    st = {
+      lessonId, queue: lesson.exercises.map((_, i) => i), pos: -1, xp: 0, correct: 0, total: 0,
+      startedAt: Date.now(), attempted: {}, activeMs: 0,
+    };
+  }
+  const realCount = lesson.exercises.filter((e) => e.type !== "grammar_note").length;
+  let exStart = Date.now();
+
+  const save = () => db.kvSet("lesson.inprogress", st);
+
+  function exit() {
+    document.body.classList.remove("lesson-mode");
+    main.classList.remove("nobounce");
+    onExit();
+  }
+
+  async function pause() {
+    if (st.pos < 0) { await db.kvDel("lesson.inprogress"); return exit(); }
+    await save();
+    toast("Lektion gespeichert – du kannst später weitermachen.");
+    exit();
+  }
+
+  function header() {
+    const done = Math.max(0, st.pos);
+    const pct = Math.min(100, Math.round((done / st.queue.length) * 100));
+    return h("div", { class: "lesson-top" },
+      h("button", { class: "btn-ghost btn-small", onclick: pause, "aria-label": "Pause" }, "✕"),
+      h("div", { class: "progress" }, h("i", { style: { width: pct + "%" } })),
+      h("div", { class: "xp" }, `${st.xp} XP`),
+    );
+  }
+
+  // ---- Intro: Vokabeln + Grammatik ----
+  function renderIntro() {
+    const vocab = h("div", { class: "card vocab-list" },
+      h("h3", { style: { marginTop: 0 } }, "Neue Wörter"),
+      lesson.vocab.map((v) => h("div", { class: "v" },
+        h("div", {}, h("b", {}, v.ceb), v.note ? h("span", { class: "note" }, v.note) : null),
+        h("div", { class: "muted", style: { textAlign: "right" } }, v.de, v.outlook ? h("span", { class: "badge", style: { marginLeft: "6px" } }, "Ausblick") : null),
+      )),
+    );
+    replace(main, 
+      header(),
+      h("h1", {}, lesson.title),
+      h("p", { class: "muted" }, `Unit ${lesson.unit} · Lektion ${lesson.posInUnit} · ${realCount} Übungen`),
+      vocab,
+      h("div", { class: "grammar" }, h("h3", {}, lesson.grammar.title), h("p", { html: esc(lesson.grammar.text).replace(/\n/g, "<br>") })),
+      h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => { st.pos = 0; exStart = Date.now(); save(); renderCurrent(); } }, "Los geht's"),
+    );
+    main.scrollTop = 0;
+  }
+
+  function renderCurrent() {
+    if (st.pos >= st.queue.length) return renderDone();
+    const idx = st.queue[st.pos];
+    const ex = lesson.exercises[idx];
+    exStart = Date.now();
+    main.scrollTop = 0;
+    const body = h("div", {});
+    replace(main, header(), body);
+    const ctx = { ex, idx, body, done: (res) => finish(ex, idx, res) };
+    const renderers = { multiple_choice, word_bank, fill_blank, type_answer, match_pairs, true_false, grammar_note };
+    renderers[ex.type](ctx);
+  }
+
+  // res: {correct, near, expected, extra?}
+  async function finish(ex, idx, res) {
+    const dur = Date.now() - exStart;
+    st.activeMs += Math.min(dur, 120000);
+    if (ex.type === "grammar_note") {
+      st.pos++;
+      await save();
+      return renderCurrent();
+    }
+    const firstTry = !st.attempted[idx];
+    st.attempted[idx] = (st.attempted[idx] || 0) + 1;
+    const words = content.exerciseWords(ex);
+    const due = words.some((w) => isDue(store.words.get(w)));
+    const xp = await store.recordAnswer({
+      lesson: lessonId, mode: "lesson", exType: ex.type, words, correct: res.correct, near: res.near,
+      dur, weight: weightFor(ex.type, "lesson"), firstTry, due,
+    });
+    st.xp += xp;
+    st.total++;
+    if (res.correct) st.correct++;
+    else st.queue.push(idx); // ans Ende anhängen
+    st.pos++;
+    await save();
+    showFeedback(res, () => renderCurrent());
+  }
+
+  function showFeedback(res, next) {
+    const cls = !res.correct ? "bad" : res.near ? "near" : "ok";
+    const title = !res.correct ? "Leider falsch" : res.near ? "Fast – richtig wäre:" : "Richtig!";
+    const fb = h("div", { class: "feedback " + cls },
+      h("h3", {}, title),
+      (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null,
+      res.note ? h("div", { class: "note" }, res.note) : null,
+      h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => { fb.remove(); next(); } }, "Weiter"),
+    );
+    document.body.append(fb);
+    document.querySelector(".feedback button")?.focus();
+  }
+
+  // ---------- Übungstypen ----------
+  function multiple_choice({ ex, body, done }) {
+    let sel = null;
+    const opts = ex.options.map((o, i) => h("button", { class: "opt", onclick: () => { sel = i; opts.forEach((b, j) => b.classList.toggle("sel", j === i)); check.disabled = false; } }, o));
+    const check = h("button", { class: "btn-primary btn-block btn-big mt", disabled: true, onclick: () => {
+      const ok = sel === ex.answer;
+      opts[ex.answer].classList.add("ok");
+      if (!ok) opts[sel].classList.add("bad");
+      done({ correct: ok, near: false, expected: ex.options[ex.answer] });
+    } }, "Prüfen");
+    body.append(
+      h("div", { class: "hint" }, TYPE_LABEL.multiple_choice),
+      h("div", { class: "prompt" }, ex.prompt),
+      h("div", { class: "options" }, opts),
+      check,
+    );
+  }
+
+  function word_bank({ ex, body, done }) {
+    const dir = ex.direction || "de_ceb";
+    const tokens = shuffle(ex.tokens.map((t, i) => ({ t, i })));
+    const chosen = []; // indices in tokens
+    const answerBox = h("div", { class: "bank answer" });
+    const bankBox = h("div", { class: "bank" });
+    const tiles = tokens.map((tk, k) => h("button", { class: "tile", onclick: () => { if (chosen.includes(k)) return; chosen.push(k); render(); } }, tk.t));
+    const check = h("button", { class: "btn-primary btn-block btn-big mt", disabled: true, onclick: () => {
+      const got = chosen.map((k) => tokens[k].t).join(" ");
+      const targets = [ex.answer.join(" "), ...(ex.accepted || [])];
+      const n = normalizeAnswer(got);
+      const ok = targets.some((t) => normalizeAnswer(t) === n);
+      done({ correct: ok, near: false, expected: ex.answer.join(" ") + (dir === "de_ceb" ? "" : "") });
+    } }, "Prüfen");
+    function render() {
+      replace(answerBox, ...chosen.map((k, pos) => h("button", { class: "tile", onclick: () => { chosen.splice(pos, 1); render(); } }, tokens[k].t)));
+      tiles.forEach((b, k) => b.classList.toggle("used", chosen.includes(k)));
+      check.disabled = chosen.length === 0;
+    }
+    bankBox.append(...tiles);
+    body.append(h("div", { class: "hint" }, TYPE_LABEL.word_bank), h("div", { class: "prompt" }, ex.prompt), answerBox, bankBox, check);
+    render();
+  }
+
+  function fill_blank({ ex, body, done }) {
+    let sel = null;
+    const promptEl = h("div", { class: "prompt" });
+    const renderPrompt = () => { promptEl.innerHTML = esc(ex.prompt).replace("___", `<u>${sel == null ? "____" : esc(ex.options[sel])}</u>`); };
+    const opts = ex.options.map((o, i) => h("button", { class: "opt", onclick: () => { sel = i; opts.forEach((b, j) => b.classList.toggle("sel", j === i)); renderPrompt(); check.disabled = false; } }, o));
+    const check = h("button", { class: "btn-primary btn-block btn-big mt", disabled: true, onclick: () => {
+      const ok = sel === ex.answer;
+      opts[ex.answer].classList.add("ok");
+      if (!ok) opts[sel].classList.add("bad");
+      done({ correct: ok, near: false, expected: ex.prompt.replace("___", ex.options[ex.answer]) });
+    } }, "Prüfen");
+    renderPrompt();
+    body.append(h("div", { class: "hint" }, TYPE_LABEL.fill_blank), promptEl, h("p", { class: "muted" }, ex.translation), h("div", { class: "options" }, opts), check);
+  }
+
+  function type_answer({ ex, body, done }) {
+    const input = h("input", { type: "text", autocomplete: "off", autocorrect: "off", autocapitalize: "off", spellcheck: "false", placeholder: "Auf Cebuano …", enterkeyhint: "done" });
+    const submit = () => {
+      if (!input.value.trim()) return;
+      const r = isAnswerAcceptable(input.value, ex.answer, ex.accepted);
+      input.blur();
+      done({ correct: r.ok, near: r.near, expected: r.expected });
+    };
+    input.addEventListener("keydown", (e) => { if (e.key === "Enter") submit(); });
+    body.append(h("div", { class: "hint" }, TYPE_LABEL.type_answer), h("div", { class: "prompt" }, ex.prompt), input,
+      h("button", { class: "btn-primary btn-block btn-big mt", onclick: submit }, "Prüfen"), h("div", { class: "kbd-space" }));
+    setTimeout(() => input.focus(), 50);
+  }
+
+  function match_pairs({ ex, body, done }) {
+    const left = shuffle(ex.pairs.map((p, i) => ({ text: p.ceb, i })));
+    const right = shuffle(ex.pairs.map((p, i) => ({ text: p.de, i })));
+    let selL = null, selR = null, matched = 0, wrongTaps = 0;
+    const lBtns = left.map((o) => h("button", { class: "opt", onclick: () => pick("L", o) }, o.text));
+    const rBtns = right.map((o) => h("button", { class: "opt", onclick: () => pick("R", o) }, o.text));
+    const btnOf = (side, o) => (side === "L" ? lBtns[left.indexOf(o)] : rBtns[right.indexOf(o)]);
+    function pick(side, o) {
+      const btn = btnOf(side, o);
+      if (btn.classList.contains("matched")) return;
+      if (side === "L") { selL = o; lBtns.forEach((b) => b.classList.toggle("sel", b === btn)); }
+      else { selR = o; rBtns.forEach((b) => b.classList.toggle("sel", b === btn)); }
+      if (selL && selR) {
+        const a = btnOf("L", selL), b = btnOf("R", selR);
+        if (selL.i === selR.i) {
+          a.classList.add("matched"); b.classList.add("matched"); matched++;
+        } else {
+          wrongTaps++;
+          a.classList.add("bad"); b.classList.add("bad");
+          setTimeout(() => { a.classList.remove("bad"); b.classList.remove("bad"); }, 500);
+        }
+        a.classList.remove("sel"); b.classList.remove("sel");
+        selL = selR = null;
+        if (matched === ex.pairs.length) {
+          setTimeout(() => done({ correct: wrongTaps <= 1, near: wrongTaps === 1, expected: ex.pairs.map((p) => `${p.ceb} = ${p.de}`).join(", "), note: wrongTaps ? `${wrongTaps} Fehlversuch(e)` : null }), 300);
+        }
+      }
+    }
+    const grid = h("div", { class: "pairs" });
+    for (let i = 0; i < ex.pairs.length; i++) grid.append(lBtns[i], rBtns[i]);
+    body.append(h("div", { class: "hint" }, TYPE_LABEL.match_pairs), grid);
+  }
+
+  function true_false({ ex, body, done }) {
+    const answer = (v) => done({ correct: v === ex.answer, near: false, expected: ex.answer ? `${ex.statement} = ${ex.translation}` : `${ex.statement} = ${ex.correction}`, note: ex.answer ? null : `„${ex.translation}“ war falsch.` });
+    body.append(
+      h("div", { class: "hint" }, TYPE_LABEL.true_false),
+      h("div", { class: "prompt" }, ex.statement),
+      h("div", { class: "prompt small muted" }, "= " + ex.translation + " ?"),
+      h("div", { class: "row mt" },
+        h("button", { class: "grow btn-big", onclick: () => answer(true) }, "Stimmt"),
+        h("button", { class: "grow btn-big", onclick: () => answer(false) }, "Stimmt nicht"),
+      ),
+    );
+  }
+
+  function grammar_note({ ex, body, done }) {
+    body.append(
+      h("div", { class: "grammar" }, h("h3", {}, ex.title), h("p", { html: esc(ex.text).replace(/\n/g, "<br>") })),
+      h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => done({}) }, "Weiter"),
+    );
+  }
+
+  // ---------- Abschluss ----------
+  async function renderDone() {
+    const dur = st.activeMs || (Date.now() - st.startedAt);
+    const acc = st.total ? Math.round((st.correct / st.total) * 100) : 0;
+    await store.completeLesson({ lesson: lessonId, dur, xp: st.xp, correct: st.correct, total: st.total });
+    await db.kvDel("lesson.inprogress");
+    const s = lesson.surprise;
+    replace(main, 
+      h("h1", { class: "center" }, "Lektion geschafft!"),
+      h("div", { class: "result-big" }, `${st.xp + 20} XP`),
+      h("div", { class: "stat-grid" },
+        h("div", { class: "stat" }, h("b", {}, acc + " %"), h("span", {}, "Trefferquote")),
+        h("div", { class: "stat" }, h("b", {}, Math.max(1, Math.round(dur / 60000)) + " min"), h("span", {}, "Dauer")),
+        h("div", { class: "stat" }, h("b", {}, lesson.vocab.length), h("span", {}, "neue Wörter")),
+      ),
+      h("h2", {}, "Überraschungssatz für deine Frau"),
+      h("div", { class: "surprise" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "de" }, s.de), h("div", { class: "when" }, "Wann: " + s.when)),
+      h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => { exit(); } }, "Fertig"),
+    );
+    main.scrollTop = 0;
+    document.dispatchEvent(new CustomEvent("lesson-complete", { detail: { lessonId } }));
+  }
+
+  if (st.pos < 0) renderIntro();
+  else renderCurrent();
+  return { pause };
+}
+
+export async function hasLessonInProgress() {
+  return db.kvGet("lesson.inprogress");
+}
+export async function discardLessonInProgress() {
+  return db.kvDel("lesson.inprogress");
+}

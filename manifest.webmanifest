@@ -1,0 +1,16 @@
+{
+  "name": "Cebuano lernen",
+  "short_name": "Cebuano",
+  "description": "Cebuano (Bisaya) von A0 bis A2 – Lektionen, Vokabeltrainer, Fortschritt",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#0f766e",
+  "lang": "de",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

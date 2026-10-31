@@ -79,6 +79,16 @@ export class Lexicon {
         const r = this.lookup(a, allowed);
         if (r) return r;
       }
+      // Präfix mit Bindestrich vor Name/Zahl/Wort: taga-Cebu, ika-5, taga-asa
+      if (a && b && (PREFIXES.includes(a) || this.tokenMap.has(a + "-"))) {
+        const pre = this.tokenMap.get(a + "-");
+        if (this.isName(b) || /^\d+$/.test(b)) {
+          if (pre && allowed(pre)) return pre;
+          return null;
+        }
+        const r = this.lookup(b, allowed);
+        if (r) return pre && allowed(pre) ? pre : r;
+      }
     }
     return this.stripAffixes(t, allowed);
   }
