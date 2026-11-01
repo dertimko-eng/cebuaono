@@ -338,3 +338,17 @@ body.big-text .opt, body.big-text .tile { font-size: 21px; }
 .mascot-center ~ .stat-grid .stat { animation: fade .5s both; }
 .mascot-center ~ .stat-grid .stat:nth-child(2) { animation-delay: .1s; } .mascot-center ~ .stat-grid .stat:nth-child(3) { animation-delay: .2s; }
 @media (prefers-reduced-motion: reduce) { .eagle *, .eagle, .node.next .num, .result-big, .stat, .feedback h3, .opt.bad { animation: none !important; } }
+
+/* Aussprache */
+.pron { display: block; font-size: 13px; color: var(--muted); font-style: italic; line-height: 1.3; }
+.pron.inline { display: inline; margin-left: 6px; }
+.pron.under { font-size: 15px; margin: -12px 0 16px; }
+.feedback .pron { font-size: 14px; margin-top: 2px; }
+.surprise .pron { margin-top: 2px; font-size: 14px; }
+.vocab-list .pron { margin-top: 1px; }
+.word-detail .pron { font-size: 15px; margin: 2px 0 6px; }
+.pron-row { display: grid; grid-template-columns: 90px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.pron-row:last-child { border-bottom: 0; }
+.pron-sample { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.pron-sample:last-child { border-bottom: 0; }
+.pron-sample .pron { font-size: 15px; }

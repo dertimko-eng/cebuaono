@@ -1,6 +1,7 @@
 // Lektions-Player: Übungen der Reihe nach, Fehler kommen ans Ende, Fortschritt wird gespeichert.
 import { h, esc, shuffle, toast, confirmSheet, replace, copyText } from "./ui.js";
 import { eagle, confetti } from "./art.js";
+import { pronounce } from "./pronounce.js";
 import { isAnswerAcceptable, normalizeAnswer } from "./answer.js";
 import { weightFor, isDue } from "./srs.js";
 import { db } from "./db.js";
@@ -47,6 +48,9 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
   let keyHandler = null;
 
   const save = () => db.kvSet("lesson.inprogress", st);
+  // Aussprache-Zeile; nur für Cebuano-Text (mehr bekannte als unbekannte Wörter)
+  const isCeb = (t) => { const r = content.lexicon.analyze(t); return r.found.size > 0 && r.found.size >= r.unknown.length; };
+  const pron = (t, cls = "pron") => (t && !t.includes("=") && isCeb(t) ? h("div", { class: cls }, pronounce(t)) : null);
 
   function exit(hash) {
     document.body.classList.remove("lesson-mode");
@@ -79,7 +83,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     const vocab = h("div", { class: "card vocab-list" },
       h("h3", { style: { marginTop: 0 } }, "Neue Wörter"),
       lesson.vocab.map((v) => h("div", { class: "v" },
-        h("div", {}, h("b", {}, v.ceb), v.note ? h("span", { class: "note" }, v.note) : null),
+        h("div", {}, h("b", {}, v.ceb), h("span", { class: "pron" }, pronounce(v.ceb)), v.note ? h("span", { class: "note" }, v.note) : null),
         h("div", { class: "muted", style: { textAlign: "right" } }, v.de, v.outlook ? h("span", { class: "badge", style: { marginLeft: "6px" } }, "Ausblick") : null),
       )),
     );
@@ -146,7 +150,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     const title = !res.correct ? "Leider falsch" : res.near ? "Fast – richtig wäre:" : "Richtig!";
     // Bei Fehlern die beteiligten Wörter erklären
     const explain = !res.correct || res.near
-      ? words.map((w) => content.entry(w)).filter(Boolean).slice(0, 4).map((e) => h("div", { class: "small" }, h("b", {}, e.ceb), " = ", e.de, e.note ? h("span", { class: "muted" }, ` (${e.note})`) : null))
+      ? words.map((w) => content.entry(w)).filter(Boolean).slice(0, 4).map((e) => h("div", { class: "small" }, h("b", {}, e.ceb), h("span", { class: "pron inline" }, pronounce(e.ceb)), " = ", e.de, e.note ? h("span", { class: "muted" }, ` (${e.note})`) : null))
       : [];
     const go = () => {
       document.removeEventListener("keydown", keyHandler); keyHandler = null;
@@ -157,6 +161,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } },
       h("div", { class: "fb-head" }, eagle(!res.correct ? "sad" : res.near ? "think" : "cheer", 56), h("h3", {}, title)),
       (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null,
+      (res.near || !res.correct) ? pron(res.expected) : null,
       res.note ? h("div", { class: "note" }, res.note) : null,
       explain.length ? h("div", { class: "mt" }, explain) : null,
       h("button", { class: "btn-primary btn-block btn-big mt", onclick: go }, "Weiter"),
@@ -182,6 +187,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     body.append(
       h("div", { class: "hint" }, TYPE_LABEL.multiple_choice),
       h("div", { class: "prompt" }, ex.prompt),
+      ex.direction === "ceb_de" ? pron(ex.prompt, "pron under") : null,
       h("div", { class: "options" }, opts),
       check,
     );
@@ -209,7 +215,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
       reset.classList.toggle("hidden", chosen.length === 0);
     }
     bankBox.append(...tiles);
-    body.append(h("div", { class: "hint" }, TYPE_LABEL.word_bank), h("div", { class: "prompt" }, ex.prompt), answerBox, bankBox, h("div", { class: "row spread mt" }, reset), check, dontKnow(ex.answer.join(" "), done));
+    body.append(h("div", { class: "hint" }, TYPE_LABEL.word_bank), h("div", { class: "prompt" }, ex.prompt), ex.direction === "ceb_de" ? pron(ex.prompt, "pron under") : null, answerBox, bankBox, h("div", { class: "row spread mt" }, reset), check, dontKnow(ex.answer.join(" "), done));
     render();
   }
 
@@ -225,7 +231,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
       done({ correct: ok, near: false, expected: ex.prompt.replace("___", ex.options[ex.answer]) });
     } }, "Prüfen");
     renderPrompt();
-    body.append(h("div", { class: "hint" }, TYPE_LABEL.fill_blank), promptEl, h("p", { class: "muted" }, ex.translation), h("div", { class: "options" }, opts), check);
+    body.append(h("div", { class: "hint" }, TYPE_LABEL.fill_blank), promptEl, h("div", { class: "pron under" }, pronounce(ex.prompt.replace("___", "…"))), h("p", { class: "muted" }, ex.translation), h("div", { class: "options" }, opts), check);
   }
 
   function type_answer({ ex, body, done }) {
@@ -282,6 +288,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     body.append(
       h("div", { class: "hint" }, TYPE_LABEL.true_false),
       h("div", { class: "prompt" }, ex.statement),
+      h("div", { class: "pron under" }, pronounce(ex.statement)),
       h("div", { class: "prompt small muted" }, "= " + ex.translation + " ?"),
       h("div", { class: "row mt" },
         h("button", { class: "grow btn-big", onclick: () => answer(true) }, "Stimmt"),
@@ -319,7 +326,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
         h("div", { class: "stat" }, h("b", {}, lesson.vocab.length), h("span", {}, "neue Wörter")),
       ),
       h("h2", {}, "Überraschungssatz für deine Frau"),
-      h("div", { class: "surprise" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "de" }, s.de), h("div", { class: "when" }, "Wann: " + s.when),
+      h("div", { class: "surprise" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "pron" }, pronounce(s.ceb)), h("div", { class: "de" }, s.de), h("div", { class: "when" }, "Wann: " + s.when),
         h("button", { class: "btn-ghost btn-small mt", onclick: () => copyText(s.ceb) }, "Satz kopieren")),
       nextLesson ? h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => exit("#lesson/" + nextLesson.id) }, `Weiter: ${nextLesson.title}`) : null,
       h("div", { class: "row mt" },

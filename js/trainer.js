@@ -1,6 +1,7 @@
 // Vokabeltrainer: trainiert gezielt fällige, fehleranfällige und schwache Wörter – getrennt vom Lektionspfad.
 import { h, esc, shuffle, toast, replace } from "./ui.js";
 import { eagle, confetti } from "./art.js";
+import { pronounce } from "./pronounce.js";
 import { isAnswerAcceptable } from "./answer.js";
 import { weightFor, isDue, todayKey, categoryOf } from "./srs.js";
 import { db } from "./db.js";
@@ -131,11 +132,11 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
         const ok = sel === entry;
         btns[opts.indexOf(entry)].classList.add("ok");
         if (!ok) btns[opts.indexOf(sel)].classList.add("bad");
-        finish(entry, item, { correct: ok, near: false, expected: `${entry.ceb} = ${entry.de}`, note: ok ? null : entry.note || null });
+        finish(entry, item, { correct: ok, near: false, expected: `${entry.ceb} = ${entry.de}`, ceb: entry.ceb, note: ok ? null : entry.note || null });
       } }, "Prüfen");
-      body.append(h("div", { class: "hint" }, reverse ? "Welches Cebuano-Wort passt?" : "Was bedeutet das?"), h("div", { class: "prompt" }, reverse ? entry.de : entry.ceb), h("div", { class: "options" }, btns), check);
+      body.append(h("div", { class: "hint" }, reverse ? "Welches Cebuano-Wort passt?" : "Was bedeutet das?"), h("div", { class: "prompt" }, reverse ? entry.de : entry.ceb), reverse ? null : h("div", { class: "pron under" }, pronounce(entry.ceb)), h("div", { class: "options" }, btns), check);
     }
-    const dontKnow = (entry, item) => h("button", { class: "btn-ghost btn-block btn-small", onclick: () => finish(entry, item, { correct: false, near: false, expected: entry.ceb, note: entry.note || null }) }, "Weiß ich nicht – Lösung zeigen");
+    const dontKnow = (entry, item) => h("button", { class: "btn-ghost btn-block btn-small", onclick: () => finish(entry, item, { correct: false, near: false, expected: entry.ceb, ceb: entry.ceb, note: entry.note || null }) }, "Weiß ich nicht – Lösung zeigen");
 
     function renderHard(entry, item, body) {
       const input = h("input", { type: "text", autocomplete: "off", autocorrect: "off", autocapitalize: "off", spellcheck: "false", placeholder: "Auf Cebuano …", enterkeyhint: "done" });
@@ -143,7 +144,7 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
         if (!input.value.trim()) return;
         const r = isAnswerAcceptable(input.value, entry.ceb, entry.forms || []);
         input.blur();
-        finish(entry, item, { correct: r.ok, near: r.near, expected: entry.ceb, note: entry.note || null });
+        finish(entry, item, { correct: r.ok, near: r.near, expected: entry.ceb, ceb: entry.ceb, note: entry.note || null });
       };
       input.addEventListener("keydown", (e) => { if (e.key === "Enter") submit(); });
       body.append(h("div", { class: "hint" }, "Tippe das Wort auf Cebuano"), h("div", { class: "prompt" }, entry.de), input,
@@ -173,7 +174,7 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
       const title = !res.correct ? "Leider falsch" : res.near ? "Fast – richtig wäre:" : "Richtig!";
       const go = () => { document.removeEventListener("keydown", onKey); if (!fb.isConnected || !isCurrent()) return; fb.remove(); next(); };
       const onKey = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } };
-      const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } }, h("div", { class: "fb-head" }, eagle(!res.correct ? "sad" : res.near ? "think" : "cheer", 56), h("h3", {}, title)), (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null, res.note ? h("div", { class: "note" }, res.note) : null,
+      const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } }, h("div", { class: "fb-head" }, eagle(!res.correct ? "sad" : res.near ? "think" : "cheer", 56), h("h3", {}, title)), (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null, (res.near || !res.correct) && res.ceb ? h("div", { class: "pron" }, pronounce(res.ceb)) : null, res.note ? h("div", { class: "note" }, res.note) : null,
         h("button", { class: "btn-primary btn-block btn-big mt", onclick: go }, "Weiter"));
       document.body.append(fb);
       document.addEventListener("keydown", onKey);

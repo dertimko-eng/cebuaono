@@ -1,5 +1,6 @@
 // Einstieg: Router, Startbildschirm, Lernpfad, Wörterliste, Überraschungssätze, Einstellungen.
 import { eagleSays, unitBadge, homeLine } from "./art.js";
+import { pronounce, PRON_LEGEND } from "./pronounce.js";
 import { h, esc, toast, sheet, confirmSheet, fmtTime, isStandalone, isIOS, replace, copyText } from "./ui.js";
 import { loadContent } from "./content.js";
 import { store } from "./store.js";
@@ -130,12 +131,13 @@ async function render() {
   document.body.classList.remove("lesson-mode");
   main.classList.remove("nobounce");
   document.querySelectorAll(".feedback, .overlay").forEach((e) => e.remove());
-  tabs.querySelectorAll("a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + route || (["more", "words", "surprises", "settings", "grammar", "review"].includes(route) && a.getAttribute("href") === "#more")));
+  tabs.querySelectorAll("a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + route || (["more", "words", "surprises", "settings", "grammar", "review", "pron"].includes(route) && a.getAttribute("href") === "#more")));
   switch (route) {
     case "home": return renderHome(isCurrent);
     case "path": return renderPath(isCurrent);
     case "lesson": return mountLesson(main, param, { content, navigate, isCurrent, onExit: (hash) => { if (hash && hash === location.hash) render(); else navigate(hash || "#path"); } });
     case "grammar": return renderGrammar();
+    case "pron": return renderPron();
     case "review": return showWeeklyReview(true);
     case "trainer": {
       let preset = null;
@@ -244,6 +246,7 @@ function showWordDetail(e) {
   const total = (w?.correct || 0) + (w?.wrong || 0);
   const c = h("div", { class: "word-detail" },
     h("div", { class: "row spread" }, h("h2", { style: { margin: 0 } }, e.ceb), h("span", { class: "badge " + cat }, cat)),
+    h("div", { class: "pron" }, pronounce(e.ceb)),
     h("p", { style: { fontSize: "19px" } }, e.de),
     e.note ? h("p", { class: "muted small" }, e.note) : null,
     e.forms?.length ? h("p", { class: "small muted" }, "Formen: " + e.forms.slice(0, 8).join(", ")) : null,
@@ -306,7 +309,7 @@ function renderWords() {
       const w = store.words.get(e.ceb);
       const cat = categoryOf(w);
       const learned = completed.has(e.lesson) || (w && w.stage > 0);
-      return h("div", { class: "v", style: learned ? null : { opacity: 0.6 }, onclick: () => showWordDetail(e) }, h("div", {}, h("b", {}, e.ceb), h("span", { class: "note" }, e.de, e.note ? ` – ${e.note}` : "")), h("div", { style: { textAlign: "right", flexShrink: 0 } }, learned ? h("span", { class: "badge " + cat }, cat) : h("span", { class: "badge" }, "Unit " + e.lesson.slice(1, 3).replace(/^0/, "")), w?.due && w.stage > 0 ? h("div", { class: "small muted" }, "fällig " + w.due.slice(8, 10) + "." + w.due.slice(5, 7) + ".") : null));
+      return h("div", { class: "v", style: learned ? null : { opacity: 0.6 }, onclick: () => showWordDetail(e) }, h("div", {}, h("b", {}, e.ceb), h("span", { class: "pron" }, pronounce(e.ceb)), h("span", { class: "note" }, e.de, e.note ? ` – ${e.note}` : "")), h("div", { style: { textAlign: "right", flexShrink: 0 } }, learned ? h("span", { class: "badge " + cat }, cat) : h("span", { class: "badge" }, "Unit " + e.lesson.slice(1, 3).replace(/^0/, "")), w?.due && w.stage > 0 ? h("div", { class: "small muted" }, "fällig " + w.due.slice(8, 10) + "." + w.due.slice(5, 7) + ".") : null));
     }) : h("p", { class: "muted" }, showAll ? "Nichts gefunden." : "Keine Wörter – schließe zuerst eine Lektion ab."));
   }
   input.addEventListener("input", update);
@@ -324,9 +327,23 @@ function renderSurprises() {
   replace(main, 
     h("h1", {}, "Für meine Frau"),
     h("p", { class: "muted" }, "Alle Überraschungssätze aus abgeschlossenen Lektionen."),
-    open.length ? open.map((s) => h("div", { class: "surprise mb" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "de" }, s.de), h("div", { class: "when" }, `Wann: ${s.when} · Unit ${s.unit}`),
+    open.length ? open.map((s) => h("div", { class: "surprise mb" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "pron" }, pronounce(s.ceb)), h("div", { class: "de" }, s.de), h("div", { class: "when" }, `Wann: ${s.when} · Unit ${s.unit}`),
       h("button", { class: "btn-ghost btn-small", style: { padding: "4px 0", minHeight: "32px" }, onclick: () => copyText(s.ceb) }, "Kopieren"))) : h("p", {}, "Noch keine – die erste Lektion wartet."),
     locked ? h("p", { class: "small muted center" }, `${locked} weitere Sätze warten in den nächsten Lektionen.`) : null,
+  );
+  main.scrollTop = 0;
+}
+
+// ---------- Aussprache-Legende ----------
+function renderPron() {
+  const samples = ["Maayong buntag", "Kumusta ka?", "Gimingaw ko nimo.", "Gwapa kaayo ka karon, Langga.", "Unsa imong ngalan?", "Nagluto ko ug kan-on."];
+  replace(main,
+    h("h1", {}, "Aussprache lesen"),
+    h("p", { class: "muted" }, "Unter jedem Cebuano-Wort steht kursiv, wie du es mit deutscher Lesegewohnheit aussprichst. Cebuano ist sehr lautgetreu – nur diese Zeichen sind anders:"),
+    h("div", { class: "card" }, PRON_LEGEND.map(([k, v]) => h("div", { class: "pron-row" }, h("b", {}, k), h("span", {}, v)))),
+    h("h2", {}, "Beispiele"),
+    h("div", { class: "card" }, samples.map((s) => h("div", { class: "pron-sample" }, h("b", {}, s), h("div", { class: "pron" }, pronounce(s))))),
+    h("p", { class: "small muted" }, "Die Umschrift ist regelbasiert und deckt die normale Aussprache ab. Wo deine Frau anders spricht, gilt ihre Version."),
   );
   main.scrollTop = 0;
 }
@@ -338,6 +355,7 @@ function renderMore() {
     h("div", { class: "card list" },
       h("a", { href: "#words" }, "📚 Wörterliste"),
       h("a", { href: "#grammar" }, "📖 Grammatik nachschlagen"),
+      h("a", { href: "#pron" }, "🔊 Aussprache lesen"),
       h("a", { href: "#surprises" }, "💛 Für meine Frau"),
       h("a", { href: "#review" }, "🗓️ Wochenrückblick"),
       h("a", { href: "#settings" }, "⚙️ Einstellungen & Dropbox"),
