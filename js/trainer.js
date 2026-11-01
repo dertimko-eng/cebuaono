@@ -1,5 +1,6 @@
 // Vokabeltrainer: trainiert gezielt fällige, fehleranfällige und schwache Wörter – getrennt vom Lektionspfad.
 import { h, esc, shuffle, toast, replace } from "./ui.js";
+import { eagle, confetti } from "./art.js";
 import { isAnswerAcceptable } from "./answer.js";
 import { weightFor, isDue, todayKey, categoryOf } from "./srs.js";
 import { db } from "./db.js";
@@ -172,7 +173,7 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
       const title = !res.correct ? "Leider falsch" : res.near ? "Fast – richtig wäre:" : "Richtig!";
       const go = () => { document.removeEventListener("keydown", onKey); if (!fb.isConnected || !isCurrent()) return; fb.remove(); next(); };
       const onKey = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } };
-      const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } }, h("h3", {}, title), (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null, res.note ? h("div", { class: "note" }, res.note) : null,
+      const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } }, h("div", { class: "fb-head" }, eagle(!res.correct ? "sad" : res.near ? "think" : "cheer", 56), h("h3", {}, title)), (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null, res.note ? h("div", { class: "note" }, res.note) : null,
         h("button", { class: "btn-primary btn-block btn-big mt", onclick: go }, "Weiter"));
       document.body.append(fb);
       document.addEventListener("keydown", onKey);
@@ -188,7 +189,8 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
       const wobbly = rows.filter(([, r]) => r.wrong > 0 || r.near > 0).map(([ceb]) => ceb);
       await store.completeTrainerRound({ mode: st.mode, size: st.items.length, correct, near, wrong, dur: st.activeMs });
       replace(main, 
-        h("h1", { class: "center" }, "Runde fertig"),
+        h("div", { class: "mascot-center" }, eagle(wrong === 0 ? "cheer" : "wave", 130)),
+        h("h1", { class: "center", style: { marginTop: 0 } }, wrong === 0 ? "Runde fertig – alles richtig!" : "Runde fertig"),
         h("div", { class: "stat-grid" },
           h("div", { class: "stat" }, h("b", { style: { color: "var(--ok)" } }, correct), h("span", {}, "richtig")),
           h("div", { class: "stat" }, h("b", { style: { color: "var(--warn)" } }, near), h("span", {}, "fast")),
@@ -200,6 +202,7 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
         h("button", { class: "btn-block mt", onclick: () => { onExit(); } }, "Zurück"),
       );
       main.scrollTop = 0;
+      if (wrong === 0 && rows.length) confetti(50);
       document.dispatchEvent(new CustomEvent("trainer-complete"));
     }
 

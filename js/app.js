@@ -1,4 +1,5 @@
 // Einstieg: Router, Startbildschirm, Lernpfad, Wörterliste, Überraschungssätze, Einstellungen.
+import { eagleSays, unitBadge, homeLine } from "./art.js";
 import { h, esc, toast, sheet, confirmSheet, fmtTime, isStandalone, isIOS, replace, copyText } from "./ui.js";
 import { loadContent } from "./content.js";
 import { store } from "./store.js";
@@ -170,7 +171,7 @@ async function renderHome(isCurrent = () => true) {
   const goalDots = h("div", { class: "goal-dots" }, Array.from({ length: s.dailyGoal }, (_, i) => h("i", { class: i < s.lessonsToday ? "on" : "" })));
   const activeToday = !!s.heatmap.find((d) => d.date === s.today)?.active;
   replace(main,
-    h("h1", {}, greeting()),
+    eagleSays(s.lessonsToday >= s.dailyGoal ? "cheer" : "wave", [h("b", {}, greeting()), homeLine({ streak: s.streak, lessonsToday: s.lessonsToday, dailyGoal: s.dailyGoal, dueCount: s.dueCount, inProgress: !!inProgress, allDone: !next })]),
     s.streak > 0 && !activeToday ? h("div", { class: "streak-warn mb" }, `🔥 ${s.streak} Tage Streak – heute noch nichts gelernt. Eine Lektion oder Trainer-Runde hält ihn am Leben.`) : null,
     h("div", { class: "stat-grid" },
       h("div", { class: "stat" }, h("b", {}, s.streak + " 🔥"), h("span", {}, "Tage Streak")),
@@ -210,8 +211,11 @@ async function renderPath(isCurrent = () => true) {
   if (!content.units.length) els.push(h("p", {}, "Keine Units gefunden."));
   for (const u of content.units) {
     const doneN = u.lessons.filter((l) => completed.has(l.id)).length;
-    els.push(h("div", { class: "unit-head" }, h("h2", { style: { margin: 0 } }, `Unit ${u.unit}: ${u.title}`), h("span", { class: "lvl" }, u.level)));
-    els.push(h("p", { class: "small muted", style: { margin: "0 0 8px" } }, `${doneN}/${u.lessons.length} Lektionen`));
+    const unitState = doneN === u.lessons.length ? "done" : u.lessons.some((l) => completed.has(l.id) || content.isUnlocked(l.id, completed)) ? "open" : "locked";
+    els.push(h("div", { class: "unit-head" }, unitBadge(u.unit, unitState, 48),
+      h("div", { class: "t" }, h("h2", { style: { margin: 0 } }, `Unit ${u.unit}: ${u.title}`),
+        h("div", { class: "small muted" }, `${doneN}/${u.lessons.length} Lektionen${unitState === "done" ? " · Abzeichen verdient" : ""}`)),
+      h("span", { class: "lvl" }, u.level)));
     const path = h("div", { class: "path" });
     u.lessons.forEach((l, i) => {
       const isDone = completed.has(l.id);

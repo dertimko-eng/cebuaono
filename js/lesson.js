@@ -1,5 +1,6 @@
 // Lektions-Player: Übungen der Reihe nach, Fehler kommen ans Ende, Fortschritt wird gespeichert.
 import { h, esc, shuffle, toast, confirmSheet, replace, copyText } from "./ui.js";
+import { eagle, confetti } from "./art.js";
 import { isAnswerAcceptable, normalizeAnswer } from "./answer.js";
 import { weightFor, isDue } from "./srs.js";
 import { db } from "./db.js";
@@ -154,7 +155,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
       next();
     };
     const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } },
-      h("h3", {}, title),
+      h("div", { class: "fb-head" }, eagle(!res.correct ? "sad" : res.near ? "think" : "cheer", 56), h("h3", {}, title)),
       (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null,
       res.note ? h("div", { class: "note" }, res.note) : null,
       explain.length ? h("div", { class: "mt" }, explain) : null,
@@ -197,6 +198,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
       const targets = [ex.answer.join(" "), ...(ex.accepted || [])];
       const n = normalizeAnswer(got);
       const ok = targets.some((t) => normalizeAnswer(t) === n);
+      if (!ok) answerBox.classList.add("bad");
       done({ correct: ok, near: false, expected: ex.answer.join(" ") });
     } }, "Prüfen");
     const reset = h("button", { class: "btn-ghost btn-small", onclick: () => { chosen.length = 0; render(); } }, "Zurücksetzen");
@@ -304,8 +306,12 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     const s = lesson.surprise;
     const nextLesson = content.lessons[lesson.index + 1] || null;
     const stats = store.progress.get(lessonId);
+    const unitLessons = content.lessons.filter((x) => x.unit === lesson.unit);
+    const unitDone = unitLessons.every((x) => store.progress.get(x.id)?.completed) && lesson.posInUnit === unitLessons.length;
     replace(main,
-      h("h1", { class: "center" }, acc >= 90 ? "Stark!" : acc >= 70 ? "Lektion geschafft!" : "Geschafft – dranbleiben!"),
+      h("div", { class: "mascot-center" }, eagle(acc >= 70 ? "cheer" : "wave", 150)),
+      h("h1", { class: "center", style: { marginTop: 0 } }, acc >= 90 ? "Stark!" : acc >= 70 ? "Lektion geschafft!" : "Geschafft – dranbleiben!"),
+      unitDone ? h("p", { class: "center" }, `🏅 Unit ${lesson.unit} komplett – Abzeichen verdient!`) : null,
       h("div", { class: "result-big" }, `${st.xp + 20} XP`),
       h("div", { class: "stat-grid" },
         h("div", { class: "stat" }, h("b", {}, acc + " %"), h("span", {}, stats && stats.attempts > 1 ? `Quote (beste ${stats.bestAccuracy} %)` : "Trefferquote")),
@@ -322,6 +328,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
       ),
     );
     main.scrollTop = 0;
+    if (acc >= 70) confetti(unitDone ? 140 : 70);
     document.dispatchEvent(new CustomEvent("lesson-complete", { detail: { lessonId } }));
   }
 

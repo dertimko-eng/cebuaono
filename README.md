@@ -21,6 +21,7 @@ js/                     App-Code (ES-Module, kein Build)
   store.js, db.js       Datenhaltung in IndexedDB
   dropbox.js, sync.js   Dropbox OAuth (PKCE) und Sync
   lexicon.js            Wort-Erkennung (auch vom Validator genutzt)
+  art.js                Adler-Maskottchen, Unit-Abzeichen, Konfetti (alles Inline-SVG)
   config.js             Dropbox-App-Key eintragen
 content/
   glossary.json         Zentrales Glossar (ein Wort = eine Übersetzung)
@@ -30,7 +31,7 @@ content/
 scripts/
   validate_content.mjs  Prüft alle Inhalte (Schema, bekannte Wörter, Wiederholung, Orthografie)
   serve.mjs             Lokaler Testserver
-  make_icons.mjs        Erzeugt die PNG-Icons
+  icons.html            Rendert die PNG-Icons aus dem Adler (Server mit --icons starten)
 CONTENT_SPEC.md         Verbindliches Inhaltsformat
 SPRACHLICH_PRUEFEN.md   Stellen, die eine Muttersprachlerin prüfen sollte
 scripts/AGENT_BRIEF.md  Arbeitsanweisung, mit der die Units geschrieben wurden (für Unit 13 wiederverwendbar)
@@ -152,6 +153,7 @@ Safari-Tab nutzen; der Code-Weg bleibt als sichere Variante.
   Typ, richtig/falsch, Dauer). Neue Auswertungen lassen sich später ergänzen, ohne Daten zu verlieren.
 - **Wochenrückblick**: beim ersten Öffnen an einem Montag, jederzeit unter Mehr → Wochenrückblick.
 - **Komfort**: „Weiß ich nicht“ zeigt die Lösung (zählt als Fehler), Enter/Leertaste geht nach dem Feedback weiter, bei Fehlern werden die beteiligten Wörter erklärt, am Lektionsende geht es direkt in die nächste Lektion. Wiederholte Lektionen lassen sich ohne Vokabel-Intro starten. Mehr → Grammatik sammelt alle Grammatik-Notizen, in der Wörterliste öffnet ein Tipp auf ein Wort Details und „Jetzt üben“. Einstellungen: große Schrift, „Nach Updates suchen“. Bei einer neuen Version erscheint oben ein Banner „Neu laden“ – die App lädt nie von selbst mitten in einer Lektion neu.
+- **Grafik**: Das Maskottchen ist ein Philippinenadler (passt zu beiden Ländern). Er begrüßt auf der Startseite mit einem Spruch je nach Lage, jubelt bei richtigen Antworten und am Lektionsende (mit Konfetti ab 70 %), tröstet bei Fehlern. Jede Unit hat ein Abzeichen auf dem Pfad, das nach Abschluss golden wird. Alles ist Inline-SVG ohne Bilddateien; wer Bewegung reduziert (iOS „Bewegung reduzieren“), bekommt keine Animationen. Icons neu rendern: `node scripts/serve.mjs 8765 --icons`, dann `http://localhost:8765/scripts/icons.html` öffnen.
 - **SRS-Details**: pro Wort höchstens ein Stufenaufstieg pro Tag (eine Lektion fragt ein Wort mehrfach), überschüssige Punkte bleiben für den nächsten Tag; bei Wörtern bis 3 Buchstaben (ko/ka, si/ni) gibt es keine Tippfehler-Toleranz.
 
 ## 8. Bekannte Einschränkungen
