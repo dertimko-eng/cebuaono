@@ -32,6 +32,8 @@ scripts/
   serve.mjs             Lokaler Testserver
   make_icons.mjs        Erzeugt die PNG-Icons
 CONTENT_SPEC.md         Verbindliches Inhaltsformat
+SPRACHLICH_PRUEFEN.md   Stellen, die eine Muttersprachlerin prüfen sollte
+scripts/AGENT_BRIEF.md  Arbeitsanweisung, mit der die Units geschrieben wurden (für Unit 13 wiederverwendbar)
 ```
 
 ## 1. Lokal starten
