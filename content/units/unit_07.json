@@ -1,0 +1,325 @@
+{
+  "unit": 7,
+  "title": "Arbeit & Schule – ich bin Lehrer",
+  "level": "A1",
+  "lessons": [
+    {
+      "id": "u07_l01",
+      "title": "In der Schule",
+      "vocab": [
+        {"ceb": "eskwelahan", "de": "Schule (Gebäude)"},
+        {"ceb": "estudyante", "de": "Schüler; Schülerin; Student"},
+        {"ceb": "klase", "de": "Klasse; Unterricht", "note": "Naa koy klase = Ich habe Unterricht"},
+        {"ceb": "tudlo", "de": "lehren; unterrichten; zeigen", "note": "Magtudlo ko ug biyolohiya = Ich unterrichte Biologie"},
+        {"ceb": "tuon", "de": "lernen (für die Schule); studieren", "note": "Magtuon ko ug Binisaya = Ich lerne Cebuano"},
+        {"ceb": "magtutudlo", "de": "Lehrer; Lehrerin (Cebuano-Wort)", "note": "gleichbedeutend mit maestro/maestra"},
+        {"ceb": "leksyon", "de": "Lektion; Unterrichtsstunde"},
+        {"ceb": "eksam", "de": "Prüfung; Klassenarbeit"},
+        {"ceb": "grado", "de": "Note; Klassenstufe"},
+        {"ceb": "kwaderno", "de": "Heft"}
+      ],
+      "grammar": {
+        "title": "Magtudlo ko sa eskwelahan",
+        "text": "Mit mag- sagst du, was du regelmäßig tust: Magtudlo ko sa eskwelahan = Ich unterrichte an der Schule, Magtuon ko ug Bisaya = Ich lerne Cebuano. Aus tudlo (lehren) wird durch Verdopplung magtutudlo, der Lehrer – das Cebuano-Wort für maestro, beides ist richtig. Sa steht vor dem Ort (sa eskwelahan), ug vor dem Fach oder der Sache (ug Bisaya). „Naa koy klase karon“ heißt „Ich habe heute Unterricht“ – koy ist ko + y, die Kurzform von ko ug."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Magtudlo ko sa eskwelahan.", "direction": "ceb_de", "options": ["Ich unterrichte an der Schule.", "Ich lerne in der Schule.", "Ich gehe zur Schule.", "Ich wohne neben der Schule."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Schüler", "direction": "de_ceb", "options": ["estudyante", "magtutudlo", "klase", "kwaderno"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "eskwelahan", "de": "Schule (Gebäude)"},
+          {"ceb": "estudyante", "de": "Schüler"},
+          {"ceb": "kwaderno", "de": "Heft"},
+          {"ceb": "eksam", "de": "Prüfung"},
+          {"ceb": "grado", "de": "Note"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ ko sa eskwelahan.", "translation": "Ich unterrichte an der Schule.", "options": ["Magtudlo", "Magtuon", "Mokaon"], "answer": 0},
+        {"type": "true_false", "statement": "Magtutudlo ko.", "translation": "Ich bin Lehrer.", "answer": true},
+        {"type": "word_bank", "prompt": "Ich habe heute Unterricht.", "tokens": ["Naa", "koy", "klase", "karon", "eksam", "ugma"], "answer": ["Naa", "koy", "klase", "karon"]},
+        {"type": "type_answer", "prompt": "Lehrer (das Cebuano-Wort)", "answer": "Magtutudlo", "accepted": ["Maestro"]},
+        {"type": "multiple_choice", "prompt": "Naa koy eksam ugma.", "direction": "ceb_de", "options": ["Ich habe morgen eine Prüfung.", "Ich habe heute Unterricht.", "Ich habe ein neues Heft.", "Ich habe eine gute Note."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Magtuon ko ug ___ karong gabii.", "translation": "Ich lerne heute Abend Cebuano.", "options": ["Bisaya", "kwaderno", "grado"], "answer": 0},
+        {"type": "word_bank", "prompt": "Die Schüler lernen in der Schule.", "tokens": ["Magtuon", "ang", "mga", "estudyante", "sa", "eskwelahan", "magtudlo", "kwaderno"], "answer": ["Magtuon", "ang", "mga", "estudyante", "sa", "eskwelahan"]},
+        {"type": "true_false", "statement": "Daghan ang estudyante sa akong klase.", "translation": "Mein Heft ist groß.", "answer": false, "correction": "In meiner Klasse sind viele Schüler."},
+        {"type": "type_answer", "prompt": "Ich unterrichte an der Schule.", "answer": "Magtudlo ko sa eskwelahan"},
+        {"type": "multiple_choice", "prompt": "Lektion", "direction": "de_ceb", "options": ["leksyon", "eksam", "grado", "klase"], "answer": 0},
+        {"type": "grammar_note", "title": "maestro oder magtutudlo?", "text": "Beides heißt Lehrer. Maestro/maestra kommt aus dem Spanischen und hört man im Alltag ständig. Magtutudlo ist das Cebuano-Wort aus tudlo (lehren) – die Verdopplung tu-tudlo macht aus dem Verb die Person, die es tut. Genauso: magluluto = der Koch."},
+        {"type": "true_false", "statement": "Maayo ang grado ni Inday.", "translation": "Indays Note ist gut.", "answer": true},
+        {"type": "word_bank", "prompt": "Das ist mein neues Heft.", "tokens": ["Mao", "ni", "akong", "bag-ong", "kwaderno", "eksam", "leksyon"], "answer": ["Mao", "ni", "akong", "bag-ong", "kwaderno"]},
+        {"type": "multiple_choice", "prompt": "Lisod ang leksyon karon.", "direction": "ceb_de", "options": ["Die Lektion heute ist schwer.", "Die Prüfung heute ist leicht.", "Die Lektion ist morgen.", "Der Unterricht ist heute lang."], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "tudlo", "de": "lehren; unterrichten"},
+          {"ceb": "tuon", "de": "lernen (für die Schule)"},
+          {"ceb": "klase", "de": "Klasse; Unterricht"},
+          {"ceb": "leksyon", "de": "Lektion"},
+          {"ceb": "magtutudlo", "de": "Lehrer (Cebuano-Wort)"}
+        ]}
+      ],
+      "surprise": {"ceb": "Magtutudlo ko, pero ikaw ang akong magtutudlo sa Bisaya.", "de": "Ich bin Lehrer, aber du bist meine Lehrerin für Cebuano.", "when": "Wenn sie dir wieder ein Wort korrigiert hat – mit einem Lächeln."}
+    },
+    {
+      "id": "u07_l02",
+      "title": "Biologie & Chemie",
+      "vocab": [
+        {"ceb": "biyolohiya", "de": "Biologie"},
+        {"ceb": "kimika", "de": "Chemie", "note": "in der Schule meist einfach Chemistry"},
+        {"ceb": "siyensya", "de": "Naturwissenschaft"},
+        {"ceb": "matematika", "de": "Mathe"},
+        {"ceb": "eksperimento", "de": "Experiment"},
+        {"ceb": "laboratoryo", "de": "Labor"},
+        {"ceb": "hayop", "de": "Tier"},
+        {"ceb": "tubo", "de": "wachsen", "note": "Motubo ang tanom = Die Pflanze wächst"},
+        {"ceb": "kinabuhi", "de": "Leben", "note": "von buhi = lebendig"},
+        {"ceb": "buhi", "de": "lebendig; leben"}
+      ],
+      "grammar": {
+        "title": "Motubo ang tanom – Buhi ang hayop",
+        "text": "Mo- beschreibt, was von sich aus passiert oder passieren wird: Motubo ang tanom = Die Pflanze wächst. Eigenschaftswörter stehen vorne, das Subjekt mit ang dahinter: Buhi ang hayop = Das Tier lebt. Ug hat zwei Jobs im selben Satz: Magtudlo ko ug biyolohiya ug kimika = Ich unterrichte Biologie und Chemie – das erste ug markiert das Objekt, das zweite heißt „und“. Für Schulfächer nimmt man die spanisch-englischen Wörter, deine Schüler würden auch einfach Chemistry sagen."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Magtudlo ko ug biyolohiya ug kimika.", "direction": "ceb_de", "options": ["Ich unterrichte Biologie und Chemie.", "Ich lerne Biologie und Mathe.", "Ich unterrichte Chemie und Mathe.", "Ich mag Biologie und Chemie."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Labor", "direction": "de_ceb", "options": ["laboratoryo", "eksperimento", "eskwelahan", "talyer"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "biyolohiya", "de": "Biologie"},
+          {"ceb": "kimika", "de": "Chemie"},
+          {"ceb": "matematika", "de": "Mathe"},
+          {"ceb": "hayop", "de": "Tier"},
+          {"ceb": "kinabuhi", "de": "Leben"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ ang tanom sa hardin.", "translation": "Die Pflanze im Garten wächst.", "options": ["Motubo", "Mokaon", "Motulog"], "answer": 0},
+        {"type": "true_false", "statement": "Buhi ang hayop.", "translation": "Das Tier lebt.", "answer": true},
+        {"type": "word_bank", "prompt": "Wir (ohne dich) machen ein Experiment im Labor.", "tokens": ["Maghimo", "mi", "ug", "eksperimento", "sa", "laboratoryo", "kusina", "hayop"], "answer": ["Maghimo", "mi", "ug", "eksperimento", "sa", "laboratoryo"]},
+        {"type": "type_answer", "prompt": "Biologie", "answer": "Biyolohiya"},
+        {"type": "multiple_choice", "prompt": "Lisod ang kimika para sa mga estudyante.", "direction": "ceb_de", "options": ["Chemie ist schwer für die Schüler.", "Mathe ist leicht für die Schüler.", "Chemie ist wichtig für die Lehrer.", "Die Schüler mögen Chemie."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Biyolohiya ang siyensya sa ___.", "translation": "Biologie ist die Wissenschaft vom Leben.", "options": ["kinabuhi", "kwaderno", "kwarta"], "answer": 0},
+        {"type": "word_bank", "prompt": "Die Pflanze wächst.", "tokens": ["Motubo", "ang", "tanom", "hayop", "buhi"], "answer": ["Motubo", "ang", "tanom"]},
+        {"type": "true_false", "statement": "Gusto ko ug matematika.", "translation": "Ich mag Chemie.", "answer": false, "correction": "Ich mag Mathe."},
+        {"type": "type_answer", "prompt": "Das Tier lebt.", "answer": "Buhi ang hayop"},
+        {"type": "multiple_choice", "prompt": "Naturwissenschaft", "direction": "de_ceb", "options": ["siyensya", "siyam", "semana", "sibuyas"], "answer": 0},
+        {"type": "grammar_note", "title": "ug … ug", "text": "In Magtudlo ko ug biyolohiya ug kimika steckt ug zweimal. Das erste ug markiert das Objekt (was ich unterrichte), das zweite ist einfach „und“. Beim Hören hilft der Zusammenhang – und niemals og schreiben."},
+        {"type": "word_bank", "prompt": "Die Schüler lernen Biologie im Labor.", "tokens": ["Magtuon", "ang", "mga", "estudyante", "ug", "biyolohiya", "sa", "laboratoryo", "kimika", "eskwelahan"], "answer": ["Magtuon", "ang", "mga", "estudyante", "ug", "biyolohiya", "sa", "laboratoryo"]},
+        {"type": "multiple_choice", "prompt": "Daghan ang hayop sa Cebu.", "direction": "ceb_de", "options": ["Auf Cebu gibt es viele Tiere.", "Auf Cebu gibt es viele Pflanzen.", "Die Tiere auf Cebu sind groß.", "Auf Cebu gibt es wenige Tiere."], "answer": 0},
+        {"type": "true_false", "statement": "Nindot ang eksperimento karon.", "translation": "Das Experiment heute war toll.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "siyensya", "de": "Naturwissenschaft"},
+          {"ceb": "eksperimento", "de": "Experiment"},
+          {"ceb": "laboratoryo", "de": "Labor"},
+          {"ceb": "tubo", "de": "wachsen"},
+          {"ceb": "buhi", "de": "lebendig"}
+        ]}
+      ],
+      "surprise": {"ceb": "Ikaw ang akong kinabuhi, Langga.", "de": "Du bist mein Leben, Schatz.", "when": "Einfach so, wenn ihr zusammen in der Küche steht."}
+    },
+    {
+      "id": "u07_l03",
+      "title": "Verstehen & wissen",
+      "vocab": [
+        {"ceb": "sabot", "de": "verstehen", "note": "Nakasabot ka? = Verstehst du? Wala ko kasabot = Ich verstehe nicht"},
+        {"ceb": "kahibalo", "de": "wissen; können", "note": "Kahibalo ko = Ich weiß. Wala ko kahibalo = Ich weiß nicht. Kahibalo ka moluto? = Kannst du kochen?"},
+        {"ceb": "hinumdom", "de": "sich erinnern", "note": "Nahinumdom ka? = Erinnerst du dich?"},
+        {"ceb": "kalimot", "de": "vergessen", "note": "Nakalimot ko = Ich habe es vergessen"},
+        {"ceb": "pangutana", "de": "Frage; fragen", "note": "Naa koy pangutana = Ich habe eine Frage"},
+        {"ceb": "tubag", "de": "Antwort; antworten"},
+        {"ceb": "kat-on", "de": "erlernen; lernen (können)", "note": "Makakat-on ko = Ich kann es lernen"},
+        {"ceb": "pasabot", "de": "Bedeutung", "note": "Unsay pasabot sa …? = Was bedeutet …?"},
+        {"ceb": "ingon", "de": "sagen (etwas); so (wie)", "note": "Unsaon pag-ingon ug Danke sa Binisaya? = Wie sagt man Danke auf Cebuano? Ingon ani = so (wie das hier)"},
+        {"ceb": "sulti", "de": "sprechen; reden", "note": "Mosulti ko ug Binisaya = Ich spreche Cebuano. Isulti = sag es"}
+      ],
+      "grammar": {
+        "title": "naka-/maka- und kahibalo",
+        "text": "Naka- heißt „geschafft haben, können“ und maka- „können (werden)“: „Nakasabot ka?“ = Verstehst du?, „Makakat-on ko ug Bisaya“ = Ich kann Cebuano lernen. Nach wala fällt na- weg: „Wala ko kasabot“ = Ich verstehe nicht. Kahibalo braucht kein Präfix: Kahibalo ko = Ich weiß, Wala ko kahibalo = Ich weiß nicht, „Kahibalo ka moluto?“ = Kannst du kochen? Nga verbindet Sätze als „dass“: Kahibalo ko nga gwapa ka = Ich weiß, dass du hübsch bist. Nach der Bedeutung fragst du mit „Unsa ang pasabot sa kwaderno?“ = Was bedeutet kwaderno?"
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Nakasabot ka?", "direction": "ceb_de", "options": ["Verstehst du?", "Weißt du es?", "Erinnerst du dich?", "Hast du es vergessen?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich verstehe nicht.", "tokens": ["Wala", "ko", "kasabot", "kahibalo", "dili"], "answer": ["Wala", "ko", "kasabot"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "sabot", "de": "verstehen"},
+          {"ceb": "kahibalo", "de": "wissen; können"},
+          {"ceb": "hinumdom", "de": "sich erinnern"},
+          {"ceb": "kalimot", "de": "vergessen"},
+          {"ceb": "pangutana", "de": "Frage; fragen"}
+        ]},
+        {"type": "fill_blank", "prompt": "Wala ko ___.", "translation": "Ich weiß es nicht.", "options": ["kahibalo", "kasabot", "nakalimot"], "answer": 0},
+        {"type": "true_false", "statement": "Nakalimot ko sa imong ngalan.", "translation": "Ich habe deinen Namen vergessen.", "answer": true},
+        {"type": "type_answer", "prompt": "Ich weiß.", "answer": "Kahibalo ko"},
+        {"type": "multiple_choice", "prompt": "Was bedeutet kwaderno?", "direction": "de_ceb", "options": ["Unsa ang pasabot sa kwaderno?", "Unsa ang tubag sa kwaderno?", "Kinsa ang kwaderno?", "Asa ang kwaderno?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich kann Cebuano lernen.", "tokens": ["Makakat-on", "ko", "ug", "Bisaya", "Nakalimot", "kahibalo"], "answer": ["Makakat-on", "ko", "ug", "Bisaya"]},
+        {"type": "fill_blank", "prompt": "Naa koy ___, Mama.", "translation": "Ich habe eine Frage, Mama.", "options": ["pangutana", "tubag", "pasabot"], "answer": 0},
+        {"type": "true_false", "statement": "Kahibalo ka moluto ug adobo?", "translation": "Kannst du Adobo kochen?", "answer": true},
+        {"type": "multiple_choice", "prompt": "Nahinumdom ka sa Boracay?", "direction": "ceb_de", "options": ["Erinnerst du dich an Boracay?", "Vermisst du Boracay?", "Hast du Boracay vergessen?", "Kennst du Boracay?"], "answer": 0},
+        {"type": "type_answer", "prompt": "Verstehst du?", "answer": "Nakasabot ka?"},
+        {"type": "word_bank", "prompt": "Sag es auf Cebuano.", "tokens": ["Isulti", "sa", "Bisaya", "tubag", "kalimot"], "answer": ["Isulti", "sa", "Bisaya"]},
+        {"type": "grammar_note", "title": "naka- oder maka-?", "text": "Naka- blickt zurück: Es hat geklappt. Nakasabot ko = Ich habe verstanden, Nakalimot ko = Ich habe es vergessen. Maka- blickt nach vorn: Es wird klappen, ich kann es. Makakat-on ko = Ich kann es lernen, Makasabot ka = Du wirst es verstehen. Nach wala bleibt nur ka-: Wala ko kasabot."},
+        {"type": "multiple_choice", "prompt": "Unsa ang tubag?", "direction": "ceb_de", "options": ["Was ist die Antwort?", "Was ist die Frage?", "Was bedeutet das?", "Was sagst du?"], "answer": 0},
+        {"type": "fill_blank", "prompt": "Miingon si Mama ___ lami ang adobo.", "translation": "Mama hat gesagt, dass das Adobo lecker ist.", "options": ["nga", "ug", "kay"], "answer": 0},
+        {"type": "true_false", "statement": "Kahibalo ko nga gwapa ka.", "translation": "Ich weiß, dass du hübsch bist.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "tubag", "de": "Antwort"},
+          {"ceb": "kat-on", "de": "erlernen"},
+          {"ceb": "pasabot", "de": "Bedeutung"},
+          {"ceb": "ingon", "de": "sagen (etwas)"},
+          {"ceb": "sulti", "de": "sprechen; reden"}
+        ]}
+      ],
+      "surprise": {"ceb": "Kahibalo ko nga swerte ko nimo.", "de": "Ich weiß, dass ich Glück mit dir habe.", "when": "Nach einem kleinen Streit – oder einfach abends, wenn es still ist."}
+    },
+    {
+      "id": "u07_l04",
+      "title": "Arbeit & Apotheke",
+      "vocab": [
+        {"ceb": "opisina", "de": "Büro"},
+        {"ceb": "botika", "de": "Apotheke"},
+        {"ceb": "nars", "de": "Krankenpfleger; Krankenschwester"},
+        {"ceb": "sweldo", "de": "Gehalt; Lohn"},
+        {"ceb": "trabahante", "de": "Arbeiter; Angestellter"},
+        {"ceb": "sugod", "de": "anfangen; beginnen", "note": "Magsugod ang klase alas otso = Der Unterricht beginnt um 8"},
+        {"ceb": "undang", "de": "aufhören", "note": "Undang na! = Hör auf!"},
+        {"ceb": "miting", "de": "Besprechung; Konferenz"},
+        {"ceb": "kugihan", "de": "fleißig", "note": "von kugi = Fleiß"},
+        {"ceb": "tapulan", "de": "faul", "note": "von tapol = Faulheit"}
+      ],
+      "grammar": {
+        "title": "Nagtrabaho ko sa botika",
+        "text": "Nag- ist deine Form für „habe … gearbeitet / arbeite gerade“: Nagtrabaho ko sa botika = Ich habe in einer Apotheke gearbeitet. Mag- und mo- sind dagegen Zukunft oder Gewohnheit: Magsugod ang klase alas otso = Der Unterricht beginnt um 8, Moundang ko alas singko = Ich höre um 5 auf. Als Befehl reicht die Wurzel: „Undang na!“ = Hör auf! Kugihan (fleißig) und tapulan (faul) stehen wie alle Eigenschaften vorne: Kugihan kaayo si Inday."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Nagtrabaho ko sa botika.", "direction": "ceb_de", "options": ["Ich habe in einer Apotheke gearbeitet.", "Ich arbeite im Büro.", "Ich gehe zur Apotheke.", "Ich habe im Krankenhaus gearbeitet."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Krankenschwester", "direction": "de_ceb", "options": ["nars", "doktor", "trabahante", "magtutudlo"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "opisina", "de": "Büro"},
+          {"ceb": "botika", "de": "Apotheke"},
+          {"ceb": "sweldo", "de": "Gehalt"},
+          {"ceb": "miting", "de": "Besprechung"},
+          {"ceb": "trabahante", "de": "Arbeiter"}
+        ]},
+        {"type": "fill_blank", "prompt": "Magsugod ang klase alas ___.", "translation": "Der Unterricht beginnt um 8 Uhr.", "options": ["otso", "dos", "dose"], "answer": 0},
+        {"type": "true_false", "statement": "Kugihan kaayo si Inday.", "translation": "Inday ist sehr faul.", "answer": false, "correction": "Inday ist sehr fleißig."},
+        {"type": "word_bank", "prompt": "Ich habe heute Nachmittag eine Besprechung.", "tokens": ["Naa", "koy", "miting", "karong", "hapon", "sweldo", "buntag"], "answer": ["Naa", "koy", "miting", "karong", "hapon"]},
+        {"type": "type_answer", "prompt": "Apotheke", "answer": "Botika"},
+        {"type": "multiple_choice", "prompt": "Undang na, Inday!", "direction": "ceb_de", "options": ["Hör auf, Inday!", "Fang an, Inday!", "Komm her, Inday!", "Setz dich, Inday!"], "answer": 0},
+        {"type": "fill_blank", "prompt": "Gamay ang ___ sa nars.", "translation": "Das Gehalt der Krankenschwester ist klein.", "options": ["sweldo", "miting", "opisina"], "answer": 0},
+        {"type": "word_bank", "prompt": "Die Schüler sind heute faul.", "tokens": ["Tapulan", "ang", "mga", "estudyante", "karon", "kugihan", "nars"], "answer": ["Tapulan", "ang", "mga", "estudyante", "karon"]},
+        {"type": "true_false", "statement": "Naa ang magtutudlo sa opisina.", "translation": "Der Lehrer ist im Büro.", "answer": true},
+        {"type": "type_answer", "prompt": "Ich habe in einer Apotheke gearbeitet.", "answer": "Nagtrabaho ko sa botika"},
+        {"type": "multiple_choice", "prompt": "anfangen", "direction": "de_ceb", "options": ["sugod", "undang", "tudlo", "tuon"], "answer": 0},
+        {"type": "grammar_note", "title": "nag- als fester Baustein", "text": "Nagtrabaho ko = Ich habe gearbeitet / Ich arbeite (gerade). Nag- steht für etwas, das schon läuft oder gelaufen ist. Die genauen Zeitformen kommen in Unit 8 – merk dir jetzt einfach den Baustein nagtrabaho ko sa botika als ein Stück."},
+        {"type": "multiple_choice", "prompt": "Moundang ko sa trabaho alas singko.", "direction": "ceb_de", "options": ["Ich höre um 5 Uhr mit der Arbeit auf.", "Ich fange um 5 Uhr mit der Arbeit an.", "Ich arbeite bis 6 Uhr.", "Ich gehe um 5 Uhr ins Büro."], "answer": 0},
+        {"type": "word_bank", "prompt": "Lass uns jetzt anfangen.", "tokens": ["Magsugod", "na", "ta", "karon", "undang", "mi"], "answer": ["Magsugod", "na", "ta", "karon"], "accepted": ["Magsugod ta karon", "Magsugod na ta"]},
+        {"type": "true_false", "statement": "Daghan ang trabahante sa ospital.", "translation": "Im Krankenhaus gibt es viele Angestellte.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "nars", "de": "Krankenpfleger"},
+          {"ceb": "sugod", "de": "anfangen"},
+          {"ceb": "undang", "de": "aufhören"},
+          {"ceb": "kugihan", "de": "fleißig"},
+          {"ceb": "tapulan", "de": "faul"}
+        ]}
+      ],
+      "surprise": {"ceb": "Kugihan kaayo ka. Pahulay na, palihug.", "de": "Du bist so fleißig. Ruh dich jetzt bitte aus.", "when": "Wenn sie abends noch aufräumt, obwohl sie längst müde ist."}
+    },
+    {
+      "id": "u07_l05",
+      "title": "Im Klassenzimmer",
+      "vocab": [
+        {"ceb": "papel", "de": "Papier"},
+        {"ceb": "lapis", "de": "Bleistift"},
+        {"ceb": "bolpen", "de": "Kugelschreiber"},
+        {"ceb": "pisara", "de": "Tafel"},
+        {"ceb": "lingkod", "de": "sitzen; sich setzen", "note": "Lingkod! = Setz dich!"},
+        {"ceb": "tindog", "de": "stehen; aufstehen", "note": "Tindog! = Steh auf!"},
+        {"ceb": "paminaw", "de": "zuhören; hören", "note": "Paminaw! = Hör zu!"},
+        {"ceb": "pwede", "de": "kann; darf; möglich", "note": "Pwede ba? = Darf ich? Pwede ko moadto sa banyo? = Darf ich zur Toilette?"},
+        {"ceb": "kinahanglan", "de": "müssen; brauchen", "note": "Kinahanglan ko ug tubig = Ich brauche Wasser. Kinahanglan ko motrabaho = Ich muss arbeiten"},
+        {"ceb": "ba", "de": "(Fragepartikel)", "note": "macht aus einer Aussage eine Ja/Nein-Frage: Maestro ka ba? = Bist du Lehrer?"}
+      ],
+      "grammar": {
+        "title": "Maestro ka ba? – pwede, kinahanglan",
+        "text": "Ba macht aus einer Aussage eine Ja/Nein-Frage und steht nach dem ersten Satzglied: „Maestro ka ba?“ = Bist du Lehrer?, „Pwede ba ko moadto sa banyo?“ = Darf ich zur Toilette? Kinahanglan heißt „brauchen“ mit ug (Kinahanglan ko ug papel = Ich brauche Papier) und „müssen“ mit Verb (Kinahanglan ko motrabaho = Ich muss arbeiten). Befehle im Klassenzimmer sind nur die Wurzel: „Lingkod!“ (Setz dich), „Tindog!“ (Steh auf), „Paminaw!“ (Hör zu). Mit „Naa ba kay lapis?“ fragst du „Hast du einen Bleistift?“ – kay ist hier ka + y, so wie koy."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Maestro ka ba?", "direction": "ceb_de", "options": ["Bist du Lehrer?", "Bin ich Lehrer?", "Ist er Lehrer?", "Du bist Lehrer."], "answer": 0},
+        {"type": "word_bank", "prompt": "Darf ich zur Toilette?", "tokens": ["Pwede", "ba", "ko", "moadto", "sa", "banyo", "kinahanglan", "lingkod"], "answer": ["Pwede", "ba", "ko", "moadto", "sa", "banyo"], "accepted": ["Pwede ko moadto sa banyo"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "papel", "de": "Papier"},
+          {"ceb": "lapis", "de": "Bleistift"},
+          {"ceb": "bolpen", "de": "Kugelschreiber"},
+          {"ceb": "pisara", "de": "Tafel"},
+          {"ceb": "paminaw", "de": "zuhören"}
+        ]},
+        {"type": "fill_blank", "prompt": "Kinahanglan ko ___ papel.", "translation": "Ich brauche Papier.", "options": ["ug", "sa", "nga"], "answer": 0},
+        {"type": "true_false", "statement": "Lingkod, Inday!", "translation": "Steh auf, Inday!", "answer": false, "correction": "Setz dich, Inday!"},
+        {"type": "type_answer", "prompt": "Hör zu!", "answer": "Paminaw!"},
+        {"type": "multiple_choice", "prompt": "Hast du einen Bleistift?", "direction": "de_ceb", "options": ["Naa ba kay lapis?", "Naa ba kay bolpen?", "Kinahanglan ka ug lapis?", "Asa ang lapis?"], "answer": 0},
+        {"type": "fill_blank", "prompt": "Pwede ___ ko mogamit sa imong bolpen?", "translation": "Darf ich deinen Kugelschreiber benutzen?", "options": ["ba", "nga", "na"], "answer": 0},
+        {"type": "word_bank", "prompt": "Bist du Schülerin?", "tokens": ["Estudyante", "ka", "ba", "ko", "siya"], "answer": ["Estudyante", "ka", "ba"]},
+        {"type": "true_false", "statement": "Kinahanglan ko motrabaho ugma.", "translation": "Ich muss morgen arbeiten.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Pwede ko mosulat sa pisara?", "direction": "ceb_de", "options": ["Darf ich an die Tafel schreiben?", "Darf ich auf das Papier schreiben?", "Kann ich die Tafel lesen?", "Muss ich an die Tafel?"], "answer": 0},
+        {"type": "type_answer", "prompt": "Bist du Lehrer?", "answer": "Maestro ka ba?", "accepted": ["Magtutudlo ka ba?", "Maestro ka?"]},
+        {"type": "multiple_choice", "prompt": "Tafel", "direction": "de_ceb", "options": ["pisara", "papel", "lamesa", "pultahan"], "answer": 0},
+        {"type": "grammar_note", "title": "Wo steht ba?", "text": "Ba steht nie am Anfang, sondern nach dem ersten Satzglied – oft nach dem Pronomen: Maestro ka ba? Pwede ba ko? Gusto ka ba ug kape? Ohne ba geht die Frage auch, nur mit der Stimme nach oben: Maestro ka? Mit ba klingt es deutlicher und höflicher."},
+        {"type": "word_bank", "prompt": "Setz dich und hör zu, Inday.", "tokens": ["Lingkod", "ug", "paminaw", "Inday", "tindog", "pwede"], "answer": ["Lingkod", "ug", "paminaw", "Inday"]},
+        {"type": "true_false", "statement": "Pwede ba ko mokaon dinhi?", "translation": "Darf ich hier essen?", "answer": true},
+        {"type": "true_false", "statement": "Gusto ka ba ug kape?", "translation": "Möchtest du Kaffee?", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "lingkod", "de": "sitzen; sich setzen"},
+          {"ceb": "tindog", "de": "stehen; aufstehen"},
+          {"ceb": "pwede", "de": "kann; darf"},
+          {"ceb": "kinahanglan", "de": "müssen; brauchen"},
+          {"ceb": "ba", "de": "(Fragepartikel)"}
+        ]}
+      ],
+      "surprise": {"ceb": "Pwede ba ko mohalok nimo?", "de": "Darf ich dich küssen?", "when": "Wenn sie am Herd steht und gerade nicht damit rechnet."}
+    },
+    {
+      "id": "u07_l06",
+      "title": "Früher und heute",
+      "vocab": [
+        {"ceb": "kaniadto", "de": "früher; damals", "note": "Kaniadto nagtrabaho ko sa botika = Früher habe ich in einer Apotheke gearbeitet"},
+        {"ceb": "una", "de": "zuerst; erste; erster", "note": "sa una = früher/zuerst; unang adlaw = erster Tag"},
+        {"ceb": "sunod", "de": "nächste; nächster; folgen", "note": "sunod semana = nächste Woche; Sunda ko = Folge mir"},
+        {"ceb": "lain", "de": "andere; anders", "note": "lain nga adlaw = ein anderer Tag; lain ang pamati = fühlt sich komisch an"},
+        {"ceb": "pareho", "de": "gleich; genauso", "note": "Pareho ta = Wir sind gleich / geht mir genauso"},
+        {"ceb": "tanan", "de": "alle; alles", "note": "Salamat sa tanan = Danke für alles"},
+        {"ceb": "bisan", "de": "sogar; obwohl; egal", "note": "bisan unsa = egal was; bisan kanus-a = jederzeit; bisan asa = überall"},
+        {"ceb": "importante", "de": "wichtig"},
+        {"ceb": "pasar", "de": "bestehen (Prüfung)", "note": "Nakapasar ko sa eksam = Ich habe die Prüfung bestanden"},
+        {"ceb": "hagbong", "de": "durchfallen (Prüfung)"}
+      ],
+      "grammar": {
+        "title": "Kaniadto … karon …",
+        "text": "Kaniadto heißt „früher“ und steht meist am Satzanfang, mit nag- für das, was damals war: Kaniadto nagtrabaho ko sa botika, karon magtutudlo ko = Früher habe ich in einer Apotheke gearbeitet, jetzt bin ich Lehrer. Sunod steht vor Zeitwörtern: sunod semana = nächste Woche, sunod bulan = nächsten Monat. Bisan heißt „obwohl“ (Bisan kapoy ko, magluto ko) und mit Fragewort „egal“: bisan unsa = egal was, bisan asa = egal wo. Nakapasar ko sa eksam = Ich habe die Prüfung bestanden, nahagbong = durchgefallen – beides mit naka-/na- als „geschafft / passiert“."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Kaniadto nagtrabaho ko sa botika, karon magtutudlo ko.", "direction": "ceb_de", "options": ["Früher habe ich in einer Apotheke gearbeitet, jetzt bin ich Lehrer.", "Früher war ich Lehrer, jetzt arbeite ich in einer Apotheke.", "Ich arbeite in einer Apotheke und bin Lehrer.", "Morgen arbeite ich in der Apotheke, heute bin ich Lehrer."], "answer": 0},
+        {"type": "word_bank", "prompt": "Nächste Woche gibt es eine Prüfung.", "tokens": ["Sunod", "semana", "naay", "eksam", "kaniadto", "una"], "answer": ["Sunod", "semana", "naay", "eksam"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "kaniadto", "de": "früher; damals"},
+          {"ceb": "una", "de": "zuerst; erste"},
+          {"ceb": "sunod", "de": "nächste; nächster"},
+          {"ceb": "lain", "de": "andere; anders"},
+          {"ceb": "pareho", "de": "gleich; genauso"}
+        ]},
+        {"type": "fill_blank", "prompt": "Nakapasar ang ___ estudyante sa eksam.", "translation": "Alle Schüler haben die Prüfung bestanden.", "options": ["tanang", "laing", "unang"], "answer": 0},
+        {"type": "true_false", "statement": "Nahagbong si Inday sa eksam.", "translation": "Inday hat die Prüfung bestanden.", "answer": false, "correction": "Inday ist durch die Prüfung gefallen."},
+        {"type": "type_answer", "prompt": "wichtig", "answer": "importante"},
+        {"type": "multiple_choice", "prompt": "egal was", "direction": "de_ceb", "options": ["bisan unsa", "bisan kinsa", "bisan asa", "bisan karon"], "answer": 0},
+        {"type": "word_bank", "prompt": "Zuerst kochen wir, dann essen wir.", "tokens": ["Una", "magluto", "ta", "dayon", "mokaon", "ta", "sunod", "kaniadto"], "answer": ["Una", "magluto", "ta", "dayon", "mokaon", "ta"]},
+        {"type": "fill_blank", "prompt": "Importante kaayo ang ___ para nako.", "translation": "Die Familie ist sehr wichtig für mich.", "options": ["pamilya", "pisara", "papel"], "answer": 0},
+        {"type": "true_false", "statement": "Lain ang panahon sa Sauerland.", "translation": "Das Wetter im Sauerland ist anders.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Pareho ta, Mama.", "direction": "ceb_de", "options": ["Geht mir genauso, Mama.", "Wir sind anders, Mama.", "Zuerst wir, Mama.", "Alle wir, Mama."], "answer": 0},
+        {"type": "type_answer", "prompt": "Ich habe die Prüfung bestanden.", "answer": "Nakapasar ko sa eksam"},
+        {"type": "multiple_choice", "prompt": "Bisan kapoy ko, magluto ko karong gabii.", "direction": "ceb_de", "options": ["Obwohl ich müde bin, koche ich heute Abend.", "Weil ich müde bin, koche ich heute Abend nicht.", "Ich bin müde, also esse ich heute Abend.", "Egal was, ich schlafe heute Abend."], "answer": 0},
+        {"type": "grammar_note", "title": "Früher nag-, jetzt mag-/mo-", "text": "Für das, was früher war, nimmst du nag- (nagtrabaho, nagpuyo, nagtuon). Für das, was jetzt regelmäßig ist, mag- oder mo- (magtudlo, moadto). Kaniadto nagpuyo ko sa Sauerland, karon nagpuyo ko sa Sauerland gihapon – naja, manches bleibt gleich. Pareho ra!"},
+        {"type": "word_bank", "prompt": "Danke für alles, Mama.", "tokens": ["Salamat", "sa", "tanan", "Mama", "lain", "pareho"], "answer": ["Salamat", "sa", "tanan", "Mama"]},
+        {"type": "true_false", "statement": "Sunod bulan moadto ta sa Cebu.", "translation": "Nächsten Monat fahren wir nach Cebu.", "answer": true},
+        {"type": "fill_blank", "prompt": "Kaniadto estudyante ko, ___ magtutudlo na ko.", "translation": "Früher war ich Schüler, jetzt bin ich Lehrer.", "options": ["karon", "ugma", "gahapon"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "tanan", "de": "alle; alles"},
+          {"ceb": "bisan", "de": "sogar; obwohl; egal"},
+          {"ceb": "importante", "de": "wichtig"},
+          {"ceb": "pasar", "de": "bestehen (Prüfung)"},
+          {"ceb": "hagbong", "de": "durchfallen (Prüfung)"}
+        ]}
+      ],
+      "surprise": {"ceb": "Bisan asa ko moadto, ikaw ang akong balay.", "de": "Egal wohin ich gehe, du bist mein Zuhause.", "when": "Beim Kofferpacken vor der nächsten Reise – oder wenn du von einer Fortbildung zurückkommst."}
+    }
+  ]
+}
