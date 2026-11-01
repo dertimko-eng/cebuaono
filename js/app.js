@@ -39,11 +39,14 @@ async function boot() {
         w && w.addEventListener("statechange", () => { if (w.state === "installed" && navigator.serviceWorker.controller) showUpdateBanner(); });
       });
     }).catch((e) => console.warn("SW", e));
-    navigator.serviceWorker.addEventListener("controllerchange", () => { if (!window.__reloading) { window.__reloading = true; location.reload(); } });
+    // Nur neu laden, wenn vorher schon ein Service Worker aktiv war (= echtes Update, vom Nutzer per Banner ausgelöst)
+    const hadController = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController && !window.__reloading) { window.__reloading = true; location.reload(); } });
   }
-  if (localStorage.getItem("bigText") === "1") document.body.classList.add("big-text");
-  window.addEventListener("online", () => render());
-  window.addEventListener("offline", () => render());
+  try { if (localStorage.getItem("bigText") === "1") document.body.classList.add("big-text"); } catch (_) {}
+  const softRender = () => { const r = (location.hash || "#home").slice(1).split("/")[0]; if (!["lesson", "trainer"].includes(r)) render(); };
+  window.addEventListener("online", softRender);
+  window.addEventListener("offline", softRender);
   try {
     content = await loadContent();
   } catch (e) {
@@ -58,7 +61,7 @@ async function boot() {
     if (await dropbox.handleRedirect()) {
       toast("Mit Dropbox verbunden.");
       location.hash = "#settings";
-      sync.run("connect").then(() => render());
+      sync.run("connect").then(() => softRender());
     }
   } catch (e) {
     toast(e.message, 5000);
@@ -66,7 +69,7 @@ async function boot() {
 
   // Automatischer Sync beim Start
   if (store.settings.autoSync && (await sync.canSync())) {
-    sync.run("start").then((r) => { if (r.changed) { toast("Fortschritt von Dropbox übernommen."); render(); } });
+    sync.run("start").then((r) => { if (r.changed) { toast("Fortschritt von Dropbox übernommen."); softRender(); } });
   }
   document.addEventListener("lesson-complete", () => { if (store.settings.autoSync) sync.run("lesson"); });
   document.addEventListener("trainer-complete", () => { if (store.settings.autoSync) sync.run("trainer"); });
@@ -116,7 +119,10 @@ function greeting() {
 }
 
 // ---------- Router ----------
+let renderSeq = 0;
 async function render() {
+  const my = ++renderSeq;
+  const isCurrent = () => my === renderSeq;
   const hash = location.hash || "#home";
   const [route, ...rest] = hash.slice(1).split("/");
   const param = rest.join("/");
@@ -125,9 +131,9 @@ async function render() {
   document.querySelectorAll(".feedback, .overlay").forEach((e) => e.remove());
   tabs.querySelectorAll("a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + route || (["more", "words", "surprises", "settings", "grammar", "review"].includes(route) && a.getAttribute("href") === "#more")));
   switch (route) {
-    case "home": return renderHome();
-    case "path": return renderPath();
-    case "lesson": return mountLesson(main, param, { content, navigate, onExit: (hash) => { if (hash && hash === location.hash) render(); else navigate(hash || "#path"); } });
+    case "home": return renderHome(isCurrent);
+    case "path": return renderPath(isCurrent);
+    case "lesson": return mountLesson(main, param, { content, navigate, isCurrent, onExit: (hash) => { if (hash && hash === location.hash) render(); else navigate(hash || "#path"); } });
     case "grammar": return renderGrammar();
     case "review": return showWeeklyReview(true);
     case "trainer": {
@@ -141,26 +147,28 @@ async function render() {
       } else if (param === "quick") {
         preset = { quick: true, mode: store.settings.trainerMode };
       }
-      return mountTrainer(main, { content, preset, onExit: () => navigate("#home") });
+      return mountTrainer(main, { content, preset, isCurrent, onExit: () => navigate("#home") });
     }
     case "progress": return renderProgress(main, { content, navigate });
     case "words": return renderWords();
     case "surprises": return renderSurprises();
-    case "settings": return renderSettings();
+    case "settings": return renderSettings(isCurrent);
     case "more": return renderMore();
     default: return renderHome();
   }
 }
 
 // ---------- Start-Bildschirm ----------
-async function renderHome() {
+async function renderHome(isCurrent = () => true) {
   const s = getStats(content);
   const completed = store.completedSet();
   const inProgress = await hasLessonInProgress();
+  const canSync = await sync.canSync();
+  if (!isCurrent()) return;
   const nextId = inProgress?.lessonId || content.nextLessonId(completed);
   const next = nextId ? content.lesson(nextId) : null;
   const goalDots = h("div", { class: "goal-dots" }, Array.from({ length: s.dailyGoal }, (_, i) => h("i", { class: i < s.lessonsToday ? "on" : "" })));
-  const activeToday = s.lessonsToday > 0 || store.events.some((e) => e.t >= new Date(s.today + "T00:00:00").getTime() && (e.type === "trainer_round" || e.type === "lesson_complete"));
+  const activeToday = !!s.heatmap.find((d) => d.date === s.today)?.active;
   replace(main,
     h("h1", {}, greeting()),
     s.streak > 0 && !activeToday ? h("div", { class: "streak-warn mb" }, `🔥 ${s.streak} Tage Streak – heute noch nichts gelernt. Eine Lektion oder Trainer-Runde hält ihn am Leben.`) : null,
@@ -186,16 +194,17 @@ async function renderHome() {
       h("div", { class: "row spread" }, h("span", {}, "Lektionen"), h("b", {}, `${s.completedLessons} / ${s.totalLessons}`)),
       h("div", { class: "row spread" }, h("span", {}, "Niveau"), h("b", {}, s.level)),
     ),
-    h("p", { class: "small muted center", "data-sync-status": "" }, (await sync.canSync()) ? syncStatusText() : "Dropbox nicht verbunden – Daten nur lokal"),
+    h("p", { class: "small muted center", "data-sync-status": "" }, canSync ? syncStatusText() : "Dropbox nicht verbunden – Daten nur lokal"),
     navigator.onLine ? null : h("p", { class: "small muted center offline" }, "Offline – alles läuft weiter, Sync folgt später."),
   );
   main.scrollTop = 0;
 }
 
 // ---------- Lernpfad ----------
-async function renderPath() {
+async function renderPath(isCurrent = () => true) {
   const completed = store.completedSet();
   const inProgress = await hasLessonInProgress();
+  if (!isCurrent()) return;
   const nextId = content.nextLessonId(completed);
   const els = [h("h1", {}, "Lernpfad")];
   if (!content.units.length) els.push(h("p", {}, "Keine Units gefunden."));
@@ -333,17 +342,23 @@ function renderMore() {
 }
 
 // ---------- Einstellungen ----------
-async function renderSettings() {
+async function renderSettings(isCurrent = () => true) {
   const connected = await sync.canSync();
+  if (!isCurrent()) return;
   const standalone = isStandalone();
   const goalSeg = h("div", { class: "seg" }, [1, 2, 3].map((n) => h("button", { class: store.settings.dailyGoal === n ? "on" : "", onclick: async (e) => { await store.setSetting("dailyGoal", n); goalSeg.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b === e.target)); } }, `${n} Lektion${n > 1 ? "en" : ""}`)));
   const autoBox = h("input", { type: "checkbox", style: { width: "auto" }, checked: store.settings.autoSync, onchange: (e) => store.setSetting("autoSync", e.target.checked) });
   const codeInput = h("input", { type: "text", placeholder: "Code von Dropbox einfügen", autocorrect: "off", autocapitalize: "off", spellcheck: "false" });
+  const openLink = h("a", { class: "btn btn-block btn-outline hidden", target: "_blank", rel: "noopener", style: { textAlign: "center", textDecoration: "none" } }, "Dropbox-Seite öffnen");
   const connectBtn = async (manual) => {
     try {
       if (manual) {
+        // Fenster synchron im Tipp-Handler öffnen (sonst blockiert Safari das Popup), URL danach setzen
+        const w = window.open("", "_blank");
         const url = await dropbox.startAuth({ manual: true });
-        window.open(url, "_blank");
+        if (w) w.location = url;
+        openLink.href = url;
+        openLink.classList.remove("hidden");
         manualBox.classList.remove("hidden");
       } else {
         await dropbox.startAuth({ manual: false });
@@ -351,6 +366,7 @@ async function renderSettings() {
     } catch (e) { toast(e.message, 5000); }
   };
   const manualBox = h("div", { class: standalone ? "mt" : "mt hidden" },
+    openLink,
     h("p", { class: "small muted" }, "Dropbox zeigt dir nach dem Erlauben einen Code an. Kopiere ihn und füge ihn hier ein:"),
     codeInput,
     h("button", { class: "btn-block mt", onclick: async () => { try { await dropbox.finishManualCode(codeInput.value); toast("Mit Dropbox verbunden."); await sync.run("connect"); renderSettings(); } catch (e) { toast(e.message, 5000); } } }, "Code bestätigen"),
@@ -395,7 +411,18 @@ async function renderSettings() {
         if (!swRegistration) return toast("Kein Service Worker aktiv (Offline-Cache nur über HTTPS).");
         try { await swRegistration.update(); toast(swRegistration.waiting ? "Update bereit – oben auf „Neu laden“ tippen." : "Du hast die neueste Version."); } catch (e) { toast("Update-Prüfung fehlgeschlagen: " + e.message); }
       } }, "Nach Updates suchen"),
-      h("button", { class: "btn-block btn-danger", onclick: async () => { if (await confirmSheet("Wirklich ALLE lokalen Lerndaten löschen? (Dropbox bleibt unverändert, bis du erneut synchronisierst.)", { okLabel: "Alles löschen", danger: true })) { await store.resetAll(); toast("Lokale Daten gelöscht."); renderSettings(); } } }, "Lokalen Fortschritt zurücksetzen"),
+      h("button", { class: "btn-block btn-danger", onclick: async () => {
+        const text = connected
+          ? "Wirklich ALLE Lerndaten löschen? Das löscht den lokalen Stand UND die Sicherung in Dropbox (progress.json, events.json). Vorher exportieren, wenn du unsicher bist."
+          : "Wirklich ALLE lokalen Lerndaten löschen?";
+        if (!(await confirmSheet(text, { okLabel: "Alles löschen", danger: true }))) return;
+        try {
+          if (connected) { await dropbox.deleteFile(CONFIG.DROPBOX_PROGRESS_FILE); await dropbox.deleteFile(CONFIG.DROPBOX_EVENTS_FILE); }
+          await store.resetAll();
+          toast(connected ? "Lokale Daten und Dropbox-Sicherung gelöscht." : "Lokale Daten gelöscht.");
+        } catch (e) { toast("Löschen fehlgeschlagen: " + e.message, 5000); }
+        renderSettings();
+      } }, "Fortschritt zurücksetzen"),
     ),
     isIOS() && !standalone ? h("div", { class: "card" }, h("h3", { style: { marginTop: 0 } }, "Als App installieren"), h("p", { class: "small" }, "Safari: Teilen-Symbol → „Zum Home-Bildschirm“. Dann läuft die App im Vollbild und offline.")) : null,
   );

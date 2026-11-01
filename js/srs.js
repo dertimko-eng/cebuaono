@@ -54,13 +54,22 @@ export function applyResult(word, correct, weight = 1, near = false, today = tod
   if (correct) {
     word.correct++;
     if (near) word.near++;
-    word.points = (word.points || 0) + weight;
-    while (word.points >= 1 && word.stage < MAX_STAGE) {
-      word.points -= 1;
-      word.stage++;
+    if (word.stage === 0) {
+      // erster Kontakt: auf „lernend“, fällig morgen – egal wie oft das Wort heute noch drankommt
+      word.stage = 1;
+      word.points = 0;
+      word.lastUp = today;
+    } else {
+      word.points = (word.points || 0) + weight;
+      // höchstens ein Stufenaufstieg pro Tag; überschüssige Punkte bleiben (max. 1) für den nächsten Tag
+      if (word.points >= 1 && word.lastUp !== today && word.stage < MAX_STAGE) {
+        word.points -= 1;
+        word.stage++;
+        word.lastUp = today;
+      }
+      word.points = Math.min(word.points, 1);
+      if (word.stage >= MAX_STAGE) word.points = 0;
     }
-    if (word.stage >= MAX_STAGE) word.points = 0;
-    if (word.stage === 0) word.stage = 1; // erster Kontakt zählt mindestens als „lernend“
     word.due = addDays(today, INTERVALS[word.stage]);
   } else {
     word.wrong++;

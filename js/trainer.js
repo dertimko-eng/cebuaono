@@ -28,9 +28,10 @@ export function selectWords(content, { size, includeMastered = false, only = nul
   return ordered.slice(0, n).map((e) => ({ entry: e, due: due.includes(e) }));
 }
 
-export async function mountTrainer(main, { content, preset = null, onExit }) {
+export async function mountTrainer(main, { content, preset = null, onExit, isCurrent = () => true }) {
   let saved = await db.kvGet("trainer.inprogress");
-  if (preset) { await db.kvDel("trainer.inprogress"); saved = null; }
+  if (!isCurrent()) return;
+  if (saved && (!Array.isArray(saved.items) || !saved.items.every((i) => content.entry(i.ceb)))) { saved = null; await db.kvDel("trainer.inprogress"); }
 
   function renderSetup() {
     const s = store.settings;
@@ -55,7 +56,7 @@ export async function mountTrainer(main, { content, preset = null, onExit }) {
     } }, "Runde starten");
     replace(main, 
       h("h1", {}, "Vokabeltrainer"),
-      saved ? h("div", { class: "card accent" }, h("b", {}, "Unterbrochene Runde"), h("p", { class: "muted" }, `${saved.items.length - saved.pos} Wörter übrig`),
+      saved ? h("div", { class: "card accent" }, h("b", {}, "Unterbrochene Runde"), h("p", { class: "muted" }, `${Math.max(0, saved.items.length + (saved.queueExtra?.length || 0) - saved.pos)} Wörter übrig`),
         h("div", { class: "row mt" }, h("button", { class: "grow", onclick: () => resumeRound(saved) }, "Weitermachen"), h("button", { class: "btn-ghost", onclick: async () => { await db.kvDel("trainer.inprogress"); saved = null; renderSetup(); } }, "Verwerfen"))) : null,
       h("div", { class: "card" },
         h("label", {}, "Modus"),
@@ -102,11 +103,15 @@ export async function mountTrainer(main, { content, preset = null, onExit }) {
       return st.queueExtra[st.pos - st.items.length];
     }
 
+    let answered = false;
     function render() {
+      if (!isCurrent()) return;
       if (st.pos >= total()) return renderSummary();
       const item = current();
       const entry = content.entry(item.ceb);
+      if (!entry) { st.pos++; return render(); } // Wort nicht mehr im Glossar
       exStart = Date.now();
+      answered = false;
       const body = h("div", {});
       replace(main, header(), body);
       main.scrollTop = 0;
@@ -146,6 +151,9 @@ export async function mountTrainer(main, { content, preset = null, onExit }) {
     }
 
     async function finish(entry, item, res) {
+      if (answered || !isCurrent()) return;
+      answered = true;
+      main.querySelectorAll("button, input").forEach((b) => { if (b.textContent !== "✕") b.disabled = true; });
       const dur = Date.now() - exStart;
       st.activeMs += Math.min(dur, 120000);
       const r = (st.results[entry.ceb] ??= { correct: 0, near: 0, wrong: 0 });
@@ -162,7 +170,7 @@ export async function mountTrainer(main, { content, preset = null, onExit }) {
     function feedback(res, next) {
       const cls = !res.correct ? "bad" : res.near ? "near" : "ok";
       const title = !res.correct ? "Leider falsch" : res.near ? "Fast – richtig wäre:" : "Richtig!";
-      const go = () => { fb.remove(); document.removeEventListener("keydown", onKey); next(); };
+      const go = () => { document.removeEventListener("keydown", onKey); if (!fb.isConnected || !isCurrent()) return; fb.remove(); next(); };
       const onKey = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } };
       const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } }, h("h3", {}, title), (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null, res.note ? h("div", { class: "note" }, res.note) : null,
         h("button", { class: "btn-primary btn-block btn-big mt", onclick: go }, "Weiter"));
@@ -200,12 +208,12 @@ export async function mountTrainer(main, { content, preset = null, onExit }) {
 
   if (preset?.words) {
     const items = selectWords(content, { size: preset.words.length, includeMastered: true, only: preset.words });
-    if (items.length) return startRound({ mode: preset.mode || store.settings.trainerMode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) });
+    if (items.length) { saved = null; return startRound({ mode: preset.mode || store.settings.trainerMode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) }); }
     toast("Keine passenden Wörter gefunden.");
   }
   if (preset?.quick) {
     const items = selectWords(content, { size: 10 });
-    if (items.length) return startRound({ mode: preset.mode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) });
+    if (items.length) { saved = null; return startRound({ mode: preset.mode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) }); }
     toast("Noch keine Wörter zum Üben – erst eine Lektion abschließen.");
   }
   renderSetup();

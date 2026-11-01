@@ -42,11 +42,17 @@ export const sync = {
         }
         changed = await store.mergeIn(remote);
       }
-      // Nach dem Merge hochladen (jetzt enthält der lokale Stand alles) – nur wenn nötig
+      // Nach dem Merge hochladen (jetzt enthält der lokale Stand alles) – nur wenn nötig.
+      // dirty wird VOR dem Serialisieren zurückgesetzt: Änderungen während des Uploads markieren erneut.
       if (store.dirty || changed || !pText || !eText) {
-        await dropbox.upload(CONFIG.DROPBOX_PROGRESS_FILE, JSON.stringify(store.exportProgress()));
-        await dropbox.upload(CONFIG.DROPBOX_EVENTS_FILE, JSON.stringify(store.exportEvents()));
-        store.dirty = false;
+        await store.setDirty(false);
+        try {
+          await dropbox.upload(CONFIG.DROPBOX_PROGRESS_FILE, JSON.stringify(store.exportProgress()));
+          await dropbox.upload(CONFIG.DROPBOX_EVENTS_FILE, JSON.stringify(store.exportEvents()));
+        } catch (e) {
+          await store.setDirty(true);
+          throw e;
+        }
       }
       this.lastSync = Date.now();
       this.lastError = null;
@@ -65,13 +71,24 @@ export const sync = {
   },
 
   // ---------- Datei-Export / -Import ----------
-  exportToFile() {
+  async exportToFile() {
     const data = JSON.stringify(store.exportAll(), null, 1);
     const blob = new Blob([data], { type: "application/json" });
-    const a = document.createElement("a");
     const d = new Date();
+    const name = `cebuano-fortschritt-${d.toISOString().slice(0, 10)}.json`;
+    // iOS-Home-Bildschirm-App: Teilen-Dialog (Dateien, AirDrop, Mail) statt Download
+    try {
+      const file = new File([blob], name, { type: "application/json" });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file], title: "Cebuano-Fortschritt" });
+        return;
+      }
+    } catch (e) {
+      if (e && e.name === "AbortError") return;
+    }
+    const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = `cebuano-fortschritt-${d.toISOString().slice(0, 10)}.json`;
+    a.download = name;
     document.body.append(a);
     a.click();
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);

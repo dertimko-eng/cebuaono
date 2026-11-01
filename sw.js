@@ -1,6 +1,6 @@
 // Service Worker: cacht beim ersten Öffnen alle App-Dateien und Inhalte (offline-fähig).
-// Bei neuen Inhalten CACHE_VERSION erhöhen.
-const CACHE_VERSION = "v1";
+// Bei jedem Deploy CACHE_VERSION erhöhen – dann wird alles atomar neu geladen.
+const CACHE_VERSION = "v2";
 const CACHE = "cebuano-" + CACHE_VERSION;
 
 const CORE = [
@@ -20,6 +20,7 @@ const CORE = [
   "./js/progress.js",
   "./js/srs.js",
   "./js/stats.js",
+  "./js/store.js",
   "./js/sync.js",
   "./js/trainer.js",
   "./js/ui.js",
@@ -28,6 +29,7 @@ const CORE = [
   "./content/names.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
+  "./icons/apple-touch-icon.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -35,14 +37,12 @@ self.addEventListener("install", (event) => {
     (async () => {
       const cache = await caches.open(CACHE);
       await cache.addAll(CORE);
-      // Units aus index.json nachladen (fehlende Units sind kein Fehler)
       try {
         const idx = await (await cache.match("./content/index.json")).json();
-        await Promise.all(
-          idx.units.map((u) => cache.add(`./content/units/${u}.json`).catch(() => null)),
-        );
+        await Promise.all(idx.units.map((u) => cache.add(`./content/units/${u}.json`).catch(() => null)));
       } catch (_) {}
-      self.skipWaiting();
+      // Kein skipWaiting hier: die neue Version wird erst aktiv, wenn der Nutzer im Banner „Neu laden“ wählt
+      // (oder keine alte Seite mehr offen ist). So wird nie mitten in einer Lektion neu geladen.
     })(),
   );
 });
@@ -56,30 +56,37 @@ self.addEventListener("activate", (event) => {
   );
 });
 
+// App-Code (HTML/JS/CSS): network-first, damit nie alte und neue Module gemischt werden.
+// Inhalte/Icons: cache-first mit Aktualisierung im Hintergrund.
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
-  if (event.request.method !== "GET") return;
-  // Dropbox-API nie cachen
-  if (url.origin !== self.location.origin) return;
-  // OAuth-Redirect mit ?code= soll die normale Seite liefern
+  if (event.request.method !== "GET" || url.origin !== self.location.origin) return;
+  const isNav = event.request.mode === "navigate" || url.pathname.endsWith("/") || url.pathname.endsWith("index.html");
+  const key = isNav ? "./index.html" : url.pathname;
+  const isCode = isNav || /\.(js|css|webmanifest)$/.test(url.pathname);
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE);
-      const key = url.pathname.endsWith("/") ? "./index.html" : event.request;
-      const cached = await cache.match(key, { ignoreSearch: true });
+      const cacheKey = new Request(new URL(key, self.location.href).toString());
+      if (isCode) {
+        try {
+          const res = await fetch(event.request);
+          if (res.ok) cache.put(cacheKey, res.clone());
+          return res;
+        } catch (_) {
+          const cached = await cache.match(cacheKey);
+          if (cached) return cached;
+          throw _;
+        }
+      }
+      const cached = await cache.match(cacheKey);
       if (cached) {
-        // Inhalte im Hintergrund aktualisieren (stale-while-revalidate)
-        fetch(event.request).then((res) => { if (res.ok) cache.put(event.request, res.clone()); }).catch(() => {});
+        fetch(event.request).then((res) => { if (res.ok) cache.put(cacheKey, res.clone()); }).catch(() => {});
         return cached;
       }
-      try {
-        const res = await fetch(event.request);
-        if (res.ok) cache.put(event.request, res.clone());
-        return res;
-      } catch (e) {
-        if (event.request.mode === "navigate") return cache.match("./index.html");
-        throw e;
-      }
+      const res = await fetch(event.request);
+      if (res.ok) cache.put(cacheKey, res.clone());
+      return res;
     })(),
   );
 });

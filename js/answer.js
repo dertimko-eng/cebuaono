@@ -43,7 +43,8 @@ export function levenshtein(a, b) {
 }
 
 function wordTolerance(w) {
-  return w.length <= 5 ? 1 : 2;
+  // Bei ganz kurzen Wörtern (ko/ka, ni/si, sa) ist ein Buchstabe der ganze Unterschied – keine Toleranz
+  return w.length <= 3 ? 0 : w.length <= 5 ? 1 : 2;
 }
 
 // Vergleicht Eingabe mit einer Zielantwort Wort für Wort.

@@ -29,6 +29,7 @@ export const store = {
     this.words = new Map((await db.getAll("words")).map((w) => [w.ceb, w]));
     this.events = (await db.getAll("events")).sort((a, b) => a.t - b.t);
     this.srsHistory = (await db.kvGet("srsHistory")) || {};
+    this.dirty = !!(await db.kvGet("sync.dirty"));
     await this.snapshotSrs();
   },
 
@@ -63,8 +64,13 @@ export const store = {
     const e = { id: uuid(), t: Date.now(), ...ev };
     this.events.push(e);
     await db.put("events", e);
-    this.dirty = true;
+    await this.setDirty(true);
     return e;
+  },
+
+  async setDirty(v) {
+    this.dirty = v;
+    await db.kvSet("sync.dirty", v);
   },
 
   /**
@@ -100,7 +106,8 @@ export const store = {
     p.updatedAt = Date.now();
     this.progress.set(lesson, p);
     await db.put("progress", p);
-    await this.addEvent({ type: "lesson_complete", lesson, dur, xp: xp + XP.lessonBonus, correct, total });
+    // XP der einzelnen Antworten stecken schon in den answer-Events – hier nur der Bonus
+    await this.addEvent({ type: "lesson_complete", lesson, dur, xp: XP.lessonBonus, sessionXp: xp + XP.lessonBonus, correct, total });
     await this.snapshotSrs(true);
     this.emit("lesson");
   },
@@ -185,6 +192,8 @@ export const store = {
     await db.kvDel("srsHistory");
     await db.kvDel("lesson.inprogress");
     await db.kvDel("trainer.inprogress");
+    await db.kvDel("sync.dirty");
+    this.dirty = false;
     this.progress = new Map(); this.words = new Map(); this.events = []; this.srsHistory = {};
     this.emit("reset");
   },

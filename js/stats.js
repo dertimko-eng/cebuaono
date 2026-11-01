@@ -192,11 +192,13 @@ export function computeStats({ events, words, progress, content, settings, srsHi
   const idxThis = weeks.length - 1;
   const wordsThisWeek = wNew[idxThis];
   const wordsLastWeek = wNew[idxThis - 1];
-  // Wörter pro Woche: Ø der letzten 4 Wochen, aber nur ab der ersten aktiven Woche
-  const firstActive = wNew.findIndex((n) => n > 0);
-  const recent = firstActive < 0 ? [] : wNew.slice(Math.max(firstActive, wNew.length - 4));
+  // Wörter pro Woche: Ø der letzten 4 vollen Wochen (die laufende Woche erst ab Sonntag), ab der ersten aktiven Woche
+  const includeCurrent = now.getDay() === 0;
+  const series = includeCurrent ? wNew : wNew.slice(0, -1);
+  const firstActive = series.findIndex((n) => n > 0);
+  const recent = firstActive < 0 ? [] : series.slice(Math.max(firstActive, series.length - 4));
   const rate = recent.length ? recent.reduce((a, b) => a + b, 0) / recent.length : 0;
-  const remaining = Math.max(0, totalWords - learnedWords);
+  const remaining = Math.max(0, totalWords - seenWord.size);
   let projection = null;
   if (rate > 0 && remaining > 0) {
     const weeksLeft = remaining / rate;

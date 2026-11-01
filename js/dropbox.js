@@ -214,6 +214,15 @@ export class DropboxClient {
     return r.json();
   }
 
+  // Löscht eine Datei im App-Ordner (nicht vorhanden = kein Fehler).
+  async deleteFile(path) {
+    try {
+      await this.rpc("/files/delete_v2", { path });
+    } catch (e) {
+      if (!String(e.message).includes("not_found")) throw e;
+    }
+  }
+
   // Liefert den Text der Datei oder null, wenn sie nicht existiert.
   async download(path) {
     const token = await this.accessToken();

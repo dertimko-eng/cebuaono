@@ -14,15 +14,22 @@ const TYPE_LABEL = {
   true_false: "Stimmt die Übersetzung?",
 };
 
-export async function mountLesson(main, lessonId, { content, onExit, navigate }) {
+export async function mountLesson(main, lessonId, { content, onExit, navigate, isCurrent = () => true }) {
   const lesson = content.lesson(lessonId);
   if (!lesson) { replace(main, h("p", {}, "Lektion nicht gefunden.")); return; }
 
   // ---- Zustand (ggf. fortsetzen) ----
   let st = await db.kvGet("lesson.inprogress");
+  if (!isCurrent()) return;
+  // Gespeicherter Stand passt nicht mehr zum Inhalt (Übungen geändert)? Dann neu anfangen.
+  if (st && st.lessonId === lessonId && !(Array.isArray(st.queue) && st.queue.every((i) => Number.isInteger(i) && i < lesson.exercises.length))) {
+    st = null;
+    await db.kvDel("lesson.inprogress");
+  }
   if (st && st.lessonId !== lessonId && st.pos >= 0) {
     const other = content.lesson(st.lessonId);
     const keep = other && !(await confirmSheet(`Du hast „${other.title}“ angefangen. Diese Lektion verwerfen und „${lesson.title}“ starten?`, { okLabel: "Verwerfen und starten", cancelLabel: "Zurück zur angefangenen" }));
+    if (!isCurrent()) return;
     if (keep) { onExit("#lesson/" + st.lessonId); return; }
   }
   document.body.classList.add("lesson-mode");
@@ -96,7 +103,13 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate })
     main.scrollTop = 0;
     const body = h("div", {});
     replace(main, header(), body);
-    const ctx = { ex, idx, body, done: (res) => finish(ex, idx, res) };
+    let answered = false; // Schutz gegen Doppeltipp
+    const ctx = { ex, idx, body, done: (res) => {
+      if (answered || !isCurrent()) return;
+      answered = true;
+      body.querySelectorAll("button, input").forEach((b) => { b.disabled = true; });
+      finish(ex, idx, res);
+    } };
     const renderers = { multiple_choice, word_bank, fill_blank, type_answer, match_pairs, true_false, grammar_note };
     renderers[ex.type](ctx);
   }
@@ -134,7 +147,12 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate })
     const explain = !res.correct || res.near
       ? words.map((w) => content.entry(w)).filter(Boolean).slice(0, 4).map((e) => h("div", { class: "small" }, h("b", {}, e.ceb), " = ", e.de, e.note ? h("span", { class: "muted" }, ` (${e.note})`) : null))
       : [];
-    const go = () => { fb.remove(); document.removeEventListener("keydown", keyHandler); keyHandler = null; next(); };
+    const go = () => {
+      document.removeEventListener("keydown", keyHandler); keyHandler = null;
+      if (!fb.isConnected || !isCurrent()) return; // Screen wurde inzwischen verlassen
+      fb.remove();
+      next();
+    };
     const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } },
       h("h3", {}, title),
       (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null,
