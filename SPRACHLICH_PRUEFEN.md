@@ -119,6 +119,105 @@ Gesammelt beim Erstellen der Inhalte. Wenn etwas falsch ist: Satz in `content/un
 7. u12_l06: „Mosugod ang bag-ong kapitulo sa atong kinabuhi“ – mo- oder mag-?
 8. u12_l06: „Garbo nako ikaw ug si Inday“ (ohne ang?); „gitudloan ko nimo sa imong pinulongan“ vs. „… ug Binisaya“.
 
+## Aussprache und Betonung
+
+Die App zeigt unter jedem Cebuano-Wort eine Umschrift in deutscher Lesart (ß = scharfes s, j = deutsches j, w = englisches w, ng wie in „singen“, ' = Stimmabsatz). Sie wird aus der Schreibung berechnet. Was sie **nicht** kann:
+
+1. **Betonung.** Sie ist im Cebuano nicht aus der Schreibung ablesbar (z. B. *dapít* „Ort“ vs. *dápit* „einladen“). Bitte in der Tabelle unten die betonte Silbe in GROSSBUCHSTABEN eintragen, z. B. `ßa-LA-mat`.
+2. **Stimmabsatz am Wortende** (dakô, batà, wala vs. walâ). Bitte mit `'` am Ende markieren, z. B. `da-ko'`.
+3. **Vokalqualität** bei Lehnwörtern (sais/seis, syento) und ob **o/u** bzw. **e/i** so gesprochen werden wie geschrieben.
+
+So übernimmst du Korrekturen: In `content/glossary.json` beim Wort das Feld `"pron": "ßa-LA-mat"` ergänzen. Die App zeigt dann diese Umschrift statt der berechneten. Mehrwortige Einträge (`Maayong buntag`) bekommen eine Umschrift für die ganze Wortfolge.
+
+Besonders unsicher ist die Umschrift bei: sais → *ßa-iß*, siyensya → *ßi-jen-ßja*, dyip → *dschip*, pamilya → *pa-mil-ja*, Huwebes → *Hu-we-beß*, Miyerkules → *Mi-jer-ku-leß*, gwapa → *gwa-pa*, kwarta → *kwar-ta*, eskwelahan → *eß-kwe-la-han*.
+
+### Prüfliste Betonung (die 80 Grundwörter aus Unit 1–3)
+
+Spalte „Betonung“: betonte Silbe groß schreiben, Stimmabsatz am Ende mit ', ganz falsche Umschrift einfach überschreiben.
+
+| Cebuano | Umschrift (App) | Bedeutung | Betonung / Korrektur |
+|---|---|---|---|
+| Maayong buntag | Ma-a-jong bun-tag | Guten Morgen |  |
+| Maayong udto | Ma-a-jong ud-to | Guten Mittag |  |
+| Maayong hapon | Ma-a-jong ha-pon | Guten Nachmittag |  |
+| Maayong gabii | Ma-a-jong ga-bi-i | Guten Abend |  |
+| Kumusta | Ku-muß-ta | Wie geht es |  |
+| maayo | ma-a-jo | gut |  |
+| Maayo ra | Ma-a-jo ra | Es geht gut |  |
+| salamat | ßa-la-mat | danke |  |
+| Daghang salamat | Dag-hang ßa-la-mat | Vielen Dank |  |
+| Babay | Ba-bai | Tschüss |  |
+| oo | o-o | ja |  |
+| dili | di-li | nein |  |
+| wala | wa-la | nicht (vorhanden) |  |
+| palihug | pa-li-hug | bitte (bei einer Bitte) |  |
+| Walay sapayan | Wa-lai ßa-pa-jan | Gern geschehen |  |
+| sige | ßi-ge | okay |  |
+| Pasayloa ko | Pa-ßai-lo-a ko | Entschuldigung |  |
+| Ayo-ayo | A-jo-a-jo | Mach's gut |  |
+| ug | ug | und |  |
+| pud | pud | auch |  |
+| ako | a-ko | ich (Langform) |  |
+| ko | ko | ich (Kurzform) |  |
+| si | ßi | (Namensmarker vor Personennamen) |  |
+| ngalan | nga-lan | Name |  |
+| unsa | un-ßa | was |  |
+| maestro | ma-eß-tro | Lehrer |  |
+| asawa | a-ßa-wa | Ehefrau |  |
+| bana | ba-na | Ehemann |  |
+| taga- | ta-ga- | aus (Herkunft) |  |
+| Aleman | A-le-man | Deutscher |  |
+| ikaw | i-kau | du (Langform) |  |
+| ka | ka | du (Kurzform) |  |
+| siya | ßi-ja | er |  |
+| kita | ki-ta | wir (du und ich) |  |
+| ta | ta | wir (Kurzform, du und ich) |  |
+| kami | ka-mi | wir (ohne dich) |  |
+| mi | mi | wir (Kurzform, ohne dich) |  |
+| kamo | ka-mo | ihr |  |
+| mo | mo | ihr (Kurzform) |  |
+| sila | ßi-la | sie (Mehrzahl) |  |
+| akong | a-kong | mein |  |
+| imong | i-mong | dein |  |
+| iyang | i-jang | sein |  |
+| atong | a-tong | unser (deins und meins) |  |
+| among | a-mong | unser (ohne dich) |  |
+| inyong | i-njong | euer |  |
+| ilang | i-lang | ihr (Mehrzahl) |  |
+| anak | a-nak | Kind (Sohn oder Tochter) |  |
+| amigo | a-mi-go | Freund |  |
+| amiga | a-mi-ga | Freundin |  |
+| kinsa | kin-ßa | wer |  |
+| nimo | ni-mo | dich |  |
+| nako | na-ko | mich |  |
+| niya | ni-ja | ihn |  |
+| kaayo | ka-a-jo | sehr |  |
+| ra | ra | nur |  |
+| Nalipay ko | Na-li-pai ko | Ich freue mich |  |
+| problema | prob-le-ma | Problem |  |
+| buotan | bu-o-tan | lieb |  |
+| gwapa | gwa-pa | hübsch (Frau) |  |
+| pamilya | pa-mil-ja | Familie |  |
+| mama | ma-ma | Mama |  |
+| papa | pa-pa | Papa |  |
+| inahan | i-na-han | Mutter |  |
+| amahan | a-ma-han | Vater |  |
+| igsoon | ig-ßo-on | Geschwister (Bruder/Schwester) |  |
+| babaye | ba-ba-je | Frau |  |
+| lalaki | la-la-ki | Mann |  |
+| mga | mga | (Pluralmarker) |  |
+| nga | nga | (Linker zwischen Wörtern) |  |
+| lola | lo-la | Oma |  |
+| lolo | lo-lo | Opa |  |
+| apo | a-po | Enkelkind |  |
+| tiya | ti-ja | Tante |  |
+| tiyo | ti-jo | Onkel |  |
+| ugangan | u-ga-ngan | Schwiegermutter |  |
+| bayaw | ba-jau | Schwager |  |
+| manghod | mang-hod | jüngeres Geschwister |  |
+| ginikanan | gi-ni-ka-nan | Eltern |  |
+| bata | ba-ta | Kind (kleines) |  |
+
 ## Allgemein
 - Spanische Zahlen (uno, dos, baynte, syento) für Preise/Uhrzeit, native Zahlen zum Zählen – so im Alltag üblich? Schreibweisen (sais/sayis, baynte/bente) prüfen.
 - „pesos“ als Alltagsform neben piso.

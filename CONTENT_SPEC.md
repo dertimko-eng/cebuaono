@@ -45,6 +45,7 @@ Alle Dateien sind UTF-8, Einrückung 2 Leerzeichen.
 | `lesson` | ja | Lektions-ID, in der das Wort eingeführt wird (`uNN_lMM`) |
 | `note` | nein | Wörtliche Bedeutung, Gebrauchshinweis, Aussprache (z. B. Betonung, Glottis) |
 | `forms` | nein | Zusätzliche Schreib-/Flexionsformen, die der Validator als „bekannt“ akzeptiert (z. B. `["kog"]` für `ko` + `ug`). Verb-Affixe müssen **nicht** gelistet werden, siehe 6.3. |
+| `pron` | nein | Aussprache-Umschrift, die die regelbasierte Umschrift der App ersetzt. Deutsche Lesart, Silben mit `-`, betonte Silbe in GROSSBUCHSTABEN, Stimmabsatz als `'` (z. B. `"ßa-LA-mat"`, `"kan'ON"`). Nur setzen, wenn die automatische Umschrift falsch ist oder die Betonung bekannt ist. |
 | `tags` | nein | Freie Schlagwörter (`"family"`, `"food"`, …) für Ablenker-Auswahl im Trainer |
 
 Regeln:

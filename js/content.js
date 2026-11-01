@@ -1,5 +1,6 @@
 // Lädt Glossar, Namen und Units und stellt Abfragen bereit. Die App ist nur ein Player dieser Daten.
 import { Lexicon, normalizeToken } from "./lexicon.js";
+import { setPronOverrides } from "./pronounce.js";
 
 const LEVEL_AFTER = { 0: "A0", 1: "A0", 2: "A0", 3: "A0", 4: "A0", 5: "A1", 6: "A1", 7: "A1", 8: "A1", 9: "A2", 10: "A2", 11: "A2", 12: "A2" };
 
@@ -25,6 +26,7 @@ export async function loadContent() {
   }
   units.sort((a, b) => a.unit - b.unit);
   const lexicon = new Lexicon(glossary, namesFile.names);
+  setPronOverrides(glossary.entries);
   const lessons = [];
   const lessonById = new Map();
   for (const u of units) {

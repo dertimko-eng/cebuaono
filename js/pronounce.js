@@ -74,16 +74,41 @@ function word(w) {
 }
 function cap(s) { return s.startsWith("ß") ? s : s[0].toUpperCase() + s.slice(1); }
 
+// Überschreibungen aus dem Glossar (Feld "pron", z. B. "ßa-LA-mat" mit betonter Silbe in Großbuchstaben).
+// Schlüssel: ceb in Kleinbuchstaben. Mehrwortige Einträge gelten für die ganze Wortfolge.
+const overrides = new Map();
+export function setPronOverrides(entries) {
+  overrides.clear();
+  for (const e of entries || []) if (e.pron && e.ceb) overrides.set(e.ceb.toLowerCase(), e.pron);
+}
+
 /** Aussprache eines Wortes oder Satzes. Satzzeichen bleiben erhalten. */
 export function pronounce(text) {
   if (!text) return "";
-  return String(text).split(/(\s+)/).map((tok) => {
-    if (!tok.trim()) return tok;
+  const toks = String(text).split(/(\s+)/);
+  const out = [];
+  for (let i = 0; i < toks.length; i++) {
+    const tok = toks[i];
+    if (!tok.trim()) { out.push(tok); continue; }
     const m = tok.match(/^([^A-Za-z]*)([A-Za-z][A-Za-z-]*)([^A-Za-z]*)$/);
-    if (!m) return tok;
-    return m[1] + word(m[2]) + m[3];
-  }).join("");
+    if (!m) { out.push(tok); continue; }
+    // Mehrwort-Überschreibung (z. B. "Maayong buntag"): bis zu 3 Wörter zusammen prüfen
+    let hit = null;
+    for (let n = 3; n >= 1 && !hit; n--) {
+      const idx = i + (n - 1) * 2;
+      if (idx >= toks.length) continue;
+      const words = [];
+      for (let k = i; k <= idx; k += 2) { const mm = toks[k].match(/^[^A-Za-z]*([A-Za-z][A-Za-z-]*)[^A-Za-z]*$/); if (!mm) { words.length = 0; break; } words.push(mm[1]); }
+      if (!words.length) continue;
+      const o = overrides.get(words.join(" ").toLowerCase());
+      if (o) { const last = toks[idx].match(/([^A-Za-z]*)$/)[1]; hit = { text: m[1] + keepCase(o, m[2]) + last, skip: idx - i }; }
+    }
+    if (hit) { out.push(hit.text); i += hit.skip; continue; }
+    out.push(m[1] + keepCase(overrides.get(m[2].toLowerCase()) || word(m[2]), m[2]) + m[3]);
+  }
+  return out.join("");
 }
+function keepCase(pron, orig) { return /^[A-Z]/.test(orig) && !/^[A-Z]/.test(pron) ? cap(pron) : pron; }
 
 export const PRON_LEGEND = [
   ["ß", "scharfes s wie in „Fuß“ – Cebuano-s ist nie stimmhaft (salamat → ßa-la-mat)"],
