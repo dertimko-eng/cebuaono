@@ -124,8 +124,8 @@ Safari-Tab nutzen; der Code-Weg bleibt als sichere Variante.
   mit Dropbox-Sync ist das abgefangen, beim nächsten Start wird alles wieder heruntergeladen.
 - **Datei**: Einstellungen → „Exportieren“ erzeugt `cebuano-fortschritt-DATUM.json` (in iOS landet sie unter
   Dateien/Downloads). „Importieren“ führt eine solche Datei mit dem lokalen Stand zusammen.
-- **Zurücksetzen**: Einstellungen → „Lokalen Fortschritt zurücksetzen“ (Dropbox bleibt unverändert, bis du
-  erneut synchronisierst – vorher dort die beiden Dateien löschen, wenn du wirklich bei null anfangen willst).
+- **Zurücksetzen**: Einstellungen → „Fortschritt zurücksetzen“ löscht den lokalen Stand und, wenn verbunden, auch die
+  beiden Dateien in Dropbox. Vorher exportieren, wenn du unsicher bist.
 
 ## 6. Wie füge ich später Unit 13 hinzu?
 
@@ -150,7 +150,9 @@ Safari-Tab nutzen; der Code-Weg bleibt als sichere Variante.
   og = ug, jud = gyud, kleine Tippfehler (Levenshtein ≤ 1 bzw. ≤ 2 ab 6 Buchstaben) zählen als „fast richtig“.
 - **Fortschritt**: alles wird aus dem Ereignis-Log berechnet (jede Antwort = ein Eintrag mit Zeit, Wörtern,
   Typ, richtig/falsch, Dauer). Neue Auswertungen lassen sich später ergänzen, ohne Daten zu verlieren.
-- **Wochenrückblick**: beim ersten Öffnen an einem Montag.
+- **Wochenrückblick**: beim ersten Öffnen an einem Montag, jederzeit unter Mehr → Wochenrückblick.
+- **Komfort**: „Weiß ich nicht“ zeigt die Lösung (zählt als Fehler), Enter/Leertaste geht nach dem Feedback weiter, bei Fehlern werden die beteiligten Wörter erklärt, am Lektionsende geht es direkt in die nächste Lektion. Wiederholte Lektionen lassen sich ohne Vokabel-Intro starten. Mehr → Grammatik sammelt alle Grammatik-Notizen, in der Wörterliste öffnet ein Tipp auf ein Wort Details und „Jetzt üben“. Einstellungen: große Schrift, „Nach Updates suchen“. Bei einer neuen Version erscheint oben ein Banner „Neu laden“ – die App lädt nie von selbst mitten in einer Lektion neu.
+- **SRS-Details**: pro Wort höchstens ein Stufenaufstieg pro Tag (eine Lektion fragt ein Wort mehrfach), überschüssige Punkte bleiben für den nächsten Tag; bei Wörtern bis 3 Buchstaben (ko/ka, si/ni) gibt es keine Tippfehler-Toleranz.
 
 ## 8. Bekannte Einschränkungen
 
