@@ -1,0 +1,995 @@
+{
+  "unit": 12,
+  "title": "Meinung, Wünsche, Pläne, Beziehung & Zukunft – A2-Abschluss",
+  "level": "A2",
+  "lessons": [
+    {
+      "id": "u12_l01",
+      "title": "Meiner Meinung nach",
+      "vocab": [
+        {"ceb": "hunahuna", "de": "Gedanke; denken; Meinung", "note": "Sa akong hunahuna … = Meiner Meinung nach … Maghunahuna ko = Ich überlege"},
+        {"ceb": "para nako", "de": "für mich; meiner Meinung nach", "note": "Para nako, lami ang adobo = Für mich ist Adobo lecker. para nimo = für dich / deiner Meinung nach"},
+        {"ceb": "mas", "de": "mehr (Vergleich)", "note": "mas maayo = besser; mas dako = größer; mas gusto ko = ich mag lieber"},
+        {"ceb": "labaw", "de": "über alles; am meisten; vor allem", "note": "labaw sa tanan = vor allem / mehr als alles. Labaw ka sa tanan = Du bist mir wichtiger als alles"},
+        {"ceb": "kaysa", "de": "als (Vergleich)", "note": "Mas maayo ang mangga kaysa saging = Mango ist besser als Banane"},
+        {"ceb": "pinaka-", "de": "am …sten (Superlativ-Vorsilbe)", "note": "pinakanindot = am schönsten; pinakamaayo = am besten; pinakagwapa = die Hübscheste"},
+        {"ceb": "matod", "de": "laut (jemandes Aussage); sagt", "note": "Matod pa ni Mama … = Wie Mama sagt … Matod niya = laut ihr"},
+        {"ceb": "opinyon", "de": "Meinung (Fachwort)", "note": "Unsay imong opinyon? = Was ist deine Meinung? Alltäglicher: sa imong hunahuna"},
+        {"ceb": "sugyot", "de": "Vorschlag; vorschlagen", "note": "Naa koy sugyot = Ich habe einen Vorschlag. Mosugyot ko nga … = Ich schlage vor, dass …"},
+        {"ceb": "ideya", "de": "Idee", "note": "Maayong ideya! = Gute Idee!"}
+      ],
+      "grammar": {
+        "title": "Sa akong hunahuna …",
+        "text": "Deine Meinung sagst du mit Sa akong hunahuna … = Meiner Meinung nach … oder kürzer mit Para nako, … = Für mich …: Para nako, mas lami ang adobo kaysa lechon = Für mich ist Adobo leckerer als Lechon. Vergleichen geht mit mas + Adjektiv und kaysa (als): Mas dako ang Cebu kaysa Sauerland = Cebu ist größer als das Sauerland. Für „am …sten“ hängst du pinaka- vorn ans Adjektiv: pinakanindot = am schönsten, pinakagwapa = die Hübscheste. Was jemand anderes meint, leitest du mit Matod pa ni … ein: Matod pa ni Mama, mas maayo ang isda kaysa karne = Wie Mama sagt, ist Fisch besser als Fleisch. Mit Naa koy sugyot (Ich habe einen Vorschlag) oder Maayong ideya (Gute Idee) bringst du dich ins Gespräch ein."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Sa akong hunahuna, mas lami ang adobo kaysa lechon.",
+          "direction": "ceb_de",
+          "options": [
+            "Meiner Meinung nach ist Adobo leckerer als Lechon.",
+            "Meiner Meinung nach ist Lechon leckerer als Adobo.",
+            "Mama sagt, Adobo ist am leckersten.",
+            "Für mich ist Adobo zu teuer."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Für mich ist Cebu am schönsten.",
+          "tokens": ["Para", "nako", "pinakanindot", "ang", "Cebu", "mas", "kaysa", "labaw"],
+          "answer": ["Para", "nako", "pinakanindot", "ang", "Cebu"]
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "hunahuna", "de": "Gedanke; Meinung"},
+            {"ceb": "mas", "de": "mehr (Vergleich)"},
+            {"ceb": "kaysa", "de": "als (Vergleich)"},
+            {"ceb": "opinyon", "de": "Meinung (Fachwort)"},
+            {"ceb": "ideya", "de": "Idee"}
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mas dako ang Cebu ___ Sauerland.",
+          "translation": "Cebu ist größer als das Sauerland.",
+          "options": ["kaysa", "labaw", "matod"],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Matod pa ni Mama, mas maayo ang isda kaysa karne.",
+          "translation": "Wie Mama sagt, ist Fisch besser als Fleisch.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Gute Idee!",
+          "answer": "Maayong ideya",
+          "accepted": ["Maayo nga ideya"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Meiner Meinung nach …",
+          "direction": "de_ceb",
+          "options": ["Sa akong hunahuna …", "Sa imong opinyon …", "Matod pa ni Mama …", "Labaw sa tanan …"],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ sa tanan, gihigugma tika.",
+          "translation": "Vor allem liebe ich dich.",
+          "options": ["Labaw", "Mas", "Kaysa"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich habe einen Vorschlag, Mama.",
+          "tokens": ["Naa", "koy", "sugyot", "Mama", "ideya", "opinyon", "hunahuna"],
+          "answer": ["Naa", "koy", "sugyot", "Mama"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Pinakagwapa si Mama sa tibuok Cebu.",
+          "translation": "Mama ist die Hübscheste in ganz Cebu.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Mas gusto ko ug kape kaysa tsa.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich mag Kaffee lieber als Tee.",
+            "Ich mag Tee lieber als Kaffee.",
+            "Kaffee ist teurer als Tee.",
+            "Ich trinke Kaffee und Tee."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Was ist deine Meinung?",
+          "answer": "Unsay imong opinyon",
+          "accepted": ["Unsa ang imong opinyon", "Unsay imong hunahuna", "Unsa ang imong hunahuna"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sa akong ___, importante kaayo ang pamilya.",
+          "translation": "Meiner Meinung nach ist die Familie sehr wichtig.",
+          "options": ["hunahuna", "sugyot", "ideya"],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Matod niya, lisod ang kimika.",
+          "translation": "Laut ihr ist Chemie leicht.",
+          "answer": false,
+          "correction": "Laut ihr ist Chemie schwer."
+        },
+        {
+          "type": "grammar_note",
+          "title": "mas … kaysa und pinaka-",
+          "text": "Mas steht vor dem Adjektiv, kaysa vor dem, womit du vergleichst: Mas taas si Tim kaysa Mama. Für den Superlativ reicht pinaka- vorn dran: pinakataas, pinakamaayo, pinakalami. Und wenn es um deine Frau geht, ist pinaka- sowieso immer die richtige Wahl."
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Für mich ist Chemie leichter als Biologie.",
+          "tokens": ["Para", "nako", "mas", "sayon", "ang", "kimika", "kaysa", "biyolohiya", "lisod", "labaw"],
+          "answer": ["Para", "nako", "mas", "sayon", "ang", "kimika", "kaysa", "biyolohiya"],
+          "accepted": ["Mas sayon ang kimika kaysa biyolohiya para nako"]
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "labaw", "de": "über alles; vor allem"},
+            {"ceb": "pinaka-", "de": "am …sten"},
+            {"ceb": "matod", "de": "laut (jemandes Aussage)"},
+            {"ceb": "sugyot", "de": "Vorschlag"},
+            {"ceb": "para nako", "de": "für mich"}
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Mosugyot ko nga moadto ta sa baybayon sa Dominggo.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich schlage vor, dass wir am Sonntag an den Strand gehen.",
+            "Ich denke, der Strand ist am Sonntag am schönsten.",
+            "Mama sagt, wir gehen am Sonntag an den Strand.",
+            "Ich habe eine Idee für Montag."
+          ],
+          "answer": 0
+        }
+      ],
+      "surprise": {
+        "ceb": "Para nako, ikaw ang pinakanindot nga nahitabo sa akong kinabuhi.",
+        "de": "Für mich bist du das Schönste, was mir in meinem Leben passiert ist.",
+        "when": "Einfach so beim Abendessen – oder wenn sie dich fragt, was du über irgendetwas denkst."
+      }
+    },
+    {
+      "id": "u12_l02",
+      "title": "Wünsche & Hoffnung",
+      "vocab": [
+        {"ceb": "unta", "de": "hoffentlich; gern (Wunschpartikel)", "note": "Gusto unta ko moadto = Ich würde gern hingehen. Maayo unta = Das wäre schön. Steht nach dem ersten Wort"},
+        {"ceb": "pangandoy", "de": "Wunsch; Lebenstraum; sich wünschen", "note": "Akong pangandoy nga … = Mein Wunsch ist, dass … Nangandoy ko = Ich wünsche mir"},
+        {"ceb": "damgo", "de": "Traum; träumen", "note": "Nagdamgo ko nimo = Ich habe von dir geträumt. Damgo nako = mein Traum"},
+        {"ceb": "laum", "de": "hoffen; Hoffnung", "note": "Naglaum ko nga … = Ich hoffe, dass … Paglaum = Hoffnung (Nomen)"},
+        {"ceb": "hinaut", "de": "hoffentlich; ich hoffe", "note": "Hinaut nga maayo ra ka = Ich hoffe, dir geht es gut. Hinaut unta = hoffentlich (betont)"},
+        {"ceb": "ampo", "de": "beten; Gebet", "note": "Mag-ampo ko para nimo = Ich bete für dich. Pag-ampo = Gebet"},
+        {"ceb": "puhon", "de": "hoffentlich bald; so Gott will (bei Zukunftsplänen)", "note": "Moadto mi sa Pilipinas, puhon = Wir fahren auf die Philippinen, so Gott will. Steht am Satzende"},
+        {"ceb": "tuman", "de": "erfüllen; einhalten; in Erfüllung gehen", "note": "Natuman ang akong damgo = Mein Traum ist in Erfüllung gegangen. Tumanon nako ang saad = Ich halte das Versprechen"},
+        {"ceb": "pasalamat", "de": "dankbar sein; Dankbarkeit", "note": "Nagpasalamat ko nga naa ka = Ich bin dankbar, dass es dich gibt. Mapasalamaton = dankbar (Adjektiv)"},
+        {"ceb": "panalangin", "de": "Segen; segnen", "note": "Ikaw ang panalangin sa akong kinabuhi = Du bist der Segen meines Lebens. Panalanginan ka = Gott segne dich"}
+      ],
+      "grammar": {
+        "title": "Gusto unta ko …",
+        "text": "Unta macht aus einem Satz einen Wunsch und steht nach dem ersten Wort: Gusto unta ko moadto sa Cebu = Ich würde gern nach Cebu fahren, Maayo unta = Das wäre schön. Hoffen geht mit Hinaut nga … oder Naglaum ko nga …: Hinaut nga maayo ra ka = Ich hoffe, dir geht es gut. Puhon hängst du ans Ende eines Zukunftsplans, es heißt etwa „so Gott will“: Moadto mi sa Pilipinas, puhon. Wenn ein Wunsch wahr wird, sagst du Natuman ang akong damgo = Mein Traum ist in Erfüllung gegangen. Nagpasalamat ko nga naa ka = Ich bin dankbar, dass es dich gibt – das hört deine Frau gern."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Gusto unta ko moadto sa Cebu sa Disyembre.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich würde gern im Dezember nach Cebu fahren.",
+            "Ich fahre im Dezember nach Cebu.",
+            "Ich hoffe, du fährst im Dezember nach Cebu.",
+            "Ich war im Dezember in Cebu."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich hoffe, dir geht es gut.",
+          "tokens": ["Hinaut", "nga", "maayo", "ra", "ka", "unta", "puhon", "damgo"],
+          "answer": ["Hinaut", "nga", "maayo", "ra", "ka"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Moadto mi sa Pilipinas, ___.",
+          "translation": "Wir fahren auf die Philippinen, so Gott will.",
+          "options": ["puhon", "unta", "hinaut"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "pangandoy", "de": "Wunsch; Lebenstraum"},
+            {"ceb": "damgo", "de": "Traum"},
+            {"ceb": "laum", "de": "hoffen; Hoffnung"},
+            {"ceb": "ampo", "de": "beten; Gebet"},
+            {"ceb": "panalangin", "de": "Segen"}
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Natuman ang akong damgo.",
+          "translation": "Mein Traum ist in Erfüllung gegangen.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Das wäre schön.",
+          "answer": "Maayo unta"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Ich hoffe, dass …",
+          "direction": "de_ceb",
+          "options": ["Naglaum ko nga …", "Nagdamgo ko nga …", "Nag-ampo ko nga …", "Nagpasalamat ko nga …"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich bete für dich.",
+          "tokens": ["Mag-ampo", "ko", "para", "nimo", "unta", "laum", "damgo"],
+          "answer": ["Mag-ampo", "ko", "para", "nimo"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nagpasalamat ko nga ___ ka.",
+          "translation": "Ich bin dankbar, dass es dich gibt.",
+          "options": ["naa", "wala", "unta"],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Ikaw ang panalangin sa akong kinabuhi.",
+          "translation": "Du bist das Problem meines Lebens.",
+          "answer": false,
+          "correction": "Du bist der Segen meines Lebens."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Akong pangandoy nga makasulti ug Binisaya ang among anak.",
+          "direction": "ceb_de",
+          "options": [
+            "Mein Wunsch ist, dass unser Kind Cebuano sprechen kann.",
+            "Ich träume, dass unser Kind nach Cebu fährt.",
+            "Ich hoffe, unser Kind lernt Deutsch.",
+            "Mein Traum ist, dass unser Kind Ärztin wird."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich habe von dir geträumt.",
+          "answer": "Nagdamgo ko nimo"
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich halte das Versprechen.",
+          "tokens": ["Tumanon", "nako", "ang", "saad", "damgo", "unta", "laum"],
+          "answer": ["Tumanon", "nako", "ang", "saad"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gusto ___ ko mopalit ug e-bike.",
+          "translation": "Ich würde gern ein E-Bike kaufen.",
+          "options": ["unta", "puhon", "hinaut"],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "unta, hinaut, puhon – drei Arten zu hoffen",
+          "text": "Unta steht mitten im Satz nach dem ersten Wort: Gusto unta ko, Maayo unta. Hinaut steht am Anfang und zieht nga nach sich: Hinaut nga moabot ka ug sayo. Puhon steht ganz am Ende und gehört zu Plänen, die erst noch wahr werden müssen – auf den Philippinen hört man es bei fast jedem Reiseplan, und es wäre unhöflich, es wegzulassen."
+        },
+        {
+          "type": "true_false",
+          "statement": "Nag-ampo si Lola para nato matag gabii.",
+          "translation": "Lola betet jeden Abend für uns.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Hinaut unta nga walay bagyo sa Cebu karong tuiga.",
+          "direction": "ceb_de",
+          "options": [
+            "Hoffentlich gibt es dieses Jahr keinen Taifun in Cebu.",
+            "Hoffentlich regnet es dieses Jahr in Cebu.",
+            "Es gab dieses Jahr keinen Taifun in Cebu.",
+            "Ich bete, dass der Taifun Cebu verlässt."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "unta", "de": "hoffentlich; gern (Wunschpartikel)"},
+            {"ceb": "hinaut", "de": "ich hoffe"},
+            {"ceb": "puhon", "de": "so Gott will"},
+            {"ceb": "tuman", "de": "erfüllen; in Erfüllung gehen"},
+            {"ceb": "pasalamat", "de": "dankbar sein"}
+          ]
+        }
+      ],
+      "surprise": {
+        "ceb": "Ikaw ang tubag sa akong mga pag-ampo.",
+        "de": "Du bist die Antwort auf meine Gebete.",
+        "when": "Wenn sie an einem schlechten Tag fragt, ob du sie wirklich brauchst – oder einfach am Sonntagmorgen beim Kaffee."
+      }
+    },
+    {
+      "id": "u12_l03",
+      "title": "Pläne & Zukunft",
+      "vocab": [
+        {"ceb": "umaabot", "de": "kommend; bevorstehend", "note": "sa umaabot = demnächst / in Zukunft; sa umaabot nga tuig = im kommenden Jahr"},
+        {"ceb": "kaugmaon", "de": "Zukunft", "note": "para sa atong kaugmaon = für unsere Zukunft. Von ugma = morgen"},
+        {"ceb": "tukod", "de": "bauen (Gebäude); errichten; gründen", "note": "Magtukod mi ug balay sa Cebu = Wir bauen ein Haus in Cebu. Für Möbel: himo"},
+        {"ceb": "tigom", "de": "sparen; sammeln; ansammeln", "note": "Magtigom mi ug kwarta para sa biyahe = Wir sparen Geld für die Reise. Tinigom = Ersparnisse"},
+        {"ceb": "negosyo", "de": "Geschäft (Unternehmen); Business", "note": "Gusto ko magnegosyo sa Pilipinas = Ich möchte auf den Philippinen ein Geschäft aufmachen"},
+        {"ceb": "retiro", "de": "Ruhestand; in Rente gehen", "note": "Magretiro ko sa Pilipinas = Ich gehe auf den Philippinen in Rente. Retirado = Rentner"},
+        {"ceb": "kung", "de": "wenn; falls", "note": "Kung naa koy kwarta, mopalit ko ug yuta = Wenn ich Geld habe, kaufe ich Land. Auch kon geschrieben"},
+        {"ceb": "kalibutan", "de": "Welt", "note": "tibuok kalibutan = die ganze Welt. Ikaw ang akong kalibutan = Du bist meine Welt"},
+        {"ceb": "tinguha", "de": "Ziel; Bestreben; anstreben", "note": "Akong tinguha nga makasulti ug Binisaya = Mein Ziel ist, Cebuano zu sprechen"},
+        {"ceb": "paningkamot", "de": "sich bemühen; Anstrengung", "note": "Maningkamot ko = Ich gebe mir Mühe. Paningkamoti = Streng dich an. Wurzel: kamot (Hand)"}
+      ],
+      "grammar": {
+        "title": "Kung naa koy kwarta …",
+        "text": "Kung heißt „wenn/falls“ und steht am Anfang der Bedingung, danach kommt der Plan mit mag- oder mo-: Kung naa koy kwarta, magtukod mi ug balay sa Cebu = Wenn ich Geld habe, bauen wir ein Haus in Cebu. Für Zukunftspläne sagst du sa umaabot = in Zukunft oder sa umaabot nga tuig = im kommenden Jahr: Sa umaabot, mobalik mi sa Pilipinas. Magtigom mi ug kwarta para sa atong kaugmaon = Wir sparen Geld für unsere Zukunft – tigom ist sparen, kaugmaon kommt von ugma (morgen). Ein Ziel nennst du mit tinguha: Akong tinguha nga makasulti ug Binisaya = Mein Ziel ist, Cebuano sprechen zu können. Und wenn es schwer wird: Maningkamot ko = Ich gebe mir Mühe."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Kung naa koy kwarta, magtukod mi ug balay sa Cebu.",
+          "direction": "ceb_de",
+          "options": [
+            "Wenn ich Geld habe, bauen wir ein Haus in Cebu.",
+            "Weil ich Geld habe, kaufen wir ein Haus in Cebu.",
+            "Ich habe Geld, also bauen wir Möbel in Cebu.",
+            "Wenn ich Geld hätte, würde ich nach Cebu fliegen."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Wir sparen Geld für die Reise.",
+          "tokens": ["Magtigom", "mi", "ug", "kwarta", "para", "sa", "biyahe", "magtukod", "negosyo", "kung"],
+          "answer": ["Magtigom", "mi", "ug", "kwarta", "para", "sa", "biyahe"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sa ___ nga tuig, mobalik mi sa Pilipinas.",
+          "translation": "Im kommenden Jahr kehren wir auf die Philippinen zurück.",
+          "options": ["umaabot", "miaging", "kaugmaon"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "umaabot", "de": "kommend; bevorstehend"},
+            {"ceb": "kaugmaon", "de": "Zukunft"},
+            {"ceb": "negosyo", "de": "Geschäft (Unternehmen)"},
+            {"ceb": "retiro", "de": "Ruhestand"},
+            {"ceb": "kalibutan", "de": "Welt"}
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Magretiro ko sa Pilipinas.",
+          "translation": "Ich gehe auf den Philippinen in Rente.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich gebe mir Mühe.",
+          "answer": "Maningkamot ko",
+          "accepted": ["Magpaningkamot ko"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Welt",
+          "direction": "de_ceb",
+          "options": ["kalibutan", "kaugmaon", "kalingawan", "kasingkasing"],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ mag-ulan ugma, magtrabaho ko sa talyer.",
+          "translation": "Wenn es morgen regnet, arbeite ich in der Werkstatt.",
+          "options": ["Kung", "Kay", "Kaysa"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Du bist meine Welt.",
+          "tokens": ["Ikaw", "ang", "akong", "kalibutan", "kaugmaon", "tinguha", "negosyo"],
+          "answer": ["Ikaw", "ang", "akong", "kalibutan"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Gusto ko magnegosyo sa Pilipinas.",
+          "translation": "Ich möchte auf den Philippinen in Rente gehen.",
+          "answer": false,
+          "correction": "Ich möchte auf den Philippinen ein Geschäft aufmachen."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Akong tinguha nga makasulti ug Binisaya sa umaabot nga tuig.",
+          "direction": "ceb_de",
+          "options": [
+            "Mein Ziel ist, im kommenden Jahr Cebuano sprechen zu können.",
+            "Mein Traum ist, nächstes Jahr nach Cebu zu reisen.",
+            "Ich bemühe mich, dieses Jahr Englisch zu lernen.",
+            "Mein Ziel ist, im kommenden Jahr ein Haus zu bauen."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Wenn ich Geld habe, kaufe ich Land.",
+          "answer": "Kung naa koy kwarta, mopalit ko ug yuta",
+          "accepted": ["Kung naa koy kwarta mopalit ko ug yuta"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Magtigom ta ug kwarta para sa atong ___.",
+          "translation": "Wir sparen Geld für unsere Zukunft.",
+          "options": ["kaugmaon", "kalibutan", "negosyo"],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "tukod oder himo?",
+          "text": "Tukod heißt bauen im Sinne von errichten: magtukod ug balay, ug eskwelahan, ug negosyo. Für deine Möbel in der Werkstatt bleibt es himo: maghimo ug lamesa. Also: Das Haus in Cebu wird gitukod, der Tisch darin gihimo – von dir, versteht sich."
+        },
+        {
+          "type": "word_bank",
+          "prompt": "In Zukunft bauen wir ein Haus in Cebu.",
+          "tokens": ["Sa", "umaabot", "magtukod", "mi", "ug", "balay", "sa", "Cebu", "kung", "magtigom"],
+          "answer": ["Sa", "umaabot", "magtukod", "mi", "ug", "balay", "sa", "Cebu"],
+          "accepted": ["Magtukod mi ug balay sa Cebu sa umaabot"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Kung mahuman na ang eksam, magbakasyon ta sa Bohol.",
+          "translation": "Wenn die Prüfung vorbei ist, machen wir Urlaub auf Bohol.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Maningkamot ko para sa atong pamilya.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich gebe mir Mühe für unsere Familie.",
+            "Ich spare für unsere Familie.",
+            "Ich baue für unsere Familie.",
+            "Ich gehe für unsere Familie in Rente."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "tukod", "de": "bauen (Gebäude); errichten"},
+            {"ceb": "tigom", "de": "sparen; sammeln"},
+            {"ceb": "kung", "de": "wenn; falls"},
+            {"ceb": "tinguha", "de": "Ziel; Bestreben"},
+            {"ceb": "paningkamot", "de": "sich bemühen; Anstrengung"}
+          ]
+        }
+      ],
+      "surprise": {
+        "ceb": "Bisan asa ta sa kalibutan, ikaw gihapon ang akong kaugmaon.",
+        "de": "Egal wo auf der Welt wir sind, du bleibst meine Zukunft.",
+        "when": "Beim Planen der nächsten Reise – oder wenn sie wieder fragt, ob ihr irgendwann in Cebu leben werdet."
+      }
+    },
+    {
+      "id": "u12_l04",
+      "title": "Wir zwei",
+      "vocab": [
+        {"ceb": "hangtod sa hangtod", "de": "für immer; bis in alle Ewigkeit", "note": "Gihigugma tika hangtod sa hangtod = Ich liebe dich für immer"},
+        {"ceb": "salig", "de": "vertrauen; Vertrauen; sich verlassen auf", "note": "Mosalig ko nimo = Ich vertraue dir. Salig lang = Vertrau einfach. Pagsalig = Vertrauen"},
+        {"ceb": "matinud-anon", "de": "ehrlich; aufrichtig; treu", "note": "Matinud-anon ko nimo = Ich bin dir treu / ehrlich zu dir. Von tinuod = wahr"},
+        {"ceb": "selos", "de": "Eifersucht; eifersüchtig", "note": "Nagselos ka? = Bist du eifersüchtig? Ayaw ug selos = Sei nicht eifersüchtig"},
+        {"ceb": "away", "de": "Streit; streiten", "note": "Nag-away mi gahapon = Wir haben uns gestern gestritten. Ayaw ta mag-away = Lass uns nicht streiten"},
+        {"ceb": "atiman", "de": "sich kümmern um; pflegen; versorgen", "note": "Atimanon tika = Ich werde mich um dich kümmern. Nag-atiman si Mama sa bata = Mama kümmert sich um das Kind"},
+        {"ceb": "suporta", "de": "Unterstützung; unterstützen", "note": "Salamat sa imong suporta = Danke für deine Unterstützung. Mosuporta ko nimo = Ich unterstütze dich"},
+        {"ceb": "respeto", "de": "Respekt; respektieren", "note": "Respetoha ang mga tigulang = Respektiere die Älteren. Naa koy respeto nimo = Ich habe Respekt vor dir"},
+        {"ceb": "bulawan", "de": "Gold; golden", "note": "bulawan nga kasingkasing = ein goldenes Herz. Bulawanon = goldig/wertvoll"},
+        {"ceb": "yawyaw", "de": "nörgeln; meckern; schimpfen (vor sich hin)", "note": "Ayaw na ug yawyaw = Hör auf zu meckern. Nagyawyaw na pud si Mama = Mama schimpft schon wieder (liebevoll)"}
+      ],
+      "grammar": {
+        "title": "Mosalig ko nimo",
+        "text": "Für Sätze über euch zwei brauchst du nimo (dir/dich) und tika (ich … dich): Mosalig ko nimo = Ich vertraue dir, Atimanon tika = Ich werde mich um dich kümmern, Gihigugma tika hangtod sa hangtod = Ich liebe dich für immer. Mit Ayaw ta mag-away sagst du „Lass uns nicht streiten“ – ayaw ist das Verbot, ta schließt euch beide ein. Matinud-anon ko nimo heißt „Ich bin dir treu“ und kommt von tinuod (wahr). Salamat sa imong suporta = Danke für deine Unterstützung, Naa koy respeto nimo = Ich habe Respekt vor dir. Und yawyaw (nörgeln) sagst du nur mit einem Lächeln: Nagyawyaw na pud si Mama = Mama schimpft schon wieder."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Mosalig ko nimo, Langga.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich vertraue dir, Liebling.",
+            "Ich kümmere mich um dich, Liebling.",
+            "Ich unterstütze dich, Liebling.",
+            "Ich respektiere dich, Liebling."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich liebe dich für immer.",
+          "tokens": ["Gihigugma", "tika", "hangtod", "sa", "hangtod", "salig", "selos", "away"],
+          "answer": ["Gihigugma", "tika", "hangtod", "sa", "hangtod"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ayaw ta ___.",
+          "translation": "Lass uns nicht streiten.",
+          "options": ["mag-away", "mag-atiman", "magyawyaw"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "salig", "de": "vertrauen; Vertrauen"},
+            {"ceb": "selos", "de": "Eifersucht"},
+            {"ceb": "away", "de": "Streit; streiten"},
+            {"ceb": "suporta", "de": "Unterstützung"},
+            {"ceb": "respeto", "de": "Respekt"}
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Atimanon tika kung masakit ka.",
+          "translation": "Ich werde mich um dich kümmern, wenn du krank bist.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich vertraue dir.",
+          "answer": "Mosalig ko nimo",
+          "accepted": ["Nagsalig ko nimo"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Bist du eifersüchtig?",
+          "direction": "de_ceb",
+          "options": ["Nagselos ka?", "Nag-away ka?", "Nagyawyaw ka?", "Nagsalig ka?"],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Salamat sa imong ___, Mama.",
+          "translation": "Danke für deine Unterstützung, Mama.",
+          "options": ["suporta", "selos", "away"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich bin dir treu.",
+          "tokens": ["Matinud-anon", "ko", "nimo", "selos", "bulawan", "away"],
+          "answer": ["Matinud-anon", "ko", "nimo"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Bulawan ang kasingkasing ni Mama.",
+          "translation": "Mama hat ein Herz aus Gold.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Nagyawyaw na pud si Mama kay hugaw ang kusina.",
+          "direction": "ceb_de",
+          "options": [
+            "Mama meckert schon wieder, weil die Küche schmutzig ist.",
+            "Mama putzt schon wieder, weil die Küche schmutzig ist.",
+            "Mama lacht, weil die Küche sauber ist.",
+            "Mama streitet wieder mit Inday in der Küche."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Lass uns nicht streiten.",
+          "answer": "Ayaw ta mag-away"
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich habe Respekt vor dir.",
+          "tokens": ["Naa", "koy", "respeto", "nimo", "suporta", "selos", "salig"],
+          "answer": ["Naa", "koy", "respeto", "nimo"]
+        },
+        {
+          "type": "grammar_note",
+          "title": "tika – ich … dich",
+          "text": "Tika ist die Kurzform von ko + ikaw und steht direkt nach dem Verb, meist bei Objektfokus mit gi- oder -on: Gihigugma tika = Ich liebe dich, Atimanon tika = Ich kümmere mich um dich, Hulaton tika = Ich warte auf dich. Bei Verben mit mo- oder nag- bleibt es ko nimo: Mosalig ko nimo, Gimingaw ko nimo. Beides klingt romantisch – aber nur eines ist richtig."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ayaw ug ___, Langga, amiga ra nako siya.",
+          "translation": "Sei nicht eifersüchtig, Liebling, sie ist nur meine Freundin.",
+          "options": ["selos", "away", "respeto"],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Nag-away mi gahapon pero okay na mi karon.",
+          "translation": "Wir haben uns gestern gestritten, aber jetzt ist alles wieder gut.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Mosuporta ko nimo bisan unsa ang imong plano.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich unterstütze dich, egal was dein Plan ist.",
+            "Ich vertraue dir, obwohl dein Plan schlecht ist.",
+            "Ich kümmere mich um deinen Plan.",
+            "Ich respektiere nur deinen Plan."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "hangtod sa hangtod", "de": "für immer"},
+            {"ceb": "matinud-anon", "de": "ehrlich; treu"},
+            {"ceb": "atiman", "de": "sich kümmern um"},
+            {"ceb": "bulawan", "de": "Gold; golden"},
+            {"ceb": "yawyaw", "de": "nörgeln; meckern"}
+          ]
+        }
+      ],
+      "surprise": {
+        "ceb": "Bisan magyawyaw ka, ikaw gihapon ang bulawan sa akong kinabuhi.",
+        "de": "Auch wenn du meckerst, bist du immer noch das Gold meines Lebens.",
+        "when": "Wenn sie gerade geschimpft hat, weil wieder Sägespäne aus der Werkstatt in der Küche liegen – mit einem Grinsen sagen."
+      }
+    },
+    {
+      "id": "u12_l05",
+      "title": "Unsere Tochter wird groß",
+      "vocab": [
+        {"ceb": "mahimong", "de": "werden (zu etwas)", "note": "Mahimong doktor siya = Sie wird Ärztin. Gusto ko mahimong maayong papa = Ich möchte ein guter Papa werden. Von mahimo + ng"},
+        {"ceb": "pinulongan", "de": "Sprache", "note": "duha ka pinulongan = zwei Sprachen. Von pulong = Wort"},
+        {"ceb": "Binisaya", "de": "Cebuano; Bisaya (die Sprache)", "note": "Makasulti ko ug Binisaya = Ich kann Cebuano sprechen. Sa Binisaya = auf Cebuano. Auch: Bisaya, Sinugboanon"},
+        {"ceb": "Iningles", "de": "Englisch (Sprache)", "note": "Sa Iningles = auf Englisch. Viele sagen einfach English"},
+        {"ceb": "lambo", "de": "sich entwickeln; Fortschritte machen; gedeihen", "note": "Molambo ang atong anak = Unser Kind wird sich gut entwickeln. Paglambo = Fortschritt"},
+        {"ceb": "edukasyon", "de": "Bildung; Ausbildung; Erziehung", "note": "Importante ang edukasyon = Bildung ist wichtig. Maayong edukasyon = gute Ausbildung"},
+        {"ceb": "garbo", "de": "Stolz", "note": "Garbo nako akong anak = Mein Kind ist mein Stolz. Im Alltag sagt man oft: Proud ko nimo = Ich bin stolz auf dich"},
+        {"ceb": "kinaiya", "de": "Charakter; Wesen; Art (eines Menschen)", "note": "Maayo ang iyang kinaiya = Sie hat einen guten Charakter. Nindot ug kinaiya = hat eine schöne Art"},
+        {"ceb": "batasan", "de": "Benehmen; Gewohnheit; Sitte", "note": "Maayo ug batasan ang bata = Das Kind benimmt sich gut. Batasan sa mga Pilipino = die Sitten der Filipinos"},
+        {"ceb": "maalamon", "de": "klug; weise", "note": "Maalamon kaayo ang among anak = Unser Kind ist sehr klug. Auch: utokan (von utok = Gehirn)"}
+      ],
+      "grammar": {
+        "title": "Mahimong doktor siya",
+        "text": "Was jemand einmal wird, sagst du mit mahimong + Beruf: Mahimong doktor siya = Sie wird Ärztin, Gusto ko mahimong maayong papa = Ich möchte ein guter Papa werden. Eure Tochter wächst mit duha ka pinulongan auf, zwei Sprachen: Makakat-on siya ug Binisaya ug Iningles = Sie wird Cebuano und Englisch lernen. Molambo ang atong anak = Unser Kind wird sich gut entwickeln – lambo ist wachsen im Sinne von Fortschritte machen. Über ihren Charakter sprichst du mit kinaiya (Wesen) und batasan (Benehmen): Maayo ug batasan si Inday = Inday benimmt sich gut. Und wenn du stolz bist: Garbo nako akong anak = Mein Kind ist mein Stolz."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Mahimong doktor si Inday sa umaabot.",
+          "direction": "ceb_de",
+          "options": [
+            "Inday wird in Zukunft Ärztin.",
+            "Inday ist jetzt Ärztin.",
+            "Inday möchte Lehrerin werden.",
+            "Inday geht in Zukunft zum Arzt."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Sie wird Cebuano und Englisch lernen.",
+          "tokens": ["Makakat-on", "siya", "ug", "Binisaya", "ug", "Iningles", "Deutsch", "pinulongan", "garbo"],
+          "answer": ["Makakat-on", "siya", "ug", "Binisaya", "ug", "Iningles"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Makasulti si Inday ug duha ka ___.",
+          "translation": "Inday kann zwei Sprachen sprechen.",
+          "options": ["pinulongan", "kinaiya", "batasan"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "mahimong", "de": "werden (zu etwas)"},
+            {"ceb": "pinulongan", "de": "Sprache"},
+            {"ceb": "edukasyon", "de": "Bildung; Ausbildung"},
+            {"ceb": "garbo", "de": "Stolz"},
+            {"ceb": "maalamon", "de": "klug; weise"}
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Garbo nako akong anak.",
+          "translation": "Mein Kind ist mein Stolz.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich möchte ein guter Papa werden.",
+          "answer": "Gusto ko mahimong maayong papa",
+          "accepted": ["Gusto ko nga mahimong maayong papa"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Bildung ist wichtig.",
+          "direction": "de_ceb",
+          "options": ["Importante ang edukasyon.", "Importante ang pinulongan.", "Importante ang batasan.", "Importante ang garbo."],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kaayo ang among anak, makabasa na siya.",
+          "translation": "Unser Kind ist sehr klug, es kann schon lesen.",
+          "options": ["Maalamon", "Tapulan", "Buang"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Unser Kind wird sich gut entwickeln.",
+          "tokens": ["Molambo", "ang", "atong", "anak", "mahimong", "garbo", "batasan"],
+          "answer": ["Molambo", "ang", "atong", "anak"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Maayo ug batasan si Inday.",
+          "translation": "Inday benimmt sich gut.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Magsulti si Mama ug Binisaya kang Inday, ug magsulti ko ug Deutsch.",
+          "direction": "ceb_de",
+          "options": [
+            "Mama spricht Cebuano mit Inday, und ich spreche Deutsch.",
+            "Mama spricht Englisch mit Inday, und ich spreche Cebuano.",
+            "Inday spricht Cebuano mit Mama und Deutsch mit mir.",
+            "Mama lernt Deutsch von Inday."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Sie wird Ärztin.",
+          "answer": "Mahimong doktor siya",
+          "accepted": ["Mahimong doktora siya"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Maayo ang ___ ni Mama, buotan kaayo siya.",
+          "translation": "Mama hat einen guten Charakter, sie ist sehr lieb.",
+          "options": ["kinaiya", "edukasyon", "pinulongan"],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "Binisaya, Bisaya, Cebuano",
+          "text": "Deine Frau sagt wahrscheinlich Bisaya oder Binisaya, wenn sie ihre Sprache meint – Cebuano ist eher das Wort aus den Büchern. Das -in- in B-in-isaya ist dasselbe wie in gisulat/sinulat: „auf die Art der Bisaya“. Genauso: Iningles = auf Englisch, Tinagalog = auf Tagalog – und wenn Inday mal auf Deutsch nörgelt, dann auf Inaleman."
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Inday kann zwei Sprachen sprechen.",
+          "tokens": ["Makasulti", "si", "Inday", "ug", "duha", "ka", "pinulongan", "tulo", "kinaiya"],
+          "answer": ["Makasulti", "si", "Inday", "ug", "duha", "ka", "pinulongan"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Mahimong nars si Inday.",
+          "translation": "Inday wird Lehrerin.",
+          "answer": false,
+          "correction": "Inday wird Krankenschwester."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Importante kaayo ang maayong edukasyon para sa kaugmaon ni Inday.",
+          "direction": "ceb_de",
+          "options": [
+            "Eine gute Ausbildung ist sehr wichtig für Indays Zukunft.",
+            "Eine gute Schule ist sehr teuer für Indays Zukunft.",
+            "Indays Benehmen ist wichtig für die Schule.",
+            "Inday lernt sehr wichtige Sachen für die Zukunft."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "Binisaya", "de": "Cebuano; Bisaya (die Sprache)"},
+            {"ceb": "Iningles", "de": "Englisch (Sprache)"},
+            {"ceb": "lambo", "de": "sich entwickeln; Fortschritte machen"},
+            {"ceb": "kinaiya", "de": "Charakter; Wesen"},
+            {"ceb": "batasan", "de": "Benehmen; Gewohnheit"}
+          ]
+        }
+      ],
+      "surprise": {
+        "ceb": "Kung mahimong sama nimo si Inday, bulahan gyud ko.",
+        "de": "Wenn Inday einmal so wird wie du, bin ich wirklich gesegnet.",
+        "when": "Wenn Inday gerade etwas Süßes gemacht hat und ihr beide zuschaut."
+      }
+    },
+    {
+      "id": "u12_l06",
+      "title": "Salamat sa tanan – A2-Abschluss",
+      "vocab": [
+        {"ceb": "mapasalamaton", "de": "dankbar", "note": "Mapasalamaton ko nimo = Ich bin dir dankbar. Von salamat"},
+        {"ceb": "bulahan", "de": "gesegnet; glücklich (durch Segen)", "note": "Bulahan ko nga naa ka = Ich bin gesegnet, dass es dich gibt"},
+        {"ceb": "bililhon", "de": "wertvoll; kostbar", "note": "Bililhon ka para nako = Du bist wertvoll für mich. Von bili = Wert"},
+        {"ceb": "hinungdan", "de": "Grund; Ursache", "note": "Ikaw ang hinungdan sa akong kalipay = Du bist der Grund meiner Freude. Unsay hinungdan? = Was ist der Grund?"},
+        {"ceb": "kalinaw", "de": "Frieden; innere Ruhe", "note": "Naa koy kalinaw kung kauban tika = Ich habe Frieden, wenn ich bei dir bin. Von linaw = ruhig (Wasser)"},
+        {"ceb": "lantaw", "de": "schauen (in die Ferne); Ausblick; vorausschauen", "note": "Molantaw ta sa umaabot = Lass uns nach vorn schauen. Lantawa ang dagat = Schau aufs Meer"},
+        {"ceb": "kapitulo", "de": "Kapitel", "note": "bag-ong kapitulo sa atong kinabuhi = ein neues Kapitel in unserem Leben"},
+        {"ceb": "mahigugmaon", "de": "liebevoll", "note": "Mahigugmaon ka nga mama = Du bist eine liebevolle Mama. Von higugma = lieben"},
+        {"ceb": "lampos", "de": "gelingen; Erfolg haben; es schaffen", "note": "Molampos ta = Wir werden es schaffen. Kalampusan = Erfolg"},
+        {"ceb": "dungog", "de": "Ehre; Ruf; Ansehen", "note": "Dungog nako nga ikaw akong asawa = Es ist mir eine Ehre, dass du meine Frau bist. Dungganon = ehrenwert"}
+      ],
+      "grammar": {
+        "title": "Eine kleine Rede: Salamat sa tanan",
+        "text": "Zum Abschluss baust du aus allem, was du kannst, eine kleine Rede für deine Frau. Du beginnst mit Dank: Mapasalamaton ko nimo, Langga = Ich bin dir dankbar, Liebling, Ikaw ang hinungdan sa akong kalipay = Du bist der Grund meiner Freude. Dann der Blick nach vorn mit lantaw und kapitulo: Molantaw ta sa umaabot, bag-ong kapitulo sa atong kinabuhi = Lass uns nach vorn schauen, ein neues Kapitel in unserem Leben. Dazu ein Wunsch mit unta oder puhon und eine Bedingung mit kung: Kung kauban tika, naa koy kalinaw = Wenn ich bei dir bin, habe ich Frieden. Und das Ende ist immer dasselbe: Molampos ta, kay gihigugma tika hangtod sa hangtod = Wir schaffen das, weil ich dich für immer liebe."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Mapasalamaton ko nimo, Langga, sa tanan.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich bin dir dankbar, Liebling, für alles.",
+            "Ich vermisse dich, Liebling, so sehr.",
+            "Ich bin stolz auf dich, Liebling, für alles.",
+            "Danke, Liebling, für das Essen."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Du bist der Grund meiner Freude.",
+          "tokens": ["Ikaw", "ang", "hinungdan", "sa", "akong", "kalipay", "kalinaw", "dungog", "bulahan"],
+          "answer": ["Ikaw", "ang", "hinungdan", "sa", "akong", "kalipay"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ko nga naa ka sa akong kinabuhi.",
+          "translation": "Ich bin gesegnet, dass du in meinem Leben bist.",
+          "options": ["Bulahan", "Bililhon", "Mahigugmaon"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "mapasalamaton", "de": "dankbar"},
+            {"ceb": "bulahan", "de": "gesegnet"},
+            {"ceb": "bililhon", "de": "wertvoll; kostbar"},
+            {"ceb": "hinungdan", "de": "Grund; Ursache"},
+            {"ceb": "kalinaw", "de": "Frieden; innere Ruhe"}
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Bililhon ka para nako.",
+          "translation": "Du bist wertvoll für mich.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Lass uns nach vorn schauen.",
+          "answer": "Molantaw ta sa umaabot"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "ein neues Kapitel",
+          "direction": "de_ceb",
+          "options": ["bag-ong kapitulo", "bag-ong kalibutan", "bag-ong kinabuhi", "bag-ong kaugmaon"],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Molampos ta, ___ gihigugma tika hangtod sa hangtod.",
+          "translation": "Wir werden es schaffen, weil ich dich für immer liebe.",
+          "options": ["kay", "kung", "kaysa"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Du bist eine liebevolle Mama.",
+          "tokens": ["Mahigugmaon", "ka", "nga", "mama", "maalamon", "bulahan", "dungog"],
+          "answer": ["Mahigugmaon", "ka", "nga", "mama"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Dungog nako nga ikaw akong asawa.",
+          "translation": "Es ist mir eine Ehre, dass du meine Frau bist.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Naa koy kalinaw kung kauban tika.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich habe Frieden, wenn ich bei dir bin.",
+            "Ich habe Probleme, wenn ich bei dir bin.",
+            "Ich habe Hoffnung, weil du bei mir bleibst.",
+            "Ich bin ruhig, weil du schläfst."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Wir werden es schaffen.",
+          "answer": "Molampos ta",
+          "accepted": ["Molampos kita"]
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ein neues Kapitel in unserem Leben beginnt.",
+          "tokens": ["Mosugod", "ang", "bag-ong", "kapitulo", "sa", "atong", "kinabuhi", "katapusan", "molampos", "dungog"],
+          "answer": ["Mosugod", "ang", "bag-ong", "kapitulo", "sa", "atong", "kinabuhi"],
+          "accepted": ["Magsugod ang bag-ong kapitulo sa atong kinabuhi"]
+        },
+        {
+          "type": "grammar_note",
+          "title": "Die ganze Rede",
+          "text": "Jetzt alles zusammen – lies es ihr langsam vor, mit Blick in die Augen: Langga, mapasalamaton ko nimo sa tanan. Ikaw ang hinungdan sa akong kalipay ug ang panalangin sa akong kinabuhi. Mosalig ko nimo, atimanon tika, ug mosuporta ko nimo hangtod sa hangtod. Kung kauban tika, naa koy kalinaw. Molantaw ta sa umaabot: bag-ong kapitulo, bag-ong balay sa Cebu, puhon. Garbo nako ikaw ug si Inday. Molampos ta – kay gihigugma tika, karon ug hangtod sa hangtod."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Ikaw ang ___ sa akong kinabuhi.",
+          "translation": "Du bist der Segen meines Lebens.",
+          "options": ["panalangin", "hinungdan", "kapitulo"],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Mapasalamaton si Tim sa suporta sa iyang asawa.",
+          "translation": "Tim ärgert sich über die Unterstützung seiner Frau.",
+          "answer": false,
+          "correction": "Tim ist dankbar für die Unterstützung seiner Frau."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Matod pa ni Lola, bulahan ang pamilya nga naay kalinaw.",
+          "direction": "ceb_de",
+          "options": [
+            "Wie Lola sagt, ist eine Familie gesegnet, die Frieden hat.",
+            "Wie Lola sagt, ist eine Familie reich, die Geld hat.",
+            "Lola sagt, eine Familie braucht ein großes Haus.",
+            "Lola hofft, dass die Familie Frieden hat."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "lantaw", "de": "schauen (in die Ferne); vorausschauen"},
+            {"ceb": "kapitulo", "de": "Kapitel"},
+            {"ceb": "mahigugmaon", "de": "liebevoll"},
+            {"ceb": "lampos", "de": "gelingen; Erfolg haben"},
+            {"ceb": "dungog", "de": "Ehre; Ansehen"}
+          ]
+        }
+      ],
+      "surprise": {
+        "ceb": "Salamat, Langga, kay gitudloan ko nimo sa imong pinulongan ug sa imong kalibutan. Karon makasulti na ko: Gihigugma tika hangtod sa hangtod, sa Binisaya ug sa tanang paagi.",
+        "de": "Danke, Liebling, dass du mir deine Sprache und deine Welt beigebracht hast. Jetzt kann ich es sagen: Ich liebe dich für immer – auf Cebuano und auf jede Art.",
+        "when": "Am Ende des Kurses – am besten auswendig, beim Abendessen oder am Hochzeitstag."
+      }
+    }
+  ]
+}
