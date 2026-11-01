@@ -1,0 +1,325 @@
+{
+  "unit": 5,
+  "title": "Zuhause, Zimmer, Gegenstände, Ortsangaben",
+  "level": "A1",
+  "lessons": [
+    {
+      "id": "u05_l01",
+      "title": "Unser Haus",
+      "vocab": [
+        {"ceb": "balay", "de": "Haus", "note": "sa balay = zu Hause"},
+        {"ceb": "kwarto", "de": "Zimmer; Schlafzimmer"},
+        {"ceb": "kusina", "de": "Küche"},
+        {"ceb": "banyo", "de": "Bad (Badezimmer)"},
+        {"ceb": "kasilyas", "de": "Toilette", "note": "auch CR (comfort room) genannt"},
+        {"ceb": "sala", "de": "Wohnzimmer"},
+        {"ceb": "pultahan", "de": "Tür"},
+        {"ceb": "bintana", "de": "Fenster"},
+        {"ceb": "hagdan", "de": "Treppe"},
+        {"ceb": "naa", "de": "da sein; es gibt; haben", "note": "Naa si Mama sa kusina. Naa koy anak = Ich habe ein Kind. Gegenteil: wala"}
+      ],
+      "grammar": {
+        "title": "Naa … sa … / Naa koy …",
+        "text": "Naa heißt „da sein, es gibt“, und sa zeigt den Ort: Naa si Mama sa kusina = Mama ist in der Küche, Naa ko sa balay = Ich bin zu Hause. Hängst du ein -y an das Pronomen (naa koy …), wird daraus „ich habe“: Naa koy bag-ong balay = Ich habe ein neues Haus. Das Gegenteil ist wala: Wala koy kwarta = Ich habe kein Geld, Wala si Papa sa balay = Papa ist nicht zu Hause. Merke: naa koy = ich habe, wala koy = ich habe kein."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Naa si Mama sa kusina.", "direction": "ceb_de", "options": ["Mama ist in der Küche.", "Mama ist im Bad.", "Mama ist im Wohnzimmer.", "Mama ist nicht zu Hause."], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "balay", "de": "Haus"},
+          {"ceb": "kwarto", "de": "Zimmer"},
+          {"ceb": "kusina", "de": "Küche"},
+          {"ceb": "banyo", "de": "Bad"},
+          {"ceb": "sala", "de": "Wohnzimmer"}
+        ]},
+        {"type": "fill_blank", "prompt": "Naa si Papa sa ___.", "translation": "Papa ist im Wohnzimmer.", "options": ["sala", "kusina", "banyo"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich bin zu Hause.", "tokens": ["Naa", "ko", "sa", "balay", "kusina", "siya"], "answer": ["Naa", "ko", "sa", "balay"]},
+        {"type": "true_false", "statement": "Naa koy bag-ong balay.", "translation": "Ich habe ein neues Haus.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Toilette", "direction": "de_ceb", "options": ["kasilyas", "banyo", "kusina", "hagdan"], "answer": 0},
+        {"type": "type_answer", "prompt": "Tür", "answer": "pultahan"},
+        {"type": "multiple_choice", "prompt": "Wala koy kwarta.", "direction": "ceb_de", "options": ["Ich habe kein Geld.", "Ich habe Geld.", "Ich bin nicht zu Hause.", "Ich habe kein Haus."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Naa si Inday sa ___. Natulog siya.", "translation": "Inday ist im Zimmer. Sie schläft.", "options": ["kwarto", "hagdan", "bintana"], "answer": 0},
+        {"type": "word_bank", "prompt": "Mama ist in der Küche.", "tokens": ["Naa", "si", "Mama", "sa", "kusina", "banyo", "ko"], "answer": ["Naa", "si", "Mama", "sa", "kusina"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "kasilyas", "de": "Toilette"},
+          {"ceb": "pultahan", "de": "Tür"},
+          {"ceb": "bintana", "de": "Fenster"},
+          {"ceb": "hagdan", "de": "Treppe"},
+          {"ceb": "naa", "de": "da sein"}
+        ]},
+        {"type": "true_false", "statement": "Naa ko sa banyo.", "translation": "Ich bin in der Küche.", "answer": false, "correction": "Ich bin im Bad."},
+        {"type": "type_answer", "prompt": "Ich habe ein Kind.", "answer": "Naa koy anak", "accepted": ["Naa koy usa ka anak"]},
+        {"type": "grammar_note", "title": "naa koy = ich habe", "text": "Das -y an koy ist die Kurzform von ug: Naa ko ug anak wird zu Naa koy anak. Genauso: Naa kay anak? = Hast du ein Kind? (ka + y). Die Verneinung ist Wala koy … = Ich habe kein …"},
+        {"type": "multiple_choice", "prompt": "Dako ang bintana sa sala.", "direction": "ceb_de", "options": ["Das Fenster im Wohnzimmer ist groß.", "Die Tür im Wohnzimmer ist groß.", "Das Fenster in der Küche ist klein.", "Die Treppe ist groß."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Naligo ko sa ___.", "translation": "Ich habe im Bad geduscht.", "options": ["banyo", "sala", "pultahan"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich habe kein Problem.", "tokens": ["Wala", "koy", "problema", "Naa", "kwarta"], "answer": ["Wala", "koy", "problema"]},
+        {"type": "type_answer", "prompt": "Wir wohnen in einem großen Haus.", "answer": "Nagpuyo mi sa dakong balay", "accepted": ["Nagpuyo mi sa dako nga balay"]}
+      ],
+      "surprise": {"ceb": "Naa ka sa akong kasingkasing.", "de": "Du bist in meinem Herzen.", "when": "Wenn sie weit weg ist, etwa auf Cebu bei der Familie – kasingkasing heißt Herz."}
+    },
+    {
+      "id": "u05_l02",
+      "title": "Möbel & Dinge",
+      "vocab": [
+        {"ceb": "lamesa", "de": "Tisch"},
+        {"ceb": "lingkoranan", "de": "Stuhl", "note": "von lingkod = sitzen (Unit 7); auch silya"},
+        {"ceb": "higdaanan", "de": "Bett", "note": "von higda = sich hinlegen; auch katre"},
+        {"ceb": "aparador", "de": "Schrank"},
+        {"ceb": "suga", "de": "Lampe; Licht", "note": "Ablihi ang suga = Mach das Licht an"},
+        {"ceb": "libro", "de": "Buch"},
+        {"ceb": "selpon", "de": "Handy", "note": "vom englischen cellphone"},
+        {"ceb": "plato", "de": "Teller"},
+        {"ceb": "baso", "de": "Glas (Trinkglas)"},
+        {"ceb": "kutsara", "de": "Löffel", "note": "Gabel: tinidor"}
+      ],
+      "grammar": {
+        "title": "Naa ang selpon sa lamesa – was ist wo?",
+        "text": "Willst du sagen, wo eine Sache ist, nimmst du Naa ang + Sache + sa + Ort: Naa ang selpon sa lamesa = Das Handy ist auf dem Tisch. Ang markiert die Sache, um die es geht, und sa nennt den Ort: Naa ang libro sa aparador = Das Buch ist im Schrank. Bei Personen steht si statt ang: Naa si Inday sa higdaanan = Inday ist im Bett. Ist etwas nicht da, sagst du wala: Wala ang selpon sa lamesa = Das Handy ist nicht auf dem Tisch."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Naa ang selpon sa lamesa.", "direction": "ceb_de", "options": ["Das Handy ist auf dem Tisch.", "Das Handy ist im Schrank.", "Das Buch ist auf dem Tisch.", "Das Handy ist auf dem Bett."], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "lamesa", "de": "Tisch"},
+          {"ceb": "lingkoranan", "de": "Stuhl"},
+          {"ceb": "higdaanan", "de": "Bett"},
+          {"ceb": "aparador", "de": "Schrank"},
+          {"ceb": "suga", "de": "Lampe"}
+        ]},
+        {"type": "fill_blank", "prompt": "Naa ang libro sa ___.", "translation": "Das Buch ist im Schrank.", "options": ["aparador", "plato", "baso"], "answer": 0},
+        {"type": "word_bank", "prompt": "Das Handy ist auf dem Tisch.", "tokens": ["Naa", "ang", "selpon", "sa", "lamesa", "libro", "ko"], "answer": ["Naa", "ang", "selpon", "sa", "lamesa"]},
+        {"type": "true_false", "statement": "Naa ang plato sa kusina.", "translation": "Der Teller ist in der Küche.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Löffel", "direction": "de_ceb", "options": ["kutsara", "plato", "baso", "suga"], "answer": 0},
+        {"type": "type_answer", "prompt": "Buch", "answer": "libro"},
+        {"type": "multiple_choice", "prompt": "Bag-o ang akong selpon.", "direction": "ceb_de", "options": ["Mein Handy ist neu.", "Mein Handy ist alt.", "Mein Buch ist neu.", "Mein Handy ist groß."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Moinom ko ug tubig. Naa ang ___ sa lamesa.", "translation": "Ich trinke Wasser. Das Glas ist auf dem Tisch.", "options": ["baso", "kutsara", "suga"], "answer": 0},
+        {"type": "word_bank", "prompt": "Inday ist im Bett.", "tokens": ["Naa", "si", "Inday", "sa", "higdaanan", "lingkoranan", "ang"], "answer": ["Naa", "si", "Inday", "sa", "higdaanan"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "libro", "de": "Buch"},
+          {"ceb": "selpon", "de": "Handy"},
+          {"ceb": "plato", "de": "Teller"},
+          {"ceb": "baso", "de": "Glas"},
+          {"ceb": "kutsara", "de": "Löffel"}
+        ]},
+        {"type": "true_false", "statement": "Dako ang higdaanan sa kwarto.", "translation": "Der Stuhl im Zimmer ist groß.", "answer": false, "correction": "Das Bett im Zimmer ist groß."},
+        {"type": "type_answer", "prompt": "Das Buch ist auf dem Tisch.", "answer": "Naa ang libro sa lamesa"},
+        {"type": "grammar_note", "title": "Spanische Erbstücke", "text": "Viele Haushaltswörter kommen aus dem Spanischen: lamesa (la mesa), plato, baso (vaso), kutsara (cuchara), aparador. Sie werden auf Cebuano so geschrieben, wie man sie spricht – also baso mit b, nicht vaso."},
+        {"type": "multiple_choice", "prompt": "Naghugas ko ug plato sa kusina.", "direction": "ceb_de", "options": ["Ich spüle Teller in der Küche.", "Ich koche in der Küche.", "Ich kaufe Teller in der Küche.", "Ich esse in der Küche."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Wala ang ___ sa lamesa. Naa sa aparador.", "translation": "Der Löffel ist nicht auf dem Tisch. Er ist im Schrank.", "options": ["kutsara", "higdaanan", "lingkoranan"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich habe vier Stühle.", "tokens": ["Naa", "koy", "upat", "ka", "lingkoranan", "lamesa", "duha"], "answer": ["Naa", "koy", "upat", "ka", "lingkoranan"]},
+        {"type": "type_answer", "prompt": "Lampe", "answer": "suga"}
+      ],
+      "surprise": {"ceb": "Ikaw ang suga sa akong balay.", "de": "Du bist das Licht in meinem Haus.", "when": "Abends, wenn sie das Licht anmacht – oder einfach so, wenn sie müde von der Hausarbeit ist."}
+    },
+    {
+      "id": "u05_l03",
+      "title": "Hier, da, dort",
+      "vocab": [
+        {"ceb": "dinhi", "de": "hier"},
+        {"ceb": "dinha", "de": "da (bei dir)"},
+        {"ceb": "didto", "de": "dort"},
+        {"ceb": "asa", "de": "wo; wohin", "note": "Asa ang banyo? = Wo ist das Bad? Asa ka? = Wo bist du/wohin gehst du?"},
+        {"ceb": "sulod", "de": "innen; drinnen; hineingehen", "note": "sa sulod sa balay = im Haus"},
+        {"ceb": "gawas", "de": "draußen; hinausgehen"},
+        {"ceb": "ibabaw", "de": "oben; auf", "note": "sa ibabaw sa lamesa = auf dem Tisch"},
+        {"ceb": "ilalom", "de": "unten; unter"},
+        {"ceb": "tupad", "de": "neben", "note": "sa tupad nako = neben mir"},
+        {"ceb": "atubangan", "de": "vor (räumlich)", "note": "sa atubangan sa balay = vor dem Haus"}
+      ],
+      "grammar": {
+        "title": "sa ibabaw sa lamesa – genaue Ortsangaben",
+        "text": "Für genaue Ortsangaben nimmst du sa + Lagewort + sa + Ort: sa ibabaw sa lamesa = auf dem Tisch, sa ilalom sa higdaanan = unter dem Bett, sa tupad sa pultahan = neben der Tür. Asa fragt „wo“: Asa ang selpon? – Naa sa ibabaw sa lamesa. Dinhi, dinha und didto funktionieren wie kini, kana, kadto: hier bei mir, da bei dir, dort drüben. Beispiel: Dinhi sa Sauerland bugnaw, didto sa Cebu init."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Asa ang selpon? – Naa sa ibabaw sa lamesa.", "direction": "ceb_de", "options": ["Wo ist das Handy? – Auf dem Tisch.", "Wo ist das Handy? – Unter dem Tisch.", "Wo ist das Buch? – Auf dem Tisch.", "Wo ist das Handy? – Neben dem Tisch."], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "dinhi", "de": "hier"},
+          {"ceb": "dinha", "de": "da (bei dir)"},
+          {"ceb": "didto", "de": "dort"},
+          {"ceb": "sulod", "de": "innen"},
+          {"ceb": "gawas", "de": "draußen"}
+        ]},
+        {"type": "fill_blank", "prompt": "Naa ang libro sa ___ sa higdaanan.", "translation": "Das Buch ist unter dem Bett.", "options": ["ilalom", "ibabaw", "gawas"], "answer": 0},
+        {"type": "word_bank", "prompt": "Wo ist das Bad?", "tokens": ["Asa", "ang", "banyo", "kusina", "Naa", "dinhi"], "answer": ["Asa", "ang", "banyo"]},
+        {"type": "true_false", "statement": "Naa si Papa sa gawas.", "translation": "Papa ist draußen.", "answer": true},
+        {"type": "multiple_choice", "prompt": "neben", "direction": "de_ceb", "options": ["tupad", "atubangan", "ilalom", "ibabaw"], "answer": 0},
+        {"type": "type_answer", "prompt": "dort", "answer": "didto"},
+        {"type": "multiple_choice", "prompt": "Dinhi sa Sauerland bugnaw, didto sa Cebu init.", "direction": "ceb_de", "options": ["Hier im Sauerland ist es kalt, dort auf Cebu ist es heiß.", "Hier im Sauerland ist es heiß, dort auf Cebu ist es kalt.", "Im Sauerland regnet es, auf Cebu scheint die Sonne.", "Hier ist es kalt und dort ist es auch kalt."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Naa ang bisikleta sa ___ sa balay.", "translation": "Das Fahrrad steht vor dem Haus.", "options": ["atubangan", "sulod", "ilalom"], "answer": 0},
+        {"type": "word_bank", "prompt": "Der Stuhl steht neben der Tür.", "tokens": ["Naa", "ang", "lingkoranan", "sa", "tupad", "sa", "pultahan", "ilalom", "bintana"], "answer": ["Naa", "ang", "lingkoranan", "sa", "tupad", "sa", "pultahan"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "ibabaw", "de": "oben; auf"},
+          {"ceb": "ilalom", "de": "unten; unter"},
+          {"ceb": "tupad", "de": "neben"},
+          {"ceb": "atubangan", "de": "vor (räumlich)"},
+          {"ceb": "asa", "de": "wo"}
+        ]},
+        {"type": "true_false", "statement": "Naa ang lamesa sa sulod sa kwarto.", "translation": "Der Tisch steht draußen.", "answer": false, "correction": "Der Tisch steht drinnen im Zimmer."},
+        {"type": "type_answer", "prompt": "Wo bist du?", "answer": "Asa ka", "accepted": ["Asa ka karon"]},
+        {"type": "grammar_note", "title": "dinhi – dinha – didto", "text": "Die drei Wörter zeigen die Entfernung vom Sprecher, genau wie kini, kana, kadto: dinhi = hier bei mir, dinha = da bei dir, didto = dort drüben bei keinem von uns. Asa ka? fragt je nach Situation „Wo bist du?“ oder „Wohin gehst du?“ – die Antwort ist oft nur ein Wort: Dinhi! Didto!"},
+        {"type": "multiple_choice", "prompt": "Asa si Mama? – Didto sa merkado.", "direction": "ceb_de", "options": ["Wo ist Mama? – Dort auf dem Markt.", "Wo ist Mama? – Hier in der Küche.", "Wo ist Mama? – Da im Laden.", "Wohin geht Mama? – Nach Hause."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Dinha ang libro, sa ___ sa lingkoranan.", "translation": "Da ist das Buch, auf dem Stuhl.", "options": ["ibabaw", "gawas", "dinhi"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich bin hier zu Hause.", "tokens": ["Naa", "ko", "dinhi", "sa", "balay", "didto", "gawas"], "answer": ["Naa", "ko", "dinhi", "sa", "balay"]},
+        {"type": "type_answer", "prompt": "Papa ist draußen.", "answer": "Naa si Papa sa gawas", "accepted": ["Naa sa gawas si Papa"]}
+      ],
+      "surprise": {"ceb": "Dinhi ra ko sa imong tupad.", "de": "Ich bin gleich hier neben dir.", "when": "Wenn sie krank ist, Heimweh hat oder sich Sorgen macht."}
+    },
+    {
+      "id": "u05_l04",
+      "title": "In der Werkstatt",
+      "vocab": [
+        {"ceb": "luyo", "de": "hinter", "note": "sa luyo sa balay = hinter dem Haus"},
+        {"ceb": "kahoy", "de": "Holz; Baum"},
+        {"ceb": "martilyo", "de": "Hammer"},
+        {"ceb": "lagari", "de": "Säge"},
+        {"ceb": "lansang", "de": "Nagel"},
+        {"ceb": "muwebles", "de": "Möbel"},
+        {"ceb": "himo", "de": "herstellen; bauen (eine Sache)", "note": "Naghimo ko ug lamesa = Ich baue einen Tisch"},
+        {"ceb": "buhat", "de": "tun; machen", "note": "Unsa imong gibuhat? = Was machst du?"},
+        {"ceb": "gamit", "de": "benutzen; Werkzeug"},
+        {"ceb": "talyer", "de": "Werkstatt", "note": "vom spanischen taller"}
+      ],
+      "grammar": {
+        "title": "himo oder buhat?",
+        "text": "Himo heißt etwas herstellen, am Ende kommt eine Sache heraus: Naghimo ko ug lamesa = Ich baue einen Tisch. Buhat heißt tun oder machen im Sinn von „womit bist du beschäftigt“ – Unsa imong gibuhat = Was machst du gerade? Die Antwort darauf kann wieder himo sein: Naghimo ko ug muwebles sa talyer = Ich baue Möbel in der Werkstatt. Gamit heißt benutzen: Mogamit ko ug lagari = Ich benutze eine Säge. Luyo ist das letzte Lagewort: sa luyo sa balay = hinter dem Haus."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Naghimo ko ug lamesa sa talyer.", "direction": "ceb_de", "options": ["Ich baue einen Tisch in der Werkstatt.", "Ich kaufe einen Tisch in der Werkstatt.", "Ich baue einen Stuhl in der Werkstatt.", "Ich repariere einen Tisch im Haus."], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "kahoy", "de": "Holz"},
+          {"ceb": "martilyo", "de": "Hammer"},
+          {"ceb": "lagari", "de": "Säge"},
+          {"ceb": "lansang", "de": "Nagel"},
+          {"ceb": "talyer", "de": "Werkstatt"}
+        ]},
+        {"type": "fill_blank", "prompt": "Unsa imong ___? – Naghimo ko ug lingkoranan.", "translation": "Was machst du? – Ich baue einen Stuhl.", "options": ["gibuhat", "gipalit", "gikaon"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich baue Möbel.", "tokens": ["Naghimo", "ko", "ug", "muwebles", "kahoy", "Naglakaw"], "answer": ["Naghimo", "ko", "ug", "muwebles"]},
+        {"type": "true_false", "statement": "Naa ang talyer sa luyo sa balay.", "translation": "Die Werkstatt ist hinter dem Haus.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Hammer", "direction": "de_ceb", "options": ["martilyo", "lagari", "lansang", "kahoy"], "answer": 0},
+        {"type": "type_answer", "prompt": "Holz", "answer": "kahoy"},
+        {"type": "multiple_choice", "prompt": "Mogamit ko ug lagari.", "direction": "ceb_de", "options": ["Ich benutze eine Säge.", "Ich kaufe eine Säge.", "Ich benutze einen Hammer.", "Ich brauche einen Nagel."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Naa ang mga ___ sa ilalom sa lamesa.", "translation": "Die Nägel sind unter dem Tisch.", "options": ["lansang", "muwebles", "talyer"], "answer": 0},
+        {"type": "word_bank", "prompt": "Was machst du?", "tokens": ["Unsa", "imong", "gibuhat", "gipalit", "asa", "ko"], "answer": ["Unsa", "imong", "gibuhat"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "himo", "de": "herstellen; bauen"},
+          {"ceb": "buhat", "de": "tun; machen"},
+          {"ceb": "gamit", "de": "benutzen"},
+          {"ceb": "luyo", "de": "hinter"},
+          {"ceb": "muwebles", "de": "Möbel"}
+        ]},
+        {"type": "true_false", "statement": "Gihimo ni Papa ang higdaanan.", "translation": "Papa hat das Bett gekauft.", "answer": false, "correction": "Papa hat das Bett gebaut."},
+        {"type": "type_answer", "prompt": "Ich baue einen Tisch.", "answer": "Naghimo ko ug lamesa"},
+        {"type": "grammar_note", "title": "gamit – benutzen und Werkzeug", "text": "Gamit ist Verb und Nomen zugleich: Mogamit ko ug martilyo = Ich benutze einen Hammer, aber ang mga gamit = die Werkzeuge, die Sachen. Wenn deine Frau fragt: Asa ang imong mga gamit? – dann meint sie dein Werkzeug, das wieder in der Küche liegt."},
+        {"type": "multiple_choice", "prompt": "Daghan ang kahoy sa talyer.", "direction": "ceb_de", "options": ["In der Werkstatt ist viel Holz.", "In der Werkstatt ist wenig Holz.", "Im Haus ist viel Holz.", "Die Werkstatt ist groß."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Human sa trabaho, moadto ko sa ___.", "translation": "Nach der Arbeit gehe ich in die Werkstatt.", "options": ["talyer", "lansang", "martilyo"], "answer": 0},
+        {"type": "word_bank", "prompt": "Der Hammer ist hinter der Tür.", "tokens": ["Naa", "ang", "martilyo", "sa", "luyo", "sa", "pultahan", "lagari", "atubangan"], "answer": ["Naa", "ang", "martilyo", "sa", "luyo", "sa", "pultahan"]},
+        {"type": "type_answer", "prompt": "Was machst du?", "answer": "Unsa imong gibuhat"}
+      ],
+      "surprise": {"ceb": "Gihimo nako kini para nimo, Langga.", "de": "Das habe ich für dich gemacht, Schatz.", "when": "Wenn du ihr ein selbst gebautes Möbelstück aus der Werkstatt schenkst – para (für) kommt in der nächsten Lektion."}
+    },
+    {
+      "id": "u05_l05",
+      "title": "Garten & Haustiere",
+      "vocab": [
+        {"ceb": "kang", "de": "(Marker vor Namen) für; an; von", "note": "para kang Mama = für Mama; kang kinsa? = wem gehört?"},
+        {"ceb": "para", "de": "für", "note": "para nimo = für dich; para nako = für mich / meiner Meinung nach"},
+        {"ceb": "hardin", "de": "Garten"},
+        {"ceb": "tanom", "de": "Pflanze; pflanzen"},
+        {"ceb": "bulak", "de": "Blume"},
+        {"ceb": "iro", "de": "Hund"},
+        {"ceb": "iring", "de": "Katze"},
+        {"ceb": "hugaw", "de": "schmutzig"},
+        {"ceb": "butang", "de": "Sache; Ding; hinlegen; stellen", "note": "Ibutang sa lamesa = Stell es auf den Tisch"},
+        {"ceb": "kuha", "de": "holen; nehmen"}
+      ],
+      "grammar": {
+        "title": "para kang Mama – für wen?",
+        "text": "Para heißt „für“: para nimo = für dich, para nako = für mich. Vor einem Namen kommt kang dazu: Naa koy bulak para kang Mama = Ich habe eine Blume für Mama. Kurze Aufforderungen lernst du erst mal als feste Wendungen: Ibutang sa lamesa = Stell es auf den Tisch, Kuhaa ang libro = Hol das Buch. Kang kinsa kini = Wem gehört das, und die Antwort lautet: Kang Inday = Es gehört Inday."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Naa koy bulak para kang Mama.", "direction": "ceb_de", "options": ["Ich habe eine Blume für Mama.", "Ich habe eine Blume von Mama.", "Ich habe eine Pflanze für Inday.", "Mama hat eine Blume für mich."], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "hardin", "de": "Garten"},
+          {"ceb": "tanom", "de": "Pflanze"},
+          {"ceb": "bulak", "de": "Blume"},
+          {"ceb": "iro", "de": "Hund"},
+          {"ceb": "iring", "de": "Katze"}
+        ]},
+        {"type": "fill_blank", "prompt": "Ibutang ang baso sa ___.", "translation": "Stell das Glas auf den Tisch.", "options": ["lamesa", "hardin", "iring"], "answer": 0},
+        {"type": "word_bank", "prompt": "Hol das Buch.", "tokens": ["Kuhaa", "ang", "libro", "Ibutang", "selpon"], "answer": ["Kuhaa", "ang", "libro"]},
+        {"type": "true_false", "statement": "Hugaw ang iro.", "translation": "Der Hund ist schmutzig.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Katze", "direction": "de_ceb", "options": ["iring", "iro", "bulak", "tanom"], "answer": 0},
+        {"type": "type_answer", "prompt": "Garten", "answer": "hardin"},
+        {"type": "multiple_choice", "prompt": "Kang kinsa kini nga selpon? – Kang Inday.", "direction": "ceb_de", "options": ["Wem gehört dieses Handy? – Inday.", "Wer hat dieses Handy? – Mama.", "Wo ist das Handy? – Bei Inday.", "Was ist das? – Indays Handy."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Nagtanom si Mama ug ___ sa hardin.", "translation": "Mama pflanzt Blumen im Garten.", "options": ["bulak", "iro", "baso"], "answer": 0},
+        {"type": "word_bank", "prompt": "Das ist für dich.", "tokens": ["Para", "nimo", "kini", "nako", "kang"], "answer": ["Para", "nimo", "kini"], "accepted": ["Kini para nimo"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "para", "de": "für"},
+          {"ceb": "kang", "de": "für (vor Namen)"},
+          {"ceb": "hugaw", "de": "schmutzig"},
+          {"ceb": "butang", "de": "Sache; Ding"},
+          {"ceb": "kuha", "de": "holen"}
+        ]},
+        {"type": "true_false", "statement": "Naa ang iring sa ilalom sa higdaanan.", "translation": "Die Katze ist auf dem Bett.", "answer": false, "correction": "Die Katze ist unter dem Bett."},
+        {"type": "type_answer", "prompt": "für dich", "answer": "para nimo"},
+        {"type": "grammar_note", "title": "kang kinsa? – wem gehört das?", "text": "Kang steht vor Personennamen, wenn „für“, „an“ oder „von“ gemeint ist: para kang Mama = für Mama, kang kinsa kini? = wem gehört das? Vor Pronomen brauchst du kein kang, da nimmst du nimo, nako, niya: para nimo, para nako, para niya."},
+        {"type": "multiple_choice", "prompt": "Hugaw ang mga plato.", "direction": "ceb_de", "options": ["Die Teller sind schmutzig.", "Die Teller sind sauber.", "Die Gläser sind schmutzig.", "Der Teller ist neu."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Daghan ang ___ sa hardin ni Lola sa Cebu.", "translation": "Im Garten von Lola auf Cebu gibt es viele Pflanzen.", "options": ["tanom", "kutsara", "hagdan"], "answer": 0},
+        {"type": "word_bank", "prompt": "Der Hund ist im Garten.", "tokens": ["Naa", "ang", "iro", "sa", "hardin", "iring", "kusina"], "answer": ["Naa", "ang", "iro", "sa", "hardin"]},
+        {"type": "type_answer", "prompt": "Stell es auf den Tisch.", "answer": "Ibutang sa lamesa", "accepted": ["Ibutang kini sa lamesa"]}
+      ],
+      "surprise": {"ceb": "Para nimo kining bulak, Langga.", "de": "Diese Blume ist für dich, Schatz.", "when": "Wenn du ihr eine Blume aus dem Garten mitbringst."}
+    },
+    {
+      "id": "u05_l06",
+      "title": "Unsere Tochter zuhause",
+      "vocab": [
+        {"ceb": "dulaan", "de": "Spielzeug", "note": "von dula = spielen"},
+        {"ceb": "hilom", "de": "leise; still", "note": "Hilom! = Pst! / Ruhe!"},
+        {"ceb": "saba", "de": "laut; Lärm"},
+        {"ceb": "gakos", "de": "umarmen; Umarmung"},
+        {"ceb": "halok", "de": "küssen; Kuss"},
+        {"ceb": "katawa", "de": "lachen"},
+        {"ceb": "hilak", "de": "weinen"},
+        {"ceb": "bantay", "de": "aufpassen auf; bewachen", "note": "Bantayi ang bata = Pass auf das Kind auf"},
+        {"ceb": "higda", "de": "sich hinlegen", "note": "Higda na = Leg dich hin"},
+        {"ceb": "Inday", "de": "Mädchen (liebevolle Anrede)", "note": "so ruft man Tochter oder kleine Mädchen; Junge: Dodong"}
+      ],
+      "grammar": {
+        "title": "Inday – so sprichst du eure Tochter an",
+        "text": "Inday ist die liebevolle Anrede für ein Mädchen, so rufst du eure Tochter: Higda na, Inday = Leg dich jetzt hin, Inday. Ein Junge heißt Dodong. Hilom heißt „Pst, Ruhe“, und saba ist das Gegenteil: Saba kaayo ang mga bata = Die Kinder sind sehr laut. Bantayi ang bata = Pass auf das Kind auf, so sagt es Mama, wenn sie kurz weggeht. Gakos und halok sind Umarmung und Kuss: Gaksa si Mama = Umarm Mama."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Higda na, Inday.", "direction": "ceb_de", "options": ["Leg dich hin, Inday.", "Steh auf, Inday.", "Iss jetzt, Inday.", "Sei leise, Inday."], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "dulaan", "de": "Spielzeug"},
+          {"ceb": "hilom", "de": "leise"},
+          {"ceb": "saba", "de": "laut"},
+          {"ceb": "gakos", "de": "umarmen"},
+          {"ceb": "halok", "de": "küssen"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ ang bata, Papa! Moadto ko sa merkado.", "translation": "Pass auf das Kind auf, Papa! Ich gehe zum Markt.", "options": ["Bantayi", "Kuhaa", "Ibutang"], "answer": 0},
+        {"type": "word_bank", "prompt": "Die Kinder sind sehr laut.", "tokens": ["Saba", "kaayo", "ang", "mga", "bata", "hilom", "dulaan"], "answer": ["Saba", "kaayo", "ang", "mga", "bata"]},
+        {"type": "true_false", "statement": "Naghilak si Inday.", "translation": "Inday lacht.", "answer": false, "correction": "Inday weint."},
+        {"type": "multiple_choice", "prompt": "Spielzeug", "direction": "de_ceb", "options": ["dulaan", "dula", "bata", "higdaanan"], "answer": 0},
+        {"type": "type_answer", "prompt": "leise", "answer": "hilom"},
+        {"type": "multiple_choice", "prompt": "Nagkatawa si Inday sa sala.", "direction": "ceb_de", "options": ["Inday lacht im Wohnzimmer.", "Inday weint im Wohnzimmer.", "Inday spielt im Wohnzimmer.", "Inday schläft im Wohnzimmer."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Naa ang ___ sa ilalom sa higdaanan.", "translation": "Das Spielzeug ist unter dem Bett.", "options": ["dulaan", "halok", "saba"], "answer": 0},
+        {"type": "word_bank", "prompt": "Umarm Mama, Inday.", "tokens": ["Gaksa", "si", "Mama", "Inday", "Haloki", "Bantayi"], "answer": ["Gaksa", "si", "Mama", "Inday"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "katawa", "de": "lachen"},
+          {"ceb": "hilak", "de": "weinen"},
+          {"ceb": "bantay", "de": "aufpassen auf"},
+          {"ceb": "higda", "de": "sich hinlegen"},
+          {"ceb": "Inday", "de": "Mädchen (liebevolle Anrede)"}
+        ]},
+        {"type": "true_false", "statement": "Hilom, Inday! Natulog si Papa.", "translation": "Pst, Inday! Papa schläft.", "answer": true},
+        {"type": "type_answer", "prompt": "Leg dich jetzt hin, Inday.", "answer": "Higda na, Inday"},
+        {"type": "grammar_note", "title": "Inday & Dodong", "text": "Inday und Dodong sind keine Namen, sondern liebevolle Anreden: Inday für Mädchen und junge Frauen, Dodong für Jungen. Auf Cebu hörst du sie überall – die Verkäuferin ruft Dodong!, und deine Frau ruft eure Tochter: Inday, kaon na!"},
+        {"type": "multiple_choice", "prompt": "Nagdula si Inday sa kwarto.", "direction": "ceb_de", "options": ["Inday spielt im Zimmer.", "Inday schläft im Zimmer.", "Inday weint im Zimmer.", "Inday liest im Zimmer."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Naghilak si Inday. ___ siya, Papa.", "translation": "Inday weint. Umarm sie, Papa.", "options": ["Gaksa", "Bantayi", "Kuhaa"], "answer": 0},
+        {"type": "word_bank", "prompt": "Inday weint im Zimmer.", "tokens": ["Naghilak", "si", "Inday", "sa", "kwarto", "Nagkatawa", "sala"], "answer": ["Naghilak", "si", "Inday", "sa", "kwarto"]},
+        {"type": "type_answer", "prompt": "Pass auf das Kind auf.", "answer": "Bantayi ang bata"}
+      ],
+      "surprise": {"ceb": "Gakos ug halok para nimo ug para kang Inday.", "de": "Umarmung und Kuss für dich und für Inday.", "when": "Als Nachricht aus der Schule, wenn sie mit der Kleinen zu Hause ist."}
+    }
+  ]
+}
