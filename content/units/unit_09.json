@@ -1,0 +1,292 @@
+{
+  "unit": 9,
+  "title": "Fragen stellen & beantworten",
+  "level": "A2",
+  "lessons": [
+    {
+      "id": "u09_l01",
+      "title": "Wo, wann, warum",
+      "vocab": [
+        {"ceb": "diin", "de": "wo (Vergangenheit); woher", "note": "Diin ka gikan? = Wo warst du / Woher kommst du gerade? Für Zukunft und Gegenwart: asa"},
+        {"ceb": "man", "de": "denn; (weicher Fragepartikel)", "note": "Unsa man? = Was ist denn? Asa man ka? = Wo bist du denn? Macht Fragen freundlicher"},
+        {"ceb": "unsaon", "de": "wie (macht man); wie (Zukunft)", "note": "Unsaon pagluto ug adobo? = Wie kocht man Adobo? Unsaon nako? = Wie soll ich das machen?"},
+        {"ceb": "giunsa", "de": "wie (Vergangenheit); wie ist es passiert", "note": "Giunsa nimo pagluto? = Wie hast du es gekocht? Giunsa man? = Wie ist das passiert?"},
+        {"ceb": "ngano", "de": "warum", "note": "Ngano man? = Warum denn? Nganong …? = Warum …? (vor Verb/Satz)"},
+        {"ceb": "kanus-a", "de": "wann", "note": "Kanus-a ka moabot? = Wann kommst du an? Kanus-a ka niabot? = Wann bist du angekommen?"},
+        {"ceb": "hain", "de": "welche; welcher; wo ist (von mehreren)", "note": "Hain ang akong selpon? = Wo ist mein Handy? Hain ang imong gusto? = Welches willst du?"},
+        {"ceb": "tungod", "de": "wegen", "note": "tungod sa ulan = wegen des Regens; tungod kay = weil (betont)"},
+        {"ceb": "dapit", "de": "Gegend; Richtung; ungefähr wo", "note": "Asa dapit? = Wo ungefähr? Sa among dapit = bei uns in der Gegend"},
+        {"ceb": "paagi", "de": "Art und Weise; Methode", "note": "Unsa nga paagi? = Auf welche Weise? Paagi sa selpon = per Handy"}
+      ],
+      "grammar": {
+        "title": "asa oder diin? – nganong … kay …",
+        "text": "Asa fragt nach Gegenwart und Zukunft, diin nach der Vergangenheit: „Asa ka moadto?“ (Wohin gehst du?) – „Diin ka gikan?“ (Wo warst du gerade?). Ein man dahinter macht die Frage weicher und freundlicher: „Asa man ka?“ (Wo bist du denn?), „Ngano man?“ (Warum denn?). Vor einem Verb wird ngano zu nganong, und die Antwort beginnt mit kay: „Nganong wala ka mikaon? – Kay busog ko.“ (Warum hast du nicht gegessen? – Weil ich satt bin.) Unsaon fragt, wie man etwas macht (Zukunft), giunsa, wie es gemacht wurde: „Unsaon pagluto ug adobo?“ – „Giunsa nimo pagluto?“ Hain fragt nach einem von mehreren oder wo etwas gerade liegt: „Hain ang akong selpon?“"
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Diin ka gikan?", "direction": "ceb_de", "options": ["Wo warst du gerade?", "Wohin gehst du?", "Wann kommst du?", "Warum bist du hier?"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Wohin gehst du morgen?", "direction": "de_ceb", "options": ["Asa ka moadto ugma?", "Diin ka moadto ugma?", "Kanus-a ka moadto ugma?", "Nganong moadto ka ugma?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Wo bist du denn?", "tokens": ["Asa", "man", "ka", "diin", "kanus-a"], "answer": ["Asa", "man", "ka"]},
+        {"type": "fill_blank", "prompt": "___ wala ka mikaon?", "translation": "Warum hast du nicht gegessen?", "options": ["Nganong", "Kanus-a", "Diin"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Kay busog ko.", "direction": "ceb_de", "options": ["Weil ich satt bin.", "Weil ich hungrig bin.", "Weil ich müde bin.", "Weil ich krank bin."], "answer": 0},
+        {"type": "type_answer", "prompt": "Wann kommst du an?", "answer": "Kanus-a ka moabot?", "accepted": ["Kanus-a man ka moabot?"]},
+        {"type": "true_false", "statement": "Unsaon pagluto ug adobo?", "translation": "Wie kocht man Adobo?", "answer": true},
+        {"type": "true_false", "statement": "Giunsa nimo pagluto ang isda?", "translation": "Wie kochst du den Fisch?", "answer": false, "correction": "Wie hast du den Fisch gekocht?"},
+        {"type": "fill_blank", "prompt": "___ ang akong selpon, Inday?", "translation": "Wo ist mein Handy, Inday?", "options": ["Hain", "Kanus-a", "Ngano"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "diin", "de": "wo (Vergangenheit)"},
+          {"ceb": "kanus-a", "de": "wann"},
+          {"ceb": "ngano", "de": "warum"},
+          {"ceb": "hain", "de": "welche; wo ist"},
+          {"ceb": "unsaon", "de": "wie (macht man)"}
+        ]},
+        {"type": "multiple_choice", "prompt": "Wala ko moadto sa eskwelahan tungod sa ulan.", "direction": "ceb_de", "options": ["Ich bin wegen des Regens nicht zur Schule gegangen.", "Ich gehe wegen des Regens später zur Schule.", "Ich bin wegen des Taifuns nicht zur Schule gegangen.", "Ich bin wegen des Regens zu spät zur Schule gekommen."], "answer": 0},
+        {"type": "word_bank", "prompt": "Wo ungefähr in Cebu wohnt ihr?", "tokens": ["Asa", "dapit", "mo", "nagpuyo", "sa", "Cebu", "diin", "kanus-a"], "answer": ["Asa", "dapit", "mo", "nagpuyo", "sa", "Cebu"]},
+        {"type": "multiple_choice", "prompt": "Auf welche Weise?", "direction": "de_ceb", "options": ["Unsa nga paagi?", "Unsa nga dapit?", "Unsa nga oras?", "Unsa nga adlaw?"], "answer": 0},
+        {"type": "type_answer", "prompt": "Warum denn?", "answer": "Ngano man?"},
+        {"type": "grammar_note", "title": "asa oder diin?", "text": "Beide heißen „wo“, aber die Zeit entscheidet. Asa blickt nach vorn oder auf jetzt: Asa ka karon? (Wo bist du jetzt?), Asa ka moadto? (Wohin gehst du?). Diin blickt zurück: Diin ka gikan? (Woher kommst du gerade?), Diin ka nagpuyo kaniadto? (Wo hast du früher gewohnt?). Hain nimmst du, wenn du etwas Bestimmtes suchst: Hain ang akong bolpen?"},
+        {"type": "fill_blank", "prompt": "Giunsa ___ paghimo sa lamesa?", "translation": "Wie hast du den Tisch gebaut?", "options": ["nimo", "ka", "ikaw"], "answer": 0},
+        {"type": "true_false", "statement": "Kanus-a ka niabot sa Sauerland?", "translation": "Wann bist du im Sauerland angekommen?", "answer": true},
+        {"type": "multiple_choice", "prompt": "Hain ang imong gusto, kape o tsa?", "direction": "ceb_de", "options": ["Welches willst du, Kaffee oder Tee?", "Wo ist dein Kaffee oder Tee?", "Willst du Kaffee und Tee?", "Wann willst du Kaffee oder Tee?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich schicke es per Handy.", "tokens": ["Ipadala", "nako", "kini", "pinaagi", "sa", "selpon", "dapit", "tungod"], "answer": ["Ipadala", "nako", "kini", "pinaagi", "sa", "selpon"]}
+      ],
+      "surprise": {"ceb": "Diin ka gikan? Gimingaw na ko nimo.", "de": "Wo warst du? Ich habe dich schon vermisst.", "when": "Wenn sie nur zehn Minuten beim Einkaufen war."}
+    },
+    {
+      "id": "u09_l02",
+      "title": "Antworten: sicher, vielleicht, keine Ahnung",
+      "vocab": [
+        {"ceb": "sigurado", "de": "sicher (überzeugt)", "note": "Sigurado ka? = Bist du sicher? Sigurado ko = Ich bin sicher"},
+        {"ceb": "tingali", "de": "vielleicht", "note": "Tingali ugma = Vielleicht morgen. Basin = könnte sein"},
+        {"ceb": "ambot", "de": "keine Ahnung; weiß nicht", "note": "Ambot lang = Keine Ahnung. Ambot nimo! = Ich weiß auch nicht, was mit dir ist (liebevoll genervt)"},
+        {"ceb": "pananglitan", "de": "zum Beispiel", "note": "Pananglitan, ang mangga = Zum Beispiel die Mango"},
+        {"ceb": "klaro", "de": "klar; deutlich", "note": "Klaro na? = Alles klar? Klaro kaayo = ganz klar"},
+        {"ceb": "usab", "de": "nochmal; wiederholen", "note": "Usba palihug = Sag es bitte nochmal. Balik-balik = immer wieder"},
+        {"ceb": "igo", "de": "genug", "note": "Igo na = Das reicht. Igo ra = gerade genug"},
+        {"ceb": "kulang", "de": "zu wenig; fehlt; nicht genug", "note": "Kulang ang kwarta = Das Geld reicht nicht. Kulang pa = Es fehlt noch"},
+        {"ceb": "sobra", "de": "zu viel; übrig; mehr als genug", "note": "Sobra na = Das ist zu viel. Sobra ang pagkaon = Es ist Essen übrig"},
+        {"ceb": "dugang", "de": "mehr; zusätzlich; hinzufügen", "note": "Dugang pa = noch mehr. Dugangi = Gib mehr dazu"}
+      ],
+      "grammar": {
+        "title": "Sigurado ka? – Tingali. – Ambot.",
+        "text": "Auf eine Frage antwortest du je nach Sicherheit: „Sigurado ko“ (Ich bin sicher), „Siguro“ oder „Tingali“ (Wahrscheinlich / Vielleicht) oder einfach „Ambot“ (Keine Ahnung, im Alltag meist „Ambot lang“). Nachfragen geht mit „Klaro na?“ (Alles klar?) und „Usba palihug“ (Sag es bitte nochmal) – usba ist die Befehlsform von usab, wie lutoa von luto. Mengen beurteilst du mit igo, kulang und sobra: „Igo na ang kan-on“ (Der Reis reicht), „Kulang ang kwarta“ (Das Geld reicht nicht), „Sobra na ang asin“ (Das ist zu viel Salz). Willst du mehr, sagst du „Dugangi“ (Gib mehr dazu). Mit pananglitan leitest du ein Beispiel ein: „Pananglitan, tam-is ang mangga.“"
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Sigurado ka?", "direction": "ceb_de", "options": ["Bist du sicher?", "Bist du müde?", "Bist du fertig?", "Bist du satt?"], "answer": 0},
+        {"type": "type_answer", "prompt": "Vielleicht morgen.", "answer": "Tingali ugma", "accepted": ["Siguro ugma"]},
+        {"type": "word_bank", "prompt": "Keine Ahnung, vielleicht am Samstag.", "tokens": ["Ambot", "tingali", "sa", "Sabado", "sigurado", "Dominggo"], "answer": ["Ambot", "tingali", "sa", "Sabado"]},
+        {"type": "fill_blank", "prompt": "___ na? Nakasabot ka?", "translation": "Alles klar? Verstehst du?", "options": ["Klaro", "Kulang", "Sobra"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Sag es bitte nochmal.", "direction": "de_ceb", "options": ["Usba palihug.", "Dugangi palihug.", "Isulti palihug.", "Paminaw palihug."], "answer": 0},
+        {"type": "true_false", "statement": "Kulang ang kwarta para sa e-bike.", "translation": "Das Geld für das E-Bike reicht nicht.", "answer": true},
+        {"type": "true_false", "statement": "Sobra na ang asin sa sinigang.", "translation": "Es ist zu wenig Salz im Sinigang.", "answer": false, "correction": "Es ist zu viel Salz im Sinigang."},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "sigurado", "de": "sicher (überzeugt)"},
+          {"ceb": "tingali", "de": "vielleicht"},
+          {"ceb": "ambot", "de": "keine Ahnung"},
+          {"ceb": "klaro", "de": "klar; deutlich"},
+          {"ceb": "igo", "de": "genug"}
+        ]},
+        {"type": "multiple_choice", "prompt": "Igo na ang kan-on, salamat.", "direction": "ceb_de", "options": ["Der Reis reicht, danke.", "Der Reis ist zu viel, danke.", "Mehr Reis bitte, danke.", "Der Reis ist lecker, danke."], "answer": 0},
+        {"type": "fill_blank", "prompt": "___ ug asukar ang kape, palihug.", "translation": "Gib bitte mehr Zucker in den Kaffee.", "options": ["Dugangi", "Usba", "Klaroha"], "answer": 0},
+        {"type": "word_bank", "prompt": "Zum Beispiel: Die Mango ist süß.", "tokens": ["Pananglitan", "tam-is", "ang", "mangga", "sigurado", "aslom"], "answer": ["Pananglitan", "tam-is", "ang", "mangga"]},
+        {"type": "type_answer", "prompt": "Bist du sicher?", "answer": "Sigurado ka?", "accepted": ["Sigurado ba ka?"]},
+        {"type": "multiple_choice", "prompt": "Tingali moulan ugma sa Sauerland.", "direction": "ceb_de", "options": ["Vielleicht regnet es morgen im Sauerland.", "Sicher regnet es morgen im Sauerland.", "Gestern hat es im Sauerland geregnet.", "Vielleicht schneit es morgen im Sauerland."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Sigurado ka? – ___, wala ko kahibalo.", "translation": "Bist du sicher? – Keine Ahnung, ich weiß es nicht.", "options": ["Ambot", "Klaro", "Igo"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Das ist zu viel.", "direction": "de_ceb", "options": ["Sobra na.", "Igo na.", "Kulang kaayo.", "Klaro na."], "answer": 0},
+        {"type": "true_false", "statement": "Klaro kaayo ang imong tubag.", "translation": "Deine Antwort ist sehr klar.", "answer": true},
+        {"type": "grammar_note", "title": "Wie sicher bist du?", "text": "Von ganz sicher bis völlig ahnungslos: Sigurado ko (Ich bin sicher) – Siguro (Wahrscheinlich) – Tingali (Vielleicht) – Ambot (Keine Ahnung). Als Frage reicht das Wort allein: Sigurado? Tingali? Und wenn deine Frau sagt „Ambot nimo!“, heißt das liebevoll genervt: Ich weiß auch nicht, was mit dir los ist."},
+        {"type": "word_bank", "prompt": "Ist das Essen genug für alle?", "tokens": ["Igo", "ba", "ang", "pagkaon", "para", "sa", "tanan", "kulang", "sobra"], "answer": ["Igo", "ba", "ang", "pagkaon", "para", "sa", "tanan"]}
+      ],
+      "surprise": {"ceb": "Sigurado ko nimo. Walay tingali.", "de": "Bei dir bin ich mir sicher. Kein Vielleicht.", "when": "Wenn sie fragt, ob du dir das alles gut überlegt hast."}
+    },
+    {
+      "id": "u09_l03",
+      "title": "Personen, Dinge, Farben",
+      "vocab": [
+        {"ceb": "tawo", "de": "Mensch; Person", "note": "mga tawo = Leute; daghang tawo = viele Leute. Natawo = geboren (Unit 11)"},
+        {"ceb": "lugar", "de": "Ort; Platz", "note": "Lugar lang! = Anhalten bitte! (im Jeepney, wörtlich: nur bis hier)"},
+        {"ceb": "hitsura", "de": "Aussehen", "note": "Unsa iyang hitsura? = Wie sieht sie aus?"},
+        {"ceb": "kolor", "de": "Farbe", "note": "Unsa nga kolor? = Welche Farbe?"},
+        {"ceb": "pula", "de": "rot"},
+        {"ceb": "puti", "de": "weiß"},
+        {"ceb": "itom", "de": "schwarz"},
+        {"ceb": "berde", "de": "grün"},
+        {"ceb": "asul", "de": "blau"},
+        {"ceb": "dalag", "de": "gelb"}
+      ],
+      "grammar": {
+        "title": "Unsa nga kolor? – pulang balay",
+        "text": "Mit unsa nga fragst du nach der Art einer Sache, mit kinsa nga nach einer Person: „Unsa nga kolor ang imong e-bike?“ (Welche Farbe hat dein E-Bike?), „Kinsa nga tawo ang imong amiga?“ (Welche Person ist deine Freundin?). Nach dem Aussehen fragst du „Unsa iyang hitsura?“ (Wie sieht sie aus?). Farben sind Adjektive und stehen wie alle Adjektive vorn: „Pula ang balay“ (Das Haus ist rot). Vor einem Nomen brauchen sie den Linker nga, der nach Vokal zu -ng wird: pulang balay (rotes Haus), puting bulak (weiße Blume), aber itom nga iring (schwarze Katze), weil itom auf einen Konsonanten endet."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Unsa nga kolor ang imong e-bike?", "direction": "ceb_de", "options": ["Welche Farbe hat dein E-Bike?", "Wie sieht dein E-Bike aus?", "Wo ist dein E-Bike?", "Wie teuer ist dein E-Bike?"], "answer": 0},
+        {"type": "type_answer", "prompt": "rot", "answer": "pula"},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "pula", "de": "rot"},
+          {"ceb": "puti", "de": "weiß"},
+          {"ceb": "itom", "de": "schwarz"},
+          {"ceb": "berde", "de": "grün"},
+          {"ceb": "asul", "de": "blau"}
+        ]},
+        {"type": "fill_blank", "prompt": "Pula ang ___ ni Mama sa Cebu.", "translation": "Mamas Haus in Cebu ist rot.", "options": ["balay", "bulak", "bisikleta"], "answer": 0},
+        {"type": "word_bank", "prompt": "Welche Farbe magst du?", "tokens": ["Unsa", "nga", "kolor", "ang", "imong", "gusto", "hitsura", "kinsa"], "answer": ["Unsa", "nga", "kolor", "ang", "imong", "gusto"]},
+        {"type": "multiple_choice", "prompt": "Wie sieht sie aus?", "direction": "de_ceb", "options": ["Unsa iyang hitsura?", "Unsa iyang ngalan?", "Kinsa siya?", "Asa siya?"], "answer": 0},
+        {"type": "true_false", "statement": "Kinsa nga tawo ang imong amiga?", "translation": "Welche Person ist deine Freundin?", "answer": true},
+        {"type": "true_false", "statement": "Daghang tawo sa merkado karon.", "translation": "Heute sind wenige Leute auf dem Markt.", "answer": false, "correction": "Heute sind viele Leute auf dem Markt."},
+        {"type": "fill_blank", "prompt": "Nindot ang ___ dinhi sa Sauerland.", "translation": "Der Ort hier im Sauerland ist schön.", "options": ["lugar", "tawo", "kolor"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Berde ang mga tanom sa hardin.", "direction": "ceb_de", "options": ["Die Pflanzen im Garten sind grün.", "Die Blumen im Garten sind gelb.", "Die Pflanzen im Garten sind groß.", "Die Bäume im Garten sind grün."], "answer": 0},
+        {"type": "word_bank", "prompt": "Unser Haus ist gelb.", "tokens": ["Dalag", "ang", "among", "balay", "puti", "asul", "akong"], "answer": ["Dalag", "ang", "among", "balay"]},
+        {"type": "fill_blank", "prompt": "Nindot ang ___ nga bulak sa hardin.", "translation": "Die rote Blume im Garten ist schön.", "options": ["pula", "puti", "itom"], "answer": 0},
+        {"type": "type_answer", "prompt": "Welche Farbe?", "answer": "Unsa nga kolor?", "accepted": ["Unsang kolor?"]},
+        {"type": "multiple_choice", "prompt": "Itom ang iyang iring ug puti ang akong iro.", "direction": "ceb_de", "options": ["Ihre Katze ist schwarz und mein Hund ist weiß.", "Ihre Katze ist weiß und mein Hund ist schwarz.", "Ihr Hund ist schwarz und meine Katze ist weiß.", "Ihre Katze ist schwarz und ihr Hund ist weiß."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Asul ang ___ karon, walay panganod.", "translation": "Der Himmel ist heute blau, keine Wolke.", "options": ["langit", "dagat", "yuta"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Wer ist dieser Mensch?", "direction": "de_ceb", "options": ["Kinsa kining tawo?", "Unsa kining butang?", "Kinsa kining bata?", "Asa kining tawo?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Wie sieht dein Lehrer aus?", "tokens": ["Unsa", "ang", "hitsura", "sa", "imong", "maestro", "kolor", "kinsa"], "answer": ["Unsa", "ang", "hitsura", "sa", "imong", "maestro"]},
+        {"type": "grammar_note", "title": "Farbe + Nomen: nga oder -ng?", "text": "Endet die Farbe auf einen Vokal, hängst du -ng an: pulang balay (rotes Haus), puting bulak (weiße Blume), berdeng tanom (grüne Pflanze). Endet sie auf einen Konsonanten, steht nga dazwischen: itom nga iring (schwarze Katze), asul nga langit (blauer Himmel), dalag nga saging (gelbe Banane). Das ist dieselbe Regel wie bei dakong balay und gamay nga bata."},
+        {"type": "multiple_choice", "prompt": "Hain nga lugar sa Cebu ang imong gusto?", "direction": "ceb_de", "options": ["Welchen Ort in Cebu magst du?", "Wo in Cebu wohnst du?", "Welche Person in Cebu magst du?", "Wann gehst du nach Cebu?"], "answer": 0}
+      ],
+      "surprise": {"ceb": "Gwapa gihapon ka, bisan unsa ang imong hitsura sa buntag.", "de": "Du bist immer noch hübsch, egal wie du morgens aussiehst.", "when": "Morgens, wenn sie sagt, sie sehe furchtbar aus."}
+    },
+    {
+      "id": "u09_l04",
+      "title": "Wie viel, wie oft, noch/schon",
+      "vocab": [
+        {"ceb": "buok", "de": "Stück (Zähleinheit)", "note": "Pila ka buok? = Wie viele Stück? Tulo ka buok = drei Stück"},
+        {"ceb": "pa", "de": "noch", "note": "Wala pa = noch nicht. Gamay pa siya = Sie ist noch klein. Gegenteil: na = schon"},
+        {"ceb": "lang", "de": "nur; bloß; einfach", "note": "Kadali lang = Nur einen Moment. Sige lang = Schon gut. Weicher als ra"},
+        {"ceb": "kadali", "de": "einen Moment; kurz", "note": "Kadali lang! = Moment mal!"},
+        {"ceb": "pipila", "de": "einige; ein paar", "note": "pipila ka adlaw = ein paar Tage"},
+        {"ceb": "petsa", "de": "Datum", "note": "Unsa nga petsa karon? = Welches Datum ist heute?"},
+        {"ceb": "kausa", "de": "einmal", "note": "kausa sa usa ka semana = einmal pro Woche; kaduha = zweimal"},
+        {"ceb": "makadaghan", "de": "oft; viele Male", "note": "Makadaghan na ko nakaadto didto = Ich war schon oft dort"},
+        {"ceb": "sa dili pa", "de": "bevor", "note": "Sa dili pa ko matulog = Bevor ich schlafe. Für Vergangenes: sa wala pa (Unit 11)"},
+        {"ceb": "mahimo", "de": "möglich sein; geht; kann", "note": "Mahimo ba? = Geht das? Mahimo ra = Das geht schon. Mahimong maestro = Lehrer werden (Unit 12)"}
+      ],
+      "grammar": {
+        "title": "na = schon, pa = noch, lang = nur",
+        "text": "Na und pa sind Gegenspieler: „Nakakaon na ko“ (Ich habe schon gegessen) – „Wala pa ko mikaon“ (Ich habe noch nicht gegessen), „Gamay pa si Inday“ (Inday ist noch klein). Lang heißt „nur, bloß“ und macht alles ein bisschen weicher: „Kadali lang!“ (Nur einen Moment!), „Duha ka buok lang“ (Nur zwei Stück). Nach der Anzahl fragst du mit „Pila ka buok?“ (Wie viele Stück?) und antwortest mit Zahl + ka + buok: „Tulo ka buok“. Sa dili pa heißt „bevor“ und steht am Satzanfang: „Sa dili pa ko matulog, magbasa ko ug libro“ (Bevor ich schlafe, lese ich ein Buch). Ob etwas geht, fragst du mit „Mahimo ba?“ – die Antwort „Mahimo ra“ heißt „Das geht schon“."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Wala pa ko mikaon.", "direction": "ceb_de", "options": ["Ich habe noch nicht gegessen.", "Ich habe schon gegessen.", "Ich esse nicht.", "Ich esse nur wenig."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Gamay ___ si Inday.", "translation": "Inday ist noch klein.", "options": ["pa", "na", "lang"], "answer": 0},
+        {"type": "word_bank", "prompt": "Nur einen Moment, Mama!", "tokens": ["Kadali", "lang", "Mama", "na", "pa"], "answer": ["Kadali", "lang", "Mama"]},
+        {"type": "multiple_choice", "prompt": "Wie viele Stück?", "direction": "de_ceb", "options": ["Pila ka buok?", "Pila ka tawo?", "Pila ka oras?", "Pila ka adlaw?"], "answer": 0},
+        {"type": "type_answer", "prompt": "drei Stück", "answer": "tulo ka buok"},
+        {"type": "true_false", "statement": "Nakakaon na ko, salamat.", "translation": "Ich habe schon gegessen, danke.", "answer": true},
+        {"type": "true_false", "statement": "Pipila ka adlaw lang ko sa Cebu.", "translation": "Ich bin nur ein paar Tage in Cebu.", "answer": true},
+        {"type": "fill_blank", "prompt": "Unsa nga ___ karon?", "translation": "Welches Datum ist heute?", "options": ["petsa", "oras", "adlaw"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Kausa sa usa ka semana ko magtrabaho sa talyer.", "direction": "ceb_de", "options": ["Einmal pro Woche arbeite ich in der Werkstatt.", "Zweimal pro Woche arbeite ich in der Werkstatt.", "Jede Woche ruhe ich mich in der Werkstatt aus.", "Einmal im Monat arbeite ich in der Werkstatt."], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich war schon oft in Bohol.", "tokens": ["Makadaghan", "na", "ko", "nakaadto", "sa", "Bohol", "kausa", "pa"], "answer": ["Makadaghan", "na", "ko", "nakaadto", "sa", "Bohol"]},
+        {"type": "fill_blank", "prompt": "___ ko matulog, magbasa ko ug libro.", "translation": "Bevor ich schlafe, lese ich ein Buch.", "options": ["Sa dili pa", "Human", "Samtang"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Geht das?", "direction": "de_ceb", "options": ["Mahimo ba?", "Sigurado ba?", "Klaro ba?", "Igo ba?"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "buok", "de": "Stück"},
+          {"ceb": "kadali", "de": "einen Moment"},
+          {"ceb": "pipila", "de": "einige; ein paar"},
+          {"ceb": "petsa", "de": "Datum"},
+          {"ceb": "kausa", "de": "einmal"}
+        ]},
+        {"type": "multiple_choice", "prompt": "Pila ka buok itlog ang imong gikinahanglan para sa adobo?", "direction": "ceb_de", "options": ["Wie viele Eier brauchst du für das Adobo?", "Wie viele Eier hast du für das Adobo gekauft?", "Wie viel kostet ein Ei für das Adobo?", "Wie viele Zwiebeln brauchst du für das Adobo?"], "answer": 0},
+        {"type": "type_answer", "prompt": "noch nicht", "answer": "wala pa"},
+        {"type": "grammar_note", "title": "na oder pa?", "text": "Na blickt auf Erledigtes: Nakakaon na ko (schon gegessen), Human na (schon fertig), Dako na siya (Sie ist schon groß). Pa sagt, dass es noch dauert oder noch da ist: Wala pa (noch nicht), Gamay pa siya (noch klein), Kulang pa (es fehlt noch), Dugang pa (noch mehr). Beide stehen direkt nach dem ersten Satzglied, meist vor ko/ka/siya."},
+        {"type": "fill_blank", "prompt": "Wala ___ moabot si Papa gikan sa trabaho.", "translation": "Papa ist noch nicht von der Arbeit angekommen.", "options": ["pa", "na", "lang"], "answer": 0},
+        {"type": "word_bank", "prompt": "Sie hat nur zwei Stück gekauft.", "tokens": ["Duha", "ka", "buok", "lang", "ang", "iyang", "gipalit", "pa", "tulo"], "answer": ["Duha", "ka", "buok", "lang", "ang", "iyang", "gipalit"]}
+      ],
+      "surprise": {"ceb": "Kadali lang, Langga – usa pa ka halok sa dili pa ko molakaw.", "de": "Nur einen Moment, Schatz – noch einen Kuss, bevor ich losgehe.", "when": "Morgens an der Tür, bevor du zur Schule fährst."}
+    },
+    {
+      "id": "u09_l05",
+      "title": "Bitten & Erlaubnis",
+      "vocab": [
+        {"ceb": "hangyo", "de": "Bitte (Anliegen); bitten; handeln (Preis)", "note": "Naa koy hangyo = Ich habe eine Bitte. Pwede hangyo? = Kann man handeln?"},
+        {"ceb": "pabor", "de": "Gefallen", "note": "Pwede mangayo ug pabor? = Kann ich dich um einen Gefallen bitten?"},
+        {"ceb": "pangayo", "de": "um etwas bitten; verlangen", "note": "Mangayo ko ug tubig = Ich bitte um Wasser. Wurzel: ayo"},
+        {"ceb": "tugot", "de": "erlauben", "note": "Gitugotan ko ni Mama = Mama hat es mir erlaubt"},
+        {"ceb": "balibad", "de": "ablehnen; absagen"},
+        {"ceb": "uyon", "de": "zustimmen; einverstanden", "note": "Uyon ko = Ich bin einverstanden. Mouyon ka? = Stimmst du zu?"},
+        {"ceb": "angay", "de": "sollte; angemessen; passend", "note": "Angay ka mopahulay = Du solltest dich ausruhen. Angay nimo = steht dir / passt zu dir"},
+        {"ceb": "pasaylo", "de": "verzeihen; Verzeihung", "note": "Pasayloa ko = Verzeih mir. Gipasaylo ko niya = Sie hat mir verziehen"},
+        {"ceb": "luoy", "de": "bemitleidenswert; Mitleid haben", "note": "Kaluoy nako = Ich Armer. Maluoy ka nako = Hab Mitleid mit mir. Luoy siya = Sie tut mir leid"},
+        {"ceb": "sugot", "de": "einwilligen; ja sagen (auch zum Heiratsantrag)", "note": "Misugot siya = Sie hat ja gesagt. Mosugot ka? = Willigst du ein?"}
+      ],
+      "grammar": {
+        "title": "Pwede ba ko …? – Naa koy hangyo.",
+        "text": "Um Erlaubnis fragst du mit pwede oder mahimo plus mo-Verb: „Pwede ba ko mogamit sa imong selpon?“ (Darf ich dein Handy benutzen?), „Mahimo ba?“ (Geht das?). Eine Bitte kündigst du an mit „Naa koy hangyo“ (Ich habe eine Bitte) oder „Pwede ko mangayo ug pabor?“ (Kann ich dich um einen Gefallen bitten?) – mangayo ist die mo-Form von pangayo. Die Antwort steckt im Verb: „Gitugotan ko ni Mama“ (Mama hat es mir erlaubt), „Misugot siya“ (Sie hat ja gesagt), „Gibalibaran niya“ (Sie hat abgelehnt). Angay sagt, was man tun sollte: „Angay ka mopahulay“ (Du solltest dich ausruhen). Und wenn etwas schiefging: „Pasayloa ko“ (Verzeih mir), „Maluoy ka nako“ (Hab Mitleid mit mir)."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Pwede ba ko mogamit sa imong selpon?", "direction": "ceb_de", "options": ["Darf ich dein Handy benutzen?", "Kannst du mein Handy benutzen?", "Darf ich dein Handy kaufen?", "Hast du mein Handy benutzt?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich habe eine Bitte, Mama.", "tokens": ["Naa", "koy", "hangyo", "Mama", "pabor", "tugot"], "answer": ["Naa", "koy", "hangyo", "Mama"]},
+        {"type": "multiple_choice", "prompt": "Kann ich dich um einen Gefallen bitten?", "direction": "de_ceb", "options": ["Pwede ko mangayo ug pabor?", "Pwede ko mangayo ug kwarta?", "Mouyon ka sa pabor?", "Pwede ko mobalibad sa pabor?"], "answer": 0},
+        {"type": "fill_blank", "prompt": "___ ko ni Mama nga moadto sa Cebu.", "translation": "Mama hat mir erlaubt, nach Cebu zu gehen.", "options": ["Gitugotan", "Gibalibaran", "Gipasaylo"], "answer": 0},
+        {"type": "true_false", "statement": "Misugot siya sa akong hangyo.", "translation": "Sie hat meine Bitte abgelehnt.", "answer": false, "correction": "Sie hat meiner Bitte zugestimmt."},
+        {"type": "true_false", "statement": "Mouyon ko nimo, sakto ka.", "translation": "Ich stimme dir zu, du hast recht.", "answer": true},
+        {"type": "type_answer", "prompt": "Verzeih mir.", "answer": "Pasayloa ko"},
+        {"type": "multiple_choice", "prompt": "Angay ka mopahulay, kapoy na ka.", "direction": "ceb_de", "options": ["Du solltest dich ausruhen, du bist schon müde.", "Du darfst dich ausruhen, du bist schon fertig.", "Du musst arbeiten, du bist noch nicht müde.", "Du solltest schlafen, du bist krank."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Mangayo ko ug ___ para kang Inday.", "translation": "Ich bitte um Milch für Inday.", "options": ["gatas", "pabor", "tubig"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "hangyo", "de": "Bitte (Anliegen)"},
+          {"ceb": "pabor", "de": "Gefallen"},
+          {"ceb": "tugot", "de": "erlauben"},
+          {"ceb": "balibad", "de": "ablehnen; absagen"},
+          {"ceb": "uyon", "de": "zustimmen"}
+        ]},
+        {"type": "multiple_choice", "prompt": "Hab Mitleid mit mir.", "direction": "de_ceb", "options": ["Maluoy ka nako.", "Pasayloa ko.", "Tabangi ko.", "Hulata ko."], "answer": 0},
+        {"type": "word_bank", "prompt": "Darf ich dich küssen?", "tokens": ["Pwede", "ba", "ko", "mohalok", "nimo", "mogakos", "dili"], "answer": ["Pwede", "ba", "ko", "mohalok", "nimo"]},
+        {"type": "true_false", "statement": "Gibalibaran niya ang akong hangyo.", "translation": "Sie hat meine Bitte abgelehnt.", "answer": true},
+        {"type": "fill_blank", "prompt": "Luoy ___ si Inday, naay hilanat.", "translation": "Inday tut mir so leid, sie hat Fieber.", "options": ["kaayo", "dili", "wala"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Mosugot ka?", "direction": "ceb_de", "options": ["Willigst du ein?", "Lehnst du ab?", "Verzeihst du mir?", "Hilfst du mir?"], "answer": 0},
+        {"type": "grammar_note", "title": "pwede, mahimo, angay", "text": "Pwede und mahimo fragen beide, ob etwas geht oder erlaubt ist: Pwede ba ko molakaw? / Mahimo ba ko molakaw? (Darf ich gehen?). Angay sagt nicht, ob es geht, sondern ob es richtig wäre: Angay ka molakaw (Du solltest gehen). Dili pwede heißt also „geht nicht / darf nicht“, dili angay heißt „sollte man nicht“."},
+        {"type": "word_bank", "prompt": "Mama hat es mir erlaubt.", "tokens": ["Gitugotan", "ko", "ni", "Mama", "Gibalibaran", "si"], "answer": ["Gitugotan", "ko", "ni", "Mama"]},
+        {"type": "multiple_choice", "prompt": "Pwede hangyo, Manang?", "direction": "ceb_de", "options": ["Kann man handeln, Manang?", "Kann ich bezahlen, Manang?", "Kann ich warten, Manang?", "Darf ich probieren, Manang?"], "answer": 0}
+      ],
+      "surprise": {"ceb": "Pasayloa ko, Langga. Sayop ko, uyon ko nimo.", "de": "Verzeih mir, Schatz. Ich lag falsch, ich stimme dir zu.", "when": "Nach einem Streit, wenn sie recht hatte – also ziemlich oft."}
+    },
+    {
+      "id": "u09_l06",
+      "title": "Smalltalk",
+      "vocab": [
+        {"ceb": "plano", "de": "Plan; planen", "note": "Unsay plano nimo ugma? = Was hast du morgen vor?"},
+        {"ceb": "libre", "de": "frei (Zeit); kostenlos", "note": "Libre ka ugma? = Hast du morgen frei/Zeit? Libre ang pagkaon = Das Essen ist gratis"},
+        {"ceb": "uyab", "de": "fester Freund; feste Freundin (Partner)", "note": "Uyab ko siya kaniadto = Sie war früher meine Freundin"},
+        {"ceb": "balita", "de": "Nachricht; Neuigkeit", "note": "Unsay balita? = Was gibt's Neues?"},
+        {"ceb": "kalingawan", "de": "Hobby; Unterhaltung", "note": "Unsay imong kalingawan? = Was ist dein Hobby? Von lingaw = Spaß"},
+        {"ceb": "musika", "de": "Musik"},
+        {"ceb": "sine", "de": "Kino; Film", "note": "Motan-aw ta ug sine = Lass uns einen Film schauen"},
+        {"ceb": "bola", "de": "Ball; Basketball", "note": "Magdula ta ug bola = Lass uns Ball spielen"},
+        {"ceb": "suroy", "de": "herumgehen; bummeln; spazieren", "note": "Magsuroy-suroy ta = Lass uns ein bisschen rumlaufen"},
+        {"ceb": "paborito", "de": "Lieblings-", "note": "akong paborito nga pagkaon = mein Lieblingsessen"}
+      ],
+      "grammar": {
+        "title": "Unsay plano nimo? – alle Fragewörter",
+        "text": "Smalltalk beginnt fast immer mit unsay (= unsa ang): „Unsay balita?“ (Was gibt's Neues?), „Unsay plano nimo ugma?“ (Was hast du morgen vor?), „Unsay imong paborito nga pagkaon?“ (Was ist dein Lieblingsessen?). Ob jemand Zeit hat, fragst du mit libre: „Libre ka sa Sabado?“ (Hast du am Samstag frei?). Zum Verabreden nimmst du ta plus mag-/mo-Verb: „Magsuroy-suroy ta“ (Lass uns bummeln), „Motan-aw ta ug sine“ (Lass uns einen Film schauen). Die Fragewörter auf einen Blick: unsa (was), kinsa (wer), asa/diin (wo), kanus-a (wann), ngano (warum), pila (wie viel), unsaon/giunsa (wie), hain (welches). Mit man dahinter klingt jede dieser Fragen freundlicher: „Kanus-a man ka libre?“"
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Unsay plano nimo ugma?", "direction": "ceb_de", "options": ["Was hast du morgen vor?", "Was machst du heute?", "Wann hast du morgen frei?", "Was gibt es morgen Neues?"], "answer": 0},
+        {"type": "type_answer", "prompt": "Was gibt's Neues?", "answer": "Unsay balita?", "accepted": ["Unsa ang balita?", "Unsay balita nimo?"]},
+        {"type": "word_bank", "prompt": "Hast du am Samstag frei?", "tokens": ["Libre", "ka", "sa", "Sabado", "Dominggo", "ba", "plano"], "answer": ["Libre", "ka", "sa", "Sabado"], "accepted": ["Libre ba ka sa Sabado"]},
+        {"type": "fill_blank", "prompt": "Unsay imong ___ nga pagkaon?", "translation": "Was ist dein Lieblingsessen?", "options": ["paborito", "kalingawan", "balita"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Was ist dein Hobby?", "direction": "de_ceb", "options": ["Unsay imong kalingawan?", "Unsay imong plano?", "Unsay imong balita?", "Unsay imong paborito?"], "answer": 0},
+        {"type": "true_false", "statement": "Uyab ko siya kaniadto.", "translation": "Sie war früher meine Freundin.", "answer": true},
+        {"type": "true_false", "statement": "Motan-aw ta ug sine karong gabii.", "translation": "Lass uns heute Abend Musik hören.", "answer": false, "correction": "Lass uns heute Abend einen Film schauen."},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "musika", "de": "Musik"},
+          {"ceb": "sine", "de": "Kino; Film"},
+          {"ceb": "bola", "de": "Ball; Basketball"},
+          {"ceb": "suroy", "de": "herumgehen; bummeln"},
+          {"ceb": "paborito", "de": "Lieblings-"}
+        ]},
+        {"type": "word_bank", "prompt": "Lass uns am Samstag in der Mall bummeln.", "tokens": ["Magsuroy-suroy", "ta", "sa", "mall", "sa", "Sabado", "magdula", "bola"], "answer": ["Magsuroy-suroy", "ta", "sa", "mall", "sa", "Sabado"]},
+        {"type": "multiple_choice", "prompt": "Magdula ta ug bola human sa klase?", "direction": "ceb_de", "options": ["Spielen wir nach dem Unterricht Ball?", "Spielen wir vor dem Unterricht Ball?", "Schauen wir nach dem Unterricht einen Film?", "Gehen wir nach dem Unterricht bummeln?"], "answer": 0},
+        {"type": "fill_blank", "prompt": "Maminaw ko ug ___ samtang magluto ko.", "translation": "Ich höre Musik, während ich koche.", "options": ["musika", "sine", "bola"], "answer": 0},
+        {"type": "type_answer", "prompt": "Was hast du morgen vor?", "answer": "Unsay plano nimo ugma?", "accepted": ["Unsa ang plano nimo ugma?", "Unsay imong plano ugma?"]},
+        {"type": "multiple_choice", "prompt": "Libre ang pagkaon sa miting.", "direction": "ceb_de", "options": ["Das Essen bei der Besprechung ist kostenlos.", "Das Essen bei der Besprechung ist lecker.", "Bei der Besprechung gibt es kein Essen.", "Das Essen bei der Besprechung ist teuer."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Wann hast du frei?", "direction": "de_ceb", "options": ["Kanus-a ka libre?", "Diin ka libre?", "Pila ka libre?", "Kinsa ang libre?"], "answer": 0},
+        {"type": "fill_blank", "prompt": "___ ang imong paborito nga kolor?", "translation": "Was ist deine Lieblingsfarbe?", "options": ["Unsa", "Kinsa", "Asa"], "answer": 0},
+        {"type": "word_bank", "prompt": "Wer ist dein Lieblingslehrer?", "tokens": ["Kinsa", "ang", "imong", "paborito", "nga", "maestro", "Unsa", "estudyante"], "answer": ["Kinsa", "ang", "imong", "paborito", "nga", "maestro"]},
+        {"type": "true_false", "statement": "Asa man ta magsuroy ugma?", "translation": "Wo gehen wir morgen bummeln?", "answer": true},
+        {"type": "grammar_note", "title": "Alle Fragewörter auf einen Blick", "text": "Unsa (was) – Unsay balita? Kinsa (wer) – Kinsa ang imong uyab? Asa (wo, jetzt/später) – Asa ta magsuroy? Diin (wo, vorher) – Diin ka gikan? Kanus-a (wann) – Kanus-a ka libre? Ngano (warum) – Nganong wala ka miabot? Pila (wie viel) – Pila ka buok? Unsaon/Giunsa (wie) – Unsaon pagluto? Hain (welches) – Hain ang imong paborito? Und ba macht aus jedem Satz eine Ja-Nein-Frage: Libre ba ka?"},
+        {"type": "multiple_choice", "prompt": "Unsay balita sa Cebu, Mama?", "direction": "ceb_de", "options": ["Was gibt's Neues in Cebu, Mama?", "Wie ist das Wetter in Cebu, Mama?", "Was ist dein Plan in Cebu, Mama?", "Wer ist in Cebu, Mama?"], "answer": 0}
+      ],
+      "surprise": {"ceb": "Libre ka ugma? Ikaw ang akong paborito nga plano.", "de": "Hast du morgen Zeit? Du bist mein Lieblingsplan.", "when": "Freitagabend, wenn das Wochenende vor euch liegt."}
+    }
+  ]
+}
