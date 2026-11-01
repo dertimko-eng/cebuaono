@@ -1,0 +1,324 @@
+{
+  "unit": 6,
+  "title": "Gefühle, Befinden, Wetter",
+  "level": "A1",
+  "lessons": [
+    {
+      "id": "u06_l01",
+      "title": "Wie fühlst du dich?",
+      "vocab": [
+        {"ceb": "kapoy", "de": "müde; anstrengend", "note": "Kapoy kaayo ko = Ich bin sehr müde"},
+        {"ceb": "sakit", "de": "krank; Schmerz; weh", "note": "Sakit akong ulo = Mein Kopf tut weh. Masakiton = kränklich"},
+        {"ceb": "lipay", "de": "froh; glücklich", "note": "malipayon = glücklich (Adjektiv); nalipay ko = ich freue mich"},
+        {"ceb": "guol", "de": "traurig; bedrückt"},
+        {"ceb": "kulba", "de": "nervös; aufgeregt", "note": "Kulbaan ko = Ich bin nervös"},
+        {"ceb": "lagot", "de": "verärgert; genervt"},
+        {"ceb": "hadlok", "de": "Angst; sich fürchten", "note": "Nahadlok ko = Ich habe Angst"},
+        {"ceb": "ulo", "de": "Kopf"},
+        {"ceb": "tiyan", "de": "Bauch"},
+        {"ceb": "lawas", "de": "Körper"}
+      ],
+      "grammar": {
+        "title": "Gefühle ohne „sein“: Kapoy ko",
+        "text": "Gefühle sagt man wie Eigenschaften, ganz ohne „bin/bist“: Kapoy ko = Ich bin müde, Guol siya = Er ist traurig, Kapoy kaayo ko = Ich bin sehr müde. Wenn etwas wehtut, kommt das Körperteil dahinter: Sakit akong ulo = Mein Kopf tut weh, Sakit akong tiyan = Mein Bauch tut weh. Einige Gefühle bekommen na- (es ist über mich gekommen): Nahadlok ko = Ich habe Angst, Nalipay ko = Ich freue mich, Nalagot ko = Ich bin genervt. Kulba sagt man meist als Kulbaan ko = Ich bin nervös. Wenn dich jemand fragt Kumusta ka?, kannst du jetzt mehr antworten als Maayo ra."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Kapoy kaayo ko.", "direction": "ceb_de", "options": ["Ich bin sehr müde.", "Ich bin sehr hungrig.", "Ich bin sehr froh.", "Ich bin sehr nervös."], "answer": 0},
+        {"type": "word_bank", "prompt": "Mein Kopf tut weh.", "tokens": ["Sakit", "akong", "ulo", "tiyan", "imong", "kapoy"], "answer": ["Sakit", "akong", "ulo"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "kapoy", "de": "müde"},
+          {"ceb": "guol", "de": "traurig"},
+          {"ceb": "kulba", "de": "nervös"},
+          {"ceb": "lagot", "de": "verärgert"},
+          {"ceb": "ulo", "de": "Kopf"}
+        ]},
+        {"type": "fill_blank", "prompt": "Sakit akong ___ human sa paniudto.", "translation": "Nach dem Mittagessen tut mir der Bauch weh.", "options": ["tiyan", "ulo", "lawas"], "answer": 0},
+        {"type": "true_false", "statement": "Nahadlok si Inday sa iro.", "translation": "Inday hat Angst vor dem Hund.", "answer": true},
+        {"type": "type_answer", "prompt": "Ich bin müde.", "answer": "Kapoy ko", "accepted": ["Kapoy kaayo ko", "Gikapoy ko"]},
+        {"type": "multiple_choice", "prompt": "Ich bin traurig.", "direction": "de_ceb", "options": ["Guol ko.", "Lipay ko.", "Lagot ko.", "Kapoy ko."], "answer": 0},
+        {"type": "grammar_note", "title": "na- bei Gefühlen", "text": "Manche Gefühle kommen über einen – dafür steht na- vor der Wurzel: Nahadlok ko = Ich habe Angst (bekommen), Nalipay ko = Ich freue mich, Nalagot ko = Ich bin genervt, Naguol ko = Ich bin traurig geworden. Ohne na- beschreibst du den Zustand: Guol ko = Ich bin traurig. Im Alltag sind beide Formen üblich."},
+        {"type": "word_bank", "prompt": "Ich habe Angst.", "tokens": ["Nahadlok", "ko", "siya", "lipay"], "answer": ["Nahadlok", "ko"]},
+        {"type": "fill_blank", "prompt": "___ ko karon, dili ko motrabaho.", "translation": "Ich bin heute krank, ich gehe nicht arbeiten.", "options": ["Sakit", "Lipay", "Lawas"], "answer": 0},
+        {"type": "true_false", "statement": "Kulbaan si Tim.", "translation": "Tim ist müde.", "answer": false, "correction": "Tim ist nervös."},
+        {"type": "multiple_choice", "prompt": "lawas", "direction": "ceb_de", "options": ["Körper", "Bauch", "Kopf", "Name"], "answer": 0},
+        {"type": "type_answer", "prompt": "Ich bin nervös.", "answer": "Kulbaan ko", "accepted": ["Kulba ko"]},
+        {"type": "word_bank", "prompt": "Mama ist heute sehr froh.", "tokens": ["Lipay", "kaayo", "si", "Mama", "karon", "guol", "ko"], "answer": ["Lipay", "kaayo", "si", "Mama", "karon"]},
+        {"type": "multiple_choice", "prompt": "Nalagot ko sa akong trabaho.", "direction": "ceb_de", "options": ["Ich bin genervt von meiner Arbeit.", "Ich bin müde von meiner Arbeit.", "Ich habe Angst vor meiner Arbeit.", "Ich bin froh über meine Arbeit."], "answer": 0},
+        {"type": "true_false", "statement": "Naghilak si Inday, guol siya.", "translation": "Inday weint, sie ist traurig.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "sakit", "de": "krank; weh"},
+          {"ceb": "lipay", "de": "froh"},
+          {"ceb": "hadlok", "de": "Angst"},
+          {"ceb": "tiyan", "de": "Bauch"},
+          {"ceb": "lawas", "de": "Körper"}
+        ]}
+      ],
+      "surprise": {"ceb": "Lipay kaayo ko kay ikaw akong asawa.", "de": "Ich bin sehr glücklich, weil du meine Frau bist.", "when": "Einfach so beim Frühstück – kay heißt „weil“ und kommt in der nächsten Lektion."}
+    },
+    {
+      "id": "u06_l02",
+      "title": "Schön, schwer, stark",
+      "vocab": [
+        {"ceb": "nindot", "de": "schön; toll", "note": "Kanindot! = Wie schön!"},
+        {"ceb": "bati", "de": "schlecht; hässlich", "note": "Bati akong pamati = Ich fühle mich schlecht"},
+        {"ceb": "lisod", "de": "schwer; schwierig"},
+        {"ceb": "sayon", "de": "leicht; einfach"},
+        {"ceb": "kusog", "de": "stark; laut; schnell", "note": "kusog ang ulan = es regnet stark; kusog kaayo = sehr laut/stark"},
+        {"ceb": "hinay", "de": "langsam; leise", "note": "Hinay-hinay lang = Langsam, immer mit der Ruhe"},
+        {"ceb": "kay", "de": "weil", "note": "Kapoy ko kay daghan ko ug trabaho = Ich bin müde, weil ich viel Arbeit habe"},
+        {"ceb": "taas", "de": "hoch; lang; groß (Person)"},
+        {"ceb": "mubo", "de": "kurz; klein (Person)"},
+        {"ceb": "pero", "de": "aber", "note": "formell: apan"}
+      ],
+      "grammar": {
+        "title": "kay = weil, pero = aber, Kanindot!",
+        "text": "Mit kay hängst du den Grund an: Kapoy ko kay nagtrabaho ko ug lima ka oras = Ich bin müde, weil ich fünf Stunden gearbeitet habe. Pero heißt „aber“ und steht wie im Deutschen zwischen den beiden Teilen: Lisod ang Cebuano, pero nindot = Cebuano ist schwer, aber schön. Für einen Ausruf setzt man ka- vor das Adjektiv: Kanindot (Wie schön!), Kalisod (Wie schwer!), Kakusog (Wie stark!). Kusog heißt stark, laut oder schnell, hinay ist das Gegenteil (langsam, leise). Taas und mubo beschreiben Höhe und Länge, bei Personen auch groß und klein: Taas si Tim, mubo si Mama."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Kanindot!", "direction": "ceb_de", "options": ["Wie schön!", "Wie schwer!", "Wie stark!", "Wie müde!"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich bin müde, weil ich fünf Stunden gearbeitet habe.", "tokens": ["Kapoy", "ko", "kay", "nagtrabaho", "ko", "ug", "lima", "ka", "oras", "pero", "sayon", "ulo"], "answer": ["Kapoy", "ko", "kay", "nagtrabaho", "ko", "ug", "lima", "ka", "oras"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "nindot", "de": "schön"},
+          {"ceb": "bati", "de": "schlecht"},
+          {"ceb": "lisod", "de": "schwer"},
+          {"ceb": "sayon", "de": "leicht"},
+          {"ceb": "kusog", "de": "stark"}
+        ]},
+        {"type": "fill_blank", "prompt": "Lisod ang Cebuano, ___ nindot.", "translation": "Cebuano ist schwer, aber schön.", "options": ["pero", "kay", "ug"], "answer": 0},
+        {"type": "true_false", "statement": "Taas si Tim, mubo si Mama.", "translation": "Tim ist groß, Mama ist klein.", "answer": true},
+        {"type": "type_answer", "prompt": "Wie schön!", "answer": "Kanindot", "accepted": ["Nindot kaayo"]},
+        {"type": "multiple_choice", "prompt": "Das ist sehr leicht.", "direction": "de_ceb", "options": ["Sayon kaayo kini.", "Lisod kaayo kini.", "Nindot kaayo kini.", "Bati kaayo kini."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Sakit akong ulo ___ wala ko natulog.", "translation": "Mein Kopf tut weh, weil ich nicht geschlafen habe.", "options": ["kay", "pero", "o"], "answer": 0},
+        {"type": "word_bank", "prompt": "Langsam, Inday!", "tokens": ["Hinay-hinay", "Inday", "kusog", "taas"], "answer": ["Hinay-hinay", "Inday"]},
+        {"type": "true_false", "statement": "Kusog kaayo ang TV.", "translation": "Der Fernseher ist sehr leise.", "answer": false, "correction": "Der Fernseher ist sehr laut."},
+        {"type": "multiple_choice", "prompt": "Bati ang pagkaon dinhi.", "direction": "ceb_de", "options": ["Das Essen hier ist schlecht.", "Das Essen hier ist lecker.", "Das Essen hier ist teuer.", "Das Essen hier ist scharf."], "answer": 0},
+        {"type": "type_answer", "prompt": "Ich bin müde, aber froh.", "answer": "Kapoy ko pero lipay", "accepted": ["Kapoy ko, pero lipay ko", "Kapoy pero lipay ko"]},
+        {"type": "grammar_note", "title": "ka- + Adjektiv = Wie …!", "text": "Ein ka- vor dem Adjektiv macht daraus einen Ausruf: Kanindot! = Wie schön! Kalisod! = Wie schwer! Kakapoy! = Wie anstrengend! Das ist das Erste, was du bei Sonnenuntergang am Meer sagst – und beim Blick auf den Stundenplan."},
+        {"type": "word_bank", "prompt": "Es ist schwer, Möbel zu bauen.", "tokens": ["Lisod", "maghimo", "ug", "muwebles", "sayon", "kahoy"], "answer": ["Lisod", "maghimo", "ug", "muwebles"]},
+        {"type": "multiple_choice", "prompt": "Taas kaayo ang hagdan.", "direction": "ceb_de", "options": ["Die Treppe ist sehr hoch.", "Die Treppe ist sehr kurz.", "Die Treppe ist sehr schmutzig.", "Die Treppe ist sehr neu."], "answer": 0},
+        {"type": "true_false", "statement": "Sayon ang Cebuano kay buotan akong asawa.", "translation": "Cebuano ist leicht, weil meine Frau nett ist.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "hinay", "de": "langsam"},
+          {"ceb": "kay", "de": "weil"},
+          {"ceb": "pero", "de": "aber"},
+          {"ceb": "taas", "de": "hoch"},
+          {"ceb": "mubo", "de": "kurz"}
+        ]},
+        {"type": "fill_blank", "prompt": "Nindot ang Cebu, ___ init kaayo.", "translation": "Cebu ist schön, aber sehr heiß.", "options": ["pero", "kay", "pud"], "answer": 0}
+      ],
+      "surprise": {"ceb": "Kanindot nimo karon!", "de": "Wie schön du heute aussiehst!", "when": "Wenn sie aus dem Bad kommt – auch morgens um halb sieben."}
+    },
+    {
+      "id": "u06_l03",
+      "title": "Das Wetter",
+      "vocab": [
+        {"ceb": "ulan", "de": "Regen; regnen", "note": "Nag-ulan = Es regnet. Mag-ulan ugma = Morgen regnet es"},
+        {"ceb": "panahon", "de": "Wetter; Zeit (Zeitraum)", "note": "Nindot ang panahon = Das Wetter ist schön"},
+        {"ceb": "tugnaw", "de": "kalt (Gefühl, Wetter)", "note": "Tugnaw karon = Es ist kalt heute. Gitugnaw ko = Mir ist kalt"},
+        {"ceb": "hangin", "de": "Wind; Luft"},
+        {"ceb": "panganod", "de": "Wolke"},
+        {"ceb": "bagyo", "de": "Taifun; Sturm"},
+        {"ceb": "niyebe", "de": "Schnee", "note": "vom spanischen nieve; viele sagen einfach snow"},
+        {"ceb": "langit", "de": "Himmel"},
+        {"ceb": "yuta", "de": "Erde; Boden; Land (Grundstück)"},
+        {"ceb": "dagat", "de": "Meer"}
+      ],
+      "grammar": {
+        "title": "Nag-ulan: Wetter sagen",
+        "text": "Wetter-Nomen werden mit nag- zum Verb: Nag-ulan = Es regnet, Mag-ulan ugma = Morgen regnet es, Nagbagyo = Es stürmt (Taifun). Tugnaw karon = Es ist kalt heute – tugnaw ist das kalte Wetter oder Gefühl, bugnaw (Unit 3) ist eine kalte Sache wie Wasser oder Bier. „Mir ist kalt“ heißt Gitugnaw ko, genauso gebaut wie Gigutom ko = Ich bin hungrig. Das Wetter beschreibt man mit Adjektiv plus ang panahon: Nindot ang panahon = Das Wetter ist schön, Bati ang panahon = Das Wetter ist schlecht. Im Sauerland: Daghang niyebe, tugnaw kaayo – in Cebu: Init kaayo, naay bagyo."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Nag-ulan karon.", "direction": "ceb_de", "options": ["Es regnet jetzt.", "Es schneit jetzt.", "Es ist windig jetzt.", "Es ist kalt jetzt."], "answer": 0},
+        {"type": "word_bank", "prompt": "Morgen regnet es.", "tokens": ["Mag-ulan", "ugma", "karon", "niyebe"], "answer": ["Mag-ulan", "ugma"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "ulan", "de": "Regen"},
+          {"ceb": "hangin", "de": "Wind"},
+          {"ceb": "panganod", "de": "Wolke"},
+          {"ceb": "bagyo", "de": "Taifun"},
+          {"ceb": "niyebe", "de": "Schnee"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ kaayo sa Sauerland karon.", "translation": "Im Sauerland ist es jetzt sehr kalt (Wetter).", "options": ["Tugnaw", "Init", "Bugnaw"], "answer": 0},
+        {"type": "true_false", "statement": "Init kaayo sa Cebu.", "translation": "In Cebu ist es sehr heiß.", "answer": true},
+        {"type": "type_answer", "prompt": "Mir ist kalt.", "answer": "Gitugnaw ko", "accepted": ["Tugnaw ko"]},
+        {"type": "multiple_choice", "prompt": "Das Wetter ist schön.", "direction": "de_ceb", "options": ["Nindot ang panahon.", "Bati ang panahon.", "Nindot ang langit.", "Kusog ang hangin."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Daghang ___ sa Sauerland sa Disyembre.", "translation": "Im Sauerland gibt es im Dezember viel Schnee.", "options": ["niyebe", "dagat", "yuta"], "answer": 0},
+        {"type": "true_false", "statement": "Kusog ang hangin, naay bagyo.", "translation": "Der Wind ist stark, es gibt einen Taifun.", "answer": true},
+        {"type": "word_bank", "prompt": "Der Himmel ist heute sehr schön.", "tokens": ["Nindot", "kaayo", "ang", "langit", "karon", "yuta", "dagat"], "answer": ["Nindot", "kaayo", "ang", "langit", "karon"]},
+        {"type": "multiple_choice", "prompt": "Daghang panganod sa langit.", "direction": "ceb_de", "options": ["Viele Wolken am Himmel.", "Viel Schnee auf dem Boden.", "Viel Wind am Meer.", "Viel Regen im Garten."], "answer": 0},
+        {"type": "grammar_note", "title": "tugnaw oder bugnaw?", "text": "Beides heißt „kalt“, aber: tugnaw ist das Wetter oder das Gefühl im Körper (Tugnaw karon, Gitugnaw ko), bugnaw ist eine kalte Sache zum Anfassen oder Trinken (bugnaw nga tubig, bugnaw nga bir). Im Sauerland also tugnaw, im Kühlschrank bugnaw."},
+        {"type": "type_answer", "prompt": "Es regnet.", "answer": "Nag-ulan", "accepted": ["Nag-ulan karon"]},
+        {"type": "true_false", "statement": "Gitugnaw ko, kapoy pud ko.", "translation": "Mir ist heiß und ich bin auch müde.", "answer": false, "correction": "Mir ist kalt und ich bin auch müde."},
+        {"type": "multiple_choice", "prompt": "Nindot ang dagat sa Cebu.", "direction": "ceb_de", "options": ["Das Meer in Cebu ist schön.", "Der Himmel in Cebu ist schön.", "Das Wetter in Cebu ist schön.", "Der Boden in Cebu ist schön."], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "panahon", "de": "Wetter"},
+          {"ceb": "tugnaw", "de": "kalt (Wetter)"},
+          {"ceb": "langit", "de": "Himmel"},
+          {"ceb": "yuta", "de": "Erde; Boden"},
+          {"ceb": "dagat", "de": "Meer"}
+        ]},
+        {"type": "fill_blank", "prompt": "Dili ko moadto sa dagat ___ nag-ulan.", "translation": "Ich gehe nicht ans Meer, weil es regnet.", "options": ["kay", "pero", "ug"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich habe Angst vor dem Taifun.", "tokens": ["Nahadlok", "ko", "sa", "bagyo", "ulan", "hangin"], "answer": ["Nahadlok", "ko", "sa", "bagyo"]}
+      ],
+      "surprise": {"ceb": "Tugnaw sa Sauerland, pero init kanunay ang atong balay kay naa ka.", "de": "Im Sauerland ist es kalt, aber unser Haus ist immer warm, weil du da bist.", "when": "An einem grauen Novembertag, wenn sie über das Wetter stöhnt."}
+    },
+    {
+      "id": "u06_l04",
+      "title": "Gefühle sagen",
+      "vocab": [
+        {"ceb": "mingaw", "de": "vermissen; einsam; still", "note": "Gimingaw ko nimo = Ich vermisse dich. Mingaw dinhi = Es ist einsam/ruhig hier"},
+        {"ceb": "tabang", "de": "helfen; Hilfe", "note": "Tabang! = Hilfe! Tabangi ko = Hilf mir"},
+        {"ceb": "kalma", "de": "ruhig; gelassen", "note": "Kalma lang = Bleib ruhig"},
+        {"ceb": "kuyaw", "de": "gefährlich; krass", "note": "Kuyaw! = Krass! (auch bewundernd)"},
+        {"ceb": "lingaw", "de": "Spaß; unterhaltsam", "note": "Lingaw kaayo! = Hat Spaß gemacht! Nalingaw ko = Ich hatte Spaß"},
+        {"ceb": "laay", "de": "langweilig; gelangweilt", "note": "Laay ko = Mir ist langweilig"},
+        {"ceb": "sayop", "de": "falsch; Fehler", "note": "Sayop ko = Ich habe mich geirrt / mein Fehler"},
+        {"ceb": "sakto", "de": "richtig; genau; passend", "note": "Sakto! = Richtig! Sakto ra = genau richtig / reicht"},
+        {"ceb": "siguro", "de": "wahrscheinlich; vielleicht"},
+        {"ceb": "tinuod", "de": "wahr; wirklich", "note": "Tinuod ba? = Echt? Sa tinuod lang = ehrlich gesagt"}
+      ],
+      "grammar": {
+        "title": "Gimingaw ko nimo",
+        "text": "Vermissen baut man mit gi- + Wurzel, dann wer vermisst (ko) und wen (nimo): Gimingaw ko nimo = Ich vermisse dich, Gimingaw ko sa Cebu = Ich vermisse Cebu. Mingaw allein heißt still oder einsam: Mingaw dinhi = Es ist ruhig/einsam hier. Spaß drückst du mit lingaw aus: Lingaw kaayo = Das macht (hat) sehr viel Spaß (gemacht), Nalingaw ko = Ich hatte Spaß. Kalma hört man als kurzen Zuruf: Kalma, Inday = Ganz ruhig, Inday. Sakto ist dein Ja zum Richtigen (Sakto!), sayop das Gegenteil, und mit tinuod und siguro sagst du wirklich und wahrscheinlich: Tinuod (Echt?) oder Siguro (Wahrscheinlich)."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Gimingaw ko nimo.", "direction": "ceb_de", "options": ["Ich vermisse dich.", "Ich helfe dir.", "Ich habe Angst vor dir.", "Ich bin genervt von dir."], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich vermisse dich, Mama.", "tokens": ["Gimingaw", "ko", "nimo", "Mama", "nako", "lingaw"], "answer": ["Gimingaw", "ko", "nimo", "Mama"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "mingaw", "de": "vermissen"},
+          {"ceb": "tabang", "de": "helfen"},
+          {"ceb": "kalma", "de": "ruhig; gelassen"},
+          {"ceb": "kuyaw", "de": "gefährlich"},
+          {"ceb": "lingaw", "de": "Spaß"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ kaayo ang dula, Inday!", "translation": "Das Spiel macht sehr viel Spaß, Inday!", "options": ["Lingaw", "Laay", "Kuyaw"], "answer": 0},
+        {"type": "true_false", "statement": "Laay ko dinhi sa balay.", "translation": "Mir ist langweilig hier zu Hause.", "answer": true},
+        {"type": "type_answer", "prompt": "Hilf mir!", "answer": "Tabangi ko", "accepted": ["Tabang"]},
+        {"type": "multiple_choice", "prompt": "Richtig!", "direction": "de_ceb", "options": ["Sakto!", "Sayop!", "Tinuod!", "Kuyaw!"], "answer": 0},
+        {"type": "fill_blank", "prompt": "Kuyaw ang ___ karon, kusog kaayo ang hangin.", "translation": "Das Meer ist heute gefährlich, der Wind ist sehr stark.", "options": ["dagat", "langit", "kusina"], "answer": 0},
+        {"type": "true_false", "statement": "Sayop ko, pasayloa ko.", "translation": "Ich habe mich geirrt, entschuldige.", "answer": true},
+        {"type": "word_bank", "prompt": "Ganz ruhig, Inday. Papa ist hier.", "tokens": ["Kalma", "Inday", "naa", "dinhi", "si", "Papa", "didto", "laay"], "answer": ["Kalma", "Inday", "naa", "dinhi", "si", "Papa"], "accepted": ["Kalma Inday naa si Papa dinhi"]},
+        {"type": "multiple_choice", "prompt": "Siguro mag-ulan ugma.", "direction": "ceb_de", "options": ["Wahrscheinlich regnet es morgen.", "Morgen regnet es wirklich.", "Morgen regnet es nicht.", "Heute regnet es wahrscheinlich."], "answer": 0},
+        {"type": "grammar_note", "title": "gi- + Wurzel + ko + nimo", "text": "Gimingaw ko nimo ist wörtlich „vermisst-werde ich von dir“ – im Cebuano steht das Gefühl im Mittelpunkt, nicht der Handelnde. Darum kommt zuerst ko (ich), dann nimo (dich). Genauso: Gimingaw ko sa Cebu, Gimingaw ko ni Inday = Ich vermisse Inday."},
+        {"type": "type_answer", "prompt": "Ich vermisse Cebu.", "answer": "Gimingaw ko sa Cebu"},
+        {"type": "true_false", "statement": "Tinuod? Nalingaw ka sa Sauerland?", "translation": "Echt? Du hattest Spaß im Sauerland?", "answer": true},
+        {"type": "multiple_choice", "prompt": "Mingaw dinhi sa talyer.", "direction": "ceb_de", "options": ["Es ist still hier in der Werkstatt.", "Es ist gefährlich hier in der Werkstatt.", "Es macht Spaß hier in der Werkstatt.", "Es ist laut hier in der Werkstatt."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Sakto ___ ang presyo, dili mahal.", "translation": "Der Preis ist genau richtig, nicht teuer.", "options": ["ra", "kaayo", "pud"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "laay", "de": "langweilig"},
+          {"ceb": "sayop", "de": "falsch"},
+          {"ceb": "sakto", "de": "richtig"},
+          {"ceb": "siguro", "de": "wahrscheinlich"},
+          {"ceb": "tinuod", "de": "wahr"}
+        ]},
+        {"type": "word_bank", "prompt": "Wirklich, es ist sehr gefährlich.", "tokens": ["Tinuod", "kuyaw", "kaayo", "sakto", "laay"], "answer": ["Tinuod", "kuyaw", "kaayo"]}
+      ],
+      "surprise": {"ceb": "Gimingaw ko nimo. Dali na uli.", "de": "Ich vermisse dich. Komm schnell nach Hause.", "when": "Per Chat, wenn sie unterwegs ist – dali (schnell) kommt in Lektion 6."}
+    },
+    {
+      "id": "u06_l05",
+      "title": "Krank sein",
+      "vocab": [
+        {"ceb": "pamati", "de": "Gefühl; Befinden", "note": "Kumusta imong pamati? = Wie fühlst du dich?"},
+        {"ceb": "hitabo", "de": "passieren; Ereignis", "note": "Unsay nahitabo? = Was ist passiert?"},
+        {"ceb": "tambal", "de": "Medizin; Medikament", "note": "tambalan = heilen/behandeln"},
+        {"ceb": "doktor", "de": "Arzt; Ärztin"},
+        {"ceb": "ospital", "de": "Krankenhaus"},
+        {"ceb": "ubo", "de": "Husten; husten"},
+        {"ceb": "hilanat", "de": "Fieber", "note": "Gihilantan ko = Ich habe Fieber"},
+        {"ceb": "ayo", "de": "gesund werden; heilen", "note": "Naayo na ko = Mir geht es wieder gut. Wurzel von maayo = gut"},
+        {"ceb": "sip-on", "de": "Schnupfen; Erkältung"},
+        {"ceb": "labad", "de": "Kopfschmerzen; schwindelig", "note": "Labad akong ulo = Ich habe Kopfschmerzen"}
+      ],
+      "grammar": {
+        "title": "Kumusta imong pamati?",
+        "text": "Nach dem Befinden fragst du Kumusta imong pamati (Wie fühlst du dich?) und nach dem Vorfall Unsay nahitabo (Was ist passiert?). Krankheiten „bekommt“ man mit gi-: Gihilantan ko = Ich habe Fieber, Giubo ko = Ich habe Husten, Gisip-on ko = Ich bin erkältet. Schmerzen sagt man mit sakit oder labad plus Körperteil: Labad akong ulo = Ich habe Kopfschmerzen. Gesund werden ist ayo, die Wurzel von maayo: Naayo na ko = Mir geht es wieder gut. Vor der Schule hast du in einer Apotheke gearbeitet, also in einem tindahan sa tambal – einem Laden für Medizin."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Kumusta imong pamati?", "direction": "ceb_de", "options": ["Wie fühlst du dich?", "Was ist passiert?", "Wo ist der Arzt?", "Hast du Fieber?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Was ist passiert?", "tokens": ["Unsay", "nahitabo", "kinsa", "pamati"], "answer": ["Unsay", "nahitabo"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "tambal", "de": "Medizin"},
+          {"ceb": "doktor", "de": "Arzt"},
+          {"ceb": "ospital", "de": "Krankenhaus"},
+          {"ceb": "ubo", "de": "Husten"},
+          {"ceb": "hilanat", "de": "Fieber"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ ko, sakit akong lawas.", "translation": "Ich habe Fieber, mein Körper tut weh.", "options": ["Gihilantan", "Giubo", "Gisip-on"], "answer": 0},
+        {"type": "true_false", "statement": "Giubo si Inday, naa siya sa doktor.", "translation": "Inday hat Husten, sie ist beim Arzt.", "answer": true},
+        {"type": "type_answer", "prompt": "Ich habe Kopfschmerzen.", "answer": "Labad akong ulo", "accepted": ["Sakit akong ulo"]},
+        {"type": "multiple_choice", "prompt": "Mir geht es wieder gut.", "direction": "de_ceb", "options": ["Naayo na ko.", "Nasakit na ko.", "Gihilantan na ko.", "Kapoy na ko."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Naa si Lola sa ___ kay sakit siya.", "translation": "Oma ist im Krankenhaus, weil sie krank ist.", "options": ["ospital", "tindahan", "kusina"], "answer": 0},
+        {"type": "true_false", "statement": "Bati akong pamati karon.", "translation": "Ich fühle mich heute gut.", "answer": false, "correction": "Ich fühle mich heute schlecht."},
+        {"type": "word_bank", "prompt": "Ich habe in einem Laden für Medizin gearbeitet.", "tokens": ["Nagtrabaho", "ko", "sa", "tindahan", "sa", "tambal", "ospital", "doktor"], "answer": ["Nagtrabaho", "ko", "sa", "tindahan", "sa", "tambal"]},
+        {"type": "multiple_choice", "prompt": "Gisip-on si Inday, tugnaw kaayo gahapon.", "direction": "ceb_de", "options": ["Inday hat Schnupfen, gestern war es sehr kalt.", "Inday hat Fieber, gestern war es sehr heiß.", "Inday hat Husten, heute ist es sehr kalt.", "Inday ist gesund, gestern war es sehr kalt."], "answer": 0},
+        {"type": "grammar_note", "title": "gi- bei Krankheiten", "text": "Fieber, Husten und Schnupfen „treffen“ einen – deshalb gi- wie bei Gigutom ko (Ich bin hungrig) und Gitugnaw ko (Mir ist kalt): Gihilantan ko, Giubo ko, Gisip-on ko. Bei hilanat fällt ein a weg und -an kommt dazu: gi-hilant-an. Antwort auf Kumusta imong pamati? kann aber auch einfach Maayo ra oder Bati sein."},
+        {"type": "type_answer", "prompt": "Was ist passiert?", "answer": "Unsay nahitabo?", "accepted": ["Unsa ang nahitabo?"]},
+        {"type": "true_false", "statement": "Inoma ang tambal, Inday.", "translation": "Nimm die Medizin, Inday.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Labad akong ulo, moadto ko sa doktor.", "direction": "ceb_de", "options": ["Ich habe Kopfschmerzen, ich gehe zum Arzt.", "Ich habe Husten, ich gehe ins Krankenhaus.", "Ich habe Fieber, ich gehe zum Arzt.", "Mein Bauch tut weh, ich bleibe zu Hause."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Kumusta imong ___? – Maayo na, salamat.", "translation": "Wie fühlst du dich? – Schon gut, danke.", "options": ["pamati", "ulo", "tambal"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "pamati", "de": "Gefühl; Befinden"},
+          {"ceb": "hitabo", "de": "passieren"},
+          {"ceb": "ayo", "de": "gesund werden"},
+          {"ceb": "sip-on", "de": "Schnupfen"},
+          {"ceb": "labad", "de": "Kopfschmerzen"}
+        ]},
+        {"type": "word_bank", "prompt": "Ich habe Husten und Fieber.", "tokens": ["Giubo", "ug", "gihilantan", "ko", "gisip-on", "labad"], "answer": ["Giubo", "ug", "gihilantan", "ko"]}
+      ],
+      "surprise": {"ceb": "Ikaw ang akong tambal kung labad akong ulo.", "de": "Du bist meine Medizin, wenn ich Kopfschmerzen habe.", "when": "Wenn du nach einem langen Schultag nach Hause kommst – kung (wenn) kommt erst in Unit 12."}
+    },
+    {
+      "id": "u06_l06",
+      "title": "Was für ein Tag",
+      "vocab": [
+        {"ceb": "grabe", "de": "heftig; extrem; krass", "note": "Grabe ang ulan = Es regnet heftig. Grabe! = Wahnsinn!"},
+        {"ceb": "swerte", "de": "Glück (haben)", "note": "Swerte ko nimo = Ich habe Glück mit dir"},
+        {"ceb": "malas", "de": "Pech"},
+        {"ceb": "balik", "de": "zurückkommen; wieder", "note": "Mobalik ko = Ich komme zurück. Balik-balik = immer wieder"},
+        {"ceb": "hapit", "de": "fast; beinahe", "note": "Hapit na ko mahuman = Ich bin fast fertig"},
+        {"ceb": "hubog", "de": "betrunken"},
+        {"ceb": "dugay", "de": "lange (Zeit); dauern", "note": "Dugay na ko dinhi = Ich bin schon lange hier"},
+        {"ceb": "dali", "de": "schnell mal; komm her", "note": "Dali! = Komm her! / Schnell! Dali ra = nur kurz"},
+        {"ceb": "samok", "de": "nervig; stressig; Unruhe", "note": "Samok kaayo = Voll nervig/chaotisch"},
+        {"ceb": "relaks", "de": "entspannen; entspannt", "note": "Relaks lang = Entspann dich"}
+      ],
+      "grammar": {
+        "title": "Grabe! und Relaks lang",
+        "text": "Grabe verstärkt alles: Grabe ang ulan = Es regnet heftig, Grabe ang trabaho karon = Die Arbeit heute war heftig, und allein gerufen heißt es Wahnsinn (Grabe!). Mit hapit und na sagst du „fast“: Hapit na ko mahuman = Ich bin fast fertig, Hapit na ko moabot = Ich bin fast da. Dugay heißt lange, dali heißt schnell oder komm her: Dugay na ko dinhi = Ich bin schon lange hier, Dali, Inday = Komm her, Inday. Swerte und malas sind Glück und Pech: Swerte ko nimo = Ich habe Glück mit dir. Wenn alles samok (stressig) ist, hilft nur Relaks lang = Entspann dich – lang heißt wie ra „nur/einfach“ und kommt in Unit 9 richtig dran."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Grabe ang ulan karon.", "direction": "ceb_de", "options": ["Es regnet heute heftig.", "Es regnet heute nicht.", "Es regnet heute langsam.", "Es regnet heute wahrscheinlich."], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich bin fast fertig.", "tokens": ["Hapit", "na", "ko", "mahuman", "dugay", "dali"], "answer": ["Hapit", "na", "ko", "mahuman"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "grabe", "de": "heftig; krass"},
+          {"ceb": "swerte", "de": "Glück"},
+          {"ceb": "malas", "de": "Pech"},
+          {"ceb": "hubog", "de": "betrunken"},
+          {"ceb": "samok", "de": "nervig; stressig"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ ko nimo, Mama.", "translation": "Ich habe Glück mit dir, Mama.", "options": ["Swerte", "Malas", "Hubog"], "answer": 0},
+        {"type": "true_false", "statement": "Dugay na ko dinhi sa Germany.", "translation": "Ich bin schon lange hier in Deutschland.", "answer": true},
+        {"type": "type_answer", "prompt": "Komm her, Inday!", "answer": "Dali, Inday", "accepted": ["Dali Inday", "Dali dinhi, Inday"]},
+        {"type": "multiple_choice", "prompt": "Ich komme zurück.", "direction": "de_ceb", "options": ["Mobalik ko.", "Moabot ko.", "Mouli ko.", "Molakaw ko."], "answer": 0},
+        {"type": "fill_blank", "prompt": "___ si Tiyo kay niinom siya ug daghang bir.", "translation": "Onkel ist betrunken, weil er viel Bier getrunken hat.", "options": ["Hubog", "Kapoy", "Lipay"], "answer": 0},
+        {"type": "true_false", "statement": "Samok kaayo sa eskwelahan karon.", "translation": "In der Schule war es heute sehr entspannt.", "answer": false, "correction": "In der Schule war es heute sehr stressig."},
+        {"type": "word_bank", "prompt": "Entspann dich, Mama. Ich koche heute.", "tokens": ["Relaks", "Mama", "magluto", "ko", "karon", "samok", "dali"], "answer": ["Relaks", "Mama", "magluto", "ko", "karon"]},
+        {"type": "multiple_choice", "prompt": "Malas! Nag-ulan ug wala ko sa balay.", "direction": "ceb_de", "options": ["Pech! Es regnet und ich bin nicht zu Hause.", "Glück! Es regnet und ich bin zu Hause.", "Pech! Es ist kalt und ich bin nicht zu Hause.", "Wahnsinn! Es regnet und ich bin zu Hause."], "answer": 0},
+        {"type": "grammar_note", "title": "Hapit na, dugay na", "text": "Na (schon/jetzt) macht aus hapit und dugay einen Stand der Dinge: Hapit na ko mahuman = Ich bin (jetzt) fast fertig, Dugay na ko dinhi = Ich bin (schon) lange hier. Mahuman ist human (fertig) mit ma- – „fertig werden“. Der Satz, den du in der Werkstatt am häufigsten brauchst: Hapit na, Mama!"},
+        {"type": "type_answer", "prompt": "Ich bin schon lange hier.", "answer": "Dugay na ko dinhi"},
+        {"type": "true_false", "statement": "Dali ra ni, Inday, hapit na ta mahuman.", "translation": "Das geht nur kurz, Inday, wir sind fast fertig.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Grabe! Nindot kaayo ang muwebles!", "direction": "ceb_de", "options": ["Wahnsinn! Die Möbel sind sehr schön!", "Pech! Die Möbel sind sehr teuer!", "Schnell! Die Möbel sind sehr groß!", "Wahnsinn! Das Haus ist sehr schön!"], "answer": 0},
+        {"type": "fill_blank", "prompt": "___ ko sa Cebu sa Disyembre, Mama.", "translation": "Ich komme im Dezember nach Cebu zurück, Mama.", "options": ["Mobalik", "Moabot", "Mouli"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "balik", "de": "zurückkommen"},
+          {"ceb": "hapit", "de": "fast"},
+          {"ceb": "dugay", "de": "lange (Zeit)"},
+          {"ceb": "dali", "de": "schnell mal; komm her"},
+          {"ceb": "relaks", "de": "entspannen"}
+        ]},
+        {"type": "word_bank", "prompt": "Wahnsinn, heute war es sehr stressig!", "tokens": ["Grabe", "samok", "kaayo", "karon", "relaks", "swerte"], "answer": ["Grabe", "samok", "kaayo", "karon"]}
+      ],
+      "surprise": {"ceb": "Swerte kaayo ko nimo matag adlaw.", "de": "Ich habe jeden Tag großes Glück mit dir.", "when": "Nach einem stressigen Tag, wenn sie dich wieder aufgefangen hat."}
+    }
+  ]
+}
