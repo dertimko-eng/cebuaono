@@ -1,0 +1,29 @@
+{
+  "id": "s12",
+  "unit": 12,
+  "after": "u12_l06",
+  "title": "Das Haus in Cebu",
+  "scene": "videocall",
+  "intro": "Sonntagabend im Sauerland: Videoanruf mit Lola in Cebu. Tim und Langga haben große Neuigkeiten.",
+  "lines": [
+    { "who": "lola", "ceb": "Kumusta mo dinha? Kaon na mo?", "de": "Wie geht's euch da drüben? Habt ihr schon gegessen?" },
+    { "who": "tim", "ceb": "Oo, Lola. Naa mi balita! Naa koy sugyot.", "de": "Ja, Lola. Wir haben Neuigkeiten! Ich habe einen Vorschlag." },
+    { "who": "langga", "ceb": "Plano, Lola. Magtigom mi ug kwarta ug magtukod mi ug balay sa Cebu, puhon.", "de": "Einen Plan, Lola. Wir sparen Geld und bauen ein Haus in Cebu – so Gott will." },
+    { "who": "lola", "ceb": "Maayong ideya! Pero ang kusina, dako gyud. Para sa lechon.", "de": "Gute Idee! Aber die Küche muss groß sein. Für den Lechon." },
+    { "who": "inday", "ceb": "Lola, naa ba kwarto para nako? Ug para sa iro?", "de": "Lola, gibt es ein Zimmer für mich? Und für den Hund?" },
+    { "who": "tim", "ceb": "Sa akong hunahuna, mas nindot ang Sauerland kaysa Cebu.", "de": "Meiner Meinung nach ist das Sauerland schöner als Cebu." },
+    { "who": "lola", "ceb": "Unsa?! Mas nindot ang Sauerland?", "de": "Was?! Das Sauerland schöner?" },
+    { "who": "langga", "ceb": "Hala, sayop, Tim! Mas nindot ang Cebu kaysa Sauerland. Ang Cebu ang pinakanindot.", "de": "Ach, falsch herum, Tim! Cebu ist schöner als das Sauerland. Cebu ist das Schönste." },
+    { "who": "tim", "ceb": "Oo, oo, mao na ang akong pasabot! Hinaut nga dili suko si Lola.", "de": "Ja, ja, genau das meinte ich! Hoffentlich ist Lola nicht sauer." },
+    { "who": "lola", "ceb": "Dili ko suko. Pero hinumdom ko: matod ni Tim, mas nindot ang Sauerland.", "de": "Ich bin nicht sauer. Aber ich merke mir das: Laut Tim ist das Sauerland schöner." },
+    { "who": "agila", "ceb": "Usa ka sayop, usa ka bag-ong kapitulo. Matinud-anon si Tim – sa iyang paagi.", "de": "Ein Fehler, ein neues Kapitel. Tim ist ehrlich – auf seine Art." },
+    { "who": "inday", "ceb": "Papa, unsa man ang pinakanindot? Ang balay o ang lechon?", "de": "Papa, was ist denn jetzt das Schönste? Das Haus oder der Lechon?" }
+  ],
+  "questions": [
+    { "q": "Was planen Tim und Langga?", "options": ["Einen Jeepney kaufen", "Ein Haus in Cebu bauen", "Nach Manila ziehen"], "answer": 1 },
+    { "q": "Was ist Lola bei dem Haus am wichtigsten?", "options": ["Eine große Küche", "Ein großer Garten", "Ein Zimmer für den Hund"], "answer": 0 },
+    { "q": "Welchen Fehler macht Tim?", "options": ["Er vergisst Lolas Geburtstag", "Er nennt Lola „Manang“", "Er sagt, das Sauerland sei schöner als Cebu"], "answer": 2 },
+    { "q": "Wie reagiert Lola auf Tims Satz?", "options": ["Sie legt sofort auf", "Sie ist nicht sauer, merkt es sich aber", "Sie findet, er hat recht"], "answer": 1 }
+  ],
+  "punchline": "Beim nächsten Anruf begrüßt Lola ihn mit „Kumusta, Herr Sauerland-ist-schöner!“ – und schickt trotzdem schon den Plan für die große Küche."
+}

@@ -1,0 +1,234 @@
+{
+  "katapusan": {
+    "mnemonic": "ka-ta-PU-ßan: Beim KATA-Training PUSTet Tim aus – das Ende, der letzte Kampf des Tages.",
+    "img": "🏁"
+  },
+  "natawo": {
+    "mnemonic": "na-TA-wo: „NA, TA-WOhl!“ ruft die Hebamme und hebt das Baby hoch – geboren!",
+    "img": "👶"
+  },
+  "nagdako": {
+    "mnemonic": "nag-DA-ko: „NAG, DA KOmmt der Große!“ – in Cebu aufgewachsen und jetzt riesig.",
+    "img": null
+  },
+  "kasal": {
+    "mnemonic": "ka-ßAL: Die KASSE im SAAL klingelt – Hochzeit mit 300 Gästen, Lola hat alle eingeladen.",
+    "img": "💒"
+  },
+  "nanganak": {
+    "mnemonic": "na-nga-NAK: Der NACKte Winzling schreit – Langga hat gerade ein Kind bekommen.",
+    "img": "🤱"
+  },
+  "matay": {
+    "mnemonic": "ma-TAI: „MA, TEIle das Erbe!“ – im Krimi stirbt der reiche Onkel in Minute zehn.",
+    "img": null
+  },
+  "bulag": {
+    "mnemonic": "bu-LAG: „BUH, LAG!“ – der Videoanruf hängt, Tim und Lola sind wieder getrennt.",
+    "img": null
+  },
+  "balhin": {
+    "mnemonic": "bal-HIN: BALd HINüber ins Sauerland – die Familie zieht um, Kartons im E-Bike-Anhänger.",
+    "img": "📦"
+  },
+  "graduwar": {
+    "mnemonic": "gra-du-WAR: Die GRADUierung WAR gestern – Hut in die Luft, Abschluss geschafft!",
+    "img": "🎓"
+  },
+  "ila": {
+    "mnemonic": "i-LA: „Ih, LAngga, den kenne ich!“ – ila = kennen: Nakaila ko niya, ich kenne ihn.",
+    "img": null
+  },
+  "gyud": {
+    "mnemonic": "GJUD: „Lami GYUD!“ – „GUT, wirklich GUT!“ – gyud = wirklich, unbedingt, auf jeden Fall.",
+    "img": null
+  },
+  "diay": {
+    "mnemonic": "di-AI: „Ikaw DIAY!“ – „DIE? AI, ach so, du bist das!“ – diay = ach so, übrigens.",
+    "img": null
+  },
+  "kaha": {
+    "mnemonic": "ka-HA: „Unsa KAHA?“ – „KAffee, HA? Was wohl?“ – kaha = wohl, vielleicht in Fragen.",
+    "img": null
+  },
+  "bitaw": {
+    "mnemonic": "bi-TAU: „BITAW!“ – „BITte, TAUsendprozentig, stimmt genau!“ – bitaw = stimmt, genau.",
+    "img": null
+  },
+  "uy": {
+    "mnemonic": "UI: „UY, Mama!“ – „HUI, hey!“ – uy ist das Hey, mit dem man jemanden anspricht.",
+    "img": null
+  },
+  "sus": {
+    "mnemonic": "ßUß: „SUS, grabe!“ – „SUSanne, meine Güte!“ – Ausruf aus Hesus, wie unser „Jesses!“.",
+    "img": null
+  },
+  "lagi": {
+    "mnemonic": "la-GI: „Oo LAGI!“ – „Ja doch, LAG Ich richtig?“ – Ja klar! lagi = ja doch, sicher doch.",
+    "img": null
+  },
+  "hala": {
+    "mnemonic": "HA-la: „HALA, sige!“ – „HALLO, los geht's!“ – hala = oh!, los!, na dann.",
+    "img": null
+  },
+  "gani": {
+    "mnemonic": "ga-NI: „Wala GANI ko nikaon“ – „GAr NIcht mal gegessen!“ – gani = sogar, nicht einmal.",
+    "img": null
+  },
+  "intawon": {
+    "mnemonic": "in-TA-won: „Kapoy INTAWON“ – „IN TrAnen, der Arme“ – mitleidiges ach, leider.",
+    "img": null
+  },
+  "suko": {
+    "mnemonic": "ßU-ko: „SUCH' KOhle!“ brüllt der Chef wütend – suko = wütend, sich ärgern.",
+    "img": "😡"
+  },
+  "hulog": {
+    "mnemonic": "hu-LOG: „HUH, der LOG!“ – der Holzklotz fällt Tim in der Werkstatt vom Tisch.",
+    "img": null
+  },
+  "nawala": {
+    "mnemonic": "na-WA-la: „NA, WALLa, weg!“ – Tims Geldbörse ist verloren, einfach verschwunden.",
+    "img": null
+  },
+  "buang": {
+    "mnemonic": "bu-ANG: Ein BUH-rufender ANGler mit Topf auf dem Kopf – verrückt, buang!",
+    "img": "🤪"
+  },
+  "daog": {
+    "mnemonic": "da-OG: „DA OBen steht der Pokal!“ – Daog ko, ich hab gewonnen!",
+    "img": "🏆"
+  },
+  "pildi": {
+    "mnemonic": "pil-DI: Beim BILLArd versenkt DIe Gegnerin alles – Tim hat verloren, pildi.",
+    "img": null
+  },
+  "aksidente": {
+    "mnemonic": "ak-ßi-DEN-te: AKSIDENTE = accident, Unfall – das E-Bike liegt im Graben.",
+    "img": null
+  },
+  "samad": {
+    "mnemonic": "ßA-mad: „SAh MATsch?“ – nein, Blut: die Wunde vom Stemmeisen in der Holzwerkstatt.",
+    "img": "🩹"
+  },
+  "dugo": {
+    "mnemonic": "DU-go: „DU, GOtt, Blut!“ – der Schnitt in der Werkstatt, dugo auf dem Sägeblatt.",
+    "img": "🩸"
+  },
+  "pulis": {
+    "mnemonic": "pu-LIß: PULIS = police, Polizei – mit Blaulicht durch Cebu.",
+    "img": "👮"
+  },
+  "niadtong": {
+    "mnemonic": "ni-AD-tong: „NIE vergesse ich ADTONG 2020“ – damals, im Jahr 2020: niadtong 2020.",
+    "img": null
+  },
+  "sa wala pa": {
+    "mnemonic": "ßa WA-la PA: „Sa WALA PA“ – „WAs LAnge PAssiert ist“: bevor wir geheiratet haben.",
+    "img": null
+  },
+  "labay": {
+    "mnemonic": "la-BAI: „LA, BYE!“ – das Jahr winkt und geht vorbei: milabay ang tuig.",
+    "img": null
+  },
+  "ika-": {
+    "mnemonic": "I-ka-: IKA- wie „EKAtharina die Zweite“ – ikaduha = zweite, ikatulo = dritte. Die erste: una.",
+    "img": null
+  },
+  "kagabii": {
+    "mnemonic": "ka-ga-BI-i: ka- + gabii (Abend): „KAm GABII vorbei“ – gestern Abend, letzte Nacht.",
+    "img": "🌙"
+  },
+  "Pasko": {
+    "mnemonic": "PAß-ko: PASKO = spanisch Pascua – auf den Philippinen Weihnachten, Lichter ab September.",
+    "img": "🎄"
+  },
+  "adlawng natawhan": {
+    "mnemonic": "ad-laung na-TAU-han: adlaw (Tag) + natawo (geboren) = der Tag, an dem man geboren wurde: Geburtstag.",
+    "img": "🎂"
+  },
+  "anibersaryo": {
+    "mnemonic": "a-ni-ber-ßAR-jo: ANIVERSARio = anniversary – Jahrestag, Hochzeitstag mit Blumen.",
+    "img": null
+  },
+  "saulog": {
+    "mnemonic": "ßa-U-log: „SAU-LOGisch, wir feiern!“ – Lechon, Tanz und Videoke: magsaulog mi.",
+    "img": "🎉"
+  },
+  "gugma": {
+    "mnemonic": "GUG-ma: „GUCK, MAma, Liebe!“ – Inday malt ein großes Herz: gugma = Liebe.",
+    "img": "❤️"
+  },
+  "higugma": {
+    "mnemonic": "hi-GUG-ma: „HI, GUCK MAl“ – mit Herzaugen: Gihigugma tika, ich liebe dich.",
+    "img": "😍"
+  },
+  "tika": {
+    "mnemonic": "TI-ka: TIKA = ko + ikaw, „ich … dich“: Gihigugma TIKA – ich liebe dich. Nur bei gi-/-on-Verben.",
+    "img": null
+  },
+  "palangga": {
+    "mnemonic": "pa-LANG-ga: PAPA LANGt GAnz zärtlich hin – Liebling: palangga tika, ich hab dich lieb.",
+    "img": null
+  },
+  "dungan": {
+    "mnemonic": "du-NGAN: DU und die NGANze Familie gleichzeitig am Tisch – dungan ta mokaon!",
+    "img": null
+  },
+  "singsing": {
+    "mnemonic": "ßing-ßING: Beim SINGEN, SINGEN steckt Tim Langga den Ring an – singsing.",
+    "img": "💍"
+  },
+  "litrato": {
+    "mnemonic": "lit-RA-to: liTRATO wie Porträt, retrato – das Foto vom Strand aufs Handy.",
+    "img": "📷"
+  },
+  "kasingkasing": {
+    "mnemonic": "ka-ßing-ka-ßING: „KA-SING, KA-SING“ – das Herz schlägt im Takt und singt dabei.",
+    "img": "🫀"
+  },
+  "saad": {
+    "mnemonic": "ßA-ad: „SAg ADe?“ – nein, ein Versprechen! Saad ko: ich verspreche, ich komme zurück.",
+    "img": null
+  },
+  "tuyo": {
+    "mnemonic": "TU-jo: „TU, JOhann, sag den Grund deines Kommens!“ – tuyo = Absicht, Zweck: Unsay imong tuyo? = Was ist dein Anliegen?",
+    "img": null
+  },
+  "mahitungod": {
+    "mnemonic": "ma-hi-TU-ngod: „MAHI-TUN? GOD, geht's hier über Fisch?“ – mahitungod sa = über, bezüglich.",
+    "img": null
+  },
+  "kasagaran": {
+    "mnemonic": "ka-ßa-GA-ran: Die KASSE GARANtiert: meistens, normalerweise stehen die meisten Leute hier an.",
+    "img": null
+  },
+  "talagsa": {
+    "mnemonic": "ta-LAG-ßa: Im TAL LAG SAnd? Selten! – talagsa ra, nur selten trinke ich Bier.",
+    "img": null
+  },
+  "ingon ani": {
+    "mnemonic": "i-NGON A-NI: ingon (so) + ani (dies hier) = „so wie DIES hier“ – Ingon ani ang pagluto: so wird gekocht.",
+    "img": null
+  },
+  "ingon ana": {
+    "mnemonic": "i-NGON A-NA: ingon (so) + ana (das da) = „so wie DAS da“ – Ayaw ingon ana: mach das nicht so.",
+    "img": null
+  },
+  "mao nga": {
+    "mnemonic": "MA-o NGA: „MAO, NGA, deshalb!“ – Kapoy ko, mao nga matulog ko: müde, deshalb schlafe ich.",
+    "img": null
+  },
+  "bahin": {
+    "mnemonic": "ba-HIN: „BAck HIN und her“ – schneid den Kuchen in Teile: usa ka bahin, ein Teil.",
+    "img": null
+  },
+  "tingog": {
+    "mnemonic": "TI-ngog: „TINGELING“ klingt der Gong – tingog = Stimme, Laut, Geräusch.",
+    "img": "🔊"
+  },
+  "nawong": {
+    "mnemonic": "na-WONG: „NA, WONG, wasch dich!“ – der Clown wäscht sein Gesicht: hugasi imong nawong.",
+    "img": null
+  }
+}

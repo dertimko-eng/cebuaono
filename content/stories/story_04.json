@@ -1,0 +1,26 @@
+{
+  "id": "s04", "unit": 4, "after": "u04_l06", "title": "Sechs Uhr morgens, ein Uhr mittags",
+  "scene": "videocall",
+  "intro": "Sonntagmorgen im Sauerland. Es ist noch dunkel, Tim schläft tief – da klingelt der Videoanruf aus Cebu.",
+  "lines": [
+    { "who": "lola", "ceb": "Maayong hapon, Tim! Kumusta ka?", "de": "Guten Nachmittag, Tim! Wie geht's dir?" },
+    { "who": "tim", "ceb": "Hapon? Lola, alas sais sa buntag karon sa Germany. Matulog ko!", "de": "Nachmittag? Lola, hier in Deutschland ist es sechs Uhr morgens. Ich will schlafen!" },
+    { "who": "lola", "ceb": "Sayo kaayo! Maayo. Bangon na, Tim. Unsa ang pamahaw nimo?", "de": "Schön früh! Gut so. Steh auf, Tim. Was gibt's bei dir zum Frühstück?" },
+    { "who": "tim", "ceb": "Wala. Dominggo karon, Lola. Sa Dominggo, momata ko alas dyes.", "de": "Nichts. Heute ist Sonntag, Lola. Sonntags wache ich um zehn auf." },
+    { "who": "lola", "ceb": "Alas dyes?! Ulahi kaayo! Sa Cebu, momata mi alas singko matag adlaw.", "de": "Um zehn?! Viel zu spät! In Cebu wachen wir jeden Tag um fünf auf." },
+    { "who": "langga", "ceb": "Mama, usahay sayo siya. Sa Lunes, momata siya alas sais – trabaho.", "de": "Mama, manchmal ist er früh dran. Montags wacht er um sechs auf – Arbeit." },
+    { "who": "inday", "ceb": "Papa, bangon na! Momata ko sayo kanunay. Dula ta!", "de": "Papa, aufstehen! Ich wache immer früh auf. Lass uns spielen!" },
+    { "who": "tim", "ceb": "Sige, sige. Human sa kape, dula ta. Unya, maligo ko ug mokaon.", "de": "Okay, okay. Nach dem Kaffee spielen wir. Später dusche ich und esse was." },
+    { "who": "lola", "ceb": "Maayo. Pamahaw: kan-on ug itlog, dili kape ra! Ug alas dose, paniudto.", "de": "Gut. Frühstück heißt Reis und Ei, nicht nur Kaffee! Und um zwölf gibt es Mittagessen." },
+    { "who": "tim", "ceb": "Lola, alas sais y media karon. Dili ko gutom. Gusto ko ug kape ra.", "de": "Lola, es ist halb sieben. Ich habe keinen Hunger. Ich will nur Kaffee." },
+    { "who": "agila", "ceb": "Alas sais sa Sauerland, ala una sa Cebu. Usa ka pamilya, duha ka oras.", "de": "Sechs Uhr im Sauerland, ein Uhr in Cebu. Eine Familie, zwei Uhrzeiten." },
+    { "who": "lola", "ceb": "Sige, Tim. Pahulay na. Ugma, alas singko, mobisita ko – sa video!", "de": "Na gut, Tim. Ruh dich aus. Morgen um fünf komme ich wieder zu Besuch – per Video!" }
+  ],
+  "questions": [
+    { "q": "Wie spät ist es bei Tim, als Lola anruft?", "options": ["Sechs Uhr morgens", "Ein Uhr mittags", "Zehn Uhr abends"], "answer": 0 },
+    { "q": "Wann wacht Tim sonntags normalerweise auf?", "options": ["Um fünf", "Um zehn", "Um zwölf"], "answer": 1 },
+    { "q": "Was soll Tim laut Lola frühstücken?", "options": ["Nur Kaffee", "Reis und Ei", "Fisch"], "answer": 1 },
+    { "q": "Was macht Tim nach dem Kaffee zuerst?", "options": ["Duschen", "Mit Inday spielen", "Zur Arbeit gehen"], "answer": 1 }
+  ],
+  "punchline": "Tim stellt den Wecker auf Montag, alas sais. Lola ruft trotzdem am Dienstag um fünf an – „sayo kaayo“ gilt in Cebu auch für Anrufe."
+}

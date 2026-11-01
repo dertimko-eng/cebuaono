@@ -1,0 +1,29 @@
+{
+  "id": "s05",
+  "unit": 5,
+  "after": "u05_l06",
+  "title": "Der Stuhl ohne Nägel",
+  "scene": "workshop",
+  "intro": "Tim baut in seiner Holzwerkstatt im Sauerland einen Stuhl für Lola. Inday will helfen – und der Hund auch.",
+  "lines": [
+    { "who": "tim", "ceb": "Inday, naa ka dinhi sa talyer? Naghimo ko ug lingkoranan para kang Lola.", "de": "Inday, bist du hier in der Werkstatt? Ich baue einen Stuhl für Lola." },
+    { "who": "inday", "ceb": "Oo, Papa! Asa ang martilyo? Gusto ko ug martilyo pud!", "de": "Ja, Papa! Wo ist der Hammer? Ich will auch einen Hammer!" },
+    { "who": "tim", "ceb": "Didto, sa ibabaw sa lamesa. Dili dulaan ang martilyo, Inday.", "de": "Dort, auf dem Tisch. Der Hammer ist kein Spielzeug, Inday." },
+    { "who": "inday", "ceb": "Papa, wala ang martilyo sa lamesa. Naa ang iro sa ilalom sa lamesa – ug ang martilyo pud!", "de": "Papa, der Hammer ist nicht auf dem Tisch. Der Hund liegt unter dem Tisch – und der Hammer auch!" },
+    { "who": "tim", "ceb": "Iro! Gawas! Hugaw kaayo ang talyer karon.", "de": "Hund! Raus! Die Werkstatt ist jetzt total dreckig." },
+    { "who": "agila", "ceb": "Ang iro, ang martilyo ug si Tim – saba kaayo sa talyer.", "de": "Der Hund, der Hammer und Tim – in der Werkstatt ist es ziemlich laut." },
+    { "who": "langga", "ceb": "Tim! Saba kaayo dinhi! Unsa imong gibuhat?", "de": "Tim! Was für ein Lärm hier! Was machst du da?" },
+    { "who": "tim", "ceb": "Naghimo ko ug lingkoranan para kang Lola. Gwapo kaayo!", "de": "Ich baue einen Stuhl für Lola. Richtig schön geworden!" },
+    { "who": "langga", "ceb": "Gwapo? Asa ang lansang, Tim? Wala ang lansang sa lingkoranan!", "de": "Schön? Wo sind die Nägel, Tim? In dem Stuhl ist kein einziger Nagel!" },
+    { "who": "tim", "ceb": "Ang lansang? Naa sa hardin. Kuha, Inday, palihug!", "de": "Die Nägel? Die sind im Garten. Hol sie bitte, Inday!" },
+    { "who": "inday", "ceb": "Papa, ang iro naa pud sa hardin. Naa ang lansang sa ilalom sa bulak!", "de": "Papa, der Hund ist auch im Garten. Die Nägel liegen unter den Blumen!" },
+    { "who": "lola", "ceb": "Inday, gakos para kang Lola! Ug ang lingkoranan – para sa iro na.", "de": "Inday, eine Umarmung für Lola! Und der Stuhl – der ist jetzt für den Hund." }
+  ],
+  "questions": [
+    { "q": "Für wen baut Tim den Stuhl?", "options": ["Für Lola", "Für Inday", "Für den Hund"], "answer": 0 },
+    { "q": "Wo findet Inday den Hammer, als sie ihn sucht?", "options": ["Auf dem Tisch", "Beim Hund unter dem Tisch", "Im Bad"], "answer": 1 },
+    { "q": "Was fehlt an Tims Stuhl?", "options": ["Die Farbe", "Ein Bein", "Die Nägel"], "answer": 2 },
+    { "q": "Wo liegen die Nägel am Ende?", "options": ["Unter den Blumen im Garten", "In der Küche", "Auf der Treppe"], "answer": 0 }
+  ],
+  "punchline": "Lola hat alles per Videoanruf mitgehört. Der Stuhl ohne Nägel steht jetzt im Garten – der Hund schläft drunter, nicht drauf."
+}

@@ -1,0 +1,29 @@
+{
+  "id": "s03",
+  "unit": 3,
+  "after": "u03_l06",
+  "title": "Tim verhandelt",
+  "scene": "market",
+  "intro": "Tim ist zum ersten Mal allein auf dem Markt in Cebu. Langga hat ihm einen Zettel mitgegeben: Mango, Fisch, Zwiebeln – und den Rat: Handeln!",
+  "lines": [
+    { "who": "tim", "ceb": "Maayong buntag, Manong Dodong! Tagpila ang mangga?", "de": "Guten Morgen, Manong Dodong! Was kostet die Mango?" },
+    { "who": "dodong", "ceb": "Baynte pesos ang usa, Tim. Tam-is kaayo!", "de": "Zwanzig Pesos das Stück, Tim. Richtig süß!" },
+    { "who": "tim", "ceb": "Baynte? Mahal kaayo! Syento pesos ra, palihug.", "de": "Zwanzig? Viel zu teuer! Nur hundert Pesos, bitte." },
+    { "who": "dodong", "ceb": "Syento? Sige, sige! Lima ka mangga, syento pesos.", "de": "Hundert? Na klar! Fünf Mangos für hundert Pesos." },
+    { "who": "tim", "ceb": "Maayo! Ug isda pud – tagpila ang isda?", "de": "Prima! Und Fisch auch – was kostet der Fisch?" },
+    { "who": "dodong", "ceb": "Singkwenta ang usa. Bag-o ug lami kaayo!", "de": "Fünfzig das Stück. Ganz frisch und sehr lecker!" },
+    { "who": "tim", "ceb": "Sige, duha ka isda. Ug sibuyas pud.", "de": "Okay, zwei Fische. Und Zwiebeln auch." },
+    { "who": "dodong", "ceb": "Syento ang mangga, syento ang isda. Ang sibuyas, napulo ra.", "de": "Hundert für die Mangos, hundert für den Fisch. Die Zwiebeln nur zehn." },
+    { "who": "dodong", "ceb": "Salamat sa kwarta, Tim! Kini ang imong sukli. Ayo-ayo!", "de": "Danke fürs Geld, Tim! Hier ist dein Wechselgeld. Mach's gut!" },
+    { "who": "langga", "ceb": "Tim, kumusta ang merkado? Mahal ang mangga?", "de": "Tim, wie war's auf dem Markt? Sind die Mangos teuer?" },
+    { "who": "tim", "ceb": "Dili! Barato kaayo – syento pesos ra ang lima! Maayo ko sa merkado.", "de": "Nein! Spottbillig – nur hundert Pesos für fünf! Ich bin gut auf dem Markt." },
+    { "who": "langga", "ceb": "Tim… baynte ang usa, syento ang lima. Mao ra kana!", "de": "Tim… zwanzig das Stück, hundert für fünf. Das ist genau dasselbe!" }
+  ],
+  "questions": [
+    { "q": "Was kostet eine Mango bei Manong Dodong?", "options": ["Hundert Pesos", "Zwanzig Pesos", "Fünfzig Pesos"], "answer": 1 },
+    { "q": "Wie viele Mangos bekommt Tim für hundert Pesos?", "options": ["Fünf", "Drei", "Zehn"], "answer": 0 },
+    { "q": "Was kostet ein Fisch?", "options": ["Zehn Pesos", "Zwanzig Pesos", "Fünfzig Pesos"], "answer": 2 },
+    { "q": "Warum lacht Langga am Ende?", "options": ["Tim hat die Zwiebeln vergessen", "Tim hat genau den normalen Preis bezahlt", "Tim hat zu viel Fisch gekauft"], "answer": 1 }
+  ],
+  "punchline": "Tim hat hart verhandelt – und exakt den normalen Preis bezahlt. Manong Dodong erzählt es seitdem jedem Kunden: „Der Aleman, der hundert statt zwanzig bietet.“"
+}

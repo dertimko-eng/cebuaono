@@ -1,0 +1,29 @@
+{
+  "id": "s06",
+  "unit": 6,
+  "after": "u06_l06",
+  "title": "Sinigang ist die Medizin",
+  "scene": "videocall",
+  "intro": "Tim liegt mit Schnupfen auf dem Sofa im Sauerland. Lola ruft aus Cebu an – und hat natürlich sofort eine Diagnose.",
+  "lines": [
+    { "who": "tim", "ceb": "Lola, sakit akong ulo. Labad kaayo ug naa koy sip-on.", "de": "Lola, mein Kopf tut weh. Mir ist ganz schwindelig und ich hab Schnupfen." },
+    { "who": "lola", "ceb": "Unsay nahitabo? Nagsakay ka sa e-bike sa ulan?", "de": "Was ist passiert? Bist du im Regen mit dem E-Bike gefahren?" },
+    { "who": "tim", "ceb": "Oo, pero gamay ra ang ulan!", "de": "Ja, aber es war doch nur ein bisschen Regen!" },
+    { "who": "langga", "ceb": "Gamay? Grabe ang ulan, Lola. Ug tugnaw kaayo sa Sauerland.", "de": "Ein bisschen? Es hat geschüttet, Lola. Und im Sauerland ist es eiskalt." },
+    { "who": "lola", "ceb": "Kuyaw! Inom ka ug init nga tubig. Ug kaon ug daghan nga kan-on.", "de": "Gefährlich! Trink heißes Wasser. Und iss ordentlich Reis." },
+    { "who": "inday", "ceb": "Lola, dili kapoy si Papa. Hubog siguro siya!", "de": "Lola, Papa ist gar nicht müde. Wahrscheinlich ist er betrunken!" },
+    { "who": "tim", "ceb": "Dili hubog, Inday! Sakit ko. Usa ra ka bir gahapon.", "de": "Nicht betrunken, Inday! Ich bin krank. Gestern war es nur ein Bier." },
+    { "who": "lola", "ceb": "Usa ra? Tinuod? Sige, kaon ug sinigang, dayon tulog. Ugma maayo na ka.", "de": "Nur eins? Echt jetzt? Also: Sinigang essen, dann schlafen. Morgen bist du wieder gesund." },
+    { "who": "langga", "ceb": "Wala mi sinigang dinhi, Lola. Naa ra tambal gikan sa doktor.", "de": "Wir haben hier kein Sinigang, Lola. Nur die Medizin vom Arzt." },
+    { "who": "lola", "ceb": "Tambal? Malas. Sa Cebu, sinigang ang tambal!", "de": "Medizin? Pech gehabt. In Cebu ist Sinigang die Medizin!" },
+    { "who": "tim", "ceb": "Relaks ra ko karon. Ugma mobalik ko sa e-bike!", "de": "Ich entspann mich jetzt. Morgen geht's wieder aufs E-Bike!" },
+    { "who": "agila", "ceb": "Hinay-hinay ra, Tim. Dugay ang ulan sa Sauerland.", "de": "Immer mit der Ruhe, Tim. Der Regen im Sauerland bleibt noch lange." }
+  ],
+  "questions": [
+    { "q": "Warum ist Tim krank geworden?", "options": ["Er hat zu viel Bier getrunken", "Er ist im Regen mit dem E-Bike gefahren", "Er hat verdorbenes Sinigang gegessen"], "answer": 1 },
+    { "q": "Was vermutet Inday?", "options": ["Papa ist betrunken", "Papa hat Fieber", "Papa ist traurig"], "answer": 0 },
+    { "q": "Was ist laut Lola die beste Medizin?", "options": ["Tabletten vom Arzt", "Kaltes Wasser", "Sinigang"], "answer": 2 },
+    { "q": "Was will Tim morgen tun?", "options": ["Zum Arzt gehen", "Wieder E-Bike fahren", "Nach Cebu fliegen"], "answer": 1 }
+  ],
+  "punchline": "Langga nimmt den E-Bike-Schlüssel an sich. Lola schickt noch am selben Abend ein Sinigang-Rezept per Messenger – Betreff: „Die echte Medizin“."
+}

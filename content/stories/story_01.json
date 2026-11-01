@@ -1,0 +1,26 @@
+{
+  "id": "s01", "unit": 1, "after": "u01_l06", "title": "Mein Ehemann Langga",
+  "scene": "videocall",
+  "intro": "Videoanruf nach Cebu: Tim will Lola zum ersten Mal ganz allein auf Cebuano begrüßen und seine Familie vorstellen.",
+  "lines": [
+    { "who": "agila", "ceb": "Maayong gabii, Cebu! Maayong udto, Sauerland!", "de": "Guten Abend, Cebu! Guten Mittag, Sauerland!" },
+    { "who": "lola", "ceb": "Kumusta, Tim? Kumusta ka?", "de": "Hallo Tim, wie geht es dir?" },
+    { "who": "tim", "ceb": "Maayo ra, Lola! Ako si Tim. Taga-Sauerland ko ug maestro ko.", "de": "Gut, Lola! Ich bin Tim. Ich komme aus dem Sauerland und bin Lehrer." },
+    { "who": "lola", "ceb": "Oo, oo, Aleman ka. Buotan kaayo! Ug kinsa siya?", "de": "Ja, ja, du bist der Deutsche. Sehr brav! Und wer ist das da?" },
+    { "who": "tim", "ceb": "Akong bana siya, Lola!", "de": "Das ist mein Ehemann, Lola!" },
+    { "who": "langga", "ceb": "Bana? Asawa, Tim! Imong asawa ko, dili imong bana!", "de": "Ehemann? Ehefrau, Tim! Ich bin deine Frau, nicht dein Mann!" },
+    { "who": "inday", "ceb": "Papa! Imong anak ko. Ug si Mama imong asawa.", "de": "Papa! Ich bin dein Kind. Und Mama ist deine Frau." },
+    { "who": "tim", "ceb": "Pasayloa ko! Akong asawa, akong anak. Walay problema!", "de": "Entschuldigung! Meine Frau, mein Kind. Kein Problem!" },
+    { "who": "lola", "ceb": "Walay problema, Tim. Gwapa kaayo imong asawa. Ug kumusta imong Bisaya?", "de": "Kein Problem, Tim. Deine Frau ist sehr hübsch. Und wie läuft es mit deinem Bisaya?" },
+    { "who": "tim", "ceb": "Maayo ra… dili kaayo.", "de": "Geht so … na ja, nicht so sehr." },
+    { "who": "lola", "ceb": "Sige, Babay! Ayo-ayo, akong Aleman!", "de": "Also dann, tschüss! Mach's gut, mein Deutscher!" },
+    { "who": "tim", "ceb": "Daghang salamat, Lola! Babay!", "de": "Vielen Dank, Lola! Tschüss!" }
+  ],
+  "questions": [
+    { "q": "Welche Tageszeit ist es in Cebu, als der Anruf beginnt?", "options": ["Mittag", "Abend", "Morgen"], "answer": 1 },
+    { "q": "Welchen Fehler macht Tim, als er Langga vorstellt?", "options": ["Er nennt sie „Ehemann“ (bana)", "Er vergisst ihren Namen", "Er nennt sie „Freundin“ (amiga)"], "answer": 0 },
+    { "q": "Wer korrigiert Tim als Erste?", "options": ["Lola", "Inday", "Langga"], "answer": 2 },
+    { "q": "Was antwortet Tim auf die Frage, wie es mit seinem Bisaya läuft?", "options": ["Sehr gut", "Geht so, nicht so sehr", "Kein Problem"], "answer": 1 }
+  ],
+  "punchline": "Am nächsten Tag weiß der ganze Barangay Bescheid: Der Deutsche hat einen Ehemann – und der heißt Langga."
+}

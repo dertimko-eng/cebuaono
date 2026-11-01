@@ -25,13 +25,28 @@ export async function loadContent() {
     }
   }
   units.sort((a, b) => a.unit - b.unit);
+  // Geschichten (eine pro Unit) und Kultur-Kästen sind optional
+  const stories = [];
+  for (const u of units) {
+    try { stories.push(await getJSON(`content/stories/story_${String(u.unit).padStart(2, "0")}.json`)); } catch (_) {}
+  }
+  let culture = [];
+  try { const c = await getJSON("content/culture.json"); culture = Array.isArray(c) ? c : c.items || []; } catch (_) {}
   const lexicon = new Lexicon(glossary, namesFile.names);
   setPronOverrides(glossary.entries);
   const lessons = [];
   const lessonById = new Map();
+  const entryByCebRaw = new Map(glossary.entries.map((e) => [normalizeToken(e.ceb), e]));
   for (const u of units) {
     u.lessons.forEach((l, i) => {
-      const L = { ...l, unit: u.unit, unitTitle: u.title, index: lessons.length, posInUnit: i + 1 };
+      // Bild → Wort: bis zu 2 automatische Übungen aus Vokabeln mit Bild (fest an Position 3 und 9)
+      const exercises = [...l.exercises];
+      const withImg = l.vocab.map((v) => entryByCebRaw.get(normalizeToken(v.ceb))).filter((e) => e && e.img);
+      withImg.slice(0, 2).forEach((e, k) => {
+        const pos = Math.min(exercises.length, k === 0 ? 3 : 9);
+        exercises.splice(pos, 0, { type: "picture", img: e.img, answer: e.ceb, vocab: [e.ceb], auto: true });
+      });
+      const L = { ...l, exercises, unit: u.unit, unitTitle: u.title, index: lessons.length, posInUnit: i + 1 };
       lessons.push(L);
       lessonById.set(l.id, L);
     });
@@ -58,6 +73,12 @@ export async function loadContent() {
       if (l.index === 0) return true;
       return completedSet.has(lessons[l.index - 1].id);
     },
+    stories,
+    story: (id) => stories.find((s) => s.id === id) || null,
+    storyOfUnit: (unit) => stories.find((s) => s.unit === unit) || null,
+    storyUnlocked: (s, completedSet) => completedSet.has(s.after),
+    culture,
+    cultureOfUnit: (unit) => culture.filter((c) => c.unit === unit),
     surprises: () => lessons.map((l) => ({ ...l.surprise, lessonId: l.id, lessonTitle: l.title, unit: l.unit })),
     // Wörter, die in einer Übung trainiert werden (explizit oder automatisch erkannt)
     exerciseWords(ex) {
@@ -70,6 +91,7 @@ export async function loadContent() {
         case "type_answer": texts.push(ex.answer); break;
         case "match_pairs": texts.push(ex.pairs.map((p) => p.ceb).join(" ")); break;
         case "true_false": texts.push(ex.statement); break;
+        case "picture": texts.push(ex.answer); break;
       }
       const set = new Set();
       for (const t of texts) {

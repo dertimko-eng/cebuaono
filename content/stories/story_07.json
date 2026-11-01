@@ -1,0 +1,29 @@
+{
+  "id": "s07",
+  "unit": 7,
+  "after": "u07_l06",
+  "title": "Die kleine Lehrerin",
+  "scene": "livingroom",
+  "intro": "Sonntagnachmittag im Sauerland. Inday hat die kleine Tafel aus der Holzwerkstatt geholt und spielt Schule. Tim ist der Schüler.",
+  "lines": [
+    { "who": "inday", "ceb": "Tindog, Papa! Ako ang magtutudlo karon, ikaw ang estudyante.", "de": "Steh auf, Papa! Ich bin jetzt die Lehrerin, du bist der Schüler." },
+    { "who": "tim", "ceb": "Sige, Inday. Unsa ang leksyon karon?", "de": "Okay, Inday. Was ist heute die Lektion?" },
+    { "who": "inday", "ceb": "Biyolohiya! Pangutana: buhi ba ang kahoy?", "de": "Biologie! Frage: Ist der Baum lebendig?" },
+    { "who": "tim", "ceb": "Oo, buhi ang kahoy. Motubo kini matag adlaw.", "de": "Ja, der Baum lebt. Er wächst jeden Tag." },
+    { "who": "inday", "ceb": "Sayop! Ang kahoy sa talyer ni Papa, dili na buhi. Muwebles na.", "de": "Falsch! Das Holz in Papas Werkstatt lebt nicht mehr. Das sind jetzt Möbel." },
+    { "who": "langga", "ceb": "Kugihan kaayo ang magtutudlo! Lisod ang eksam, Tim.", "de": "Die Lehrerin ist aber fleißig! Die Prüfung ist schwer, Tim." },
+    { "who": "tim", "ceb": "Wala ko kasabot. Sa eskwelahan, ako ang magtudlo ug biyolohiya!", "de": "Ich verstehe das nicht. In der Schule bin ICH der Biologielehrer!" },
+    { "who": "inday", "ceb": "Dinhi lain. Sunod nga pangutana: kahibalo ka ba moluto ug adobo?", "de": "Hier ist das anders. Nächste Frage: Kannst du Adobo kochen?" },
+    { "who": "tim", "ceb": "Oo! Kaniadto, dili. Karon, kahibalo na ko.", "de": "Ja! Früher nicht. Aber jetzt kann ich es." },
+    { "who": "langga", "ceb": "Dili tinuod! Ako kanunay ang moluto. Hagbong!", "de": "Stimmt gar nicht! Ich koche immer. Durchgefallen!" },
+    { "who": "inday", "ceb": "Grado ni Papa: hagbong sa biyolohiya, hagbong sa pagkaon. Pero kugihan siya. Pasar!", "de": "Papas Note: durchgefallen in Biologie, durchgefallen beim Essen. Aber er ist fleißig. Bestanden!" },
+    { "who": "agila", "ceb": "Importante ang magtutudlo. Bisan gamay ang magtutudlo.", "de": "Der Lehrer ist wichtig. Auch wenn die Lehrerin noch ganz klein ist." }
+  ],
+  "questions": [
+    { "q": "Wer ist in dieser Geschichte die Lehrerin?", "options": ["Langga", "Inday", "Lola"], "answer": 1 },
+    { "q": "Warum ist Tims Antwort zum Baum laut Inday falsch?", "options": ["Bäume wachsen nur im Sommer", "Tim hat Chemie und Biologie verwechselt", "Das Holz in der Werkstatt ist schon Möbel"], "answer": 2 },
+    { "q": "Wer kocht laut Langga immer das Adobo?", "options": ["Langga", "Tim", "Inday"], "answer": 0 },
+    { "q": "Welche Note bekommt Tim am Ende?", "options": ["Durchgefallen", "Keine Note", "Bestanden"], "answer": 2 }
+  ],
+  "punchline": "Tim hängt sein Zeugnis in die Werkstatt. Bestanden – aber nur, weil die Lehrerin seine Tochter ist."
+}

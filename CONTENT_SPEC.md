@@ -272,3 +272,56 @@ Ziel: 72 Lektionen, ca. 800–900 Wörter.
 3. `"unit_13"` in `content/index.json` eintragen.
 4. `node scripts/validate_content.mjs 13` bis fehlerfrei.
 5. In `sw.js` die `CACHE_VERSION` erhöhen, damit die PWA die neue Datei lädt.
+
+## 10. Extras pro Wort: Eselsbrücke und Bild (`content/extras/unit_NN.json`)
+
+Eine Datei pro Unit, Schlüssel ist das Glossar-`ceb` (zeichengenau). Ein Merge-Skript (`node scripts/merge_extras.mjs`) überträgt die Felder ins Glossar (`mnemonic`, `img`); die App liest sie aus dem Glossar.
+
+```json
+{
+  "mangga": { "mnemonic": "MANG-ga klingt wie Mango – das Wort ist ein Geschenk, nur das -ga am Ende üben.", "img": "🥭" },
+  "balay": { "mnemonic": "ba-LAI: Beim Bau liegt der Balken schon – fertig ist das Haus.", "img": "🏠" },
+  "gusto": { "mnemonic": "gusto = Gusto, Appetit: Ich hab Gusto darauf = ich mag/will es.", "img": null }
+}
+```
+
+| Feld | Pflicht | Bedeutung |
+|---|---|---|
+| `mnemonic` | ja | Deutsche Eselsbrücke, 1 Satz, 30–160 Zeichen. Muss den **Klang** des Cebuano-Worts (Umschrift aus `node scripts/list_words.mjs NN`) mit einem **konkreten Bild** der Bedeutung verknüpfen. Bei Partikeln/Funktionswörtern stattdessen eine Gebrauchs-Brücke. Klangähnliche Teile in GROSSBUCHSTABEN. |
+| `img` | ja | Genau ein Emoji, wenn die Bedeutung konkret und das Emoji eindeutig ist (Dinge, Tiere, Essen, Personen, Wetter, Orte, Tätigkeiten mit klarem Bild). Sonst `null`. Kein Emoji für Partikeln, Pronomen, abstrakte Adjektive. |
+
+Die App erzeugt aus Wörtern mit `img` automatisch Übungen „Bild → Wort“ (Lektion und Trainer) und zeigt Bild und Eselsbrücke im Vokabel-Intro und im Wort-Detail.
+
+## 11. Geschichten (`content/stories/story_NN.json`)
+
+Eine Geschichte pro Unit, freigeschaltet nach der Lektion `after`. Comic-Dialog mit festen Figuren.
+
+```json
+{
+  "id": "s03", "unit": 3, "after": "u03_l06", "title": "Ein Kilo Mango",
+  "scene": "market",
+  "intro": "Tim ist zum ersten Mal allein auf dem Markt in Cebu.",
+  "lines": [
+    { "who": "tim", "ceb": "Maayong buntag, Manang! Pila ang mangga?", "de": "Guten Morgen, Manang! Was kostet die Mango?" },
+    { "who": "dodong", "ceb": "Baynte pesos ang usa.", "de": "Zwanzig Pesos das Stück." }
+  ],
+  "questions": [
+    { "q": "Was will Tim kaufen?", "options": ["Mango", "Fisch", "Reis"], "answer": 0 }
+  ],
+  "punchline": "Tim trägt jetzt einen Sack Mangos nach Hause. Lola: „Maayo! Für morgen reicht es.“"
+}
+```
+
+| Feld | Regel |
+|---|---|
+| `id` | `sNN` |
+| `after` | Lektions-ID; nur Wörter bis einschließlich dieser Lektion (plus `names.json`) sind erlaubt – der Validator prüft jede `ceb`-Zeile |
+| `scene` | eine von: `kitchen`, `market`, `jeepney`, `videocall`, `workshop`, `garden`, `airport`, `beach`, `school`, `livingroom`, `street`, `party` |
+| `who` | `tim`, `langga` (Ehefrau), `inday` (Tochter), `lola` (Oma in Cebu), `dodong` (Manong Dodong: Nachbar, Fahrer, Verkäufer), `agila` (Adler, Erzähler) |
+| `lines` | 8–12 Zeilen, jede mit `ceb` (1–2 Sätze) und `de` (natürliche Übersetzung) |
+| `questions` | 3–4 Verständnisfragen auf Deutsch, je 3 Optionen, `answer` = Index |
+| `intro`, `punchline` | Deutsch, 1–2 Sätze; die Pointe darf gern über Tims Fehler lachen |
+
+## 12. Kultur-Kästen (`content/culture.json`)
+
+Liste von Einträgen `{ "unit": 3, "title": "Sari-Sari-Store", "emoji": "🏪", "text": "3–5 Sätze Deutsch." }`, drei pro Unit, thematisch zur Unit passend (Essen → Markt/Karaoke/Fiesta, Familie → Mano-Gruß …). Die App zeigt nach jeder Lektion einen Kasten der Unit und sammelt alle unter Mehr → Wusstest du?.

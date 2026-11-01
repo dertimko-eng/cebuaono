@@ -1,0 +1,29 @@
+{
+  "id": "s08",
+  "unit": 8,
+  "after": "u08_l06",
+  "title": "Tim am Grill",
+  "scene": "kitchen",
+  "intro": "Langga ist auf dem Markt. Tim will zum ersten Mal allein Fisch grillen und Reis kochen. Inday hilft, Lola schaut per Video zu.",
+  "lines": [
+    { "who": "tim", "ceb": "Inday, andam na ko! Magsugba ta ug isda, ug maglung-ag ko.", "de": "Inday, ich bin bereit! Wir grillen Fisch, und ich koche Reis." },
+    { "who": "inday", "ceb": "Papa, kaya nimo? Si Mama kanunay magluto.", "de": "Papa, schaffst du das? Sonst kocht doch immer Mama." },
+    { "who": "tim", "ceb": "Kaya nako! Hiwaa ang sibuyas, Inday. Ayaw ug hilak.", "de": "Das schaff ich! Schneid du die Zwiebel, Inday. Und nicht weinen." },
+    { "who": "inday", "ceb": "Dili ko mohilak, Papa. Ikaw ang naghilak!", "de": "Ich wein doch nicht, Papa. Du weinst!" },
+    { "who": "lola", "ceb": "Tim! Nagluto ka? Tawagi ang imong asawa!", "de": "Tim! Du kochst? Ruf sofort deine Frau an!" },
+    { "who": "tim", "ceb": "Pasagdi lang, Lola. Giprito nako ang itlog, ug sinugba ang isda.", "de": "Lass nur, Lola. Das Ei ist gebraten und der Fisch gegrillt." },
+    { "who": "inday", "ceb": "Papa, nagdagan ang tubig sa kan-on! Hunong!", "de": "Papa, das Reiswasser läuft über! Stopp!" },
+    { "who": "tim", "ceb": "Grabe! Hulat, Inday, ambi ang plato!", "de": "Oh nein! Warte, Inday, gib mir den Teller!" },
+    { "who": "lola", "ceb": "Ayaw ug padayon, Tim! Sira na ang kusina!", "de": "Hör auf, Tim! Die Küche ist schon hinüber!" },
+    { "who": "langga", "ceb": "Naa na ko! Hugaw kaayo ang kusina! Unsa ang hitabo?", "de": "Ich bin zurück! Die Küche sieht ja furchtbar aus! Was ist passiert?" },
+    { "who": "tim", "ceb": "Nagluto ko. Pero lami gihapon ang isda!", "de": "Ich hab gekocht. Aber der Fisch schmeckt trotzdem!" },
+    { "who": "agila", "ceb": "Basta lami ang isda, pasagdi ang kusina.", "de": "Hauptsache, der Fisch schmeckt – die Küche ist egal." }
+  ],
+  "questions": [
+    { "q": "Was will Tim kochen?", "options": ["Fisch und Reis", "Hühnchen und Gemüse", "Adobo"], "answer": 0 },
+    { "q": "Wer weint beim Zwiebelschneiden?", "options": ["Inday", "Tim", "Lola"], "answer": 1 },
+    { "q": "Was sagt Lola, als die Küche im Chaos versinkt?", "options": ["Mach weiter!", "Hör auf!", "Mehr Salz!"], "answer": 1 },
+    { "q": "Wie findet Tim den Fisch am Ende?", "options": ["Versalzen", "Verbrannt", "Trotzdem lecker"], "answer": 2 }
+  ],
+  "punchline": "Inday zu Lola: „Papa kann kochen. Aufräumen muss er noch lernen.“ Tim: „Hipos … das war doch Lektion 4, oder?“"
+}

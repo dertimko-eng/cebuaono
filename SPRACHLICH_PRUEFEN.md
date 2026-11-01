@@ -218,6 +218,9 @@ Spalte „Betonung“: betonte Silbe groß schreiben, Stimmabsatz am Ende mit ',
 | ginikanan | gi-ni-ka-nan | Eltern |  |
 | bata | ba-ta | Kind (kleines) |  |
 
+## Geschichten
+Die zwölf Comic-Dialoge in `content/stories/story_NN.json` wurden mit begrenztem Wortschatz geschrieben (nur Wörter bis zur jeweiligen Unit). Bitte besonders prüfen: klingen die Sätze gesprochen natürlich, stimmen Partikeln (na, pa, ra, lang, ba) und die Anrede von Lola/Manang, und sind die Pointen auch auf Cebuano witzig? Korrekturen direkt in der Datei, danach `node scripts/validate_content.mjs`.
+
 ## Allgemein
 - Spanische Zahlen (uno, dos, baynte, syento) für Preise/Uhrzeit, native Zahlen zum Zählen – so im Alltag üblich? Schreibweisen (sais/sayis, baynte/bente) prüfen.
 - „pesos“ als Alltagsform neben piso.

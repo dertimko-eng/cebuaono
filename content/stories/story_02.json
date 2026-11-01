@@ -1,0 +1,29 @@
+{
+  "id": "s02",
+  "unit": 2,
+  "after": "u02_l06",
+  "title": "Wie alt ist Lola?",
+  "scene": "videocall",
+  "intro": "Sonntagabend im Sauerland: Videoanruf mit Lola in Cebu. Inday hat gerade die Zahlen gelernt und will sie ausprobieren.",
+  "lines": [
+    { "who": "agila", "ceb": "Si Lola sa Cebu, si Inday sa Sauerland. Kini ang pamilya ni Tim.", "de": "Lola in Cebu, Inday im Sauerland. Das ist Tims Familie." },
+    { "who": "inday", "ceb": "Lola! Kumusta ka?", "de": "Oma! Wie geht's dir?" },
+    { "who": "lola", "ceb": "Maayo ra, apo! Gwapa kaayo ka. Dako na ka!", "de": "Gut, mein Schatz! Du bist so hübsch. Du bist ja schon groß!" },
+    { "who": "inday", "ceb": "Lola, pila ka tuig ka na?", "de": "Oma, wie alt bist du jetzt?" },
+    { "who": "lola", "ceb": "Kan-uman ko na, Inday.", "de": "Ich bin schon sechzig, Inday." },
+    { "who": "tim", "ceb": "Kan-uman? Dili! Katloan ra ka, Lola. Batan-on kaayo ka!", "de": "Sechzig? Niemals! Du bist höchstens dreißig, Lola. Du siehst so jung aus!" },
+    { "who": "langga", "ceb": "Maayo kaayo, Tim. Buotan kaayo ang akong bana.", "de": "Gut gemacht, Tim. Mein Mann ist einfach zu lieb." },
+    { "who": "inday", "ceb": "Ug si Papa? Pila ka tuig na si Papa?", "de": "Und Papa? Wie alt ist Papa?" },
+    { "who": "tim", "ceb": "Katloan ug lima ko na.", "de": "Ich bin schon fünfunddreißig." },
+    { "who": "inday", "ceb": "Katloan ug lima? Tigulang na si Papa! Dili siya batan-on.", "de": "Fünfunddreißig? Papa ist schon alt! Der ist gar nicht jung." },
+    { "who": "lola", "ceb": "Mao na! Tigulang ang bana, batan-on ang lola.", "de": "Genau so ist es! Der Ehemann ist alt, die Oma ist jung." },
+    { "who": "langga", "ceb": "Inday, tulo ka tuig ka ra. Gamay ka, dili tigulang.", "de": "Inday, du bist erst drei. Du bist klein, nicht alt." }
+  ],
+  "questions": [
+    { "q": "Wie alt ist Lola wirklich?", "options": ["Sechzig", "Dreißig", "Fünfunddreißig"], "answer": 0 },
+    { "q": "Wie alt ist Tim?", "options": ["Dreißig", "Fünfunddreißig", "Sechzig"], "answer": 1 },
+    { "q": "Wen findet Inday alt?", "options": ["Lola", "Papa", "Mama"], "answer": 1 },
+    { "q": "Wie alt ist Inday?", "options": ["Drei", "Fünf", "Zehn"], "answer": 0 }
+  ],
+  "punchline": "Seit diesem Anruf ist Lola offiziell dreißig – und Tim der älteste Mensch der Familie. Inday hat es sich gemerkt."
+}

@@ -6,12 +6,14 @@ import { isAnswerAcceptable, normalizeAnswer } from "./answer.js";
 import { weightFor, isDue } from "./srs.js";
 import { db } from "./db.js";
 import { store } from "./store.js";
+import { portrait } from "./characters.js";
 
 const TYPE_LABEL = {
   multiple_choice: "Wähle die richtige Übersetzung",
   word_bank: "Baue den Satz aus den Kacheln",
   fill_blank: "Fülle die Lücke",
   type_answer: "Tippe die Übersetzung auf Cebuano",
+  picture: "Welches Wort passt zum Bild?",
   match_pairs: "Verbinde die Paare",
   true_false: "Stimmt die Übersetzung?",
 };
@@ -82,10 +84,12 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
   function renderIntro() {
     const vocab = h("div", { class: "card vocab-list" },
       h("h3", { style: { marginTop: 0 } }, "Neue Wörter"),
-      lesson.vocab.map((v) => h("div", { class: "v" },
-        h("div", {}, h("b", {}, v.ceb), h("span", { class: "pron" }, pronounce(v.ceb)), v.note ? h("span", { class: "note" }, v.note) : null),
-        h("div", { class: "muted", style: { textAlign: "right" } }, v.de, v.outlook ? h("span", { class: "badge", style: { marginLeft: "6px" } }, "Ausblick") : null),
-      )),
+      lesson.vocab.map((v) => { const e = content.entry(v.ceb) || {}; return h("div", { class: "v vocab-intro" },
+        e.img ? h("div", { class: "vimg" }, e.img) : null,
+        h("div", { class: "grow" }, h("div", { class: "row spread" }, h("b", {}, v.ceb), h("span", { class: "muted", style: { textAlign: "right" } }, v.de, v.outlook ? h("span", { class: "badge", style: { marginLeft: "6px" } }, "Ausblick") : null)),
+          h("span", { class: "pron" }, pronounce(v.ceb)), v.note ? h("span", { class: "note" }, v.note) : null,
+          e.mnemonic ? h("div", { class: "mnemo" }, "💡 ", e.mnemonic) : null),
+      ); }),
     );
     const start = () => { st.pos = 0; exStart = Date.now(); save(); renderCurrent(); };
     replace(main,
@@ -115,7 +119,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
       body.querySelectorAll("button, input").forEach((b) => { b.disabled = true; });
       finish(ex, idx, res);
     } };
-    const renderers = { multiple_choice, word_bank, fill_blank, type_answer, match_pairs, true_false, grammar_note };
+    const renderers = { multiple_choice, word_bank, fill_blank, type_answer, match_pairs, true_false, grammar_note , picture };
     renderers[ex.type](ctx);
   }
 
@@ -193,6 +197,23 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     );
   }
 
+  function picture({ ex, body, done }) {
+    const entry = content.entry(ex.answer);
+    const pool = content.entriesUpTo(lessonId).filter((e) => e.img && e !== entry && e.img !== entry.img);
+    const dis = content.distractors(entry, 3, (e) => pool.includes(e));
+    if (dis.length < 3) dis.push(...content.distractors(entry, 3 - dis.length, (e) => e.img && e.img !== entry.img && !dis.includes(e)));
+    const opts = shuffle([entry, ...dis]);
+    let sel = null;
+    const btns = opts.map((e) => h("button", { class: "opt", onclick: () => { sel = e; btns.forEach((b, i) => b.classList.toggle("sel", opts[i] === e)); check.disabled = false; } }, e.ceb));
+    const check = h("button", { class: "btn-primary btn-block btn-big mt", disabled: true, onclick: () => {
+      const ok = sel === entry;
+      btns[opts.indexOf(entry)].classList.add("ok");
+      if (!ok) btns[opts.indexOf(sel)].classList.add("bad");
+      done({ correct: ok, near: false, expected: entry.ceb, note: entry.de });
+    } }, "Prüfen");
+    body.append(h("div", { class: "hint" }, TYPE_LABEL.picture), h("div", { class: "pic-prompt" }, ex.img), h("div", { class: "options" }, btns), check);
+  }
+
   function word_bank({ ex, body, done }) {
     const tokens = shuffle(ex.tokens.map((t, i) => ({ t, i })));
     const chosen = []; // indices in tokens
@@ -215,7 +236,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
       reset.classList.toggle("hidden", chosen.length === 0);
     }
     bankBox.append(...tiles);
-    body.append(h("div", { class: "hint" }, TYPE_LABEL.word_bank), h("div", { class: "prompt" }, ex.prompt), ex.direction === "ceb_de" ? pron(ex.prompt, "pron under") : null, answerBox, bankBox, h("div", { class: "row spread mt" }, reset), check, dontKnow(ex.answer.join(" "), done));
+    body.append(h("div", { class: "hint" }, TYPE_LABEL.word_bank), h("div", { class: "prompt" }, ex.prompt), ...(ex.direction === "ceb_de" ? [pron(ex.prompt, "pron under")].filter(Boolean) : []), answerBox, bankBox, h("div", { class: "row spread mt" }, reset), check, dontKnow(ex.answer.join(" "), done));
     render();
   }
 
@@ -325,6 +346,8 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
         h("div", { class: "stat" }, h("b", {}, Math.max(1, Math.round(dur / 60000)) + " min"), h("span", {}, "Dauer")),
         h("div", { class: "stat" }, h("b", {}, lesson.vocab.length), h("span", {}, "neue Wörter")),
       ),
+      (() => { const cs = content.cultureOfUnit(lesson.unit); const c = cs.length ? cs[(lesson.posInUnit - 1) % cs.length] : null;
+        return c ? h("div", { class: "culture mt" }, h("div", { class: "culture-head" }, h("span", { class: "culture-emoji" }, c.emoji), h("b", {}, "Wusstest du? ", c.title)), h("p", {}, c.text)) : null; })(),
       h("h2", {}, "Überraschungssatz für deine Frau"),
       h("div", { class: "surprise" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "pron" }, pronounce(s.ceb)), h("div", { class: "de" }, s.de), h("div", { class: "when" }, "Wann: " + s.when),
         h("button", { class: "btn-ghost btn-small mt", onclick: () => copyText(s.ceb) }, "Satz kopieren")),

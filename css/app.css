@@ -352,3 +352,41 @@ body.big-text .opt, body.big-text .tile { font-size: 21px; }
 .pron-sample { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .pron-sample:last-child { border-bottom: 0; }
 .pron-sample .pron { font-size: 15px; }
+
+/* Bilder, Eselsbrücken, Geschichten, Blitz, Kultur, Tour */
+.vimg { font-size: 34px; line-height: 1; width: 44px; text-align: center; flex-shrink: 0; }
+.vimg.small { font-size: 24px; width: 32px; }
+.vimg.big { font-size: 44px; width: 56px; }
+.vocab-intro { align-items: flex-start; gap: 10px; }
+.mnemo { font-size: 14px; color: var(--text); background: var(--warn-soft); border-radius: 10px; padding: 6px 10px; margin-top: 6px; line-height: 1.35; }
+.pic-prompt { font-size: 96px; line-height: 1.1; text-align: center; margin: 10px 0 18px; }
+.scene { border-radius: var(--radius); overflow: hidden; line-height: 0; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+.scene svg { width: 100%; height: auto; display: block; }
+.cast { display: flex; flex-wrap: wrap; gap: 12px; margin: 10px 0; }
+.cast-item { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); }
+.portrait { border-radius: 50%; overflow: hidden; flex-shrink: 0; line-height: 0; background: #e8eef3; }
+.portrait svg { width: 100%; height: 100%; display: block; }
+.story { display: flex; flex-direction: column; gap: 12px; }
+.story-line { display: flex; gap: 10px; align-items: flex-start; }
+.story-line.me { flex-direction: row-reverse; }
+.story-bubble { background: var(--card); border-radius: 16px; padding: 10px 14px; max-width: 85%; box-shadow: 0 1px 2px rgba(0,0,0,.06); cursor: pointer; }
+.story-line.me .story-bubble { background: var(--accent-soft); }
+.story-bubble .who { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 2px; }
+.story-bubble .ceb { font-size: 18px; font-weight: 600; }
+.story-bubble .bubble-de { margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--line); color: var(--muted); font-size: 15px; }
+.story-line.new { animation: fade .35s; }
+.punchline { border: 2px dashed var(--gold); }
+.node.story-node .num { background: var(--gold); color: #3b2a00; }
+.node.story-node.locked .num { background: var(--line); color: var(--muted); }
+.list a.locked { opacity: .55; }
+.blitz-time { font-size: 22px; font-weight: 800; }
+.blitz-time.warn { color: var(--bad); animation: pulse-text .5s infinite alternate; }
+@keyframes pulse-text { from { transform: scale(1); } to { transform: scale(1.12); } }
+.culture { background: var(--card); border-left: 4px solid var(--accent); border-radius: 12px; padding: 12px 14px; margin-bottom: 12px; }
+.culture-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.culture-emoji { font-size: 26px; line-height: 1; }
+.culture p { margin: 4px 0 0; font-size: 15px; }
+.onboard { padding-top: 6vh; }
+.dots { display: flex; justify-content: center; gap: 8px; margin: 16px 0; }
+.dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+.dots i.on { background: var(--accent); }

@@ -1,6 +1,6 @@
 // Service Worker: cacht beim ersten Öffnen alle App-Dateien und Inhalte (offline-fähig).
 // Bei jedem Deploy CACHE_VERSION erhöhen – dann wird alles atomar neu geladen.
-const CACHE_VERSION = "v5";
+const CACHE_VERSION = "v6";
 const CACHE = "cebuano-" + CACHE_VERSION;
 
 const CORE = [
@@ -19,6 +19,9 @@ const CORE = [
   "./js/lesson.js",
   "./js/lexicon.js",
   "./js/progress.js",
+  "./js/characters.js",
+  "./js/scenes.js",
+  "./js/story.js",
   "./js/pronounce.js",
   "./js/srs.js",
   "./js/stats.js",
@@ -42,6 +45,8 @@ self.addEventListener("install", (event) => {
       try {
         const idx = await (await cache.match("./content/index.json")).json();
         await Promise.all(idx.units.map((u) => cache.add(`./content/units/${u}.json`).catch(() => null)));
+        await Promise.all(idx.units.map((u) => cache.add(`./content/stories/story_${u.slice(5)}.json`).catch(() => null)));
+        await cache.add("./content/culture.json").catch(() => null);
       } catch (_) {}
       // Kein skipWaiting hier: die neue Version wird erst aktiv, wenn der Nutzer im Banner „Neu laden“ wählt
       // (oder keine alte Seite mehr offen ist). So wird nie mitten in einer Lektion neu geladen.

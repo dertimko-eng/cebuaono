@@ -1,0 +1,109 @@
+{
+  "id": "s11",
+  "unit": 11,
+  "after": "u11_l06",
+  "title": "Der Ring im Lechon",
+  "scene": "party",
+  "intro": "Tim und Langga haben Hochzeitstag. Manong Dodong ist zum Essen da, Lola ist per Video zugeschaltet.",
+  "lines": [
+    {
+      "who": "inday",
+      "ceb": "Papa, unsa diay karon? Ngano naa kay bulak?",
+      "de": "Papa, was ist heute eigentlich? Warum hast du Blumen?"
+    },
+    {
+      "who": "tim",
+      "ceb": "Karon ang among anibersaryo, Inday. Niadtong 2020 nagkasal mi ni Mama.",
+      "de": "Heute ist unser Hochzeitstag, Inday. 2020 haben Mama und ich geheiratet."
+    },
+    {
+      "who": "langga",
+      "ceb": "Bitaw! Ug sa wala pa mi nagkasal, nahulog siya sa dagat sa Cebu.",
+      "de": "Stimmt! Und bevor wir geheiratet haben, ist er in Cebu ins Meer gefallen."
+    },
+    {
+      "who": "tim",
+      "ceb": "Wala gani ko nahulog, uy! Nalingaw lang ko sa tubig.",
+      "de": "Ich bin gar nicht reingefallen! Ich hatte nur Spaß im Wasser."
+    },
+    {
+      "who": "lola",
+      "ceb": "Sus, Tim! Nawala imong sapatos sa dagat kaniadto!",
+      "de": "Meine Güte, Tim! Deine Schuhe sind damals im Meer verschwunden!"
+    },
+    {
+      "who": "tim",
+      "ceb": "Ingon ana gyud ang gugma, Lola. Nawala ang sapatos, pero nakadaog ko ug asawa.",
+      "de": "So ist die Liebe eben, Lola. Schuhe weg, aber eine Frau gewonnen."
+    },
+    {
+      "who": "langga",
+      "ceb": "Buang ka gyud, uy! Mao nga gihigugma tika.",
+      "de": "Du bist wirklich verrückt! Genau deshalb liebe ich dich."
+    },
+    {
+      "who": "inday",
+      "ceb": "Mama, Papa, dungan mo ug halok! Magkuha ta ug litrato!",
+      "de": "Mama, Papa, küsst euch gleichzeitig! Lasst uns ein Foto machen!"
+    },
+    {
+      "who": "tim",
+      "ceb": "Hala, sige! Ambi ang singsing. Sus, asa ang singsing?",
+      "de": "Na dann, los! Her mit dem Ring. Oje, wo ist der Ring?"
+    },
+    {
+      "who": "dodong",
+      "ceb": "Uy, Tim, naa ang singsing sa plato sa lechon!",
+      "de": "Hey, Tim, der Ring liegt auf dem Lechon-Teller!"
+    },
+    {
+      "who": "lola",
+      "ceb": "Intawon! Kasagaran sa mga bana, nawala ang singsing. Dili lang sa lechon.",
+      "de": "Ach, der Arme! Die meisten Ehemänner verlieren mal den Ring. Nur nicht im Lechon."
+    },
+    {
+      "who": "agila",
+      "ceb": "Talagsa ra ang gugma nga ingon ani. Pero kasagaran ang lechon.",
+      "de": "Eine Liebe wie diese ist selten. Lechon dagegen gibt es meistens."
+    }
+  ],
+  "questions": [
+    {
+      "q": "Was feiern Tim und Langga heute?",
+      "options": [
+        "Ihren Hochzeitstag",
+        "Indays Geburtstag",
+        "Weihnachten"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Was hat Tim damals im Meer in Cebu verloren?",
+      "options": [
+        "Seine Schuhe",
+        "Seinen Ring",
+        "Sein Handy"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Wo taucht der Ehering wieder auf?",
+      "options": [
+        "Auf dem Lechon-Teller",
+        "Im Meer",
+        "In Indays Tasche"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Wer will ein Foto machen?",
+      "options": [
+        "Inday",
+        "Lola",
+        "Manong Dodong"
+      ],
+      "answer": 0
+    }
+  ],
+  "punchline": "Der Ring ist gerettet, der Lechon auch. Lola: „Nächstes Jahr feiert ihr in Cebu – da passe ich auf den Ring auf, und Tim auf seine Schuhe.“"
+}

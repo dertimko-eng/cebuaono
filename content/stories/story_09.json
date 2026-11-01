@@ -1,0 +1,29 @@
+{
+  "id": "s09",
+  "unit": 9,
+  "after": "u09_l06",
+  "title": "Libre ka sa Sabado?",
+  "scene": "livingroom",
+  "intro": "Samstagmorgen im Sauerland. Tim hat einen Plan fürs Wochenende – und braucht dafür einen kleinen Gefallen.",
+  "lines": [
+    { "who": "tim", "ceb": "Libre ka sa Sabado? Naa koy plano.", "de": "Hast du am Samstag Zeit? Ich habe einen Plan." },
+    { "who": "langga", "ceb": "Unsa man nga plano? Sigurado ka?", "de": "Was denn für ein Plan? Bist du dir sicher?" },
+    { "who": "tim", "ceb": "Magsuroy ta sa merkado, unya motan-aw ta ug sine.", "de": "Wir bummeln über den Markt, und danach schauen wir einen Film." },
+    { "who": "inday", "ceb": "Ngano man sine, Papa? Gusto ko magdula ug bola!", "de": "Warum denn Kino, Papa? Ich will Ball spielen!" },
+    { "who": "tim", "ceb": "Kadali lang, Inday. Naa koy hangyo sa imong Mama.", "de": "Moment mal, Inday. Ich habe eine Bitte an deine Mama." },
+    { "who": "langga", "ceb": "Hangyo? Ambot nimo! Unsa na pud?", "de": "Eine Bitte? Ich weiß auch nicht, was mit dir ist! Was ist es diesmal?" },
+    { "who": "tim", "ceb": "Kulang ang akong kwarta. Pwede mangayo ug pabor? Hulam ko ug singkwenta.", "de": "Mein Geld reicht nicht. Darf ich dich um einen Gefallen bitten? Ich leih mir fünfzig." },
+    { "who": "langga", "ceb": "Singkwenta ka piso, sige. Singkwenta ka euro? Ambot lang!", "de": "Fünfzig Pesos, gern. Fünfzig Euro? Da hab ich keine Ahnung!" },
+    { "who": "inday", "ceb": "Mama, hain ang imong kwarta? Sa bag?", "de": "Mama, wo ist denn dein Geld? In der Tasche?" },
+    { "who": "langga", "ceb": "Hilom, Inday! Sige, Tim, mosugot ko. Pero libre ang akong pagkaon sa sine, klaro?", "de": "Pssst, Inday! Gut, Tim, ich bin einverstanden. Aber mein Essen im Kino geht auf dich, klar?" },
+    { "who": "tim", "ceb": "Klaro kaayo. Daghang salamat!", "de": "Vollkommen klar. Vielen Dank!" },
+    { "who": "agila", "ceb": "Kulang ang kwarta ni Tim, pero sobra ang iyang plano.", "de": "Tims Geld ist knapp, aber an Plänen hat er mehr als genug." }
+  ],
+  "questions": [
+    { "q": "An welchem Tag will Tim etwas unternehmen?", "options": ["Sonntag", "Samstag", "Montag"], "answer": 1 },
+    { "q": "Was möchte Inday lieber machen als ins Kino gehen?", "options": ["Ball spielen", "Auf den Markt gehen", "Musik hören"], "answer": 0 },
+    { "q": "Worum bittet Tim Langga?", "options": ["Sie soll kochen", "Sie soll ihm Geld leihen", "Sie soll Lola anrufen"], "answer": 1 },
+    { "q": "Unter welcher Bedingung ist Langga einverstanden?", "options": ["Inday bleibt zu Hause", "Tim fährt mit dem E-Bike", "Tim zahlt ihr Kino-Essen"], "answer": 2 }
+  ],
+  "punchline": "Im Kino sucht Langga den Film aus: drei Stunden Liebesdrama auf Tagalog. Tim nach zehn Minuten: „Ambot lang.“"
+}

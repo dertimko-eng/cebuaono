@@ -10,7 +10,7 @@ export const DEFAULT_SETTINGS = {
   showedPersistHint: false,
 };
 
-export const XP = { correct: 10, near: 8, wrong: 0, lessonBonus: 20, trainerBonus: 10 };
+export const XP = { correct: 10, near: 8, wrong: 0, lessonBonus: 20, trainerBonus: 10, storyBonus: 15 };
 
 export const store = {
   content: null,
@@ -112,11 +112,22 @@ export const store = {
     this.emit("lesson");
   },
 
-  async completeTrainerRound({ mode, size, correct, near, wrong, dur }) {
-    await this.addEvent({ type: "trainer_round", mode, size, correct, near, wrong, dur, xp: XP.trainerBonus });
+  async completeTrainerRound({ mode, size, correct, near, wrong, dur, xp = XP.trainerBonus }) {
+    await this.addEvent({ type: "trainer_round", mode, size, correct, near, wrong, dur, xp });
     await this.snapshotSrs(true);
     this.emit("trainer");
   },
+
+  // Geschichten: gelesen-Liste in kv, Abschluss als Event (zählt XP)
+  async storiesDone() { return (await db.kvGet("stories.done")) || []; },
+  async completeStory(id, correct, total) {
+    const done = await this.storiesDone();
+    if (!done.includes(id)) { done.push(id); await db.kvSet("stories.done", done); }
+    await this.addEvent({ type: "story_complete", story: id, correct, total, xp: XP.storyBonus });
+    this.emit("story");
+  },
+  async blitzBest() { return (await db.kvGet("blitz.best")) || 0; },
+  async setBlitzBest(v) { await db.kvSet("blitz.best", v); },
 
   // Tagesstand der SRS-Stufen speichern (für den 30-Tage-Verlauf)
   async snapshotSrs(force = false) {

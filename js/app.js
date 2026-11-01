@@ -1,6 +1,9 @@
 // Einstieg: Router, Startbildschirm, Lernpfad, Wörterliste, Überraschungssätze, Einstellungen.
-import { eagleSays, unitBadge, homeLine } from "./art.js";
+import { eagleSays, eagle, unitBadge, homeLine } from "./art.js";
 import { pronounce, PRON_LEGEND } from "./pronounce.js";
+import { mountStory } from "./story.js";
+import { mountBlitz } from "./trainer.js";
+import { portrait } from "./characters.js";
 import { h, esc, toast, sheet, confirmSheet, fmtTime, isStandalone, isIOS, replace, copyText } from "./ui.js";
 import { loadContent } from "./content.js";
 import { store } from "./store.js";
@@ -79,6 +82,7 @@ async function boot() {
 
   window.addEventListener("hashchange", render);
   if (!location.hash) location.hash = "#home";
+  if (!(await db.kvGet("onboarded")) && !store.completedSet().size && location.hash === "#home") location.hash = "#intro";
   render();
   maybeWeeklyReview();
   requestPersistentStorage();
@@ -131,13 +135,18 @@ async function render() {
   document.body.classList.remove("lesson-mode");
   main.classList.remove("nobounce");
   document.querySelectorAll(".feedback, .overlay").forEach((e) => e.remove());
-  tabs.querySelectorAll("a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + route || (["more", "words", "surprises", "settings", "grammar", "review", "pron"].includes(route) && a.getAttribute("href") === "#more")));
+  tabs.querySelectorAll("a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + route || (["more", "words", "surprises", "settings", "grammar", "review", "pron", "culture", "stories"].includes(route) && a.getAttribute("href") === "#more")));
   switch (route) {
     case "home": return renderHome(isCurrent);
     case "path": return renderPath(isCurrent);
     case "lesson": return mountLesson(main, param, { content, navigate, isCurrent, onExit: (hash) => { if (hash && hash === location.hash) render(); else navigate(hash || "#path"); } });
     case "grammar": return renderGrammar();
     case "pron": return renderPron();
+    case "culture": return renderCulture();
+    case "stories": return renderStories();
+    case "story": return mountStory(main, param, { content, isCurrent, onExit: (hash) => navigate(hash || "#path") });
+    case "blitz": return mountBlitz(main, { content, isCurrent, onExit: (hash) => navigate(hash || "#home") });
+    case "intro": return renderOnboarding();
     case "review": return showWeeklyReview(true);
     case "trainer": {
       let preset = null;
@@ -167,6 +176,7 @@ async function renderHome(isCurrent = () => true) {
   const completed = store.completedSet();
   const inProgress = await hasLessonInProgress();
   const canSync = await sync.canSync();
+  const blitzBest = await store.blitzBest();
   if (!isCurrent()) return;
   const nextId = inProgress?.lessonId || content.nextLessonId(completed);
   const next = nextId ? content.lesson(nextId) : null;
@@ -191,6 +201,7 @@ async function renderHome(isCurrent = () => true) {
     h("div", { class: "card" },
       h("div", { class: "row spread" }, h("div", {}, h("b", {}, s.dueCount), " Wörter fällig"), h("button", { class: "btn-small " + (s.dueCount ? "btn-primary" : ""), disabled: !s.dueCount, onclick: () => navigate("#trainer/review") }, "Wiederholen")),
       h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, "Schnelle Runde mit 10 Wörtern"), h("button", { class: "btn-small", disabled: !s.learnedWords, onclick: () => navigate("#trainer/quick") }, "Trainer")),
+      h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, `⚡ 60 Sekunden, Rekord ${blitzBest}`), h("button", { class: "btn-small", disabled: s.learnedWords < 4, onclick: () => navigate("#blitz") }, "Blitzrunde")),
     ),
     h("div", { class: "card" },
       h("div", { class: "row spread" }, h("span", {}, "Gelernte Wörter"), h("b", {}, `${s.learnedWords} / ${s.totalWords}`)),
@@ -207,6 +218,7 @@ async function renderHome(isCurrent = () => true) {
 async function renderPath(isCurrent = () => true) {
   const completed = store.completedSet();
   const inProgress = await hasLessonInProgress();
+  const storiesDone = await store.storiesDone();
   if (!isCurrent()) return;
   const nextId = content.nextLessonId(completed);
   const els = [h("h1", {}, "Lernpfad")];
@@ -231,6 +243,15 @@ async function renderPath(isCurrent = () => true) {
       );
       path.append(node);
     });
+    const story = content.storyOfUnit(u.unit);
+    if (story) {
+      const open = content.storyUnlocked(story, completed);
+      const read = storiesDone.includes(story.id);
+      path.append(h("a", { class: "node story-node " + (read ? "done" : open ? "next" : "locked"), href: open ? "#story/" + story.id : null, onclick: open ? null : (e) => { e.preventDefault(); toast("Erst alle Lektionen der Unit abschließen."); } },
+        h("div", { class: "num" }, read ? "✓" : open ? "📖" : "🔒"),
+        h("div", { class: "t" }, h("b", {}, "Geschichte: " + story.title), h("span", {}, read ? "gelesen · nochmal lesen" : open ? `${story.lines.length} Sprechblasen · ${story.questions.length} Fragen` : "nach Lektion 6")),
+      ));
+    }
     els.push(path);
   }
   replace(main, ...els);
@@ -247,7 +268,8 @@ function showWordDetail(e) {
   const c = h("div", { class: "word-detail" },
     h("div", { class: "row spread" }, h("h2", { style: { margin: 0 } }, e.ceb), h("span", { class: "badge " + cat }, cat)),
     h("div", { class: "pron" }, pronounce(e.ceb)),
-    h("p", { style: { fontSize: "19px" } }, e.de),
+    h("div", { class: "row" }, e.img ? h("div", { class: "vimg big" }, e.img) : null, h("p", { style: { fontSize: "19px", margin: 0 } }, e.de)),
+    e.mnemonic ? h("div", { class: "mnemo mt" }, "💡 ", e.mnemonic) : null,
     e.note ? h("p", { class: "muted small" }, e.note) : null,
     e.forms?.length ? h("p", { class: "small muted" }, "Formen: " + e.forms.slice(0, 8).join(", ")) : null,
     h("div", { class: "stat-grid mt" },
@@ -309,7 +331,7 @@ function renderWords() {
       const w = store.words.get(e.ceb);
       const cat = categoryOf(w);
       const learned = completed.has(e.lesson) || (w && w.stage > 0);
-      return h("div", { class: "v", style: learned ? null : { opacity: 0.6 }, onclick: () => showWordDetail(e) }, h("div", {}, h("b", {}, e.ceb), h("span", { class: "pron" }, pronounce(e.ceb)), h("span", { class: "note" }, e.de, e.note ? ` – ${e.note}` : "")), h("div", { style: { textAlign: "right", flexShrink: 0 } }, learned ? h("span", { class: "badge " + cat }, cat) : h("span", { class: "badge" }, "Unit " + e.lesson.slice(1, 3).replace(/^0/, "")), w?.due && w.stage > 0 ? h("div", { class: "small muted" }, "fällig " + w.due.slice(8, 10) + "." + w.due.slice(5, 7) + ".") : null));
+      return h("div", { class: "v", style: learned ? null : { opacity: 0.6 }, onclick: () => showWordDetail(e) }, h("div", { class: "row" }, e.img ? h("span", { class: "vimg small" }, e.img) : null, h("div", {}, h("b", {}, e.ceb), h("span", { class: "pron" }, pronounce(e.ceb)), h("span", { class: "note" }, e.de, e.note ? ` – ${e.note}` : ""))), h("div", { style: { textAlign: "right", flexShrink: 0 } }, learned ? h("span", { class: "badge " + cat }, cat) : h("span", { class: "badge" }, "Unit " + e.lesson.slice(1, 3).replace(/^0/, "")), w?.due && w.stage > 0 ? h("div", { class: "small muted" }, "fällig " + w.due.slice(8, 10) + "." + w.due.slice(5, 7) + ".") : null));
     }) : h("p", { class: "muted" }, showAll ? "Nichts gefunden." : "Keine Wörter – schließe zuerst eine Lektion ab."));
   }
   input.addEventListener("input", update);
@@ -348,6 +370,69 @@ function renderPron() {
   main.scrollTop = 0;
 }
 
+// ---------- Geschichten-Liste ----------
+async function renderStories() {
+  const completed = store.completedSet();
+  const done = await store.storiesDone();
+  replace(main,
+    h("h1", {}, "Geschichten"),
+    h("p", { class: "muted" }, "Eine Comic-Geschichte pro Unit mit Tim, Langga, Inday, Lola und Manong Dodong. Freigeschaltet, sobald die Unit fertig ist."),
+    h("div", { class: "cast mb" }, ["tim", "langga", "inday", "lola", "dodong", "agila"].map((w) => h("div", { class: "cast-item" }, portrait(w, 44), h("span", {}, { tim: "Tim", langga: "Langga", inday: "Inday", lola: "Lola", dodong: "Dodong", agila: "Agila" }[w])))),
+    content.stories.length ? h("div", { class: "card list" }, content.stories.map((s) => {
+      const open = content.storyUnlocked(s, completed);
+      return h("a", { href: open ? "#story/" + s.id : "#stories", class: open ? "" : "locked", onclick: open ? null : (e) => { e.preventDefault(); toast(`Erst Unit ${s.unit} abschließen.`); } },
+        (done.includes(s.id) ? "✓ " : open ? "📖 " : "🔒 ") + `Unit ${s.unit}: ${s.title}`);
+    })) : h("p", {}, "Noch keine Geschichten vorhanden."),
+  );
+  main.scrollTop = 0;
+}
+
+// ---------- Kultur ----------
+function renderCulture() {
+  const completed = store.completedSet();
+  const startedUnits = new Set([1, ...[...completed].map((id) => content.unitOf(id))]);
+  const maxUnit = Math.max(...startedUnits);
+  const els = [h("h1", {}, "Wusstest du?"), h("p", { class: "muted" }, "Kleine Kulturkästen zu Cebu und den Philippinen, passend zu den Units. Neue erscheinen mit jeder begonnenen Unit.")];
+  if (!content.culture.length) els.push(h("p", {}, "Noch keine Kulturkästen vorhanden."));
+  for (const u of content.units) {
+    const items = content.cultureOfUnit(u.unit);
+    if (!items.length) continue;
+    const open = u.unit <= maxUnit;
+    els.push(h("h2", {}, `Unit ${u.unit}: ${u.title}`));
+    if (!open) { els.push(h("p", { class: "small muted" }, `🔒 ${items.length} Kästen – ab Unit ${u.unit}`)); continue; }
+    for (const c of items) els.push(h("div", { class: "culture" }, h("div", { class: "culture-head" }, h("span", { class: "culture-emoji" }, c.emoji), h("b", {}, c.title)), h("p", {}, c.text)));
+  }
+  replace(main, ...els);
+  main.scrollTop = 0;
+}
+
+// ---------- Erster Start: kurze Tour ----------
+function renderOnboarding() {
+  const slides = [
+    { mood: "wave", title: "Maayong adlaw! Ich bin Agila.", text: "Ich begleite dich von A0 bis A2 Cebuano. 72 kurze Lektionen, jede dauert nur ein paar Minuten. Alles läuft offline, dein Fortschritt wird in deiner Dropbox gesichert." },
+    { mood: "think", title: "So lernst du", text: "Jede Lektion: neue Wörter mit Bild, Aussprache und Eselsbrücke, dann Übungen. Fehler kommen einfach noch einmal dran. Es gibt keine Herzen und keine Strafen." },
+    { mood: "idle", title: "Wiederholen zur richtigen Zeit", text: "Die App merkt sich jedes Wort und fragt es nach 1, 3, 7, 14 und 30 Tagen wieder ab. Der Trainer zeigt dir, was fällig ist. Die Blitzrunde ist für zwischendurch." },
+    { mood: "cheer", title: "Für Langga", text: "Jede Lektion endet mit einem Überraschungssatz für deine Frau, jede Unit mit einer Comic-Geschichte. Dein Tagesziel: eine Lektion. Der Streak zählt jeden Tag mit Lektion oder Trainer." },
+  ];
+  let i = 0;
+  const finish = async () => { await db.kvSet("onboarded", true); navigate("#home"); };
+  const draw = () => {
+    const s = slides[i];
+    replace(main,
+      h("div", { class: "onboard" },
+        h("div", { class: "mascot-center" }, eagle(s.mood, 170)),
+        h("h1", { class: "center" }, s.title),
+        h("p", { class: "center", style: { fontSize: "18px" } }, s.text),
+        h("div", { class: "dots" }, slides.map((_, k) => h("i", { class: k === i ? "on" : "" }))),
+        h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => { if (i < slides.length - 1) { i++; draw(); } else finish(); } }, i < slides.length - 1 ? "Weiter" : "Los geht's"),
+        i < slides.length - 1 ? h("button", { class: "btn-ghost btn-block btn-small", onclick: finish }, "Überspringen") : null,
+      ),
+    );
+    main.scrollTop = 0;
+  };
+  draw();
+}
+
 // ---------- Mehr ----------
 function renderMore() {
   replace(main, 
@@ -356,6 +441,9 @@ function renderMore() {
       h("a", { href: "#words" }, "📚 Wörterliste"),
       h("a", { href: "#grammar" }, "📖 Grammatik nachschlagen"),
       h("a", { href: "#pron" }, "🔊 Aussprache lesen"),
+      h("a", { href: "#stories" }, "📖 Geschichten"),
+      h("a", { href: "#culture" }, "🇵🇭 Wusstest du? Philippinen"),
+      h("a", { href: "#intro" }, "🦅 Kurze Tour durch die App"),
       h("a", { href: "#surprises" }, "💛 Für meine Frau"),
       h("a", { href: "#review" }, "🗓️ Wochenrückblick"),
       h("a", { href: "#settings" }, "⚙️ Einstellungen & Dropbox"),

@@ -123,10 +123,11 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
 
     function renderEasy(entry, item, body) {
       const reverse = Math.random() < 0.3; // gelegentlich Deutsch → Cebuano
-      const dis = content.distractors(entry, 3);
+      const pic = !reverse && entry.img && Math.random() < 0.5; // Bild → Wort, wenn ein Bild da ist
+      const dis = content.distractors(entry, 3, pic ? (e) => e.img && e.img !== entry.img : null);
       const opts = shuffle([entry, ...dis]);
       let sel = null;
-      const label = (e) => (reverse ? e.ceb : e.de);
+      const label = (e) => (reverse || pic ? e.ceb : e.de);
       const btns = opts.map((e) => h("button", { class: "opt", onclick: () => { sel = e; btns.forEach((b, i) => b.classList.toggle("sel", opts[i] === e)); check.disabled = false; } }, label(e)));
       const check = h("button", { class: "btn-primary btn-block btn-big mt", disabled: true, onclick: () => {
         const ok = sel === entry;
@@ -134,7 +135,8 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
         if (!ok) btns[opts.indexOf(sel)].classList.add("bad");
         finish(entry, item, { correct: ok, near: false, expected: `${entry.ceb} = ${entry.de}`, ceb: entry.ceb, note: ok ? null : entry.note || null });
       } }, "Prüfen");
-      body.append(h("div", { class: "hint" }, reverse ? "Welches Cebuano-Wort passt?" : "Was bedeutet das?"), h("div", { class: "prompt" }, reverse ? entry.de : entry.ceb), reverse ? null : h("div", { class: "pron under" }, pronounce(entry.ceb)), h("div", { class: "options" }, btns), check);
+      if (pic) body.append(h("div", { class: "hint" }, "Welches Wort passt zum Bild?"), h("div", { class: "pic-prompt" }, entry.img), h("div", { class: "options" }, btns), check);
+      else body.append(h("div", { class: "hint" }, reverse ? "Welches Cebuano-Wort passt?" : "Was bedeutet das?"), h("div", { class: "prompt" }, reverse ? entry.de : entry.ceb), ...(reverse ? [] : [h("div", { class: "pron under" }, pronounce(entry.ceb))]), h("div", { class: "options" }, btns), check);
     }
     const dontKnow = (entry, item) => h("button", { class: "btn-ghost btn-block btn-small", onclick: () => finish(entry, item, { correct: false, near: false, expected: entry.ceb, ceb: entry.ceb, note: entry.note || null }) }, "Weiß ich nicht – Lösung zeigen");
 
@@ -215,10 +217,96 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
     if (items.length) { saved = null; return startRound({ mode: preset.mode || store.settings.trainerMode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) }); }
     toast("Keine passenden Wörter gefunden.");
   }
+  if (preset?.blitz) { saved = null; return mountBlitz(main, { content, onExit, isCurrent }); }
   if (preset?.quick) {
     const items = selectWords(content, { size: 10 });
     if (items.length) { saved = null; return startRound({ mode: preset.mode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) }); }
     toast("Noch keine Wörter zum Üben – erst eine Lektion abschließen.");
   }
   renderSetup();
+}
+
+// ---------- Blitzrunde: 60 Sekunden, so viele Wörter wie möglich ----------
+export async function mountBlitz(main, { content, onExit, isCurrent = () => true }) {
+  const DURATION = 60;
+  const pool = selectWords(content, { size: 200, includeMastered: true }).map((w) => w.entry);
+  if (pool.length < 4) { toast("Noch zu wenig Wörter – erst eine Lektion abschließen."); return onExit(); }
+  const best = await store.blitzBest();
+  if (!isCurrent()) return;
+  let score = 0, streak = 0, asked = 0, correctN = 0, timer = null, endAt = 0, running = false;
+  const exit = (hash) => { clearInterval(timer); document.body.classList.remove("lesson-mode"); document.onkeydown = null; onExit(hash); };
+
+  function renderStart() {
+    document.body.classList.add("lesson-mode");
+    replace(main,
+      h("div", { class: "lesson-top" }, h("button", { class: "btn-ghost btn-small", onclick: () => exit(), "aria-label": "Schließen" }, "✕"), h("div", { class: "grow small muted" }, "Blitzrunde")),
+      h("div", { class: "mascot-center" }, eagle("cheer", 120)),
+      h("h1", { class: "center", style: { marginTop: 0 } }, "⚡ Blitzrunde"),
+      h("p", { class: "center muted" }, "60 Sekunden. Jede richtige Antwort ein Punkt, ab drei in Folge zählt jede doppelt. Fehler kosten die Serie."),
+      h("div", { class: "stat-grid" }, h("div", { class: "stat" }, h("b", {}, best), h("span", {}, "Rekord")), h("div", { class: "stat" }, h("b", {}, pool.length), h("span", {}, "Wörter im Topf")), h("div", { class: "stat" }, h("b", {}, "60 s"), h("span", {}, "Zeit"))),
+      h("button", { class: "btn-primary btn-block btn-big mt", onclick: start }, "Los!"),
+    );
+  }
+
+  function start() {
+    score = 0; streak = 0; asked = 0; correctN = 0; running = true;
+    endAt = Date.now() + DURATION * 1000;
+    timer = setInterval(tick, 250);
+    next();
+  }
+  function tick() {
+    const left = Math.max(0, Math.ceil((endAt - Date.now()) / 1000));
+    const el = main.querySelector(".blitz-time");
+    if (el) { el.textContent = left + " s"; el.classList.toggle("warn", left <= 10); }
+    if (left <= 0 && running) finish();
+  }
+
+  function next() {
+    if (!isCurrent() || !running) return;
+    const entry = pool[Math.floor(Math.random() * pool.length)];
+    const pic = entry.img && Math.random() < 0.4;
+    const reverse = !pic && Math.random() < 0.5;
+    const dis = content.distractors(entry, 3, pic ? (e) => e.img && e.img !== entry.img : null);
+    const opts = shuffle([entry, ...dis]);
+    let answered = false;
+    const btns = opts.map((e) => h("button", { class: "opt", onclick: () => {
+      if (answered) return; answered = true;
+      asked++;
+      const ok = e === entry;
+      if (ok) { correctN++; streak++; score += streak >= 3 ? 2 : 1; } else { streak = 0; }
+      btns[opts.indexOf(entry)].classList.add("ok");
+      if (!ok) btns[opts.indexOf(e)].classList.add("bad");
+      store.recordAnswer({ mode: "blitz", exType: pic ? "picture" : "multiple_choice", words: [entry.ceb], correct: ok, near: false, dur: 0, weight: 0.25, firstTry: true, due: false });
+      setTimeout(next, ok ? 250 : 900);
+    } }, reverse || pic ? e.ceb : e.de));
+    replace(main,
+      h("div", { class: "lesson-top" }, h("button", { class: "btn-ghost btn-small", onclick: () => exit(), "aria-label": "Abbrechen" }, "✕"),
+        h("div", { class: "grow center blitz-time" }, Math.ceil((endAt - Date.now()) / 1000) + " s"),
+        h("div", { class: "xp" }, h("div", {}, score + " P"), streak >= 3 ? h("div", { class: "small", style: { color: "var(--warn)" } }, "🔥 ×2") : h("div", { class: "small muted" }, streak + " in Folge"))),
+      pic ? h("div", { class: "pic-prompt" }, entry.img) : h("div", { class: "prompt" }, reverse ? entry.de : entry.ceb),
+      h("div", { class: "options" }, btns),
+    );
+  }
+
+  async function finish() {
+    running = false;
+    clearInterval(timer);
+    const isRecord = score > best;
+    if (isRecord) await store.setBlitzBest(score);
+    await store.completeTrainerRound({ mode: "blitz", size: asked, correct: correctN, near: 0, wrong: asked - correctN, dur: DURATION * 1000, xp: score });
+    if (!isCurrent()) return;
+    replace(main,
+      h("div", { class: "mascot-center" }, eagle(isRecord ? "cheer" : "wave", 130)),
+      h("h1", { class: "center", style: { marginTop: 0 } }, isRecord ? "Neuer Rekord!" : "Zeit um!"),
+      h("div", { class: "result-big" }, score + " Punkte"),
+      h("div", { class: "stat-grid" }, h("div", { class: "stat" }, h("b", {}, correctN), h("span", {}, "richtig")), h("div", { class: "stat" }, h("b", {}, asked - correctN), h("span", {}, "falsch")), h("div", { class: "stat" }, h("b", {}, Math.max(best, score)), h("span", {}, "Rekord"))),
+      h("p", { class: "center muted" }, `+${score} XP`),
+      h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => renderStart() }, "Nochmal"),
+      h("button", { class: "btn-block mt", onclick: () => exit("#home") }, "Zurück"),
+    );
+    if (isRecord && score > 0) confetti(60);
+    document.dispatchEvent(new CustomEvent("trainer-complete"));
+  }
+
+  renderStart();
 }

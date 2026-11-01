@@ -231,6 +231,79 @@ function validateLesson(unit, lesson, li, uf) {
   }
 }
 
+
+// ---------- Extras (Eselsbrücken, Bilder) ----------
+const SCENES = ["kitchen", "market", "jeepney", "videocall", "workshop", "garden", "airport", "beach", "school", "livingroom", "street", "party"];
+const WHO = ["tim", "langga", "inday", "lola", "dodong", "agila"];
+const graphemes = (s) => [...new Intl.Segmenter("de", { granularity: "grapheme" }).segment(s)].length;
+for (const uf of unitFiles) {
+  const path = join(root, "content/extras", uf + ".json");
+  if (!existsSync(path)) { if (onlyUnit) warn(uf, "extras fehlen"); continue; }
+  let ex;
+  try { ex = JSON.parse(readFileSync(path, "utf8")); } catch (e) { err("extras/" + uf, "JSON-Fehler: " + e.message); continue; }
+  const unitNo = parseInt(uf.slice(5));
+  const words = glossary.entries.filter((e) => parseInt(e.lesson.slice(1, 3)) === unitNo);
+  for (const w of words) {
+    const x = ex[w.ceb];
+    if (!x) { err("extras/" + uf, `"${w.ceb}" fehlt`); continue; }
+    if (typeof x.mnemonic !== "string" || x.mnemonic.trim().length < 30 || x.mnemonic.length > 160) err("extras/" + uf, `"${w.ceb}": mnemonic fehlt oder nicht 30–160 Zeichen`);
+    if (!("img" in x)) err("extras/" + uf, `"${w.ceb}": img fehlt (Emoji oder null)`);
+    else if (x.img !== null && (typeof x.img !== "string" || graphemes(x.img) !== 1 || /[A-Za-z0-9]/.test(x.img))) err("extras/" + uf, `"${w.ceb}": img muss genau ein Emoji oder null sein (${x.img})`);
+  }
+  for (const k of Object.keys(ex)) if (!words.some((w) => w.ceb === k)) warn("extras/" + uf, `"${k}" ist kein Wort dieser Unit`);
+}
+
+// ---------- Geschichten ----------
+for (const uf of unitFiles) {
+  const no = uf.slice(5);
+  const path = join(root, "content/stories", "story_" + no + ".json");
+  if (!existsSync(path)) { if (onlyUnit) warn(uf, "Geschichte fehlt"); continue; }
+  const where = "story_" + no;
+  let s;
+  try { s = JSON.parse(readFileSync(path, "utf8")); } catch (e) { err(where, "JSON-Fehler: " + e.message); continue; }
+  if (s.id !== "s" + no) err(where, `id sollte s${no} sein`);
+  if (s.unit !== parseInt(no)) err(where, "unit passt nicht");
+  if (!/^u\d\d_l\d\d$/.test(s.after || "")) err(where, "after fehlt/ungültig");
+  if (!SCENES.includes(s.scene)) err(where, `scene ungültig: ${s.scene}`);
+  for (const f of ["title", "intro", "punchline"]) if (!s[f] || typeof s[f] !== "string") err(where, f + " fehlt");
+  const rank = Lexicon.lessonRank(s.after || "u01_l01");
+  const allowed = (e) => Lexicon.lessonRank(e.lesson) <= rank;
+  if (!Array.isArray(s.lines) || s.lines.length < 8 || s.lines.length > 12) err(where, `8–12 lines erwartet, gefunden ${s.lines?.length}`);
+  (s.lines || []).forEach((l, i) => {
+    if (!WHO.includes(l.who)) err(where, `Zeile ${i + 1}: who ungültig (${l.who})`);
+    if (!l.de) err(where, `Zeile ${i + 1}: de fehlt`);
+    if (!l.ceb) { err(where, `Zeile ${i + 1}: ceb fehlt`); return; }
+    const { unknown, tokens } = lex.analyze(l.ceb, allowed);
+    for (const u of unknown) err(where, `Zeile ${i + 1}: unbekanntes Wort "${u}" in "${l.ceb}"`);
+    for (const t of tokens) if (BAD_SPELLING[t]) err(where, `Zeile ${i + 1}: Schreibung "${t}" → "${BAD_SPELLING[t]}"`);
+  });
+  if (!Array.isArray(s.questions) || s.questions.length < 3 || s.questions.length > 4) err(where, "3–4 questions erwartet");
+  (s.questions || []).forEach((q, i) => {
+    if (!q.q || !Array.isArray(q.options) || q.options.length !== 3 || !Number.isInteger(q.answer) || q.answer < 0 || q.answer > 2) err(where, `Frage ${i + 1}: q/options(3)/answer prüfen`);
+  });
+}
+
+// ---------- Kultur ----------
+{
+  const path = join(root, "content/culture.json");
+  if (existsSync(path)) {
+    let c = null;
+    try { c = JSON.parse(readFileSync(path, "utf8")); } catch (e) { err("culture", "JSON-Fehler: " + e.message); }
+    if (c) {
+      const items = Array.isArray(c) ? c : c.items;
+      if (!Array.isArray(items)) err("culture", "Liste erwartet");
+      else {
+        const perUnit = {};
+        items.forEach((it, i) => {
+          if (!Number.isInteger(it.unit) || !it.title || !it.text || !it.emoji) err("culture", `Eintrag ${i + 1}: unit/title/emoji/text prüfen`);
+          else perUnit[it.unit] = (perUnit[it.unit] || 0) + 1;
+        });
+        for (const uf of unitFiles) { const n = parseInt(uf.slice(5)); if ((perUnit[n] || 0) < 3) warn("culture", `Unit ${n}: nur ${perUnit[n] || 0} Kästen (3 erwartet)`); }
+      }
+    }
+  }
+}
+
 // ---------- Ausgabe ----------
 if (!quiet) for (const w of warnings) console.log("WARNUNG " + w);
 for (const e of errors) console.log("FEHLER  " + e);

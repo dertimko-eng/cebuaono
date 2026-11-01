@@ -1,0 +1,26 @@
+{
+  "id": "s10", "unit": 10, "after": "u10_l06", "title": "Lugar lang!",
+  "scene": "jeepney",
+  "intro": "Tim fährt zum ersten Mal allein mit dem Jeepney zum Markt. Manong Dodong sitzt am Steuer.",
+  "lines": [
+    { "who": "agila", "ceb": "Karon mosakay si Tim ug dyip. Wala ang iyang asawa.", "de": "Heute fährt Tim Jeepney. Ohne seine Frau." },
+    { "who": "tim", "ceb": "Manong, pila ang pliti padulong sa merkado?", "de": "Manong, was kostet die Fahrt zum Markt?" },
+    { "who": "dodong", "ceb": "Dose pesos lang. Lingkod, lingkod! Daghan pa ug tawo.", "de": "Nur zwölf Pesos. Setz dich, setz dich! Es kommen noch viele." },
+    { "who": "tim", "ceb": "Palihug, bayad. Dose pesos.", "de": "Bitte, mein Fahrgeld. Zwölf Pesos." },
+    { "who": "dodong", "ceb": "Salamat. Paspas ta karon, kay sayo pa.", "de": "Danke. Jetzt geht's schnell, es ist noch früh." },
+    { "who": "tim", "ceb": "Manong! Hunong! Diretso! Dili, liko!", "de": "Manong! Halt! Geradeaus! Nein, abbiegen!" },
+    { "who": "dodong", "ceb": "Unsa man? Hunong o diretso?", "de": "Was denn jetzt? Halten oder weiter?" },
+    { "who": "tim", "ceb": "Ang merkado... didto na! Layo na kaayo!", "de": "Der Markt... ist da hinten! Jetzt ist er schon weit weg!" },
+    { "who": "dodong", "ceb": "Ingon ka lang: „Lugar lang!“ Mao na ang pulong sa dyip.", "de": "Sag einfach: „Lugar lang!“ Das ist das Jeepney-Wort." },
+    { "who": "tim", "ceb": "Lugar lang, Manong! Lugar lang!", "de": "Lugar lang, Manong! Anhalten bitte!" },
+    { "who": "dodong", "ceb": "Sige, manaog ka dinhi. Duol ra ang merkado: baktas sa unahan, unya liko sa tuo.", "de": "Okay, steig hier aus. Der Markt ist nah: nach vorne laufen, dann rechts abbiegen." },
+    { "who": "agila", "ceb": "Naog si Tim. Usa ka pulong, usa ka leksyon.", "de": "Tim steigt aus. Ein Wort, eine Lektion." }
+  ],
+  "questions": [
+    { "q": "Wohin will Tim mit dem Jeepney fahren?", "options": ["Zum Flughafen", "Zum Markt", "Zum Strand"], "answer": 1 },
+    { "q": "Was kostet die Fahrt?", "options": ["Zwölf Pesos", "Zwanzig Pesos", "Fünf Pesos"], "answer": 0 },
+    { "q": "Was muss man rufen, damit der Jeepney anhält?", "options": ["Diretso!", "Paspas!", "Lugar lang!"], "answer": 2 },
+    { "q": "Wie kommt Tim vom Jeepney zum Markt?", "options": ["Nach vorne, dann rechts", "Zurück, dann links", "Mit dem Tricycle"], "answer": 0 }
+  ],
+  "punchline": "Abends erzählt Tim stolz: „Ich kann jetzt Jeepney!“ Langga: „Und wie weit bist du gelaufen?“ Tim: „Nur zwei Kilometer.“"
+}
