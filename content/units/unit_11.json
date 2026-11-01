@@ -1,0 +1,318 @@
+{
+  "unit": 11,
+  "title": "Vergangenes erzählen – unsere Geschichte",
+  "level": "A2",
+  "lessons": [
+    {
+      "id": "u11_l01",
+      "title": "Lebenslauf",
+      "vocab": [
+        {"ceb": "katapusan", "de": "Ende; letzte; letzter", "note": "sa katapusan = am Ende; katapusang adlaw = letzter Tag"},
+        {"ceb": "natawo", "de": "geboren (sein)", "note": "Natawo ko sa Germany = Ich bin in Deutschland geboren. Von tawo = Mensch"},
+        {"ceb": "nagdako", "de": "aufgewachsen (sein)", "note": "Nagdako siya sa Cebu = Sie ist in Cebu aufgewachsen. Von dako = groß"},
+        {"ceb": "kasal", "de": "Hochzeit; heiraten", "note": "Nagpakasal mi sa 2020 = Wir haben 2020 geheiratet. Kasal ni Lola = Lolas Hochzeit"},
+        {"ceb": "nanganak", "de": "ein Kind bekommen (haben)", "note": "Nanganak akong asawa sa 2024 = Meine Frau hat 2024 ein Kind bekommen. Von anak"},
+        {"ceb": "matay", "de": "sterben", "note": "Namatay si Lolo = Opa ist gestorben. Patay = tot"},
+        {"ceb": "bulag", "de": "trennen; getrennt", "note": "Nagbulag sila = Sie haben sich getrennt. Bulag mi sa trabaho = Bei der Arbeit sind wir getrennt"},
+        {"ceb": "balhin", "de": "umziehen; wechseln; verlegen", "note": "Mibalhin mi sa Sauerland = Wir sind ins Sauerland gezogen. Balhini = Stell es woandershin"},
+        {"ceb": "graduwar", "de": "Abschluss machen; graduieren", "note": "Nigraduwar ko sa 2015 = Ich habe 2015 meinen Abschluss gemacht"},
+        {"ceb": "ila", "de": "kennen", "note": "Nakaila ka niya? = Kennst du sie? Nagkaila mi sa 2018 = Wir haben uns 2018 kennengelernt. Nicht verwechseln mit ila = ihr (Besitz)"}
+      ],
+      "grammar": {
+        "title": "Natawo ko sa Germany, nagdako ko sa Sauerland",
+        "text": "Für deinen Lebenslauf brauchst du nur ein paar fertige Vergangenheitsformen: Natawo ko sa Germany = Ich bin in Deutschland geboren, Nagdako ko sa Sauerland = Ich bin im Sauerland aufgewachsen. Die Jahreszahl hängst du einfach mit sa an: Nagkaila mi sa 2018 = Wir haben uns 2018 kennengelernt, Nagpakasal mi sa 2020 = Wir haben 2020 geheiratet. Nagka- heißt „miteinander“ (nagkaila = einander kennenlernen), naka- heißt „geschafft haben, können“: „Nakaila ka niya?“ = Kennst du sie (persönlich)? Namatay si Lolo = Opa ist gestorben, Nagbulag sila = Sie haben sich getrennt, Mibalhin mi = Wir sind umgezogen – immer Verb zuerst, dann wer (ko, mi, siya, si Lolo). Mehr musst du nicht anhängen, die Form na-, nag-, mi- sagt schon „es ist passiert“."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Natawo ko sa Germany ug nagdako ko sa Sauerland.", "direction": "ceb_de", "options": ["Ich bin in Deutschland geboren und im Sauerland aufgewachsen.", "Ich wohne in Deutschland und arbeite im Sauerland.", "Ich bin im Sauerland geboren und in Deutschland aufgewachsen.", "Ich bin von Deutschland ins Sauerland gezogen."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Hochzeit", "direction": "de_ceb", "options": ["kasal", "katapusan", "bulag", "balhin"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "natawo", "de": "geboren (sein)"},
+          {"ceb": "nagdako", "de": "aufgewachsen (sein)"},
+          {"ceb": "kasal", "de": "Hochzeit; heiraten"},
+          {"ceb": "graduwar", "de": "Abschluss machen"},
+          {"ceb": "balhin", "de": "umziehen"}
+        ]},
+        {"type": "fill_blank", "prompt": "Nagkaila mi ___ 2018.", "translation": "Wir haben uns 2018 kennengelernt.", "options": ["sa", "ug", "ni"], "answer": 0},
+        {"type": "true_false", "statement": "Nagpakasal mi sa 2020.", "translation": "Wir haben 2020 geheiratet.", "answer": true},
+        {"type": "word_bank", "prompt": "Ich bin in Deutschland geboren.", "tokens": ["Natawo", "ko", "sa", "Germany", "nagdako", "Cebu"], "answer": ["Natawo", "ko", "sa", "Germany"]},
+        {"type": "type_answer", "prompt": "Kennst du sie?", "answer": "Nakaila ka niya?", "accepted": ["Nakaila ka niya", "Nakaila ka ba niya"]},
+        {"type": "multiple_choice", "prompt": "Nanganak akong asawa sa 2024.", "direction": "ceb_de", "options": ["Meine Frau hat 2024 ein Kind bekommen.", "Meine Frau hat 2024 geheiratet.", "Meine Frau ist 2024 umgezogen.", "Meine Frau hat 2024 ihren Abschluss gemacht."], "answer": 0},
+        {"type": "fill_blank", "prompt": "___ si Lolo sa miaging tuig.", "translation": "Opa ist letztes Jahr gestorben.", "options": ["Namatay", "Natawo", "Nagdako"], "answer": 0},
+        {"type": "word_bank", "prompt": "Sie ist in Cebu aufgewachsen.", "tokens": ["Nagdako", "siya", "sa", "Cebu", "natawo", "Germany"], "answer": ["Nagdako", "siya", "sa", "Cebu"]},
+        {"type": "true_false", "statement": "Nagbulag sila sa miaging bulan.", "translation": "Sie haben letzten Monat geheiratet.", "answer": false, "correction": "Sie haben sich letzten Monat getrennt."},
+        {"type": "type_answer", "prompt": "Wir (ohne dich) sind ins Sauerland gezogen.", "answer": "Mibalhin mi sa Sauerland", "accepted": ["Nibalhin mi sa Sauerland", "Mibalhin kami sa Sauerland"]},
+        {"type": "multiple_choice", "prompt": "Nigraduwar ko sa 2015, dayon nagtrabaho ko sa botika.", "direction": "ceb_de", "options": ["Ich habe 2015 meinen Abschluss gemacht, dann habe ich in der Apotheke gearbeitet.", "Ich habe 2015 in der Apotheke angefangen, dann bin ich Lehrer geworden.", "Ich habe 2015 geheiratet, dann habe ich in der Apotheke gearbeitet.", "Ich habe 2015 die Apotheke verlassen, dann habe ich studiert."], "answer": 0},
+        {"type": "grammar_note", "title": "nagka- und naka-", "text": "Nagkaila mi = Wir haben uns kennengelernt: nagka- heißt, dass zwei Leute etwas miteinander tun (nagkita = sich getroffen, nagkasal = geheiratet). Nakaila ko niya = Ich kenne sie: naka- kennst du schon aus Unit 7, „geschafft haben“ – hier: ich habe sie kennengelernt, also kenne ich sie. Vorsicht: ila ohne Vorsilbe heißt „ihr (Besitz)“, wie in ila nga balay."},
+        {"type": "fill_blank", "prompt": "Sa ___ sa tuig, mobisita mi sa pamilya sa Cebu.", "translation": "Am Ende des Jahres besuchen wir die Familie in Cebu.", "options": ["katapusan", "kasal", "una"], "answer": 0},
+        {"type": "word_bank", "prompt": "Kennst du meine Mama?", "tokens": ["Nakaila", "ka", "sa", "akong", "mama", "nagkaila", "niya"], "answer": ["Nakaila", "ka", "sa", "akong", "mama"]},
+        {"type": "true_false", "statement": "Natawo si Inday sa Germany, dili sa Cebu.", "translation": "Inday ist in Deutschland geboren, nicht in Cebu.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "katapusan", "de": "Ende"},
+          {"ceb": "nanganak", "de": "ein Kind bekommen (haben)"},
+          {"ceb": "matay", "de": "sterben"},
+          {"ceb": "bulag", "de": "trennen; getrennt"},
+          {"ceb": "ila", "de": "kennen"}
+        ]}
+      ],
+      "surprise": {"ceb": "Sukad nagkaila ta, nindot gyud ang akong kinabuhi.", "de": "Seit wir uns kennen, ist mein Leben richtig schön.", "when": "Am Jahrestag eures Kennenlernens – oder einfach beim Abendessen."}
+    },
+    {
+      "id": "u11_l02",
+      "title": "gyud, diay, kaha & Co.",
+      "vocab": [
+        {"ceb": "gyud", "de": "wirklich; unbedingt; auf jeden Fall", "note": "Lami gyud! = Wirklich lecker! Moadto gyud ko = Ich gehe auf jeden Fall. Nie jud schreiben"},
+        {"ceb": "diay", "de": "ach so; übrigens; wie sich herausstellt", "note": "Ikaw diay! = Ach, du bist das! Diay, kumusta imong mama? = Übrigens, wie geht's deiner Mama?"},
+        {"ceb": "kaha", "de": "wohl; vielleicht (in Fragen)", "note": "Unsa kaha? = Was wohl? Kinsa kaha siya? = Wer mag das wohl sein?"},
+        {"ceb": "bitaw", "de": "stimmt; genau; ja wirklich", "note": "Bitaw! = Stimmt genau! Bitaw no? = Nicht wahr?"},
+        {"ceb": "uy", "de": "hey (Ausruf, Anrede)", "note": "Uy, Mama! = Hey, Mama! Ayaw uy = Nicht doch!"},
+        {"ceb": "sus", "de": "ach du meine Güte (Ausruf)", "note": "von Hesus; Sus, grabe! = Meine Güte, krass!"},
+        {"ceb": "lagi", "de": "ja doch; sicher doch", "note": "Oo lagi = Ja klar! Sige lagi = Ja, mach ich"},
+        {"ceb": "hala", "de": "oh!; los!; na dann", "note": "Hala, sige! = Na dann, los! Hala, nakalimot ko! = Oh nein, ich hab's vergessen!"},
+        {"ceb": "gani", "de": "sogar; doch (Betonung)", "note": "Wala gani ko nikaon = Ich habe nicht einmal gegessen. Mao gani = Eben, genau deshalb"},
+        {"ceb": "intawon", "de": "ach, der/die Arme; leider", "note": "Kapoy intawon = Ach, so müde (bemitleidend). Wala intawon = Leider nicht"}
+      ],
+      "grammar": {
+        "title": "Lami gyud! – Ikaw diay! – Unsa kaha?",
+        "text": "Diese kleinen Wörter stehen nach dem ersten Wort des Satzes und geben ihm den Ton: „Lami gyud!“ = Wirklich lecker, „Ikaw diay!“ = Ach, du bist das, „Unsa kaha?“ = Was wohl, „Bitaw!“ = Stimmt genau. Lagi macht ein Ja oder Okay herzlicher: „Oo lagi“ = Ja klar, „Sige lagi“ = Ja, mach ich. Hala, uy und sus sind Ausrufe am Satzanfang: „Hala, sige!“ = Na dann, los, „Uy, Mama!“ = Hey, Mama, „Sus, grabe!“ = Meine Güte, krass. Gani betont (Wala gani ko nikaon = Ich habe nicht einmal gegessen), intawon bemitleidet (Kapoy intawon si Inday = Ach, Inday ist so müde). Du musst sie nicht alle sofort selbst sagen – sie beim Zuhören zu erkennen ist der erste Schritt."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Lami gyud ang adobo ni Mama!", "direction": "ceb_de", "options": ["Mamas Adobo ist wirklich lecker!", "Mamas Adobo ist vielleicht lecker.", "Ist Mamas Adobo lecker?", "Mamas Adobo ist nur ein bisschen lecker."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Ikaw diay!", "direction": "ceb_de", "options": ["Ach, du bist das!", "Du auch!", "Bist du es wirklich?", "Du zuerst!"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "gyud", "de": "wirklich; unbedingt"},
+          {"ceb": "diay", "de": "ach so; übrigens"},
+          {"ceb": "kaha", "de": "wohl; vielleicht (in Fragen)"},
+          {"ceb": "bitaw", "de": "stimmt; genau"},
+          {"ceb": "lagi", "de": "ja doch; sicher doch"}
+        ]},
+        {"type": "fill_blank", "prompt": "Unsa ___ ang iyang ngalan?", "translation": "Wie heißt sie wohl?", "options": ["kaha", "gyud", "bitaw"], "answer": 0},
+        {"type": "true_false", "statement": "Bitaw!", "translation": "Stimmt genau!", "answer": true},
+        {"type": "word_bank", "prompt": "Ja klar, ich komme mit.", "tokens": ["Oo", "lagi", "mokuyog", "ko", "diay", "kaha"], "answer": ["Oo", "lagi", "mokuyog", "ko"]},
+        {"type": "type_answer", "prompt": "Na dann, los!", "answer": "Hala, sige!", "accepted": ["Hala sige", "Hala, sige"]},
+        {"type": "multiple_choice", "prompt": "Sus, grabe ang ulan gahapon!", "direction": "ceb_de", "options": ["Meine Güte, der Regen gestern war krass!", "Hey, gestern hat es geregnet!", "Stimmt, gestern war es kalt!", "Ach so, gestern hat es nicht geregnet!"], "answer": 0},
+        {"type": "fill_blank", "prompt": "Wala ___ ko nikaon ug pamahaw.", "translation": "Ich habe nicht einmal gefrühstückt.", "options": ["gani", "kaha", "diay"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Kapoy intawon si Inday.", "direction": "ceb_de", "options": ["Ach, die arme Inday ist so müde.", "Inday ist wirklich müde.", "Ist Inday wohl müde?", "Inday ist überhaupt nicht müde."], "answer": 0},
+        {"type": "word_bank", "prompt": "Hey, Mama, wo ist Inday?", "tokens": ["Uy", "Mama", "asa", "si", "Inday", "sus", "hala"], "answer": ["Uy", "Mama", "asa", "si", "Inday"]},
+        {"type": "true_false", "statement": "Moadto gyud ko sa Cebu sa Disyembre.", "translation": "Ich gehe vielleicht im Dezember nach Cebu.", "answer": false, "correction": "Ich gehe im Dezember auf jeden Fall nach Cebu."},
+        {"type": "type_answer", "prompt": "Wirklich lecker!", "answer": "Lami gyud!", "accepted": ["Lami gyud", "Lami gyud kaayo"]},
+        {"type": "grammar_note", "title": "Wo steht die Partikel?", "text": "Gyud, diay, kaha, bitaw, lagi und gani stehen nie am Satzanfang, sondern nach dem ersten Wort: Lami gyud, Ikaw diay, Unsa kaha, Oo lagi. Hala, uy und sus dagegen sind Ausrufe und stehen vorne, meist mit Komma: Hala, sige! Uy, Mama! Sus, grabe! Kommen mehrere zusammen, bleibt die Reihenfolge locker – „Lami gyud diay!“ heißt: Ach, das ist ja wirklich lecker!"},
+        {"type": "multiple_choice", "prompt": "Übrigens, wie geht's deiner Mama?", "direction": "de_ceb", "options": ["Diay, kumusta imong mama?", "Bitaw, kumusta imong mama?", "Hala, kumusta imong mama?", "Sus, kumusta imong mama?"], "answer": 0},
+        {"type": "fill_blank", "prompt": "Kinsa ___ ang tawo didto?", "translation": "Wer ist das wohl, dort drüben?", "options": ["kaha", "lagi", "uy"], "answer": 0},
+        {"type": "true_false", "statement": "Hala, nakalimot ko sa akong selpon!", "translation": "Oh nein, ich habe mein Handy vergessen!", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "uy", "de": "hey (Ausruf, Anrede)"},
+          {"ceb": "sus", "de": "ach du meine Güte"},
+          {"ceb": "hala", "de": "oh!; los!; na dann"},
+          {"ceb": "gani", "de": "sogar; doch (Betonung)"},
+          {"ceb": "intawon", "de": "ach, der/die Arme; leider"}
+        ]}
+      ],
+      "surprise": {"ceb": "Swerte gyud ko nimo, Langga. Bitaw!", "de": "Ich habe wirklich Glück mit dir, Schatz. Echt!", "when": "Wenn sie gerade etwas Nettes für dich getan hat – mit Nachdruck auf dem Bitaw."}
+    },
+    {
+      "id": "u11_l03",
+      "title": "Was passiert ist",
+      "vocab": [
+        {"ceb": "suko", "de": "wütend; sich ärgern", "note": "Nasuko si Mama = Mama war wütend. Ayaw kasuko = Sei nicht sauer"},
+        {"ceb": "hulog", "de": "fallen; hinfallen; herunterfallen", "note": "Nahulog ang bata = Das Kind ist hingefallen. Nahulog akong selpon = Mein Handy ist runtergefallen"},
+        {"ceb": "nawala", "de": "verloren (gegangen); verschwunden", "note": "Nawala akong kwarta = Ich habe mein Geld verloren. Nawala ang sakit = Der Schmerz ist weg. Von wala"},
+        {"ceb": "buang", "de": "verrückt", "note": "Buang ka! = Du bist verrückt! (oft liebevoll). Nabuang ko sa kalipay = Ich bin verrückt vor Freude"},
+        {"ceb": "daog", "de": "gewinnen; siegen", "note": "Nakadaog mi = Wir haben gewonnen. Daog ko! = Ich hab gewonnen!"},
+        {"ceb": "pildi", "de": "verlieren (Spiel); besiegt", "note": "Napildi mi = Wir haben verloren. Pildi ka! = Du hast verloren!"},
+        {"ceb": "aksidente", "de": "Unfall", "note": "Naaksidente siya = Sie hatte einen Unfall"},
+        {"ceb": "samad", "de": "Wunde; Verletzung; verletzt", "note": "Nasamad ko sa talyer = Ich habe mich in der Werkstatt verletzt"},
+        {"ceb": "dugo", "de": "Blut", "note": "Naa kay dugo = Du blutest (wörtlich: du hast Blut)"},
+        {"ceb": "pulis", "de": "Polizei; Polizist", "note": "Tawaga ang pulis = Ruf die Polizei"}
+      ],
+      "grammar": {
+        "title": "Nahulog ang bata – Nakaadto na ko sa Cebu",
+        "text": "Beim Erzählen nimmst du na- für Dinge, die einfach passiert sind (Nahulog ang bata = Das Kind ist hingefallen, Nawala akong selpon = Mein Handy ist weg, Nasuko si Mama = Mama war wütend), ni-/mi- für das, was jemand getan hat (Nikaon mi = Wir haben gegessen), und naka- für Geschafftes (Nakadaog mi = Wir haben gewonnen). Naka- plus na heißt „schon einmal“: Nakaadto na ko sa Cebu = Ich war schon mal in Cebu. Die Frage dazu lautet „Nakakaon na ka?“ = Hast du schon gegessen, die Antwort „Wala pa“ = Noch nicht. Na (schon) und pa (noch) sind ein Paar: na blickt zurück, pa wartet noch. Bei Zuständen sagt na- ebenfalls, dass es passiert ist: Nasamad ko sa talyer = Ich habe mich in der Werkstatt verletzt, Napildi mi = Wir haben verloren."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Nahulog si Inday sa hagdan, pero wala siya nasamad.", "direction": "ceb_de", "options": ["Inday ist auf der Treppe hingefallen, aber sie hat sich nicht verletzt.", "Inday hat auf der Treppe gespielt und sich verletzt.", "Inday ist die Treppe hochgegangen, aber sie ist nicht gefallen.", "Inday hat sich auf der Treppe verletzt, aber nicht geweint."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Polizei", "direction": "de_ceb", "options": ["pulis", "pildi", "dugo", "samad"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "hulog", "de": "fallen; hinfallen"},
+          {"ceb": "nawala", "de": "verloren (gegangen)"},
+          {"ceb": "daog", "de": "gewinnen; siegen"},
+          {"ceb": "pildi", "de": "verlieren (Spiel)"},
+          {"ceb": "aksidente", "de": "Unfall"}
+        ]},
+        {"type": "fill_blank", "prompt": "Nakaadto ___ ko sa Pilipinas.", "translation": "Ich war schon mal auf den Philippinen.", "options": ["na", "pa", "ra"], "answer": 0},
+        {"type": "true_false", "statement": "Nakakaon na ka? – Wala pa.", "translation": "Hast du schon gegessen? – Noch nicht.", "answer": true},
+        {"type": "word_bank", "prompt": "Mein Handy ist runtergefallen.", "tokens": ["Nahulog", "akong", "selpon", "nawala", "kwarta"], "answer": ["Nahulog", "akong", "selpon"]},
+        {"type": "type_answer", "prompt": "Wir (ohne dich) haben gewonnen.", "answer": "Nakadaog mi", "accepted": ["Nakadaog kami"]},
+        {"type": "multiple_choice", "prompt": "Nawala akong kwarta sa merkado.", "direction": "ceb_de", "options": ["Ich habe mein Geld auf dem Markt verloren.", "Mein Geld ist auf dem Markt runtergefallen.", "Ich habe auf dem Markt Geld gewonnen.", "Ich habe auf dem Markt viel Geld ausgegeben."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Nasuko si Mama kay ___ ang baso.", "translation": "Mama war wütend, weil das Glas runtergefallen ist.", "options": ["nahulog", "nadaog", "nawala"], "answer": 0},
+        {"type": "word_bank", "prompt": "Warst du schon mal in Bohol?", "tokens": ["Nakaadto", "na", "ka", "sa", "Bohol", "pa", "wala"], "answer": ["Nakaadto", "na", "ka", "sa", "Bohol"]},
+        {"type": "true_false", "statement": "Napildi mi sa dula gahapon.", "translation": "Wir haben gestern das Spiel gewonnen.", "answer": false, "correction": "Wir haben gestern das Spiel verloren."},
+        {"type": "multiple_choice", "prompt": "Naa sa ospital akong bayaw kay naaksidente siya sa motor.", "direction": "ceb_de", "options": ["Mein Schwager ist im Krankenhaus, weil er mit dem Motorrad einen Unfall hatte.", "Mein Schwager arbeitet im Krankenhaus und fährt Motorrad.", "Mein Schwager ist mit dem Motorrad zum Krankenhaus gefahren.", "Mein Schwager hat im Krankenhaus ein Motorrad gekauft."], "answer": 0},
+        {"type": "type_answer", "prompt": "Ich habe mich in der Werkstatt verletzt.", "answer": "Nasamad ko sa talyer"},
+        {"type": "grammar_note", "title": "na- oder naka-?", "text": "Na- erzählt, dass etwas passiert ist, ohne dass jemand es wollte: nahulog (hingefallen), nawala (verloren), nasuko (wütend geworden), nasamad (verletzt), napildi (verloren im Spiel). Naka- heißt, dass jemand etwas geschafft hat oder konnte: nakadaog (gewonnen), nakaadto (hingekommen), nakakaon (gegessen bekommen). Mit na dahinter wird naka- zu „schon einmal“: Nakakaon na ko = Ich habe schon gegessen, Nakaadto na ko sa Bohol = Ich war schon mal in Bohol."},
+        {"type": "fill_blank", "prompt": "Naa kay ___ sa imong ulo!", "translation": "Du hast Blut am Kopf!", "options": ["dugo", "samad", "suko"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Buang gyud ka, Tim!", "direction": "ceb_de", "options": ["Du bist wirklich verrückt, Tim!", "Du bist wirklich müde, Tim!", "Du hast wirklich gewonnen, Tim!", "Bist du wütend, Tim?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ruf die Polizei!", "tokens": ["Tawaga", "ang", "pulis", "doktor", "dali"], "answer": ["Tawaga", "ang", "pulis"]},
+        {"type": "true_false", "statement": "Nakasakay na ko ug dyip sa Cebu.", "translation": "Ich bin in Cebu schon mal Jeepney gefahren.", "answer": true}
+      ],
+      "surprise": {"ceb": "Buang ko nimo, Langga – ug nalipay ko ana.", "de": "Ich bin verrückt nach dir, Schatz – und ich freue mich darüber.", "when": "Wenn sie dich lachend „buang“ nennt."}
+    },
+    {
+      "id": "u11_l04",
+      "title": "Damals, bevor, Feiertage",
+      "vocab": [
+        {"ceb": "niadtong", "de": "damals am/im (vor Zeitangabe)", "note": "niadtong Lunes = am (vergangenen) Montag; niadtong 2020 = im Jahr 2020; niadtong bata pa ko = als ich noch klein war"},
+        {"ceb": "sa wala pa", "de": "bevor (Vergangenheit)", "note": "Sa wala pa mi nagkasal = Bevor wir geheiratet haben. Für Zukunft: sa dili pa"},
+        {"ceb": "labay", "de": "vorbeigehen; vergehen (Zeit)", "note": "Milabay ang usa ka tuig = Ein Jahr ist vergangen. Milabay nga tuig = letztes Jahr"},
+        {"ceb": "ika-", "de": "(Ordnungszahl-Vorsilbe) der/die/das …te", "note": "ikaduha = zweite, ikatulo = dritte, ikaupat = vierte; die erste: una"},
+        {"ceb": "kagabii", "de": "gestern Abend; letzte Nacht", "note": "Kagabii nag-ulan = Letzte Nacht hat es geregnet. Von ka- + gabii"},
+        {"ceb": "Pasko", "de": "Weihnachten", "note": "Malipayong Pasko! = Frohe Weihnachten! Auf den Philippinen beginnt die Weihnachtszeit im September"},
+        {"ceb": "adlawng natawhan", "de": "Geburtstag", "note": "wörtlich: Tag, an dem man geboren wurde. Malipayong adlawng natawhan! = Alles Gute zum Geburtstag! Viele sagen einfach birthday"},
+        {"ceb": "anibersaryo", "de": "Jahrestag; Hochzeitstag", "note": "Malipayong anibersaryo! = Alles Gute zum Hochzeitstag!"},
+        {"ceb": "saulog", "de": "feiern", "note": "Magsaulog mi sa iyang adlawng natawhan = Wir feiern ihren Geburtstag. Gisaulog namo ang Pasko = Wir haben Weihnachten gefeiert"}
+      ],
+      "grammar": {
+        "title": "Niadtong 2020 – Sa wala pa mi nagkasal",
+        "text": "Niadtong steht vor einer vergangenen Zeitangabe: niadtong 2020 = im Jahr 2020, niadtong Lunes = am Montag, niadtong bata pa ko = als ich noch klein war. Sa wala pa heißt „bevor“ für Vergangenes: Sa wala pa mi nagkasal, nagpuyo ko sa Sauerland = Bevor wir geheiratet haben, habe ich im Sauerland gewohnt (für die Zukunft bleibt sa dili pa). Milabay sagt, dass Zeit vergangen ist: Milabay ang usa ka tuig = Ein Jahr ist vergangen, kagabii = gestern Abend. Ordnungszahlen bildest du mit ika- (ikaduha = zweite, ikatulo = dritte), nur die erste heißt una: ang ikaduha namong anibersaryo = unser zweiter Hochzeitstag. Glückwünsche beginnen mit malipayong (von lipay): „Malipayong Pasko!“, „Malipayong adlawng natawhan!“, „Malipayong anibersaryo!“."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Niadtong 2020, nagpakasal mi sa Cebu.", "direction": "ceb_de", "options": ["2020 haben wir in Cebu geheiratet.", "Seit 2020 wohnen wir in Cebu.", "2020 haben wir uns in Cebu kennengelernt.", "Vor 2020 haben wir in Cebu gefeiert."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Weihnachten", "direction": "de_ceb", "options": ["Pasko", "pista", "anibersaryo", "kasal"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "niadtong", "de": "damals am/im"},
+          {"ceb": "kagabii", "de": "gestern Abend"},
+          {"ceb": "Pasko", "de": "Weihnachten"},
+          {"ceb": "anibersaryo", "de": "Jahrestag; Hochzeitstag"},
+          {"ceb": "saulog", "de": "feiern"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ mi nagkasal, nagpuyo ko sa Sauerland.", "translation": "Bevor wir geheiratet haben, habe ich im Sauerland gewohnt.", "options": ["Sa wala pa", "Sa dili pa", "Niadtong"], "answer": 0},
+        {"type": "true_false", "statement": "Milabay ang usa ka tuig.", "translation": "Ein Jahr ist vergangen.", "answer": true},
+        {"type": "word_bank", "prompt": "Frohe Weihnachten, Mama!", "tokens": ["Malipayong", "Pasko", "Mama", "anibersaryo", "buntag"], "answer": ["Malipayong", "Pasko", "Mama"]},
+        {"type": "type_answer", "prompt": "Alles Gute zum Geburtstag!", "answer": "Malipayong adlawng natawhan!", "accepted": ["Malipayong adlawng natawhan"]},
+        {"type": "multiple_choice", "prompt": "Kagabii nag-ulan ug kusog sa Sauerland.", "direction": "ceb_de", "options": ["Gestern Abend hat es im Sauerland stark geregnet.", "Gestern Morgen hat es im Sauerland geregnet.", "Letzte Nacht war es im Sauerland sehr kalt.", "Gestern Abend hat es im Sauerland geschneit."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Karon ang ___ namong anibersaryo.", "translation": "Heute ist unser zweiter Hochzeitstag.", "options": ["ikaduha", "ikatulo", "una"], "answer": 0},
+        {"type": "word_bank", "prompt": "Wir (ohne dich) feiern Indays Geburtstag.", "tokens": ["Magsaulog", "mi", "sa", "adlawng", "natawhan", "ni", "Inday", "Pasko", "kagabii"], "answer": ["Magsaulog", "mi", "sa", "adlawng", "natawhan", "ni", "Inday"]},
+        {"type": "true_false", "statement": "Niadtong Lunes, nagtrabaho ko sa talyer.", "translation": "Am Montag habe ich in der Werkstatt gearbeitet.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Niadtong bata pa ko, nagpuyo mi sa Sauerland.", "direction": "ceb_de", "options": ["Als ich noch klein war, haben wir im Sauerland gewohnt.", "Als ich klein war, sind wir ins Sauerland gezogen.", "Mein Kind wohnt noch im Sauerland.", "Damals haben wir noch nicht im Sauerland gewohnt."], "answer": 0},
+        {"type": "type_answer", "prompt": "Ein Jahr ist vergangen.", "answer": "Milabay ang usa ka tuig", "accepted": ["Nilabay ang usa ka tuig"]},
+        {"type": "grammar_note", "title": "sa wala pa oder sa dili pa?", "text": "Beide heißen „bevor“, aber sie schauen in verschiedene Richtungen. Sa dili pa (Unit 9) steht für Zukunft und Gewohnheit: Sa dili pa ko matulog, magbasa ko = Bevor ich schlafe, lese ich. Sa wala pa erzählt Vergangenes: Sa wala pa mi nagkasal, nagpuyo ko sa Sauerland = Bevor wir geheiratet haben, habe ich im Sauerland gewohnt. Merkhilfe: dili verneint Zukunft, wala verneint Vergangenheit – genau wie bei dili und wala allein."},
+        {"type": "fill_blank", "prompt": "Gisaulog namo ang ___ sa Cebu.", "translation": "Wir haben Weihnachten in Cebu gefeiert.", "options": ["Pasko", "anibersaryo", "kasal"], "answer": 0},
+        {"type": "word_bank", "prompt": "Gestern Abend haben wir (ohne dich) Lechon gegessen.", "tokens": ["Kagabii", "nikaon", "mi", "ug", "lechon", "gahapon", "Pasko"], "answer": ["Kagabii", "nikaon", "mi", "ug", "lechon"], "accepted": ["Nikaon mi ug lechon kagabii"]},
+        {"type": "true_false", "statement": "Sa wala pa ko nahimong magtutudlo, nagtrabaho ko sa botika.", "translation": "Bevor ich Lehrer wurde, habe ich in der Apotheke gearbeitet.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "sa wala pa", "de": "bevor (Vergangenheit)"},
+          {"ceb": "labay", "de": "vergehen (Zeit)"},
+          {"ceb": "ikatulo", "de": "dritte"},
+          {"ceb": "adlawng natawhan", "de": "Geburtstag"},
+          {"ceb": "kaniadto", "de": "früher; damals"}
+        ]}
+      ],
+      "surprise": {"ceb": "Matag adlaw kauban nimo, pista para nako.", "de": "Jeder Tag mit dir ist für mich ein Fest.", "when": "Am Hochzeitstag – oder an einem ganz normalen Dienstag."}
+    },
+    {
+      "id": "u11_l05",
+      "title": "Unsere Geschichte",
+      "vocab": [
+        {"ceb": "gugma", "de": "Liebe", "note": "akong gugma = meine Liebe; gugma sa pamilya = Liebe zur Familie"},
+        {"ceb": "higugma", "de": "lieben", "note": "Gihigugma tika = Ich liebe dich. Gihigugma ko ikaw = Ich liebe dich (betont). Nahigugma ko nimo = Ich habe mich in dich verliebt"},
+        {"ceb": "tika", "de": "ich … dich (Kurzform von ko ikaw)", "note": "Gihigugma tika = Ich liebe dich. Gimingaw tika? Nein: Gimingaw ko nimo. Tika nur bei Objektfokus-Verben"},
+        {"ceb": "palangga", "de": "Liebling; lieb haben", "note": "Palangga tika = Ich hab dich lieb. Langga = Schatz (Anrede). Pinangga = geliebt"},
+        {"ceb": "dungan", "de": "gleichzeitig; zusammen (zur gleichen Zeit)", "note": "Dungan ta mokaon = Lass uns zusammen essen. Nagdungan mi ug abot = Wir sind gleichzeitig angekommen"},
+        {"ceb": "singsing", "de": "Ring", "note": "singsing sa kasal = Ehering"},
+        {"ceb": "litrato", "de": "Foto; Bild", "note": "Magpalitrato ta = Lass uns ein Foto machen. Ipadala ang litrato = Schick das Foto"},
+        {"ceb": "kasingkasing", "de": "Herz", "note": "Ikaw ang akong kasingkasing = Du bist mein Herz. Sa tibuok kong kasingkasing = von ganzem Herzen"},
+        {"ceb": "saad", "de": "Versprechen; versprechen", "note": "Saad ko = Ich verspreche es. Gisaad niya = Sie hat es versprochen. Panaad = Versprechen (Nomen)"}
+      ],
+      "grammar": {
+        "title": "Gihigugma tika – Gimingaw ko nimo",
+        "text": "Gihigugma tika = Ich liebe dich: tika ist die Kurzform von ko + ikaw und steht nur bei Objektfokus-Verben mit gi-, bei denen „dich“ das Objekt ist. Genauso: Palangga tika = Ich hab dich lieb, Gihulat tika = Ich habe auf dich gewartet. Mingaw funktioniert anders, hier bleibt ko + nimo: Gimingaw ko nimo = Ich vermisse dich (nie Gimingaw tika). Nahigugma ko nimo heißt „ich habe mich in dich verliebt“ – na- für den Zustand, nimo für die Person. Saad ko = Ich verspreche es, Dungan ta = zusammen, zur gleichen Zeit: Dungan ta mokaon = Lass uns zusammen essen."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Gihigugma tika.", "direction": "ceb_de", "options": ["Ich liebe dich.", "Ich vermisse dich.", "Ich warte auf dich.", "Du liebst mich."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Ring", "direction": "de_ceb", "options": ["singsing", "litrato", "saad", "gugma"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "gugma", "de": "Liebe"},
+          {"ceb": "singsing", "de": "Ring"},
+          {"ceb": "litrato", "de": "Foto; Bild"},
+          {"ceb": "kasingkasing", "de": "Herz"},
+          {"ceb": "saad", "de": "Versprechen"}
+        ]},
+        {"type": "fill_blank", "prompt": "Gimingaw ko ___.", "translation": "Ich vermisse dich.", "options": ["nimo", "tika", "ikaw"], "answer": 0},
+        {"type": "true_false", "statement": "Palangga tika.", "translation": "Ich hab dich lieb.", "answer": true},
+        {"type": "word_bank", "prompt": "Ich liebe dich von ganzem Herzen.", "tokens": ["Gihigugma", "tika", "sa", "tibuok", "nakong", "kasingkasing", "nimo", "gugma"], "answer": ["Gihigugma", "tika", "sa", "tibuok", "nakong", "kasingkasing"]},
+        {"type": "type_answer", "prompt": "Ich liebe dich.", "answer": "Gihigugma tika", "accepted": ["Gihigugma ko ikaw"]},
+        {"type": "multiple_choice", "prompt": "Nahigugma ko nimo sa Cebu niadtong 2018.", "direction": "ceb_de", "options": ["Ich habe mich 2018 in Cebu in dich verliebt.", "Ich habe dich 2018 in Cebu vermisst.", "Ich habe dich 2018 in Cebu geheiratet.", "Ich habe 2018 in Cebu auf dich gewartet."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Mao ni ang ___ sa among kasal.", "translation": "Das ist der Ring von unserer Hochzeit.", "options": ["singsing", "litrato", "saad"], "answer": 0},
+        {"type": "word_bank", "prompt": "Lass uns ein Foto machen!", "tokens": ["Magpalitrato", "ta", "mi", "singsing"], "answer": ["Magpalitrato", "ta"]},
+        {"type": "true_false", "statement": "Gimingaw ko nimo.", "translation": "Ich liebe dich.", "answer": false, "correction": "Ich vermisse dich."},
+        {"type": "type_answer", "prompt": "Ich verspreche es.", "answer": "Saad ko"},
+        {"type": "multiple_choice", "prompt": "Dungan ta mokaon ug panihapon.", "direction": "ceb_de", "options": ["Lass uns zusammen zu Abend essen.", "Lass uns nach dem Abendessen gehen.", "Wir essen immer zu Abend.", "Iss dein Abendessen zuerst."], "answer": 0},
+        {"type": "grammar_note", "title": "tika oder ko nimo?", "text": "Tika kannst du nur sagen, wenn das Verb mit gi- auf „dich“ zielt: Gihigugma tika, Palangga tika, Gihulat tika, Gitawag tika (Ich habe dich gerufen). Gimingaw ist zwar auch gi-, aber die vermisste Person steht mit nimo: Gimingaw ko nimo. Und bei Zuständen mit na- bleibt es ebenfalls bei ko + nimo: Nahigugma ko nimo. Im Zweifel: Gihigugma tika ist immer richtig – und das Wichtigste."},
+        {"type": "fill_blank", "prompt": "Ikaw ang akong ___.", "translation": "Du bist mein Herz.", "options": ["kasingkasing", "singsing", "litrato"], "answer": 0},
+        {"type": "word_bank", "prompt": "Schick das Foto an Mama.", "tokens": ["Ipadala", "ang", "litrato", "kang", "Mama", "singsing", "ni"], "answer": ["Ipadala", "ang", "litrato", "kang", "Mama"]},
+        {"type": "true_false", "statement": "Importante kaayo ang gugma sa pamilya.", "translation": "Die Liebe zur Familie ist sehr wichtig.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "higugma", "de": "lieben"},
+          {"ceb": "tika", "de": "ich … dich"},
+          {"ceb": "palangga", "de": "Liebling; lieb haben"},
+          {"ceb": "dungan", "de": "gleichzeitig; zusammen"},
+          {"ceb": "mingaw", "de": "vermissen"}
+        ]}
+      ],
+      "surprise": {"ceb": "Gihigugma tika gahapon, karon, ug hangtod sa katapusan.", "de": "Ich habe dich gestern geliebt, ich liebe dich heute und bis zum Ende.", "when": "Vor dem Einschlafen – oder auf einen Zettel neben den Ehering gelegt."}
+    },
+    {
+      "id": "u11_l06",
+      "title": "Erzähl mal",
+      "vocab": [
+        {"ceb": "tuyo", "de": "Absicht; Zweck; Grund (des Kommens)", "note": "Unsay imong tuyo? = Was ist dein Anliegen? Tinuyo = absichtlich; wala tuyoa = nicht mit Absicht"},
+        {"ceb": "mahitungod", "de": "über; bezüglich; was … angeht", "note": "Mahitungod sa trabaho … = Was die Arbeit angeht … Istorya mahitungod sa Pilipinas = eine Geschichte über die Philippinen"},
+        {"ceb": "kasagaran", "de": "meistens; normalerweise; die meisten", "note": "Kasagaran mokaon mi alas sais = Normalerweise essen wir um 6. Kasagaran sa mga tawo = die meisten Leute"},
+        {"ceb": "talagsa", "de": "selten", "note": "Talagsa ra ko moinom ug bir = Ich trinke nur selten Bier. Talagsaon = besonders/selten (Adjektiv)"},
+        {"ceb": "ingon ani", "de": "so (wie dies hier); auf diese Weise", "note": "Ingon ani ang pagluto = So wird gekocht. Ingon ana = so (wie das da bei dir). Von ingon + ani (niini)"},
+        {"ceb": "ingon ana", "de": "so (wie das da); auf die Art", "note": "Ayaw ingon ana = Mach das nicht so / sei nicht so. Ingon ana gyud = So ist das eben. Von ingon + ana (niana)"},
+        {"ceb": "mao nga", "de": "deshalb; darum", "note": "Kapoy ko, mao nga matulog na ko = Ich bin müde, deshalb gehe ich jetzt schlafen. Formell: busa"},
+        {"ceb": "bahin", "de": "Teil; Abschnitt; Anteil", "note": "usa ka bahin sa kinabuhi = ein Teil des Lebens; bahin sa = über/bezüglich (kurz für mahitungod sa)"},
+        {"ceb": "tingog", "de": "Stimme; Laut; Geräusch", "note": "Nindot imong tingog = Du hast eine schöne Stimme. Unsa nga tingog kadto? = Was war das für ein Geräusch?"},
+        {"ceb": "nawong", "de": "Gesicht", "note": "Nindot imong nawong = Du hast ein schönes Gesicht. Hugasi imong nawong = Wasch dein Gesicht"}
+      ],
+      "grammar": {
+        "title": "Kasagaran, talagsa, mao nga – Istorya mahitungod sa Pilipinas",
+        "text": "Beim Erzählen helfen dir Häufigkeitswörter: kasagaran = meistens (Kasagaran mokaon mi alas sais = Normalerweise essen wir um 6), talagsa = selten (Talagsa ra ko moinom ug bir = Ich trinke nur selten Bier). Mao nga verbindet Grund und Folge, „deshalb“: Kapoy ko, mao nga matulog na ko = Ich bin müde, deshalb gehe ich jetzt schlafen. Ingon ani heißt „so wie das hier“ (bei dir), ingon ana „so wie das da“ (beim anderen): Ingon ani ang pagluto sa adobo = So kocht man Adobo, Ayaw ingon ana = Mach das nicht so. Das Thema einer Erzählung kommt mit mahitungod sa oder kurz bahin sa: Istoryahi ko mahitungod sa Pilipinas = Erzähl mir von den Philippinen. Damit kannst du jetzt alles aus Unit 11 zu einer kleinen Geschichte verbinden – natawo, nagdako, nagkaila, nagpakasal, nanganak."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Kasagaran, mokaon mi ug panihapon alas sais.", "direction": "ceb_de", "options": ["Normalerweise essen wir um 6 zu Abend.", "Manchmal essen wir um 6 zu Abend.", "Selten essen wir um 6 zu Abend.", "Heute essen wir um 6 zu Abend."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "selten", "direction": "de_ceb", "options": ["talagsa", "kasagaran", "kanunay", "usahay"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "kasagaran", "de": "meistens; normalerweise"},
+          {"ceb": "talagsa", "de": "selten"},
+          {"ceb": "mao nga", "de": "deshalb; darum"},
+          {"ceb": "tingog", "de": "Stimme"},
+          {"ceb": "nawong", "de": "Gesicht"}
+        ]},
+        {"type": "fill_blank", "prompt": "Kapoy ko, ___ matulog na ko.", "translation": "Ich bin müde, deshalb gehe ich jetzt schlafen.", "options": ["mao nga", "kay", "pero"], "answer": 0},
+        {"type": "true_false", "statement": "Talagsa ra ko moinom ug bir.", "translation": "Ich trinke oft Bier.", "answer": false, "correction": "Ich trinke nur selten Bier."},
+        {"type": "word_bank", "prompt": "Erzähl mir von den Philippinen.", "tokens": ["Istoryahi", "ko", "mahitungod", "sa", "Pilipinas", "bahin", "tuyo"], "answer": ["Istoryahi", "ko", "mahitungod", "sa", "Pilipinas"], "accepted": ["Istoryahi ko bahin sa Pilipinas"]},
+        {"type": "type_answer", "prompt": "So kocht man Adobo.", "answer": "Ingon ani ang pagluto sa adobo", "accepted": ["Ingon ani ang pagluto ug adobo"]},
+        {"type": "multiple_choice", "prompt": "Unsay imong tuyo dinhi?", "direction": "ceb_de", "options": ["Was ist dein Anliegen hier?", "Wo ist dein Zimmer hier?", "Wer ist dein Freund hier?", "Was ist dein Lieblingsessen hier?"], "answer": 0},
+        {"type": "fill_blank", "prompt": "Nindot imong ___, Langga.", "translation": "Du hast eine schöne Stimme, Schatz.", "options": ["tingog", "nawong", "bahin"], "answer": 0},
+        {"type": "word_bank", "prompt": "Mach das nicht so!", "tokens": ["Ayaw", "ingon", "ana", "ani", "sige"], "answer": ["Ayaw", "ingon", "ana"]},
+        {"type": "true_false", "statement": "Hugasi imong nawong, Inday.", "translation": "Wasch dein Gesicht, Inday.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Usa ka bahin sa akong kinabuhi ang Cebu.", "direction": "ceb_de", "options": ["Cebu ist ein Teil meines Lebens.", "Cebu ist mein ganzes Leben.", "Ich habe einen Teil meines Lebens in Cebu gewohnt.", "Cebu ist der schönste Ort meines Lebens."], "answer": 0},
+        {"type": "type_answer", "prompt": "Erzähl mir von deiner Familie.", "answer": "Istoryahi ko mahitungod sa imong pamilya", "accepted": ["Istoryahi ko bahin sa imong pamilya"]},
+        {"type": "grammar_note", "title": "Unit 11 in einer Geschichte", "text": "Natawo ko sa Germany ug nagdako ko sa Sauerland. Niadtong 2018 nagkaila mi sa Cebu, ug nahigugma gyud ko niya. Sa wala pa mi nagkasal, nagtrabaho ko sa botika – karon magtutudlo na ko. Nagpakasal mi sa 2020, ug nanganak akong asawa sa 2024. Kasagaran, lipay mi, talagsa ra mi masuko – mao nga gihigugma tika hangtod sa katapusan."},
+        {"type": "fill_blank", "prompt": "Nakaadto ___ ko sa Bohol, pero wala pa ko sa Boracay.", "translation": "Ich war schon mal in Bohol, aber noch nicht in Boracay.", "options": ["na", "pa", "lang"], "answer": 0},
+        {"type": "word_bank", "prompt": "Wir haben uns 2018 kennengelernt, deshalb haben wir 2020 geheiratet.", "tokens": ["Nagkaila", "mi", "sa", "2018", "mao", "nga", "nagpakasal", "mi", "sa", "2020", "kay", "niadtong"], "answer": ["Nagkaila", "mi", "sa", "2018", "mao", "nga", "nagpakasal", "mi", "sa", "2020"]},
+        {"type": "true_false", "statement": "Kasagaran sa mga tawo sa Cebu, mosulti ug Binisaya.", "translation": "Die meisten Leute in Cebu sprechen Cebuano.", "answer": true},
+        {"type": "multiple_choice", "prompt": "Ingon ana gyud ang kinabuhi.", "direction": "ceb_de", "options": ["So ist das Leben eben.", "Das Leben ist wirklich schön.", "Mach das Leben nicht so.", "So kocht man das Leben."], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "tuyo", "de": "Absicht; Zweck"},
+          {"ceb": "mahitungod", "de": "über; bezüglich"},
+          {"ceb": "ingon ani", "de": "so (wie dies hier)"},
+          {"ceb": "ingon ana", "de": "so (wie das da)"},
+          {"ceb": "bahin", "de": "Teil; Abschnitt"}
+        ]}
+      ],
+      "surprise": {"ceb": "Ang imong tingog ang akong paboritong musika.", "de": "Deine Stimme ist meine Lieblingsmusik.", "when": "Wenn sie in der Küche singt – oder am Telefon, wenn sie in Cebu ist."}
+    }
+  ]
+}
