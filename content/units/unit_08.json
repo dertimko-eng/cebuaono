@@ -1,0 +1,1715 @@
+{
+  "unit": 8,
+  "title": "Verbfokus 2: Vergangenheit, Gegenwart, Zukunft",
+  "level": "A1",
+  "lessons": [
+    {
+      "id": "u08_l01",
+      "title": "Was gestern war (ni-/nag-)",
+      "vocab": [
+        {
+          "ceb": "hatag",
+          "de": "geben",
+          "note": "Mohatag ko ug regalo = Ich gebe ein Geschenk. Tagai ko = Gib mir. Gihatag nako = Ich habe es gegeben"
+        },
+        {
+          "ceb": "dala",
+          "de": "bringen; mitnehmen",
+          "note": "Magdala ko ug pagkaon = Ich bringe Essen mit. Dad-a = Nimm es mit"
+        },
+        {
+          "ceb": "tawag",
+          "de": "anrufen; rufen",
+          "note": "Tawagi ko = Ruf mich an. Gitawag ko ni Mama = Mama hat mich angerufen"
+        },
+        {
+          "ceb": "hulat",
+          "de": "warten",
+          "note": "Hulat lang = Warte kurz. Maghulat ko nimo = Ich warte auf dich"
+        },
+        {
+          "ceb": "abli",
+          "de": "öffnen; offen",
+          "note": "Ablihi ang pultahan = Mach die Tür auf. Abli ang tindahan = Der Laden ist offen"
+        },
+        {
+          "ceb": "sira",
+          "de": "schließen; geschlossen; kaputt",
+          "note": "Sirhi ang bintana = Mach das Fenster zu. Sira ang tindahan = Der Laden ist zu. Sira ang selpon = Das Handy ist kaputt"
+        },
+        {
+          "ceb": "miaging",
+          "de": "vergangene; letzte (Zeit)",
+          "note": "miaging semana = letzte Woche; miaging tuig = letztes Jahr"
+        },
+        {
+          "ceb": "padala",
+          "de": "schicken; senden",
+          "note": "Ipadala nako ang litrato = Ich schicke das Foto. Gipadala ni Mama = Mama hat es geschickt"
+        },
+        {
+          "ceb": "dawat",
+          "de": "empfangen; annehmen; bekommen",
+          "note": "Nakadawat ko ug sulat = Ich habe einen Brief bekommen"
+        },
+        {
+          "ceb": "sugat",
+          "de": "abholen; empfangen (am Treffpunkt)",
+          "note": "Sugaton tika sa airport = Ich hole dich am Flughafen ab"
+        }
+      ],
+      "grammar": {
+        "title": "ni-/mi- und nag- für Vergangenes",
+        "text": "Für etwas, das vorbei ist, bekommt das Verb ni- (oder mi-, gleiche Bedeutung): „Nihatag ko ug kape kang Mama“ = Ich habe Mama Kaffee gegeben, „Niabot si Mama gahapon“ = Mama ist gestern angekommen. Nag- beschreibt eine Handlung, die eine Weile gedauert hat: „Nagdala ko ug pagkaon“ = Ich habe Essen mitgebracht, „Naghulat ko sa airport“ = Ich habe am Flughafen gewartet. Im Alltag sind ni- und nag- oft austauschbar, wichtig ist nur: Beide zeigen Vergangenheit. Zeitwörter geben den Rahmen: gahapon = gestern, miaging semana = letzte Woche, miaging tuig = letztes Jahr. Die Formen für Vergangenheit lernst du am besten als Paar mit der Zukunft: Mohatag ko (ich werde geben) – Nihatag ko (ich habe gegeben), Magdala ko – Nagdala ko."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Nihatag ko ug kape kang Mama.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich habe Mama Kaffee gegeben.",
+            "Ich gebe Mama gleich Kaffee.",
+            "Mama hat mir Kaffee gegeben.",
+            "Ich habe Mama Kaffee gebracht."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich habe Essen mitgebracht.",
+          "tokens": [
+            "Nagdala",
+            "ko",
+            "ug",
+            "pagkaon",
+            "Magdala",
+            "tubig"
+          ],
+          "answer": [
+            "Nagdala",
+            "ko",
+            "ug",
+            "pagkaon"
+          ],
+          "accepted": [
+            "Nidala ko ug pagkaon"
+          ]
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "hatag",
+              "de": "geben"
+            },
+            {
+              "ceb": "dala",
+              "de": "bringen; mitnehmen"
+            },
+            {
+              "ceb": "tawag",
+              "de": "anrufen; rufen"
+            },
+            {
+              "ceb": "hulat",
+              "de": "warten"
+            },
+            {
+              "ceb": "dawat",
+              "de": "empfangen; annehmen; bekommen"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ko sa airport sa miaging semana.",
+          "translation": "Ich habe letzte Woche am Flughafen gewartet.",
+          "options": [
+            "Naghulat",
+            "Maghulat",
+            "Hulat"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Nitawag si Mama gahapon.",
+          "translation": "Mama hat gestern angerufen.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich habe gewartet.",
+          "answer": "Naghulat ko",
+          "accepted": [
+            "Nihulat ko",
+            "Mihulat ko",
+            "Naghulat ako"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Mama hat Essen geschickt.",
+          "direction": "de_ceb",
+          "options": [
+            "Nipadala si Mama ug pagkaon.",
+            "Nagdawat si Mama ug pagkaon.",
+            "Mopadala si Mama ug pagkaon.",
+            "Nagluto si Mama ug pagkaon."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich habe gestern einen Brief bekommen.",
+          "tokens": [
+            "Nakadawat",
+            "ko",
+            "ug",
+            "sulat",
+            "gahapon",
+            "Nagpadala",
+            "ugma"
+          ],
+          "answer": [
+            "Nakadawat",
+            "ko",
+            "ug",
+            "sulat",
+            "gahapon"
+          ],
+          "accepted": [
+            "Nidawat ko ug sulat gahapon"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ang tindahan sa Dominggo.",
+          "translation": "Der Laden ist am Sonntag geschlossen.",
+          "options": [
+            "Sira",
+            "Abli",
+            "Hulat"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Abli ang tindahan karon.",
+          "translation": "Der Laden ist jetzt geschlossen.",
+          "answer": false,
+          "correction": "Der Laden ist jetzt offen."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Nisugat ko kang Mama sa airport.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich habe Mama am Flughafen abgeholt.",
+            "Ich warte am Flughafen auf Mama.",
+            "Ich habe Mama am Flughafen angerufen.",
+            "Mama hat mich am Flughafen abgeholt."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "letzte Woche",
+          "answer": "miaging semana",
+          "accepted": [
+            "sa miaging semana"
+          ]
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich habe Mama gestern angerufen.",
+          "tokens": [
+            "Nitawag",
+            "ko",
+            "kang",
+            "Mama",
+            "gahapon",
+            "Nagdawat",
+            "ugma"
+          ],
+          "answer": [
+            "Nitawag",
+            "ko",
+            "kang",
+            "Mama",
+            "gahapon"
+          ],
+          "accepted": [
+            "Nagtawag ko kang Mama gahapon",
+            "Mitawag ko kang Mama gahapon"
+          ]
+        },
+        {
+          "type": "grammar_note",
+          "title": "ni- oder mi-?",
+          "text": "Beides heißt dasselbe: Vergangenheit, einmal passiert. In Cebu hörst du im Gespräch meist ni- (nihatag, niabot, nitawag), in Texten und im Fernsehen oft mi- (mihatag, miabot, mitawag). Du darfst ni- nehmen, musst aber beide verstehen. Sogar miaging (letzte Woche, letztes Jahr) ist so eine mi-Form: mi + agi = vorbeigegangen."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Mama ist letztes Jahr in Deutschland angekommen.",
+          "direction": "de_ceb",
+          "options": [
+            "Niabot si Mama sa Germany sa miaging tuig.",
+            "Moabot si Mama sa Germany sa sunod tuig.",
+            "Nagpuyo si Mama sa Germany sa miaging tuig.",
+            "Nitrabaho si Mama sa Germany sa miaging tuig."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Nagdala ko ug bir para kang Papa.",
+          "translation": "Ich habe Bier für Papa mitgebracht.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Nag-abli ang tindahan alas otso.",
+          "direction": "ceb_de",
+          "options": [
+            "Der Laden hat um acht geöffnet.",
+            "Der Laden schließt um acht.",
+            "Der Laden öffnet morgen um acht.",
+            "Der Laden war um acht geschlossen."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gisira ni Mama ang bintana kay ___.",
+          "translation": "Mama hat das Fenster geschlossen, weil es kalt ist.",
+          "options": [
+            "tugnaw",
+            "init",
+            "lami"
+          ],
+          "answer": 0
+        }
+      ],
+      "surprise": {
+        "ceb": "Salamat kay naghulat ka nako.",
+        "de": "Danke, dass du auf mich gewartet hast.",
+        "when": "Wenn sie geduldig war – mit dir, mit deinem Cebuano, mit allem."
+      }
+    },
+    {
+      "id": "u08_l02",
+      "title": "Was gerade passiert (nag-)",
+      "vocab": [
+        {
+          "ceb": "samtang",
+          "de": "während",
+          "note": "Nagluto ko samtang natulog ang bata = Ich koche, während das Kind schläft"
+        },
+        {
+          "ceb": "gihapon",
+          "de": "immer noch; trotzdem",
+          "note": "Natulog pa gihapon siya = Sie schläft immer noch. Sa gihapon = wie immer"
+        },
+        {
+          "ceb": "sayaw",
+          "de": "tanzen; Tanz"
+        },
+        {
+          "ceb": "dagan",
+          "de": "rennen; laufen (schnell); fahren",
+          "note": "Nagdagan ang bata = Das Kind rennt. Paspas modagan ang bus = Der Bus fährt schnell"
+        },
+        {
+          "ceb": "langoy",
+          "de": "schwimmen",
+          "note": "Malangoy ta sa dagat = Lass uns im Meer schwimmen"
+        },
+        {
+          "ceb": "biya",
+          "de": "verlassen; weggehen; zurücklassen",
+          "note": "Mobiya ko alas sais = Ich gehe um 6 weg. Ayaw ko biyai = Verlass mich nicht"
+        },
+        {
+          "ceb": "istorya",
+          "de": "Geschichte; erzählen; sich unterhalten",
+          "note": "Mag-istorya ta = Lass uns reden. Istoryahi ko = Erzähl mir"
+        },
+        {
+          "ceb": "pangita",
+          "de": "suchen",
+          "note": "Nangita ko ug trabaho = Ich suche Arbeit. Pangitaa = Such es"
+        },
+        {
+          "ceb": "baktas",
+          "de": "zu Fuß gehen; wandern",
+          "note": "Magbaktas ta sa bukid = Lass uns in den Bergen wandern"
+        },
+        {
+          "ceb": "tabok",
+          "de": "überqueren; gegenüber",
+          "note": "Motabok ta sa dalan = Lass uns die Straße überqueren. Sa tabok = gegenüber"
+        }
+      ],
+      "grammar": {
+        "title": "nag- für Gerade-jetzt und samtang",
+        "text": "Nag- steht auch für das, was gerade passiert: „Nagluto ko“ = Ich koche gerade, „Nagdagan ang bata“ = Das Kind rennt. Ob Vergangenheit oder Gegenwart gemeint ist, sagt der Zusammenhang oder ein Zeitwort wie karon oder gahapon. Mit samtang (während) verbindest du zwei Handlungen: „Nagluto ko samtang natulog ang bata“ = Ich koche, während das Kind schläft. Gihapon heißt „immer noch“: „Natulog gihapon si Inday“ = Inday schläft immer noch. Bei Zustandsverben wie tulog nimmst du na- statt nag-: natulog = schläft, nalipay = freut sich."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Nagluto ko samtang natulog ang bata.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich koche, während das Kind schläft.",
+            "Ich habe gekocht, nachdem das Kind geschlafen hat.",
+            "Ich koche, weil das Kind schläft.",
+            "Das Kind schläft, während ich esse."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Inday schläft immer noch.",
+          "tokens": [
+            "Natulog",
+            "gihapon",
+            "si",
+            "Inday",
+            "Nagdagan",
+            "samtang"
+          ],
+          "answer": [
+            "Natulog",
+            "gihapon",
+            "si",
+            "Inday"
+          ]
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "sayaw",
+              "de": "tanzen"
+            },
+            {
+              "ceb": "dagan",
+              "de": "rennen"
+            },
+            {
+              "ceb": "langoy",
+              "de": "schwimmen"
+            },
+            {
+              "ceb": "baktas",
+              "de": "zu Fuß gehen; wandern"
+            },
+            {
+              "ceb": "tabok",
+              "de": "überqueren"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nagdagan ang iro ___ nagbasa ko.",
+          "translation": "Der Hund rennt, während ich lese.",
+          "options": [
+            "samtang",
+            "kay",
+            "pero"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Naglangoy ang mga bata sa dagat karon.",
+          "translation": "Die Kinder schwimmen jetzt im Meer.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich tanze.",
+          "answer": "Nagsayaw ko",
+          "accepted": [
+            "Nagsayaw ako"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Inday rennt im Garten.",
+          "direction": "de_ceb",
+          "options": [
+            "Nagdagan si Inday sa hardin.",
+            "Naglangoy si Inday sa hardin.",
+            "Nagsayaw si Inday sa hardin.",
+            "Nagtabok si Inday sa hardin."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Mama und ich unterhalten uns, während Inday spielt.",
+          "tokens": [
+            "Nag-istorya",
+            "mi",
+            "ni",
+            "Mama",
+            "samtang",
+            "nagdula",
+            "si",
+            "Inday",
+            "gihapon",
+            "naghilak"
+          ],
+          "answer": [
+            "Nag-istorya",
+            "mi",
+            "ni",
+            "Mama",
+            "samtang",
+            "nagdula",
+            "si",
+            "Inday"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ko sa akong selpon.",
+          "translation": "Ich suche mein Handy.",
+          "options": [
+            "Nangita",
+            "Nagdagan",
+            "Nagtabok"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Nagbaktas mi sa Sauerland matag Dominggo.",
+          "translation": "Wir wandern jeden Sonntag im Sauerland.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Nibiya si Papa alas sais.",
+          "direction": "ceb_de",
+          "options": [
+            "Papa ist um sechs weggegangen.",
+            "Papa kommt um sechs an.",
+            "Papa geht morgen um sechs weg.",
+            "Papa ist um sechs aufgestanden."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Die Kinder tanzen immer noch.",
+          "answer": "Nagsayaw gihapon ang mga bata"
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Wir wandern, während es regnet.",
+          "tokens": [
+            "Nagbaktas",
+            "mi",
+            "samtang",
+            "nag-ulan",
+            "nagtabok",
+            "kay"
+          ],
+          "answer": [
+            "Nagbaktas",
+            "mi",
+            "samtang",
+            "nag-ulan"
+          ]
+        },
+        {
+          "type": "grammar_note",
+          "title": "nag- gestern oder jetzt?",
+          "text": "Die Form ist gleich: Nagluto ko gahapon = Ich habe gestern gekocht, Nagluto ko karon = Ich koche gerade. Das Zeitwort entscheidet, und ohne Zeitwort meist der Zusammenhang. Gefühle und Zustände nehmen na-: natulog (schläft), nalipay (freut sich), naguol (ist traurig), nakapoy (ist müde)."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Nangita ko ug trabaho sa Cebu.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich suche Arbeit in Cebu.",
+            "Ich habe Arbeit in Cebu gefunden.",
+            "Ich arbeite in Cebu.",
+            "Ich habe meine Arbeit in Cebu aufgegeben."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Nag-istorya si Lola samtang nagkaon mi.",
+          "translation": "Lola hat getanzt, während wir gegessen haben.",
+          "answer": false,
+          "correction": "Lola hat erzählt, während wir gegessen haben."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nagtabok ang iring sa atubangan sa ___.",
+          "translation": "Die Katze überquert die Straße vor dem Haus.",
+          "options": [
+            "balay",
+            "dagat",
+            "langit"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Nagdagan gihapon ang mga bata sa hardin.",
+          "direction": "ceb_de",
+          "options": [
+            "Die Kinder rennen immer noch im Garten.",
+            "Die Kinder spielen manchmal im Garten.",
+            "Die Kinder sind im Garten gerannt.",
+            "Die Kinder werden im Garten rennen."
+          ],
+          "answer": 0
+        }
+      ],
+      "surprise": {
+        "ceb": "Nagsayaw gihapon ang akong kasingkasing para nimo.",
+        "de": "Mein Herz tanzt immer noch für dich.",
+        "when": "Zum Hochzeitstag – oder wenn sie fragt, ob du sie noch liebst."
+      }
+    },
+    {
+      "id": "u08_l03",
+      "title": "Objektfokus gi-",
+      "vocab": [
+        {
+          "ceb": "nato",
+          "de": "uns; von uns (du und ich)",
+          "note": "Objektform von kita: Giluto nato = Wir (du und ich) haben es gekocht"
+        },
+        {
+          "ceb": "namo",
+          "de": "uns; von uns (ohne dich)",
+          "note": "Objektform von kami"
+        },
+        {
+          "ceb": "ninyo",
+          "de": "euch; von euch",
+          "note": "Objektform von kamo"
+        },
+        {
+          "ceb": "nila",
+          "de": "ihnen; von ihnen",
+          "note": "Objektform von sila"
+        },
+        {
+          "ceb": "putol",
+          "de": "schneiden; abschneiden; durchtrennen",
+          "note": "Giputol nako ang kahoy = Ich habe das Holz geschnitten"
+        },
+        {
+          "ceb": "hiwa",
+          "de": "schneiden (in Scheiben); in Stücke schneiden",
+          "note": "Hiwaa ang sibuyas = Schneide die Zwiebel"
+        },
+        {
+          "ceb": "sugba",
+          "de": "grillen",
+          "note": "Magsugba ta ug isda = Lass uns Fisch grillen. Sinugba = Gegrilltes"
+        },
+        {
+          "ceb": "prito",
+          "de": "braten; frittieren",
+          "note": "Giprito nako ang itlog = Ich habe das Ei gebraten. Pinirito = gebraten"
+        },
+        {
+          "ceb": "lung-ag",
+          "de": "Reis kochen",
+          "note": "Maglung-ag ko = Ich koche Reis. Linung-ag = gekochter Reis (auch kan-on)"
+        },
+        {
+          "ceb": "sagol",
+          "de": "mischen; vermischen",
+          "note": "Isagol ang asukar = Rühr den Zucker rein"
+        }
+      ],
+      "grammar": {
+        "title": "gi-: Wer hat was gemacht?",
+        "text": "Mit gi- stellst du die Sache in den Mittelpunkt: „Giluto nako ang isda“ = Ich habe den Fisch gekocht, wörtlich: Gekocht von mir der Fisch. Der Täter steht als nako/nimo/niya direkt hinter dem Verb, die Sache bekommt ang. In der Mehrzahl heißt es nato (wir, du und ich), namo (wir ohne dich), ninyo (ihr) und nila (sie): „Gisugba namo ang manok“ = Wir haben das Hähnchen gegrillt. Bei Namen steht ni: „Giprito ni Mama ang itlog“ = Mama hat das Ei gebraten. Faustregel: ug = irgendein (Nagluto ko ug isda), gi- plus ang = genau dieser (Giluto nako ang isda)."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Giluto nako ang isda.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich habe den Fisch gekocht.",
+            "Mama hat den Fisch gekocht.",
+            "Ich werde den Fisch kochen.",
+            "Ich habe den Fisch gegrillt."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Wir (ohne dich) haben das Hähnchen gegrillt.",
+          "tokens": [
+            "Gisugba",
+            "namo",
+            "ang",
+            "manok",
+            "nato",
+            "Nagsugba"
+          ],
+          "answer": [
+            "Gisugba",
+            "namo",
+            "ang",
+            "manok"
+          ]
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "nato",
+              "de": "uns (du und ich)"
+            },
+            {
+              "ceb": "namo",
+              "de": "uns (ohne dich)"
+            },
+            {
+              "ceb": "ninyo",
+              "de": "euch"
+            },
+            {
+              "ceb": "nila",
+              "de": "ihnen"
+            },
+            {
+              "ceb": "nako",
+              "de": "mich"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Giprito ___ Mama ang itlog.",
+          "translation": "Mama hat das Ei gebraten.",
+          "options": [
+            "ni",
+            "si",
+            "kang"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Gihiwa nako ang sibuyas.",
+          "translation": "Ich habe die Zwiebel geschnitten.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich habe Reis gekocht.",
+          "answer": "Naglung-ag ko",
+          "accepted": [
+            "Nilung-ag ko",
+            "Milung-ag ko",
+            "Naglung-ag ako"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Habt ihr das Holz geschnitten?",
+          "direction": "de_ceb",
+          "options": [
+            "Giputol ninyo ang kahoy?",
+            "Giputol nila ang kahoy?",
+            "Giputol namo ang kahoy?",
+            "Gihiwa ninyo ang kahoy?"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Du und ich haben das Spanferkel gegessen.",
+          "tokens": [
+            "Gikaon",
+            "nato",
+            "ang",
+            "lechon",
+            "namo",
+            "Nagkaon"
+          ],
+          "answer": [
+            "Gikaon",
+            "nato",
+            "ang",
+            "lechon"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gisagol ___ ang asukar sa kape.",
+          "translation": "Ich habe den Zucker in den Kaffee gemischt.",
+          "options": [
+            "nako",
+            "ko",
+            "ako"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Giputol nila ang kahoy sa talyer.",
+          "translation": "Ihr habt das Holz in der Werkstatt geschnitten.",
+          "answer": false,
+          "correction": "Sie haben das Holz in der Werkstatt geschnitten."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Gisugba ni Papa ang isda gahapon.",
+          "direction": "ceb_de",
+          "options": [
+            "Papa hat gestern den Fisch gegrillt.",
+            "Papa hat gestern den Fisch gebraten.",
+            "Papa grillt morgen den Fisch.",
+            "Papa hat gestern Fisch gekauft."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich habe das Ei gebraten.",
+          "answer": "Giprito nako ang itlog"
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Gihiwa ni Mama ang mangga.",
+          "direction": "ceb_de",
+          "tokens": [
+            "Mama",
+            "hat",
+            "die",
+            "Mango",
+            "geschnitten",
+            "gebraten",
+            "ich"
+          ],
+          "answer": [
+            "Mama",
+            "hat",
+            "die",
+            "Mango",
+            "geschnitten"
+          ]
+        },
+        {
+          "type": "grammar_note",
+          "title": "ko oder nako?",
+          "text": "Ko ist der Täter, wenn das Verb mo-/mag-/ni-/nag- trägt: Nagluto ko ug isda. Nako ist der Täter, wenn das Verb gi- trägt: Giluto nako ang isda. Genauso: ka – nimo, siya – niya, ta – nato, mi – namo, mo – ninyo, sila – nila. Merksatz: Mit gi- rückt der Täter in die zweite Reihe und bekommt die n-Form."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Wir (du und ich) haben das Fleisch gegrillt.",
+          "direction": "de_ceb",
+          "options": [
+            "Gisugba nato ang karne.",
+            "Gisugba namo ang karne.",
+            "Giprito nato ang karne.",
+            "Gisugba nila ang karne."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ nako ang kahoy para sa lamesa.",
+          "translation": "Ich habe das Holz für den Tisch geschnitten.",
+          "options": [
+            "Giputol",
+            "Gisugba",
+            "Gisagol"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Naglung-ag si Lola para sa panihapon.",
+          "translation": "Lola hat Reis fürs Abendessen gekocht.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Gihiwa niya ang kamatis ug sibuyas.",
+          "direction": "ceb_de",
+          "options": [
+            "Er hat die Tomaten und Zwiebeln geschnitten.",
+            "Er hat Tomaten und Zwiebeln gekauft.",
+            "Er hat die Tomaten und Zwiebeln gebraten.",
+            "Ich habe die Tomaten und Zwiebeln geschnitten."
+          ],
+          "answer": 0
+        }
+      ],
+      "surprise": {
+        "ceb": "Giluto nako kini para nimo, kay gihigugma tika.",
+        "de": "Ich habe das für dich gekocht, weil ich dich liebe.",
+        "when": "Wenn du ihr einen Teller hinstellst – auch wenn es nur Spiegelei ist."
+      }
+    },
+    {
+      "id": "u08_l04",
+      "title": "Objektfokus i- und gina-",
+      "vocab": [
+        {
+          "ceb": "hulam",
+          "de": "leihen; ausleihen",
+          "note": "Pwede ko manghulam sa imong selpon? = Darf ich dein Handy leihen? Ihulam = verleihen"
+        },
+        {
+          "ceb": "bilin",
+          "de": "zurücklassen; übrig bleiben; bleiben",
+          "note": "Ibilin sa balay = Lass es zu Hause. Magpabilin ko dinhi = Ich bleibe hier"
+        },
+        {
+          "ceb": "tago",
+          "de": "verstecken; aufbewahren",
+          "note": "Itago ang regalo = Versteck das Geschenk. Nagtago ang bata = Das Kind versteckt sich"
+        },
+        {
+          "ceb": "andam",
+          "de": "vorbereiten; bereit",
+          "note": "Andam na ko = Ich bin bereit. Mag-andam ko ug pagkaon = Ich bereite Essen vor"
+        },
+        {
+          "ceb": "hipos",
+          "de": "aufräumen",
+          "note": "Hiposa ang mga dulaan = Räum die Spielsachen auf"
+        },
+        {
+          "ceb": "tapok",
+          "de": "sammeln; versammeln; Treffen",
+          "note": "Magtapok ang pamilya sa Pasko = Die Familie versammelt sich an Weihnachten"
+        },
+        {
+          "ceb": "ihap",
+          "de": "zählen",
+          "note": "Ihapa ang mga itlog = Zähl die Eier. Makaihap na siya hangtod napulo = Sie kann schon bis zehn zählen"
+        },
+        {
+          "ceb": "sukod",
+          "de": "messen; Maß",
+          "note": "Sukda ang kahoy = Miss das Holz"
+        },
+        {
+          "ceb": "pintal",
+          "de": "streichen; anmalen (Farbe)",
+          "note": "Gipintalan nako ang lamesa = Ich habe den Tisch gestrichen"
+        },
+        {
+          "ceb": "ayos",
+          "de": "reparieren; in Ordnung bringen; in Ordnung",
+          "note": "Giayos nako ang lingkoranan = Ich habe den Stuhl repariert. Ayos ra = Alles in Ordnung"
+        }
+      ],
+      "grammar": {
+        "title": "i- (später) und gina- (gerade)",
+        "text": "Im Objektfokus zeigt i- die Zukunft: „Ihatag nako ang libro“ = Ich werde das Buch geben, „Ibutang sa lamesa“ = Stell es auf den Tisch. Gina- heißt „wird gerade …“: „Ginaluto ni Mama ang isda“ = Mama kocht gerade den Fisch, „Ginaayos nako ang lingkoranan“ = Ich repariere gerade den Stuhl. Der Täter steht wieder als nako/nimo/niya oder ni + Name hinter dem Verb. So hast du das volle Bild: gi- (fertig), gina- (gerade), i- (später). Bei Befehlen nimmst du i- ohne Täter: „Itago ang kwarta“ = Versteck das Geld, „Ibilin sa balay“ = Lass es zu Hause."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Ihatag nako ang libro kang Inday.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich werde Inday das Buch geben.",
+            "Ich habe Inday das Buch gegeben.",
+            "Inday gibt mir das Buch.",
+            "Ich leihe mir Indays Buch."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Stell das Glas auf den Tisch.",
+          "tokens": [
+            "Ibutang",
+            "ang",
+            "baso",
+            "sa",
+            "lamesa",
+            "Itago",
+            "Gibutang"
+          ],
+          "answer": [
+            "Ibutang",
+            "ang",
+            "baso",
+            "sa",
+            "lamesa"
+          ]
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "hulam",
+              "de": "leihen"
+            },
+            {
+              "ceb": "tago",
+              "de": "verstecken"
+            },
+            {
+              "ceb": "hipos",
+              "de": "aufräumen"
+            },
+            {
+              "ceb": "ihap",
+              "de": "zählen"
+            },
+            {
+              "ceb": "sukod",
+              "de": "messen"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ni Mama ang isda karon.",
+          "translation": "Mama kocht gerade den Fisch.",
+          "options": [
+            "Ginaluto",
+            "Giluto",
+            "Iluto"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Ginaayos nako ang lingkoranan.",
+          "translation": "Ich repariere gerade den Stuhl.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Räum die Spielsachen auf.",
+          "answer": "Hiposa ang mga dulaan",
+          "accepted": [
+            "Hiposa ang dulaan"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Ich werde den Brief morgen schicken.",
+          "direction": "de_ceb",
+          "options": [
+            "Ipadala nako ang sulat ugma.",
+            "Gipadala nako ang sulat gahapon.",
+            "Ihatag nako ang sulat ugma.",
+            "Ginapadala nako ang sulat karon."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Lass das Handy zu Hause.",
+          "tokens": [
+            "Ibilin",
+            "ang",
+            "selpon",
+            "sa",
+            "balay",
+            "Itago",
+            "Gibilin"
+          ],
+          "answer": [
+            "Ibilin",
+            "ang",
+            "selpon",
+            "sa",
+            "balay"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ nako ang kwarta sa aparador.",
+          "translation": "Ich werde das Geld im Schrank verstecken.",
+          "options": [
+            "Itago",
+            "Gitago",
+            "Ginatago"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Gipintalan nako ang lamesa sa talyer.",
+          "translation": "Ich habe den Tisch in der Werkstatt gestrichen.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Ginaihap ni Inday ang mga itlog.",
+          "direction": "ceb_de",
+          "options": [
+            "Inday zählt gerade die Eier.",
+            "Inday hat die Eier gezählt.",
+            "Inday wird die Eier zählen.",
+            "Inday isst gerade die Eier."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich werde das Essen vorbereiten.",
+          "answer": "Iandam nako ang pagkaon",
+          "accepted": [
+            "Mag-andam ko ug pagkaon"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Darf ich dein Handy leihen?",
+          "direction": "de_ceb",
+          "options": [
+            "Pwede ko manghulam sa imong selpon?",
+            "Pwede ko mohatag sa imong selpon?",
+            "Pwede ko motago sa imong selpon?",
+            "Pwede ko mosukod sa imong selpon?"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Die Familie versammelt sich am Sonntag.",
+          "tokens": [
+            "Magtapok",
+            "ang",
+            "pamilya",
+            "sa",
+            "Dominggo",
+            "Nagtapok",
+            "Lunes"
+          ],
+          "answer": [
+            "Magtapok",
+            "ang",
+            "pamilya",
+            "sa",
+            "Dominggo"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ang kahoy, dayon putla.",
+          "translation": "Miss das Holz, dann schneide es.",
+          "options": [
+            "Sukda",
+            "Ihapa",
+            "Hiposa"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "gi- / gina- / i- auf einen Blick",
+          "text": "Dreimal derselbe Satz, dreimal eine andere Zeit: Giluto nako ang isda = Ich habe den Fisch gekocht (fertig). Ginaluto nako ang isda = Ich koche gerade den Fisch. Iluto nako ang isda = Ich werde den Fisch kochen. Der Täter bleibt immer nako, die Sache bleibt immer ang isda."
+        },
+        {
+          "type": "true_false",
+          "statement": "Ginahipos ni Inday ang kwarto.",
+          "translation": "Inday hat das Zimmer aufgeräumt.",
+          "answer": false,
+          "correction": "Inday räumt gerade das Zimmer auf."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Giayos ni Tim ang bisikleta.",
+          "direction": "ceb_de",
+          "options": [
+            "Tim hat das Fahrrad repariert.",
+            "Tim repariert gerade das Fahrrad.",
+            "Tim wird das Fahrrad reparieren.",
+            "Tim hat das Fahrrad gestrichen."
+          ],
+          "answer": 0
+        }
+      ],
+      "surprise": {
+        "ceb": "Ihatag nako kanimo ang tanan.",
+        "de": "Ich werde dir alles geben.",
+        "when": "Wenn sie einen schweren Tag hatte und du ihr zeigen willst, dass du da bist."
+      }
+    },
+    {
+      "id": "u08_l05",
+      "title": "Können, versuchen, Verbote",
+      "vocab": [
+        {
+          "ceb": "kaya",
+          "de": "schaffen; können (Kraft haben)",
+          "note": "Kaya nako = Das schaffe ich. Kaya ra = Das geht schon"
+        },
+        {
+          "ceb": "sulay",
+          "de": "versuchen; probieren",
+          "note": "Sulayi = Probier es. Mosulay ko = Ich versuche es"
+        },
+        {
+          "ceb": "hunong",
+          "de": "anhalten; aufhören; stoppen",
+          "note": "Hunong! = Halt! Mohunong ang bus dinhi = Der Bus hält hier"
+        },
+        {
+          "ceb": "padayon",
+          "de": "weitermachen; fortfahren",
+          "note": "Padayon lang = Mach einfach weiter"
+        },
+        {
+          "ceb": "ambi",
+          "de": "gib her",
+          "note": "Ambi ang selpon = Gib mir das Handy (nur als Aufforderung)"
+        },
+        {
+          "ceb": "ayaw",
+          "de": "nicht! (Verbot); lass das",
+          "note": "Ayaw ug hilak = Wein nicht. Ayaw lang = Lass es lieber"
+        },
+        {
+          "ceb": "pasagdi",
+          "de": "lass es; lass (mich/ihn) in Ruhe",
+          "note": "Pasagdi lang = Lass es einfach / egal. Pasagdi ko = Lass mich in Ruhe. Wurzel: pasagad"
+        },
+        {
+          "ceb": "kuyog",
+          "de": "mitkommen; begleiten; zusammen gehen",
+          "note": "Kuyog ko nimo = Ich komme mit dir. Kuyogi ko = Begleite mich"
+        },
+        {
+          "ceb": "bawal",
+          "de": "verboten",
+          "note": "Bawal manigarilyo = Rauchen verboten"
+        },
+        {
+          "ceb": "amping",
+          "de": "vorsichtig sein; aufpassen (auf sich)",
+          "note": "Pag-amping! = Pass auf dich auf! Amping sa dalan = Fahr vorsichtig"
+        }
+      ],
+      "grammar": {
+        "title": "Kaya nako, Sulayi, Ayaw ug …",
+        "text": "Kaya nako = Das schaffe ich, Kaya ra = Das geht schon, Dili nako kaya = Das schaffe ich nicht. Kurze Befehle bildest du mit -a oder -i an der Wurzel, am besten lernst du sie als feste Chunks: Kuhaa = Nimm es, Ablihi = Mach auf, Sulayi = Probier es, Hiposa = Räum auf, Hulata ko = Warte auf mich. Ein Verbot beginnt mit ayaw ug: „Ayaw ug hilak“ = Wein nicht, „Ayaw ug dagan“ = Renn nicht; bawal heißt verboten: „Bawal modagan dinhi“ = Hier darf man nicht rennen. Pag-amping heißt „Pass auf dich auf“, Padayon = Mach weiter, Hunong = Halt. Pasagdi ko = Lass mich in Ruhe, Ambi = Gib her, Mokuyog ko nimo = Ich komme mit dir."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Kaya nako.",
+          "direction": "ceb_de",
+          "options": [
+            "Das schaffe ich.",
+            "Das will ich.",
+            "Das weiß ich.",
+            "Das schaffe ich nicht."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Wein nicht, Inday.",
+          "tokens": [
+            "Ayaw",
+            "ug",
+            "hilak",
+            "Inday",
+            "Pasagdi",
+            "katawa"
+          ],
+          "answer": [
+            "Ayaw",
+            "ug",
+            "hilak",
+            "Inday"
+          ]
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "kaya",
+              "de": "schaffen"
+            },
+            {
+              "ceb": "sulay",
+              "de": "versuchen; probieren"
+            },
+            {
+              "ceb": "hunong",
+              "de": "anhalten; stoppen"
+            },
+            {
+              "ceb": "padayon",
+              "de": "weitermachen"
+            },
+            {
+              "ceb": "bawal",
+              "de": "verboten"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ug dagan sa hagdan!",
+          "translation": "Renn nicht auf der Treppe!",
+          "options": [
+            "Ayaw",
+            "Bawal",
+            "Padayon"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Bawal moinom ug bir sa eskwelahan.",
+          "translation": "In der Schule ist Biertrinken verboten.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Probier es.",
+          "answer": "Sulayi",
+          "accepted": [
+            "Sulayi kini",
+            "Sulayi ni"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Pass auf dich auf!",
+          "direction": "de_ceb",
+          "options": [
+            "Pag-amping!",
+            "Padayon!",
+            "Hunong!",
+            "Pasagdi!"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich komme mit dir zum Markt.",
+          "tokens": [
+            "Mokuyog",
+            "ko",
+            "nimo",
+            "sa",
+            "merkado",
+            "Ambi",
+            "Bawal"
+          ],
+          "answer": [
+            "Mokuyog",
+            "ko",
+            "nimo",
+            "sa",
+            "merkado"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ang selpon, Inday.",
+          "translation": "Gib das Handy her, Inday.",
+          "options": [
+            "Ambi",
+            "Kuyog",
+            "Hunong"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Dili nako kaya.",
+          "translation": "Das schaffe ich nicht.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Pasagdi ko.",
+          "direction": "ceb_de",
+          "options": [
+            "Lass mich in Ruhe.",
+            "Komm mit mir.",
+            "Warte auf mich.",
+            "Hilf mir."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Mach weiter.",
+          "answer": "Padayon",
+          "accepted": [
+            "Padayon lang"
+          ]
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Halt, das ist gefährlich!",
+          "tokens": [
+            "Hunong",
+            "kuyaw",
+            "kana",
+            "Padayon",
+            "nindot"
+          ],
+          "answer": [
+            "Hunong",
+            "kuyaw",
+            "kana"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Begleite mich zur Apotheke.",
+          "direction": "de_ceb",
+          "options": [
+            "Kuyogi ko sa botika.",
+            "Hulata ko sa botika.",
+            "Tabangi ko sa botika.",
+            "Pasagdi ko sa botika."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "-a und -i: kurze Befehle",
+          "text": "Mit -a oder -i an der Wurzel sagst du jemandem, was er mit einer Sache tun soll: Kuhaa ang baso (Nimm das Glas), Ablihi ang pultahan (Mach die Tür auf), Hiposa ang kwarto (Räum das Zimmer auf), Hulata ko (Warte auf mich), Tabangi ko (Hilf mir). Ob -a oder -i, ist Gewohnheitssache, deshalb lernst du sie als fertige Chunks. Höflich wird es mit palihug: Ablihi palihug ang bintana."
+        },
+        {
+          "type": "true_false",
+          "statement": "Bawal molangoy dinhi.",
+          "translation": "Hier darf man schwimmen.",
+          "answer": false,
+          "correction": "Schwimmen ist hier verboten."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Kaya ___ moluto ug adobo?",
+          "translation": "Schaffst du es, Adobo zu kochen?",
+          "options": [
+            "nimo",
+            "ka",
+            "ikaw"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Ayaw ug sayaw sa lamesa!",
+          "direction": "ceb_de",
+          "options": [
+            "Tanz nicht auf dem Tisch!",
+            "Tanz auf dem Tisch!",
+            "Spring nicht vom Tisch!",
+            "Setz dich nicht auf den Tisch!"
+          ],
+          "answer": 0
+        }
+      ],
+      "surprise": {
+        "ceb": "Kaya nato ni, basta kauban ta.",
+        "de": "Das schaffen wir, Hauptsache wir sind zusammen.",
+        "when": "Wenn etwas Großes ansteht – Umzug, Visum, Elternabend."
+      }
+    },
+    {
+      "id": "u08_l06",
+      "title": "Zeitangaben & Erzählen",
+      "vocab": [
+        {
+          "ceb": "adlaw-adlaw",
+          "de": "täglich; jeden Tag",
+          "note": "Verdopplung von adlaw"
+        },
+        {
+          "ceb": "tibuok",
+          "de": "ganz; das ganze",
+          "note": "tibuok adlaw = den ganzen Tag; tibuok kinabuhi = das ganze Leben"
+        },
+        {
+          "ceb": "tunga",
+          "de": "Hälfte; Mitte; halb",
+          "note": "sa tunga sa gabii = mitten in der Nacht; tunga sa oras = halbe Stunde"
+        },
+        {
+          "ceb": "ganina",
+          "de": "vorhin; heute (früher am Tag)",
+          "note": "ganinang buntag = heute Morgen"
+        },
+        {
+          "ceb": "taudtaod",
+          "de": "eine Weile; nach einer Weile",
+          "note": "Taudtaod, niabot si Mama = Nach einer Weile kam Mama an"
+        },
+        {
+          "ceb": "hangtod",
+          "de": "bis",
+          "note": "hangtod karon = bis jetzt; hangtod sa hangtod = für immer"
+        },
+        {
+          "ceb": "sukad",
+          "de": "seit",
+          "note": "sukad kaniadto = seit damals; sukad sa miaging tuig = seit letztem Jahr"
+        },
+        {
+          "ceb": "kalit",
+          "de": "plötzlich",
+          "note": "Kalit nag-ulan = Plötzlich hat es geregnet"
+        },
+        {
+          "ceb": "basta",
+          "de": "solange; Hauptsache; egal wie",
+          "note": "Basta kauban ta = Hauptsache, wir sind zusammen"
+        },
+        {
+          "ceb": "kuan",
+          "de": "Dings; äh (Füllwort)",
+          "note": "Das wichtigste Füllwort: Kuan … unsa na gani? = Dings … wie heißt das nochmal?"
+        }
+      ],
+      "grammar": {
+        "title": "Eine kleine Geschichte erzählen",
+        "text": "Beim Erzählen mischst du die Formen: „Ganinang buntag nagluto ko ug pamahaw“ (nag-, vorhin), „Kalit nag-ulan“ (plötzlich, auch nag-), „Taudtaod niabot si Mama“ (ni-, dann kam Mama an), „Ihatag nako ang pan kang Inday unya“ (i-, später). Zeitwörter geben den Rahmen: ganina = vorhin, adlaw-adlaw = jeden Tag, tibuok adlaw = den ganzen Tag, tunga sa oras = eine halbe Stunde. Hangtod = bis und sukad = seit: „hangtod karon“ = bis jetzt, „sukad sa miaging tuig“ = seit letztem Jahr. Basta heißt Hauptsache: „Basta kauban ta“ = Hauptsache, wir sind zusammen. Wenn dir ein Wort fehlt, sag einfach kuan (Dings, äh) und rede weiter, das machen alle so."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Ganinang buntag nagluto ko ug pamahaw.",
+          "direction": "ceb_de",
+          "options": [
+            "Heute Morgen habe ich Frühstück gekocht.",
+            "Jeden Morgen koche ich Frühstück.",
+            "Morgen früh koche ich Frühstück.",
+            "Den ganzen Morgen habe ich Frühstück gekocht."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Nach einer Weile kam Mama an.",
+          "tokens": [
+            "Taudtaod",
+            "niabot",
+            "si",
+            "Mama",
+            "Kalit",
+            "moabot"
+          ],
+          "answer": [
+            "Taudtaod",
+            "niabot",
+            "si",
+            "Mama"
+          ]
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "ganina",
+              "de": "vorhin"
+            },
+            {
+              "ceb": "adlaw-adlaw",
+              "de": "täglich; jeden Tag"
+            },
+            {
+              "ceb": "tibuok",
+              "de": "ganz; das ganze"
+            },
+            {
+              "ceb": "hangtod",
+              "de": "bis"
+            },
+            {
+              "ceb": "sukad",
+              "de": "seit"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ nag-ulan samtang nagbaktas mi.",
+          "translation": "Plötzlich hat es geregnet, während wir gewandert sind.",
+          "options": [
+            "Kalit",
+            "Taudtaod",
+            "Basta"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Nagtudlo ko sa eskwelahan sukad sa miaging tuig.",
+          "translation": "Ich unterrichte seit letztem Jahr an der Schule.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "bis jetzt",
+          "answer": "hangtod karon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Den ganzen Tag hat Inday geschlafen.",
+          "direction": "de_ceb",
+          "options": [
+            "Tibuok adlaw natulog si Inday.",
+            "Tunga sa adlaw natulog si Inday.",
+            "Adlaw-adlaw natulog si Inday.",
+            "Ganina natulog si Inday."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Jeden Tag fahre ich mit dem E-Bike zur Schule.",
+          "tokens": [
+            "Adlaw-adlaw",
+            "mosakay",
+            "ko",
+            "ug",
+            "e-bike",
+            "padulong",
+            "sa",
+            "eskwelahan",
+            "tibuok",
+            "gahapon"
+          ],
+          "answer": [
+            "Adlaw-adlaw",
+            "mosakay",
+            "ko",
+            "ug",
+            "e-bike",
+            "padulong",
+            "sa",
+            "eskwelahan"
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Naghulat ko ug ___ sa oras sa airport.",
+          "translation": "Ich habe eine halbe Stunde am Flughafen gewartet.",
+          "options": [
+            "tunga",
+            "tibuok",
+            "ganina"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Kuan, unsa ang ngalan sa imong amigo?",
+          "translation": "Dings, wie heißt dein Freund?",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Basta kauban ta, malipay ko.",
+          "direction": "ceb_de",
+          "options": [
+            "Hauptsache wir sind zusammen, dann bin ich glücklich.",
+            "Wenn wir zusammen sind, bin ich traurig.",
+            "Weil wir zusammen sind, bin ich müde.",
+            "Obwohl wir zusammen sind, bin ich einsam."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "vorhin",
+          "answer": "ganina",
+          "accepted": [
+            "kaganina"
+          ]
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Seit gestern bin ich krank.",
+          "tokens": [
+            "Nagsakit",
+            "ko",
+            "sukad",
+            "gahapon",
+            "hangtod",
+            "ugma"
+          ],
+          "answer": [
+            "Nagsakit",
+            "ko",
+            "sukad",
+            "gahapon"
+          ]
+        },
+        {
+          "type": "grammar_note",
+          "title": "Erzähl-Chunks",
+          "text": "So klingt eine kleine Geschichte: Ganina … (vorhin), taudtaod … (nach einer Weile), kalit … (plötzlich), hangtod karon (bis jetzt). Dazwischen darfst du kuan sagen, wenn dir ein Wort fehlt: Nagluto ko ug kuan … ug adobo. Und am Ende: Basta lami! (Hauptsache lecker!)"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Ich warte hier, bis Mama kommt.",
+          "direction": "de_ceb",
+          "options": [
+            "Maghulat ko dinhi hangtod moabot si Mama.",
+            "Maghulat ko dinhi sukad moabot si Mama.",
+            "Maghulat ko dinhi samtang moabot si Mama.",
+            "Maghulat ko dinhi basta moabot si Mama."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Adlaw-adlaw nagluto si Mama ug adobo.",
+          "translation": "Mama hat gestern Adobo gekocht.",
+          "answer": false,
+          "correction": "Mama kocht jeden Tag Adobo."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Taudtaod, ___ si Papa gikan sa trabaho.",
+          "translation": "Nach einer Weile kam Papa von der Arbeit nach Hause.",
+          "options": [
+            "niuli",
+            "mouli",
+            "nag-uli"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Nagtrabaho ko sa talyer tibuok hapon, unya kalit nag-ulan.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich habe den ganzen Nachmittag in der Werkstatt gearbeitet, dann hat es plötzlich geregnet.",
+            "Ich arbeite jeden Nachmittag in der Werkstatt, wenn es regnet.",
+            "Ich habe eine halbe Stunde in der Werkstatt gearbeitet, dann kam Mama.",
+            "Ich werde den ganzen Nachmittag in der Werkstatt arbeiten, bis es regnet."
+          ],
+          "answer": 0
+        }
+      ],
+      "surprise": {
+        "ceb": "Hangtod sa hangtod, ikaw ra gyud.",
+        "de": "Für immer – nur du.",
+        "when": "Einfach so, beim Abschied am Morgen."
+      }
+    }
+  ]
+}
