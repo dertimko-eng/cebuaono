@@ -1,0 +1,958 @@
+{
+  "unit": 10,
+  "title": "Unterwegs – Jeepney, Markt & Philippinen",
+  "level": "A2",
+  "lessons": [
+    {
+      "id": "u10_l01",
+      "title": "Verkehrsmittel",
+      "vocab": [
+        {"ceb": "dyip", "de": "Jeepney", "note": "das typische philippinische Sammeltaxi"},
+        {"ceb": "traysikol", "de": "Tricycle (Motorrad-Taxi)"},
+        {"ceb": "bus", "de": "Bus"},
+        {"ceb": "taksi", "de": "Taxi"},
+        {"ceb": "eroplano", "de": "Flugzeug"},
+        {"ceb": "barko", "de": "Schiff"},
+        {"ceb": "motor", "de": "Motorrad"},
+        {"ceb": "awto", "de": "Auto"},
+        {"ceb": "sakyanan", "de": "Fahrzeug", "note": "von sakay = fahren mit"},
+        {"ceb": "pliti", "de": "Fahrpreis", "note": "Pila ang pliti? = Was kostet die Fahrt?"}
+      ],
+      "grammar": {
+        "title": "Mosakay ko ug dyip",
+        "text": "Mit dem Verkehrsmittel fährst du so: Mosakay ko ug dyip = Ich fahre mit dem Jeepney, Mosakay mi ug bus = Wir nehmen den Bus. Mo- ist Zukunft oder Gewohnheit (Unit 4), ug steht vor dem Fahrzeug, padulong sa zeigt das Ziel: Mosakay ko ug taksi padulong sa airport. Nach dem Fahrpreis fragst du mit Pila ang pliti (Was kostet die Fahrt), die Antwort ist nur eine Zahl: Baynte pesos. Hast du selbst ein Fahrzeug, geht das mit naa: Naa koy e-bike sa Sauerland, Naa koy motor sa Cebu. Sakyanan heißt allgemein Fahrzeug und kommt von sakay – alles, womit man fährt."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Mosakay ko ug dyip padulong sa merkado.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich fahre mit dem Jeepney zum Markt.",
+            "Ich gehe zu Fuß zum Markt.",
+            "Ich fahre mit dem Taxi zum Flughafen.",
+            "Ich warte am Markt auf den Jeepney."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Flugzeug",
+          "direction": "de_ceb",
+          "options": ["eroplano", "barko", "bus", "awto"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "dyip", "de": "Jeepney"},
+            {"ceb": "traysikol", "de": "Tricycle"},
+            {"ceb": "bus", "de": "Bus"},
+            {"ceb": "taksi", "de": "Taxi"},
+            {"ceb": "barko", "de": "Schiff"}
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Pila ang ___ padulong sa Cebu?",
+          "translation": "Was kostet die Fahrt nach Cebu?",
+          "options": ["pliti", "sakyanan", "sukli"],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Baynte pesos ang pliti.",
+          "translation": "Die Fahrt kostet zwanzig Peso.",
+          "answer": true
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich fahre mit dem Jeepney.",
+          "tokens": ["Mosakay", "ko", "ug", "dyip", "bus", "taksi"],
+          "answer": ["Mosakay", "ko", "ug", "dyip"]
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Was kostet die Fahrt?",
+          "answer": "Pila ang pliti",
+          "accepted": ["Tagpila ang pliti"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Wala miy awto sa Cebu, mosakay lang mi ug traysikol.",
+          "direction": "ceb_de",
+          "options": [
+            "Wir haben in Cebu kein Auto, wir fahren einfach mit dem Tricycle.",
+            "Wir haben in Cebu ein Auto, aber wir fahren lieber Bus.",
+            "Wir kaufen in Cebu ein Auto und ein Motorrad.",
+            "Wir haben in Cebu kein Motorrad, wir gehen zu Fuß."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mosakay mi ug ___ padulong sa Cebu.",
+          "translation": "Wir fliegen mit dem Flugzeug nach Cebu.",
+          "options": ["eroplano", "dyip", "bisikleta"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Der Bus ist heute sehr langsam.",
+          "tokens": ["Hinay", "kaayo", "ang", "bus", "karon", "dyip", "ugma", "kusog"],
+          "answer": ["Hinay", "kaayo", "ang", "bus", "karon"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Mahal ang taksi, barato ang dyip.",
+          "translation": "Das Taxi ist billig, der Jeepney ist teuer.",
+          "answer": false,
+          "correction": "Das Taxi ist teuer, der Jeepney ist billig."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Fahrzeug",
+          "direction": "de_ceb",
+          "options": ["sakyanan", "motor", "awto", "pliti"],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich fahre mit dem Bus zur Schule.",
+          "answer": "Mosakay ko ug bus padulong sa eskwelahan",
+          "accepted": ["Mosakay ko ug bus sa eskwelahan"]
+        },
+        {
+          "type": "grammar_note",
+          "title": "koy = ko ug",
+          "text": "Naa koy motor = Ich habe ein Motorrad. Koy ist ko + ug zusammengezogen (Unit 7), genauso miy = mi + ug: Wala miy awto = Wir haben kein Auto. Nach naa oder wala kommt also koy/miy, nach einem Verb bleibt ug getrennt: Mosakay ko ug motor."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Naa koy e-bike sa Sauerland, pero sa Cebu mosakay ko ug dyip.",
+          "direction": "ceb_de",
+          "options": [
+            "Im Sauerland habe ich ein E-Bike, aber in Cebu fahre ich mit dem Jeepney.",
+            "Im Sauerland fahre ich Bus, aber in Cebu habe ich ein Motorrad.",
+            "Im Sauerland habe ich ein Auto, aber in Cebu fahre ich Fahrrad.",
+            "Im Sauerland gehe ich zu Fuß, aber in Cebu fahre ich Taxi."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Das Schiff fährt nach Bohol.",
+          "tokens": ["Padulong", "sa", "Bohol", "ang", "barko", "eroplano", "gikan"],
+          "answer": ["Padulong", "sa", "Bohol", "ang", "barko"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mahal ang ___ gikan sa airport.",
+          "translation": "Das Taxi vom Flughafen ist teuer.",
+          "options": ["taksi", "dyip", "barko"],
+          "answer": 0
+        }
+      ],
+      "surprise": {
+        "ceb": "Bisan asa ta moadto, ikaw ang akong paboritong kauban sa biyahe.",
+        "de": "Egal wohin wir fahren, du bist meine Lieblingsbegleiterin auf der Reise.",
+        "when": "Beim Losfahren – im Auto, im Zug oder im Jeepney."
+      }
+    },
+    {
+      "id": "u10_l02",
+      "title": "Richtungen",
+      "vocab": [
+        {"ceb": "tuo", "de": "rechts", "note": "sa tuo = nach rechts. Links: wala"},
+        {"ceb": "diretso", "de": "geradeaus; direkt", "note": "Diretso lang = Immer geradeaus"},
+        {"ceb": "liko", "de": "abbiegen", "note": "Liko sa tuo = Bieg rechts ab"},
+        {"ceb": "duol", "de": "nah; in der Nähe", "note": "Duol ra = Ist nicht weit. Duol sa merkado = in der Nähe des Markts"},
+        {"ceb": "layo", "de": "weit; fern", "note": "Layo ra ba? = Ist es weit? Layo kaayo = sehr weit"},
+        {"ceb": "kanto", "de": "Ecke; Straßenecke", "note": "sa kanto = an der Ecke"},
+        {"ceb": "dalan", "de": "Straße; Weg", "note": "Amping sa dalan = Pass auf dem Weg auf"},
+        {"ceb": "unahan", "de": "weiter vorne; voraus", "note": "sa unahan = da vorne; von una = erste"},
+        {"ceb": "paspas", "de": "schnell (Tempo)", "note": "Paspas kaayo modagan ang bus = Der Bus fährt sehr schnell"},
+        {"ceb": "Lugar lang", "de": "Anhalten bitte! (im Jeepney)", "note": "wörtlich: nur (bis zu diesem) Ort – so steigt man aus dem Jeepney aus"}
+      ],
+      "grammar": {
+        "title": "Liko sa tuo, diretso lang, Lugar lang",
+        "text": "Richtungen sind kurz und direkt: Liko sa tuo = Bieg rechts ab, Liko sa wala = Bieg links ab (wala heißt links und nicht – der Zusammenhang macht es klar). Diretso lang = Immer geradeaus, sa kanto = an der Ecke, sa unahan = da vorne. Ob es weit ist, fragst du mit Layo ba, die Antwort ist Duol ra = Ist nah oder Layo kaayo = Sehr weit. Im Jeepney gibt es keine Haltestellen – du rufst Lugar lang (wörtlich: nur bis hier), dann hält der Fahrer. Paspas beschreibt das Tempo: Paspas kaayo modagan ang dyip = Der Jeepney fährt sehr schnell."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Liko sa tuo sa kanto.",
+          "direction": "ceb_de",
+          "options": [
+            "Bieg an der Ecke rechts ab.",
+            "Bieg an der Ecke links ab.",
+            "Geh an der Ecke geradeaus.",
+            "Halte an der Ecke an."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "geradeaus",
+          "direction": "de_ceb",
+          "options": ["diretso", "liko", "tuo", "layo"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "tuo", "de": "rechts"},
+            {"ceb": "wala", "de": "links"},
+            {"ceb": "diretso", "de": "geradeaus"},
+            {"ceb": "duol", "de": "nah"},
+            {"ceb": "layo", "de": "weit"}
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Liko sa ___, dayon diretso lang.",
+          "translation": "Bieg links ab, dann einfach geradeaus.",
+          "options": ["wala", "tuo", "layo"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "An der Ecke anhalten, bitte.",
+          "tokens": ["Lugar", "lang", "sa", "kanto", "palihug", "tuo", "layo"],
+          "answer": ["Lugar", "lang", "sa", "kanto", "palihug"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Layo ra ba ang merkado?",
+          "translation": "Ist der Markt weit?",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Bieg rechts ab.",
+          "answer": "Liko sa tuo",
+          "accepted": ["Moliko ka sa tuo"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Duol ra ang eskwelahan, molakaw lang ko.",
+          "direction": "ceb_de",
+          "options": [
+            "Die Schule ist nah, ich gehe einfach zu Fuß.",
+            "Die Schule ist weit, ich nehme den Bus.",
+            "Die Schule ist an der Ecke, ich fahre mit dem Rad.",
+            "Die Schule ist geschlossen, ich gehe nach Hause."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Naa sa ___ ang tindahan.",
+          "translation": "Der Laden ist da vorne.",
+          "options": ["unahan", "kanto", "dalan"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Der Jeepney fährt sehr schnell.",
+          "tokens": ["Paspas", "kaayo", "modagan", "ang", "dyip", "hinay", "bus"],
+          "answer": ["Paspas", "kaayo", "modagan", "ang", "dyip"],
+          "accepted": ["Paspas kaayo ang dyip"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Diretso lang, dayon liko sa wala.",
+          "translation": "Immer geradeaus, dann rechts abbiegen.",
+          "answer": false,
+          "correction": "Immer geradeaus, dann links abbiegen."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Straßenecke",
+          "direction": "de_ceb",
+          "options": ["kanto", "dalan", "unahan", "tuo"],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Anhalten bitte! (im Jeepney)",
+          "answer": "Lugar lang"
+        },
+        {
+          "type": "grammar_note",
+          "title": "wala = links, wala = nicht",
+          "text": "Wala kennst du aus Unit 1 als „nicht vorhanden“: Wala koy kwarta = Ich habe kein Geld. Bei Richtungen heißt wala einfach links: Liko sa wala = Bieg links ab, sa wala ang merkado = Der Markt ist links. Rechts ist tuo – nach sa erkennst du sofort, welches wala gemeint ist."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Amping sa dalan, Inday!",
+          "direction": "ceb_de",
+          "options": [
+            "Pass auf dem Weg auf, Inday!",
+            "Geh schnell nach Hause, Inday!",
+            "Bleib auf der Straße stehen, Inday!",
+            "Lauf nicht so weit, Inday!"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ kaayo ang airport gikan sa balay.",
+          "translation": "Der Flughafen ist sehr weit vom Haus.",
+          "options": ["Layo", "Duol", "Paspas"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ist der Markt nah oder weit?",
+          "tokens": ["Duol", "ba", "o", "layo", "ang", "merkado", "dalan", "kanto"],
+          "answer": ["Duol", "ba", "o", "layo", "ang", "merkado"]
+        }
+      ],
+      "surprise": {
+        "ceb": "Dili ko mawala, kay ikaw ang akong dalan.",
+        "de": "Ich verirre mich nicht, denn du bist mein Weg.",
+        "when": "Wenn ihr euch unterwegs verfahren habt und sie das Handy mit der Karte hält."
+      }
+    },
+    {
+      "id": "u10_l03",
+      "title": "Reise & Flughafen",
+      "vocab": [
+        {"ceb": "naog", "de": "aussteigen; hinuntergehen", "note": "Manaog ko dinhi = Ich steige hier aus"},
+        {"ceb": "biyahe", "de": "Reise; reisen; Fahrt", "note": "Maayong biyahe! = Gute Reise!"},
+        {"ceb": "bakasyon", "de": "Urlaub; Ferien", "note": "Magbakasyon mi sa Cebu = Wir machen Urlaub in Cebu"},
+        {"ceb": "maleta", "de": "Koffer"},
+        {"ceb": "pasaporte", "de": "Reisepass"},
+        {"ceb": "tiket", "de": "Ticket; Fahrkarte; Flugticket"},
+        {"ceb": "lupad", "de": "fliegen", "note": "Molupad mi alas otso = Wir fliegen um 8"},
+        {"ceb": "larga", "de": "abfahren; losfahren; abreisen", "note": "Molarga na ta = Wir fahren jetzt los"},
+        {"ceb": "sinina", "de": "Kleidung; Kleid; Oberteil", "note": "mga sinina = Kleider/Klamotten"},
+        {"ceb": "sapatos", "de": "Schuhe"}
+      ],
+      "grammar": {
+        "title": "Molarga mi ugma",
+        "text": "Reise-Chunks mit mo-: Molarga mi ugma = Wir fahren morgen los, Molupad mi alas otso = Wir fliegen um acht, Moabot mi sa Cebu sa gabii = Wir kommen abends in Cebu an. Beim Aussteigen sagst du Manaog ko dinhi = Ich steige hier aus – naog bekommt man- statt mo-, ähnlich wie mangaon aus kaon. Urlaub machen heißt magbakasyon: Magbakasyon mi sa Cebu sa Disyembre. Wer abfährt, bekommt Maayong biyahe = Gute Reise, und wer ankommt, wird abgeholt: Sugaton mi ni Mama sa airport = Mama holt uns am Flughafen ab. In den Koffer (maleta) kommen sinina und sapatos, in die Tasche pasaporte und tiket."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Molarga mi ugma padulong sa Cebu.",
+          "direction": "ceb_de",
+          "options": [
+            "Wir reisen morgen nach Cebu ab.",
+            "Wir kommen morgen in Cebu an.",
+            "Wir sind gestern aus Cebu zurückgekommen.",
+            "Wir machen morgen in Cebu Urlaub."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Koffer",
+          "direction": "de_ceb",
+          "options": ["maleta", "pasaporte", "tiket", "sinina"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "maleta", "de": "Koffer"},
+            {"ceb": "pasaporte", "de": "Reisepass"},
+            {"ceb": "tiket", "de": "Ticket"},
+            {"ceb": "sinina", "de": "Kleidung"},
+            {"ceb": "sapatos", "de": "Schuhe"}
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Molupad mi ___ otso sa buntag.",
+          "translation": "Wir fliegen um acht Uhr morgens.",
+          "options": ["alas", "oras", "adlaw"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Gute Reise!",
+          "tokens": ["Maayong", "biyahe", "bakasyon", "buntag"],
+          "answer": ["Maayong", "biyahe"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Manaog ko dinhi. Lugar lang!",
+          "translation": "Ich steige hier aus. Anhalten bitte!",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Wir fahren morgen los.",
+          "answer": "Molarga mi ugma",
+          "accepted": ["Molarga kami ugma"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Asa ang imong pasaporte? Naa sa bag.",
+          "direction": "ceb_de",
+          "options": [
+            "Wo ist dein Reisepass? In der Tasche.",
+            "Wo ist dein Ticket? Im Koffer.",
+            "Wo ist dein Koffer? Im Auto.",
+            "Wo sind deine Schuhe? Unter dem Bett."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Daghan kaayo ang ___ sa maleta ni Inday.",
+          "translation": "In Indays Koffer sind sehr viele Kleider.",
+          "options": ["sinina", "sapatos", "tiket"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Wir machen im Dezember Urlaub in Cebu.",
+          "tokens": ["Magbakasyon", "mi", "sa", "Cebu", "sa", "Disyembre", "Molarga", "ugma"],
+          "answer": ["Magbakasyon", "mi", "sa", "Cebu", "sa", "Disyembre"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Mahal ang tiket sa eroplano karong Disyembre.",
+          "translation": "Das Flugticket ist diesen Dezember billig.",
+          "answer": false,
+          "correction": "Das Flugticket ist diesen Dezember teuer."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "aussteigen",
+          "direction": "de_ceb",
+          "options": ["naog", "sakay", "larga", "lupad"],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich steige hier aus.",
+          "answer": "Manaog ko dinhi",
+          "accepted": ["Monaog ko dinhi"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Naa na ang tanan: maleta, pasaporte, tiket. Molarga na ta!",
+          "direction": "ceb_de",
+          "options": [
+            "Alles ist da: Koffer, Reisepass, Ticket. Los geht's!",
+            "Alles fehlt: Koffer, Reisepass, Ticket. Wir bleiben hier!",
+            "Alles ist neu: Koffer, Kleider, Schuhe. Wir fliegen morgen!",
+            "Alles ist im Auto: Koffer, Reisepass, Ticket. Wartet noch!"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "Manaog, nanaog – man- statt mo-",
+          "text": "Einige Verben nehmen man- statt mo-: Manaog ko dinhi = Ich steige hier aus, Nanaog na siya = Er ist schon ausgestiegen. Das kennst du von mangaon (essen) und mangayo (bitten). Monaog ist auch richtig, aber manaog hört man im Jeepney öfter."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sugaton mi ni Mama sa ___.",
+          "translation": "Mama holt uns am Flughafen ab.",
+          "options": ["airport", "merkado", "eskwelahan"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Wie viele Stunden dauert die Reise nach Manila?",
+          "tokens": ["Pila", "ka", "oras", "ang", "biyahe", "padulong", "sa", "Manila", "maleta", "gikan"],
+          "answer": ["Pila", "ka", "oras", "ang", "biyahe", "padulong", "sa", "Manila"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Dad-a ang imong sapatos ug sinina sa maleta.",
+          "translation": "Pack deine Schuhe und Kleider in den Koffer.",
+          "answer": true
+        }
+      ],
+      "surprise": {
+        "ceb": "Sa matag biyahe, ikaw ang akong pinakanindot nga bakasyon.",
+        "de": "Auf jeder Reise bist du mein schönster Urlaub.",
+        "when": "Am Flughafen beim Warten auf den Flug."
+      }
+    },
+    {
+      "id": "u10_l04",
+      "title": "Auf dem Markt",
+      "vocab": [
+        {"ceb": "baligya", "de": "verkaufen; Ware", "note": "Nagbaligya siya ug isda = Sie verkauft Fisch"},
+        {"ceb": "tindera", "de": "Verkäuferin", "note": "Verkäufer: tindero"},
+        {"ceb": "kilo", "de": "Kilo", "note": "Pila ang usa ka kilo? = Was kostet ein Kilo?"},
+        {"ceb": "lab-as", "de": "frisch", "note": "lab-as nga isda = frischer Fisch"},
+        {"ceb": "hinog", "de": "reif", "note": "hinog nga mangga = reife Mango"},
+        {"ceb": "hilaw", "de": "unreif; roh", "note": "hilaw nga mangga = unreife (grüne) Mango – mit Salz ein Snack"},
+        {"ceb": "plastik", "de": "Plastiktüte; Plastik", "note": "Pwede ko mangayo ug plastik? = Kann ich eine Tüte haben?"},
+        {"ceb": "timbang", "de": "wiegen; Gewicht", "note": "Timbanga ang mangga = Wieg die Mangos"},
+        {"ceb": "kamote", "de": "Süßkartoffel", "note": "beliebter Snack: gebratene Kamote"},
+        {"ceb": "lubi", "de": "Kokosnuss", "note": "junge Kokosnuss zum Trinken: butong"}
+      ],
+      "grammar": {
+        "title": "Tagpila ang kilo? Pwede hangyo?",
+        "text": "Auf dem Markt fragst du nach dem Kilopreis: Tagpila ang kilo (Was kostet das Kilo) oder Tagpila ang usa ka kilo sa mangga. Handeln ist normal und freundlich: Pwede hangyo (Kann man handeln), dann nennt die tindera meist einen neuen Preis. Mit ba fragst du nach der Qualität: Lab-as ba ni (Ist das frisch), Hinog na ba ang mangga (Ist die Mango schon reif) – ni ist die Kurzform von kini. Hilaw heißt unreif oder roh – hilaw nga mangga mit Salz ist ein beliebter Snack. Die Tüte heißt plastik: Pwede ko mangayo ug plastik."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Tagpila ang usa ka kilo sa mangga?",
+          "direction": "ceb_de",
+          "options": [
+            "Was kostet ein Kilo Mangos?",
+            "Wie viele Mangos sind ein Kilo?",
+            "Sind die Mangos schon reif?",
+            "Verkaufen Sie Mangos kiloweise?"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "frisch",
+          "direction": "de_ceb",
+          "options": ["lab-as", "hinog", "hilaw", "lami"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "tindera", "de": "Verkäuferin"},
+            {"ceb": "kilo", "de": "Kilo"},
+            {"ceb": "kamote", "de": "Süßkartoffel"},
+            {"ceb": "lubi", "de": "Kokosnuss"},
+            {"ceb": "plastik", "de": "Plastiktüte"}
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ba ni nga isda?",
+          "translation": "Ist dieser Fisch frisch?",
+          "options": ["Lab-as", "Hinog", "Hilaw"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Kann man beim Preis handeln?",
+          "tokens": ["Pwede", "hangyo", "sa", "presyo", "mahal", "kilo"],
+          "answer": ["Pwede", "hangyo", "sa", "presyo"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Hinog na ang mangga.",
+          "translation": "Die Mango ist schon reif.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Was kostet das Kilo?",
+          "answer": "Tagpila ang kilo",
+          "accepted": ["Pila ang kilo"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Hilaw pa ang saging, ayaw sa palita.",
+          "direction": "ceb_de",
+          "options": [
+            "Die Bananen sind noch unreif, kauf sie noch nicht.",
+            "Die Bananen sind schon reif, kauf sie jetzt.",
+            "Die Bananen sind frisch, kauf zwei Kilo.",
+            "Die Bananen sind teuer, kauf lieber Mangos."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Nagbaligya ang ___ ug lab-as nga isda.",
+          "translation": "Die Verkäuferin verkauft frischen Fisch.",
+          "options": ["tindera", "maestro", "nars"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Wieg bitte die Süßkartoffeln.",
+          "tokens": ["Timbanga", "palihug", "ang", "kamote", "lubi", "kilo"],
+          "answer": ["Timbanga", "palihug", "ang", "kamote"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Pwede ko mangayo ug plastik?",
+          "translation": "Kann ich eine Kokosnuss haben?",
+          "answer": false,
+          "correction": "Kann ich eine Plastiktüte haben?"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "reif",
+          "direction": "de_ceb",
+          "options": ["hinog", "hilaw", "hinay", "hugaw"],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ist das frisch?",
+          "answer": "Lab-as ba ni",
+          "accepted": ["Lab-as ba kini"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Barato ang lubi sa merkado, dyes pesos ang usa.",
+          "direction": "ceb_de",
+          "options": [
+            "Die Kokosnuss ist auf dem Markt billig, zehn Peso das Stück.",
+            "Die Kokosnuss ist auf dem Markt teuer, zwanzig Peso das Stück.",
+            "Die Süßkartoffel ist auf dem Markt billig, zehn Peso das Kilo.",
+            "Die Kokosnuss im Laden kostet zehn Peso mehr."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "ni = kini, na = kana",
+          "text": "Auf dem Markt wird alles kurz: Lab-as ba ni = Ist das (hier) frisch, Tagpila ni = Was kostet das. Ni ist die Kurzform von kini (das hier bei mir). Für kana (das bei dir) sagt man na: Tagpila na = Was kostet das da bei dir – nicht verwechseln mit na = schon."
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Verkaufen Sie Kokosnüsse?",
+          "tokens": ["Nagbaligya", "ba", "mo", "ug", "lubi", "kamote", "tindera"],
+          "answer": ["Nagbaligya", "ba", "mo", "ug", "lubi"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mahal kaayo! Pwede ___?",
+          "translation": "Sehr teuer! Kann man handeln?",
+          "options": ["hangyo", "timbang", "bayad"],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Tulo ka kilo nga kamote, palihug.",
+          "translation": "Drei Kilo Süßkartoffeln, bitte.",
+          "answer": true
+        }
+      ],
+      "surprise": {
+        "ceb": "Hinog na ang mangga, pero ikaw gihapon ang pinakatam-is.",
+        "de": "Die Mango ist reif, aber du bist immer noch die Süßeste.",
+        "when": "Beim gemeinsamen Marktbesuch, wenn sie Mangos aussucht."
+      }
+    },
+    {
+      "id": "u10_l05",
+      "title": "Philippinen & Orte",
+      "vocab": [
+        {"ceb": "Pilipinas", "de": "Philippinen", "note": "sa Pilipinas = auf den Philippinen"},
+        {"ceb": "isla", "de": "Insel", "note": "Daghan kaayo ug isla ang Pilipinas = Die Philippinen haben sehr viele Inseln"},
+        {"ceb": "baybayon", "de": "Strand", "note": "von baybay = Küste"},
+        {"ceb": "bukid", "de": "Berg", "note": "sa bukid = in den Bergen / auf dem Land"},
+        {"ceb": "syudad", "de": "Stadt", "note": "Cebu City: Dakbayan sa Sugbo"},
+        {"ceb": "baryo", "de": "Dorf; Stadtteil", "note": "offiziell: barangay"},
+        {"ceb": "probinsya", "de": "Provinz; Land (ländliche Gegend)", "note": "sa probinsya = auf dem Land / in der Heimatprovinz"},
+        {"ceb": "sapa", "de": "Fluss; Bach"},
+        {"ceb": "lasang", "de": "Wald", "note": "Daghan ug lasang sa Sauerland = Im Sauerland gibt es viel Wald"},
+        {"ceb": "nasod", "de": "Land (Staat)", "note": "Unsa nga nasod? = Welches Land?"}
+      ],
+      "grammar": {
+        "title": "Sa Pilipinas, sa probinsya",
+        "text": "Länder und Orte stehen wie immer nach sa: sa Pilipinas = auf den Philippinen, sa Cebu = in Cebu, sa probinsya = auf dem Land, sa syudad = in der Stadt. Viel von etwas sagst du mit daghan ug: Daghan ug isla ang Pilipinas = Die Philippinen haben viele Inseln, Daghan ug lasang sa Sauerland = Im Sauerland gibt es viel Wald. Die Herkunft kennst du mit taga-: Taga-Cebu ang akong asawa, taga-Alemanya ko. Nasod ist das Land als Staat (Unsa nga nasod), yuta aus Unit 6 ist der Boden. So beschreibst du beide Heimaten: Sa Cebu naay baybayon ug dagat, sa Sauerland naay bukid ug lasang."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Daghan kaayo ug isla ang Pilipinas.",
+          "direction": "ceb_de",
+          "options": [
+            "Die Philippinen haben sehr viele Inseln.",
+            "Die Philippinen haben sehr viele Berge.",
+            "Die Philippinen sind eine sehr große Insel.",
+            "Auf den Philippinen gibt es viele Städte."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Strand",
+          "direction": "de_ceb",
+          "options": ["baybayon", "bukid", "sapa", "lasang"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "isla", "de": "Insel"},
+            {"ceb": "bukid", "de": "Berg"},
+            {"ceb": "syudad", "de": "Stadt"},
+            {"ceb": "sapa", "de": "Fluss"},
+            {"ceb": "lasang", "de": "Wald"}
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Daghan ug ___ sa Sauerland.",
+          "translation": "Im Sauerland gibt es viel Wald.",
+          "options": ["lasang", "baybayon", "isla"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Wir machen Urlaub auf den Philippinen.",
+          "tokens": ["Magbakasyon", "mi", "sa", "Pilipinas", "Sauerland", "syudad"],
+          "answer": ["Magbakasyon", "mi", "sa", "Pilipinas"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Nagpuyo ang pamilya sa akong asawa sa probinsya, dili sa syudad.",
+          "translation": "Die Familie meiner Frau wohnt auf dem Land, nicht in der Stadt.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "auf den Philippinen",
+          "answer": "sa Pilipinas"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Sa Sauerland, daghan ug bukid ug lasang, pero walay baybayon.",
+          "direction": "ceb_de",
+          "options": [
+            "Im Sauerland gibt es viele Berge und Wälder, aber keinen Strand.",
+            "Im Sauerland gibt es viele Flüsse und Seen, aber keine Berge.",
+            "Im Sauerland gibt es wenig Wald, aber viele Strände.",
+            "Im Sauerland gibt es Berge, Wald und einen schönen Strand."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Dako nga ___ ang Cebu.",
+          "translation": "Cebu ist eine große Stadt.",
+          "options": ["syudad", "baryo", "sapa"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Welches Land ist das?",
+          "tokens": ["Unsa", "nga", "nasod", "kini", "isla", "syudad"],
+          "answer": ["Unsa", "nga", "nasod", "kini"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Molangoy ta sa sapa sa bukid.",
+          "translation": "Lass uns im Meer schwimmen.",
+          "answer": false,
+          "correction": "Lass uns im Fluss in den Bergen schwimmen."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Dorf",
+          "direction": "de_ceb",
+          "options": ["baryo", "probinsya", "syudad", "nasod"],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Die Philippinen haben viele Inseln.",
+          "answer": "Daghan ug isla ang Pilipinas",
+          "accepted": ["Daghan ang isla sa Pilipinas"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Nindot kaayo ang baybayon sa Bohol.",
+          "direction": "ceb_de",
+          "options": [
+            "Der Strand auf Bohol ist sehr schön.",
+            "Die Berge auf Bohol sind sehr hoch.",
+            "Das Meer bei Bohol ist sehr warm.",
+            "Die Stadt auf Bohol ist sehr groß."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "Daghan ug … / Daghang …",
+          "text": "Für „es gibt viel(e)“ hast du zwei Wege: Daghan ug isla ang Pilipinas oder Daghang isla sa Pilipinas. Daghang ist daghan + ng (der Linker, Unit 2). Beides ist richtig – mit ang nennst du, wer viel davon hat, mit sa nennst du den Ort."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Gikan ko sa Alemanya, usa ka ___ sa Europa.",
+          "translation": "Ich komme aus Deutschland, einem Land in Europa.",
+          "options": ["nasod", "isla", "baryo"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Mein Haus ist nah am Wald.",
+          "tokens": ["Duol", "sa", "lasang", "ang", "akong", "balay", "sapa", "layo"],
+          "answer": ["Duol", "sa", "lasang", "ang", "akong", "balay"]
+        }
+      ],
+      "surprise": {
+        "ceb": "Bisan layo ang Cebu sa Sauerland, ikaw ang akong balay.",
+        "de": "Auch wenn Cebu weit weg vom Sauerland ist – du bist mein Zuhause.",
+        "when": "Wenn sie Heimweh nach Cebu hat."
+      }
+    },
+    {
+      "id": "u10_l06",
+      "title": "Zu Besuch bei der Familie",
+      "vocab": [
+        {"ceb": "regalo", "de": "Geschenk", "note": "Naa koy regalo para nimo = Ich habe ein Geschenk für dich"},
+        {"ceb": "pasalubong", "de": "Mitbringsel (von der Reise)", "note": "Pflicht bei jedem Besuch: etwas mitbringen"},
+        {"ceb": "pista", "de": "Fest; Fiesta (Dorffest)", "note": "jedes Dorf hat seine Fiesta mit viel Essen"},
+        {"ceb": "tuba", "de": "Palmwein", "note": "das traditionelle Getränk aus Kokospalmensaft"},
+        {"ceb": "tagay", "de": "anstoßen; Trinkrunde", "note": "Tagay! = Prost! / Deine Runde! Magtagay ta = Lass uns einen trinken"},
+        {"ceb": "lamok", "de": "Mücke", "note": "Daghang lamok = Es gibt viele Mücken"},
+        {"ceb": "salo-salo", "de": "gemeinsames Essen; Feier", "note": "von salo = teilen (Essen)"},
+        {"ceb": "manong", "de": "Anrede für älteren Mann (auch Fremde)", "note": "Manong, lugar lang! = Chef, anhalten bitte! Auch: älterer Bruder"},
+        {"ceb": "manang", "de": "Anrede für ältere Frau (auch Fremde)", "note": "Manang, tagpila ni? = Frau, was kostet das? Auch: ältere Schwester"},
+        {"ceb": "pulong", "de": "Wort; Sprache", "note": "Binisaya nga pulong = ein Cebuano-Wort"}
+      ],
+      "grammar": {
+        "title": "Manong, Manang – Naa koy pasalubong",
+        "text": "Manong und Manang sind die Anrede für ältere Männer und Frauen, auch für Fremde: Manong, lugar lang (an den Fahrer), Manang, tagpila ni (an die Verkäuferin). Bei der Familie zählt das Mitbringsel: Naa koy pasalubong para ninyo = Ich habe Mitbringsel für euch, regalo ist das allgemeine Geschenk. An der Tür hörst du Dayon (Herein) und am Tisch Kaon ta (Lasst uns essen) – beides sind Einladungen, die man annimmt. Beim tuba geht das Glas reihum, jeder Schluck ist ein tagay, und der Ruf Tagay heißt Prost oder Du bist dran. Pulong ist das Wort – daghang pulong nga Binisaya hast du in diesem Urlaub gelernt."
+      },
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "prompt": "Naa koy pasalubong para ninyo gikan sa Alemanya.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich habe Mitbringsel für euch aus Deutschland.",
+            "Ich habe ein Geschenk für Lola aus Cebu.",
+            "Ich habe Palmwein für euch mitgebracht.",
+            "Ich habe euch aus Deutschland angerufen."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Palmwein",
+          "direction": "de_ceb",
+          "options": ["tuba", "tagay", "bir", "tubig"],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {"ceb": "regalo", "de": "Geschenk"},
+            {"ceb": "pasalubong", "de": "Mitbringsel"},
+            {"ceb": "pista", "de": "Fest; Fiesta"},
+            {"ceb": "lamok", "de": "Mücke"},
+            {"ceb": "pulong", "de": "Wort"}
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___, lugar lang!",
+          "translation": "Manong, anhalten bitte! (Anrede an den Fahrer)",
+          "options": ["Manong", "Manang", "Inday"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Lasst uns essen, es gibt schon Lechon!",
+          "tokens": ["Kaon", "ta", "naay", "lechon", "tuba", "pista"],
+          "answer": ["Kaon", "ta", "naay", "lechon"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Daghang lamok sa gabii, Inday.",
+          "translation": "Abends gibt es viele Mücken, Inday.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Prost! / Du bist dran!",
+          "answer": "Tagay"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Manang, tagpila ni nga mangga?",
+          "direction": "ceb_de",
+          "options": [
+            "Manang, was kosten diese Mangos?",
+            "Manang, sind diese Mangos reif?",
+            "Manong, verkaufen Sie Mangos?",
+            "Manang, wie viele Mangos sind das?"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Naay ___ sa baryo karong Mayo.",
+          "translation": "Diesen Mai ist Fiesta im Dorf.",
+          "options": ["pista", "lamok", "regalo"],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Das ist das Geschenk für Lola.",
+          "tokens": ["Mao", "ni", "ang", "regalo", "para", "kang", "Lola", "pasalubong", "ninyo"],
+          "answer": ["Mao", "ni", "ang", "regalo", "para", "kang", "Lola"]
+        },
+        {
+          "type": "true_false",
+          "statement": "Gamay lang nga tuba, mahubog ko.",
+          "translation": "Nur wenig Palmwein, sonst werde ich betrunken.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "gemeinsames Essen; Feier",
+          "direction": "de_ceb",
+          "options": ["salo-salo", "pista", "tagay", "pagkaon"],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich habe Mitbringsel für euch.",
+          "answer": "Naa koy pasalubong para ninyo",
+          "accepted": ["Naay pasalubong para ninyo"]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Nakat-on ko ug daghang pulong nga Binisaya karong bakasyon.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich habe in diesem Urlaub viele Cebuano-Wörter gelernt.",
+            "Ich habe in diesem Urlaub viele Cebuano-Wörter vergessen.",
+            "Ich lerne nächsten Urlaub viele Cebuano-Wörter.",
+            "Ich habe in diesem Urlaub nur ein Cebuano-Wort gelernt."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "Manong, Manang, Inday, Dodong",
+          "text": "Mit Manong und Manang sprichst du jeden älteren Mann oder jede ältere Frau höflich an – den Jeepney-Fahrer, die tindera, den Nachbarn. In der Familie ist Manong der ältere Bruder, Manang die ältere Schwester. Jüngere ruft man Dodong (Junge) und Inday (Mädchen) – so nennst du auch deine Tochter."
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Herein, Manong! Lasst uns essen.",
+          "tokens": ["Dayon", "Manong", "Kaon", "ta", "tagay", "tuba"],
+          "answer": ["Dayon", "Manong", "Kaon", "ta"]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Human sa pista, naay ___ sa balay ni Lola.",
+          "translation": "Nach der Fiesta gibt es ein gemeinsames Essen bei Lola.",
+          "options": ["salo-salo", "lamok", "pulong"],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Tagay, Manong! Lami ang tuba.",
+          "translation": "Prost, Manong! Der Palmwein ist lecker.",
+          "answer": true
+        }
+      ],
+      "surprise": {
+        "ceb": "Salamat sa imong pamilya – karon akong pamilya na pud.",
+        "de": "Danke für deine Familie – jetzt ist sie auch meine Familie.",
+        "when": "Am letzten Abend des Besuchs bei der Familie in Cebu."
+      }
+    }
+  ]
+}
