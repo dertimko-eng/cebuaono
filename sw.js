@@ -1,6 +1,6 @@
 // Service Worker: cacht beim ersten Öffnen alle App-Dateien und Inhalte (offline-fähig).
 // Bei jedem Deploy CACHE_VERSION erhöhen – dann wird alles atomar neu geladen.
-const CACHE_VERSION = "v4";
+const CACHE_VERSION = "v5";
 const CACHE = "cebuano-" + CACHE_VERSION;
 
 const CORE = [
