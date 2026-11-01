@@ -57,10 +57,13 @@ export const store = {
     return this.wordList().filter((w) => isDue(w, today));
   },
 
+  dirty: false, // lokale Änderungen seit dem letzten Upload?
+
   async addEvent(ev) {
     const e = { id: uuid(), t: Date.now(), ...ev };
     this.events.push(e);
     await db.put("events", e);
+    this.dirty = true;
     return e;
   },
 

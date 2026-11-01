@@ -258,3 +258,22 @@ nav.tabs a.active { color: var(--accent); }
 .list a:last-child { border-bottom: 0; }
 .search { position: sticky; top: calc(var(--sat) - 12px); background: var(--bg); padding: 4px 0 10px; z-index: 5; }
 .kbd-space { height: 40vh; }
+
+/* Komfort */
+body.big-text { font-size: 19px; }
+body.big-text .prompt { font-size: 27px; }
+body.big-text .opt, body.big-text .tile { font-size: 21px; }
+.banner {
+  position: fixed; top: calc(var(--sat) + 8px); left: 16px; right: 16px; z-index: 45;
+  background: var(--accent); color: var(--accent-text); border-radius: 14px; padding: 12px 14px;
+  display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 16px rgba(0,0,0,.25); font-size: 15px;
+}
+.banner button { min-height: 36px; padding: 6px 12px; font-size: 14px; background: var(--card); color: var(--text); }
+.xp { line-height: 1.1; }
+.node.inprogress .num { background: var(--warn); color: #fff; }
+.word-detail .big-num { font-size: 26px; }
+.grammar-list details { border-bottom: 1px solid var(--line); padding: 8px 0; }
+.grammar-list summary { cursor: pointer; font-weight: 600; padding: 6px 0; }
+.grammar-list .grammar { margin: 8px 0; }
+.streak-warn { background: var(--warn-soft); border-radius: 12px; padding: 10px 12px; font-size: 14px; }
+.offline { opacity: .7; }

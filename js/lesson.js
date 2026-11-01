@@ -1,5 +1,5 @@
 // Lektions-Player: Übungen der Reihe nach, Fehler kommen ans Ende, Fortschritt wird gespeichert.
-import { h, esc, shuffle, toast, confirmSheet, replace } from "./ui.js";
+import { h, esc, shuffle, toast, confirmSheet, replace, copyText } from "./ui.js";
 import { isAnswerAcceptable, normalizeAnswer } from "./answer.js";
 import { weightFor, isDue } from "./srs.js";
 import { db } from "./db.js";
@@ -14,14 +14,19 @@ const TYPE_LABEL = {
   true_false: "Stimmt die Übersetzung?",
 };
 
-export async function mountLesson(main, lessonId, { content, onExit }) {
+export async function mountLesson(main, lessonId, { content, onExit, navigate }) {
   const lesson = content.lesson(lessonId);
   if (!lesson) { replace(main, h("p", {}, "Lektion nicht gefunden.")); return; }
-  document.body.classList.add("lesson-mode");
-  main.classList.add("nobounce");
 
   // ---- Zustand (ggf. fortsetzen) ----
   let st = await db.kvGet("lesson.inprogress");
+  if (st && st.lessonId !== lessonId && st.pos >= 0) {
+    const other = content.lesson(st.lessonId);
+    const keep = other && !(await confirmSheet(`Du hast „${other.title}“ angefangen. Diese Lektion verwerfen und „${lesson.title}“ starten?`, { okLabel: "Verwerfen und starten", cancelLabel: "Zurück zur angefangenen" }));
+    if (keep) { onExit("#lesson/" + st.lessonId); return; }
+  }
+  document.body.classList.add("lesson-mode");
+  main.classList.add("nobounce");
   if (!st || st.lessonId !== lessonId) {
     st = {
       lessonId, queue: lesson.exercises.map((_, i) => i), pos: -1, xp: 0, correct: 0, total: 0,
@@ -29,14 +34,17 @@ export async function mountLesson(main, lessonId, { content, onExit }) {
     };
   }
   const realCount = lesson.exercises.filter((e) => e.type !== "grammar_note").length;
+  const wasCompleted = store.progress.get(lessonId)?.completed;
   let exStart = Date.now();
+  let keyHandler = null;
 
   const save = () => db.kvSet("lesson.inprogress", st);
 
-  function exit() {
+  function exit(hash) {
     document.body.classList.remove("lesson-mode");
     main.classList.remove("nobounce");
-    onExit();
+    if (keyHandler) document.removeEventListener("keydown", keyHandler);
+    onExit(hash);
   }
 
   async function pause() {
@@ -49,10 +57,12 @@ export async function mountLesson(main, lessonId, { content, onExit }) {
   function header() {
     const done = Math.max(0, st.pos);
     const pct = Math.min(100, Math.round((done / st.queue.length) * 100));
+    const answered = st.queue.slice(0, Math.max(0, st.pos)).filter((i) => lesson.exercises[i].type !== "grammar_note").length;
+    const remaining = st.queue.slice(Math.max(0, st.pos)).filter((i) => lesson.exercises[i].type !== "grammar_note").length;
     return h("div", { class: "lesson-top" },
       h("button", { class: "btn-ghost btn-small", onclick: pause, "aria-label": "Pause" }, "✕"),
-      h("div", { class: "progress" }, h("i", { style: { width: pct + "%" } })),
-      h("div", { class: "xp" }, `${st.xp} XP`),
+      h("div", { class: "progress", title: `${remaining} übrig` }, h("i", { style: { width: pct + "%" } })),
+      h("div", { class: "xp" }, h("div", {}, `${st.xp} XP`), h("div", { class: "small muted", style: { fontWeight: 400 } }, `${answered}/${answered + remaining}`)),
     );
   }
 
@@ -65,15 +75,17 @@ export async function mountLesson(main, lessonId, { content, onExit }) {
         h("div", { class: "muted", style: { textAlign: "right" } }, v.de, v.outlook ? h("span", { class: "badge", style: { marginLeft: "6px" } }, "Ausblick") : null),
       )),
     );
-    replace(main, 
+    const start = () => { st.pos = 0; exStart = Date.now(); save(); renderCurrent(); };
+    replace(main,
       header(),
       h("h1", {}, lesson.title),
-      h("p", { class: "muted" }, `Unit ${lesson.unit} · Lektion ${lesson.posInUnit} · ${realCount} Übungen`),
+      h("p", { class: "muted" }, `Unit ${lesson.unit} · Lektion ${lesson.posInUnit} · ${realCount} Übungen${wasCompleted ? " · schon geschafft, Wiederholung" : ""}`),
       vocab,
       h("div", { class: "grammar" }, h("h3", {}, lesson.grammar.title), h("p", { html: esc(lesson.grammar.text).replace(/\n/g, "<br>") })),
-      h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => { st.pos = 0; exStart = Date.now(); save(); renderCurrent(); } }, "Los geht's"),
+      h("button", { class: "btn-primary btn-block btn-big mt", onclick: start }, "Los geht's"),
     );
     main.scrollTop = 0;
+    if (wasCompleted) main.querySelector("h1").after(h("button", { class: "btn-outline btn-block btn-small", onclick: start }, "Direkt zu den Übungen"));
   }
 
   function renderCurrent() {
@@ -89,7 +101,7 @@ export async function mountLesson(main, lessonId, { content, onExit }) {
     renderers[ex.type](ctx);
   }
 
-  // res: {correct, near, expected, extra?}
+  // res: {correct, near, expected, note?}
   async function finish(ex, idx, res) {
     const dur = Date.now() - exStart;
     st.activeMs += Math.min(dur, 120000);
@@ -112,21 +124,31 @@ export async function mountLesson(main, lessonId, { content, onExit }) {
     else st.queue.push(idx); // ans Ende anhängen
     st.pos++;
     await save();
-    showFeedback(res, () => renderCurrent());
+    showFeedback(res, words, () => renderCurrent());
   }
 
-  function showFeedback(res, next) {
+  function showFeedback(res, words, next) {
     const cls = !res.correct ? "bad" : res.near ? "near" : "ok";
     const title = !res.correct ? "Leider falsch" : res.near ? "Fast – richtig wäre:" : "Richtig!";
-    const fb = h("div", { class: "feedback " + cls },
+    // Bei Fehlern die beteiligten Wörter erklären
+    const explain = !res.correct || res.near
+      ? words.map((w) => content.entry(w)).filter(Boolean).slice(0, 4).map((e) => h("div", { class: "small" }, h("b", {}, e.ceb), " = ", e.de, e.note ? h("span", { class: "muted" }, ` (${e.note})`) : null))
+      : [];
+    const go = () => { fb.remove(); document.removeEventListener("keydown", keyHandler); keyHandler = null; next(); };
+    const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } },
       h("h3", {}, title),
       (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null,
       res.note ? h("div", { class: "note" }, res.note) : null,
-      h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => { fb.remove(); next(); } }, "Weiter"),
+      explain.length ? h("div", { class: "mt" }, explain) : null,
+      h("button", { class: "btn-primary btn-block btn-big mt", onclick: go }, "Weiter"),
     );
     document.body.append(fb);
+    keyHandler = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } };
+    document.addEventListener("keydown", keyHandler);
     document.querySelector(".feedback button")?.focus();
   }
+
+  const dontKnow = (expected, fn) => h("button", { class: "btn-ghost btn-block btn-small", onclick: () => fn({ correct: false, near: false, expected }) }, "Weiß ich nicht – Lösung zeigen");
 
   // ---------- Übungstypen ----------
   function multiple_choice({ ex, body, done }) {
@@ -147,7 +169,6 @@ export async function mountLesson(main, lessonId, { content, onExit }) {
   }
 
   function word_bank({ ex, body, done }) {
-    const dir = ex.direction || "de_ceb";
     const tokens = shuffle(ex.tokens.map((t, i) => ({ t, i })));
     const chosen = []; // indices in tokens
     const answerBox = h("div", { class: "bank answer" });
@@ -158,15 +179,17 @@ export async function mountLesson(main, lessonId, { content, onExit }) {
       const targets = [ex.answer.join(" "), ...(ex.accepted || [])];
       const n = normalizeAnswer(got);
       const ok = targets.some((t) => normalizeAnswer(t) === n);
-      done({ correct: ok, near: false, expected: ex.answer.join(" ") + (dir === "de_ceb" ? "" : "") });
+      done({ correct: ok, near: false, expected: ex.answer.join(" ") });
     } }, "Prüfen");
+    const reset = h("button", { class: "btn-ghost btn-small", onclick: () => { chosen.length = 0; render(); } }, "Zurücksetzen");
     function render() {
       replace(answerBox, ...chosen.map((k, pos) => h("button", { class: "tile", onclick: () => { chosen.splice(pos, 1); render(); } }, tokens[k].t)));
       tiles.forEach((b, k) => b.classList.toggle("used", chosen.includes(k)));
       check.disabled = chosen.length === 0;
+      reset.classList.toggle("hidden", chosen.length === 0);
     }
     bankBox.append(...tiles);
-    body.append(h("div", { class: "hint" }, TYPE_LABEL.word_bank), h("div", { class: "prompt" }, ex.prompt), answerBox, bankBox, check);
+    body.append(h("div", { class: "hint" }, TYPE_LABEL.word_bank), h("div", { class: "prompt" }, ex.prompt), answerBox, bankBox, h("div", { class: "row spread mt" }, reset), check, dontKnow(ex.answer.join(" "), done));
     render();
   }
 
@@ -195,7 +218,9 @@ export async function mountLesson(main, lessonId, { content, onExit }) {
     };
     input.addEventListener("keydown", (e) => { if (e.key === "Enter") submit(); });
     body.append(h("div", { class: "hint" }, TYPE_LABEL.type_answer), h("div", { class: "prompt" }, ex.prompt), input,
-      h("button", { class: "btn-primary btn-block btn-big mt", onclick: submit }, "Prüfen"), h("div", { class: "kbd-space" }));
+      h("button", { class: "btn-primary btn-block btn-big mt", onclick: submit }, "Prüfen"),
+      dontKnow(ex.answer, (r) => { input.blur(); done(r); }),
+      h("div", { class: "kbd-space" }));
     setTimeout(() => input.focus(), 50);
   }
 
@@ -259,17 +284,24 @@ export async function mountLesson(main, lessonId, { content, onExit }) {
     await store.completeLesson({ lesson: lessonId, dur, xp: st.xp, correct: st.correct, total: st.total });
     await db.kvDel("lesson.inprogress");
     const s = lesson.surprise;
-    replace(main, 
-      h("h1", { class: "center" }, "Lektion geschafft!"),
+    const nextLesson = content.lessons[lesson.index + 1] || null;
+    const stats = store.progress.get(lessonId);
+    replace(main,
+      h("h1", { class: "center" }, acc >= 90 ? "Stark!" : acc >= 70 ? "Lektion geschafft!" : "Geschafft – dranbleiben!"),
       h("div", { class: "result-big" }, `${st.xp + 20} XP`),
       h("div", { class: "stat-grid" },
-        h("div", { class: "stat" }, h("b", {}, acc + " %"), h("span", {}, "Trefferquote")),
+        h("div", { class: "stat" }, h("b", {}, acc + " %"), h("span", {}, stats && stats.attempts > 1 ? `Quote (beste ${stats.bestAccuracy} %)` : "Trefferquote")),
         h("div", { class: "stat" }, h("b", {}, Math.max(1, Math.round(dur / 60000)) + " min"), h("span", {}, "Dauer")),
         h("div", { class: "stat" }, h("b", {}, lesson.vocab.length), h("span", {}, "neue Wörter")),
       ),
       h("h2", {}, "Überraschungssatz für deine Frau"),
-      h("div", { class: "surprise" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "de" }, s.de), h("div", { class: "when" }, "Wann: " + s.when)),
-      h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => { exit(); } }, "Fertig"),
+      h("div", { class: "surprise" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "de" }, s.de), h("div", { class: "when" }, "Wann: " + s.when),
+        h("button", { class: "btn-ghost btn-small mt", onclick: () => copyText(s.ceb) }, "Satz kopieren")),
+      nextLesson ? h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => exit("#lesson/" + nextLesson.id) }, `Weiter: ${nextLesson.title}`) : null,
+      h("div", { class: "row mt" },
+        h("button", { class: "grow", onclick: () => exit("#path") }, nextLesson ? "Zum Pfad" : "Fertig"),
+        acc < 100 ? h("button", { class: "grow btn-outline", onclick: () => exit("#lesson/" + lessonId) }, "Nochmal üben") : null,
+      ),
     );
     main.scrollTop = 0;
     document.dispatchEvent(new CustomEvent("lesson-complete", { detail: { lessonId } }));

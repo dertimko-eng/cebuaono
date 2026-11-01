@@ -42,9 +42,12 @@ export const sync = {
         }
         changed = await store.mergeIn(remote);
       }
-      // Nach dem Merge hochladen (jetzt enthält der lokale Stand alles)
-      await dropbox.upload(CONFIG.DROPBOX_PROGRESS_FILE, JSON.stringify(store.exportProgress()));
-      await dropbox.upload(CONFIG.DROPBOX_EVENTS_FILE, JSON.stringify(store.exportEvents()));
+      // Nach dem Merge hochladen (jetzt enthält der lokale Stand alles) – nur wenn nötig
+      if (store.dirty || changed || !pText || !eText) {
+        await dropbox.upload(CONFIG.DROPBOX_PROGRESS_FILE, JSON.stringify(store.exportProgress()));
+        await dropbox.upload(CONFIG.DROPBOX_EVENTS_FILE, JSON.stringify(store.exportEvents()));
+        store.dirty = false;
+      }
       this.lastSync = Date.now();
       this.lastError = null;
       await db.kvSet("sync.last", this.lastSync);

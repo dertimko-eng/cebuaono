@@ -72,13 +72,12 @@ export async function loadContent() {
       const set = new Set();
       for (const t of texts) {
         const { found } = lexicon.analyze(t);
-        for (const e of found.keys()) {
-          // Füllwörter nicht als "trainiert" zählen
-          if (["particle", "prep", "conj"].includes(e.pos) && e.ceb.length <= 3) continue;
-          set.add(e.ceb);
-        }
+        for (const e of found.keys()) set.add(e);
       }
-      return [...set];
+      // Kurze Funktionswörter (ko, ka, ug, sa …) nur zählen, wenn die Übung sonst kein Wort trainiert
+      const isFiller = (e) => ["particle", "prep", "conj", "pron"].includes(e.pos) && e.ceb.length <= 3;
+      const content_ = [...set].filter((e) => !isFiller(e));
+      return (content_.length ? content_ : [...set]).map((e) => e.ceb);
     },
     // Ablenker: gleiche Wortart, möglichst gleiche Unit; nie das Wort selbst
     distractors(entry, n, poolFilter = null) {

@@ -83,6 +83,15 @@ export function isIOS() {
   return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 }
 
+export async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    toast("Kopiert.");
+  } catch (_) {
+    toast("Kopieren nicht möglich – bitte markieren und kopieren.");
+  }
+}
+
 // Ersetzt die Kinder eines Elements; Arrays werden geglättet, null/false übersprungen.
 export function replace(el, ...kids) {
   el.replaceChildren(...kids.flat(Infinity).filter((c) => c != null && c !== false));

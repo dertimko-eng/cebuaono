@@ -1,5 +1,5 @@
 // Einstieg: Router, Startbildschirm, Lernpfad, Wörterliste, Überraschungssätze, Einstellungen.
-import { h, esc, toast, sheet, confirmSheet, fmtTime, isStandalone, isIOS, replace } from "./ui.js";
+import { h, esc, toast, sheet, confirmSheet, fmtTime, isStandalone, isIOS, replace, copyText } from "./ui.js";
 import { loadContent } from "./content.js";
 import { store } from "./store.js";
 import { sync } from "./sync.js";
@@ -20,10 +20,30 @@ let current = null; // aktive Ansicht (für pause etc.)
 const navigate = (hash) => { location.hash = hash; };
 
 // ---------- Start ----------
+let swRegistration = null;
+function showUpdateBanner() {
+  if (document.querySelector(".banner")) return;
+  const b = h("div", { class: "banner" }, h("span", { class: "grow" }, "Neue Version verfügbar."),
+    h("button", { onclick: () => { swRegistration?.waiting?.postMessage("skipWaiting"); setTimeout(() => location.reload(), 300); } }, "Neu laden"),
+    h("button", { class: "btn-ghost", style: { color: "inherit" }, onclick: () => b.remove() }, "✕"));
+  document.body.append(b);
+}
+
 async function boot() {
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./sw.js").catch((e) => console.warn("SW", e));
+    navigator.serviceWorker.register("./sw.js").then((reg) => {
+      swRegistration = reg;
+      if (reg.waiting && navigator.serviceWorker.controller) showUpdateBanner();
+      reg.addEventListener("updatefound", () => {
+        const w = reg.installing;
+        w && w.addEventListener("statechange", () => { if (w.state === "installed" && navigator.serviceWorker.controller) showUpdateBanner(); });
+      });
+    }).catch((e) => console.warn("SW", e));
+    navigator.serviceWorker.addEventListener("controllerchange", () => { if (!window.__reloading) { window.__reloading = true; location.reload(); } });
   }
+  if (localStorage.getItem("bigText") === "1") document.body.classList.add("big-text");
+  window.addEventListener("online", () => render());
+  window.addEventListener("offline", () => render());
   try {
     content = await loadContent();
   } catch (e) {
@@ -72,12 +92,27 @@ async function maybeWeeklyReview() {
   const wk = weekStart(today);
   const shown = await db.kvGet("review.lastShownWeek");
   if (shown === wk) return;
-  const lines = weeklyReviewText(content);
   await db.kvSet("review.lastShownWeek", wk);
-  if (!lines) return;
+  showWeeklyReview(false);
+}
+
+function showWeeklyReview(asPage) {
+  const lines = weeklyReviewText(content) || ["In der letzten Woche gab es noch keine Lernaktivität – diese Woche geht's los!"];
+  if (asPage) {
+    replace(main, h("h1", {}, "Wochenrückblick"), h("div", { class: "card" }, lines.map((l) => h("p", {}, l))), h("p", { class: "small muted" }, "Erscheint automatisch beim ersten Öffnen an einem Montag."));
+    return;
+  }
   const c = h("div", {}, h("h2", { style: { marginTop: 0 } }, "Dein Wochenrückblick"), lines.map((l) => h("p", {}, l)),
     h("button", { class: "btn-primary btn-block mt", onclick: () => s.close() }, "Auf in die neue Woche"));
   const s = sheet(c);
+}
+
+function greeting() {
+  const hr = new Date().getHours();
+  if (hr < 11) return "Maayong buntag!";
+  if (hr < 13) return "Maayong udto!";
+  if (hr < 18) return "Maayong hapon!";
+  return "Maayong gabii!";
 }
 
 // ---------- Router ----------
@@ -88,11 +123,13 @@ async function render() {
   document.body.classList.remove("lesson-mode");
   main.classList.remove("nobounce");
   document.querySelectorAll(".feedback, .overlay").forEach((e) => e.remove());
-  tabs.querySelectorAll("a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + route || (route === "more" && a.getAttribute("href") === "#more") || (["words", "surprises", "settings"].includes(route) && a.getAttribute("href") === "#more")));
+  tabs.querySelectorAll("a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + route || (["more", "words", "surprises", "settings", "grammar", "review"].includes(route) && a.getAttribute("href") === "#more")));
   switch (route) {
     case "home": return renderHome();
     case "path": return renderPath();
-    case "lesson": return mountLesson(main, param, { content, onExit: () => navigate("#path") });
+    case "lesson": return mountLesson(main, param, { content, navigate, onExit: (hash) => { if (hash && hash === location.hash) render(); else navigate(hash || "#path"); } });
+    case "grammar": return renderGrammar();
+    case "review": return showWeeklyReview(true);
     case "trainer": {
       let preset = null;
       if (param.startsWith("preset")) {
@@ -101,6 +138,8 @@ async function render() {
       } else if (param === "review") {
         const due = store.dueWords().map((w) => w.ceb);
         preset = { words: due, mode: store.settings.trainerMode };
+      } else if (param === "quick") {
+        preset = { quick: true, mode: store.settings.trainerMode };
       }
       return mountTrainer(main, { content, preset, onExit: () => navigate("#home") });
     }
@@ -121,8 +160,10 @@ async function renderHome() {
   const nextId = inProgress?.lessonId || content.nextLessonId(completed);
   const next = nextId ? content.lesson(nextId) : null;
   const goalDots = h("div", { class: "goal-dots" }, Array.from({ length: s.dailyGoal }, (_, i) => h("i", { class: i < s.lessonsToday ? "on" : "" })));
-  replace(main, 
-    h("h1", {}, "Maayong adlaw!"),
+  const activeToday = s.lessonsToday > 0 || store.events.some((e) => e.t >= new Date(s.today + "T00:00:00").getTime() && (e.type === "trainer_round" || e.type === "lesson_complete"));
+  replace(main,
+    h("h1", {}, greeting()),
+    s.streak > 0 && !activeToday ? h("div", { class: "streak-warn mb" }, `🔥 ${s.streak} Tage Streak – heute noch nichts gelernt. Eine Lektion oder Trainer-Runde hält ihn am Leben.`) : null,
     h("div", { class: "stat-grid" },
       h("div", { class: "stat" }, h("b", {}, s.streak + " 🔥"), h("span", {}, "Tage Streak")),
       h("div", { class: "stat" }, h("b", {}, `${s.lessonsToday}/${s.dailyGoal}`), h("span", {}, "Tagesziel")),
@@ -138,6 +179,7 @@ async function renderHome() {
     ),
     h("div", { class: "card" },
       h("div", { class: "row spread" }, h("div", {}, h("b", {}, s.dueCount), " Wörter fällig"), h("button", { class: "btn-small " + (s.dueCount ? "btn-primary" : ""), disabled: !s.dueCount, onclick: () => navigate("#trainer/review") }, "Wiederholen")),
+      h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, "Schnelle Runde mit 10 Wörtern"), h("button", { class: "btn-small", disabled: !s.learnedWords, onclick: () => navigate("#trainer/quick") }, "Trainer")),
     ),
     h("div", { class: "card" },
       h("div", { class: "row spread" }, h("span", {}, "Gelernte Wörter"), h("b", {}, `${s.learnedWords} / ${s.totalWords}`)),
@@ -145,6 +187,7 @@ async function renderHome() {
       h("div", { class: "row spread" }, h("span", {}, "Niveau"), h("b", {}, s.level)),
     ),
     h("p", { class: "small muted center", "data-sync-status": "" }, (await sync.canSync()) ? syncStatusText() : "Dropbox nicht verbunden – Daten nur lokal"),
+    navigator.onLine ? null : h("p", { class: "small muted center offline" }, "Offline – alles läuft weiter, Sync folgt später."),
   );
   main.scrollTop = 0;
 }
@@ -166,8 +209,9 @@ async function renderPath() {
       const isNext = l.id === nextId;
       const unlocked = isDone || content.isUnlocked(l.id, completed);
       const p = store.progress.get(l.id);
-      const node = h("a", { class: "node " + (isDone ? "done" : isNext ? "next" : unlocked ? "" : "locked"), href: unlocked ? "#lesson/" + l.id : null, onclick: unlocked ? null : (e) => { e.preventDefault(); toast("Erst die vorherige Lektion abschließen."); } },
-        h("div", { class: "num" }, isDone ? "✓" : unlocked ? String(i + 1) : "🔒"),
+      const started = inProgress?.lessonId === l.id;
+      const node = h("a", { class: "node " + (started ? "inprogress" : isDone ? "done" : isNext ? "next" : unlocked ? "" : "locked"), href: unlocked ? "#lesson/" + l.id : null, onclick: unlocked ? null : (e) => { e.preventDefault(); toast("Erst die vorherige Lektion abschließen."); } },
+        h("div", { class: "num" }, started ? "▶" : isDone ? "✓" : unlocked ? String(i + 1) : "🔒"),
         h("div", { class: "t" }, h("b", {}, l.title), h("span", {}, isDone ? `Beste Quote ${p?.bestAccuracy ?? 0} % · nochmal üben` : inProgress?.lessonId === l.id ? "angefangen – weitermachen" : `${l.vocab.length} Wörter · ${l.exercises.filter((e) => e.type !== "grammar_note").length} Übungen`)),
       );
       path.append(node);
@@ -175,35 +219,86 @@ async function renderPath() {
     els.push(path);
   }
   replace(main, ...els);
-  const nextEl = main.querySelector(".node.next");
+  const nextEl = main.querySelector(".node.inprogress") || main.querySelector(".node.next");
   if (nextEl) nextEl.scrollIntoView({ block: "center" });
+}
+
+// ---------- Wort-Details ----------
+function showWordDetail(e) {
+  const w = store.words.get(e.ceb);
+  const cat = categoryOf(w);
+  const l = content.lesson(e.lesson);
+  const total = (w?.correct || 0) + (w?.wrong || 0);
+  const c = h("div", { class: "word-detail" },
+    h("div", { class: "row spread" }, h("h2", { style: { margin: 0 } }, e.ceb), h("span", { class: "badge " + cat }, cat)),
+    h("p", { style: { fontSize: "19px" } }, e.de),
+    e.note ? h("p", { class: "muted small" }, e.note) : null,
+    e.forms?.length ? h("p", { class: "small muted" }, "Formen: " + e.forms.slice(0, 8).join(", ")) : null,
+    h("div", { class: "stat-grid mt" },
+      h("div", { class: "stat" }, h("b", {}, w?.correct || 0), h("span", {}, "richtig")),
+      h("div", { class: "stat" }, h("b", {}, w?.wrong || 0), h("span", {}, "falsch")),
+      h("div", { class: "stat" }, h("b", {}, total ? Math.round(((w.correct || 0) / total) * 100) + " %" : "–"), h("span", {}, "Quote")),
+    ),
+    h("p", { class: "small muted mt" }, `Stufe ${w?.stage ?? 0} von 5` + (w?.due && w.stage > 0 ? ` · fällig am ${w.due.slice(8, 10)}.${w.due.slice(5, 7)}.` : "") + (l ? ` · eingeführt in Unit ${l.unit}, „${l.title}“` : "")),
+    h("div", { class: "row mt" },
+      h("button", { class: "grow btn-primary", onclick: () => { s.close(); navigate("#trainer/preset?mode=hard&words=" + encodeURIComponent(e.ceb)); } }, "Jetzt üben"),
+      l ? h("button", { class: "grow", onclick: () => { s.close(); navigate("#lesson/" + l.id); } }, "Zur Lektion") : null,
+    ),
+  );
+  const s = sheet(c);
+}
+
+// ---------- Grammatik nachschlagen ----------
+function renderGrammar() {
+  const completed = store.completedSet();
+  const els = [h("h1", {}, "Grammatik"), h("p", { class: "muted" }, "Alle Grammatik-Notizen aus abgeschlossenen Lektionen zum Nachschlagen.")];
+  let any = false;
+  for (const u of content.units) {
+    const ls = u.lessons.filter((l) => completed.has(l.id));
+    if (!ls.length) continue;
+    any = true;
+    els.push(h("div", { class: "card grammar-list" }, h("h3", { style: { marginTop: 0 } }, `Unit ${u.unit}: ${u.title}`),
+      ls.map((l, i) => h("details", {}, h("summary", {}, `${u.lessons.indexOf(l) + 1}. ${l.grammar.title}`),
+        h("div", { class: "grammar" }, h("p", { html: esc(l.grammar.text).replace(/\n/g, "<br>") })),
+        l.exercises.filter((e) => e.type === "grammar_note").map((e) => h("div", { class: "grammar" }, h("h3", {}, e.title), h("p", { html: esc(e.text).replace(/\n/g, "<br>") }))),
+      ))));
+  }
+  if (!any) els.push(h("p", {}, "Noch keine abgeschlossene Lektion."));
+  replace(main, ...els);
+  main.scrollTop = 0;
 }
 
 // ---------- Wörterliste ----------
 function renderWords() {
   const input = h("input", { type: "search", placeholder: "Suchen (Cebuano oder Deutsch)", autocorrect: "off", autocapitalize: "off", spellcheck: "false" });
   let filter = "alle";
+  let showAll = false;
   const list = h("div", { class: "card vocab-list" });
+  const count = h("p", { class: "small muted" });
   const completed = store.completedSet();
   const seg = h("div", { class: "seg mb" }, ["alle", "neu", "lernend", "gefestigt", "gemeistert"].map((f) => h("button", { class: f === filter ? "on" : "", onclick: (e) => { filter = f; seg.querySelectorAll("button").forEach((b) => b.classList.toggle("on", b === e.target)); update(); } }, f)));
+  const allBox = h("input", { type: "checkbox", style: { width: "auto" }, onchange: (e) => { showAll = e.target.checked; update(); } });
   function update() {
     const q = input.value.trim().toLowerCase();
     const rows = content.glossary.entries.filter((e) => {
       const w = store.words.get(e.ceb);
       const learned = completed.has(e.lesson) || (w && w.stage > 0);
-      if (!learned) return false;
+      if (!learned && !showAll) return false;
       const cat = categoryOf(w);
       if (filter !== "alle" && cat !== filter) return false;
-      return !q || e.ceb.toLowerCase().includes(q) || e.de.toLowerCase().includes(q);
+      return !q || e.ceb.toLowerCase().includes(q) || e.de.toLowerCase().includes(q) || (e.note || "").toLowerCase().includes(q);
     });
-    replace(list, rows.length ? rows.map((e) => {
+    count.textContent = `${rows.length} Wörter` + (showAll ? " (inkl. noch nicht gelernte)" : "");
+    replace(list, rows.length ? rows.slice(0, 400).map((e) => {
       const w = store.words.get(e.ceb);
       const cat = categoryOf(w);
-      return h("div", { class: "v" }, h("div", {}, h("b", {}, e.ceb), h("span", { class: "note" }, e.de, e.note ? ` – ${e.note}` : "")), h("div", { style: { textAlign: "right" } }, h("span", { class: "badge " + cat }, cat), w?.due && w.stage > 0 ? h("div", { class: "small muted" }, "fällig " + w.due.slice(8, 10) + "." + w.due.slice(5, 7) + ".") : null));
-    }) : h("p", { class: "muted" }, "Keine Wörter – schließe zuerst eine Lektion ab."));
+      const learned = completed.has(e.lesson) || (w && w.stage > 0);
+      return h("div", { class: "v", style: learned ? null : { opacity: 0.6 }, onclick: () => showWordDetail(e) }, h("div", {}, h("b", {}, e.ceb), h("span", { class: "note" }, e.de, e.note ? ` – ${e.note}` : "")), h("div", { style: { textAlign: "right", flexShrink: 0 } }, learned ? h("span", { class: "badge " + cat }, cat) : h("span", { class: "badge" }, "Unit " + e.lesson.slice(1, 3).replace(/^0/, "")), w?.due && w.stage > 0 ? h("div", { class: "small muted" }, "fällig " + w.due.slice(8, 10) + "." + w.due.slice(5, 7) + ".") : null));
+    }) : h("p", { class: "muted" }, showAll ? "Nichts gefunden." : "Keine Wörter – schließe zuerst eine Lektion ab."));
   }
   input.addEventListener("input", update);
-  replace(main, h("h1", {}, "Wörter"), h("div", { class: "search" }, input), seg, list);
+  replace(main, h("h1", {}, "Wörter"), h("div", { class: "search" }, input), seg,
+    h("label", { class: "row small", style: { fontWeight: 400, margin: "0 0 10px" } }, allBox, " Auch noch nicht gelernte Wörter zeigen"), count, list);
   update();
 }
 
@@ -216,7 +311,8 @@ function renderSurprises() {
   replace(main, 
     h("h1", {}, "Für meine Frau"),
     h("p", { class: "muted" }, "Alle Überraschungssätze aus abgeschlossenen Lektionen."),
-    open.length ? open.map((s) => h("div", { class: "surprise mb" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "de" }, s.de), h("div", { class: "when" }, `Wann: ${s.when} · Unit ${s.unit}`))) : h("p", {}, "Noch keine – die erste Lektion wartet."),
+    open.length ? open.map((s) => h("div", { class: "surprise mb" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "de" }, s.de), h("div", { class: "when" }, `Wann: ${s.when} · Unit ${s.unit}`),
+      h("button", { class: "btn-ghost btn-small", style: { padding: "4px 0", minHeight: "32px" }, onclick: () => copyText(s.ceb) }, "Kopieren"))) : h("p", {}, "Noch keine – die erste Lektion wartet."),
     locked ? h("p", { class: "small muted center" }, `${locked} weitere Sätze warten in den nächsten Lektionen.`) : null,
   );
   main.scrollTop = 0;
@@ -228,7 +324,9 @@ function renderMore() {
     h("h1", {}, "Mehr"),
     h("div", { class: "card list" },
       h("a", { href: "#words" }, "📚 Wörterliste"),
+      h("a", { href: "#grammar" }, "📖 Grammatik nachschlagen"),
       h("a", { href: "#surprises" }, "💛 Für meine Frau"),
+      h("a", { href: "#review" }, "🗓️ Wochenrückblick"),
       h("a", { href: "#settings" }, "⚙️ Einstellungen & Dropbox"),
     ),
   );
@@ -277,9 +375,13 @@ async function renderSettings() {
              : [h("button", { class: "btn-primary btn-block", onclick: () => connectBtn(false) }, "Mit Dropbox verbinden"),
                 h("button", { class: "btn-ghost btn-block btn-small mt", onclick: () => connectBtn(true) }, "Alternativ: per Code verbinden"), manualBox]],
   );
-  replace(main, 
+  const bigBox = h("input", { type: "checkbox", style: { width: "auto" }, checked: document.body.classList.contains("big-text"), onchange: (e) => { document.body.classList.toggle("big-text", e.target.checked); try { localStorage.setItem("bigText", e.target.checked ? "1" : "0"); } catch (_) {} } });
+  let persisted = null;
+  try { persisted = navigator.storage?.persisted ? await navigator.storage.persisted() : null; } catch (_) {}
+  replace(main,
     h("h1", {}, "Einstellungen"),
-    h("div", { class: "card" }, h("h3", { style: { marginTop: 0 } }, "Tagesziel"), goalSeg),
+    h("div", { class: "card" }, h("h3", { style: { marginTop: 0 } }, "Tagesziel"), goalSeg,
+      h("label", { class: "row mt", style: { fontWeight: 400 } }, bigBox, " Große Schrift")),
     dropboxCard,
     h("div", { class: "card" },
       h("h3", { style: { marginTop: 0 } }, "Sicherung als Datei"),
@@ -288,7 +390,11 @@ async function renderSettings() {
     ),
     h("div", { class: "card" },
       h("h3", { style: { marginTop: 0 } }, "Daten"),
-      h("p", { class: "small muted" }, `${store.events.length} Ereignisse · ${store.wordList().length} Wörter mit Lernstand · Version ${CONFIG.APP_VERSION}`),
+      h("p", { class: "small muted" }, `${store.events.length} Ereignisse · ${store.wordList().length} Wörter mit Lernstand · Version ${CONFIG.APP_VERSION}` + (persisted === null ? "" : persisted ? " · Speicher dauerhaft" : " · Speicher nicht als dauerhaft markiert")),
+      h("button", { class: "btn-block mb", onclick: async () => {
+        if (!swRegistration) return toast("Kein Service Worker aktiv (Offline-Cache nur über HTTPS).");
+        try { await swRegistration.update(); toast(swRegistration.waiting ? "Update bereit – oben auf „Neu laden“ tippen." : "Du hast die neueste Version."); } catch (e) { toast("Update-Prüfung fehlgeschlagen: " + e.message); }
+      } }, "Nach Updates suchen"),
       h("button", { class: "btn-block btn-danger", onclick: async () => { if (await confirmSheet("Wirklich ALLE lokalen Lerndaten löschen? (Dropbox bleibt unverändert, bis du erneut synchronisierst.)", { okLabel: "Alles löschen", danger: true })) { await store.resetAll(); toast("Lokale Daten gelöscht."); renderSettings(); } } }, "Lokalen Fortschritt zurücksetzen"),
     ),
     isIOS() && !standalone ? h("div", { class: "card" }, h("h3", { style: { marginTop: 0 } }, "Als App installieren"), h("p", { class: "small" }, "Safari: Teilen-Symbol → „Zum Home-Bildschirm“. Dann läuft die App im Vollbild und offline.")) : null,

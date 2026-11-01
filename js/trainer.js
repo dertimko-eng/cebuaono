@@ -125,10 +125,11 @@ export async function mountTrainer(main, { content, preset = null, onExit }) {
         const ok = sel === entry;
         btns[opts.indexOf(entry)].classList.add("ok");
         if (!ok) btns[opts.indexOf(sel)].classList.add("bad");
-        finish(entry, item, { correct: ok, near: false, expected: `${entry.ceb} = ${entry.de}` });
+        finish(entry, item, { correct: ok, near: false, expected: `${entry.ceb} = ${entry.de}`, note: ok ? null : entry.note || null });
       } }, "Prüfen");
       body.append(h("div", { class: "hint" }, reverse ? "Welches Cebuano-Wort passt?" : "Was bedeutet das?"), h("div", { class: "prompt" }, reverse ? entry.de : entry.ceb), h("div", { class: "options" }, btns), check);
     }
+    const dontKnow = (entry, item) => h("button", { class: "btn-ghost btn-block btn-small", onclick: () => finish(entry, item, { correct: false, near: false, expected: entry.ceb, note: entry.note || null }) }, "Weiß ich nicht – Lösung zeigen");
 
     function renderHard(entry, item, body) {
       const input = h("input", { type: "text", autocomplete: "off", autocorrect: "off", autocapitalize: "off", spellcheck: "false", placeholder: "Auf Cebuano …", enterkeyhint: "done" });
@@ -140,7 +141,7 @@ export async function mountTrainer(main, { content, preset = null, onExit }) {
       };
       input.addEventListener("keydown", (e) => { if (e.key === "Enter") submit(); });
       body.append(h("div", { class: "hint" }, "Tippe das Wort auf Cebuano"), h("div", { class: "prompt" }, entry.de), input,
-        h("button", { class: "btn-primary btn-block btn-big mt", onclick: submit }, "Prüfen"), h("div", { class: "kbd-space" }));
+        h("button", { class: "btn-primary btn-block btn-big mt", onclick: submit }, "Prüfen"), dontKnow(entry, item), h("div", { class: "kbd-space" }));
       setTimeout(() => input.focus(), 50);
     }
 
@@ -161,9 +162,12 @@ export async function mountTrainer(main, { content, preset = null, onExit }) {
     function feedback(res, next) {
       const cls = !res.correct ? "bad" : res.near ? "near" : "ok";
       const title = !res.correct ? "Leider falsch" : res.near ? "Fast – richtig wäre:" : "Richtig!";
-      const fb = h("div", { class: "feedback " + cls }, h("h3", {}, title), (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null, res.note ? h("div", { class: "note" }, res.note) : null,
-        h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => { fb.remove(); next(); } }, "Weiter"));
+      const go = () => { fb.remove(); document.removeEventListener("keydown", onKey); next(); };
+      const onKey = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } };
+      const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } }, h("h3", {}, title), (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null, res.note ? h("div", { class: "note" }, res.note) : null,
+        h("button", { class: "btn-primary btn-block btn-big mt", onclick: go }, "Weiter"));
       document.body.append(fb);
+      document.addEventListener("keydown", onKey);
     }
 
     async function renderSummary() {
@@ -197,6 +201,12 @@ export async function mountTrainer(main, { content, preset = null, onExit }) {
   if (preset?.words) {
     const items = selectWords(content, { size: preset.words.length, includeMastered: true, only: preset.words });
     if (items.length) return startRound({ mode: preset.mode || store.settings.trainerMode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) });
+    toast("Keine passenden Wörter gefunden.");
+  }
+  if (preset?.quick) {
+    const items = selectWords(content, { size: 10 });
+    if (items.length) return startRound({ mode: preset.mode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) });
+    toast("Noch keine Wörter zum Üben – erst eine Lektion abschließen.");
   }
   renderSetup();
 }
