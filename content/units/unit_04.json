@@ -7,320 +7,1723 @@
       "id": "u04_l01",
       "title": "Tageszeiten & Tage",
       "vocab": [
-        {"ceb": "buntag", "de": "Morgen (Tageszeit)", "note": "sa buntag = morgens"},
-        {"ceb": "udto", "de": "Mittag"},
-        {"ceb": "hapon", "de": "Nachmittag"},
-        {"ceb": "gabii", "de": "Abend; Nacht"},
-        {"ceb": "adlaw", "de": "Tag; Sonne", "note": "adlaw-adlaw = täglich (Unit 8)"},
-        {"ceb": "karon", "de": "jetzt; heute", "note": "karong adlawa = heute, karong gabii = heute Abend"},
-        {"ceb": "ugma", "de": "morgen"},
-        {"ceb": "gahapon", "de": "gestern"},
-        {"ceb": "semana", "de": "Woche"},
-        {"ceb": "bulan", "de": "Monat; Mond"}
+        {
+          "ceb": "buntag",
+          "de": "Morgen (Tageszeit)",
+          "note": "sa buntag = morgens"
+        },
+        {
+          "ceb": "udto",
+          "de": "Mittag"
+        },
+        {
+          "ceb": "hapon",
+          "de": "Nachmittag"
+        },
+        {
+          "ceb": "gabii",
+          "de": "Abend; Nacht"
+        },
+        {
+          "ceb": "adlaw",
+          "de": "Tag; Sonne",
+          "note": "adlaw-adlaw = täglich (Unit 8)"
+        },
+        {
+          "ceb": "karon",
+          "de": "jetzt; heute",
+          "note": "karong adlawa = heute, karong gabii = heute Abend"
+        },
+        {
+          "ceb": "ugma",
+          "de": "morgen"
+        },
+        {
+          "ceb": "gahapon",
+          "de": "gestern"
+        },
+        {
+          "ceb": "semana",
+          "de": "Woche"
+        },
+        {
+          "ceb": "bulan",
+          "de": "Monat; Mond"
+        }
       ],
       "grammar": {
         "title": "sa buntag, karong adlawa, ugma",
         "text": "Die Tageszeiten kennst du schon aus den Grüßen – mit sa davor werden sie zur Zeitangabe: sa buntag = morgens, sa udto = mittags, sa hapon = nachmittags, sa gabii = abends (Moinom ko ug kape sa buntag = Morgens trinke ich Kaffee). Karon heißt „jetzt“, mit dem Linker -ng und dem Tag dahinter wird daraus „heute“: karong adlawa = heute, karong gabii = heute Abend. Ugma = morgen und gahapon = gestern stehen meist am Satzanfang: Ugma mokaon ta ug lechon = Morgen essen wir Lechon. Zum Zählen von Tagen, Wochen und Monaten brauchst du wieder ka: usa ka semana = eine Woche, duha ka bulan = zwei Monate."
       },
       "exercises": [
-        {"type": "multiple_choice", "prompt": "sa buntag", "direction": "ceb_de", "options": ["morgens", "abends", "mittags", "gestern"], "answer": 0},
-        {"type": "multiple_choice", "prompt": "ugma", "direction": "ceb_de", "options": ["morgen", "gestern", "heute", "jetzt"], "answer": 0},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "buntag", "de": "Morgen (Tageszeit)"},
-          {"ceb": "udto", "de": "Mittag"},
-          {"ceb": "hapon", "de": "Nachmittag"},
-          {"ceb": "gabii", "de": "Abend; Nacht"},
-          {"ceb": "adlaw", "de": "Tag; Sonne"}
-        ]},
-        {"type": "fill_blank", "prompt": "Moinom ko ug kape sa ___.", "translation": "Morgens trinke ich Kaffee.", "options": ["buntag", "gabii", "semana"], "answer": 0},
-        {"type": "true_false", "statement": "Karong gabii magluto ko ug adobo.", "translation": "Heute Abend koche ich Adobo.", "answer": true},
-        {"type": "word_bank", "prompt": "Morgen essen wir Lechon.", "tokens": ["Ugma", "mokaon", "ta", "ug", "lechon", "gahapon", "karon"], "answer": ["Ugma", "mokaon", "ta", "ug", "lechon"]},
-        {"type": "type_answer", "prompt": "gestern", "answer": "gahapon"},
-        {"type": "multiple_choice", "prompt": "Woche", "direction": "de_ceb", "options": ["semana", "bulan", "adlaw", "tuig"], "answer": 0},
-        {"type": "fill_blank", "prompt": "Init kaayo ___ adlawa.", "translation": "Heute ist es sehr heiß.", "options": ["karong", "ugma", "gahapon"], "answer": 0},
-        {"type": "true_false", "statement": "gahapon", "translation": "morgen", "answer": false, "correction": "gestern"},
-        {"type": "word_bank", "prompt": "Heute Abend trinken wir Bier.", "tokens": ["Karong", "gabii", "moinom", "ta", "ug", "bir", "buntag", "gahapon"], "answer": ["Karong", "gabii", "moinom", "ta", "ug", "bir"]},
-        {"type": "grammar_note", "title": "karon = jetzt oder heute?", "text": "Allein heißt karon „jetzt“: Gutom ko karon = Ich habe jetzt Hunger. Mit Linker und Tageszeit wird es zur Zeitangabe für heute: karong buntag = heute Morgen, karong adlawa = heute (den ganzen Tag), karong gabii = heute Abend. Das -a hinter adlaw ist ein kleines Anhängsel, das bei solchen Zeitangaben dazukommt – einfach als feste Wendung lernen."},
-        {"type": "type_answer", "prompt": "heute", "answer": "karon", "accepted": ["karong adlawa"]},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "karon", "de": "jetzt; heute"},
-          {"ceb": "ugma", "de": "morgen"},
-          {"ceb": "gahapon", "de": "gestern"},
-          {"ceb": "semana", "de": "Woche"},
-          {"ceb": "bulan", "de": "Monat; Mond"}
-        ]},
-        {"type": "multiple_choice", "prompt": "Usa ka bulan sa Cebu.", "direction": "ceb_de", "options": ["Ein Monat in Cebu.", "Eine Woche in Cebu.", "Ein Tag in Cebu.", "Ein Jahr in Cebu."], "answer": 0},
-        {"type": "fill_blank", "prompt": "Sa ___ gutom kaayo ko.", "translation": "Mittags habe ich großen Hunger.", "options": ["udto", "gabii", "bulan"], "answer": 0},
-        {"type": "true_false", "statement": "Duha ka semana sa Sauerland.", "translation": "Zwei Monate im Sauerland.", "answer": false, "correction": "Zwei Wochen im Sauerland."},
-        {"type": "type_answer", "prompt": "Abend", "answer": "gabii"}
+        {
+          "type": "multiple_choice",
+          "prompt": "sa buntag",
+          "direction": "ceb_de",
+          "options": [
+            "morgens",
+            "abends",
+            "mittags",
+            "gestern"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "ugma",
+          "direction": "ceb_de",
+          "options": [
+            "morgen",
+            "gestern",
+            "heute",
+            "jetzt"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "buntag",
+              "de": "Morgen (Tageszeit)"
+            },
+            {
+              "ceb": "udto",
+              "de": "Mittag"
+            },
+            {
+              "ceb": "hapon",
+              "de": "Nachmittag"
+            },
+            {
+              "ceb": "gabii",
+              "de": "Abend; Nacht"
+            },
+            {
+              "ceb": "adlaw",
+              "de": "Tag; Sonne"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Moinom ko ug kape sa ___.",
+          "translation": "Morgens trinke ich Kaffee.",
+          "options": [
+            "buntag",
+            "gabii",
+            "semana"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Karong gabii magluto ko ug adobo.",
+          "translation": "Heute Abend koche ich Adobo.",
+          "answer": true
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Morgen essen wir Lechon.",
+          "tokens": [
+            "Ugma",
+            "mokaon",
+            "ta",
+            "ug",
+            "lechon",
+            "gahapon",
+            "karon"
+          ],
+          "answer": [
+            "Ugma",
+            "mokaon",
+            "ta",
+            "ug",
+            "lechon"
+          ]
+        },
+        {
+          "type": "type_answer",
+          "prompt": "gestern",
+          "answer": "gahapon"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Woche",
+          "direction": "de_ceb",
+          "options": [
+            "semana",
+            "bulan",
+            "adlaw",
+            "tuig"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Init kaayo ___ adlawa.",
+          "translation": "Heute ist es sehr heiß.",
+          "options": [
+            "karong",
+            "ugma",
+            "gahapon"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "gahapon",
+          "translation": "morgen",
+          "answer": false,
+          "correction": "gestern"
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Heute Abend trinken wir Bier.",
+          "tokens": [
+            "Karong",
+            "gabii",
+            "moinom",
+            "ta",
+            "ug",
+            "bir",
+            "buntag",
+            "gahapon"
+          ],
+          "answer": [
+            "Karong",
+            "gabii",
+            "moinom",
+            "ta",
+            "ug",
+            "bir"
+          ]
+        },
+        {
+          "type": "grammar_note",
+          "title": "karon = jetzt oder heute?",
+          "text": "Allein heißt karon „jetzt“: Gutom ko karon = Ich habe jetzt Hunger. Mit Linker und Tageszeit wird es zur Zeitangabe für heute: karong buntag = heute Morgen, karong adlawa = heute (den ganzen Tag), karong gabii = heute Abend. Das -a hinter adlaw ist ein kleines Anhängsel, das bei solchen Zeitangaben dazukommt – einfach als feste Wendung lernen."
+        },
+        {
+          "type": "type_answer",
+          "prompt": "heute",
+          "answer": "karon",
+          "accepted": [
+            "karong adlawa"
+          ]
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "karon",
+              "de": "jetzt; heute"
+            },
+            {
+              "ceb": "ugma",
+              "de": "morgen"
+            },
+            {
+              "ceb": "gahapon",
+              "de": "gestern"
+            },
+            {
+              "ceb": "semana",
+              "de": "Woche"
+            },
+            {
+              "ceb": "bulan",
+              "de": "Monat; Mond"
+            }
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Usa ka bulan sa Cebu.",
+          "direction": "ceb_de",
+          "options": [
+            "Ein Monat in Cebu.",
+            "Eine Woche in Cebu.",
+            "Ein Tag in Cebu.",
+            "Ein Jahr in Cebu."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sa ___ gutom kaayo ko.",
+          "translation": "Mittags habe ich großen Hunger.",
+          "options": [
+            "udto",
+            "gabii",
+            "bulan"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Duha ka semana sa Sauerland.",
+          "translation": "Zwei Monate im Sauerland.",
+          "answer": false,
+          "correction": "Zwei Wochen im Sauerland."
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Abend",
+          "answer": "gabii"
+        }
       ],
-      "surprise": {"ceb": "Karong gabii, ikaw ug ako ra, Langga.", "de": "Heute Abend nur du und ich, Schatz.", "when": "Wenn Inday schon schläft und der Abend euch gehört."}
+      "surprise": {
+        "ceb": "Karong gabii, ikaw ug ako ra, Langga.",
+        "de": "Heute Abend nur du und ich, Schatz.",
+        "when": "Wenn Inday schon schläft und der Abend euch gehört."
+      }
     },
     {
       "id": "u04_l02",
       "title": "Wochentage",
       "vocab": [
-        {"ceb": "Lunes", "de": "Montag"},
-        {"ceb": "Martes", "de": "Dienstag"},
-        {"ceb": "Miyerkules", "de": "Mittwoch"},
-        {"ceb": "Huwebes", "de": "Donnerstag"},
-        {"ceb": "Biyernes", "de": "Freitag"},
-        {"ceb": "Sabado", "de": "Samstag"},
-        {"ceb": "Dominggo", "de": "Sonntag"},
-        {"ceb": "matag", "de": "jeder; jede; jedes", "note": "matag adlaw = jeden Tag"},
-        {"ceb": "kanunay", "de": "immer"},
-        {"ceb": "usahay", "de": "manchmal"}
+        {
+          "ceb": "Lunes",
+          "de": "Montag"
+        },
+        {
+          "ceb": "Martes",
+          "de": "Dienstag"
+        },
+        {
+          "ceb": "Miyerkules",
+          "de": "Mittwoch"
+        },
+        {
+          "ceb": "Huwebes",
+          "de": "Donnerstag"
+        },
+        {
+          "ceb": "Biyernes",
+          "de": "Freitag"
+        },
+        {
+          "ceb": "Sabado",
+          "de": "Samstag"
+        },
+        {
+          "ceb": "Dominggo",
+          "de": "Sonntag"
+        },
+        {
+          "ceb": "matag",
+          "de": "jeder; jede; jedes",
+          "note": "matag adlaw = jeden Tag"
+        },
+        {
+          "ceb": "kanunay",
+          "de": "immer"
+        },
+        {
+          "ceb": "usahay",
+          "de": "manchmal"
+        }
       ],
       "grammar": {
         "title": "sa Lunes, matag adlaw",
         "text": "Die Wochentage kommen aus dem Spanischen und werden großgeschrieben: Lunes, Martes, Miyerkules, Huwebes, Biyernes, Sabado, Dominggo. „Am Montag“ sagt man wieder mit sa: Sa Lunes mopalit ko ug isda = Am Montag kaufe ich Fisch, Sa Dominggo magluto ko ug lechon = Am Sonntag koche ich Lechon. Matag heißt „jeder“ und steht direkt vor dem Nomen: matag adlaw = jeden Tag, matag Sabado = jeden Samstag. Kanunay (immer) und usahay (manchmal) stehen gern am Satzanfang, das ko rückt dann hinter sie: Kanunay ko moinom ug kape sa buntag = Morgens trinke ich immer Kaffee."
       },
       "exercises": [
-        {"type": "multiple_choice", "prompt": "Lunes", "direction": "ceb_de", "options": ["Montag", "Dienstag", "Sonntag", "Samstag"], "answer": 0},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "Lunes", "de": "Montag"},
-          {"ceb": "Martes", "de": "Dienstag"},
-          {"ceb": "Miyerkules", "de": "Mittwoch"},
-          {"ceb": "Huwebes", "de": "Donnerstag"},
-          {"ceb": "Biyernes", "de": "Freitag"}
-        ]},
-        {"type": "fill_blank", "prompt": "Sa ___ mopalit ko ug isda sa merkado.", "translation": "Am Montag kaufe ich Fisch auf dem Markt.", "options": ["Lunes", "Sabado", "Dominggo"], "answer": 0},
-        {"type": "word_bank", "prompt": "Jeden Tag trinke ich Kaffee.", "tokens": ["Matag", "adlaw", "moinom", "ko", "ug", "kape", "usahay", "semana"], "answer": ["Matag", "adlaw", "moinom", "ko", "ug", "kape"]},
-        {"type": "true_false", "statement": "Sa Dominggo magluto ko ug lechon.", "translation": "Am Sonntag koche ich Lechon.", "answer": true},
-        {"type": "type_answer", "prompt": "Freitag", "answer": "Biyernes"},
-        {"type": "multiple_choice", "prompt": "manchmal", "direction": "de_ceb", "options": ["usahay", "kanunay", "matag", "karon"], "answer": 0},
-        {"type": "fill_blank", "prompt": "___ ko moinom ug kape sa buntag.", "translation": "Morgens trinke ich immer Kaffee.", "options": ["Kanunay", "Usahay", "Matag"], "answer": 0},
-        {"type": "word_bank", "prompt": "Manchmal essen wir am Freitag Fisch.", "tokens": ["Usahay", "mokaon", "mi", "ug", "isda", "sa", "Biyernes", "Kanunay", "Lunes"], "answer": ["Usahay", "mokaon", "mi", "ug", "isda", "sa", "Biyernes"]},
-        {"type": "true_false", "statement": "Sabado", "translation": "Sonntag", "answer": false, "correction": "Samstag"},
-        {"type": "type_answer", "prompt": "jeden Tag", "answer": "matag adlaw"},
-        {"type": "multiple_choice", "prompt": "Matag Sabado mopalit mi ug prutas sa merkado.", "direction": "ceb_de", "options": ["Jeden Samstag kaufen wir Obst auf dem Markt.", "Jeden Sonntag kaufen wir Obst auf dem Markt.", "Manchmal kaufen wir Obst auf dem Markt.", "Jeden Samstag kochen wir Obst."], "answer": 0},
-        {"type": "grammar_note", "title": "Woche auf Cebuano", "text": "Die Woche beginnt im Alltag mit Lunes und endet mit Dominggo, dem Familientag. Mit sa sagst du „am“: sa Martes = am Dienstag. Mit matag sagst du „jeden“: matag Biyernes = jeden Freitag. Und „jede Woche“ heißt matag semana."},
-        {"type": "fill_blank", "prompt": "Sa Martes ug sa ___ magluto ko ug adobo.", "translation": "Am Dienstag und am Donnerstag koche ich Adobo.", "options": ["Huwebes", "Lunes", "Sabado"], "answer": 0},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "Sabado", "de": "Samstag"},
-          {"ceb": "Dominggo", "de": "Sonntag"},
-          {"ceb": "matag", "de": "jeder; jede; jedes"},
-          {"ceb": "kanunay", "de": "immer"},
-          {"ceb": "usahay", "de": "manchmal"}
-        ]},
-        {"type": "true_false", "statement": "Kanunay gutom si Inday sa udto.", "translation": "Inday hat mittags immer Hunger.", "answer": true},
-        {"type": "word_bank", "prompt": "Am Mittwoch kochen wir Hähnchen.", "tokens": ["Sa", "Miyerkules", "magluto", "ta", "ug", "manok", "Martes", "usahay"], "answer": ["Sa", "Miyerkules", "magluto", "ta", "ug", "manok"]},
-        {"type": "type_answer", "prompt": "Sonntag", "answer": "Dominggo"}
+        {
+          "type": "multiple_choice",
+          "prompt": "Lunes",
+          "direction": "ceb_de",
+          "options": [
+            "Montag",
+            "Dienstag",
+            "Sonntag",
+            "Samstag"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "Lunes",
+              "de": "Montag"
+            },
+            {
+              "ceb": "Martes",
+              "de": "Dienstag"
+            },
+            {
+              "ceb": "Miyerkules",
+              "de": "Mittwoch"
+            },
+            {
+              "ceb": "Huwebes",
+              "de": "Donnerstag"
+            },
+            {
+              "ceb": "Biyernes",
+              "de": "Freitag"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sa ___ mopalit ko ug isda sa merkado.",
+          "translation": "Am Montag kaufe ich Fisch auf dem Markt.",
+          "options": [
+            "Lunes",
+            "Sabado",
+            "Dominggo"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Jeden Tag trinke ich Kaffee.",
+          "tokens": [
+            "Matag",
+            "adlaw",
+            "moinom",
+            "ko",
+            "ug",
+            "kape",
+            "usahay",
+            "semana"
+          ],
+          "answer": [
+            "Matag",
+            "adlaw",
+            "moinom",
+            "ko",
+            "ug",
+            "kape"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Sa Dominggo magluto ko ug lechon.",
+          "translation": "Am Sonntag koche ich Lechon.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Freitag",
+          "answer": "Biyernes"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "manchmal",
+          "direction": "de_ceb",
+          "options": [
+            "usahay",
+            "kanunay",
+            "matag",
+            "karon"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ko moinom ug kape sa buntag.",
+          "translation": "Morgens trinke ich immer Kaffee.",
+          "options": [
+            "Kanunay",
+            "Usahay",
+            "Matag"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Manchmal essen wir am Freitag Fisch.",
+          "tokens": [
+            "Usahay",
+            "mokaon",
+            "mi",
+            "ug",
+            "isda",
+            "sa",
+            "Biyernes",
+            "Kanunay",
+            "Lunes"
+          ],
+          "answer": [
+            "Usahay",
+            "mokaon",
+            "mi",
+            "ug",
+            "isda",
+            "sa",
+            "Biyernes"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Sabado",
+          "translation": "Sonntag",
+          "answer": false,
+          "correction": "Samstag"
+        },
+        {
+          "type": "type_answer",
+          "prompt": "jeden Tag",
+          "answer": "matag adlaw"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Matag Sabado mopalit mi ug prutas sa merkado.",
+          "direction": "ceb_de",
+          "options": [
+            "Jeden Samstag kaufen wir Obst auf dem Markt.",
+            "Jeden Sonntag kaufen wir Obst auf dem Markt.",
+            "Manchmal kaufen wir Obst auf dem Markt.",
+            "Jeden Samstag kochen wir Obst."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "Woche auf Cebuano",
+          "text": "Die Woche beginnt im Alltag mit Lunes und endet mit Dominggo, dem Familientag. Mit sa sagst du „am“: sa Martes = am Dienstag. Mit matag sagst du „jeden“: matag Biyernes = jeden Freitag. Und „jede Woche“ heißt matag semana."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sa Martes ug sa ___ magluto ko ug adobo.",
+          "translation": "Am Dienstag und am Donnerstag koche ich Adobo.",
+          "options": [
+            "Huwebes",
+            "Lunes",
+            "Sabado"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "Sabado",
+              "de": "Samstag"
+            },
+            {
+              "ceb": "Dominggo",
+              "de": "Sonntag"
+            },
+            {
+              "ceb": "matag",
+              "de": "jeder; jede; jedes"
+            },
+            {
+              "ceb": "kanunay",
+              "de": "immer"
+            },
+            {
+              "ceb": "usahay",
+              "de": "manchmal"
+            }
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Kanunay gutom si Inday sa udto.",
+          "translation": "Inday hat mittags immer Hunger.",
+          "answer": true
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Am Mittwoch kochen wir Hähnchen.",
+          "tokens": [
+            "Sa",
+            "Miyerkules",
+            "magluto",
+            "ta",
+            "ug",
+            "manok",
+            "Martes",
+            "usahay"
+          ],
+          "answer": [
+            "Sa",
+            "Miyerkules",
+            "magluto",
+            "ta",
+            "ug",
+            "manok"
+          ]
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Sonntag",
+          "answer": "Dominggo"
+        }
       ],
-      "surprise": {"ceb": "Matag adlaw gwapa ka, Langga.", "de": "Jeden Tag bist du hübsch, Schatz.", "when": "Morgens, wenn sie sich fertig macht – und am Dominggo auch im Schlafanzug."}
+      "surprise": {
+        "ceb": "Matag adlaw gwapa ka, Langga.",
+        "de": "Jeden Tag bist du hübsch, Schatz.",
+        "when": "Morgens, wenn sie sich fertig macht – und am Dominggo auch im Schlafanzug."
+      }
     },
     {
       "id": "u04_l03",
       "title": "Wie spät ist es?",
       "vocab": [
-        {"ceb": "oras", "de": "Uhrzeit; Stunde; Zeit", "note": "Unsang orasa na? = Wie spät ist es? duha ka oras = zwei Stunden"},
-        {"ceb": "alas", "de": "… Uhr (vor der Stundenzahl)", "note": "alas dos = 2 Uhr, alas otso = 8 Uhr"},
-        {"ceb": "ala una", "de": "ein Uhr", "note": "einzige Ausnahme: ala statt alas"},
-        {"ceb": "y media", "de": "halb (… Uhr dreißig)", "note": "alas dos y media = halb drei (2:30)"},
-        {"ceb": "sais", "de": "sechs (spanisch)"},
-        {"ceb": "siyete", "de": "sieben (spanisch)"},
-        {"ceb": "otso", "de": "acht (spanisch)"},
-        {"ceb": "nuwebe", "de": "neun (spanisch)"},
-        {"ceb": "dyes", "de": "zehn (spanisch)"},
-        {"ceb": "dose", "de": "zwölf (spanisch)", "note": "elf: onse"}
+        {
+          "ceb": "oras",
+          "de": "Uhrzeit; Stunde; Zeit",
+          "note": "Unsang orasa na? = Wie spät ist es? duha ka oras = zwei Stunden"
+        },
+        {
+          "ceb": "alas",
+          "de": "… Uhr (vor der Stundenzahl)",
+          "note": "alas dos = 2 Uhr, alas otso = 8 Uhr"
+        },
+        {
+          "ceb": "ala una",
+          "de": "ein Uhr",
+          "note": "einzige Ausnahme: ala statt alas"
+        },
+        {
+          "ceb": "y media",
+          "de": "halb (… Uhr dreißig)",
+          "note": "alas dos y media = halb drei (2:30)"
+        },
+        {
+          "ceb": "sais",
+          "de": "sechs (spanisch)"
+        },
+        {
+          "ceb": "siyete",
+          "de": "sieben (spanisch)"
+        },
+        {
+          "ceb": "otso",
+          "de": "acht (spanisch)"
+        },
+        {
+          "ceb": "nuwebe",
+          "de": "neun (spanisch)"
+        },
+        {
+          "ceb": "dyes",
+          "de": "zehn (spanisch)"
+        },
+        {
+          "ceb": "dose",
+          "de": "zwölf (spanisch)",
+          "note": "elf: onse"
+        }
       ],
       "grammar": {
         "title": "Unsang orasa na? – Alas otso na.",
         "text": "Die Uhrzeit sagt man mit alas und der spanischen Zahl: alas dos = 2 Uhr, alas otso = 8 Uhr – einzige Ausnahme ist ein Uhr: ala una. Halb sagt man mit y media nach der vollen Stunde: alas dos y media = halb drei (2:30), alas sais y media = halb sieben. Die Frage „Unsang orasa na“ heißt Wie spät ist es, wörtlich „welche Stunde schon“. Die Antwort: Alas otso na = Es ist 8 Uhr (das na gehört einfach dazu, wie unser „schon“). Die Zahlen uno bis singko kennst du aus Unit 3, neu sind sais, siyete, otso, nuwebe, dyes und dose."
       },
       "exercises": [
-        {"type": "multiple_choice", "prompt": "Unsang orasa na?", "direction": "ceb_de", "options": ["Wie spät ist es?", "Welcher Tag ist heute?", "Wie viel kostet das?", "Wie alt bist du?"], "answer": 0},
-        {"type": "multiple_choice", "prompt": "Alas otso na.", "direction": "ceb_de", "options": ["Es ist 8 Uhr.", "Es ist 7 Uhr.", "Es ist halb neun.", "Es ist 1 Uhr."], "answer": 0},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "sais", "de": "sechs"},
-          {"ceb": "siyete", "de": "sieben"},
-          {"ceb": "otso", "de": "acht"},
-          {"ceb": "nuwebe", "de": "neun"},
-          {"ceb": "dyes", "de": "zehn"}
-        ]},
-        {"type": "fill_blank", "prompt": "___ una na.", "translation": "Es ist ein Uhr.", "options": ["Ala", "Alas", "Oras"], "answer": 0},
-        {"type": "word_bank", "prompt": "Es ist halb drei.", "tokens": ["Alas", "dos", "y", "media", "na", "tres", "una"], "answer": ["Alas", "dos", "y", "media", "na"]},
-        {"type": "true_false", "statement": "Alas sais y media na.", "translation": "Es ist halb sieben.", "answer": true},
-        {"type": "type_answer", "prompt": "Wie spät ist es?", "answer": "Unsang orasa na?", "accepted": ["Unsang orasa na"]},
-        {"type": "multiple_choice", "prompt": "zwölf (spanisch)", "direction": "de_ceb", "options": ["dose", "dyes", "dos", "otso"], "answer": 0},
-        {"type": "fill_blank", "prompt": "Mokaon ta ug paniudto alas ___.", "translation": "Wir essen um 12 Uhr zu Mittag.", "options": ["dose", "dos", "dyes"], "answer": 0},
-        {"type": "true_false", "statement": "Alas nuwebe na.", "translation": "Es ist 10 Uhr.", "answer": false, "correction": "Es ist 9 Uhr."},
-        {"type": "word_bank", "prompt": "Um 6 Uhr trinke ich Kaffee.", "tokens": ["Moinom", "ko", "ug", "kape", "alas", "sais", "siyete", "oras"], "answer": ["Moinom", "ko", "ug", "kape", "alas", "sais"], "accepted": ["Alas sais moinom ko ug kape"]},
-        {"type": "type_answer", "prompt": "halb neun", "answer": "alas otso y media"},
-        {"type": "grammar_note", "title": "Ein Tag in Uhrzeiten", "text": "Alas sais = 6 Uhr, alas siyete y media = halb acht, alas dose = 12 Uhr, ala una = 1 Uhr, alas singko = 5 Uhr, alas nuwebe = 9 Uhr. Ob morgens oder abends, sagt die Tageszeit dazu: alas otso sa buntag = 8 Uhr morgens, alas otso sa gabii = 8 Uhr abends."},
-        {"type": "multiple_choice", "prompt": "Pila ka oras?", "direction": "ceb_de", "options": ["Wie viele Stunden?", "Wie spät ist es?", "Wie viele Tage?", "Wie viel kostet es?"], "answer": 0},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "ala una", "de": "ein Uhr"},
-          {"ceb": "alas dos y media", "de": "halb drei"},
-          {"ceb": "alas dyes", "de": "10 Uhr"},
-          {"ceb": "oras", "de": "Uhrzeit; Stunde"},
-          {"ceb": "dose", "de": "zwölf"}
-        ]},
-        {"type": "fill_blank", "prompt": "Unsang ___ na? – Alas dyes na.", "translation": "Wie spät ist es? – Es ist 10 Uhr.", "options": ["orasa", "adlawa", "semana"], "answer": 0},
-        {"type": "true_false", "statement": "Usa ka oras ra.", "translation": "Nur eine Stunde.", "answer": true},
-        {"type": "type_answer", "prompt": "Es ist 7 Uhr.", "answer": "Alas siyete na", "accepted": ["Alas siyete"]}
+        {
+          "type": "multiple_choice",
+          "prompt": "Unsang orasa na?",
+          "direction": "ceb_de",
+          "options": [
+            "Wie spät ist es?",
+            "Welcher Tag ist heute?",
+            "Wie viel kostet das?",
+            "Wie alt bist du?"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Alas otso na.",
+          "direction": "ceb_de",
+          "options": [
+            "Es ist 8 Uhr.",
+            "Es ist 7 Uhr.",
+            "Es ist halb neun.",
+            "Es ist 1 Uhr."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "sais",
+              "de": "sechs"
+            },
+            {
+              "ceb": "siyete",
+              "de": "sieben"
+            },
+            {
+              "ceb": "otso",
+              "de": "acht"
+            },
+            {
+              "ceb": "nuwebe",
+              "de": "neun"
+            },
+            {
+              "ceb": "dyes",
+              "de": "zehn"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ una na.",
+          "translation": "Es ist ein Uhr.",
+          "options": [
+            "Ala",
+            "Alas",
+            "Oras"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Es ist halb drei.",
+          "tokens": [
+            "Alas",
+            "dos",
+            "y",
+            "media",
+            "na",
+            "tres",
+            "una"
+          ],
+          "answer": [
+            "Alas",
+            "dos",
+            "y",
+            "media",
+            "na"
+          ],
+          "accepted": [
+            "Alas dos y media"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Alas sais y media na.",
+          "translation": "Es ist halb sieben.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Wie spät ist es?",
+          "answer": "Unsang orasa na?",
+          "accepted": [
+            "Unsang orasa na"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "zwölf (spanisch)",
+          "direction": "de_ceb",
+          "options": [
+            "dose",
+            "dyes",
+            "dos",
+            "otso"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Mokaon ta ug paniudto alas ___.",
+          "translation": "Wir essen um 12 Uhr zu Mittag.",
+          "options": [
+            "dose",
+            "dos",
+            "dyes"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Alas nuwebe na.",
+          "translation": "Es ist 10 Uhr.",
+          "answer": false,
+          "correction": "Es ist 9 Uhr."
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Um 6 Uhr trinke ich Kaffee.",
+          "tokens": [
+            "Moinom",
+            "ko",
+            "ug",
+            "kape",
+            "alas",
+            "sais",
+            "siyete",
+            "oras"
+          ],
+          "answer": [
+            "Moinom",
+            "ko",
+            "ug",
+            "kape",
+            "alas",
+            "sais"
+          ],
+          "accepted": [
+            "Alas sais moinom ko ug kape"
+          ]
+        },
+        {
+          "type": "type_answer",
+          "prompt": "halb neun",
+          "answer": "alas otso y media"
+        },
+        {
+          "type": "grammar_note",
+          "title": "Ein Tag in Uhrzeiten",
+          "text": "Alas sais = 6 Uhr, alas siyete y media = halb acht, alas dose = 12 Uhr, ala una = 1 Uhr, alas singko = 5 Uhr, alas nuwebe = 9 Uhr. Ob morgens oder abends, sagt die Tageszeit dazu: alas otso sa buntag = 8 Uhr morgens, alas otso sa gabii = 8 Uhr abends."
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Pila ka oras?",
+          "direction": "ceb_de",
+          "options": [
+            "Wie viele Stunden?",
+            "Wie spät ist es?",
+            "Wie viele Tage?",
+            "Wie viel kostet es?"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "ala una",
+              "de": "ein Uhr"
+            },
+            {
+              "ceb": "alas dos y media",
+              "de": "halb drei"
+            },
+            {
+              "ceb": "alas dyes",
+              "de": "10 Uhr"
+            },
+            {
+              "ceb": "oras",
+              "de": "Uhrzeit; Stunde"
+            },
+            {
+              "ceb": "dose",
+              "de": "zwölf"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Unsang ___ na? – Alas dyes na.",
+          "translation": "Wie spät ist es? – Es ist 10 Uhr.",
+          "options": [
+            "orasa",
+            "adlawa",
+            "semana"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Usa ka oras ra.",
+          "translation": "Nur eine Stunde.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Es ist 7 Uhr.",
+          "answer": "Alas siyete na",
+          "accepted": [
+            "Alas siyete"
+          ]
+        }
       ],
-      "surprise": {"ceb": "Alas dose na, Langga – matulog na ta.", "de": "Es ist schon 12 Uhr, Schatz – lass uns schlafen gehen.", "when": "Wenn sie nachts noch am Handy hängt."}
+      "surprise": {
+        "ceb": "Alas dose na, Langga – matulog na ta.",
+        "de": "Es ist schon 12 Uhr, Schatz – lass uns schlafen gehen.",
+        "when": "Wenn sie nachts noch am Handy hängt."
+      }
     },
     {
       "id": "u04_l04",
       "title": "Mein Morgen",
       "vocab": [
-        {"ceb": "mata", "de": "aufwachen; Auge", "note": "Momata ko alas sais = Ich wache um 6 auf"},
-        {"ceb": "bangon", "de": "aufstehen"},
-        {"ceb": "ligo", "de": "duschen; baden", "note": "Maligo ko = Ich dusche (gleich)"},
-        {"ceb": "trabaho", "de": "Arbeit; arbeiten"},
-        {"ceb": "eskwela", "de": "zur Schule gehen; Schule", "note": "Schulgebäude: eskwelahan (Unit 7)"},
-        {"ceb": "tulog", "de": "schlafen", "note": "Matulog na ko = Ich gehe jetzt schlafen"},
-        {"ceb": "uli", "de": "nach Hause gehen", "note": "Mouli ko alas singko = Ich gehe um 5 heim. iuli = zurückgeben (Unit 8)"},
-        {"ceb": "adto", "de": "hingehen", "note": "Moadto ko sa eskwelahan = Ich gehe zur Schule"},
-        {"ceb": "sayo", "de": "früh"},
-        {"ceb": "ulahi", "de": "spät; verspätet", "note": "Naulahi ko = Ich war zu spät"}
+        {
+          "ceb": "mata",
+          "de": "aufwachen; Auge",
+          "note": "Momata ko alas sais = Ich wache um 6 auf"
+        },
+        {
+          "ceb": "bangon",
+          "de": "aufstehen"
+        },
+        {
+          "ceb": "ligo",
+          "de": "duschen; baden",
+          "note": "Maligo ko = Ich dusche (gleich)"
+        },
+        {
+          "ceb": "trabaho",
+          "de": "Arbeit; arbeiten"
+        },
+        {
+          "ceb": "eskwela",
+          "de": "zur Schule gehen; Schule",
+          "note": "Schulgebäude: eskwelahan (Unit 7)"
+        },
+        {
+          "ceb": "tulog",
+          "de": "schlafen",
+          "note": "Matulog na ko = Ich gehe jetzt schlafen"
+        },
+        {
+          "ceb": "uli",
+          "de": "nach Hause gehen",
+          "note": "Mouli ko alas singko = Ich gehe um 5 heim. iuli = zurückgeben (Unit 8)"
+        },
+        {
+          "ceb": "adto",
+          "de": "hingehen",
+          "note": "Moadto ko sa eskwelahan = Ich gehe zur Schule"
+        },
+        {
+          "ceb": "sayo",
+          "de": "früh"
+        },
+        {
+          "ceb": "ulahi",
+          "de": "spät; verspätet",
+          "note": "Naulahi ko = Ich war zu spät"
+        }
       ],
       "grammar": {
         "title": "mo- = ich werde / ich gehe gleich",
         "text": "Mit der Vorsilbe mo- sagst du, was du gleich tust oder vorhast: Momata ko alas sais = Ich wache um 6 auf, Mobangon ko = Ich stehe auf, Moadto ko sa eskwelahan = Ich gehe zur Schule, Mouli ko alas singko = Ich gehe um 5 heim. Das Pronomen ko steht direkt hinter dem Verb, die Uhrzeit kommt ans Ende. Ein paar Verben, die eher einen Zustand beschreiben, nehmen ma- statt mo-: matulog = schlafen (Matulog na ko = Ich gehe jetzt schlafen), maligo = duschen (Maligo ko = Ich dusche gleich). Sayo heißt früh und ulahi spät: Sayo ko momata = Ich wache früh auf, Naulahi ko = Ich war zu spät."
       },
       "exercises": [
-        {"type": "multiple_choice", "prompt": "Momata ko alas sais.", "direction": "ceb_de", "options": ["Ich wache um 6 Uhr auf.", "Ich stehe um 7 Uhr auf.", "Ich schlafe um 6 Uhr.", "Ich dusche um 6 Uhr."], "answer": 0},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "mata", "de": "aufwachen"},
-          {"ceb": "bangon", "de": "aufstehen"},
-          {"ceb": "ligo", "de": "duschen"},
-          {"ceb": "tulog", "de": "schlafen"},
-          {"ceb": "uli", "de": "nach Hause gehen"}
-        ]},
-        {"type": "fill_blank", "prompt": "___ ko sa eskwelahan alas siyete.", "translation": "Ich gehe um 7 Uhr zur Schule.", "options": ["Moadto", "Mouli", "Matulog"], "answer": 0},
-        {"type": "word_bank", "prompt": "Ich gehe jetzt schlafen.", "tokens": ["Matulog", "na", "ko", "Maligo", "Momata", "ugma"], "answer": ["Matulog", "na", "ko"]},
-        {"type": "true_false", "statement": "Maligo ko sa buntag.", "translation": "Ich dusche morgens.", "answer": true},
-        {"type": "type_answer", "prompt": "Ich stehe auf.", "answer": "Mobangon ko", "accepted": ["Mobangon na ko"]},
-        {"type": "multiple_choice", "prompt": "Ich gehe um 5 Uhr nach Hause.", "direction": "de_ceb", "options": ["Mouli ko alas singko.", "Moadto ko alas singko.", "Momata ko alas singko.", "Matulog ko alas singko."], "answer": 0},
-        {"type": "fill_blank", "prompt": "Sayo ko momata, alas ___.", "translation": "Ich wache früh auf, um 5 Uhr.", "options": ["singko", "dyes", "dose"], "answer": 0},
-        {"type": "true_false", "statement": "Naulahi ko sa trabaho.", "translation": "Ich war früh bei der Arbeit.", "answer": false, "correction": "Ich war zu spät bei der Arbeit."},
-        {"type": "word_bank", "prompt": "Morgen arbeite ich nicht.", "tokens": ["Dili", "ko", "motrabaho", "ugma", "moeskwela", "karon"], "answer": ["Dili", "ko", "motrabaho", "ugma"], "accepted": ["Ugma dili ko motrabaho"]},
-        {"type": "multiple_choice", "prompt": "Moeskwela ko sa Lunes.", "direction": "ceb_de", "options": ["Am Montag gehe ich zur Schule.", "Am Montag schlafe ich.", "Am Sonntag gehe ich zur Schule.", "Am Montag gehe ich nach Hause."], "answer": 0},
-        {"type": "type_answer", "prompt": "früh", "answer": "sayo"},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "trabaho", "de": "Arbeit; arbeiten"},
-          {"ceb": "eskwela", "de": "zur Schule gehen; Schule"},
-          {"ceb": "adto", "de": "hingehen"},
-          {"ceb": "sayo", "de": "früh"},
-          {"ceb": "ulahi", "de": "spät; verspätet"}
-        ]},
-        {"type": "grammar_note", "title": "mo- oder ma-?", "text": "Die meisten Tätigkeiten nehmen mo-: momata, mobangon, moadto, mouli, motrabaho, moeskwela. Verben, die eher einen Zustand beschreiben, nehmen ma-: matulog (schlafen), maligo (baden). Mit na dahinter heißt es „jetzt“: Matulog na ko = Ich gehe jetzt schlafen, Mouli na ko = Ich gehe jetzt heim."},
-        {"type": "fill_blank", "prompt": "___ na si Inday, alas otso na.", "translation": "Inday geht jetzt schlafen, es ist schon 8 Uhr.", "options": ["Matulog", "Momata", "Mouli"], "answer": 0},
-        {"type": "word_bank", "prompt": "Mama wacht um halb sieben auf.", "tokens": ["Momata", "si", "Mama", "alas", "sais", "y", "media", "Mouli", "siyete"], "answer": ["Momata", "si", "Mama", "alas", "sais", "y", "media"]},
-        {"type": "true_false", "statement": "Mouli ko sayo karon.", "translation": "Ich gehe heute früh nach Hause.", "answer": true},
-        {"type": "multiple_choice", "prompt": "Ulahi na! Mobangon na ko.", "direction": "ceb_de", "options": ["Es ist spät! Ich stehe jetzt auf.", "Es ist früh! Ich gehe jetzt schlafen.", "Es ist spät! Ich gehe jetzt heim.", "Es ist früh! Ich wache jetzt auf."], "answer": 0}
+        {
+          "type": "multiple_choice",
+          "prompt": "Momata ko alas sais.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich wache um 6 Uhr auf.",
+            "Ich stehe um 7 Uhr auf.",
+            "Ich schlafe um 6 Uhr.",
+            "Ich dusche um 6 Uhr."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "mata",
+              "de": "aufwachen"
+            },
+            {
+              "ceb": "bangon",
+              "de": "aufstehen"
+            },
+            {
+              "ceb": "ligo",
+              "de": "duschen"
+            },
+            {
+              "ceb": "tulog",
+              "de": "schlafen"
+            },
+            {
+              "ceb": "uli",
+              "de": "nach Hause gehen"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ko sa eskwelahan alas siyete.",
+          "translation": "Ich gehe um 7 Uhr zur Schule.",
+          "options": [
+            "Moadto",
+            "Mouli",
+            "Matulog"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich gehe jetzt schlafen.",
+          "tokens": [
+            "Matulog",
+            "na",
+            "ko",
+            "Maligo",
+            "Momata",
+            "ugma"
+          ],
+          "answer": [
+            "Matulog",
+            "na",
+            "ko"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Maligo ko sa buntag.",
+          "translation": "Ich dusche morgens.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich stehe auf.",
+          "answer": "Mobangon ko",
+          "accepted": [
+            "Mobangon na ko"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Ich gehe um 5 Uhr nach Hause.",
+          "direction": "de_ceb",
+          "options": [
+            "Mouli ko alas singko.",
+            "Moadto ko alas singko.",
+            "Momata ko alas singko.",
+            "Matulog ko alas singko."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Sayo ko momata, alas ___.",
+          "translation": "Ich wache früh auf, um 5 Uhr.",
+          "options": [
+            "singko",
+            "dyes",
+            "dose"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "true_false",
+          "statement": "Naulahi ko sa trabaho.",
+          "translation": "Ich war früh bei der Arbeit.",
+          "answer": false,
+          "correction": "Ich war zu spät bei der Arbeit."
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Morgen arbeite ich nicht.",
+          "tokens": [
+            "Dili",
+            "ko",
+            "motrabaho",
+            "ugma",
+            "moeskwela",
+            "karon"
+          ],
+          "answer": [
+            "Dili",
+            "ko",
+            "motrabaho",
+            "ugma"
+          ],
+          "accepted": [
+            "Ugma dili ko motrabaho"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Moeskwela ko sa Lunes.",
+          "direction": "ceb_de",
+          "options": [
+            "Am Montag gehe ich zur Schule.",
+            "Am Montag schlafe ich.",
+            "Am Sonntag gehe ich zur Schule.",
+            "Am Montag gehe ich nach Hause."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "type_answer",
+          "prompt": "früh",
+          "answer": "sayo"
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "trabaho",
+              "de": "Arbeit; arbeiten"
+            },
+            {
+              "ceb": "eskwela",
+              "de": "zur Schule gehen; Schule"
+            },
+            {
+              "ceb": "adto",
+              "de": "hingehen"
+            },
+            {
+              "ceb": "sayo",
+              "de": "früh"
+            },
+            {
+              "ceb": "ulahi",
+              "de": "spät; verspätet"
+            }
+          ]
+        },
+        {
+          "type": "grammar_note",
+          "title": "mo- oder ma-?",
+          "text": "Die meisten Tätigkeiten nehmen mo-: momata, mobangon, moadto, mouli, motrabaho, moeskwela. Verben, die eher einen Zustand beschreiben, nehmen ma-: matulog (schlafen), maligo (baden). Mit na dahinter heißt es „jetzt“: Matulog na ko = Ich gehe jetzt schlafen, Mouli na ko = Ich gehe jetzt heim."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ na si Inday, alas otso na.",
+          "translation": "Inday geht jetzt schlafen, es ist schon 8 Uhr.",
+          "options": [
+            "Matulog",
+            "Momata",
+            "Mouli"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Mama wacht um halb sieben auf.",
+          "tokens": [
+            "Momata",
+            "si",
+            "Mama",
+            "alas",
+            "sais",
+            "y",
+            "media",
+            "Mouli",
+            "siyete"
+          ],
+          "answer": [
+            "Momata",
+            "si",
+            "Mama",
+            "alas",
+            "sais",
+            "y",
+            "media"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Mouli ko sayo karon.",
+          "translation": "Ich gehe heute früh nach Hause.",
+          "answer": true
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Ulahi na! Mobangon na ko.",
+          "direction": "ceb_de",
+          "options": [
+            "Es ist spät! Ich stehe jetzt auf.",
+            "Es ist früh! Ich gehe jetzt schlafen.",
+            "Es ist spät! Ich gehe jetzt heim.",
+            "Es ist früh! Ich wache jetzt auf."
+          ],
+          "answer": 0
+        }
       ],
-      "surprise": {"ceb": "Mobangon na ko, Langga – matulog pa ka.", "de": "Ich stehe jetzt auf, Schatz – schlaf du noch.", "when": "Früh morgens, wenn dein Wecker klingelt und sie noch liegen bleiben darf (pa = noch)."}
+      "surprise": {
+        "ceb": "Mobangon na ko, Langga – matulog pa ka.",
+        "de": "Ich stehe jetzt auf, Schatz – schlaf du noch.",
+        "when": "Früh morgens, wenn dein Wecker klingelt und sie noch liegen bleiben darf (pa = noch)."
+      }
     },
     {
       "id": "u04_l05",
       "title": "Zuhause-Routinen",
       "vocab": [
-        {"ceb": "limpyo", "de": "sauber; putzen", "note": "Manglimpyo ko sa balay = Ich putze das Haus"},
-        {"ceb": "laba", "de": "Wäsche waschen"},
-        {"ceb": "hugas", "de": "abwaschen; waschen", "note": "manghugas ug plato = Geschirr spülen"},
-        {"ceb": "dula", "de": "spielen; Spiel"},
-        {"ceb": "tan-aw", "de": "schauen; anschauen", "note": "motan-aw ug TV = fernsehen"},
-        {"ceb": "basa", "de": "lesen", "note": "Betonung vorne; basá (hinten betont) = nass"},
-        {"ceb": "sulat", "de": "schreiben; Brief"},
-        {"ceb": "bisikleta", "de": "Fahrrad", "note": "E-Bike: e-bike (so gesagt)"},
-        {"ceb": "sakay", "de": "fahren mit; einsteigen", "note": "Mosakay ko ug bisikleta = Ich fahre Fahrrad"},
-        {"ceb": "lakaw", "de": "gehen (zu Fuß); losgehen"}
+        {
+          "ceb": "limpyo",
+          "de": "sauber; putzen",
+          "note": "Manglimpyo ko sa balay = Ich putze das Haus"
+        },
+        {
+          "ceb": "laba",
+          "de": "Wäsche waschen"
+        },
+        {
+          "ceb": "hugas",
+          "de": "abwaschen; waschen",
+          "note": "manghugas ug plato = Geschirr spülen"
+        },
+        {
+          "ceb": "dula",
+          "de": "spielen; Spiel"
+        },
+        {
+          "ceb": "tan-aw",
+          "de": "schauen; anschauen",
+          "note": "motan-aw ug TV = fernsehen"
+        },
+        {
+          "ceb": "basa",
+          "de": "lesen",
+          "note": "Betonung vorne; basá (hinten betont) = nass"
+        },
+        {
+          "ceb": "sulat",
+          "de": "schreiben; Brief"
+        },
+        {
+          "ceb": "bisikleta",
+          "de": "Fahrrad",
+          "note": "E-Bike: e-bike (so gesagt)"
+        },
+        {
+          "ceb": "sakay",
+          "de": "fahren mit; einsteigen",
+          "note": "Mosakay ko ug bisikleta = Ich fahre Fahrrad"
+        },
+        {
+          "ceb": "lakaw",
+          "de": "gehen (zu Fuß); losgehen"
+        }
       ],
       "grammar": {
         "title": "mag- = länger oder regelmäßig tun",
         "text": "Die Vorsilbe mag- steht bei Tätigkeiten, die eine Weile dauern oder die man regelmäßig tut: Magluto ko = Ich koche, Maglimpyo ko = Ich putze, Maglaba ko sa Sabado = Am Samstag wasche ich Wäsche, Magbasa ko sa gabii = Abends lese ich. Magdula ta heißt „Lass uns spielen“ – mit ta lädst du Inday ein. Mo- bleibt für das, was gleich passiert oder kurz ist: Mosakay ko ug bisikleta = Ich fahre (jetzt) Fahrrad, Molakaw na ko = Ich gehe jetzt los, Motan-aw ko ug TV = Ich sehe fern. Bei vielen Verben gehen beide Vorsilben, im Alltag hörst du mag- vor allem bei Haushalt, Arbeit und Hobbys."
       },
       "exercises": [
-        {"type": "multiple_choice", "prompt": "Maglimpyo ko karon.", "direction": "ceb_de", "options": ["Ich putze jetzt.", "Ich wasche jetzt Wäsche.", "Ich koche jetzt.", "Ich lese jetzt."], "answer": 0},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "limpyo", "de": "putzen"},
-          {"ceb": "laba", "de": "Wäsche waschen"},
-          {"ceb": "hugas", "de": "abwaschen"},
-          {"ceb": "dula", "de": "spielen"},
-          {"ceb": "basa", "de": "lesen"}
-        ]},
-        {"type": "fill_blank", "prompt": "___ ta, Inday!", "translation": "Lass uns spielen, Inday!", "options": ["Magdula", "Maglaba", "Maglimpyo"], "answer": 0},
-        {"type": "word_bank", "prompt": "Ich fahre E-Bike.", "tokens": ["Mosakay", "ko", "ug", "e-bike", "molakaw", "bisikleta"], "answer": ["Mosakay", "ko", "ug", "e-bike"]},
-        {"type": "true_false", "statement": "Magbasa ko sa gabii.", "translation": "Abends lese ich.", "answer": true},
-        {"type": "type_answer", "prompt": "Ich koche.", "answer": "Magluto ko", "accepted": ["Magluto ko karon"]},
-        {"type": "multiple_choice", "prompt": "Am Samstag wasche ich Wäsche.", "direction": "de_ceb", "options": ["Maglaba ko sa Sabado.", "Maghugas ko sa Sabado.", "Maglimpyo ko sa Sabado.", "Magluto ko sa Sabado."], "answer": 0},
-        {"type": "fill_blank", "prompt": "___ ko ug TV sa gabii.", "translation": "Abends sehe ich fern.", "options": ["Motan-aw", "Magbasa", "Magsulat"], "answer": 0},
-        {"type": "word_bank", "prompt": "Inday sieht fern.", "tokens": ["Motan-aw", "si", "Inday", "ug", "TV", "magbasa", "bisikleta"], "answer": ["Motan-aw", "si", "Inday", "ug", "TV"]},
-        {"type": "true_false", "statement": "Magsulat ko ug email karon.", "translation": "Ich lese jetzt eine E-Mail.", "answer": false, "correction": "Ich schreibe jetzt eine E-Mail."},
-        {"type": "type_answer", "prompt": "Fahrrad", "answer": "bisikleta"},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "tan-aw", "de": "schauen"},
-          {"ceb": "sulat", "de": "schreiben"},
-          {"ceb": "bisikleta", "de": "Fahrrad"},
-          {"ceb": "sakay", "de": "fahren mit"},
-          {"ceb": "lakaw", "de": "gehen (zu Fuß)"}
-        ]},
-        {"type": "multiple_choice", "prompt": "Molakaw na ko, Mama.", "direction": "ceb_de", "options": ["Ich gehe jetzt los, Mama.", "Ich koche jetzt, Mama.", "Ich fahre jetzt Fahrrad, Mama.", "Ich wasche jetzt ab, Mama."], "answer": 0},
-        {"type": "grammar_note", "title": "mo- oder mag-?", "text": "Faustregel: mo- für das, was gleich passiert oder kurz ist (Mokaon ko = Ich esse gleich, Mosakay ko = Ich steige auf), mag- für das, was dauert oder zur Routine gehört (Magluto ko = Ich koche, Maglaba ko = Ich wasche Wäsche). Falsch wird dich niemand verstehen – deine Frau wird dich höchstens verbessern, und das ist Teil des Spiels."},
-        {"type": "fill_blank", "prompt": "Matag Dominggo ___ mi ug adobo.", "translation": "Jeden Sonntag kochen wir Adobo.", "options": ["magluto", "maglaba", "magdula"], "answer": 0},
-        {"type": "word_bank", "prompt": "Wer wäscht heute ab?", "tokens": ["Kinsa", "ang", "maghugas", "karon", "maglaba", "ugma"], "answer": ["Kinsa", "ang", "maghugas", "karon"], "accepted": ["Kinsa maghugas karon"]},
-        {"type": "true_false", "statement": "Magdula si Inday sa hapon.", "translation": "Inday spielt nachmittags.", "answer": true},
-        {"type": "type_answer", "prompt": "Ich putze jeden Tag.", "answer": "Maglimpyo ko matag adlaw", "accepted": ["Matag adlaw maglimpyo ko"]}
+        {
+          "type": "multiple_choice",
+          "prompt": "Maglimpyo ko karon.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich putze jetzt.",
+            "Ich wasche jetzt Wäsche.",
+            "Ich koche jetzt.",
+            "Ich lese jetzt."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "limpyo",
+              "de": "putzen"
+            },
+            {
+              "ceb": "laba",
+              "de": "Wäsche waschen"
+            },
+            {
+              "ceb": "hugas",
+              "de": "abwaschen"
+            },
+            {
+              "ceb": "dula",
+              "de": "spielen"
+            },
+            {
+              "ceb": "basa",
+              "de": "lesen"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ta, Inday!",
+          "translation": "Lass uns spielen, Inday!",
+          "options": [
+            "Magdula",
+            "Maglaba",
+            "Maglimpyo"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich fahre E-Bike.",
+          "tokens": [
+            "Mosakay",
+            "ko",
+            "ug",
+            "e-bike",
+            "molakaw",
+            "bisikleta"
+          ],
+          "answer": [
+            "Mosakay",
+            "ko",
+            "ug",
+            "e-bike"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Magbasa ko sa gabii.",
+          "translation": "Abends lese ich.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich koche.",
+          "answer": "Magluto ko",
+          "accepted": [
+            "Magluto ko karon"
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Am Samstag wasche ich Wäsche.",
+          "direction": "de_ceb",
+          "options": [
+            "Maglaba ko sa Sabado.",
+            "Maghugas ko sa Sabado.",
+            "Maglimpyo ko sa Sabado.",
+            "Magluto ko sa Sabado."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ko ug TV sa gabii.",
+          "translation": "Abends sehe ich fern.",
+          "options": [
+            "Motan-aw",
+            "Magbasa",
+            "Magsulat"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Inday sieht fern.",
+          "tokens": [
+            "Motan-aw",
+            "si",
+            "Inday",
+            "ug",
+            "TV",
+            "magbasa",
+            "bisikleta"
+          ],
+          "answer": [
+            "Motan-aw",
+            "si",
+            "Inday",
+            "ug",
+            "TV"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Magsulat ko ug email karon.",
+          "translation": "Ich lese jetzt eine E-Mail.",
+          "answer": false,
+          "correction": "Ich schreibe jetzt eine E-Mail."
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Fahrrad",
+          "answer": "bisikleta"
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "tan-aw",
+              "de": "schauen"
+            },
+            {
+              "ceb": "sulat",
+              "de": "schreiben"
+            },
+            {
+              "ceb": "bisikleta",
+              "de": "Fahrrad"
+            },
+            {
+              "ceb": "sakay",
+              "de": "fahren mit"
+            },
+            {
+              "ceb": "lakaw",
+              "de": "gehen (zu Fuß)"
+            }
+          ]
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Molakaw na ko, Mama.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich gehe jetzt los, Mama.",
+            "Ich koche jetzt, Mama.",
+            "Ich fahre jetzt Fahrrad, Mama.",
+            "Ich wasche jetzt ab, Mama."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "grammar_note",
+          "title": "mo- oder mag-?",
+          "text": "Faustregel: mo- für das, was gleich passiert oder kurz ist (Mokaon ko = Ich esse gleich, Mosakay ko = Ich steige auf), mag- für das, was dauert oder zur Routine gehört (Magluto ko = Ich koche, Maglaba ko = Ich wasche Wäsche). Falsch wird dich niemand verstehen – deine Frau wird dich höchstens verbessern, und das ist Teil des Spiels."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Matag Dominggo ___ mi ug adobo.",
+          "translation": "Jeden Sonntag kochen wir Adobo.",
+          "options": [
+            "magluto",
+            "maglaba",
+            "magdula"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Wer wäscht heute ab?",
+          "tokens": [
+            "Kinsa",
+            "ang",
+            "maghugas",
+            "karon",
+            "maglaba",
+            "ugma"
+          ],
+          "answer": [
+            "Kinsa",
+            "ang",
+            "maghugas",
+            "karon"
+          ],
+          "accepted": [
+            "Kinsa maghugas karon"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Magdula si Inday sa hapon.",
+          "translation": "Inday spielt nachmittags.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich putze jeden Tag.",
+          "answer": "Maglimpyo ko matag adlaw",
+          "accepted": [
+            "Matag adlaw maglimpyo ko"
+          ]
+        }
       ],
-      "surprise": {"ceb": "Ako na ang maghugas karong gabii, Langga.", "de": "Ich wasche heute Abend ab, Schatz.", "when": "Nach dem Abendessen, bevor sie aufstehen kann."}
+      "surprise": {
+        "ceb": "Ako na ang maghugas karong gabii, Langga.",
+        "de": "Ich wasche heute Abend ab, Schatz.",
+        "when": "Nach dem Abendessen, bevor sie aufstehen kann."
+      }
     },
     {
       "id": "u04_l06",
       "title": "Nach der Arbeit",
       "vocab": [
-        {"ceb": "human", "de": "fertig; nach (dem)", "note": "Human na ko = Ich bin fertig. Human sa trabaho = nach der Arbeit"},
-        {"ceb": "dayon", "de": "dann; danach; herein!", "note": "Dayon! = Komm rein! (Einladung ins Haus)"},
-        {"ceb": "unya", "de": "später; nachher", "note": "unyang gabii = heute Abend (später)"},
-        {"ceb": "daghan", "de": "viel; viele", "note": "Daghan ko ug trabaho = Ich habe viel Arbeit"},
-        {"ceb": "pahulay", "de": "sich ausruhen; Pause"},
-        {"ceb": "kanta", "de": "singen; Lied"},
-        {"ceb": "bisita", "de": "besuchen; Besuch"},
-        {"ceb": "abot", "de": "ankommen", "note": "Moabot siya ugma = Sie kommt morgen an"},
-        {"ceb": "gikan", "de": "von; aus (woher)", "note": "Gikan ko sa trabaho = Ich komme von der Arbeit"},
-        {"ceb": "padulong", "de": "unterwegs nach; in Richtung", "note": "Padulong ko sa balay = Ich bin auf dem Weg nach Hause"}
+        {
+          "ceb": "human",
+          "de": "fertig; nach (dem)",
+          "note": "Human na ko = Ich bin fertig. Human sa trabaho = nach der Arbeit"
+        },
+        {
+          "ceb": "dayon",
+          "de": "dann; danach; herein!",
+          "note": "Dayon! = Komm rein! (Einladung ins Haus)"
+        },
+        {
+          "ceb": "unya",
+          "de": "später; nachher",
+          "note": "unyang gabii = heute Abend (später)"
+        },
+        {
+          "ceb": "daghan",
+          "de": "viel; viele",
+          "note": "Daghan ko ug trabaho = Ich habe viel Arbeit"
+        },
+        {
+          "ceb": "pahulay",
+          "de": "sich ausruhen; Pause"
+        },
+        {
+          "ceb": "kanta",
+          "de": "singen; Lied"
+        },
+        {
+          "ceb": "bisita",
+          "de": "besuchen; Besuch"
+        },
+        {
+          "ceb": "abot",
+          "de": "ankommen",
+          "note": "Moabot siya ugma = Sie kommt morgen an"
+        },
+        {
+          "ceb": "gikan",
+          "de": "von; aus (woher)",
+          "note": "Gikan ko sa trabaho = Ich komme von der Arbeit"
+        },
+        {
+          "ceb": "padulong",
+          "de": "unterwegs nach; in Richtung",
+          "note": "Padulong ko sa balay = Ich bin auf dem Weg nach Hause"
+        }
       ],
       "grammar": {
         "title": "Human sa … dayon …; gikan / padulong",
         "text": "Human sa heißt „nach dem“: Human sa trabaho mouli ko = Nach der Arbeit gehe ich heim, Human sa panihapon mopahulay ko = Nach dem Abendessen ruhe ich mich aus. Dayon verbindet zwei Schritte wie unser „dann“: Maligo ko, dayon mokaon ko = Ich dusche, dann esse ich. Woher und wohin sagst du mit gikan (von) und padulong (unterwegs nach), beide mit sa: Gikan ko sa eskwelahan = Ich komme von der Schule, Padulong ko sa trabaho = Ich bin auf dem Weg zur Arbeit. Unya heißt später und daghan viel: Daghan ko ug trabaho karong adlawa, mopahulay ko unya = Ich habe heute viel Arbeit, ich ruhe mich später aus."
       },
       "exercises": [
-        {"type": "multiple_choice", "prompt": "Human sa trabaho mouli ko.", "direction": "ceb_de", "options": ["Nach der Arbeit gehe ich nach Hause.", "Vor der Arbeit gehe ich nach Hause.", "Nach der Schule gehe ich nach Hause.", "Nach der Arbeit ruhe ich mich aus."], "answer": 0},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "human", "de": "fertig; nach (dem)"},
-          {"ceb": "dayon", "de": "dann; danach"},
-          {"ceb": "unya", "de": "später"},
-          {"ceb": "daghan", "de": "viel; viele"},
-          {"ceb": "pahulay", "de": "sich ausruhen"}
-        ]},
-        {"type": "fill_blank", "prompt": "___ ko sa eskwelahan.", "translation": "Ich komme von der Schule.", "options": ["Gikan", "Padulong", "Human"], "answer": 0},
-        {"type": "word_bank", "prompt": "Ich bin auf dem Weg zur Arbeit.", "tokens": ["Padulong", "ko", "sa", "trabaho", "Gikan", "human"], "answer": ["Padulong", "ko", "sa", "trabaho"]},
-        {"type": "true_false", "statement": "Moabot si Lola ugma.", "translation": "Oma kommt morgen an.", "answer": true},
-        {"type": "type_answer", "prompt": "Ich bin fertig.", "answer": "Human na ko"},
-        {"type": "multiple_choice", "prompt": "Ich dusche, dann esse ich.", "direction": "de_ceb", "options": ["Maligo ko, dayon mokaon ko.", "Mokaon ko, dayon maligo ko.", "Matulog ko, dayon mokaon ko.", "Maligo ko, dayon matulog ko."], "answer": 0},
-        {"type": "fill_blank", "prompt": "Daghan ko ug trabaho ___ adlawa.", "translation": "Ich habe heute viel Arbeit.", "options": ["karong", "ugma", "unya"], "answer": 0},
-        {"type": "word_bank", "prompt": "Oma kommt am Sonntag zu Besuch.", "tokens": ["Mobisita", "si", "Lola", "sa", "Dominggo", "Sabado", "moabot"], "answer": ["Mobisita", "si", "Lola", "sa", "Dominggo"]},
-        {"type": "true_false", "statement": "Magkanta si Inday sa gabii.", "translation": "Inday singt morgens.", "answer": false, "correction": "Inday singt abends."},
-        {"type": "type_answer", "prompt": "später", "answer": "unya"},
-        {"type": "multiple_choice", "prompt": "Mopahulay ko unya.", "direction": "ceb_de", "options": ["Ich ruhe mich später aus.", "Ich arbeite später.", "Ich ruhe mich jetzt aus.", "Ich singe später."], "answer": 0},
-        {"type": "match_pairs", "pairs": [
-          {"ceb": "kanta", "de": "singen; Lied"},
-          {"ceb": "bisita", "de": "besuchen; Besuch"},
-          {"ceb": "abot", "de": "ankommen"},
-          {"ceb": "gikan", "de": "von; aus (woher)"},
-          {"ceb": "padulong", "de": "unterwegs nach"}
-        ]},
-        {"type": "grammar_note", "title": "gikan und padulong", "text": "Beide stehen am Satzanfang, dann ko, dann sa und der Ort. Gikan = woher: Gikan ko sa trabaho = Ich komme von der Arbeit. Padulong = wohin, gerade unterwegs: Padulong ko sa eskwelahan = Ich bin auf dem Weg zur Schule. Perfekt für eine kurze Nachricht ans Handy deiner Frau."},
-        {"type": "fill_blank", "prompt": "Human sa ___, mopahulay ko.", "translation": "Nach dem Abendessen ruhe ich mich aus.", "options": ["panihapon", "pamahaw", "trabaho"], "answer": 0},
-        {"type": "word_bank", "prompt": "Nach der Schule fahre ich E-Bike.", "tokens": ["Human", "sa", "eskwela", "mosakay", "ko", "ug", "e-bike", "gikan", "unya"], "answer": ["Human", "sa", "eskwela", "mosakay", "ko", "ug", "e-bike"]},
-        {"type": "true_false", "statement": "Daghan ko ug trabaho karong semanaha.", "translation": "Ich habe diese Woche viel Arbeit.", "answer": true},
-        {"type": "type_answer", "prompt": "Ich komme von der Arbeit.", "answer": "Gikan ko sa trabaho"},
-        {"type": "multiple_choice", "prompt": "Moabot ko alas singko y media.", "direction": "ceb_de", "options": ["Ich komme um halb sechs an.", "Ich komme um halb fünf an.", "Ich gehe um halb sechs los.", "Ich komme um 5 Uhr an."], "answer": 0}
+        {
+          "type": "multiple_choice",
+          "prompt": "Human sa trabaho mouli ko.",
+          "direction": "ceb_de",
+          "options": [
+            "Nach der Arbeit gehe ich nach Hause.",
+            "Vor der Arbeit gehe ich nach Hause.",
+            "Nach der Schule gehe ich nach Hause.",
+            "Nach der Arbeit ruhe ich mich aus."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "human",
+              "de": "fertig; nach (dem)"
+            },
+            {
+              "ceb": "dayon",
+              "de": "dann; danach"
+            },
+            {
+              "ceb": "unya",
+              "de": "später"
+            },
+            {
+              "ceb": "daghan",
+              "de": "viel; viele"
+            },
+            {
+              "ceb": "pahulay",
+              "de": "sich ausruhen"
+            }
+          ]
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "___ ko sa eskwelahan.",
+          "translation": "Ich komme von der Schule.",
+          "options": [
+            "Gikan",
+            "Padulong",
+            "Human"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Ich bin auf dem Weg zur Arbeit.",
+          "tokens": [
+            "Padulong",
+            "ko",
+            "sa",
+            "trabaho",
+            "Gikan",
+            "human"
+          ],
+          "answer": [
+            "Padulong",
+            "ko",
+            "sa",
+            "trabaho"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Moabot si Lola ugma.",
+          "translation": "Oma kommt morgen an.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich bin fertig.",
+          "answer": "Human na ko"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Ich dusche, dann esse ich.",
+          "direction": "de_ceb",
+          "options": [
+            "Maligo ko, dayon mokaon ko.",
+            "Mokaon ko, dayon maligo ko.",
+            "Matulog ko, dayon mokaon ko.",
+            "Maligo ko, dayon matulog ko."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Daghan ko ug trabaho ___ adlawa.",
+          "translation": "Ich habe heute viel Arbeit.",
+          "options": [
+            "karong",
+            "ugma",
+            "unya"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Oma kommt am Sonntag zu Besuch.",
+          "tokens": [
+            "Mobisita",
+            "si",
+            "Lola",
+            "sa",
+            "Dominggo",
+            "Sabado",
+            "moabot"
+          ],
+          "answer": [
+            "Mobisita",
+            "si",
+            "Lola",
+            "sa",
+            "Dominggo"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Magkanta si Inday sa gabii.",
+          "translation": "Inday singt morgens.",
+          "answer": false,
+          "correction": "Inday singt abends."
+        },
+        {
+          "type": "type_answer",
+          "prompt": "später",
+          "answer": "unya"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Mopahulay ko unya.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich ruhe mich später aus.",
+            "Ich arbeite später.",
+            "Ich ruhe mich jetzt aus.",
+            "Ich singe später."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "match_pairs",
+          "pairs": [
+            {
+              "ceb": "kanta",
+              "de": "singen; Lied"
+            },
+            {
+              "ceb": "bisita",
+              "de": "besuchen; Besuch"
+            },
+            {
+              "ceb": "abot",
+              "de": "ankommen"
+            },
+            {
+              "ceb": "gikan",
+              "de": "von; aus (woher)"
+            },
+            {
+              "ceb": "padulong",
+              "de": "unterwegs nach"
+            }
+          ]
+        },
+        {
+          "type": "grammar_note",
+          "title": "gikan und padulong",
+          "text": "Beide stehen am Satzanfang, dann ko, dann sa und der Ort. Gikan = woher: Gikan ko sa trabaho = Ich komme von der Arbeit. Padulong = wohin, gerade unterwegs: Padulong ko sa eskwelahan = Ich bin auf dem Weg zur Schule. Perfekt für eine kurze Nachricht ans Handy deiner Frau."
+        },
+        {
+          "type": "fill_blank",
+          "prompt": "Human sa ___, mopahulay ko.",
+          "translation": "Nach dem Abendessen ruhe ich mich aus.",
+          "options": [
+            "panihapon",
+            "pamahaw",
+            "trabaho"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "word_bank",
+          "prompt": "Nach der Schule fahre ich E-Bike.",
+          "tokens": [
+            "Human",
+            "sa",
+            "eskwela",
+            "mosakay",
+            "ko",
+            "ug",
+            "e-bike",
+            "gikan",
+            "unya"
+          ],
+          "answer": [
+            "Human",
+            "sa",
+            "eskwela",
+            "mosakay",
+            "ko",
+            "ug",
+            "e-bike"
+          ]
+        },
+        {
+          "type": "true_false",
+          "statement": "Daghan ko ug trabaho karong semanaha.",
+          "translation": "Ich habe diese Woche viel Arbeit.",
+          "answer": true
+        },
+        {
+          "type": "type_answer",
+          "prompt": "Ich komme von der Arbeit.",
+          "answer": "Gikan ko sa trabaho"
+        },
+        {
+          "type": "multiple_choice",
+          "prompt": "Moabot ko alas singko y media.",
+          "direction": "ceb_de",
+          "options": [
+            "Ich komme um halb sechs an.",
+            "Ich komme um halb fünf an.",
+            "Ich gehe um halb sechs los.",
+            "Ich komme um 5 Uhr an."
+          ],
+          "answer": 0
+        }
       ],
-      "surprise": {"ceb": "Human sa trabaho, padulong na ko sa balay, Langga.", "de": "Nach der Arbeit – ich bin schon auf dem Weg nach Hause, Schatz.", "when": "Als kurze Nachricht, bevor du aufs E-Bike steigst (balay = Haus, kommt in Unit 5)."}
+      "surprise": {
+        "ceb": "Human sa trabaho, padulong na ko sa balay, Langga.",
+        "de": "Nach der Arbeit – ich bin schon auf dem Weg nach Hause, Schatz.",
+        "when": "Als kurze Nachricht, bevor du aufs E-Bike steigst (balay = Haus, kommt in Unit 5)."
+      }
     }
   ]
 }
