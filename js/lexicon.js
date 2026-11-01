@@ -212,10 +212,10 @@ export class Lexicon {
     }
     toks.forEach((t, i) => {
       if (used[i]) return;
-      if (/^\d+$/.test(t) || this.isName(t)) return;
       const e = this.lookup(t, allowed);
-      if (e) found.set(e, (found.get(e) || 0) + 1);
-      else unknown.push(t);
+      if (e) { found.set(e, (found.get(e) || 0) + 1); return; }
+      if (/^\d+$/.test(t) || this.isName(t)) return;
+      unknown.push(t);
     });
     return { found, unknown, tokens: toks };
   }

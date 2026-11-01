@@ -1,0 +1,325 @@
+{
+  "unit": 2,
+  "title": "Familie & Zahlen",
+  "level": "A0",
+  "lessons": [
+    {
+      "id": "u02_l01",
+      "title": "Meine Familie",
+      "vocab": [
+        {"ceb": "pamilya", "de": "Familie"},
+        {"ceb": "mama", "de": "Mama", "note": "so nennt man auch die Ehefrau als Mutter des Kindes"},
+        {"ceb": "papa", "de": "Papa"},
+        {"ceb": "inahan", "de": "Mutter"},
+        {"ceb": "amahan", "de": "Vater"},
+        {"ceb": "igsoon", "de": "Geschwister (Bruder/Schwester)", "note": "igsoong babaye = Schwester, igsoong lalaki = Bruder"},
+        {"ceb": "babaye", "de": "Frau; weiblich"},
+        {"ceb": "lalaki", "de": "Mann; männlich"},
+        {"ceb": "mga", "de": "(Pluralmarker)", "note": "mga anak = Kinder, mga bata = Kinder. Ausgesprochen manga."},
+        {"ceb": "nga", "de": "(Linker zwischen Wörtern); dass", "note": "anak nga babaye = Tochter; gwapa nga babaye = hübsche Frau. Nach Vokal oft -ng: gwapang babaye."}
+      ],
+      "grammar": {
+        "title": "nga verbindet, mga macht Mehrzahl",
+        "text": "Nga verbindet zwei Wörter zu einem Begriff: anak nga babaye = Tochter (wörtlich: Kind, das weiblich ist), anak nga lalaki = Sohn, igsoon nga babaye = Schwester. Nach einem Vokal hängt man statt nga meistens nur -ng an: gwapang babaye = hübsche Frau, igsoong lalaki = Bruder. Die Mehrzahl bildet man mit mga (gesprochen „manga“) vor dem Nomen: mga anak = Kinder, akong mga igsoon = meine Geschwister. Inahan und amahan sind die neutralen Wörter für Mutter und Vater, zu Hause sagt man einfach Mama und Papa."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "anak nga babaye", "direction": "ceb_de", "options": ["Tochter", "Sohn", "Schwester", "Mutter"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "akong mga igsoon", "direction": "ceb_de", "options": ["meine Geschwister", "mein Bruder", "meine Eltern", "meine Kinder"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "pamilya", "de": "Familie"},
+          {"ceb": "inahan", "de": "Mutter"},
+          {"ceb": "amahan", "de": "Vater"},
+          {"ceb": "babaye", "de": "Frau"},
+          {"ceb": "lalaki", "de": "Mann"}
+        ]},
+        {"type": "fill_blank", "prompt": "anak ___ lalaki", "translation": "Sohn", "options": ["nga", "mga", "ug"], "answer": 0},
+        {"type": "word_bank", "prompt": "Meine Familie ist aus Cebu.", "tokens": ["Taga-Cebu", "akong", "pamilya", "imong", "mga"], "answer": ["Taga-Cebu", "akong", "pamilya"]},
+        {"type": "true_false", "statement": "igsoon nga babaye", "translation": "Schwester", "answer": true},
+        {"type": "type_answer", "prompt": "Tochter", "answer": "anak nga babaye", "accepted": ["anak nga babaye"]},
+        {"type": "multiple_choice", "prompt": "Familie", "direction": "de_ceb", "options": ["pamilya", "inahan", "igsoon", "babaye"], "answer": 0},
+        {"type": "fill_blank", "prompt": "akong ___ anak", "translation": "meine Kinder", "options": ["mga", "nga", "si"], "answer": 0},
+        {"type": "word_bank", "prompt": "Sie ist meine Mutter.", "tokens": ["Siya", "akong", "inahan", "amahan", "ka"], "answer": ["Siya", "akong", "inahan"]},
+        {"type": "grammar_note", "title": "nga oder -ng?", "text": "Endet das erste Wort auf einen Vokal, wird nga meistens zu -ng angehängt: gwapa + nga + babaye = gwapang babaye, igsoon + nga + lalaki = igsoong lalaki. Nach einem Konsonanten bleibt nga ein eigenes Wort: anak nga babaye. Beides ist richtig, -ng klingt nur flüssiger."},
+        {"type": "true_false", "statement": "Buotan kaayo akong amahan.", "translation": "Mein Vater ist sehr nett.", "answer": true},
+        {"type": "type_answer", "prompt": "mein Bruder", "answer": "akong igsoong lalaki", "accepted": ["akong igsoon nga lalaki"]},
+        {"type": "multiple_choice", "prompt": "Gwapang babaye akong asawa.", "direction": "ceb_de", "options": ["Meine Frau ist eine hübsche Frau.", "Meine Frau ist sehr nett.", "Mein Mann ist hübsch.", "Meine Schwester ist hübsch."], "answer": 0},
+        {"type": "word_bank", "prompt": "Papa ist mein Vater.", "tokens": ["Si", "Papa", "akong", "amahan", "inahan", "ko"], "answer": ["Si", "Papa", "akong", "amahan"], "accepted": ["Akong amahan si Papa"]},
+        {"type": "true_false", "statement": "mga lalaki", "translation": "Frauen", "answer": false, "correction": "Männer"},
+        {"type": "fill_blank", "prompt": "Kumusta imong ___, Mama?", "translation": "Wie geht es deiner Familie, Mama?", "options": ["pamilya", "babaye", "ngalan"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "igsoon", "de": "Geschwister"},
+          {"ceb": "anak", "de": "Kind"},
+          {"ceb": "mama", "de": "Mama"},
+          {"ceb": "papa", "de": "Papa"},
+          {"ceb": "mga", "de": "Mehrzahl-Wort"}
+        ]}
+      ],
+      "surprise": {"ceb": "Ikaw ug si Inday akong pamilya, Langga.", "de": "Du und Inday seid meine Familie, Schatz.", "when": "Wenn ihr drei abends zusammen auf dem Sofa sitzt."}
+    },
+    {
+      "id": "u02_l02",
+      "title": "Oma, Opa und die Verwandten",
+      "vocab": [
+        {"ceb": "lola", "de": "Oma"},
+        {"ceb": "lolo", "de": "Opa"},
+        {"ceb": "apo", "de": "Enkelkind"},
+        {"ceb": "tiya", "de": "Tante"},
+        {"ceb": "tiyo", "de": "Onkel"},
+        {"ceb": "ugangan", "de": "Schwiegermutter; Schwiegervater", "note": "ugangan nga babaye / nga lalaki"},
+        {"ceb": "bayaw", "de": "Schwager; Schwägerin"},
+        {"ceb": "manghod", "de": "jüngeres Geschwister"},
+        {"ceb": "ginikanan", "de": "Eltern"},
+        {"ceb": "bata", "de": "Kind (kleines)", "note": "bata = Kind allgemein, anak = Kind von jemandem"}
+      ],
+      "grammar": {
+        "title": "Verwandte: babaye oder lalaki dazu",
+        "text": "Viele Verwandtschaftswörter sind geschlechtsneutral und bekommen bei Bedarf babaye oder lalaki mit dem Linker: igsoong babaye = Schwester, igsoong lalaki = Bruder, ugangan nga babaye = Schwiegermutter, ugangan nga lalaki = Schwiegervater. Manghod ist das jüngere Geschwister, apo das Enkelkind – für Lola und Lolo ist Inday ihr apo. Ginikanan heißt Eltern, also inahan ug amahan zusammen. Bata ist ein Kind allgemein (gwapang bata = hübsches Kind), anak ist immer das Kind von jemandem (akong anak = mein Kind)."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "ugangan nga babaye", "direction": "ceb_de", "options": ["Schwiegermutter", "Schwiegervater", "Oma", "Tante"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "lola", "de": "Oma"},
+          {"ceb": "lolo", "de": "Opa"},
+          {"ceb": "tiya", "de": "Tante"},
+          {"ceb": "tiyo", "de": "Onkel"},
+          {"ceb": "apo", "de": "Enkelkind"}
+        ]},
+        {"type": "fill_blank", "prompt": "Si Lola akong ugangan ___ babaye.", "translation": "Lola ist meine Schwiegermutter.", "options": ["nga", "mga", "ug"], "answer": 0},
+        {"type": "word_bank", "prompt": "Inday ist ihr (Mehrzahl) Enkelkind.", "tokens": ["Ilang", "apo", "si", "Inday", "akong", "anak"], "answer": ["Ilang", "apo", "si", "Inday"]},
+        {"type": "true_false", "statement": "manghod", "translation": "älteres Geschwister", "answer": false, "correction": "jüngeres Geschwister"},
+        {"type": "type_answer", "prompt": "Tante", "answer": "tiya"},
+        {"type": "multiple_choice", "prompt": "Eltern", "direction": "de_ceb", "options": ["ginikanan", "ugangan", "igsoon", "bayaw"], "answer": 0},
+        {"type": "word_bank", "prompt": "Meine Eltern sind aus Deutschland.", "tokens": ["Taga-Germany", "akong", "ginikanan", "mga", "Taga-Cebu"], "answer": ["Taga-Germany", "akong", "ginikanan"], "accepted": ["Taga-Germany akong mga ginikanan"]},
+        {"type": "fill_blank", "prompt": "Buotan kaayo akong ___.", "translation": "Mein Schwager ist sehr nett.", "options": ["bayaw", "bata", "mga"], "answer": 0},
+        {"type": "grammar_note", "title": "Lola, Lolo, Inday, Dodong", "text": "Lola und Lolo sagt man nicht nur zu den eigenen Großeltern, sondern respektvoll zu jeder älteren Person. Inday ist die liebevolle Anrede für ein Mädchen oder eine jüngere Frau, Dodong die für einen Jungen. Deshalb heißt deine Tochter im Kurs einfach Inday."},
+        {"type": "multiple_choice", "prompt": "Gwapang bata si Inday.", "direction": "ceb_de", "options": ["Inday ist ein hübsches Kind.", "Inday ist ein kleines Kind.", "Inday ist meine Tochter.", "Inday ist sehr nett."], "answer": 0},
+        {"type": "true_false", "statement": "Siya akong tiyo.", "translation": "Er ist mein Onkel.", "answer": true},
+        {"type": "type_answer", "prompt": "mein jüngeres Geschwister", "answer": "akong manghod"},
+        {"type": "word_bank", "prompt": "Wer ist deine Schwiegermutter?", "tokens": ["Kinsa", "imong", "ugangan", "nga", "babaye", "lalaki", "akong"], "answer": ["Kinsa", "imong", "ugangan", "nga", "babaye"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "ugangan", "de": "Schwiegermutter / Schwiegervater"},
+          {"ceb": "bayaw", "de": "Schwager / Schwägerin"},
+          {"ceb": "manghod", "de": "jüngeres Geschwister"},
+          {"ceb": "ginikanan", "de": "Eltern"},
+          {"ceb": "bata", "de": "Kind (kleines)"}
+        ]},
+        {"type": "multiple_choice", "prompt": "Enkelkind", "direction": "de_ceb", "options": ["apo", "bata", "anak", "manghod"], "answer": 0},
+        {"type": "true_false", "statement": "Taga-Cebu akong mga bayaw.", "translation": "Meine Schwäger sind aus Cebu.", "answer": true},
+        {"type": "fill_blank", "prompt": "Kumusta imong ___, Lola?", "translation": "Wie geht es deinem Enkelkind, Lola?", "options": ["apo", "tiyo", "bayaw"], "answer": 0}
+      ],
+      "surprise": {"ceb": "Buotan kaayo imong mga ginikanan, Langga.", "de": "Deine Eltern sind sehr lieb, Schatz.", "when": "Nach einem Videoanruf mit ihrer Familie in Cebu."}
+    },
+    {
+      "id": "u02_l03",
+      "title": "Zahlen 1–10",
+      "vocab": [
+        {"ceb": "usa", "de": "eins", "note": "usa ka anak = ein Kind"},
+        {"ceb": "duha", "de": "zwei"},
+        {"ceb": "tulo", "de": "drei"},
+        {"ceb": "upat", "de": "vier"},
+        {"ceb": "lima", "de": "fünf"},
+        {"ceb": "unom", "de": "sechs"},
+        {"ceb": "pito", "de": "sieben"},
+        {"ceb": "walo", "de": "acht"},
+        {"ceb": "siyam", "de": "neun"},
+        {"ceb": "napulo", "de": "zehn"}
+      ],
+      "grammar": {
+        "title": "Zahl + ka + Nomen",
+        "text": "Beim Zählen von Dingen oder Personen steht zwischen Zahl und Nomen immer der Linker ka: usa ka anak = ein Kind, duha ka igsoon = zwei Geschwister, tulo ka amigo = drei Freunde. Das Nomen bleibt dabei in der Einzahl, mga braucht man nach einer Zahl nicht. Dieses ka ist nicht „du“, sondern nur der Linker – aus dem Zusammenhang ist das immer klar (pito ka bata = sieben Kinder). Die Zahlen 1–10 lauten usa, duha, tulo, upat, lima, unom, pito, walo, siyam, napulo."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "duha ka anak", "direction": "ceb_de", "options": ["zwei Kinder", "ein Kind", "zwei Geschwister", "drei Kinder"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "usa", "de": "eins"},
+          {"ceb": "duha", "de": "zwei"},
+          {"ceb": "tulo", "de": "drei"},
+          {"ceb": "upat", "de": "vier"},
+          {"ceb": "lima", "de": "fünf"}
+        ]},
+        {"type": "fill_blank", "prompt": "tulo ___ amigo", "translation": "drei Freunde", "options": ["ka", "nga", "mga"], "answer": 0},
+        {"type": "word_bank", "prompt": "fünf Geschwister", "tokens": ["lima", "ka", "igsoon", "upat", "mga"], "answer": ["lima", "ka", "igsoon"]},
+        {"type": "true_false", "statement": "siyam", "translation": "neun", "answer": true},
+        {"type": "type_answer", "prompt": "sieben", "answer": "pito"},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "unom", "de": "sechs"},
+          {"ceb": "pito", "de": "sieben"},
+          {"ceb": "walo", "de": "acht"},
+          {"ceb": "siyam", "de": "neun"},
+          {"ceb": "napulo", "de": "zehn"}
+        ]},
+        {"type": "multiple_choice", "prompt": "acht Enkelkinder", "direction": "de_ceb", "options": ["walo ka apo", "upat ka apo", "walo ka bata", "walo ka tiya"], "answer": 0},
+        {"type": "fill_blank", "prompt": "6 = ___", "translation": "sechs", "options": ["unom", "usa", "upat"], "answer": 0},
+        {"type": "grammar_note", "title": "ka = du oder Linker?", "text": "Ka kennst du schon als „du“: Maestro ka? Zwischen Zahl und Nomen ist ka aber nur ein Linker ohne eigene Bedeutung: upat ka anak = vier Kinder. Beides kann sogar im selben Satz stehen, und Cebuano-Sprecher verwechseln es nie, weil die Stellung alles klärt."},
+        {"type": "word_bank", "prompt": "meine zwei Kinder", "tokens": ["akong", "duha", "ka", "anak", "tulo", "imong"], "answer": ["akong", "duha", "ka", "anak"]},
+        {"type": "true_false", "statement": "upat ka igsoon", "translation": "vier Geschwister", "answer": true},
+        {"type": "multiple_choice", "prompt": "Taga-Cebu akong tulo ka bayaw.", "direction": "ceb_de", "options": ["Meine drei Schwäger sind aus Cebu.", "Meine zwei Schwäger sind aus Cebu.", "Meine drei Tanten sind aus Cebu.", "Mein Schwager ist aus Cebu."], "answer": 0},
+        {"type": "type_answer", "prompt": "zehn", "answer": "napulo"},
+        {"type": "word_bank", "prompt": "sechs Freunde", "tokens": ["unom", "ka", "amigo", "unsa", "mga"], "answer": ["unom", "ka", "amigo"]},
+        {"type": "true_false", "statement": "walo", "translation": "sieben", "answer": false, "correction": "acht"},
+        {"type": "fill_blank", "prompt": "Buotan kaayo akong ___ ka manghod.", "translation": "Meine zwei jüngeren Geschwister sind sehr nett.", "options": ["duha", "tulo", "napulo"], "answer": 0},
+        {"type": "multiple_choice", "prompt": "neun", "direction": "de_ceb", "options": ["siyam", "siya", "pito", "upat"], "answer": 0}
+      ],
+      "surprise": {"ceb": "Duha ta, usa ka pamilya, Langga.", "de": "Wir zwei, eine Familie, Schatz.", "when": "Wenn ihr ein Selfie zu zweit macht – oder wenn du beim Zählen üben nicht weiterweißt."}
+    },
+    {
+      "id": "u02_l04",
+      "title": "Zahlen bis 100",
+      "vocab": [
+        {"ceb": "napulog", "de": "zehn-und- (11–19)", "note": "napulog usa = elf, napulog duha = zwölf … (aus napulo ug)"},
+        {"ceb": "kawhaan", "de": "zwanzig", "note": "kawhaan ug usa = 21"},
+        {"ceb": "katloan", "de": "dreißig"},
+        {"ceb": "kap-atan", "de": "vierzig"},
+        {"ceb": "kalim-an", "de": "fünfzig"},
+        {"ceb": "kan-uman", "de": "sechzig"},
+        {"ceb": "kapitoan", "de": "siebzig"},
+        {"ceb": "kawaloan", "de": "achtzig"},
+        {"ceb": "kasiyaman", "de": "neunzig"},
+        {"ceb": "gatos", "de": "hundert", "note": "usa ka gatos = 100, duha ka gatos = 200"}
+      ],
+      "grammar": {
+        "title": "napulog usa, kawhaan ug usa, usa ka gatos",
+        "text": "Für 11 bis 19 hängt man an napulo ein -g (von ug) und dann die Einerzahl: napulog usa = 11, napulog lima = 15. Ab 20 heißt es Zehner + ug + Einer: kawhaan ug usa = 21, katloan ug lima = 35, kasiyaman ug siyam = 99. Hundert zählt man wie ein Nomen mit ka: usa ka gatos = 100, duha ka gatos = 200. In den Zehnern kawhaan, katloan, kap-atan, kalim-an, kan-uman, kapitoan, kawaloan und kasiyaman steckt jeweils die Einerzahl (ka-lim-an von lima, ka-pito-an von pito), nur kawhaan ist unregelmäßig."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "kawhaan ug usa", "direction": "ceb_de", "options": ["21", "12", "31", "20"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "kawhaan", "de": "20"},
+          {"ceb": "katloan", "de": "30"},
+          {"ceb": "kap-atan", "de": "40"},
+          {"ceb": "kalim-an", "de": "50"},
+          {"ceb": "kan-uman", "de": "60"}
+        ]},
+        {"type": "fill_blank", "prompt": "napulog ___ = 15", "translation": "fünfzehn", "options": ["lima", "usa", "walo"], "answer": 0},
+        {"type": "word_bank", "prompt": "zweiundvierzig (42)", "tokens": ["kap-atan", "ug", "duha", "kawhaan", "upat"], "answer": ["kap-atan", "ug", "duha"]},
+        {"type": "true_false", "statement": "kalim-an ug lima", "translation": "fünfundfünfzig (55)", "answer": true},
+        {"type": "type_answer", "prompt": "dreißig", "answer": "katloan"},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "kapitoan", "de": "70"},
+          {"ceb": "kawaloan", "de": "80"},
+          {"ceb": "kasiyaman", "de": "90"},
+          {"ceb": "usa ka gatos", "de": "100"},
+          {"ceb": "napulog usa", "de": "11"}
+        ]},
+        {"type": "multiple_choice", "prompt": "hundert", "direction": "de_ceb", "options": ["usa ka gatos", "napulo ka gatos", "kasiyaman", "napulog usa"], "answer": 0},
+        {"type": "fill_blank", "prompt": "___ ug walo = 68", "translation": "achtundsechzig", "options": ["kan-uman", "kapitoan", "kawaloan"], "answer": 0},
+        {"type": "word_bank", "prompt": "siebenundneunzig (97)", "tokens": ["kasiyaman", "ug", "pito", "kapitoan", "siyam"], "answer": ["kasiyaman", "ug", "pito"]},
+        {"type": "grammar_note", "title": "Wann welche Zahlen?", "text": "Die Cebuano-Zahlen aus dieser Lektion nimmt man zum Zählen und fürs Alter: katloan ka bata = dreißig Kinder. Für Preise und Uhrzeiten benutzt man im Alltag dagegen die spanischen Zahlen (uno, dos, tres, baynte …), die kommen in Unit 3 und 4. Beides zu kennen ist normal, auf dem Markt in Cebu hörst du fast nur die spanischen."},
+        {"type": "true_false", "statement": "kawaloan", "translation": "siebzig", "answer": false, "correction": "achtzig"},
+        {"type": "type_answer", "prompt": "zwölf", "answer": "napulog duha"},
+        {"type": "multiple_choice", "prompt": "duha ka gatos", "direction": "ceb_de", "options": ["200", "2", "100", "20"], "answer": 0},
+        {"type": "word_bank", "prompt": "dreißig Kinder (in der Klasse)", "tokens": ["katloan", "ka", "bata", "kawhaan", "mga", "nga"], "answer": ["katloan", "ka", "bata"]},
+        {"type": "fill_blank", "prompt": "kawhaan ug ___ = 29", "translation": "neunundzwanzig", "options": ["siyam", "siya", "pito"], "answer": 0},
+        {"type": "true_false", "statement": "napulog tulo", "translation": "dreizehn (13)", "answer": true},
+        {"type": "multiple_choice", "prompt": "vierundvierzig (44)", "direction": "de_ceb", "options": ["kap-atan ug upat", "kap-atan ug duha", "kawhaan ug upat", "upat ka gatos"], "answer": 0}
+      ],
+      "surprise": {"ceb": "Usa ka gatos ka tuig kauban nimo, sige?", "de": "Hundert Jahre zusammen mit dir, okay?", "when": "Beim Anstoßen oder am Hochzeitstag – tuig = Jahr, kauban = zusammen mit (kommt in den nächsten Lektionen)."}
+    },
+    {
+      "id": "u02_l05",
+      "title": "Wie alt bist du?",
+      "vocab": [
+        {"ceb": "pila", "de": "wie viel; wie viele", "note": "Pila ka tuig ka na? = Wie alt bist du?"},
+        {"ceb": "tuig", "de": "Jahr"},
+        {"ceb": "edad", "de": "Alter"},
+        {"ceb": "na", "de": "schon; jetzt", "note": "Katloan ko na = Ich bin schon 30. Gegenteil pa = noch (Unit 9/11)."},
+        {"ceb": "kini", "de": "dies; das hier", "note": "Kurzform ni: Kini si Mama. / Mao ni akong asawa."},
+        {"ceb": "kana", "de": "das (bei dir)", "note": "Kurzform na (Vorsicht: na heißt auch schon)"},
+        {"ceb": "kadto", "de": "jenes (dort drüben)", "note": "Kurzform to"},
+        {"ceb": "mao", "de": "das ist (es); genau", "note": "Mao ni akong anak = Das ist mein Kind. Mao na! = Genau! / Das war's."},
+        {"ceb": "ang", "de": "der; die; das (Marker)", "note": "markiert das Satzthema: Kini ang akong balay."},
+        {"ceb": "gamay", "de": "klein; wenig", "note": "Mehrzahl: gagmay"}
+      ],
+      "grammar": {
+        "title": "Pila ka tuig ka na? – kini, kana, kadto",
+        "text": "Nach dem Alter fragt man mit pila (wie viele) und ka tuig (Jahre): „Pila ka tuig ka na?“ heißt wörtlich: Wie viele Jahre bist du schon? Die Antwort: Katloan ug lima ka tuig na ko = Ich bin 35, oder kurz Katloan ug lima na ko. Na heißt „schon/jetzt“ und steht wie ko und ka nach dem ersten Satzglied. Kini (das hier, bei mir), kana (das da, bei dir) und kadto (das dort drüben) zeigen auf Personen und Dinge, ang markiert dabei das Satzthema: Kini ang akong anak = Das ist mein Kind, Kadto si Lola = Das dort ist Oma. Mao bestätigt oder stellt vor: Mao kini ang akong asawa = Das ist meine Frau, und ein zufriedenes „Mao na!“ heißt „Genau!“ oder „Das war's“."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Pila ka tuig ka na?", "direction": "ceb_de", "options": ["Wie alt bist du?", "Wie viele Kinder hast du?", "Wie heißt du?", "Wie geht es dir?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich bin 35.", "tokens": ["Katloan", "ug", "lima", "ka", "tuig", "na", "ko", "kawhaan", "pila"], "answer": ["Katloan", "ug", "lima", "ka", "tuig", "na", "ko"], "accepted": ["Katloan ug lima na ko"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "kini", "de": "das hier"},
+          {"ceb": "kana", "de": "das (bei dir)"},
+          {"ceb": "kadto", "de": "jenes (dort drüben)"},
+          {"ceb": "tuig", "de": "Jahr"},
+          {"ceb": "edad", "de": "Alter"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ ka tuig ka na, Inday?", "translation": "Wie alt bist du, Inday?", "options": ["Pila", "Kinsa", "Unsa"], "answer": 0},
+        {"type": "true_false", "statement": "Kini ang akong asawa.", "translation": "Das ist meine Frau.", "answer": true},
+        {"type": "type_answer", "prompt": "Wie alt bist du?", "answer": "Pila ka tuig ka na?", "accepted": ["Pila na ang imong edad?"]},
+        {"type": "multiple_choice", "prompt": "Das dort ist Oma.", "direction": "de_ceb", "options": ["Kadto si Lola.", "Kini si Lola.", "Kana si Lola.", "Mao si Lola."], "answer": 0},
+        {"type": "grammar_note", "title": "na = schon, aber auch kana", "text": "Na steht nach dem ersten Satzglied und heißt „schon“ oder „jetzt“: Lima ka tuig na si Inday = Inday ist schon fünf. Gleichzeitig ist na die Kurzform von kana (das da): Unsa na? = Was ist das? Welche Bedeutung gemeint ist, verrät die Stellung – schon-na klebt am Satzanfang, kana-na steht dort, wo ein Nomen stehen würde."},
+        {"type": "word_bank", "prompt": "Inday ist drei (Jahre alt).", "tokens": ["Tulo", "ka", "tuig", "na", "si", "Inday", "duha", "kana"], "answer": ["Tulo", "ka", "tuig", "na", "si", "Inday"]},
+        {"type": "fill_blank", "prompt": "Lima ka tuig ___ si Inday.", "translation": "Inday ist schon fünf.", "options": ["na", "nga", "mga"], "answer": 0},
+        {"type": "true_false", "statement": "Kana ang imong amiga?", "translation": "Ist das (da) deine Freundin?", "answer": true},
+        {"type": "type_answer", "prompt": "Das ist mein Kind.", "answer": "Kini ang akong anak.", "accepted": ["Mao kini ang akong anak", "Kini akong anak"]},
+        {"type": "multiple_choice", "prompt": "Gamay kaayo ang bata.", "direction": "ceb_de", "options": ["Das Kind ist sehr klein.", "Das Kind ist sehr hübsch.", "Das Kind ist sehr nett.", "Das Kind ist sehr groß."], "answer": 0},
+        {"type": "word_bank", "prompt": "Wie alt ist deine Mutter?", "tokens": ["Pila", "ka", "tuig", "na", "ang", "imong", "inahan", "amahan", "kini"], "answer": ["Pila", "ka", "tuig", "na", "ang", "imong", "inahan"]},
+        {"type": "fill_blank", "prompt": "Katloan ka tuig na ang ___ asawa.", "translation": "Meine Frau ist 30.", "options": ["akong", "imong", "iyang"], "answer": 0},
+        {"type": "true_false", "statement": "Mao na!", "translation": "Genau!", "answer": true},
+        {"type": "multiple_choice", "prompt": "Unsa kana?", "direction": "ceb_de", "options": ["Was ist das (da)?", "Wer ist das?", "Wie alt ist das?", "Was ist das hier?"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "pila", "de": "wie viele"},
+          {"ceb": "na", "de": "schon"},
+          {"ceb": "mao", "de": "das ist es; genau"},
+          {"ceb": "ang", "de": "der / die / das (Marker)"},
+          {"ceb": "gamay", "de": "klein"}
+        ]}
+      ],
+      "surprise": {"ceb": "Mao kini ang akong gwapang asawa.", "de": "Das ist meine hübsche Frau.", "when": "Wenn du sie Kollegen oder Freunden vorstellst – gwapang = gwapa + -ng."}
+    },
+    {
+      "id": "u02_l06",
+      "title": "Das ist meine Familie",
+      "vocab": [
+        {"ceb": "dako", "de": "groß", "note": "Mehrzahl: dagko"},
+        {"ceb": "bag-o", "de": "neu"},
+        {"ceb": "ni", "de": "von (vor Namen)", "note": "balay ni Mama = Mamas Haus. Auch Kurzform von kini."},
+        {"ceb": "tigulang", "de": "alt (Person)", "note": "alte Sachen: daan"},
+        {"ceb": "batan-on", "de": "jung"},
+        {"ceb": "gwapo", "de": "hübsch (Mann)"},
+        {"ceb": "minyo", "de": "verheiratet", "note": "Minyo na ko = Ich bin verheiratet"},
+        {"ceb": "kauban", "de": "zusammen mit; Begleiter", "note": "Kauban nako akong asawa = Meine Frau ist bei mir"},
+        {"ceb": "puyo", "de": "wohnen", "note": "Nagpuyo mi sa Sauerland = Wir wohnen im Sauerland"},
+        {"ceb": "sa", "de": "in; an; auf; zu; nach (Orts- und Zeitmarker)", "note": "sa balay = zu Hause, sa Lunes = am Montag"}
+      ],
+      "grammar": {
+        "title": "ni vor Namen, nagpuyo sa …",
+        "text": "Ni steht vor Namen und zeigt Besitz: anak ni Mama = Mamas Kind, asawa ni Tim = Tims Frau (bei Pronomen sagt man dagegen akong, imong). Wohnen ist puyo, mit nag- wird daraus ein Satz: Nagpuyo mi sa Sauerland = Wir wohnen im Sauerland, Nagpuyo si Lola sa Cebu = Oma wohnt in Cebu. Sa ist das Allzweck-Wort für Ort und Zeit: in, an, auf, zu, nach. Mit na sagst du, was inzwischen so ist: Minyo na ko = Ich bin verheiratet, Dako na si Inday = Inday ist schon groß. Gwapo ist das männliche Gegenstück zu gwapa, tigulang und batan-on (alt und jung) gelten nur für Personen."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Nagpuyo mi sa Sauerland.", "direction": "ceb_de", "options": ["Wir wohnen im Sauerland.", "Wir kommen aus dem Sauerland.", "Wir fahren ins Sauerland.", "Ihr wohnt im Sauerland."], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich bin verheiratet.", "tokens": ["Minyo", "na", "ko", "ka", "dili"], "answer": ["Minyo", "na", "ko"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "dako", "de": "groß"},
+          {"ceb": "bag-o", "de": "neu"},
+          {"ceb": "tigulang", "de": "alt (Person)"},
+          {"ceb": "batan-on", "de": "jung"},
+          {"ceb": "gwapo", "de": "hübsch (Mann)"}
+        ]},
+        {"type": "fill_blank", "prompt": "anak ___ Mama", "translation": "Mamas Kind", "options": ["ni", "si", "nga"], "answer": 0},
+        {"type": "true_false", "statement": "Tigulang na si Lolo.", "translation": "Opa ist schon alt.", "answer": true},
+        {"type": "type_answer", "prompt": "Wir wohnen im Sauerland.", "answer": "Nagpuyo mi sa Sauerland", "accepted": ["Nagpuyo kami sa Sauerland"]},
+        {"type": "multiple_choice", "prompt": "Mamas Familie", "direction": "de_ceb", "options": ["pamilya ni Mama", "pamilya si Mama", "akong pamilya", "mga pamilya"], "answer": 0},
+        {"type": "grammar_note", "title": "si oder ni?", "text": "Si markiert einen Namen als Satzthema: Kini si Mama = Das ist Mama. Ni zeigt an, dass etwas zu dieser Person gehört: anak ni Mama = Mamas Kind, e-bike ni Tim = Tims E-Bike. Merkhilfe: si = die Person selbst, ni = von der Person."},
+        {"type": "word_bank", "prompt": "Oma wohnt in Cebu.", "tokens": ["Nagpuyo", "si", "Lola", "sa", "Cebu", "ni", "mi"], "answer": ["Nagpuyo", "si", "Lola", "sa", "Cebu"]},
+        {"type": "fill_blank", "prompt": "Gwapo kaayo ang ___ ni Mama.", "translation": "Mamas Mann ist sehr hübsch.", "options": ["bana", "asawa", "anak"], "answer": 0},
+        {"type": "true_false", "statement": "Batan-on kaayo akong asawa.", "translation": "Meine Frau ist sehr alt.", "answer": false, "correction": "Meine Frau ist sehr jung."},
+        {"type": "type_answer", "prompt": "Ich bin verheiratet.", "answer": "Minyo na ko"},
+        {"type": "multiple_choice", "prompt": "Kauban nako akong asawa.", "direction": "ceb_de", "options": ["Meine Frau ist bei mir.", "Meine Frau wohnt bei Oma.", "Meine Frau ist verheiratet.", "Meine Frau ist jung."], "answer": 0},
+        {"type": "word_bank", "prompt": "Das ist Indays neuer Freund.", "tokens": ["Kini", "ang", "bag-o", "nga", "amigo", "ni", "Inday", "si", "dako"], "answer": ["Kini", "ang", "bag-o", "nga", "amigo", "ni", "Inday"]},
+        {"type": "fill_blank", "prompt": "___ na si Inday.", "translation": "Inday ist schon groß.", "options": ["Dako", "Gamay", "Bag-o"], "answer": 0},
+        {"type": "true_false", "statement": "Minyo na si Tim.", "translation": "Tim ist noch nicht verheiratet.", "answer": false, "correction": "Tim ist schon verheiratet."},
+        {"type": "multiple_choice", "prompt": "Oma und Opa sind schon alt.", "direction": "de_ceb", "options": ["Tigulang na si Lola ug si Lolo.", "Batan-on na si Lola ug si Lolo.", "Dako na si Lola ug si Lolo.", "Minyo na si Lola ug si Lolo."], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "ni", "de": "von (vor Namen)"},
+          {"ceb": "minyo", "de": "verheiratet"},
+          {"ceb": "kauban", "de": "zusammen mit"},
+          {"ceb": "puyo", "de": "wohnen"},
+          {"ceb": "sa", "de": "in / an / zu"}
+        ]}
+      ],
+      "surprise": {"ceb": "Minyo na ko, ug gwapa kaayo akong asawa.", "de": "Ich bin verheiratet, und meine Frau ist sehr hübsch.", "when": "Wenn dich jemand fragt, ob du verheiratet bist – laut genug, dass sie es hört."}
+    }
+  ]
+}
