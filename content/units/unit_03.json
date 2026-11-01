@@ -1,0 +1,325 @@
+{
+  "unit": 3,
+  "title": "Essen & Trinken, Einkaufen",
+  "level": "A0",
+  "lessons": [
+    {
+      "id": "u03_l01",
+      "title": "Essen",
+      "vocab": [
+        {"ceb": "pagkaon", "de": "Essen (Speise)"},
+        {"ceb": "kaon", "de": "essen", "note": "Kaon ta! = Lass uns essen! Mokaon ko = Ich werde essen."},
+        {"ceb": "tubig", "de": "Wasser"},
+        {"ceb": "kan-on", "de": "Reis (gekocht)", "note": "roher Reis: bugas"},
+        {"ceb": "isda", "de": "Fisch"},
+        {"ceb": "karne", "de": "Fleisch"},
+        {"ceb": "manok", "de": "Huhn; Hähnchen"},
+        {"ceb": "baboy", "de": "Schwein; Schweinefleisch"},
+        {"ceb": "itlog", "de": "Ei"},
+        {"ceb": "lami", "de": "lecker", "note": "Lami kaayo! = Sehr lecker!"}
+      ],
+      "grammar": {
+        "title": "Kaon ta! – Lami ang isda",
+        "text": "Das Wort kaon (essen) brauchst du jeden Tag: „Kaon ta!“ heißt „Lass uns essen!“ und ist die Einladung an den Tisch, mit ta (wir, du und ich). Wenn du sagen willst, was du isst, kommt ug davor: „Mokaon ko ug isda“ = Ich esse Fisch. Ang markiert, worüber der Satz spricht: „Lami ang isda“ = Der Fisch ist lecker – zuerst die Eigenschaft, dann ang und das Thema. Ohne ang wird es zur Beschreibung: lami nga isda = leckerer Fisch. Zum Loben am Tisch reicht „Lami kaayo!“ – Sehr lecker!"
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Kaon ta!", "direction": "ceb_de", "options": ["Lass uns essen!", "Ich esse schon.", "Iss du!", "Das Essen ist lecker."], "answer": 0},
+        {"type": "multiple_choice", "prompt": "Fisch", "direction": "de_ceb", "options": ["isda", "karne", "manok", "baboy"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "isda", "de": "Fisch"},
+          {"ceb": "karne", "de": "Fleisch"},
+          {"ceb": "manok", "de": "Huhn"},
+          {"ceb": "baboy", "de": "Schwein"},
+          {"ceb": "itlog", "de": "Ei"}
+        ]},
+        {"type": "word_bank", "prompt": "Der Fisch ist lecker.", "tokens": ["Lami", "ang", "isda", "karne", "kaayo"], "answer": ["Lami", "ang", "isda"]},
+        {"type": "fill_blank", "prompt": "Lami ___ ang manok!", "translation": "Das Hähnchen ist sehr lecker!", "options": ["kaayo", "ra", "pud"], "answer": 0},
+        {"type": "true_false", "statement": "Kan-on ug isda", "translation": "Reis und Fisch", "answer": true},
+        {"type": "type_answer", "prompt": "Wasser", "answer": "tubig"},
+        {"type": "grammar_note", "title": "ang = das Satzthema", "text": "Ang steht vor dem, worüber gesprochen wird, und kommt meist nach der Aussage: Lami ang isda (Der Fisch ist lecker), Lami ang pagkaon ni Mama (Mamas Essen ist lecker). Ein „ist“ brauchst du nicht – wie bei Maestro ko."},
+        {"type": "word_bank", "prompt": "Lass uns essen, Inday!", "tokens": ["Kaon", "ta", "Inday", "ko", "tubig"], "answer": ["Kaon", "ta", "Inday"]},
+        {"type": "multiple_choice", "prompt": "Lami kaayo ang pagkaon ni Mama.", "direction": "ceb_de", "options": ["Mamas Essen ist sehr lecker.", "Mama isst sehr viel.", "Mama kocht gerade Fisch.", "Das Essen ist für Mama."], "answer": 0},
+        {"type": "fill_blank", "prompt": "Mokaon ko ug ___.", "translation": "Ich esse ein Ei.", "options": ["itlog", "tubig", "lami"], "answer": 0},
+        {"type": "true_false", "statement": "baboy", "translation": "Huhn", "answer": false, "correction": "Schwein; Schweinefleisch"},
+        {"type": "type_answer", "prompt": "Lass uns essen!", "answer": "Kaon ta!"},
+        {"type": "multiple_choice", "prompt": "Reis (gekocht)", "direction": "de_ceb", "options": ["kan-on", "itlog", "karne", "tubig"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich esse Fleisch und Reis.", "tokens": ["Mokaon", "ko", "ug", "karne", "ug", "kan-on", "isda", "siya"], "answer": ["Mokaon", "ko", "ug", "karne", "ug", "kan-on"]},
+        {"type": "true_false", "statement": "Dili ko mokaon ug baboy.", "translation": "Ich esse kein Schweinefleisch.", "answer": true},
+        {"type": "fill_blank", "prompt": "Lami ang ___ ni Lola.", "translation": "Omas Essen ist lecker.", "options": ["pagkaon", "tubig", "itlog"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "pagkaon", "de": "Essen (Speise)"},
+          {"ceb": "tubig", "de": "Wasser"},
+          {"ceb": "kan-on", "de": "Reis (gekocht)"},
+          {"ceb": "lami", "de": "lecker"},
+          {"ceb": "kaon", "de": "essen"}
+        ]}
+      ],
+      "surprise": {"ceb": "Lami kaayo ang imong pagkaon, Langga.", "de": "Dein Essen ist sehr lecker, Schatz.", "when": "Beim Abendessen, wenn sie gekocht hat – am besten mit vollem Mund und Daumen hoch."}
+    },
+    {
+      "id": "u03_l02",
+      "title": "Trinken & Mahlzeiten",
+      "vocab": [
+        {"ceb": "inom", "de": "trinken", "note": "Moinom ko ug tubig."},
+        {"ceb": "kape", "de": "Kaffee"},
+        {"ceb": "gatas", "de": "Milch"},
+        {"ceb": "tsa", "de": "Tee", "note": "vom spanischen/chinesischen cha; oft auch tsaa"},
+        {"ceb": "pamahaw", "de": "Frühstück", "note": "auch als Verb: mamahaw = frühstücken"},
+        {"ceb": "paniudto", "de": "Mittagessen"},
+        {"ceb": "panihapon", "de": "Abendessen"},
+        {"ceb": "gutom", "de": "hungrig", "note": "Gutom ko = Ich habe Hunger"},
+        {"ceb": "uhaw", "de": "durstig"},
+        {"ceb": "busog", "de": "satt", "note": "Busog na ko = Ich bin satt"}
+      ],
+      "grammar": {
+        "title": "Zustände ohne „sein“: Gutom ko",
+        "text": "Wie du bist, sagst du ohne „bin“ – Zustand zuerst, dann das Pronomen: „Gutom ko“ = Ich habe Hunger, „Uhaw ko“ = Ich habe Durst, „Busog ko“ = Ich bin satt. Mit na (schon) klingt es nach einer Veränderung: „Busog na ko“ = Ich bin jetzt satt. Als Frage einfach mit ka: „Gutom ka, Inday?“ = Hast du Hunger, Inday? Trinken geht wie essen mit ug: „Moinom ko ug kape“ = Ich trinke Kaffee. Die drei Mahlzeiten heißen pamahaw, paniudto und panihapon – da steckt udto (Mittag) und hapon (Nachmittag) drin."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Gutom ko.", "direction": "ceb_de", "options": ["Ich habe Hunger.", "Ich habe Durst.", "Ich bin satt.", "Ich bin müde."], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich bin schon satt.", "tokens": ["Busog", "na", "ko", "gutom", "ka"], "answer": ["Busog", "na", "ko"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "kape", "de": "Kaffee"},
+          {"ceb": "gatas", "de": "Milch"},
+          {"ceb": "tsa", "de": "Tee"},
+          {"ceb": "tubig", "de": "Wasser"},
+          {"ceb": "inom", "de": "trinken"}
+        ]},
+        {"type": "fill_blank", "prompt": "Moinom ko ug ___.", "translation": "Ich trinke Kaffee.", "options": ["kape", "kan-on", "itlog"], "answer": 0},
+        {"type": "true_false", "statement": "Uhaw ko.", "translation": "Ich habe Hunger.", "answer": false, "correction": "Ich habe Durst."},
+        {"type": "type_answer", "prompt": "Frühstück", "answer": "pamahaw"},
+        {"type": "multiple_choice", "prompt": "Abendessen", "direction": "de_ceb", "options": ["panihapon", "paniudto", "pamahaw", "pagkaon"], "answer": 0},
+        {"type": "word_bank", "prompt": "Hast du Durst, Inday?", "tokens": ["Uhaw", "ka", "Inday", "ko", "busog"], "answer": ["Uhaw", "ka", "Inday"]},
+        {"type": "fill_blank", "prompt": "Busog ___ ko, salamat.", "translation": "Ich bin schon satt, danke.", "options": ["na", "ra", "pud"], "answer": 0},
+        {"type": "grammar_note", "title": "na = schon / jetzt", "text": "Na kennst du aus Katloan ko na (Ich bin schon 30). Bei Zuständen zeigt es, dass sich etwas geändert hat: Busog na ko = Ich bin jetzt satt, Gutom na ko = Ich habe jetzt Hunger. Es steht direkt nach dem ersten Wort."},
+        {"type": "true_false", "statement": "Kape ug gatas", "translation": "Kaffee und Milch", "answer": true},
+        {"type": "type_answer", "prompt": "Ich habe Hunger.", "answer": "Gutom ko"},
+        {"type": "multiple_choice", "prompt": "Paniudto na, Inday! Kaon ta!", "direction": "ceb_de", "options": ["Es gibt Mittagessen, Inday! Lass uns essen!", "Es gibt Frühstück, Inday! Komm trinken!", "Gute Nacht, Inday! Schlaf gut!", "Bist du satt, Inday? Dann iss!"], "answer": 0},
+        {"type": "word_bank", "prompt": "Mama trinkt Tee.", "tokens": ["Moinom", "si", "Mama", "ug", "tsa", "kape", "ko"], "answer": ["Moinom", "si", "Mama", "ug", "tsa"]},
+        {"type": "true_false", "statement": "Gutom na si Papa.", "translation": "Papa hat jetzt Hunger.", "answer": true},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "pamahaw", "de": "Frühstück"},
+          {"ceb": "paniudto", "de": "Mittagessen"},
+          {"ceb": "panihapon", "de": "Abendessen"},
+          {"ceb": "gutom", "de": "hungrig"},
+          {"ceb": "busog", "de": "satt"}
+        ]},
+        {"type": "type_answer", "prompt": "Milch", "answer": "gatas"},
+        {"type": "fill_blank", "prompt": "Lami ang ___ ni Mama.", "translation": "Mamas Frühstück ist lecker.", "options": ["pamahaw", "uhaw", "gutom"], "answer": 0}
+      ],
+      "surprise": {"ceb": "Gutom na ko, Langga. Unsa atong panihapon?", "de": "Ich habe jetzt Hunger, Schatz. Was gibt es bei uns zum Abendessen?", "when": "Wenn du aus der Schule kommst – und am besten gleich anbieten, selbst zu kochen."}
+    },
+    {
+      "id": "u03_l03",
+      "title": "Mögen und wollen",
+      "vocab": [
+        {"ceb": "gusto", "de": "mögen; wollen", "note": "Gusto ko ug kape = Ich möchte Kaffee. Gusto ko mokaon = Ich will essen."},
+        {"ceb": "tam-is", "de": "süß"},
+        {"ceb": "parat", "de": "salzig"},
+        {"ceb": "halang", "de": "scharf (Essen)"},
+        {"ceb": "aslom", "de": "sauer"},
+        {"ceb": "init", "de": "heiß; warm", "note": "Init ang kape. Init karon = Es ist heiß heute."},
+        {"ceb": "bugnaw", "de": "kalt (Sache)", "note": "kalt als Gefühl/Wetter: tugnaw (Unit 6)"},
+        {"ceb": "asukar", "de": "Zucker"},
+        {"ceb": "asin", "de": "Salz"},
+        {"ceb": "o", "de": "oder", "note": "Kape o tsa? = Kaffee oder Tee?"}
+      ],
+      "grammar": {
+        "title": "Gusto ko ug … / Gusto ko mo…",
+        "text": "Gusto heißt mögen und wollen zugleich, und danach gibt es zwei Wege: Kommt ein Ding, steht ug dazwischen – „Gusto ko ug kape“ = Ich möchte Kaffee. Kommt eine Tätigkeit, folgt das Verb mit mo- direkt – „Gusto ko mokaon“ = Ich will essen, „Gusto ko moinom ug tubig“ = Ich will Wasser trinken. Als Frage mit ka: „Gusto ka ug asukar?“ = Möchtest du Zucker? Zwei Möglichkeiten verbindet o: „Kape o tsa?“ = Kaffee oder Tee? Geschmack beschreibst du wie jeden Zustand: „Halang kaayo!“ = Sehr scharf!"
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Gusto ko ug kape.", "direction": "ceb_de", "options": ["Ich möchte Kaffee.", "Ich trinke Kaffee.", "Der Kaffee ist heiß.", "Möchtest du Kaffee?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich will essen.", "tokens": ["Gusto", "ko", "mokaon", "ug", "kaon"], "answer": ["Gusto", "ko", "mokaon"]},
+        {"type": "fill_blank", "prompt": "Kape ___ tsa?", "translation": "Kaffee oder Tee?", "options": ["o", "ug", "na"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "tam-is", "de": "süß"},
+          {"ceb": "parat", "de": "salzig"},
+          {"ceb": "halang", "de": "scharf"},
+          {"ceb": "aslom", "de": "sauer"},
+          {"ceb": "init", "de": "heiß"}
+        ]},
+        {"type": "true_false", "statement": "Aslom kaayo ang sinigang.", "translation": "Die Sinigang ist sehr scharf.", "answer": false, "correction": "Die Sinigang ist sehr sauer."},
+        {"type": "type_answer", "prompt": "Zucker", "answer": "asukar"},
+        {"type": "multiple_choice", "prompt": "kalt (Sache)", "direction": "de_ceb", "options": ["bugnaw", "init", "halang", "tam-is"], "answer": 0},
+        {"type": "word_bank", "prompt": "Möchtest du Zucker?", "tokens": ["Gusto", "ka", "ug", "asukar", "asin", "ko"], "answer": ["Gusto", "ka", "ug", "asukar"]},
+        {"type": "fill_blank", "prompt": "Gusto ko ___ tubig nga bugnaw.", "translation": "Ich möchte kaltes Wasser.", "options": ["ug", "o", "si"], "answer": 0},
+        {"type": "grammar_note", "title": "Ding oder Tätigkeit?", "text": "Nach gusto merkst du dir: Ding → ug (Gusto ko ug isda = Ich möchte Fisch), Tätigkeit → Verb mit mo- (Gusto ko mokaon ug isda = Ich will Fisch essen). Beides kann auch zusammen vorkommen – erst das Verb, dann ug und das Ding."},
+        {"type": "true_false", "statement": "Tam-is kaayo ang kape.", "translation": "Der Kaffee ist sehr süß.", "answer": true},
+        {"type": "type_answer", "prompt": "Kaffee oder Tee?", "answer": "Kape o tsa?"},
+        {"type": "multiple_choice", "prompt": "Init ang kape, Inday!", "direction": "ceb_de", "options": ["Der Kaffee ist heiß, Inday!", "Der Kaffee ist kalt, Inday!", "Trink den Kaffee, Inday!", "Der Kaffee ist süß, Inday!"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich will Fisch essen.", "tokens": ["Gusto", "ko", "mokaon", "ug", "isda", "karne", "moinom"], "answer": ["Gusto", "ko", "mokaon", "ug", "isda"]},
+        {"type": "true_false", "statement": "Parat ang isda.", "translation": "Der Fisch ist salzig.", "answer": true},
+        {"type": "fill_blank", "prompt": "Gusto ko ug kape nga ___.", "translation": "Ich möchte heißen Kaffee.", "options": ["init", "bugnaw", "parat"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "gusto", "de": "mögen; wollen"},
+          {"ceb": "asukar", "de": "Zucker"},
+          {"ceb": "asin", "de": "Salz"},
+          {"ceb": "bugnaw", "de": "kalt"},
+          {"ceb": "o", "de": "oder"}
+        ]},
+        {"type": "type_answer", "prompt": "Ich will essen.", "answer": "Gusto ko mokaon"}
+      ],
+      "surprise": {"ceb": "Gusto tika, Langga. Ug gusto pud ko ug kape.", "de": "Ich mag dich, Schatz. Und ich möchte auch einen Kaffee.", "when": "Sonntagmorgen in der Küche – tika heißt „ich … dich“ und kommt in Unit 12 richtig dran."}
+    },
+    {
+      "id": "u03_l04",
+      "title": "Obst, Gemüse, Lechon",
+      "vocab": [
+        {"ceb": "gulay", "de": "Gemüse"},
+        {"ceb": "prutas", "de": "Obst"},
+        {"ceb": "saging", "de": "Banane"},
+        {"ceb": "mangga", "de": "Mango"},
+        {"ceb": "pan", "de": "Brot"},
+        {"ceb": "keso", "de": "Käse"},
+        {"ceb": "kamatis", "de": "Tomate"},
+        {"ceb": "sibuyas", "de": "Zwiebel"},
+        {"ceb": "bir", "de": "Bier", "note": "vom englischen beer; auch serbesa"},
+        {"ceb": "lechon", "de": "Spanferkel (Festessen)", "note": "das Festessen schlechthin auf Cebu"}
+      ],
+      "grammar": {
+        "title": "Dili ko gusto … / Wala koy …",
+        "text": "Nicht mögen sagst du mit dili vor gusto: „Dili ko gusto ug bir“ = Ich mag kein Bier. Nicht haben sagst du mit wala: „Wala koy kape“ = Ich habe keinen Kaffee. Das koy ist ko + y, und dieses y ersetzt hier das ug – deshalb kein ug dahinter. Merke: dili = nicht wollen oder nicht sein, wala = nicht da sein. Haben ohne Verneinung kommt in Unit 5 (naa), bis dahin reicht „Gusto ko ug mangga“ = Ich möchte eine Mango."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Dili ko gusto ug bir.", "direction": "ceb_de", "options": ["Ich mag kein Bier.", "Ich habe kein Bier.", "Ich trinke Bier.", "Möchtest du Bier?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich habe keinen Kaffee.", "tokens": ["Wala", "koy", "kape", "dili", "ko"], "answer": ["Wala", "koy", "kape"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "saging", "de": "Banane"},
+          {"ceb": "mangga", "de": "Mango"},
+          {"ceb": "kamatis", "de": "Tomate"},
+          {"ceb": "sibuyas", "de": "Zwiebel"},
+          {"ceb": "keso", "de": "Käse"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ koy pan.", "translation": "Ich habe kein Brot.", "options": ["Wala", "Dili", "Oo"], "answer": 0},
+        {"type": "true_false", "statement": "Tam-is kaayo ang mangga.", "translation": "Die Mango ist sehr süß.", "answer": true},
+        {"type": "type_answer", "prompt": "Gemüse", "answer": "gulay"},
+        {"type": "multiple_choice", "prompt": "Obst", "direction": "de_ceb", "options": ["prutas", "gulay", "pan", "keso"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich mag keine Zwiebeln.", "tokens": ["Dili", "ko", "gusto", "ug", "sibuyas", "wala", "kamatis"], "answer": ["Dili", "ko", "gusto", "ug", "sibuyas"]},
+        {"type": "fill_blank", "prompt": "___ ko gusto ug bir, gusto ko ug tubig.", "translation": "Ich möchte kein Bier, ich möchte Wasser.", "options": ["Dili", "Wala", "Oo"], "answer": 0},
+        {"type": "grammar_note", "title": "koy = ko + y", "text": "Das kleine y hängt sich an Pronomen und ersetzt ug: Wala koy kape = Ich habe keinen Kaffee. Mit ka wird es kay, aber das sparen wir uns bis Unit 5 – für jetzt reicht: Wala koy … = Ich habe kein …"},
+        {"type": "true_false", "statement": "Lami kaayo ang lechon sa Cebu.", "translation": "Das Lechon in Cebu ist sehr lecker.", "answer": true},
+        {"type": "type_answer", "prompt": "Ich habe kein Brot.", "answer": "Wala koy pan"},
+        {"type": "multiple_choice", "prompt": "Gusto ka ug pan ug keso?", "direction": "ceb_de", "options": ["Möchtest du Brot und Käse?", "Magst du Brot oder Käse?", "Hast du Brot und Käse?", "Isst du Brot mit Käse?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Gemüse und Obst sind lecker.", "tokens": ["Lami", "ang", "gulay", "ug", "prutas", "karne", "bir"], "answer": ["Lami", "ang", "gulay", "ug", "prutas"]},
+        {"type": "true_false", "statement": "Wala koy gatas.", "translation": "Ich mag keine Milch.", "answer": false, "correction": "Ich habe keine Milch."},
+        {"type": "fill_blank", "prompt": "Mokaon ko ug ___ ug kamatis.", "translation": "Ich esse Zwiebeln und Tomaten.", "options": ["sibuyas", "saging", "bir"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "gulay", "de": "Gemüse"},
+          {"ceb": "prutas", "de": "Obst"},
+          {"ceb": "pan", "de": "Brot"},
+          {"ceb": "bir", "de": "Bier"},
+          {"ceb": "lechon", "de": "Spanferkel"}
+        ]},
+        {"type": "type_answer", "prompt": "Banane", "answer": "saging"}
+      ],
+      "surprise": {"ceb": "Ikaw ang akong lechon, Langga.", "de": "Du bist mein Lechon, Schatz.", "when": "Bei der Fiesta, wenn das Lechon auf den Tisch kommt – auf Cebu gibt es kaum ein größeres Kompliment."}
+    },
+    {
+      "id": "u03_l05",
+      "title": "Auf dem Markt",
+      "vocab": [
+        {"ceb": "palit", "de": "kaufen", "note": "Mopalit ko ug isda = Ich kaufe Fisch"},
+        {"ceb": "tindahan", "de": "Laden", "note": "kleiner Laden an der Straße: sari-sari store"},
+        {"ceb": "merkado", "de": "Markt"},
+        {"ceb": "presyo", "de": "Preis"},
+        {"ceb": "mahal", "de": "teuer", "note": "Auf Tagalog heißt mahal auch Liebe – auf Cebuano sagt man dafür gugma/palangga (Unit 11)"},
+        {"ceb": "barato", "de": "billig"},
+        {"ceb": "kwarta", "de": "Geld"},
+        {"ceb": "piso", "de": "Peso", "note": "Mehrzahl im Alltag: pesos"},
+        {"ceb": "bayad", "de": "bezahlen; Bezahlung"},
+        {"ceb": "tagpila", "de": "wie viel kostet", "note": "Tagpila kini? = Wie viel kostet das (pro Stück)?"}
+      ],
+      "grammar": {
+        "title": "Tagpila kini? – Mahal kaayo!",
+        "text": "Auf dem Markt fragst du mit tagpila nach dem Preis: „Tagpila kini?“ (Wie viel kostet das?) oder „Tagpila ang isda?“ (Wie viel kostet der Fisch?). Die Reaktion ist ein Zustand ohne „sein“, wie du es kennst: „Mahal kaayo!“ (Sehr teuer!) oder „Barato ra“ (Ist ja billig). Kaufen heißt palit, und was du kaufst, kommt wieder mit ug: „Mopalit ko ug isda sa merkado“ = Ich kaufe Fisch auf dem Markt. Sa zeigt dabei den Ort (Unit 2): sa tindahan = im Laden. Das Geld heißt kwarta, die Währung piso – im Alltag sagt man pesos."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Tagpila kini?", "direction": "ceb_de", "options": ["Wie viel kostet das?", "Was ist das?", "Wer ist das?", "Wie viele sind das?"], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich kaufe Fisch auf dem Markt.", "tokens": ["Mopalit", "ko", "ug", "isda", "sa", "merkado", "tindahan", "karne"], "answer": ["Mopalit", "ko", "ug", "isda", "sa", "merkado"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "mahal", "de": "teuer"},
+          {"ceb": "barato", "de": "billig"},
+          {"ceb": "kwarta", "de": "Geld"},
+          {"ceb": "presyo", "de": "Preis"},
+          {"ceb": "merkado", "de": "Markt"}
+        ]},
+        {"type": "fill_blank", "prompt": "___ kaayo!", "translation": "Sehr teuer!", "options": ["Mahal", "Barato", "Lami"], "answer": 0},
+        {"type": "true_false", "statement": "Barato ang saging.", "translation": "Die Bananen sind billig.", "answer": true},
+        {"type": "type_answer", "prompt": "Geld", "answer": "kwarta"},
+        {"type": "multiple_choice", "prompt": "Laden", "direction": "de_ceb", "options": ["tindahan", "merkado", "presyo", "piso"], "answer": 0},
+        {"type": "word_bank", "prompt": "Wie viel kostet die Mango?", "tokens": ["Tagpila", "ang", "mangga", "kini", "saging"], "answer": ["Tagpila", "ang", "mangga"]},
+        {"type": "fill_blank", "prompt": "Wala koy ___.", "translation": "Ich habe kein Geld.", "options": ["kwarta", "tindahan", "merkado"], "answer": 0},
+        {"type": "grammar_note", "title": "ug = das, was man kauft, isst, trinkt", "text": "Nach kaon, inom, gusto und palit markiert ug das Objekt – also das, was gegessen, getrunken, gewollt oder gekauft wird: Mopalit ko ug gulay = Ich kaufe Gemüse. Ein „ein/eine“ oder „etwas“ brauchst du nicht extra – das steckt im ug mit drin."},
+        {"type": "true_false", "statement": "Mahal kaayo ang lechon.", "translation": "Das Lechon ist sehr billig.", "answer": false, "correction": "Das Lechon ist sehr teuer."},
+        {"type": "type_answer", "prompt": "Wie viel kostet das?", "answer": "Tagpila kini?", "accepted": ["Tagpila ni?"]},
+        {"type": "multiple_choice", "prompt": "Mopalit ko ug gulay ug prutas sa merkado.", "direction": "ceb_de", "options": ["Ich kaufe Gemüse und Obst auf dem Markt.", "Ich esse Gemüse und Obst vom Markt.", "Ich verkaufe Gemüse und Obst auf dem Markt.", "Gemüse und Obst sind auf dem Markt billig."], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich bezahle jetzt.", "tokens": ["Mobayad", "na", "ko", "kwarta", "ka"], "answer": ["Mobayad", "na", "ko"]},
+        {"type": "true_false", "statement": "Barato ang kape sa tindahan.", "translation": "Der Kaffee im Laden ist billig.", "answer": true},
+        {"type": "fill_blank", "prompt": "Mahal ang ___ sa isda.", "translation": "Der Preis für den Fisch ist hoch.", "options": ["presyo", "kwarta", "bayad"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "palit", "de": "kaufen"},
+          {"ceb": "bayad", "de": "bezahlen"},
+          {"ceb": "tindahan", "de": "Laden"},
+          {"ceb": "piso", "de": "Peso"},
+          {"ceb": "tagpila", "de": "wie viel kostet"}
+        ]},
+        {"type": "type_answer", "prompt": "Sehr teuer!", "answer": "Mahal kaayo!"}
+      ],
+      "surprise": {"ceb": "Barato ang isda. Mahal kaayo ang akong gugma nimo, Langga.", "de": "Der Fisch ist billig. Meine Liebe zu dir ist sehr teuer (kostbar), Schatz.", "when": "Nach dem Markteinkauf – ein Wortspiel: mahal heißt auf Cebuano teuer, auf Tagalog aber Liebe. Gugma = Liebe."}
+    },
+    {
+      "id": "u03_l06",
+      "title": "Preise & Kochen",
+      "vocab": [
+        {"ceb": "luto", "de": "kochen", "note": "Magluto ko ug adobo = Ich koche Adobo"},
+        {"ceb": "sukli", "de": "Wechselgeld"},
+        {"ceb": "uno", "de": "eins (spanisch, für Preise/Uhrzeit)", "note": "Preise und Uhrzeiten werden mit spanischen Zahlen gesagt"},
+        {"ceb": "dos", "de": "zwei (spanisch)"},
+        {"ceb": "tres", "de": "drei (spanisch)"},
+        {"ceb": "kwatro", "de": "vier (spanisch)"},
+        {"ceb": "singko", "de": "fünf (spanisch)"},
+        {"ceb": "baynte", "de": "zwanzig (spanisch)", "note": "baynte pesos = 20 Peso"},
+        {"ceb": "singkwenta", "de": "fünfzig (spanisch)"},
+        {"ceb": "syento", "de": "hundert (spanisch)", "note": "syento pesos = 100 Peso; dos syentos = 200"}
+      ],
+      "grammar": {
+        "title": "Preise mit spanischen Zahlen",
+        "text": "Zum Zählen nimmst du die Cebuano-Zahlen aus Unit 2 (usa, duha, tulo), aber Preise sagt jeder mit den spanischen Zahlen: „Baynte pesos“ = 20 Peso, „Singkwenta pesos“ = 50 Peso, „Syento pesos“ = 100 Peso. Der Preis steht vorne, dann ang und die Ware: „Singkwenta pesos ang isda“ = Der Fisch kostet 50 Peso. Für 200 sagt man dos syentos, und das Wechselgeld heißt sukli. Kochen heißt luto, und mit mag- wird daraus „Magluto ko ug adobo“ = Ich koche Adobo. Mit gusto davor bleibt das mag-: „Gusto ko magluto ug sinigang“ = Ich will Sinigang kochen."
+      },
+      "exercises": [
+        {"type": "multiple_choice", "prompt": "Tagpila kini? – Baynte pesos.", "direction": "ceb_de", "options": ["Wie viel kostet das? – Zwanzig Peso.", "Wie viel kostet das? – Fünfzig Peso.", "Was ist das? – Zwanzig Stück.", "Wie viel kostet das? – Hundert Peso."], "answer": 0},
+        {"type": "word_bank", "prompt": "Ich koche Adobo.", "tokens": ["Magluto", "ko", "ug", "adobo", "sinigang", "mokaon"], "answer": ["Magluto", "ko", "ug", "adobo"]},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "uno", "de": "eins"},
+          {"ceb": "dos", "de": "zwei"},
+          {"ceb": "tres", "de": "drei"},
+          {"ceb": "kwatro", "de": "vier"},
+          {"ceb": "singko", "de": "fünf"}
+        ]},
+        {"type": "fill_blank", "prompt": "Singkwenta ___ ang isda.", "translation": "Der Fisch kostet fünfzig Peso.", "options": ["pesos", "sukli", "presyo"], "answer": 0},
+        {"type": "true_false", "statement": "Syento pesos ang manok.", "translation": "Das Hähnchen kostet hundert Peso.", "answer": true},
+        {"type": "type_answer", "prompt": "Wechselgeld", "answer": "sukli"},
+        {"type": "multiple_choice", "prompt": "zwanzig (spanisch)", "direction": "de_ceb", "options": ["baynte", "singkwenta", "syento", "kwatro"], "answer": 0},
+        {"type": "word_bank", "prompt": "Das hier ist dein Wechselgeld.", "tokens": ["Mao", "ni", "imong", "sukli", "akong", "kwarta"], "answer": ["Mao", "ni", "imong", "sukli"]},
+        {"type": "fill_blank", "prompt": "Tagpila ang kape? – ___ pesos.", "translation": "Wie viel kostet der Kaffee? – Fünfzig Peso.", "options": ["Singkwenta", "Singko", "Syento"], "answer": 0},
+        {"type": "grammar_note", "title": "Zwei Zahlensysteme", "text": "Cebuano-Zahlen (usa, duha, tulo …) zum Zählen: tulo ka itlog = drei Eier. Spanische Zahlen (uno, dos, tres …) für Preise und Uhrzeiten: tres pesos = drei Peso. Auf dem Markt hörst du fast nur die spanischen – baynte, singkwenta, syento."},
+        {"type": "true_false", "statement": "Magluto si Mama ug sinigang.", "translation": "Mama kocht Sinigang.", "answer": true},
+        {"type": "type_answer", "prompt": "Ich koche Adobo.", "answer": "Magluto ko ug adobo"},
+        {"type": "multiple_choice", "prompt": "Dos syentos ang baboy.", "direction": "ceb_de", "options": ["Das Schweinefleisch kostet zweihundert.", "Das Schweinefleisch kostet zwei Peso.", "Zwei Schweine kosten hundert.", "Das Schweinefleisch kostet zwanzig."], "answer": 0},
+        {"type": "word_bank", "prompt": "Wie viel kostet das Ei? – Fünf Peso.", "tokens": ["Tagpila", "ang", "itlog", "Singko", "pesos", "Singkwenta", "dos"], "answer": ["Tagpila", "ang", "itlog", "Singko", "pesos"]},
+        {"type": "true_false", "statement": "Baynte pesos ang sukli.", "translation": "Das Wechselgeld beträgt dreißig Peso.", "answer": false, "correction": "Das Wechselgeld beträgt zwanzig Peso."},
+        {"type": "fill_blank", "prompt": "Gusto ko ___ ug sinigang.", "translation": "Ich will Sinigang kochen.", "options": ["magluto", "mokaon", "moinom"], "answer": 0},
+        {"type": "match_pairs", "pairs": [
+          {"ceb": "luto", "de": "kochen"},
+          {"ceb": "sukli", "de": "Wechselgeld"},
+          {"ceb": "baynte", "de": "zwanzig"},
+          {"ceb": "singkwenta", "de": "fünfzig"},
+          {"ceb": "syento", "de": "hundert"}
+        ]},
+        {"type": "type_answer", "prompt": "zwanzig Peso", "answer": "Baynte pesos", "accepted": ["Bente pesos"]}
+      ],
+      "surprise": {"ceb": "Magluto ko ug adobo para nimo, Langga.", "de": "Ich koche Adobo für dich, Schatz.", "when": "Freitagabend, wenn sie müde von der Arbeit kommt – para heißt für (Unit 12)."}
+    }
+  ]
+}
