@@ -57,23 +57,23 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
       startRound({ mode, items: words.map((w) => ({ ceb: w.entry.ceb, due: w.due })) });
     } }, "Runde starten");
     replace(main, 
-      h("h1", {}, "Vokabeltrainer"),
+      h("h1", {}, "Trainer"),
       saved ? h("div", { class: "card accent" }, h("b", {}, "Unterbrochene Runde"), h("p", { class: "muted" }, `${Math.max(0, saved.items.length + (saved.queueExtra?.length || 0) - saved.pos)} Wörter übrig`),
         h("div", { class: "row mt" }, h("button", { class: "grow", onclick: () => resumeRound(saved) }, "Weitermachen"), h("button", { class: "btn-ghost", onclick: async () => { await db.kvDel("trainer.inprogress"); saved = null; renderSetup(); } }, "Verwerfen"))) : null,
       h("div", { class: "card" },
         h("label", {}, "Modus"),
         seg([["easy", "Einfach (auswählen)"], ["hard", "Schwer (tippen)"]], mode, (v) => (mode = v)),
-        h("p", { class: "small muted" }, mode === "easy" ? "" : "", "Einfach: Wort → 4 Bedeutungen. Schwer: Deutsch → Cebuano eintippen (zählt doppelt für die Wiederholung)."),
+        h("p", { class: "small muted" }, "Einfach: antippen. Schwer: selbst tippen – bringt mehr."),
         h("label", {}, "Umfang"),
-        seg([[10, "10"], [20, "20"], ["all", "Alle fälligen"]], size, (v) => (size = v)),
-        h("label", { class: "row", style: { fontWeight: 400 } }, allBox, " Alles wiederholen (auch gemeisterte Wörter)"),
+        seg([[10, "10 Wörter"], [20, "20 Wörter"], ["all", "Alles Fällige"]], size, (v) => (size = v)),
+        h("label", { class: "row", style: { fontWeight: 400 } }, allBox, " Auch sichere Wörter mitnehmen"),
       ),
       h("div", { class: "card" },
         h("div", { class: "row spread" }, h("span", {}, "Fällige Wörter"), h("b", {}, dueN)),
         h("div", { class: "row spread" }, h("span", {}, "Gelernte Wörter"), h("b", {}, store.wordList().filter((w) => w.stage > 0).length)),
         h("div", { class: "row spread" }, h("span", {}, "Abgeschlossene Lektionen"), h("b", {}, completed.size)),
       ),
-      preset?.words ? h("p", { class: "muted" }, `Gezielte Runde mit ${preset.words.length} Wörtern.`) : null,
+      preset?.words?.length ? h("p", { class: "muted" }, `Gezielte Runde mit ${preset.words.length} Wörtern.`) : null,
       start,
     );
     main.scrollTop = 0;
@@ -94,7 +94,7 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
     function header() {
       const pct = Math.round((st.pos / total()) * 100);
       return h("div", { class: "lesson-top" },
-        h("button", { class: "btn-ghost btn-small", onclick: async () => { await save(); document.body.classList.remove("lesson-mode"); toast("Runde gespeichert."); onExit(); } }, "✕"),
+        h("button", { class: "btn-ghost btn-icon", "aria-label": "Runde unterbrechen", onclick: async () => { await save(); document.body.classList.remove("lesson-mode"); toast("Runde gespeichert."); onExit(); } }, "✕"),
         h("div", { class: "progress" }, h("i", { style: { width: pct + "%" } })),
         h("div", { class: "xp" }, `${st.pos}/${total()}`),
       );
@@ -138,7 +138,7 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
       if (pic) body.append(h("div", { class: "hint" }, "Welches Wort passt zum Bild?"), h("div", { class: "pic-prompt" }, entry.img), h("div", { class: "options" }, btns), check);
       else body.append(h("div", { class: "hint" }, reverse ? "Welches Cebuano-Wort passt?" : "Was bedeutet das?"), h("div", { class: "prompt" }, reverse ? entry.de : entry.ceb), ...(reverse ? [] : [h("div", { class: "pron under" }, pronounce(entry.ceb))]), h("div", { class: "options" }, btns), check);
     }
-    const dontKnow = (entry, item) => h("button", { class: "btn-ghost btn-block btn-small", onclick: () => finish(entry, item, { correct: false, near: false, expected: entry.ceb, ceb: entry.ceb, note: entry.note || null }) }, "Weiß ich nicht – Lösung zeigen");
+    const dontKnow = (entry, item) => h("button", { class: "btn-ghost btn-block btn-small", onclick: () => finish(entry, item, { correct: false, near: false, expected: entry.ceb, ceb: entry.ceb, note: entry.note || null }) }, "Lösung zeigen (zählt als Fehler)");
 
     function renderHard(entry, item, body) {
       const input = h("input", { type: "text", autocomplete: "off", autocorrect: "off", autocapitalize: "off", spellcheck: "false", placeholder: "Auf Cebuano …", enterkeyhint: "done" });
@@ -173,13 +173,15 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
 
     function feedback(res, next) {
       const cls = !res.correct ? "bad" : res.near ? "near" : "ok";
-      const title = !res.correct ? "Leider falsch" : res.near ? "Fast – richtig wäre:" : "Richtig!";
+      const praise = ["Richtig!", "Sakto!", "Maayo!", "Genau!", "Stark!"];
+      const title = !res.correct ? "Noch nicht – kommt gleich nochmal" : res.near ? "Fast – richtig wäre:" : praise[Math.floor(Math.random() * praise.length)];
       const go = () => { document.removeEventListener("keydown", onKey); if (!fb.isConnected || !isCurrent()) return; fb.remove(); next(); };
       const onKey = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } };
       const fb = h("div", { class: "feedback " + cls, onclick: (e) => { if (e.target === fb) go(); } }, h("div", { class: "fb-head" }, eagle(!res.correct ? "sad" : res.near ? "think" : "cheer", 56), h("h3", {}, title)), (res.near || !res.correct) ? h("div", { class: "exp" }, res.expected) : null, (res.near || !res.correct) && res.ceb ? h("div", { class: "pron" }, pronounce(res.ceb)) : null, res.note ? h("div", { class: "note" }, res.note) : null,
         h("button", { class: "btn-primary btn-block btn-big mt", onclick: go }, "Weiter"));
       document.body.append(fb);
       document.addEventListener("keydown", onKey);
+      fb.querySelector("button")?.focus();
     }
 
     async function renderSummary() {
@@ -217,7 +219,6 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
     if (items.length) { saved = null; return startRound({ mode: preset.mode || store.settings.trainerMode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) }); }
     toast("Keine passenden Wörter gefunden.");
   }
-  if (preset?.blitz) { saved = null; return mountBlitz(main, { content, onExit, isCurrent }); }
   if (preset?.quick) {
     const items = selectWords(content, { size: 10 });
     if (items.length) { saved = null; return startRound({ mode: preset.mode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) }); }
@@ -231,7 +232,7 @@ export async function mountBlitz(main, { content, onExit, isCurrent = () => true
   const DURATION = 60;
   const pool = selectWords(content, { size: 200, includeMastered: true }).map((w) => w.entry);
   if (pool.length < 4) { toast("Noch zu wenig Wörter – erst eine Lektion abschließen."); return onExit(); }
-  const best = await store.blitzBest();
+  let best = await store.blitzBest();
   if (!isCurrent()) return;
   let score = 0, streak = 0, asked = 0, correctN = 0, timer = null, endAt = 0, running = false;
   const exit = (hash) => { clearInterval(timer); document.body.classList.remove("lesson-mode"); document.onkeydown = null; onExit(hash); };
@@ -239,7 +240,7 @@ export async function mountBlitz(main, { content, onExit, isCurrent = () => true
   function renderStart() {
     document.body.classList.add("lesson-mode");
     replace(main,
-      h("div", { class: "lesson-top" }, h("button", { class: "btn-ghost btn-small", onclick: () => exit(), "aria-label": "Schließen" }, "✕"), h("div", { class: "grow small muted" }, "Blitzrunde")),
+      h("div", { class: "lesson-top" }, h("button", { class: "btn-ghost btn-icon", onclick: () => exit(), "aria-label": "Schließen" }, "✕"), h("div", { class: "grow small muted" }, "Blitzrunde")),
       h("div", { class: "mascot-center" }, eagle("cheer", 120)),
       h("h1", { class: "center", style: { marginTop: 0 } }, "⚡ Blitzrunde"),
       h("p", { class: "center muted" }, "60 Sekunden. Jede richtige Antwort ein Punkt, ab drei in Folge zählt jede doppelt. Fehler kosten die Serie."),
@@ -255,6 +256,7 @@ export async function mountBlitz(main, { content, onExit, isCurrent = () => true
     next();
   }
   function tick() {
+    if (!isCurrent()) { clearInterval(timer); running = false; return; } // Screen verlassen: nichts mehr buchen
     const left = Math.max(0, Math.ceil((endAt - Date.now()) / 1000));
     const el = main.querySelector(".blitz-time");
     if (el) { el.textContent = left + " s"; el.classList.toggle("warn", left <= 10); }
@@ -270,7 +272,7 @@ export async function mountBlitz(main, { content, onExit, isCurrent = () => true
     const opts = shuffle([entry, ...dis]);
     let answered = false;
     const btns = opts.map((e) => h("button", { class: "opt", onclick: () => {
-      if (answered) return; answered = true;
+      if (answered || !running) return; answered = true;
       asked++;
       const ok = e === entry;
       if (ok) { correctN++; streak++; score += streak >= 3 ? 2 : 1; } else { streak = 0; }
@@ -280,7 +282,7 @@ export async function mountBlitz(main, { content, onExit, isCurrent = () => true
       setTimeout(next, ok ? 250 : 900);
     } }, reverse || pic ? e.ceb : e.de));
     replace(main,
-      h("div", { class: "lesson-top" }, h("button", { class: "btn-ghost btn-small", onclick: () => exit(), "aria-label": "Abbrechen" }, "✕"),
+      h("div", { class: "lesson-top" }, h("button", { class: "btn-ghost btn-icon", onclick: () => exit(), "aria-label": "Abbrechen" }, "✕"),
         h("div", { class: "grow center blitz-time" }, Math.ceil((endAt - Date.now()) / 1000) + " s"),
         h("div", { class: "xp" }, h("div", {}, score + " P"), streak >= 3 ? h("div", { class: "small", style: { color: "var(--warn)" } }, "🔥 ×2") : h("div", { class: "small muted" }, streak + " in Folge"))),
       pic ? h("div", { class: "pic-prompt" }, entry.img) : h("div", { class: "prompt" }, reverse ? entry.de : entry.ceb),
@@ -291,9 +293,10 @@ export async function mountBlitz(main, { content, onExit, isCurrent = () => true
   async function finish() {
     running = false;
     clearInterval(timer);
+    main.querySelectorAll(".opt").forEach((b) => (b.disabled = true));
     const isRecord = score > best;
-    if (isRecord) await store.setBlitzBest(score);
-    await store.completeTrainerRound({ mode: "blitz", size: asked, correct: correctN, near: 0, wrong: asked - correctN, dur: DURATION * 1000, xp: score });
+    if (isRecord) { await store.setBlitzBest(score); best = score; }
+    if (asked > 0) await store.completeTrainerRound({ mode: "blitz", size: asked, correct: correctN, near: 0, wrong: asked - correctN, dur: DURATION * 1000, xp: score });
     if (!isCurrent()) return;
     replace(main,
       h("div", { class: "mascot-center" }, eagle(isRecord ? "cheer" : "wave", 130)),

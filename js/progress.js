@@ -6,7 +6,7 @@ import { store } from "./store.js";
 
 const TYPE_NAMES = {
   multiple_choice: "Multiple Choice", word_bank: "Satz bauen", fill_blank: "Lückentext", type_answer: "Tippen",
-  match_pairs: "Paare", true_false: "Richtig/Falsch", trainer_easy: "Trainer einfach", trainer_hard: "Trainer schwer", lesson: "Lektion",
+  match_pairs: "Paare", true_false: "Richtig/Falsch", picture: "Bild → Wort", trainer_easy: "Trainer einfach", trainer_hard: "Trainer schwer", lesson: "Lektion",
 };
 const C = { neu: "var(--c1)", lernend: "var(--c2)", gefestigt: "var(--c3)", gemeistert: "var(--c4)" };
 

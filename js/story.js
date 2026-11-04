@@ -11,15 +11,15 @@ export async function mountStory(main, storyId, { content, onExit, isCurrent = (
   if (!story) { replace(main, h("p", {}, "Geschichte nicht gefunden.")); return; }
   const done = await store.storiesDone();
   if (!isCurrent()) return;
-  const wasDone = done.includes(story.id);
+  let wasDone = done.includes(story.id);
   let shown = 0;
   let showAll = false;
   const answers = [];
 
-  const exit = (hash) => { document.body.classList.remove("lesson-mode"); onExit(hash); };
+  const exit = (hash) => { document.onkeydown = null; document.body.classList.remove("lesson-mode"); onExit(hash); };
   const scene = () => h("div", { class: "scene", html: sceneSvg(story.scene) });
   const top = (label) => h("div", { class: "lesson-top" },
-    h("button", { class: "btn-ghost btn-small", onclick: () => exit(), "aria-label": "Schließen" }, "✕"),
+    h("button", { class: "btn-ghost btn-icon", onclick: () => exit(), "aria-label": "Schließen" }, "✕"),
     h("div", { class: "grow small muted" }, label),
   );
 
@@ -42,7 +42,7 @@ export async function mountStory(main, storyId, { content, onExit, isCurrent = (
     const de = h("div", { class: "bubble-de" + (open ? "" : " hidden") }, line.de);
     const b = h("div", { class: "story-line " + (line.who === "tim" ? "me" : "") + (i === shown - 1 ? " new" : "") },
       portrait(line.who, 40),
-      h("div", { class: "story-bubble", onclick: () => { open = !open; de.classList.toggle("hidden", !open); } },
+      h("div", { class: "story-bubble", role: "button", tabindex: "0", "aria-label": "Übersetzung zeigen", onclick: () => { open = !open; de.classList.toggle("hidden", !open); }, onkeydown: (ev) => { if (ev.key === " ") { ev.preventDefault(); ev.currentTarget.click(); } } },
         h("div", { class: "who" }, characterName(line.who)),
         h("div", { class: "ceb" }, line.ceb),
         h("div", { class: "pron" }, pronounce(line.ceb)),
@@ -53,6 +53,7 @@ export async function mountStory(main, storyId, { content, onExit, isCurrent = (
   }
 
   function renderLines() {
+    if (!isCurrent()) { document.onkeydown = null; return; }
     const lines = story.lines.slice(0, shown).map(bubble);
     const atEnd = shown >= story.lines.length;
     const next = h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => { if (atEnd) return renderQuestion(0); shown++; renderLines(); } }, atEnd ? "Zu den Fragen" : "Weiter");
@@ -66,7 +67,7 @@ export async function mountStory(main, storyId, { content, onExit, isCurrent = (
       next,
     );
     const last = main.querySelector(".story-line.new");
-    if (last) last.scrollIntoView({ block: "end", behavior: "smooth" });
+    if (last) last.scrollIntoView({ block: "end", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
     document.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); next.click(); } };
   }
 
@@ -96,18 +97,20 @@ export async function mountStory(main, storyId, { content, onExit, isCurrent = (
 
   async function renderDone() {
     const correct = answers.filter(Boolean).length;
-    if (!wasDone) await store.completeStory(story.id, correct, story.questions.length);
+    const first = !wasDone && (await store.completeStory(story.id, correct, story.questions.length));
+    if (!isCurrent()) return;
     const nextUnit = content.units.find((u) => u.unit === story.unit + 1);
     replace(main,
       h("div", { class: "mascot-center" }, eagle(correct === story.questions.length ? "cheer" : "wave", 130)),
       h("h1", { class: "center", style: { marginTop: 0 } }, correct === story.questions.length ? "Alles verstanden!" : `${correct} von ${story.questions.length} richtig`),
       h("div", { class: "card punchline" }, h("div", { class: "small muted" }, "Pointe"), h("p", { style: { fontSize: "18px", margin: "6px 0 0" } }, story.punchline)),
-      wasDone ? null : h("p", { class: "center muted" }, "+15 XP für die Geschichte"),
+      first ? h("p", { class: "center muted" }, "+15 XP für die Geschichte") : null,
       h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => exit("#path") }, nextUnit ? `Weiter im Pfad: Unit ${nextUnit.unit}` : "Zum Pfad"),
       h("button", { class: "btn-block mt", onclick: () => { shown = 1; showAll = true; answers.length = 0; renderLines(); } }, "Nochmal mit Übersetzungen lesen"),
     );
     main.scrollTop = 0;
     if (correct === story.questions.length) confetti(50);
+    wasDone = true;
   }
 
   renderIntro();

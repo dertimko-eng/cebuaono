@@ -20,7 +20,7 @@
       ],
       "grammar": {
         "title": "Kaon ta! – Lami ang isda",
-        "text": "Das Wort kaon (essen) brauchst du jeden Tag: „Kaon ta!“ heißt „Lass uns essen!“ und ist die Einladung an den Tisch, mit ta (wir, du und ich). Wenn du sagen willst, was du isst, kommt ug davor: „Mokaon ko ug isda“ = Ich esse Fisch. Ang markiert, worüber der Satz spricht: „Lami ang isda“ = Der Fisch ist lecker – zuerst die Eigenschaft, dann ang und das Thema. Ohne ang wird es zur Beschreibung: lami nga isda = leckerer Fisch. Zum Loben am Tisch reicht „Lami kaayo!“ – Sehr lecker!"
+        "text": "Kaon ta! heißt „Lass uns essen!“ (ta = wir, du und ich). Was du isst, kommt mit ug dahinter: Mokaon ko ug isda = Ich esse Fisch. Sagst du, wie etwas ist, kommt zuerst die Eigenschaft, dann ang und die Sache: Lami ang isda = Der Fisch ist lecker. Zum Loben am Tisch reicht Lami kaayo (sehr lecker)."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Kaon ta!", "direction": "ceb_de", "options": ["Lass uns essen!", "Ich esse schon.", "Iss du!", "Das Essen ist lecker."], "answer": 0},
@@ -285,7 +285,7 @@
       ],
       "grammar": {
         "title": "Preise mit spanischen Zahlen",
-        "text": "Zum Zählen nimmst du die Cebuano-Zahlen aus Unit 2 (usa, duha, tulo), aber Preise sagt jeder mit den spanischen Zahlen: „Baynte pesos“ = 20 Peso, „Singkwenta pesos“ = 50 Peso, „Syento pesos“ = 100 Peso. Der Preis steht vorne, dann ang und die Ware: „Singkwenta pesos ang isda“ = Der Fisch kostet 50 Peso. Für 200 sagt man dos syentos, und das Wechselgeld heißt sukli. Kochen heißt luto, und mit mag- wird daraus „Magluto ko ug adobo“ = Ich koche Adobo. Mit gusto davor bleibt das mag-: „Gusto ko magluto ug sinigang“ = Ich will Sinigang kochen."
+        "text": "Preise sagt jeder mit den spanischen Zahlen: Baynte pesos = 20 Peso, Singkwenta pesos = 50 Peso, Syento pesos = 100 Peso. Der Preis steht vorne, dann ang und die Ware: Singkwenta pesos ang isda = Der Fisch kostet 50 Peso. Für 200 sagt man dos syentos, das Wechselgeld heißt sukli. Merkhilfe: Zählen auf Cebuano (usa, duha, tulo), zahlen auf Spanisch."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Tagpila kini? – Baynte pesos.", "direction": "ceb_de", "options": ["Wie viel kostet das? – Zwanzig Peso.", "Wie viel kostet das? – Fünfzig Peso.", "Was ist das? – Zwanzig Stück.", "Wie viel kostet das? – Hundert Peso."], "answer": 0},

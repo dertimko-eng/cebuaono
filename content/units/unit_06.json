@@ -71,8 +71,8 @@
         {"ceb": "pero", "de": "aber", "note": "formell: apan"}
       ],
       "grammar": {
-        "title": "kay = weil, pero = aber, Kanindot!",
-        "text": "Mit kay hängst du den Grund an: Kapoy ko kay nagtrabaho ko ug lima ka oras = Ich bin müde, weil ich fünf Stunden gearbeitet habe. Pero heißt „aber“ und steht wie im Deutschen zwischen den beiden Teilen: Lisod ang Cebuano, pero nindot = Cebuano ist schwer, aber schön. Für einen Ausruf setzt man ka- vor das Adjektiv: Kanindot (Wie schön!), Kalisod (Wie schwer!), Kakusog (Wie stark!). Kusog heißt stark, laut oder schnell, hinay ist das Gegenteil (langsam, leise). Taas und mubo beschreiben Höhe und Länge, bei Personen auch groß und klein: Taas si Tim, mubo si Mama."
+        "title": "kay = weil, pero = aber",
+        "text": "Mit kay hängst du den Grund an: Kapoy ko kay nagtrabaho ko ug lima ka oras = Ich bin müde, weil ich fünf Stunden gearbeitet habe. Pero heißt „aber“ und steht wie im Deutschen in der Mitte: Lisod ang Cebuano, pero nindot = Cebuano ist schwer, aber schön. Merkhilfe: kay = weil, pero = aber. Den Ausruf Kanindot! erklärt die Notiz in den Übungen."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Kanindot!", "direction": "ceb_de", "options": ["Wie schön!", "Wie schwer!", "Wie stark!", "Wie müde!"], "answer": 0},
@@ -125,7 +125,7 @@
       ],
       "grammar": {
         "title": "Nag-ulan: Wetter sagen",
-        "text": "Wetter-Nomen werden mit nag- zum Verb: Nag-ulan = Es regnet, Mag-ulan ugma = Morgen regnet es, Nagbagyo = Es stürmt (Taifun). Tugnaw karon = Es ist kalt heute – tugnaw ist das kalte Wetter oder Gefühl, bugnaw (Unit 3) ist eine kalte Sache wie Wasser oder Bier. „Mir ist kalt“ heißt Gitugnaw ko, genauso gebaut wie Gigutom ko = Ich bin hungrig. Das Wetter beschreibt man mit Adjektiv plus ang panahon: Nindot ang panahon = Das Wetter ist schön, Bati ang panahon = Das Wetter ist schlecht. Im Sauerland: Daghang niyebe, tugnaw kaayo – in Cebu: Init kaayo, naay bagyo."
+        "text": "Wetterwörter werden mit nag- zum Satz: Nag-ulan = Es regnet, Nagbagyo = Es stürmt; für morgen mag-: Mag-ulan ugma = Morgen regnet es. Wie das Wetter ist, sagst du mit Eigenschaft + ang panahon: Nindot ang panahon = Das Wetter ist schön, Bati ang panahon = Das Wetter ist schlecht. Kalt ist tugnaw: Tugnaw karon = Es ist kalt heute, Gitugnaw ko = Mir ist kalt. Den Unterschied tugnaw/bugnaw erklärt die Notiz in den Übungen."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Nag-ulan karon.", "direction": "ceb_de", "options": ["Es regnet jetzt.", "Es schneit jetzt.", "Es ist windig jetzt.", "Es ist kalt jetzt."], "answer": 0},
@@ -178,7 +178,7 @@
       ],
       "grammar": {
         "title": "Gimingaw ko nimo",
-        "text": "Vermissen baut man mit gi- + Wurzel, dann wer vermisst (ko) und wen (nimo): Gimingaw ko nimo = Ich vermisse dich, Gimingaw ko sa Cebu = Ich vermisse Cebu. Mingaw allein heißt still oder einsam: Mingaw dinhi = Es ist ruhig/einsam hier. Spaß drückst du mit lingaw aus: Lingaw kaayo = Das macht (hat) sehr viel Spaß (gemacht), Nalingaw ko = Ich hatte Spaß. Kalma hört man als kurzen Zuruf: Kalma, Inday = Ganz ruhig, Inday. Sakto ist dein Ja zum Richtigen (Sakto!), sayop das Gegenteil, und mit tinuod und siguro sagst du wirklich und wahrscheinlich: Tinuod (Echt?) oder Siguro (Wahrscheinlich)."
+        "text": "Vermissen sagst du so: Gimingaw ko nimo = Ich vermisse dich, Gimingaw ko sa Cebu = Ich vermisse Cebu. Erst gimingaw, dann wer vermisst (ko), dann wen oder was (nimo, sa Cebu). Mingaw allein heißt still oder einsam: Mingaw dinhi = Es ist ruhig hier. Merkhilfe: Gimingaw ko nimo lernst du als festen Satz – es ist der wichtigste in dieser App."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Gimingaw ko nimo.", "direction": "ceb_de", "options": ["Ich vermisse dich.", "Ich helfe dir.", "Ich habe Angst vor dir.", "Ich bin genervt von dir."], "answer": 0},
@@ -198,7 +198,7 @@
         {"type": "true_false", "statement": "Sayop ko, pasayloa ko.", "translation": "Ich habe mich geirrt, entschuldige.", "answer": true},
         {"type": "word_bank", "prompt": "Ganz ruhig, Inday. Papa ist hier.", "tokens": ["Kalma", "Inday", "naa", "dinhi", "si", "Papa", "didto", "laay"], "answer": ["Kalma", "Inday", "naa", "dinhi", "si", "Papa"], "accepted": ["Kalma Inday naa si Papa dinhi"]},
         {"type": "multiple_choice", "prompt": "Siguro mag-ulan ugma.", "direction": "ceb_de", "options": ["Wahrscheinlich regnet es morgen.", "Morgen regnet es wirklich.", "Morgen regnet es nicht.", "Heute regnet es wahrscheinlich."], "answer": 0},
-        {"type": "grammar_note", "title": "gi- + Wurzel + ko + nimo", "text": "Gimingaw ko nimo ist wörtlich „vermisst-werde ich von dir“ – im Cebuano steht das Gefühl im Mittelpunkt, nicht der Handelnde. Darum kommt zuerst ko (ich), dann nimo (dich). Genauso: Gimingaw ko sa Cebu, Gimingaw ko ni Inday = Ich vermisse Inday."},
+        {"type": "grammar_note", "title": "gi- + Wurzel + ko + nimo", "text": "In Gimingaw ko nimo steht das Gefühl vorne, dann ko (ich), dann nimo (dich). Diese Reihenfolge bleibt immer gleich: Gimingaw ko sa Cebu = Ich vermisse Cebu, Gimingaw ko ni Inday = Ich vermisse Inday. Merkhilfe: Gimingaw – wer – wen."},
         {"type": "type_answer", "prompt": "Ich vermisse Cebu.", "answer": "Gimingaw ko sa Cebu"},
         {"type": "true_false", "statement": "Tinuod? Nalingaw ka sa Sauerland?", "translation": "Echt? Du hattest Spaß im Sauerland?", "answer": true},
         {"type": "multiple_choice", "prompt": "Mingaw dinhi sa talyer.", "direction": "ceb_de", "options": ["Es ist still hier in der Werkstatt.", "Es ist gefährlich hier in der Werkstatt.", "Es macht Spaß hier in der Werkstatt.", "Es ist laut hier in der Werkstatt."], "answer": 0},
@@ -284,7 +284,7 @@
       ],
       "grammar": {
         "title": "Grabe! und Relaks lang",
-        "text": "Grabe verstärkt alles: Grabe ang ulan = Es regnet heftig, Grabe ang trabaho karon = Die Arbeit heute war heftig, und allein gerufen heißt es Wahnsinn (Grabe!). Mit hapit und na sagst du „fast“: Hapit na ko mahuman = Ich bin fast fertig, Hapit na ko moabot = Ich bin fast da. Dugay heißt lange, dali heißt schnell oder komm her: Dugay na ko dinhi = Ich bin schon lange hier, Dali, Inday = Komm her, Inday. Swerte und malas sind Glück und Pech: Swerte ko nimo = Ich habe Glück mit dir. Wenn alles samok (stressig) ist, hilft nur Relaks lang = Entspann dich – lang heißt wie ra „nur/einfach“ und kommt in Unit 9 richtig dran."
+        "text": "Grabe verstärkt alles: Grabe ang ulan = Es regnet heftig, Grabe ang trabaho karon = Die Arbeit heute war heftig, allein gerufen heißt es „Wahnsinn!“. Das Gegenmittel ist Relaks lang = Entspann dich. Lang heißt wie ra „nur, einfach“ – mehr dazu in Unit 9. Dali, Inday = Komm her, Inday, und Swerte ko nimo = Ich habe Glück mit dir."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Grabe ang ulan karon.", "direction": "ceb_de", "options": ["Es regnet heute heftig.", "Es regnet heute nicht.", "Es regnet heute langsam.", "Es regnet heute wahrscheinlich."], "answer": 0},

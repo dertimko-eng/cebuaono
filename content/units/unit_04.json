@@ -53,7 +53,7 @@
       ],
       "grammar": {
         "title": "sa buntag, karong adlawa, ugma",
-        "text": "Die Tageszeiten kennst du schon aus den Grüßen – mit sa davor werden sie zur Zeitangabe: sa buntag = morgens, sa udto = mittags, sa hapon = nachmittags, sa gabii = abends (Moinom ko ug kape sa buntag = Morgens trinke ich Kaffee). Karon heißt „jetzt“, mit dem Linker -ng und dem Tag dahinter wird daraus „heute“: karong adlawa = heute, karong gabii = heute Abend. Ugma = morgen und gahapon = gestern stehen meist am Satzanfang: Ugma mokaon ta ug lechon = Morgen essen wir Lechon. Zum Zählen von Tagen, Wochen und Monaten brauchst du wieder ka: usa ka semana = eine Woche, duha ka bulan = zwei Monate."
+        "text": "Die Tageszeiten kennst du aus den Grüßen – mit sa davor werden sie zur Zeitangabe: sa buntag = morgens, sa gabii = abends. Beispiel: Moinom ko ug kape sa buntag = Morgens trinke ich Kaffee. Karon heißt „jetzt“, karong adlawa = heute, karong gabii = heute Abend. Ugma (morgen) und gahapon (gestern) stehen meist vorne: Ugma mokaon ta ug lechon = Morgen essen wir Lechon."
       },
       "exercises": [
         {
@@ -903,7 +903,7 @@
       ],
       "grammar": {
         "title": "mo- = ich werde / ich gehe gleich",
-        "text": "Mit der Vorsilbe mo- sagst du, was du gleich tust oder vorhast: Momata ko alas sais = Ich wache um 6 auf, Mobangon ko = Ich stehe auf, Moadto ko sa eskwelahan = Ich gehe zur Schule, Mouli ko alas singko = Ich gehe um 5 heim. Das Pronomen ko steht direkt hinter dem Verb, die Uhrzeit kommt ans Ende. Ein paar Verben, die eher einen Zustand beschreiben, nehmen ma- statt mo-: matulog = schlafen (Matulog na ko = Ich gehe jetzt schlafen), maligo = duschen (Maligo ko = Ich dusche gleich). Sayo heißt früh und ulahi spät: Sayo ko momata = Ich wache früh auf, Naulahi ko = Ich war zu spät."
+        "text": "Mit mo- vor dem Verb sagst du, was du gleich tust oder vorhast: Momata ko alas sais = Ich wache um 6 auf, Mobangon ko = Ich stehe auf, Moadto ko sa eskwelahan = Ich gehe zur Schule, Mouli ko alas singko = Ich gehe um 5 heim. Das ko steht direkt hinter dem Verb, die Uhrzeit kommt ans Ende. Ein paar Verben nehmen ma- statt mo-: Matulog na ko = Ich gehe jetzt schlafen, Maligo ko = Ich dusche gleich."
       },
       "exercises": [
         {
@@ -1482,8 +1482,8 @@
         }
       ],
       "grammar": {
-        "title": "Human sa … dayon …; gikan / padulong",
-        "text": "Human sa heißt „nach dem“: Human sa trabaho mouli ko = Nach der Arbeit gehe ich heim, Human sa panihapon mopahulay ko = Nach dem Abendessen ruhe ich mich aus. Dayon verbindet zwei Schritte wie unser „dann“: Maligo ko, dayon mokaon ko = Ich dusche, dann esse ich. Woher und wohin sagst du mit gikan (von) und padulong (unterwegs nach), beide mit sa: Gikan ko sa eskwelahan = Ich komme von der Schule, Padulong ko sa trabaho = Ich bin auf dem Weg zur Arbeit. Unya heißt später und daghan viel: Daghan ko ug trabaho karong adlawa, mopahulay ko unya = Ich habe heute viel Arbeit, ich ruhe mich später aus."
+        "title": "Human sa … dayon …",
+        "text": "Human sa heißt „nach dem“: Human sa trabaho mouli ko = Nach der Arbeit gehe ich heim. Dayon verbindet zwei Schritte wie unser „dann“: Maligo ko, dayon mokaon ko = Ich dusche, dann esse ich. Merkhilfe: human sa = danach, dayon = und dann. Woher und wohin (gikan, padulong) erklärt die Notiz in den Übungen."
       },
       "exercises": [
         {

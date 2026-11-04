@@ -179,7 +179,7 @@
       ],
       "grammar": {
         "title": "himo oder buhat?",
-        "text": "Himo heißt etwas herstellen, am Ende kommt eine Sache heraus: Naghimo ko ug lamesa = Ich baue einen Tisch. Buhat heißt tun oder machen im Sinn von „womit bist du beschäftigt“ – Unsa imong gibuhat = Was machst du gerade? Die Antwort darauf kann wieder himo sein: Naghimo ko ug muwebles sa talyer = Ich baue Möbel in der Werkstatt. Gamit heißt benutzen: Mogamit ko ug lagari = Ich benutze eine Säge. Luyo ist das letzte Lagewort: sa luyo sa balay = hinter dem Haus."
+        "text": "Himo heißt etwas herstellen – am Ende gibt es eine Sache: Naghimo ko ug lamesa = Ich baue einen Tisch, Naghimo ko ug muwebles sa talyer = Ich baue Möbel in der Werkstatt. Buhat heißt „tun, machen“ im Sinn von „womit bist du gerade beschäftigt“: Unsa imong gibuhat? = Was machst du gerade? Merkhilfe: himo = bauen, buhat = tun. Gamit (benutzen) erklärt die Notiz in den Übungen."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Naghimo ko ug lamesa sa talyer.", "direction": "ceb_de", "options": ["Ich baue einen Tisch in der Werkstatt.", "Ich kaufe einen Tisch in der Werkstatt.", "Ich baue einen Stuhl in der Werkstatt.", "Ich repariere einen Tisch im Haus."], "answer": 0},

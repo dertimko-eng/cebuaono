@@ -20,7 +20,7 @@
       ],
       "grammar": {
         "title": "asa oder diin? – nganong … kay …",
-        "text": "Asa fragt nach Gegenwart und Zukunft, diin nach der Vergangenheit: „Asa ka moadto?“ (Wohin gehst du?) – „Diin ka gikan?“ (Wo warst du gerade?). Ein man dahinter macht die Frage weicher und freundlicher: „Asa man ka?“ (Wo bist du denn?), „Ngano man?“ (Warum denn?). Vor einem Verb wird ngano zu nganong, und die Antwort beginnt mit kay: „Nganong wala ka mikaon? – Kay busog ko.“ (Warum hast du nicht gegessen? – Weil ich satt bin.) Unsaon fragt, wie man etwas macht (Zukunft), giunsa, wie es gemacht wurde: „Unsaon pagluto ug adobo?“ – „Giunsa nimo pagluto?“ Hain fragt nach einem von mehreren oder wo etwas gerade liegt: „Hain ang akong selpon?“"
+        "text": "Asa fragt nach jetzt und später, diin nach vorher: Asa ka moadto (Wohin gehst du) – Diin ka gikan (Wo warst du gerade). Ein man dahinter macht die Frage freundlicher: Asa man ka (Wo bist du denn). Vor einem Verb wird ngano zu nganong, die Antwort beginnt mit kay: Nganong wala ka mikaon – Kay busog ko (Warum hast du nicht gegessen – Weil ich satt bin)."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Diin ka gikan?", "direction": "ceb_de", "options": ["Wo warst du gerade?", "Wohin gehst du?", "Wann kommst du?", "Warum bist du hier?"], "answer": 0},
@@ -68,7 +68,7 @@
       ],
       "grammar": {
         "title": "Sigurado ka? – Tingali. – Ambot.",
-        "text": "Auf eine Frage antwortest du je nach Sicherheit: „Sigurado ko“ (Ich bin sicher), „Siguro“ oder „Tingali“ (Wahrscheinlich / Vielleicht) oder einfach „Ambot“ (Keine Ahnung, im Alltag meist „Ambot lang“). Nachfragen geht mit „Klaro na?“ (Alles klar?) und „Usba palihug“ (Sag es bitte nochmal) – usba ist die Befehlsform von usab, wie lutoa von luto. Mengen beurteilst du mit igo, kulang und sobra: „Igo na ang kan-on“ (Der Reis reicht), „Kulang ang kwarta“ (Das Geld reicht nicht), „Sobra na ang asin“ (Das ist zu viel Salz). Willst du mehr, sagst du „Dugangi“ (Gib mehr dazu). Mit pananglitan leitest du ein Beispiel ein: „Pananglitan, tam-is ang mangga.“"
+        "text": "Auf eine Frage antwortest du je nachdem, wie sicher du bist: Sigurado ko = Ich bin sicher, Siguro oder Tingali = Wahrscheinlich / Vielleicht, Ambot = Keine Ahnung (im Alltag meist Ambot lang). Nachfragen geht mit Klaro na? = Alles klar? und Usba palihug = Sag es bitte nochmal. Mengen beurteilst du mit igo, kulang und sobra: Igo na ang kan-on = Der Reis reicht, Kulang ang kwarta = Das Geld reicht nicht, Sobra na ang asin = Zu viel Salz."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Sigurado ka?", "direction": "ceb_de", "options": ["Bist du sicher?", "Bist du müde?", "Bist du fertig?", "Bist du satt?"], "answer": 0},
@@ -163,7 +163,7 @@
       ],
       "grammar": {
         "title": "na = schon, pa = noch, lang = nur",
-        "text": "Na und pa sind Gegenspieler: „Nakakaon na ko“ (Ich habe schon gegessen) – „Wala pa ko mikaon“ (Ich habe noch nicht gegessen), „Gamay pa si Inday“ (Inday ist noch klein). Lang heißt „nur, bloß“ und macht alles ein bisschen weicher: „Kadali lang!“ (Nur einen Moment!), „Duha ka buok lang“ (Nur zwei Stück). Nach der Anzahl fragst du mit „Pila ka buok?“ (Wie viele Stück?) und antwortest mit Zahl + ka + buok: „Tulo ka buok“. Sa dili pa heißt „bevor“ und steht am Satzanfang: „Sa dili pa ko matulog, magbasa ko ug libro“ (Bevor ich schlafe, lese ich ein Buch). Ob etwas geht, fragst du mit „Mahimo ba?“ – die Antwort „Mahimo ra“ heißt „Das geht schon“."
+        "text": "Na und pa sind Gegenspieler: Nakakaon na ko = Ich habe schon gegessen – Wala pa ko mikaon = Ich habe noch nicht gegessen, Gamay pa si Inday = Inday ist noch klein. Lang heißt „nur, bloß“ und macht alles weicher: Kadali lang! = Nur einen Moment!, Duha ka buok lang = Nur zwei Stück. Merkhilfe: na blickt zurück, pa wartet noch, lang macht klein."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Wala pa ko mikaon.", "direction": "ceb_de", "options": ["Ich habe noch nicht gegessen.", "Ich habe schon gegessen.", "Ich esse nicht.", "Ich esse nur wenig."], "answer": 0},
@@ -210,7 +210,7 @@
       ],
       "grammar": {
         "title": "Pwede ba ko …? – Naa koy hangyo.",
-        "text": "Um Erlaubnis fragst du mit pwede oder mahimo plus mo-Verb: „Pwede ba ko mogamit sa imong selpon?“ (Darf ich dein Handy benutzen?), „Mahimo ba?“ (Geht das?). Eine Bitte kündigst du an mit „Naa koy hangyo“ (Ich habe eine Bitte) oder „Pwede ko mangayo ug pabor?“ (Kann ich dich um einen Gefallen bitten?) – mangayo ist die mo-Form von pangayo. Die Antwort steckt im Verb: „Gitugotan ko ni Mama“ (Mama hat es mir erlaubt), „Misugot siya“ (Sie hat ja gesagt), „Gibalibaran niya“ (Sie hat abgelehnt). Angay sagt, was man tun sollte: „Angay ka mopahulay“ (Du solltest dich ausruhen). Und wenn etwas schiefging: „Pasayloa ko“ (Verzeih mir), „Maluoy ka nako“ (Hab Mitleid mit mir)."
+        "text": "Um Erlaubnis fragst du mit pwede oder mahimo plus mo-Verb: Pwede ba ko mogamit sa imong selpon (Darf ich dein Handy benutzen), Mahimo ba (Geht das). Eine Bitte kündigst du an mit Naa koy hangyo = Ich habe eine Bitte. Angay sagt, was man tun sollte: Angay ka mopahulay = Du solltest dich ausruhen. Wenn etwas schiefging: Pasayloa ko = Verzeih mir."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Pwede ba ko mogamit sa imong selpon?", "direction": "ceb_de", "options": ["Darf ich dein Handy benutzen?", "Kannst du mein Handy benutzen?", "Darf ich dein Handy kaufen?", "Hast du mein Handy benutzt?"], "answer": 0},

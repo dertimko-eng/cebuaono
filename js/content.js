@@ -16,20 +16,10 @@ export async function loadContent() {
     getJSON("content/glossary.json"),
     getJSON("content/names.json"),
   ]);
-  const units = [];
-  for (const u of index.units) {
-    try {
-      units.push(await getJSON(`content/units/${u}.json`));
-    } catch (e) {
-      console.warn("Unit fehlt:", u);
-    }
-  }
+  const units = (await Promise.all(index.units.map((u) => getJSON(`content/units/${u}.json`).catch(() => { console.warn("Unit fehlt:", u); return null; })))).filter(Boolean);
   units.sort((a, b) => a.unit - b.unit);
   // Geschichten (eine pro Unit) und Kultur-Kästen sind optional
-  const stories = [];
-  for (const u of units) {
-    try { stories.push(await getJSON(`content/stories/story_${String(u.unit).padStart(2, "0")}.json`)); } catch (_) {}
-  }
+  const stories = (await Promise.all(units.map((u) => getJSON(`content/stories/story_${String(u.unit).padStart(2, "0")}.json`).catch(() => null)))).filter(Boolean);
   let culture = [];
   try { const c = await getJSON("content/culture.json"); culture = Array.isArray(c) ? c : c.items || []; } catch (_) {}
   const lexicon = new Lexicon(glossary, namesFile.names);

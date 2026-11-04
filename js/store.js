@@ -81,13 +81,14 @@ export const store = {
   async recordAnswer(a) {
     const today = todayKey();
     const touched = [];
-    for (const ceb of a.words || []) {
+    const blitz = a.mode === "blitz"; // Blitzrunde: nur loggen, keine SRS-Stufe und keine Einzel-XP (Punkte kommen über die Runde)
+    for (const ceb of blitz ? [] : a.words || []) {
       const w = this.word(ceb);
       applyResult(w, a.correct, a.weight, a.near, today);
       touched.push(w);
     }
     if (touched.length) await db.bulkPut("words", touched);
-    const xp = a.correct ? (a.near ? XP.near : XP.correct) : XP.wrong;
+    const xp = blitz ? 0 : a.correct ? (a.near ? XP.near : XP.correct) : XP.wrong;
     await this.addEvent({
       type: "answer", lesson: a.lesson || null, mode: a.mode, exType: a.exType, words: a.words || [],
       correct: !!a.correct, near: !!a.near, dur: a.dur || 0, firstTry: a.firstTry !== false, due: !!a.due, xp,
@@ -119,14 +120,24 @@ export const store = {
   },
 
   // Geschichten: gelesen-Liste in kv, Abschluss als Event (zählt XP)
-  async storiesDone() { return (await db.kvGet("stories.done")) || []; },
+  // Gelesene Geschichten und Blitz-Rekord kommen aus dem Event-Log – so sind sie im Sync/Export enthalten.
+  async storiesDone() {
+    const set = new Set((await db.kvGet("stories.done")) || []);
+    for (const e of this.events) if (e.type === "story_complete" && e.story) set.add(e.story);
+    return [...set];
+  },
   async completeStory(id, correct, total) {
     const done = await this.storiesDone();
-    if (!done.includes(id)) { done.push(id); await db.kvSet("stories.done", done); }
+    if (done.includes(id)) return false; // XP nur beim ersten Abschluss
     await this.addEvent({ type: "story_complete", story: id, correct, total, xp: XP.storyBonus });
     this.emit("story");
+    return true;
   },
-  async blitzBest() { return (await db.kvGet("blitz.best")) || 0; },
+  async blitzBest() {
+    let best = (await db.kvGet("blitz.best")) || 0;
+    for (const e of this.events) if (e.type === "trainer_round" && e.mode === "blitz" && (e.xp || 0) > best) best = e.xp;
+    return best;
+  },
   async setBlitzBest(v) { await db.kvSet("blitz.best", v); },
 
   // Tagesstand der SRS-Stufen speichern (für den 30-Tage-Verlauf)
@@ -204,6 +215,7 @@ export const store = {
     await db.kvDel("lesson.inprogress");
     await db.kvDel("trainer.inprogress");
     await db.kvDel("sync.dirty");
+    for (const k of ["stories.done", "blitz.best", "review.lastShownWeek"]) await db.kvDel(k);
     this.dirty = false;
     this.progress = new Map(); this.words = new Map(); this.events = []; this.srsHistory = {};
     this.emit("reset");

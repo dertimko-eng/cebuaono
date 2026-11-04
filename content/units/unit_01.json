@@ -20,7 +20,7 @@
       ],
       "grammar": {
         "title": "Maayong + Tageszeit",
-        "text": "Maayong heißt „gut“ mit dem Linker -ng, dahinter kommt die Tageszeit: buntag (Morgen), udto (Mittag), hapon (Nachmittag), gabii (Abend/Nacht). Maayong gabii sagt man abends zur Begrüßung und auch zum Abschied. Auf Kumusta? antwortet man meistens Maayo ra – wörtlich „nur gut“, also „es geht gut“. Salamat passt immer, Daghang salamat ist das herzliche „Vielen Dank“."
+        "text": "Ein Gruß ist immer Maayong (gut) + Tageszeit: Maayong buntag (Guten Morgen), Maayong udto (Mittag), Maayong hapon (Nachmittag), Maayong gabii (Abend). Maayong gabii passt abends zur Begrüßung und zum Abschied. Merkhilfe: Maayong = „Guten …“, dann einfach die Tageszeit anhängen."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Maayong buntag", "direction": "ceb_de", "options": ["Guten Morgen", "Guten Abend", "Danke", "Tschüss"], "answer": 0},
@@ -72,7 +72,7 @@
       ],
       "grammar": {
         "title": "Dili oder wala?",
-        "text": "Cebuano hat zwei Neins: dili verneint, was jemand ist oder tun wird (Dili ko maestro = Ich bin kein Lehrer). Wala verneint, was es nicht gibt oder was nicht passiert ist (Wala ko ug kwarta = Ich habe kein Geld). Auf Salamat antwortet man Walay sapayan – wörtlich „kein Schaden“. Pud heißt „auch“ und steht immer nach dem ersten Wort: Salamat pud!"
+        "text": "Cebuano hat zwei Wörter für „nicht/kein“. Dili sagt, was jemand nicht ist oder nicht tut: Dili ko maestro = Ich bin kein Lehrer. Wala sagt, dass etwas nicht da ist: Wala ko ug kwarta = Ich habe kein Geld. Merkhilfe: dili = nicht so, wala = nicht da. Daher heißt die Antwort auf Salamat auch Walay sapayan – wörtlich „kein Schaden“."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Oo", "direction": "ceb_de", "options": ["ja", "nein", "bitte", "okay"], "answer": 0},
@@ -124,7 +124,7 @@
       ],
       "grammar": {
         "title": "Kein „sein“: Maestro ko",
-        "text": "Cebuano hat kein Wort für „bin/bist/ist“. Man sagt einfach „Lehrer ich“: Maestro ko = Ich bin Lehrer. Vor Personennamen steht si: Ako si Tim = Ich bin Tim. Die Kurzform ko klebt am ersten Satzglied, die Langform ako steht betont am Anfang. Herkunft sagt man mit taga- und dem Ort: Taga-Sauerland ko."
+        "text": "Cebuano hat kein Wort für „bin/bist/ist“. Du sagst einfach „Lehrer ich“: Maestro ko = Ich bin Lehrer. Genauso mit der Herkunft: Taga-Sauerland ko = Ich komme aus dem Sauerland. Vor einem Namen steht si: Ako si Tim = Ich bin Tim. Merkhilfe: erst die Aussage, dann ko."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Ako si Tim.", "direction": "ceb_de", "options": ["Ich bin Tim.", "Ich heiße Mama.", "Du bist Tim.", "Danke, Tim."], "answer": 0},
@@ -171,7 +171,7 @@
       ],
       "grammar": {
         "title": "Zwei Arten von „wir“",
-        "text": "Jedes Pronomen hat eine Langform (ikaw, siya, kita, kami, kamo, sila) und eine Kurzform (ka, siya, ta, mi, mo, sila), die nach dem ersten Satzglied steht: Maestro ka? = Bist du Lehrer? Siya heißt er und sie – Cebuano unterscheidet das nicht. Besonders: kita/ta ist „wir“ inklusive dir (Maayo ta = Uns geht es gut, dir und mir), kami/mi ist „wir“ ohne dich (Taga-Germany mi = Wir kommen aus Deutschland, aber du nicht)."
+        "text": "Cebuano hat zwei Wörter für „wir“. Ta heißt „wir, du und ich“: Maayo ta = Uns geht es gut, dir und mir. Mi heißt „wir, aber du nicht“: Taga-Germany mi = Wir kommen aus Deutschland, aber du nicht. Zu deiner Frau sagst du also meistens ta. Übrigens: siya heißt „er“ und „sie“ – Cebuano unterscheidet das nicht."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Maestro ka?", "direction": "ceb_de", "options": ["Bist du Lehrer?", "Bin ich Lehrer?", "Ist sie Lehrerin?", "Seid ihr Lehrer?"], "answer": 0},
@@ -289,7 +289,7 @@
         {"type": "true_false", "statement": "Buotan kaayo si Mama.", "translation": "Mama ist sehr nett.", "answer": true},
         {"type": "type_answer", "prompt": "sehr", "answer": "kaayo"},
         {"type": "multiple_choice", "prompt": "Ich freue mich.", "direction": "de_ceb", "options": ["Nalipay ko.", "Maayo ra ko.", "Buotan ko.", "Aleman ko."], "answer": 0},
-        {"type": "grammar_note", "title": "nako, nimo, niya", "text": "Das sind die Objektformen von ich, du, er/sie. Sie stehen hinter dem Verb oder Nomen: Salamat nimo = Danke dir. Amigo nako siya = Er ist mein Freund (wörtlich: Freund von mir). Du wirst sie bald in Gimingaw ko nimo = Ich vermisse dich brauchen."},
+        {"type": "grammar_note", "title": "nako, nimo, niya", "text": "Nako, nimo, niya heißen „mir/mich“, „dir/dich“, „ihm/ihr“. Sie stehen hinter dem Wort, zu dem sie gehören: Salamat nimo = Danke dir. Amigo nako siya = Er ist mein Freund (wörtlich: Freund von mir). Bald brauchst du sie in Gimingaw ko nimo = Ich vermisse dich."},
         {"type": "word_bank", "prompt": "Danke dir, Mama.", "tokens": ["Salamat", "nimo", "Mama", "nako", "niya"], "answer": ["Salamat", "nimo", "Mama"]},
         {"type": "fill_blank", "prompt": "Maayo ___ ko, salamat.", "translation": "Mir geht's ganz gut, danke.", "options": ["ra", "kaayo", "ka"], "answer": 0},
         {"type": "true_false", "statement": "Gwapa kaayo siya.", "translation": "Er ist sehr nett.", "answer": false, "correction": "Sie ist sehr hübsch."},

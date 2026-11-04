@@ -27,7 +27,7 @@ export function frag(html) {
 let toastTimer = null;
 export function toast(msg, ms = 2200) {
   document.querySelectorAll(".toast").forEach((t) => t.remove());
-  const t = h("div", { class: "toast" }, msg);
+  const t = h("div", { class: "toast", role: "status", "aria-live": "polite" }, msg);
   document.body.append(t);
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.remove(), ms);
@@ -35,10 +35,13 @@ export function toast(msg, ms = 2200) {
 
 export function sheet(contentEl, { onClose } = {}) {
   const overlay = h("div", { class: "overlay" });
-  const s = h("div", { class: "sheet" }, contentEl);
+  const closeBtn = h("button", { class: "btn-ghost btn-icon sheet-close", "aria-label": "Schließen", onclick: () => close() }, "✕");
+  const s = h("div", { class: "sheet", role: "dialog", "aria-modal": "true" }, closeBtn, contentEl);
   overlay.append(s);
   overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
-  function close() { overlay.remove(); onClose && onClose(); }
+  const onKey = (e) => { if (e.key === "Escape") close(); };
+  document.addEventListener("keydown", onKey);
+  function close() { document.removeEventListener("keydown", onKey); overlay.remove(); onClose && onClose(); }
   document.body.append(overlay);
   return { close, el: s };
 }

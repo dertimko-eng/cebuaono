@@ -111,15 +111,15 @@ export function pronounce(text) {
 function keepCase(pron, orig) { return /^[A-Z]/.test(orig) && !/^[A-Z]/.test(pron) ? cap(pron) : pron; }
 
 export const PRON_LEGEND = [
-  ["ß", "scharfes s wie in „Fuß“ – Cebuano-s ist nie stimmhaft (salamat → ßa-la-mat)"],
+  ["ß", "scharfes s wie in „Fuß“, nie wie das weiche s in „Rose“ (salamat → ßa-la-mat)"],
   ["j", "wie deutsches j in „ja“ (babaye → ba-ba-je)"],
   ["w", "wie englisches w, ein kurzes u mit runden Lippen (wala → wa-la)"],
   ["ng", "wie in „singen“, auch am Wortanfang (nga → nga, nganong → nga-nong)"],
   ["ai, au, ui, oi", "Zwielaute wie in „Mai“, „Haus“, „pfui“ (balay → ba-lai, ikaw → i-kau)"],
-  ["'", "kurzer Stimmabsatz wie in „Spiegel|ei“ oder „be|achten“ (kan-on → kan'on)"],
+  ["'", "kurze Pause mitten im Wort, wie zwischen „Spiegel“ und „ei“ in „Spiegelei“ (kan-on → kan'on)"],
   ["a e i o u", "kurz und klar wie im Deutschen; e und o eher offen"],
   ["r", "gerollt (Zungenspitze), wie im Bairischen oder Spanischen"],
   ["h", "immer hörbar, auch am Wortende (buntag → bun-tag, aber Cebu → ße-bu)"],
-  ["p t k", "ohne Hauch, weicher als im Deutschen"],
+  ["p t k", "ohne den kleinen Luftstoß, den wir im Deutschen nach p, t, k machen – klingt weicher"],
   ["Betonung", "nicht aus der Schreibung ableitbar, meist auf der vorletzten Silbe. Beim Mithören merken – deine Frau ist hier die Referenz."],
 ];

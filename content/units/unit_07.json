@@ -73,7 +73,7 @@
       ],
       "grammar": {
         "title": "Motubo ang tanom – Buhi ang hayop",
-        "text": "Mo- beschreibt, was von sich aus passiert oder passieren wird: Motubo ang tanom = Die Pflanze wächst. Eigenschaftswörter stehen vorne, das Subjekt mit ang dahinter: Buhi ang hayop = Das Tier lebt. Ug hat zwei Jobs im selben Satz: Magtudlo ko ug biyolohiya ug kimika = Ich unterrichte Biologie und Chemie – das erste ug markiert das Objekt, das zweite heißt „und“. Für Schulfächer nimmt man die spanisch-englischen Wörter, deine Schüler würden auch einfach Chemistry sagen."
+        "text": "Mo- steht auch für das, was von sich aus passiert: Motubo ang tanom = Die Pflanze wächst. Eigenschaften stehen vorne, dann ang und die Sache: Buhi ang hayop = Das Tier lebt – wie Lami ang isda. Für Schulfächer nimmt man die spanisch-englischen Wörter: Magtudlo ko ug biyolohiya ug kimika = Ich unterrichte Biologie und Chemie. Dass ug hier zweimal vorkommt, erklärt die Notiz in den Übungen."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Magtudlo ko ug biyolohiya ug kimika.", "direction": "ceb_de", "options": ["Ich unterrichte Biologie und Chemie.", "Ich lerne Biologie und Mathe.", "Ich unterrichte Chemie und Mathe.", "Ich mag Biologie und Chemie."], "answer": 0},
@@ -126,7 +126,7 @@
       ],
       "grammar": {
         "title": "naka-/maka- und kahibalo",
-        "text": "Naka- heißt „geschafft haben, können“ und maka- „können (werden)“: „Nakasabot ka?“ = Verstehst du?, „Makakat-on ko ug Bisaya“ = Ich kann Cebuano lernen. Nach wala fällt na- weg: „Wala ko kasabot“ = Ich verstehe nicht. Kahibalo braucht kein Präfix: Kahibalo ko = Ich weiß, Wala ko kahibalo = Ich weiß nicht, „Kahibalo ka moluto?“ = Kannst du kochen? Nga verbindet Sätze als „dass“: Kahibalo ko nga gwapa ka = Ich weiß, dass du hübsch bist. Nach der Bedeutung fragst du mit „Unsa ang pasabot sa kwaderno?“ = Was bedeutet kwaderno?"
+        "text": "Naka- heißt „es hat geklappt“: Nakasabot ka? = Verstehst du? Maka- heißt „es wird klappen, ich kann“: Makakat-on ko ug Bisaya = Ich kann Cebuano lernen. Nach wala bleibt nur ka-: Wala ko kasabot = Ich verstehe nicht. Kahibalo (wissen, können) braucht keine Vorsilbe: Kahibalo ko = Ich weiß, Wala ko kahibalo = Ich weiß nicht."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Nakasabot ka?", "direction": "ceb_de", "options": ["Verstehst du?", "Weißt du es?", "Erinnerst du dich?", "Hast du es vergessen?"], "answer": 0},
@@ -232,7 +232,7 @@
       ],
       "grammar": {
         "title": "Maestro ka ba? – pwede, kinahanglan",
-        "text": "Ba macht aus einer Aussage eine Ja/Nein-Frage und steht nach dem ersten Satzglied: „Maestro ka ba?“ = Bist du Lehrer?, „Pwede ba ko moadto sa banyo?“ = Darf ich zur Toilette? Kinahanglan heißt „brauchen“ mit ug (Kinahanglan ko ug papel = Ich brauche Papier) und „müssen“ mit Verb (Kinahanglan ko motrabaho = Ich muss arbeiten). Befehle im Klassenzimmer sind nur die Wurzel: „Lingkod!“ (Setz dich), „Tindog!“ (Steh auf), „Paminaw!“ (Hör zu). Mit „Naa ba kay lapis?“ fragst du „Hast du einen Bleistift?“ – kay ist hier ka + y, so wie koy."
+        "text": "Ba macht aus einer Aussage eine Ja/Nein-Frage und steht nach dem ersten Satzteil: Maestro ka ba? = Bist du Lehrer? Merkhilfe: ba = gesprochenes Fragezeichen. Kinahanglan heißt „brauchen“ mit ug und „müssen“ mit Verb: Kinahanglan ko ug papel = Ich brauche Papier, Kinahanglan ko motrabaho = Ich muss arbeiten."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Maestro ka ba?", "direction": "ceb_de", "options": ["Bist du Lehrer?", "Bin ich Lehrer?", "Ist er Lehrer?", "Du bist Lehrer."], "answer": 0},

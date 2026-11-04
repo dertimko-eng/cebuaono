@@ -20,7 +20,7 @@
       ],
       "grammar": {
         "title": "nga verbindet, mga macht Mehrzahl",
-        "text": "Nga verbindet zwei Wörter zu einem Begriff: anak nga babaye = Tochter (wörtlich: Kind, das weiblich ist), anak nga lalaki = Sohn, igsoon nga babaye = Schwester. Nach einem Vokal hängt man statt nga meistens nur -ng an: gwapang babaye = hübsche Frau, igsoong lalaki = Bruder. Die Mehrzahl bildet man mit mga (gesprochen „manga“) vor dem Nomen: mga anak = Kinder, akong mga igsoon = meine Geschwister. Inahan und amahan sind die neutralen Wörter für Mutter und Vater, zu Hause sagt man einfach Mama und Papa."
+        "text": "Nga verbindet zwei Wörter zu einem Begriff: anak nga babaye = Tochter (wörtlich: Kind, das weiblich ist), igsoon nga babaye = Schwester. Endet das erste Wort auf einen Vokal, hängt man meist nur -ng an: gwapang babaye = hübsche Frau. Die Mehrzahl macht mga (gesprochen „manga“) vor dem Wort: mga anak = Kinder, akong mga igsoon = meine Geschwister."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "anak nga babaye", "direction": "ceb_de", "options": ["Tochter", "Sohn", "Schwester", "Mutter"], "answer": 0},
@@ -179,7 +179,7 @@
       ],
       "grammar": {
         "title": "napulog usa, kawhaan ug usa, usa ka gatos",
-        "text": "Für 11 bis 19 hängt man an napulo ein -g (von ug) und dann die Einerzahl: napulog usa = 11, napulog lima = 15. Ab 20 heißt es Zehner + ug + Einer: kawhaan ug usa = 21, katloan ug lima = 35, kasiyaman ug siyam = 99. Hundert zählt man wie ein Nomen mit ka: usa ka gatos = 100, duha ka gatos = 200. In den Zehnern kawhaan, katloan, kap-atan, kalim-an, kan-uman, kapitoan, kawaloan und kasiyaman steckt jeweils die Einerzahl (ka-lim-an von lima, ka-pito-an von pito), nur kawhaan ist unregelmäßig."
+        "text": "11 bis 19: napulo + g + Einerzahl, napulog usa = 11, napulog lima = 15. Ab 20: Zehner + ug + Einer, kawhaan ug usa = 21, katloan ug lima = 35. Hundert zählt man wie ein Ding mit ka: usa ka gatos = 100, duha ka gatos = 200. Merkhilfe: In den Zehnern steckt die Einerzahl, ka-lim-an kommt von lima, ka-pito-an von pito."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "kawhaan ug usa", "direction": "ceb_de", "options": ["21", "12", "31", "20"], "answer": 0},
@@ -231,8 +231,8 @@
         {"ceb": "gamay", "de": "klein; wenig", "note": "Mehrzahl: gagmay"}
       ],
       "grammar": {
-        "title": "Pila ka tuig ka na? – kini, kana, kadto",
-        "text": "Nach dem Alter fragt man mit pila (wie viele) und ka tuig (Jahre): „Pila ka tuig ka na?“ heißt wörtlich: Wie viele Jahre bist du schon? Die Antwort: Katloan ug lima ka tuig na ko = Ich bin 35, oder kurz Katloan ug lima na ko. Na heißt „schon/jetzt“ und steht wie ko und ka nach dem ersten Satzglied. Kini (das hier, bei mir), kana (das da, bei dir) und kadto (das dort drüben) zeigen auf Personen und Dinge, ang markiert dabei das Satzthema: Kini ang akong anak = Das ist mein Kind, Kadto si Lola = Das dort ist Oma. Mao bestätigt oder stellt vor: Mao kini ang akong asawa = Das ist meine Frau, und ein zufriedenes „Mao na!“ heißt „Genau!“ oder „Das war's“."
+        "title": "Pila ka tuig ka na?",
+        "text": "Nach dem Alter fragst du: Pila ka tuig ka na? = Wie viele Jahre bist du schon? Antwort: Katloan ug lima na ko = Ich bin 35. Na heißt „schon“ und steht wie ko nach dem ersten Satzteil. Zum Vorstellen zeigst du mit kini (das hier) und kadto (das dort): Kini ang akong anak = Das ist mein Kind, Kadto si Lola = Das dort ist Oma."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Pila ka tuig ka na?", "direction": "ceb_de", "options": ["Wie alt bist du?", "Wie viele Kinder hast du?", "Wie heißt du?", "Wie geht es dir?"], "answer": 0},
@@ -248,7 +248,7 @@
         {"type": "true_false", "statement": "Kini ang akong asawa.", "translation": "Das ist meine Frau.", "answer": true},
         {"type": "type_answer", "prompt": "Wie alt bist du?", "answer": "Pila ka tuig ka na?", "accepted": ["Pila na ang imong edad?"]},
         {"type": "multiple_choice", "prompt": "Das dort ist Oma.", "direction": "de_ceb", "options": ["Kadto si Lola.", "Kini si Lola.", "Kana si Lola.", "Mao si Lola."], "answer": 0},
-        {"type": "grammar_note", "title": "na = schon, aber auch kana", "text": "Na steht nach dem ersten Satzglied und heißt „schon“ oder „jetzt“: Lima ka tuig na si Inday = Inday ist schon fünf. Gleichzeitig ist na die Kurzform von kana (das da): Unsa na? = Was ist das? Welche Bedeutung gemeint ist, verrät die Stellung – schon-na klebt am Satzanfang, kana-na steht dort, wo ein Nomen stehen würde."},
+        {"type": "grammar_note", "title": "na = schon, aber auch kana", "text": "Na hat zwei Bedeutungen. Meistens heißt es „schon“ oder „jetzt“ und steht nach dem ersten Satzteil: Lima ka tuig na si Inday = Inday ist schon fünf. Manchmal ist na aber die Kurzform von kana (das da): Unsa na? = Was ist das? Merkhilfe: Steht na da, wo ein Ding stehen könnte, ist „das da“ gemeint."},
         {"type": "word_bank", "prompt": "Inday ist drei (Jahre alt).", "tokens": ["Tulo", "ka", "tuig", "na", "si", "Inday", "duha", "kana"], "answer": ["Tulo", "ka", "tuig", "na", "si", "Inday"]},
         {"type": "fill_blank", "prompt": "Lima ka tuig ___ si Inday.", "translation": "Inday ist schon fünf.", "options": ["na", "nga", "mga"], "answer": 0},
         {"type": "true_false", "statement": "Kana ang imong amiga?", "translation": "Ist das (da) deine Freundin?", "answer": true},
@@ -285,7 +285,7 @@
       ],
       "grammar": {
         "title": "ni vor Namen, nagpuyo sa …",
-        "text": "Ni steht vor Namen und zeigt Besitz: anak ni Mama = Mamas Kind, asawa ni Tim = Tims Frau (bei Pronomen sagt man dagegen akong, imong). Wohnen ist puyo, mit nag- wird daraus ein Satz: Nagpuyo mi sa Sauerland = Wir wohnen im Sauerland, Nagpuyo si Lola sa Cebu = Oma wohnt in Cebu. Sa ist das Allzweck-Wort für Ort und Zeit: in, an, auf, zu, nach. Mit na sagst du, was inzwischen so ist: Minyo na ko = Ich bin verheiratet, Dako na si Inday = Inday ist schon groß. Gwapo ist das männliche Gegenstück zu gwapa, tigulang und batan-on (alt und jung) gelten nur für Personen."
+        "text": "Ni steht vor Namen und zeigt, wem etwas gehört: anak ni Mama = Mamas Kind, asawa ni Tim = Tims Frau. Wohnen heißt puyo, mit nag- wird daraus ein Satz: Nagpuyo mi sa Sauerland = Wir wohnen im Sauerland, Nagpuyo si Lola sa Cebu = Oma wohnt in Cebu. Sa heißt dabei „in, an, auf, zu“ – das Allzweck-Wort für Orte. Merkhilfe: ni = von wem, sa = wo."
       },
       "exercises": [
         {"type": "multiple_choice", "prompt": "Nagpuyo mi sa Sauerland.", "direction": "ceb_de", "options": ["Wir wohnen im Sauerland.", "Wir kommen aus dem Sauerland.", "Wir fahren ins Sauerland.", "Ihr wohnt im Sauerland."], "answer": 0},

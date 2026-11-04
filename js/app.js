@@ -30,7 +30,7 @@ function showUpdateBanner() {
   if (document.querySelector(".banner")) return;
   const b = h("div", { class: "banner" }, h("span", { class: "grow" }, "Neue Version verfügbar."),
     h("button", { onclick: () => { swRegistration?.waiting?.postMessage("skipWaiting"); setTimeout(() => location.reload(), 300); } }, "Neu laden"),
-    h("button", { class: "btn-ghost", style: { color: "inherit" }, onclick: () => b.remove() }, "✕"));
+    h("button", { "aria-label": "Schließen", class: "btn-ghost", style: { color: "inherit" }, onclick: () => b.remove() }, "✕"));
   document.body.append(b);
 }
 
@@ -49,13 +49,13 @@ async function boot() {
     navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController && !window.__reloading) { window.__reloading = true; location.reload(); } });
   }
   try { if (localStorage.getItem("bigText") === "1") document.body.classList.add("big-text"); } catch (_) {}
-  const softRender = () => { const r = (location.hash || "#home").slice(1).split("/")[0]; if (!["lesson", "trainer"].includes(r)) render(); };
+  const softRender = () => { const r = (location.hash || "#home").slice(1).split("/")[0]; if (!["lesson", "trainer", "blitz", "story", "intro"].includes(r)) render(); };
   window.addEventListener("online", softRender);
   window.addEventListener("offline", softRender);
   try {
     content = await loadContent();
   } catch (e) {
-    replace(main, h("div", { class: "card" }, h("h2", {}, "Inhalte konnten nicht geladen werden"), h("p", {}, String(e.message))));
+    replace(main, h("div", { class: "card" }, h("h2", {}, "Inhalte konnten nicht geladen werden"), h("p", { class: "muted small" }, "Bitte Internet prüfen und noch einmal versuchen."), h("button", { class: "btn-primary btn-block mt", onclick: () => location.reload() }, "Nochmal versuchen")));
     return;
   }
   await store.init(content);
@@ -135,7 +135,7 @@ async function render() {
   document.body.classList.remove("lesson-mode");
   main.classList.remove("nobounce");
   document.querySelectorAll(".feedback, .overlay").forEach((e) => e.remove());
-  tabs.querySelectorAll("a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + route || (["more", "words", "surprises", "settings", "grammar", "review", "pron", "culture", "stories"].includes(route) && a.getAttribute("href") === "#more")));
+  tabs.querySelectorAll("a").forEach((a) => { const on = a.getAttribute("href") === "#" + route || (["more", "words", "surprises", "settings", "grammar", "review", "pron", "culture", "stories", "intro"].includes(route) && a.getAttribute("href") === "#more"); a.classList.toggle("active", on); if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   switch (route) {
     case "home": return renderHome(isCurrent);
     case "path": return renderPath(isCurrent);
@@ -171,6 +171,7 @@ async function render() {
 }
 
 // ---------- Start-Bildschirm ----------
+const unitLen = (u) => content.lessons.filter((l) => l.unit === u).length;
 async function renderHome(isCurrent = () => true) {
   const s = getStats(content);
   const completed = store.completedSet();
@@ -178,13 +179,13 @@ async function renderHome(isCurrent = () => true) {
   const canSync = await sync.canSync();
   const blitzBest = await store.blitzBest();
   if (!isCurrent()) return;
-  const nextId = inProgress?.lessonId || content.nextLessonId(completed);
+  const nextId = (inProgress && content.lesson(inProgress.lessonId) ? inProgress.lessonId : null) || content.nextLessonId(completed);
   const next = nextId ? content.lesson(nextId) : null;
-  const goalDots = h("div", { class: "goal-dots" }, Array.from({ length: s.dailyGoal }, (_, i) => h("i", { class: i < s.lessonsToday ? "on" : "" })));
   const activeToday = !!s.heatmap.find((d) => d.date === s.today)?.active;
   replace(main,
     eagleSays(s.lessonsToday >= s.dailyGoal ? "cheer" : "wave", [h("b", {}, greeting()), homeLine({ streak: s.streak, lessonsToday: s.lessonsToday, dailyGoal: s.dailyGoal, dueCount: s.dueCount, inProgress: !!inProgress, allDone: !next })]),
-    s.streak > 0 && !activeToday ? h("div", { class: "streak-warn mb" }, `🔥 ${s.streak} Tage Streak – heute noch nichts gelernt. Eine Lektion oder Trainer-Runde hält ihn am Leben.`) : null,
+    s.streak > 0 && !activeToday ? h("div", { class: "streak-warn mb" }, `🔥 ${s.streak} Tage Streak – heute noch nichts gelernt. Eine Lektion hält ihn am Leben.`) : null,
+    s.streak === 0 && s.longest > 0 && !activeToday ? h("div", { class: "streak-warn mb" }, `Dein Rekord: ${s.longest} Tage am Stück. Heute geht's wieder los.`) : null,
     h("div", { class: "stat-grid" },
       h("div", { class: "stat" }, h("b", {}, s.streak + " 🔥"), h("span", {}, "Tage Streak")),
       h("div", { class: "stat" }, h("b", {}, `${s.lessonsToday}/${s.dailyGoal}`), h("span", {}, "Tagesziel")),
@@ -192,23 +193,23 @@ async function renderHome(isCurrent = () => true) {
     ),
     h("div", { class: "card accent mt" },
       next
-        ? [h("div", { class: "muted small" }, inProgress ? "Angefangene Lektion" : `Unit ${next.unit} · Lektion ${next.posInUnit}`),
-           h("h2", { style: { margin: "4px 0 12px" } }, next.title),
-           h("div", { class: "row" }, goalDots, h("span", { class: "small" }, s.lessonsToday >= s.dailyGoal ? "Tagesziel erreicht!" : `noch ${s.dailyGoal - s.lessonsToday} bis zum Tagesziel`)),
+        ? [h("div", { class: "muted small" }, inProgress ? "Angefangene Lektion" : `Unit ${next.unit}: ${next.unitTitle}`),
+           h("h2", { style: { margin: "4px 0 10px" } }, next.title),
+           h("div", { class: "unit-dots", "aria-label": `Lektion ${next.posInUnit} von ${unitLen(next.unit)}` }, Array.from({ length: unitLen(next.unit) }, (_, i) => h("i", { class: i < next.posInUnit - 1 ? "on" : i === next.posInUnit - 1 ? "cur" : "" })), h("span", { class: "small" }, `Lektion ${next.posInUnit} von ${unitLen(next.unit)}`)),
            h("button", { class: "btn-block btn-big mt", style: { background: "var(--card)", color: "var(--text)" }, onclick: () => navigate("#lesson/" + next.id) }, inProgress ? "Weitermachen" : "Weiter")]
-        : [h("h2", {}, "Alle 72 Lektionen geschafft!"), h("p", {}, "Halte deinen Wortschatz mit dem Trainer frisch.")],
+        : [h("h2", {}, `Alle ${content.lessons.length} Lektionen geschafft!`), h("p", {}, "Halte deinen Wortschatz mit dem Trainer frisch.")],
     ),
     h("div", { class: "card" },
-      h("div", { class: "row spread" }, h("div", {}, h("b", {}, s.dueCount), " Wörter fällig"), h("button", { class: "btn-small " + (s.dueCount ? "btn-primary" : ""), disabled: !s.dueCount, onclick: () => navigate("#trainer/review") }, "Wiederholen")),
-      h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, "Schnelle Runde mit 10 Wörtern"), h("button", { class: "btn-small", disabled: !s.learnedWords, onclick: () => navigate("#trainer/quick") }, "Trainer")),
-      h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, `⚡ 60 Sekunden, Rekord ${blitzBest}`), h("button", { class: "btn-small", disabled: s.learnedWords < 4, onclick: () => navigate("#blitz") }, "Blitzrunde")),
+      h("div", { class: "row spread" }, h("div", {}, h("b", {}, s.dueCount), s.dueCount === 1 ? " Wort fällig" : " Wörter fällig"), h("button", { class: "btn-small " + (s.dueCount ? "btn-primary" : ""), disabled: !s.dueCount, onclick: () => navigate("#trainer/review") }, "Wiederholen")),
+      h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, "Trainer: 10 Wörter üben"), h("button", { class: "btn-small", disabled: !s.learnedWords, onclick: () => navigate("#trainer/quick") }, "Trainer")),
+      h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, `⚡ 60 Sekunden · Rekord ${blitzBest}`), h("button", { class: "btn-small", disabled: s.learnedWords < 4, onclick: () => navigate("#blitz") }, "Blitzrunde")),
     ),
-    h("div", { class: "card" },
-      h("div", { class: "row spread" }, h("span", {}, "Gelernte Wörter"), h("b", {}, `${s.learnedWords} / ${s.totalWords}`)),
-      h("div", { class: "row spread" }, h("span", {}, "Lektionen"), h("b", {}, `${s.completedLessons} / ${s.totalLessons}`)),
-      h("div", { class: "row spread" }, h("span", {}, "Niveau"), h("b", {}, s.level)),
+    h("div", { class: "card row spread" },
+      h("div", {}, h("b", {}, s.learnedWords), h("span", { class: "small muted" }, " Wörter gelernt")),
+      h("div", {}, h("b", {}, s.xpTotal), h("span", { class: "small muted" }, " XP gesamt")),
+      h("div", {}, h("b", {}, s.level), h("span", { class: "small muted" }, " Niveau")),
     ),
-    h("p", { class: "small muted center", "data-sync-status": "" }, canSync ? syncStatusText() : "Dropbox nicht verbunden – Daten nur lokal"),
+    canSync ? h("p", { class: "small muted center", "data-sync-status": "" }, syncStatusText()) : null,
     navigator.onLine ? null : h("p", { class: "small muted center offline" }, "Offline – alles läuft weiter, Sync folgt später."),
   );
   main.scrollTop = 0;
@@ -239,7 +240,7 @@ async function renderPath(isCurrent = () => true) {
       const started = inProgress?.lessonId === l.id;
       const node = h("a", { class: "node " + (started ? "inprogress" : isDone ? "done" : isNext ? "next" : unlocked ? "" : "locked"), href: unlocked ? "#lesson/" + l.id : null, onclick: unlocked ? null : (e) => { e.preventDefault(); toast("Erst die vorherige Lektion abschließen."); } },
         h("div", { class: "num" }, started ? "▶" : isDone ? "✓" : unlocked ? String(i + 1) : "🔒"),
-        h("div", { class: "t" }, h("b", {}, l.title), h("span", {}, isDone ? `Beste Quote ${p?.bestAccuracy ?? 0} % · nochmal üben` : inProgress?.lessonId === l.id ? "angefangen – weitermachen" : `${l.vocab.length} Wörter · ${l.exercises.filter((e) => e.type !== "grammar_note").length} Übungen`)),
+        h("div", { class: "t" }, h("b", {}, l.title), h("span", {}, isDone ? `Beste Quote ${p?.bestAccuracy ?? 0} % · nochmal üben` : inProgress?.lessonId === l.id ? "angefangen – weitermachen" : `${l.vocab.length} Wörter · ${(content.lesson(l.id) || l).exercises.filter((e) => e.type !== "grammar_note").length} Übungen`)),
       );
       path.append(node);
     });
@@ -327,16 +328,20 @@ function renderWords() {
       return !q || e.ceb.toLowerCase().includes(q) || e.de.toLowerCase().includes(q) || (e.note || "").toLowerCase().includes(q);
     });
     count.textContent = `${rows.length} Wörter` + (showAll ? " (inkl. noch nicht gelernte)" : "");
-    replace(list, rows.length ? rows.slice(0, 400).map((e) => {
+    const LIMIT = 80;
+    replace(list, rows.length ? rows.slice(0, LIMIT).map((e) => {
       const w = store.words.get(e.ceb);
       const cat = categoryOf(w);
       const learned = completed.has(e.lesson) || (w && w.stage > 0);
-      return h("div", { class: "v", style: learned ? null : { opacity: 0.6 }, onclick: () => showWordDetail(e) }, h("div", { class: "row" }, e.img ? h("span", { class: "vimg small" }, e.img) : null, h("div", {}, h("b", {}, e.ceb), h("span", { class: "pron" }, pronounce(e.ceb)), h("span", { class: "note" }, e.de, e.note ? ` – ${e.note}` : ""))), h("div", { style: { textAlign: "right", flexShrink: 0 } }, learned ? h("span", { class: "badge " + cat }, cat) : h("span", { class: "badge" }, "Unit " + e.lesson.slice(1, 3).replace(/^0/, "")), w?.due && w.stage > 0 ? h("div", { class: "small muted" }, "fällig " + w.due.slice(8, 10) + "." + w.due.slice(5, 7) + ".") : null));
+      return h("div", { class: "v", role: "button", tabindex: "0", style: learned ? null : { opacity: 0.6 }, onclick: () => showWordDetail(e), onkeydown: (ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); showWordDetail(e); } } }, h("div", { class: "row" }, e.img ? h("span", { class: "vimg small" }, e.img) : null, h("div", {}, h("b", {}, e.ceb), h("span", { class: "pron" }, pronounce(e.ceb)), h("span", { class: "note" }, e.de, e.note ? ` – ${e.note}` : ""))), h("div", { style: { textAlign: "right", flexShrink: 0 } }, learned ? h("span", { class: "badge " + cat }, cat) : h("span", { class: "badge" }, "Unit " + e.lesson.slice(1, 3).replace(/^0/, "")), w?.due && w.stage > 0 ? h("div", { class: "small muted" }, "fällig " + w.due.slice(8, 10) + "." + w.due.slice(5, 7) + ".") : null));
     }) : h("p", { class: "muted" }, showAll ? "Nichts gefunden." : "Keine Wörter – schließe zuerst eine Lektion ab."));
+    if (rows.length > LIMIT) list.append(h("p", { class: "small muted center" }, `${rows.length - LIMIT} weitere – Suche eingrenzen, um sie zu sehen.`));
   }
-  input.addEventListener("input", update);
+  let debounce = null;
+  input.addEventListener("input", () => { clearTimeout(debounce); debounce = setTimeout(update, 150); });
   replace(main, h("h1", {}, "Wörter"), h("div", { class: "search" }, input), seg,
     h("label", { class: "row small", style: { fontWeight: 400, margin: "0 0 10px" } }, allBox, " Auch noch nicht gelernte Wörter zeigen"), count, list);
+  main.scrollTop = 0;
   update();
 }
 
@@ -347,10 +352,10 @@ function renderSurprises() {
   const open = all.filter((s) => completed.has(s.lessonId));
   const locked = all.length - open.length;
   replace(main, 
-    h("h1", {}, "Für meine Frau"),
+    h("h1", {}, "Für Langga"),
     h("p", { class: "muted" }, "Alle Überraschungssätze aus abgeschlossenen Lektionen."),
     open.length ? open.map((s) => h("div", { class: "surprise mb" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "pron" }, pronounce(s.ceb)), h("div", { class: "de" }, s.de), h("div", { class: "when" }, `Wann: ${s.when} · Unit ${s.unit}`),
-      h("button", { class: "btn-ghost btn-small", style: { padding: "4px 0", minHeight: "32px" }, onclick: () => copyText(s.ceb) }, "Kopieren"))) : h("p", {}, "Noch keine – die erste Lektion wartet."),
+      h("button", { class: "btn-ghost btn-small", onclick: () => copyText(s.ceb) }, "Kopieren"))) : h("p", {}, "Noch keine – die erste Lektion wartet."),
     locked ? h("p", { class: "small muted center" }, `${locked} weitere Sätze warten in den nächsten Lektionen.`) : null,
   );
   main.scrollTop = 0;
@@ -409,10 +414,10 @@ function renderCulture() {
 // ---------- Erster Start: kurze Tour ----------
 function renderOnboarding() {
   const slides = [
-    { mood: "wave", title: "Maayong adlaw! Ich bin Agila.", text: "Ich begleite dich von A0 bis A2 Cebuano. 72 kurze Lektionen, jede dauert nur ein paar Minuten. Alles läuft offline, dein Fortschritt wird in deiner Dropbox gesichert." },
-    { mood: "think", title: "So lernst du", text: "Jede Lektion: neue Wörter mit Bild, Aussprache und Eselsbrücke, dann Übungen. Fehler kommen einfach noch einmal dran. Es gibt keine Herzen und keine Strafen." },
-    { mood: "idle", title: "Wiederholen zur richtigen Zeit", text: "Die App merkt sich jedes Wort und fragt es nach 1, 3, 7, 14 und 30 Tagen wieder ab. Der Trainer zeigt dir, was fällig ist. Die Blitzrunde ist für zwischendurch." },
-    { mood: "cheer", title: "Für Langga", text: "Jede Lektion endet mit einem Überraschungssatz für deine Frau, jede Unit mit einer Comic-Geschichte. Dein Tagesziel: eine Lektion. Der Streak zählt jeden Tag mit Lektion oder Trainer." },
+    { mood: "wave", title: "Maayong adlaw! Ich bin Agila.", text: "Ich bringe dir Cebuano bei – in kurzen Lektionen, ein paar Minuten am Tag. Auch ohne Internet." },
+    { mood: "think", title: "So lernst du", text: "Erst ein paar neue Wörter mit Bild und Eselsbrücke, dann Übungen. Was du falsch machst, kommt einfach noch einmal dran. Keine Strafen." },
+    { mood: "idle", title: "Wiederholen zur richtigen Zeit", text: "Was du lernst, frage ich später noch einmal ab – genau dann, wenn du es sonst vergessen würdest. Der Trainer zeigt dir, was dran ist." },
+    { mood: "cheer", title: "Für Langga", text: "Jede Lektion endet mit einem Satz für deine Frau, jede Unit mit einer kleinen Geschichte. Dein Ziel: eine Lektion am Tag." },
   ];
   let i = 0;
   const finish = async () => { await db.kvSet("onboarded", true); navigate("#home"); };
@@ -438,15 +443,15 @@ function renderMore() {
   replace(main, 
     h("h1", {}, "Mehr"),
     h("div", { class: "card list" },
-      h("a", { href: "#words" }, "📚 Wörterliste"),
-      h("a", { href: "#grammar" }, "📖 Grammatik nachschlagen"),
-      h("a", { href: "#pron" }, "🔊 Aussprache lesen"),
+      h("a", { href: "#surprises" }, "💛 Für Langga"),
       h("a", { href: "#stories" }, "📖 Geschichten"),
-      h("a", { href: "#culture" }, "🇵🇭 Wusstest du? Philippinen"),
-      h("a", { href: "#intro" }, "🦅 Kurze Tour durch die App"),
-      h("a", { href: "#surprises" }, "💛 Für meine Frau"),
+      h("a", { href: "#words" }, "📚 Wörterliste"),
+      h("a", { href: "#grammar" }, "📘 Grammatik"),
+      h("a", { href: "#pron" }, "🔊 Aussprache"),
+      h("a", { href: "#culture" }, "🇵🇭 Wusstest du?"),
       h("a", { href: "#review" }, "🗓️ Wochenrückblick"),
-      h("a", { href: "#settings" }, "⚙️ Einstellungen & Dropbox"),
+      h("a", { href: "#intro" }, "🦅 Tour"),
+      h("a", { href: "#settings" }, "⚙️ Einstellungen"),
     ),
   );
 }
@@ -494,7 +499,7 @@ async function renderSettings(isCurrent = () => true) {
            h("div", { class: "row mt" }, h("button", { class: "grow btn-primary", onclick: async () => { const r = await sync.run("manual"); toast(r.error ? "Sync-Fehler: " + r.error : r.changed ? "Synchronisiert – neue Daten übernommen." : "Synchronisiert."); } }, "Jetzt synchronisieren"),
              h("button", { class: "btn-ghost btn-danger", onclick: async () => { if (await confirmSheet("Dropbox-Verbindung trennen? Deine Daten bleiben lokal erhalten.", { okLabel: "Trennen", danger: true })) { await dropbox.disconnect(); renderSettings(); } } }, "Trennen")),
            h("label", { class: "row mt", style: { fontWeight: 400 } }, autoBox, " Automatisch nach jeder Lektion synchronisieren")]
-        : [h("p", { class: "small muted" }, "Sichert Fortschritt, Wiederholungsdaten und das Ereignis-Log in deinem Dropbox-App-Ordner und gleicht mehrere Geräte ab."),
+        : [h("p", { class: "small muted" }, "Sichert deinen Fortschritt in Dropbox – auch für ein zweites Gerät."),
            standalone
              ? [h("button", { class: "btn-primary btn-block", onclick: () => connectBtn(true) }, "Mit Dropbox verbinden"), manualBox,
                 h("p", { class: "small muted mt" }, "Hinweis: Im Home-Bildschirm-Modus funktioniert die automatische Rückleitung von Dropbox nicht zuverlässig, deshalb der Weg über den Code.")]
@@ -518,12 +523,12 @@ async function renderSettings(isCurrent = () => true) {
       h("h3", { style: { marginTop: 0 } }, "Daten"),
       h("p", { class: "small muted" }, `${store.events.length} Ereignisse · ${store.wordList().length} Wörter mit Lernstand · Version ${CONFIG.APP_VERSION}` + (persisted === null ? "" : persisted ? " · Speicher dauerhaft" : " · Speicher nicht als dauerhaft markiert")),
       h("button", { class: "btn-block mb", onclick: async () => {
-        if (!swRegistration) return toast("Kein Service Worker aktiv (Offline-Cache nur über HTTPS).");
+        if (!swRegistration) return toast("Updates gibt es nur in der installierten App.");
         try { await swRegistration.update(); toast(swRegistration.waiting ? "Update bereit – oben auf „Neu laden“ tippen." : "Du hast die neueste Version."); } catch (e) { toast("Update-Prüfung fehlgeschlagen: " + e.message); }
       } }, "Nach Updates suchen"),
       h("button", { class: "btn-block btn-danger", onclick: async () => {
         const text = connected
-          ? "Wirklich ALLE Lerndaten löschen? Das löscht den lokalen Stand UND die Sicherung in Dropbox (progress.json, events.json). Vorher exportieren, wenn du unsicher bist."
+          ? "Wirklich alles löschen? Auch die Sicherung in Dropbox. Vorher exportieren, wenn du unsicher bist."
           : "Wirklich ALLE lokalen Lerndaten löschen?";
         if (!(await confirmSheet(text, { okLabel: "Alles löschen", danger: true }))) return;
         try {

@@ -1,11 +1,11 @@
 // Lektions-Player: Übungen der Reihe nach, Fehler kommen ans Ende, Fortschritt wird gespeichert.
 import { h, esc, shuffle, toast, confirmSheet, replace, copyText } from "./ui.js";
-import { eagle, confetti } from "./art.js";
+import { eagle, confetti, unitBadge } from "./art.js";
 import { pronounce } from "./pronounce.js";
 import { isAnswerAcceptable, normalizeAnswer } from "./answer.js";
 import { weightFor, isDue } from "./srs.js";
 import { db } from "./db.js";
-import { store } from "./store.js";
+import { store, XP } from "./store.js";
 import { portrait } from "./characters.js";
 
 const TYPE_LABEL = {
@@ -26,7 +26,8 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
   let st = await db.kvGet("lesson.inprogress");
   if (!isCurrent()) return;
   // Gespeicherter Stand passt nicht mehr zum Inhalt (Übungen geändert)? Dann neu anfangen.
-  if (st && st.lessonId === lessonId && !(Array.isArray(st.queue) && st.queue.every((i) => Number.isInteger(i) && i < lesson.exercises.length))) {
+  const exSig = lesson.exercises.map((e) => e.type).join(",");
+  if (st && st.lessonId === lessonId && !(Array.isArray(st.queue) && st.queue.every((i) => Number.isInteger(i) && i < lesson.exercises.length) && st.exSig === exSig)) {
     st = null;
     await db.kvDel("lesson.inprogress");
   }
@@ -41,7 +42,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
   if (!st || st.lessonId !== lessonId) {
     st = {
       lessonId, queue: lesson.exercises.map((_, i) => i), pos: -1, xp: 0, correct: 0, total: 0,
-      startedAt: Date.now(), attempted: {}, activeMs: 0,
+      startedAt: Date.now(), attempted: {}, activeMs: 0, exSig,
     };
   }
   const realCount = lesson.exercises.filter((e) => e.type !== "grammar_note").length;
@@ -64,7 +65,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
   async function pause() {
     if (st.pos < 0) { await db.kvDel("lesson.inprogress"); return exit(); }
     await save();
-    toast("Lektion gespeichert – du kannst später weitermachen.");
+    toast("Gespeichert – später weitermachen.");
     exit();
   }
 
@@ -74,9 +75,9 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     const answered = st.queue.slice(0, Math.max(0, st.pos)).filter((i) => lesson.exercises[i].type !== "grammar_note").length;
     const remaining = st.queue.slice(Math.max(0, st.pos)).filter((i) => lesson.exercises[i].type !== "grammar_note").length;
     return h("div", { class: "lesson-top" },
-      h("button", { class: "btn-ghost btn-small", onclick: pause, "aria-label": "Pause" }, "✕"),
-      h("div", { class: "progress", title: `${remaining} übrig` }, h("i", { style: { width: pct + "%" } })),
-      h("div", { class: "xp" }, h("div", {}, `${st.xp} XP`), h("div", { class: "small muted", style: { fontWeight: 400 } }, `${answered}/${answered + remaining}`)),
+      h("button", { class: "btn-ghost btn-icon", onclick: pause, "aria-label": "Lektion unterbrechen" }, "✕"),
+      h("div", { class: "progress", role: "progressbar", "aria-valuemin": "0", "aria-valuemax": String(answered + remaining), "aria-valuenow": String(answered), "aria-label": `${remaining} Übungen übrig` }, h("i", { style: { width: pct + "%" } })),
+      h("div", { class: "xp" }, h("div", {}, `${st.xp} XP`), h("div", { class: "small muted", style: { fontWeight: 400 } }, `noch ${remaining}`)),
     );
   }
 
@@ -84,24 +85,28 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
   function renderIntro() {
     const vocab = h("div", { class: "card vocab-list" },
       h("h3", { style: { marginTop: 0 } }, "Neue Wörter"),
-      lesson.vocab.map((v) => { const e = content.entry(v.ceb) || {}; return h("div", { class: "v vocab-intro" },
-        e.img ? h("div", { class: "vimg" }, e.img) : null,
-        h("div", { class: "grow" }, h("div", { class: "row spread" }, h("b", {}, v.ceb), h("span", { class: "muted", style: { textAlign: "right" } }, v.de, v.outlook ? h("span", { class: "badge", style: { marginLeft: "6px" } }, "Ausblick") : null)),
-          h("span", { class: "pron" }, pronounce(v.ceb)), v.note ? h("span", { class: "note" }, v.note) : null,
-          e.mnemonic ? h("div", { class: "mnemo" }, "💡 ", e.mnemonic) : null),
-      ); }),
+      h("p", { class: "small muted", style: { margin: "0 0 6px" } }, "Tipp auf ein Wort zeigt Eselsbrücke und Hinweis."),
+      lesson.vocab.map((v) => { const e = content.entry(v.ceb) || {};
+        const extra = h("div", { class: "vextra hidden" }, v.note ? h("div", { class: "note" }, v.note) : null, e.mnemonic ? h("div", { class: "mnemo" }, "💡 ", e.mnemonic) : null);
+        const row = h("div", { class: "v vocab-intro", role: "button", tabindex: "0", "aria-expanded": "false", onclick: () => { const open = extra.classList.toggle("hidden"); row.setAttribute("aria-expanded", String(!open)); }, onkeydown: (ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); row.click(); } } },
+          e.img ? h("div", { class: "vimg" }, e.img) : null,
+          h("div", { class: "grow" }, h("div", { class: "row spread" }, h("b", {}, v.ceb), h("span", { class: "muted", style: { textAlign: "right" } }, v.de, v.outlook ? h("span", { class: "badge", style: { marginLeft: "6px" } }, "Ausblick") : null)),
+            h("span", { class: "pron" }, pronounce(v.ceb)), extra),
+        );
+        return row; }),
     );
     const start = () => { st.pos = 0; exStart = Date.now(); save(); renderCurrent(); };
+    const unitLen = content.lessons.filter((x) => x.unit === lesson.unit).length;
     replace(main,
       header(),
       h("h1", {}, lesson.title),
-      h("p", { class: "muted" }, `Unit ${lesson.unit} · Lektion ${lesson.posInUnit} · ${realCount} Übungen${wasCompleted ? " · schon geschafft, Wiederholung" : ""}`),
+      h("p", { class: "muted" }, `Unit ${lesson.unit} · Lektion ${lesson.posInUnit} von ${unitLen} · ${realCount} Übungen${wasCompleted ? " · Wiederholung" : ""}`),
+      wasCompleted ? h("button", { class: "btn-outline btn-block", onclick: start }, "Direkt zu den Übungen") : null,
       vocab,
-      h("div", { class: "grammar" }, h("h3", {}, lesson.grammar.title), h("p", { html: esc(lesson.grammar.text).replace(/\n/g, "<br>") })),
+      h("details", { class: "grammar", open: !wasCompleted }, h("summary", {}, h("h3", {}, lesson.grammar.title)), h("p", { html: esc(lesson.grammar.text).replace(/\n/g, "<br>") })),
       h("button", { class: "btn-primary btn-block btn-big mt", onclick: start }, "Los geht's"),
     );
     main.scrollTop = 0;
-    if (wasCompleted) main.querySelector("h1").after(h("button", { class: "btn-outline btn-block btn-small", onclick: start }, "Direkt zu den Übungen"));
   }
 
   function renderCurrent() {
@@ -142,8 +147,8 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     });
     st.xp += xp;
     st.total++;
-    if (res.correct) st.correct++;
-    else st.queue.push(idx); // ans Ende anhängen
+    if (res.correct) { st.correct++; st.run = (st.run || 0) + 1; }
+    else { st.run = 0; st.queue.push(idx); } // ans Ende anhängen
     st.pos++;
     await save();
     showFeedback(res, words, () => renderCurrent());
@@ -151,7 +156,9 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
 
   function showFeedback(res, words, next) {
     const cls = !res.correct ? "bad" : res.near ? "near" : "ok";
-    const title = !res.correct ? "Leider falsch" : res.near ? "Fast – richtig wäre:" : "Richtig!";
+    const run = st.run || 0;
+    const praise = ["Richtig!", "Sakto!", "Maayo!", "Genau!", "Stark!", "Maayo kaayo!"];
+    const title = !res.correct ? (res.gaveUp ? "Jetzt kennst du es" : "Noch nicht – kommt gleich nochmal") : res.near ? "Fast – richtig wäre:" : run >= 3 ? `🔥 ${run} in Folge!` : praise[Math.floor(Math.random() * praise.length)];
     // Bei Fehlern die beteiligten Wörter erklären
     const explain = !res.correct || res.near
       ? words.map((w) => content.entry(w)).filter(Boolean).slice(0, 4).map((e) => h("div", { class: "small" }, h("b", {}, e.ceb), h("span", { class: "pron inline" }, pronounce(e.ceb)), " = ", e.de, e.note ? h("span", { class: "muted" }, ` (${e.note})`) : null))
@@ -176,7 +183,7 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     document.querySelector(".feedback button")?.focus();
   }
 
-  const dontKnow = (expected, fn) => h("button", { class: "btn-ghost btn-block btn-small", onclick: () => fn({ correct: false, near: false, expected }) }, "Weiß ich nicht – Lösung zeigen");
+  const dontKnow = (expected, fn) => h("button", { class: "btn-ghost btn-block btn-small", onclick: () => fn({ correct: false, near: false, expected, gaveUp: true }) }, "Lösung zeigen (zählt als Fehler)");
 
   // ---------- Übungstypen ----------
   function multiple_choice({ ex, body, done }) {
@@ -339,16 +346,14 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
     replace(main,
       h("div", { class: "mascot-center" }, eagle(acc >= 70 ? "cheer" : "wave", 150)),
       h("h1", { class: "center", style: { marginTop: 0 } }, acc >= 90 ? "Stark!" : acc >= 70 ? "Lektion geschafft!" : "Geschafft – dranbleiben!"),
-      unitDone ? h("p", { class: "center" }, `🏅 Unit ${lesson.unit} komplett – Abzeichen verdient!`) : null,
-      h("div", { class: "result-big" }, `${st.xp + 20} XP`),
+      unitDone ? h("div", { class: "center" }, h("div", { class: "mascot-center" }, unitBadge(lesson.unit, "done", 72)), h("p", { class: "center", style: { marginTop: 0 } }, `Unit ${lesson.unit} komplett – Abzeichen verdient!`)) : null,
+      h("div", { class: "result-big" }, `${st.xp + XP.lessonBonus} XP`),
       h("div", { class: "stat-grid" },
         h("div", { class: "stat" }, h("b", {}, acc + " %"), h("span", {}, stats && stats.attempts > 1 ? `Quote (beste ${stats.bestAccuracy} %)` : "Trefferquote")),
         h("div", { class: "stat" }, h("b", {}, Math.max(1, Math.round(dur / 60000)) + " min"), h("span", {}, "Dauer")),
         h("div", { class: "stat" }, h("b", {}, lesson.vocab.length), h("span", {}, "neue Wörter")),
       ),
-      (() => { const cs = content.cultureOfUnit(lesson.unit); const c = cs.length ? cs[(lesson.posInUnit - 1) % cs.length] : null;
-        return c ? h("div", { class: "culture mt" }, h("div", { class: "culture-head" }, h("span", { class: "culture-emoji" }, c.emoji), h("b", {}, "Wusstest du? ", c.title)), h("p", {}, c.text)) : null; })(),
-      h("h2", {}, "Überraschungssatz für deine Frau"),
+      h("h2", {}, "💛 Für Langga"),
       h("div", { class: "surprise" }, h("div", { class: "ceb" }, s.ceb), h("div", { class: "pron" }, pronounce(s.ceb)), h("div", { class: "de" }, s.de), h("div", { class: "when" }, "Wann: " + s.when),
         h("button", { class: "btn-ghost btn-small mt", onclick: () => copyText(s.ceb) }, "Satz kopieren")),
       nextLesson ? h("button", { class: "btn-primary btn-block btn-big mt", onclick: () => exit("#lesson/" + nextLesson.id) }, `Weiter: ${nextLesson.title}`) : null,
@@ -356,6 +361,8 @@ export async function mountLesson(main, lessonId, { content, onExit, navigate, i
         h("button", { class: "grow", onclick: () => exit("#path") }, nextLesson ? "Zum Pfad" : "Fertig"),
         acc < 100 ? h("button", { class: "grow btn-outline", onclick: () => exit("#lesson/" + lessonId) }, "Nochmal üben") : null,
       ),
+      (() => { const cs = content.cultureOfUnit(lesson.unit); const c = cs.length ? cs[(lesson.posInUnit - 1) % cs.length] : null;
+        return c ? h("details", { class: "culture mt" }, h("summary", {}, h("span", { class: "culture-head" }, h("span", { class: "culture-emoji" }, c.emoji), h("b", {}, "Wusstest du? ", c.title))), h("p", {}, c.text)) : null; })(),
     );
     main.scrollTop = 0;
     if (acc >= 70) confetti(unitDone ? 140 : 70);
