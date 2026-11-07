@@ -220,7 +220,7 @@ export async function mountTrainer(main, { content, preset = null, onExit, isCur
     toast("Keine passenden Wörter gefunden.");
   }
   if (preset?.quick) {
-    const items = selectWords(content, { size: 10 });
+    const items = selectWords(content, { size: preset.size || 10 });
     if (items.length) { saved = null; return startRound({ mode: preset.mode || "easy", items: items.map((w) => ({ ceb: w.entry.ceb, due: w.due })) }); }
     toast("Noch keine Wörter zum Üben – erst eine Lektion abschließen.");
   }

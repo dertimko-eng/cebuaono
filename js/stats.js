@@ -163,17 +163,30 @@ export function computeStats({ events, words, progress, content, settings, srsHi
   // ---- Konstanz: Streak, Heatmap ----
   const activeDays = new Set();
   const dayCounts = {};
+  // Streak-Freezes: Events {type:"streak_freeze", action:"earn"|"use", date}
+  const frozenDays = new Set();
+  let freezeEarned = 0, freezeUsed = 0;
   for (const e of events) {
     const k = dateKeyOf(e.t);
-    if (e.type === "lesson_complete" || e.type === "trainer_round") activeDays.add(k);
+    if (e.type === "lesson_complete" || e.type === "trainer_round" || e.type === "story_complete") activeDays.add(k);
     if (e.type === "answer") dayCounts[k] = (dayCounts[k] || 0) + 1;
+    if (e.type === "streak_freeze") { if (e.action === "earn") freezeEarned++; else if (e.action === "use" && e.date) { freezeUsed++; frozenDays.add(e.date); } }
   }
-  for (const [k, c] of Object.entries(dayCounts)) if (c >= 10) activeDays.add(k);
+  for (const [k, c] of Object.entries(dayCounts)) if (c >= 5) activeDays.add(k);
+  const freezes = Math.max(0, Math.min(2, freezeEarned - freezeUsed));
+  // Streak: aktive Tage zählen, eingefrorene Tage überbrücken (zählen nicht mit)
   let streak = 0;
   let cursor = activeDays.has(today) ? today : addDays(today, -1);
-  while (activeDays.has(cursor)) {
-    streak++;
+  while (activeDays.has(cursor) || frozenDays.has(cursor)) {
+    if (activeDays.has(cursor)) streak++;
     cursor = addDays(cursor, -1);
+  }
+  // Lücke vor heute, die Freezes schließen könnten (für den automatischen Einsatz)
+  let gap = [];
+  if (!activeDays.has(today) && !activeDays.has(addDays(today, -1)) && !frozenDays.has(addDays(today, -1))) {
+    let d = addDays(today, -1);
+    while (!activeDays.has(d) && !frozenDays.has(d) && gap.length < 30) { gap.push(d); d = addDays(d, -1); }
+    if (!activeDays.has(d)) gap = []; // davor war gar kein Streak
   }
   let longest = 0, run = 0, prev = null;
   for (const k of [...activeDays].sort()) {
@@ -185,7 +198,7 @@ export function computeStats({ events, words, progress, content, settings, srsHi
   const heatStart = addDays(weekStart(today), -7 * 11);
   for (let i = 0; i < 84; i++) {
     const k = addDays(heatStart, i);
-    heatmap.push({ date: k, count: dayCounts[k] || 0, active: activeDays.has(k), future: k > today });
+    heatmap.push({ date: k, count: dayCounts[k] || 0, active: activeDays.has(k), frozen: frozenDays.has(k), future: k > today });
   }
 
   // ---- Tempo & Hochrechnung ----
@@ -235,7 +248,7 @@ export function computeStats({ events, words, progress, content, settings, srsHi
     learnedWords, totalWords, completedLessons, totalLessons, level, nextLevel, highestUnitDone,
     srsDist, srsSeries,
     accuracy, weekly, hardest, time,
-    streak, longest, heatmap,
+    streak, longest, heatmap, freezes, freezeGap: gap, frozenDays: [...frozenDays],
     wordsThisWeek, wordsLastWeek, trend, projection,
     lessonsToday, dailyGoal, xpToday, xpTotal, dueCount,
     weeklyReview,

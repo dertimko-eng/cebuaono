@@ -1,6 +1,7 @@
 // Datenhaltung: Einstellungen, Lektionsfortschritt, SRS-Wörter, Ereignis-Log (alles in IndexedDB).
 import { db, uuid } from "./db.js";
-import { newWord, applyResult, todayKey, distribution, isDue } from "./srs.js";
+import { newWord, applyResult, todayKey, distribution, isDue, addDays } from "./srs.js";
+import { computeStats } from "./stats.js";
 
 export const DEFAULT_SETTINGS = {
   dailyGoal: 1, // Lektionen pro Tag (1–3)
@@ -110,12 +111,14 @@ export const store = {
     // XP der einzelnen Antworten stecken schon in den answer-Events – hier nur der Bonus
     await this.addEvent({ type: "lesson_complete", lesson, dur, xp: XP.lessonBonus, sessionXp: xp + XP.lessonBonus, correct, total });
     await this.snapshotSrs(true);
+    this.earnedFreeze = await this.maybeEarnFreeze();
     this.emit("lesson");
   },
 
   async completeTrainerRound({ mode, size, correct, near, wrong, dur, xp = XP.trainerBonus }) {
     await this.addEvent({ type: "trainer_round", mode, size, correct, near, wrong, dur, xp });
     await this.snapshotSrs(true);
+    this.earnedFreeze = await this.maybeEarnFreeze();
     this.emit("trainer");
   },
 
@@ -133,6 +136,35 @@ export const store = {
     this.emit("story");
     return true;
   },
+  // ---------- Streak-Freezes ----------
+  stats() { return computeStats({ events: this.events, words: this.wordList(), progress: [...this.progress.values()], content: this.content, settings: this.settings, srsHistory: this.srsHistory }); },
+  async addFreeze(action, date, reason) {
+    await this.addEvent({ type: "streak_freeze", action, date, reason, xp: 0 });
+    this.emit("freeze");
+  },
+  // Beim Start: Geschenk-Freeze beim allerersten Mal, verpasste Tage automatisch überbrücken
+  async maintainStreak() {
+    if (!this.content) return { used: 0 };
+    const hasAny = this.events.some((e) => e.type === "streak_freeze");
+    if (!hasAny) await this.addFreeze("earn", todayKey(), "gift");
+    const s = this.stats();
+    let used = 0;
+    if (s.freezeGap.length && s.freezeGap.length <= s.freezes) {
+      for (const d of s.freezeGap) { await this.addFreeze("use", d, "auto"); used++; }
+    }
+    return { used, lost: s.freezeGap.length > s.freezes ? s.freezeGap.length : 0 };
+  },
+  // Nach Lektion/Trainer: alle 7 Streak-Tage einen Freeze (höchstens 2 auf Vorrat, einer pro Tag)
+  async maybeEarnFreeze() {
+    const s = this.stats();
+    const today = todayKey();
+    if (s.streak > 0 && s.streak % 7 === 0 && s.freezes < 2 && !this.events.some((e) => e.type === "streak_freeze" && e.action === "earn" && e.date === today && e.reason === "streak")) {
+      await this.addFreeze("earn", today, "streak");
+      return true;
+    }
+    return false;
+  },
+
   async blitzBest() {
     let best = (await db.kvGet("blitz.best")) || 0;
     for (const e of this.events) if (e.type === "trainer_round" && e.mode === "blitz" && (e.xp || 0) > best) best = e.xp;

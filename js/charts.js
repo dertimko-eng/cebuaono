@@ -108,6 +108,7 @@ export function heatmap(days) {
     const x = padL + w * (cell + gap), y = padT + r * (cell + gap);
     let cls = "h0";
     if (d.future) cls = "hf";
+    if (d.frozen && !d.active) cls = "hz";
     else if (d.count > 0 || d.active) {
       const lvl = Math.ceil((d.count / max) * 4) || 1;
       cls = "h" + Math.max(1, Math.min(4, lvl));

@@ -3,6 +3,7 @@ import { eagleSays, eagle, unitBadge, homeLine } from "./art.js";
 import { pronounce, PRON_LEGEND } from "./pronounce.js";
 import { mountStory } from "./story.js";
 import { mountBlitz } from "./trainer.js";
+import { renderConfusables } from "./confusables.js";
 import { portrait } from "./characters.js";
 import { h, esc, toast, sheet, confirmSheet, fmtTime, isStandalone, isIOS, replace, copyText } from "./ui.js";
 import { loadContent } from "./content.js";
@@ -60,6 +61,7 @@ async function boot() {
   }
   await store.init(content);
   await sync.init();
+  try { const r = await store.maintainStreak(); if (r.used) toast(`❄️ Streak-Freeze eingesetzt – dein Streak lebt.`, 4000); } catch (e) { console.warn("Streak", e); }
 
   // OAuth-Redirect von Dropbox?
   try {
@@ -76,8 +78,8 @@ async function boot() {
   if (store.settings.autoSync && (await sync.canSync())) {
     sync.run("start").then((r) => { if (r.changed) { toast("Fortschritt von Dropbox übernommen."); softRender(); } });
   }
-  document.addEventListener("lesson-complete", () => { if (store.settings.autoSync) sync.run("lesson"); });
-  document.addEventListener("trainer-complete", () => { if (store.settings.autoSync) sync.run("trainer"); });
+  document.addEventListener("lesson-complete", () => { if (store.settings.autoSync) sync.run("lesson"); if (store.earnedFreeze) { store.earnedFreeze = false; setTimeout(() => toast("❄️ 7 Tage am Stück – du hast einen Streak-Freeze verdient!", 4000), 800); } });
+  document.addEventListener("trainer-complete", () => { if (store.settings.autoSync) sync.run("trainer"); if (store.earnedFreeze) { store.earnedFreeze = false; setTimeout(() => toast("❄️ 7 Tage am Stück – du hast einen Streak-Freeze verdient!", 4000), 800); } });
   sync.onChange(() => document.querySelectorAll("[data-sync-status]").forEach((el) => (el.textContent = syncStatusText())));
 
   window.addEventListener("hashchange", render);
@@ -135,7 +137,7 @@ async function render() {
   document.body.classList.remove("lesson-mode");
   main.classList.remove("nobounce");
   document.querySelectorAll(".feedback, .overlay").forEach((e) => e.remove());
-  tabs.querySelectorAll("a").forEach((a) => { const on = a.getAttribute("href") === "#" + route || (["more", "words", "surprises", "settings", "grammar", "review", "pron", "culture", "stories", "intro"].includes(route) && a.getAttribute("href") === "#more"); a.classList.toggle("active", on); if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  tabs.querySelectorAll("a").forEach((a) => { const on = a.getAttribute("href") === "#" + route || (["more", "words", "surprises", "settings", "grammar", "review", "pron", "culture", "stories", "intro", "confuse"].includes(route) && a.getAttribute("href") === "#more"); a.classList.toggle("active", on); if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   switch (route) {
     case "home": return renderHome(isCurrent);
     case "path": return renderPath(isCurrent);
@@ -143,6 +145,7 @@ async function render() {
     case "grammar": return renderGrammar();
     case "pron": return renderPron();
     case "culture": return renderCulture();
+    case "confuse": return renderConfusables(main, { content, navigate });
     case "stories": return renderStories();
     case "story": return mountStory(main, param, { content, isCurrent, onExit: (hash) => navigate(hash || "#path") });
     case "blitz": return mountBlitz(main, { content, isCurrent, onExit: (hash) => navigate(hash || "#home") });
@@ -158,6 +161,8 @@ async function render() {
         preset = { words: due, mode: store.settings.trainerMode };
       } else if (param === "quick") {
         preset = { quick: true, mode: store.settings.trainerMode };
+      } else if (param === "mini") {
+        preset = { quick: true, size: 5, mode: "easy" };
       }
       return mountTrainer(main, { content, preset, isCurrent, onExit: () => navigate("#home") });
     }
@@ -184,10 +189,12 @@ async function renderHome(isCurrent = () => true) {
   const activeToday = !!s.heatmap.find((d) => d.date === s.today)?.active;
   replace(main,
     eagleSays(s.lessonsToday >= s.dailyGoal ? "cheer" : "wave", [h("b", {}, greeting()), homeLine({ streak: s.streak, lessonsToday: s.lessonsToday, dailyGoal: s.dailyGoal, dueCount: s.dueCount, inProgress: !!inProgress, allDone: !next })]),
-    s.streak > 0 && !activeToday ? h("div", { class: "streak-warn mb" }, `🔥 ${s.streak} Tage Streak – heute noch nichts gelernt. Eine Lektion hält ihn am Leben.`) : null,
+    s.streak > 0 && !activeToday ? h("div", { class: "streak-warn mb" },
+      h("div", {}, `🔥 ${s.streak} Tage Streak – heute noch nichts gelernt.` + (s.freezes ? ` Zur Not hast du ❄️ ${s.freezes} Freeze in Reserve.` : "")),
+      h("div", { class: "row mt", style: { marginTop: "8px" } }, h("button", { class: "btn-small btn-primary grow", onclick: () => navigate("#trainer/mini") }, "Streak retten: 5 Wörter (2 min)"))) : null,
     s.streak === 0 && s.longest > 0 && !activeToday ? h("div", { class: "streak-warn mb" }, `Dein Rekord: ${s.longest} Tage am Stück. Heute geht's wieder los.`) : null,
     h("div", { class: "stat-grid" },
-      h("div", { class: "stat" }, h("b", {}, s.streak + " 🔥"), h("span", {}, "Tage Streak")),
+      h("div", { class: "stat", role: "button", tabindex: "0", onclick: () => toast(`❄️ Freezes: ${s.freezes} von 2. Ein Freeze rettet einen verpassten Tag von selbst. Alle 7 Streak-Tage gibt es einen neuen. Auch Mini-Runde, Blitz oder Geschichte halten den Streak.`, 6000) }, h("b", {}, s.streak + " 🔥"), h("span", {}, `Streak · ❄️ ${s.freezes}`)),
       h("div", { class: "stat" }, h("b", {}, `${s.lessonsToday}/${s.dailyGoal}`), h("span", {}, "Tagesziel")),
       h("div", { class: "stat" }, h("b", {}, s.xpToday), h("span", {}, "XP heute")),
     ),
@@ -201,6 +208,7 @@ async function renderHome(isCurrent = () => true) {
     ),
     h("div", { class: "card" },
       h("div", { class: "row spread" }, h("div", {}, h("b", {}, s.dueCount), s.dueCount === 1 ? " Wort fällig" : " Wörter fällig"), h("button", { class: "btn-small " + (s.dueCount ? "btn-primary" : ""), disabled: !s.dueCount, onclick: () => navigate("#trainer/review") }, "Wiederholen")),
+      h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, "Mini-Runde: 5 Wörter, hält den Streak"), h("button", { class: "btn-small", disabled: !s.learnedWords, onclick: () => navigate("#trainer/mini") }, "Mini")),
       h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, "Trainer: 10 Wörter üben"), h("button", { class: "btn-small", disabled: !s.learnedWords, onclick: () => navigate("#trainer/quick") }, "Trainer")),
       h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, `⚡ 60 Sekunden · Rekord ${blitzBest}`), h("button", { class: "btn-small", disabled: s.learnedWords < 4, onclick: () => navigate("#blitz") }, "Blitzrunde")),
     ),
@@ -447,6 +455,7 @@ function renderMore() {
       h("a", { href: "#stories" }, "📖 Geschichten"),
       h("a", { href: "#words" }, "📚 Wörterliste"),
       h("a", { href: "#grammar" }, "📘 Grammatik"),
+      h("a", { href: "#confuse" }, "🔁 Verwechsler (ako, akong, nako …)"),
       h("a", { href: "#pron" }, "🔊 Aussprache"),
       h("a", { href: "#culture" }, "🇵🇭 Wusstest du?"),
       h("a", { href: "#review" }, "🗓️ Wochenrückblick"),

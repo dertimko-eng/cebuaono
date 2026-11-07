@@ -420,3 +420,13 @@ details.culture[open] .culture-head { margin-bottom: 4px; }
 .sheet { position: relative; }
 .sheet-close { position: absolute; top: 8px; right: 8px; }
 .sheet > .sheet-close + * { padding-right: 44px; }
+
+/* Verwechsler-Tabelle, Freeze-Tage */
+.ptab { display: grid; gap: 4px; margin: 8px 0; }
+.ptab-row { display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; gap: 4px; align-items: stretch; }
+.ptab-row.head span { font-size: 11px; color: var(--muted); text-align: center; align-self: end; padding-bottom: 2px; }
+.ptab-de { font-size: 12px; color: var(--muted); align-self: center; line-height: 1.2; }
+.ptab-cell { min-height: 48px; padding: 4px 2px; font-size: 15px; line-height: 1.1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; border-radius: 10px; }
+.ptab-cell .pron { font-size: 11px; }
+.chart.heat .hz { fill: #38bdf8; }
+.streak-warn .row { margin-top: 8px; }
