@@ -225,3 +225,6 @@ Die zwölf Comic-Dialoge in `content/stories/story_NN.json` wurden mit begrenzte
 - Spanische Zahlen (uno, dos, baynte, syento) für Preise/Uhrzeit, native Zahlen zum Zählen – so im Alltag üblich? Schreibweisen (sais/sayis, baynte/bente) prüfen.
 - „pesos“ als Alltagsform neben piso.
 - Schreibung mi- vs. ni- (Vergangenheit): im Kurs werden beide akzeptiert, Standard ist mi-, in Cebu wird meist ni- gesprochen.
+
+## Sätze (content/phrases.json)
+Rund 90 Alltagssätze in sechs Sammlungen (Für Langga, Familie, Schule & Arbeit, Alltag zu Hause, Höflich & herzlich, Gefühle & Smalltalk). Sie dürfen Wörter enthalten, die im Kurs nicht vorkommen. Bitte prüfen: klingt der Satz so, wie du ihn wirklich sagen würdest (Cebu-Stadt, locker, zu Hause)? Stimmen die Befehlsformen (hugasi, tawga, limpyohi, pasayloa, damgoha, balika, hinaya, ingati, kalimti, dad-a) und die Zusammenziehungen (kog, koy, ray, tika, unsay, ani)? Besonders unsicher: „Ako ray mohugas sa plato“, „Dili maayo akong pamati karon“, „Nalipay ko nga nailhan tika“, „Tabangan tika sa paglaba“, „Malipayong adlaw nga natawhan“. Die wörtlichen Übersetzungen (`lit`) sind nur Lernhilfe. Korrekturen direkt in der Datei, danach `node scripts/validate_content.mjs`; der Validator listet alle Wörter, die nicht im Glossar stehen.

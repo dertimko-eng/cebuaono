@@ -325,3 +325,27 @@ Eine Geschichte pro Unit, freigeschaltet nach der Lektion `after`. Comic-Dialog 
 ## 12. Kultur-Kästen (`content/culture.json`)
 
 Liste von Einträgen `{ "unit": 3, "title": "Sari-Sari-Store", "emoji": "🏪", "text": "3–5 Sätze Deutsch." }`, drei pro Unit, thematisch zur Unit passend (Essen → Markt/Karaoke/Fiesta, Familie → Mano-Gruß …). Die App zeigt nach jeder Lektion einen Kasten der Unit und sammelt alle unter Mehr → Wusstest du?.
+
+## 13. Sätze (`content/phrases.json`)
+
+Themen-Sammlungen ganzer Sätze, getrennt vom Lektionspfad und vom Wortschatz-SRS. Die App zeigt sie unter dem Tab „Sätze“: erst lesen (Satz, Aussprache, Übersetzung, wörtlich, Hinweis), dann üben (Runde mit 6 Sätzen: aus Kacheln bauen, Bedeutung wählen, Lücke füllen). Eine Übungsrunde zählt für den Streak wie eine Trainer-Runde (Event `phrase_round`).
+
+```json
+{ "collections": [
+  { "id": "langga", "title": "Für Langga", "emoji": "💛", "intro": "Ein Satz Deutsch.",
+    "phrases": [
+      { "id": "la01", "ceb": "Gihigugma tika.", "de": "Ich liebe dich.", "lit": "geliebt ich-dich", "note": "tika = ko + ikaw." }
+    ] }
+] }
+```
+
+| Feld | Regel |
+|---|---|
+| `id` (Sammlung) | kurz, eindeutig; `id` (Satz) = zwei Buchstaben + Nummer, eindeutig über alle Sammlungen |
+| `ceb` | 1–2 kurze Sätze, mindestens zwei Wörter; Wörter dürfen über das Glossar hinausgehen (der Validator listet sie als Warnung für die Prüfung) |
+| `de` | natürliche Übersetzung |
+| `lit` | optional, wörtliche Übersetzung mit Bindestrichen für zusammengezogene Formen |
+| `note` | optional, 1–2 Sätze: Kurzform erklären, Fallen, Gebrauch |
+| Sammlung | mindestens 8 Sätze |
+
+Der Lernstand je Satz wird aus `answer`-Events mit `mode: "phrases"` und `phrase: <id>` berechnet (+1 richtig, −1 falsch, ab 3 „sicher“). Das Wort-SRS bleibt unberührt (`words: []`).

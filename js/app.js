@@ -4,6 +4,7 @@ import { pronounce, PRON_LEGEND } from "./pronounce.js";
 import { mountStory } from "./story.js";
 import { mountBlitz } from "./trainer.js";
 import { renderConfusables } from "./confusables.js";
+import { renderPhrasesHome, mountPhraseLearn, mountPhraseTrain } from "./phrases.js";
 import { portrait } from "./characters.js";
 import { h, esc, toast, sheet, confirmSheet, fmtTime, isStandalone, isIOS, replace, copyText } from "./ui.js";
 import { loadContent } from "./content.js";
@@ -50,7 +51,7 @@ async function boot() {
     navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController && !window.__reloading) { window.__reloading = true; location.reload(); } });
   }
   try { if (localStorage.getItem("bigText") === "1") document.body.classList.add("big-text"); } catch (_) {}
-  const softRender = () => { const r = (location.hash || "#home").slice(1).split("/")[0]; if (!["lesson", "trainer", "blitz", "story", "intro"].includes(r)) render(); };
+  const softRender = () => { const r = (location.hash || "#home").slice(1).split("/")[0]; if (!["lesson", "trainer", "blitz", "story", "intro", "phrases"].includes(r)) render(); };
   window.addEventListener("online", softRender);
   window.addEventListener("offline", softRender);
   try {
@@ -146,6 +147,12 @@ async function render() {
     case "pron": return renderPron();
     case "culture": return renderCulture();
     case "confuse": return renderConfusables(main, { content, navigate });
+    case "phrases": {
+      const [sub, pid] = param.split("/");
+      if (sub === "learn" && pid) return mountPhraseLearn(main, { content, id: pid, navigate, onExit: (hash) => navigate(hash || "#phrases") });
+      if (sub === "train" && pid) return mountPhraseTrain(main, { content, id: pid, isCurrent, onExit: (hash) => navigate(hash || "#phrases") });
+      return renderPhrasesHome(main, { content, navigate });
+    }
     case "stories": return renderStories();
     case "story": return mountStory(main, param, { content, isCurrent, onExit: (hash) => navigate(hash || "#path") });
     case "blitz": return mountBlitz(main, { content, isCurrent, onExit: (hash) => navigate(hash || "#home") });
@@ -191,10 +198,10 @@ async function renderHome(isCurrent = () => true) {
     eagleSays(s.lessonsToday >= s.dailyGoal ? "cheer" : "wave", [h("b", {}, greeting()), homeLine({ streak: s.streak, lessonsToday: s.lessonsToday, dailyGoal: s.dailyGoal, dueCount: s.dueCount, inProgress: !!inProgress, allDone: !next })]),
     s.streak > 0 && !activeToday ? h("div", { class: "streak-warn mb" },
       h("div", {}, `🔥 ${s.streak} Tage Streak – heute noch nichts gelernt.` + (s.freezes ? ` Zur Not hast du ❄️ ${s.freezes} Freeze in Reserve.` : "")),
-      h("div", { class: "row mt", style: { marginTop: "8px" } }, h("button", { class: "btn-small btn-primary grow", onclick: () => navigate("#trainer/mini") }, "Streak retten: 5 Wörter (2 min)"))) : null,
+      h("div", { class: "row mt", style: { marginTop: "8px" } }, h("button", { class: "btn-small btn-primary grow", onclick: () => navigate("#trainer/mini") }, "Streak retten: 5 Wörter"), h("button", { class: "btn-small grow", onclick: () => navigate("#phrases/train/mix") }, "oder 6 Sätze"))) : null,
     s.streak === 0 && s.longest > 0 && !activeToday ? h("div", { class: "streak-warn mb" }, `Dein Rekord: ${s.longest} Tage am Stück. Heute geht's wieder los.`) : null,
     h("div", { class: "stat-grid" },
-      h("div", { class: "stat", role: "button", tabindex: "0", onclick: () => toast(`❄️ Freezes: ${s.freezes} von 2. Ein Freeze rettet einen verpassten Tag von selbst. Alle 7 Streak-Tage gibt es einen neuen. Auch Mini-Runde, Blitz oder Geschichte halten den Streak.`, 6000) }, h("b", {}, s.streak + " 🔥"), h("span", {}, `Streak · ❄️ ${s.freezes}`)),
+      h("div", { class: "stat", role: "button", tabindex: "0", onclick: () => toast(`❄️ Freezes: ${s.freezes} von 2. Ein Freeze rettet einen verpassten Tag von selbst. Alle 7 Streak-Tage gibt es einen neuen. Auch Mini-Runde, Sätze-Runde, Blitz oder Geschichte halten den Streak.`, 6000) }, h("b", {}, s.streak + " 🔥"), h("span", {}, `Streak · ❄️ ${s.freezes}`)),
       h("div", { class: "stat" }, h("b", {}, `${s.lessonsToday}/${s.dailyGoal}`), h("span", {}, "Tagesziel")),
       h("div", { class: "stat" }, h("b", {}, s.xpToday), h("span", {}, "XP heute")),
     ),
@@ -210,6 +217,7 @@ async function renderHome(isCurrent = () => true) {
       h("div", { class: "row spread" }, h("div", {}, h("b", {}, s.dueCount), s.dueCount === 1 ? " Wort fällig" : " Wörter fällig"), h("button", { class: "btn-small " + (s.dueCount ? "btn-primary" : ""), disabled: !s.dueCount, onclick: () => navigate("#trainer/review") }, "Wiederholen")),
       h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, "Mini-Runde: 5 Wörter, hält den Streak"), h("button", { class: "btn-small", disabled: !s.learnedWords, onclick: () => navigate("#trainer/mini") }, "Mini")),
       h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, "Trainer: 10 Wörter üben"), h("button", { class: "btn-small", disabled: !s.learnedWords, onclick: () => navigate("#trainer/quick") }, "Trainer")),
+      h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, "💬 Sätze für Langga, Familie, Schule – hält den Streak"), h("button", { class: "btn-small", onclick: () => navigate("#phrases") }, "Sätze")),
       h("div", { class: "row spread mt" }, h("div", { class: "small muted" }, `⚡ 60 Sekunden · Rekord ${blitzBest}`), h("button", { class: "btn-small", disabled: s.learnedWords < 4, onclick: () => navigate("#blitz") }, "Blitzrunde")),
     ),
     h("div", { class: "card row spread" },
@@ -451,6 +459,7 @@ function renderMore() {
   replace(main, 
     h("h1", {}, "Mehr"),
     h("div", { class: "card list" },
+      h("a", { href: "#phrases" }, "💬 Sätze (Langga, Familie, Schule, Alltag)"),
       h("a", { href: "#surprises" }, "💛 Für Langga"),
       h("a", { href: "#stories" }, "📖 Geschichten"),
       h("a", { href: "#words" }, "📚 Wörterliste"),

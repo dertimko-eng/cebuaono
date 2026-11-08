@@ -430,3 +430,13 @@ details.culture[open] .culture-head { margin-bottom: 4px; }
 .ptab-cell .pron { font-size: 11px; }
 .chart.heat .hz { fill: #38bdf8; }
 .streak-warn .row { margin-top: 8px; }
+
+/* Sätze */
+.pcol-emoji { font-size: 34px; line-height: 1; margin-right: 10px; }
+.phrase-card { text-align: center; padding: 22px 16px; }
+.phrase-ceb { font-size: 26px; font-weight: 800; line-height: 1.25; }
+.phrase-card .pron { font-size: 16px; margin: 6px 0 14px; }
+.phrase-de { font-size: 19px; }
+.phrase-lit { font-size: 14px; color: var(--muted); margin-top: 8px; font-style: italic; }
+.phrase-card .mnemo { text-align: left; margin-top: 12px; }
+.gap { display: inline-block; min-width: 70px; border-bottom: 3px solid var(--accent); color: var(--accent); text-align: center; }

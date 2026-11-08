@@ -283,6 +283,38 @@ for (const uf of unitFiles) {
   });
 }
 
+// ---------- Sätze (content/phrases.json) ----------
+{
+  const path = join(root, "content/phrases.json");
+  if (existsSync(path)) {
+    let p = null;
+    try { p = JSON.parse(readFileSync(path, "utf8")); } catch (e) { err("phrases", "JSON-Fehler: " + e.message); }
+    if (p) {
+      const cols = p.collections;
+      if (!Array.isArray(cols) || cols.length < 1) err("phrases", "collections fehlt");
+      const ids = new Set(), colIds = new Set(), unknownAll = new Map();
+      for (const c of cols || []) {
+        const where = "phrases/" + c.id;
+        if (!c.id || colIds.has(c.id)) err("phrases", `Sammlung ohne/doppelte id (${c.id})`);
+        colIds.add(c.id);
+        for (const f of ["title", "emoji", "intro"]) if (!c[f]) err(where, f + " fehlt");
+        if (!Array.isArray(c.phrases) || c.phrases.length < 8) err(where, "mindestens 8 Sätze erwartet");
+        for (const ph of c.phrases || []) {
+          if (!ph.id || ids.has(ph.id)) err(where, `Satz ohne/doppelte id (${ph.id})`);
+          ids.add(ph.id);
+          if (!ph.ceb || !ph.de) { err(where, `${ph.id}: ceb/de fehlt`); continue; }
+          if (ph.ceb.split(/\s+/).length < 2) err(where, `${ph.id}: mindestens zwei Wörter (Kacheln) nötig`);
+          const { unknown, tokens } = lex.analyze(ph.ceb, () => true);
+          for (const t of tokens) if (BAD_SPELLING[t]) err(where, `${ph.id}: Schreibung "${t}" → "${BAD_SPELLING[t]}"`);
+          for (const u of unknown) unknownAll.set(u, (unknownAll.get(u) || 0) + 1);
+        }
+      }
+      // Wörter außerhalb des Glossars sind erlaubt (Sätze dürfen über den Kurs hinausgehen), werden aber gelistet
+      if (unknownAll.size && !quiet) warn("phrases", `${unknownAll.size} Wörter nicht im Glossar (für die Muttersprachler-Prüfung): ${[...unknownAll.keys()].sort().join(", ")}`);
+    }
+  }
+}
+
 // ---------- Kultur ----------
 {
   const path = join(root, "content/culture.json");

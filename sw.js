@@ -1,6 +1,6 @@
 // Service Worker: cacht beim ersten Öffnen alle App-Dateien und Inhalte (offline-fähig).
 // Bei jedem Deploy CACHE_VERSION erhöhen – dann wird alles atomar neu geladen.
-const CACHE_VERSION = "v8";
+const CACHE_VERSION = "v9";
 const CACHE = "cebuano-" + CACHE_VERSION;
 
 const CORE = [
@@ -21,6 +21,7 @@ const CORE = [
   "./js/progress.js",
   "./js/characters.js",
   "./js/confusables.js",
+  "./js/phrases.js",
   "./js/scenes.js",
   "./js/story.js",
   "./js/pronounce.js",
@@ -33,6 +34,7 @@ const CORE = [
   "./content/index.json",
   "./content/glossary.json",
   "./content/names.json",
+  "./content/phrases.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/apple-touch-icon.png",

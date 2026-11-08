@@ -1,0 +1,139 @@
+{
+  "collections": [
+    {
+      "id": "langga",
+      "title": "Für Langga",
+      "emoji": "💛",
+      "intro": "Sätze für den Alltag zu zweit: liebe Worte, kleine Gesten, Versöhnung.",
+      "phrases": [
+        { "id": "la01", "ceb": "Gihigugma tika.", "de": "Ich liebe dich.", "lit": "geliebt ich-dich", "note": "tika = ko + ikaw (ich … dich). Der Klassiker." },
+        { "id": "la02", "ceb": "Gimingaw ko nimo.", "de": "Ich vermisse dich.", "lit": "vermissend ich dich", "note": "mingaw = einsam, sehnsüchtig. nimo = dich (n-Form von ikaw)." },
+        { "id": "la03", "ceb": "Gwapa kaayo ka karon.", "de": "Du bist heute sehr schön.", "lit": "schön sehr du jetzt", "note": "karon = jetzt oder heute. gwapa nur für Frauen, gwapo für Männer." },
+        { "id": "la04", "ceb": "Ikaw ang akong kalipay.", "de": "Du bist mein Glück.", "lit": "du der mein Glück", "note": "kalipay = Freude, Glück. ang macht aus „mein Glück“ das Satzthema." },
+        { "id": "la05", "ceb": "Salamat sa tanan, Langga.", "de": "Danke für alles, Langga.", "lit": "danke für alles, Liebling", "note": "tanan = alles, alle." },
+        { "id": "la06", "ceb": "Maayong gabii, Langga. Damgoha ko.", "de": "Gute Nacht, Langga. Träum von mir.", "lit": "gute Nacht, Liebling. träume mich", "note": "damgo = Traum. Damgoha ko = Träum von mir (Befehlsform)." },
+        { "id": "la07", "ceb": "Unsa imong gusto kan-on karong gabii?", "de": "Was möchtest du heute Abend essen?", "lit": "was dein Wunsch gegessen-werden diesen Abend", "note": "karong gabii = heute Abend. kan-on mit Stimmabsatz." },
+        { "id": "la08", "ceb": "Ako ray mohugas sa plato.", "de": "Ich wasche das Geschirr.", "lit": "ich nur der wird-waschen die Teller", "note": "ray = ra + y. hugas = waschen (Geschirr, Hände), laba = Wäsche waschen." },
+        { "id": "la09", "ceb": "Pahulay na, Langga. Ako na lang ni.", "de": "Ruh dich aus, Langga. Ich mach das schon.", "lit": "ausruhen schon, Liebling. ich schon nur dies", "note": "Ako na lang ni = wörtlich „ich schon nur dies“, im Alltag: Lass mich das machen." },
+        { "id": "la10", "ceb": "Lakaw ta sa gawas unya.", "de": "Lass uns später rausgehen.", "lit": "gehen wir nach draußen später", "note": "ta = wir beide (du und ich). unya = später." },
+        { "id": "la11", "ceb": "Pasayloa ko, Langga.", "de": "Verzeih mir, Langga.", "lit": "verzeihe mich, Liebling", "note": "pasaylo = Vergebung. Mit -a wird es ein Bitte-Befehl." },
+        { "id": "la12", "ceb": "Maayo kaayo ka nga asawa ug mama.", "de": "Du bist eine sehr gute Frau und Mama.", "lit": "gut sehr du als Ehefrau und Mama", "note": "nga verbindet Eigenschaft und Nomen: maayo nga asawa = gute Ehefrau." },
+        { "id": "la13", "ceb": "Dili ko mabuhi kung wala ka.", "de": "Ich kann nicht leben ohne dich.", "lit": "nicht ich kann-leben wenn nicht-da du", "note": "mabuhi = leben können. kung wala ka = wenn du nicht da bist." },
+        { "id": "la14", "ceb": "Ikaw ra gyud, hangtod sa hangtod.", "de": "Nur du, für immer.", "lit": "du nur wirklich, bis zum Bis", "note": "hangtod sa hangtod = für immer und ewig." },
+        { "id": "la15", "ceb": "Gusto ko magpabilin dinhi uban nimo.", "de": "Ich möchte hier bei dir bleiben.", "lit": "will ich bleiben hier zusammen-mit dir", "note": "magpabilin = bleiben. uban nimo = mit dir." }
+      ]
+    },
+    {
+      "id": "familie",
+      "title": "Familie",
+      "emoji": "👨‍👩‍👧",
+      "intro": "Mit Inday, Lola und der Familie in Cebu: Begrüßen, Essen, Fürsorge, Videoanruf.",
+      "phrases": [
+        { "id": "fa01", "ceb": "Kumusta ka, Lola? Maayo ra ko.", "de": "Wie geht's dir, Lola? Mir geht's gut.", "lit": "wie du, Oma? gut nur ich", "note": "Maayo ra ko = Mir geht's gut. ra = nur, macht es bescheiden." },
+        { "id": "fa02", "ceb": "Kumusta ang tanan didto sa Cebu?", "de": "Wie geht es allen dort in Cebu?", "lit": "wie die alle dort in Cebu", "note": "didto = dort (weit weg), dinhi = hier." },
+        { "id": "fa03", "ceb": "Nakakaon na mo?", "de": "Habt ihr schon gegessen?", "lit": "gegessen schon ihr", "note": "Die philippinische Begrüßung schlechthin. Antwort: Oo, nakakaon na mi." },
+        { "id": "fa04", "ceb": "Kaon na ta!", "de": "Lass uns essen!", "lit": "essen schon wir", "note": "ta = wir alle, inklusive dir. Ruft man, wenn das Essen steht." },
+        { "id": "fa05", "ceb": "Inday, hugasi ang imong kamot.", "de": "Inday, wasch dir die Hände.", "lit": "Inday, wasche die deine Hand", "note": "hugasi = wasch (etwas). Befehlsform mit -i." },
+        { "id": "fa06", "ceb": "Hinay-hinay lang, anak.", "de": "Langsam, mein Kind.", "lit": "langsam-langsam nur, Kind", "note": "Verdopplung = sanft, nach und nach. anak = Kind (eigenes)." },
+        { "id": "fa07", "ceb": "Matulog na ta, Inday.", "de": "Lass uns schlafen gehen, Inday.", "lit": "schlafen schon wir, Inday", "note": "matulog = schlafen (werden). na = schon, jetzt." },
+        { "id": "fa08", "ceb": "Ayaw kabalaka, Lola. Okay ra mi dinhi.", "de": "Mach dir keine Sorgen, Lola. Uns geht's gut hier.", "lit": "nicht sorgen, Oma. okay nur wir hier", "note": "ayaw = nicht (Verbot). mi = wir ohne dich (Lola ist nicht hier)." },
+        { "id": "fa09", "ceb": "Ingati ang imong kaugalingon.", "de": "Pass auf dich auf.", "lit": "bewache das dein Selbst", "note": "kaugalingon = selbst. Kurzform beim Abschied: Amping!" },
+        { "id": "fa10", "ceb": "Salamat sa pagkaon, Lola. Lami kaayo!", "de": "Danke fürs Essen, Lola. Sehr lecker!", "lit": "danke für das Essen, Oma. lecker sehr", "note": "pagkaon = das Essen (Nomen). lami = lecker." },
+        { "id": "fa11", "ceb": "Mangadto mi sa Cebu sa Disyembre.", "de": "Wir kommen im Dezember nach Cebu.", "lit": "werden-hingehen wir nach Cebu im Dezember", "note": "mangadto = (mehrere) werden hingehen. mi, weil Lola nicht mitfährt." },
+        { "id": "fa12", "ceb": "Gimingaw na mi ninyo.", "de": "Wir vermissen euch schon.", "lit": "vermissend schon wir euch", "note": "ninyo = euch (n-Form von kamo)." },
+        { "id": "fa13", "ceb": "Malipayong adlaw nga natawhan, Lola!", "de": "Alles Gute zum Geburtstag, Lola!", "lit": "glücklicher Tag der Geburt, Oma", "note": "adlaw nga natawhan = Geburtstag. Oft kurz: Happy birthday, Lola!" },
+        { "id": "fa14", "ceb": "Palihug tawga si Lola.", "de": "Bitte ruf Lola an.", "lit": "bitte rufe die Lola", "note": "tawga = ruf (an). si vor dem Namen der Person." },
+        { "id": "fa15", "ceb": "Tabangi ko, Inday, palihug.", "de": "Hilf mir bitte, Inday.", "lit": "hilf mich, Inday, bitte", "note": "tabangi = hilf (jemandem). tabang = Hilfe." }
+      ]
+    },
+    {
+      "id": "arbeit",
+      "title": "Schule & Arbeit",
+      "emoji": "🏫",
+      "intro": "Vom Lehrerleben erzählen: Unterricht, Schüler, Stress, Ferien.",
+      "phrases": [
+        { "id": "ar01", "ceb": "Maestro ko sa high school.", "de": "Ich bin Lehrer an einer Highschool.", "lit": "Lehrer ich an high school", "note": "Englische Wörter wie high school werden einfach eingebaut." },
+        { "id": "ar02", "ceb": "Nagtudlo ko ug biology ug chemistry.", "de": "Ich unterrichte Biologie und Chemie.", "lit": "unterrichtend ich ein Biologie und Chemie", "note": "nagtudlo = unterrichten. Erstes ug = Objekt-Marker, zweites ug = und." },
+        { "id": "ar03", "ceb": "Daghan kaayo kog trabaho karon.", "de": "Ich habe heute sehr viel Arbeit.", "lit": "viel sehr ich-ein Arbeit heute", "note": "kog = ko + ug. Daghan kog … = Ich habe viel …" },
+        { "id": "ar04", "ceb": "Kapoy kaayo karong adlawa.", "de": "Heute war ein sehr anstrengender Tag.", "lit": "müde sehr dieser Tag", "note": "kapoy = müde, anstrengend. karong adlawa = dieser Tag heute." },
+        { "id": "ar05", "ceb": "Sayo ko mobangon ugma.", "de": "Ich stehe morgen früh auf.", "lit": "früh ich werde-aufstehen morgen", "note": "sayo = früh. mobangon = aufstehen (Zukunft mit mo-)." },
+        { "id": "ar06", "ceb": "Naa koy klase sa alas syete.", "de": "Ich habe um sieben Uhr Unterricht.", "lit": "da ich-ein Klasse um sieben", "note": "koy = ko + y (hat). Uhrzeiten mit spanischen Zahlen: alas syete." },
+        { "id": "ar07", "ceb": "Buotan ang akong mga estudyante.", "de": "Meine Schüler sind nett.", "lit": "nett die meine Mehrzahl Schüler", "note": "mga = Mehrzahl. buotan = nett, brav, gutherzig." },
+        { "id": "ar08", "ceb": "Naa koy meeting unya sa hapon.", "de": "Ich habe später am Nachmittag eine Besprechung.", "lit": "da ich-ein Meeting später am Nachmittag", "note": "hapon = Nachmittag. unya = später (heute)." },
+        { "id": "ar09", "ceb": "Mouli ko sa alas kwatro.", "de": "Ich komme um vier nach Hause.", "lit": "werde-heimkehren ich um vier", "note": "mouli = nach Hause gehen. uli = heim." },
+        { "id": "ar10", "ceb": "Bakasyon na sa sunod semana!", "de": "Nächste Woche sind Ferien!", "lit": "Ferien schon in nächste Woche", "note": "sunod = nächste. semana = Woche (aus dem Spanischen)." },
+        { "id": "ar11", "ceb": "Mag-check pa ko ug mga eksam karong gabii.", "de": "Ich muss heute Abend noch Prüfungen korrigieren.", "lit": "werde-checken noch ich ein Mehrzahl Prüfung diesen Abend", "note": "pa = noch. Englische Verben bekommen mag-: mag-check, mag-text." },
+        { "id": "ar12", "ceb": "Kumusta ang imong trabaho karon?", "de": "Wie war deine Arbeit heute?", "lit": "wie die deine Arbeit heute", "note": "trabaho = Arbeit. Die Frage für den Abend zu zweit." },
+        { "id": "ar13", "ceb": "Lingaw kaayo ang akong klase karon.", "de": "Mein Unterricht war heute richtig schön.", "lit": "unterhaltsam sehr die meine Klasse heute", "note": "lingaw = Spaß, unterhaltsam. klase = Unterricht oder Klasse." },
+        { "id": "ar14", "ceb": "Kinahanglan kog kape.", "de": "Ich brauche Kaffee.", "lit": "nötig ich-ein Kaffee", "note": "kinahanglan = brauchen, nötig. kog = ko + ug." }
+      ]
+    },
+    {
+      "id": "alltag",
+      "title": "Alltag zu Hause",
+      "emoji": "🏠",
+      "intro": "Küche, Einkauf, Wetter, Schlüssel suchen: die Sätze, die jeden Tag fallen.",
+      "phrases": [
+        { "id": "al01", "ceb": "Unsa ang atong sud-an karon?", "de": "Was gibt es heute zu essen?", "lit": "was die unsere Beilage heute", "note": "sud-an = das Gericht zum Reis. atong = unser (du und ich)." },
+        { "id": "al02", "ceb": "Palit ta ug bugas ug itlog.", "de": "Lass uns Reis und Eier kaufen.", "lit": "kaufen wir ein Reis und Ei", "note": "bugas = roher Reis, kan-on = gekochter Reis. itlog = Ei." },
+        { "id": "al03", "ceb": "Nahurot na ang gatas.", "de": "Die Milch ist alle.", "lit": "aufgebraucht schon die Milch", "note": "nahurot = aufgebraucht, alle. gatas = Milch." },
+        { "id": "al04", "ceb": "Asa ang yawe sa sakyanan?", "de": "Wo ist der Autoschlüssel?", "lit": "wo der Schlüssel des Fahrzeugs", "note": "yawe = Schlüssel. sakyanan = Fahrzeug, Auto." },
+        { "id": "al05", "ceb": "Ulan karon. Dad-a ang payong.", "de": "Es regnet heute. Nimm den Schirm mit.", "lit": "Regen heute. bring den Schirm", "note": "dad-a = nimm mit, bring. payong = Regenschirm." },
+        { "id": "al06", "ceb": "Bugnaw kaayo sa gawas.", "de": "Draußen ist es sehr kalt.", "lit": "kalt sehr draußen", "note": "bugnaw = kalt. sa gawas = draußen." },
+        { "id": "al07", "ceb": "Init kaayo dinhi sa Cebu!", "de": "Hier in Cebu ist es sehr heiß!", "lit": "heiß sehr hier in Cebu", "note": "init = heiß. dinhi = hier." },
+        { "id": "al08", "ceb": "Gigutom na ko. Kaon ta.", "de": "Ich habe Hunger. Lass uns essen.", "lit": "hungrig schon ich. essen wir", "note": "gigutom = hungrig. giuhaw = durstig." },
+        { "id": "al09", "ceb": "Lami kaayo ang imong luto.", "de": "Dein Essen ist sehr lecker.", "lit": "lecker sehr das deine Gekochte", "note": "luto = Gekochtes, Gericht. Das Kompliment, das immer passt." },
+        { "id": "al10", "ceb": "Palihug limpyohi ang kusina.", "de": "Bitte mach die Küche sauber.", "lit": "bitte säubere die Küche", "note": "limpyohi = säubere (etwas), von limpyo = sauber." },
+        { "id": "al11", "ceb": "Tabangan tika sa paglaba.", "de": "Ich helfe dir beim Wäschewaschen.", "lit": "werde-helfen ich-dich beim Wäschewaschen", "note": "paglaba = das Wäschewaschen. tika = ich … dich." },
+        { "id": "al12", "ceb": "Unsa imong plano ugma?", "de": "Was hast du morgen vor?", "lit": "was dein Plan morgen", "note": "ugma = morgen. plano = Plan." },
+        { "id": "al13", "ceb": "Hapit na ko mahuman.", "de": "Ich bin fast fertig.", "lit": "fast schon ich fertig-werden", "note": "hapit = fast, beinahe. mahuman = fertig werden." },
+        { "id": "al14", "ceb": "Ayaw kalimti ang imong cellphone.", "de": "Vergiss dein Handy nicht.", "lit": "nicht vergiss das dein Handy", "note": "kalimti = vergiss (etwas). ayaw = nicht (Verbot)." },
+        { "id": "al15", "ceb": "Unsay oras na? Alas otso na.", "de": "Wie spät ist es? Schon acht.", "lit": "was-die Zeit schon? acht schon", "note": "Unsay = unsa + y. oras = Zeit, Uhr. Uhrzeiten spanisch: alas otso." }
+      ]
+    },
+    {
+      "id": "hoeflich",
+      "title": "Höflich & herzlich",
+      "emoji": "🙏",
+      "intro": "Grüßen, danken, nachfragen, Feiertage: damit du überall gut ankommst.",
+      "phrases": [
+        { "id": "ho01", "ceb": "Maayong buntag sa tanan!", "de": "Guten Morgen, alle zusammen!", "lit": "guten Morgen an alle", "note": "sa tanan = an alle." },
+        { "id": "ho02", "ceb": "Dayon! Lingkod lang.", "de": "Komm rein! Setz dich.", "lit": "herein! sitzen nur", "note": "Dayon = Komm rein (zu Gästen). lingkod = sitzen." },
+        { "id": "ho03", "ceb": "Salamat kaayo sa imong tabang.", "de": "Vielen Dank für deine Hilfe.", "lit": "danke sehr für deine Hilfe", "note": "Salamat kaayo oder Daghang salamat = vielen Dank." },
+        { "id": "ho04", "ceb": "Walay sapayan.", "de": "Gern geschehen.", "lit": "kein Schaden", "note": "Die Standardantwort auf Salamat." },
+        { "id": "ho05", "ceb": "Pasayloa ko, wala ko kasabot.", "de": "Entschuldige, ich habe nicht verstanden.", "lit": "verzeih mich, nicht ich verstanden", "note": "kasabot = verstehen. wala = nicht (passiert)." },
+        { "id": "ho06", "ceb": "Palihug balika. Hinaya lang.", "de": "Bitte wiederhol das. Langsam.", "lit": "bitte wiederhole. langsam-mach nur", "note": "balika = wiederhole. hinaya = mach es langsam." },
+        { "id": "ho07", "ceb": "Gamay ra akong Bisaya, pero nagtuon ko.", "de": "Mein Cebuano ist noch klein, aber ich lerne.", "lit": "klein nur mein Bisaya, aber lernend ich", "note": "Bisaya = so nennen die Leute ihr Cebuano. nagtuon = lernen, studieren." },
+        { "id": "ho08", "ceb": "Unsay Bisaya ani?", "de": "Was heißt das auf Cebuano?", "lit": "was-das Bisaya von-diesem", "note": "ani = von diesem (hier). Deine wichtigste Frage an Langga." },
+        { "id": "ho09", "ceb": "Malipayong Pasko ug Bag-ong Tuig!", "de": "Frohe Weihnachten und ein gutes neues Jahr!", "lit": "glückliches Weihnachten und neues Jahr", "note": "Pasko = Weihnachten. bag-o = neu, tuig = Jahr." },
+        { "id": "ho10", "ceb": "Nalipay ko nga nailhan tika.", "de": "Ich freue mich, dich kennenzulernen.", "lit": "erfreut ich dass gekannt ich-dich", "note": "nailhan = kennengelernt. Beim ersten Treffen mit Verwandten." },
+        { "id": "ho11", "ceb": "Amping! Hangtod sa sunod.", "de": "Pass auf dich auf! Bis zum nächsten Mal.", "lit": "vorsichtig! bis zum nächsten", "note": "Amping = Pass auf dich auf, der Abschiedsgruß." },
+        { "id": "ho12", "ceb": "Pwede ko mangutana?", "de": "Darf ich etwas fragen?", "lit": "kann ich fragen", "note": "pwede = kann, darf. mangutana = fragen." },
+        { "id": "ho13", "ceb": "Maayo kaayo! Daghang salamat.", "de": "Sehr gut! Vielen Dank.", "lit": "gut sehr! viel-es Danke", "note": "Daghang salamat = viel Dank." },
+        { "id": "ho14", "ceb": "Hangtod ugma!", "de": "Bis morgen!", "lit": "bis morgen", "note": "hangtod = bis. ugma = morgen." }
+      ]
+    },
+    {
+      "id": "gefuehle",
+      "title": "Gefühle & Smalltalk",
+      "emoji": "💬",
+      "intro": "Wie geht's wirklich? Müde, glücklich, Angst, Vorfreude: Gefühle sagen können.",
+      "phrases": [
+        { "id": "ge01", "ceb": "Kumusta ang imong adlaw?", "de": "Wie war dein Tag?", "lit": "wie der dein Tag", "note": "adlaw = Tag und Sonne." },
+        { "id": "ge02", "ceb": "Gikapoy ko gamay.", "de": "Ich bin ein bisschen müde.", "lit": "müde-gemacht ich wenig", "note": "gikapoy = müde (geworden). gamay = ein bisschen, klein." },
+        { "id": "ge03", "ceb": "Dili maayo akong pamati karon.", "de": "Ich fühle mich heute nicht gut.", "lit": "nicht gut mein Gefühl heute", "note": "pamati = Gefühl, Befinden. Wenn du krank bist." },
+        { "id": "ge04", "ceb": "Malipayon kaayo ko karon.", "de": "Ich bin heute sehr glücklich.", "lit": "glücklich sehr ich heute", "note": "malipayon = glücklich. kalipay = Glück." },
+        { "id": "ge05", "ceb": "Ayaw kasuko, palihug.", "de": "Bitte sei nicht böse.", "lit": "nicht böse-sein, bitte", "note": "kasuko = böse werden. suko = Wut." },
+        { "id": "ge06", "ceb": "Okay ra. Wala ray problema.", "de": "Schon gut. Kein Problem.", "lit": "okay nur. nicht-da nur Problem", "note": "Wala ray problema = Es gibt kein Problem. ray = ra + y." },
+        { "id": "ge07", "ceb": "Nagdula si Inday sa gawas.", "de": "Inday spielt draußen.", "lit": "spielend die Inday draußen", "note": "nagdula = spielen (gerade). dula = Spiel." },
+        { "id": "ge08", "ceb": "Unsa imong gibati?", "de": "Wie fühlst du dich?", "lit": "was dein Gefühltes", "note": "gibati = gefühlt. bati = fühlen (auch: hässlich, Vorsicht!)." },
+        { "id": "ge09", "ceb": "Nahadlok ko gamay.", "de": "Ich habe ein bisschen Angst.", "lit": "erschrocken ich wenig", "note": "nahadlok = Angst haben. hadlok = Angst." },
+        { "id": "ge10", "ceb": "Kataw-anan kaayo!", "de": "Das ist sehr lustig!", "lit": "lachhaft sehr", "note": "katawa = lachen. kataw-anan = zum Lachen, lustig." },
+        { "id": "ge11", "ceb": "Gusto ko mopahulay karon.", "de": "Ich möchte mich jetzt ausruhen.", "lit": "will ich werde-ausruhen jetzt", "note": "mopahulay = sich ausruhen. pahulay = Pause, Rast." },
+        { "id": "ge12", "ceb": "Excited na kaayo ko sa Cebu!", "de": "Ich freue mich schon sehr auf Cebu!", "lit": "aufgeregt schon sehr ich auf Cebu", "note": "excited wird einfach aus dem Englischen genommen, ganz normal." },
+        { "id": "ge13", "ceb": "Nasuko ba ka nako?", "de": "Bist du böse auf mich?", "lit": "böse-geworden Frage du auf-mich", "note": "ba = Fragepartikel. nako = mich, auf mich." },
+        { "id": "ge14", "ceb": "Wala, Langga. Gikapoy ra ko.", "de": "Nein, Langga. Ich bin nur müde.", "lit": "nicht, Liebling. müde nur ich", "note": "Wala als Antwort = Nein (ist nicht so). ra = nur." }
+      ]
+    }
+  ]
+}

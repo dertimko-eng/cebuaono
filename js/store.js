@@ -92,6 +92,7 @@ export const store = {
     const xp = blitz ? 0 : a.correct ? (a.near ? XP.near : XP.correct) : XP.wrong;
     await this.addEvent({
       type: "answer", lesson: a.lesson || null, mode: a.mode, exType: a.exType, words: a.words || [],
+      ...(a.phrase ? { phrase: a.phrase } : {}),
       correct: !!a.correct, near: !!a.near, dur: a.dur || 0, firstTry: a.firstTry !== false, due: !!a.due, xp,
     });
     this.emit("answer");
@@ -120,6 +121,13 @@ export const store = {
     await this.snapshotSrs(true);
     this.earnedFreeze = await this.maybeEarnFreeze();
     this.emit("trainer");
+  },
+
+  // Sätze-Runde (Themen-Sammlungen): hält den Streak wie eine Trainer-Runde
+  async completePhraseRound({ collection, size, correct, wrong, dur }) {
+    await this.addEvent({ type: "phrase_round", collection, size, correct, wrong, dur, xp: XP.trainerBonus });
+    this.earnedFreeze = await this.maybeEarnFreeze();
+    this.emit("phrases");
   },
 
   // Geschichten: gelesen-Liste in kv, Abschluss als Event (zählt XP)

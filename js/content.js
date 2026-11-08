@@ -21,7 +21,10 @@ export async function loadContent() {
   // Geschichten (eine pro Unit) und Kultur-Kästen sind optional
   const stories = (await Promise.all(units.map((u) => getJSON(`content/stories/story_${String(u.unit).padStart(2, "0")}.json`).catch(() => null)))).filter(Boolean);
   let culture = [];
-  try { const c = await getJSON("content/culture.json"); culture = Array.isArray(c) ? c : c.items || []; } catch (_) {}
+  let phrases = [];
+  const [cultureRes, phrasesRes] = await Promise.all([getJSON("content/culture.json").catch(() => null), getJSON("content/phrases.json").catch(() => null)]);
+  if (cultureRes) culture = Array.isArray(cultureRes) ? cultureRes : cultureRes.items || [];
+  if (phrasesRes) phrases = phrasesRes.collections || [];
   const lexicon = new Lexicon(glossary, namesFile.names);
   setPronOverrides(glossary.entries);
   const lessons = [];
@@ -69,6 +72,8 @@ export async function loadContent() {
     storyUnlocked: (s, completedSet) => completedSet.has(s.after),
     culture,
     cultureOfUnit: (unit) => culture.filter((c) => c.unit === unit),
+    phrases,
+    phraseCollection: (id) => phrases.find((c) => c.id === id) || null,
     surprises: () => lessons.map((l) => ({ ...l.surprise, lessonId: l.id, lessonTitle: l.title, unit: l.unit })),
     // Wörter, die in einer Übung trainiert werden (explizit oder automatisch erkannt)
     exerciseWords(ex) {

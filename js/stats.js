@@ -168,7 +168,7 @@ export function computeStats({ events, words, progress, content, settings, srsHi
   let freezeEarned = 0, freezeUsed = 0;
   for (const e of events) {
     const k = dateKeyOf(e.t);
-    if (e.type === "lesson_complete" || e.type === "trainer_round" || e.type === "story_complete") activeDays.add(k);
+    if (e.type === "lesson_complete" || e.type === "trainer_round" || e.type === "story_complete" || e.type === "phrase_round") activeDays.add(k);
     if (e.type === "answer") dayCounts[k] = (dayCounts[k] || 0) + 1;
     if (e.type === "streak_freeze") { if (e.action === "earn") freezeEarned++; else if (e.action === "use" && e.date) { freezeUsed++; frozenDays.add(e.date); } }
   }
